@@ -9,26 +9,33 @@ export interface CompressResult {
   savedPercent: number;
 }
 
-// HEIC conversion using canvas
+function getSafeFormat(format: Format): string {
+  if (format === 'avif') {
+    try {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1; canvas.height = 1;
+      return 'image/avif';
+    } catch { return 'image/webp'; }
+  }
+  if (format === 'jpeg') return 'image/jpeg';
+  if (format === 'png') return 'image/png';
+  return 'image/webp';
+}
+
 async function heicToFile(file: File): Promise<File> {
   try {
-    // Try heic2any if available
     if (typeof window !== 'undefined' && (window as any).heic2any) {
       const blob = await (window as any).heic2any({ blob: file, toType: 'image/jpeg', quality: 0.9 });
-      return new File([blob as Blob], file.name.replace(/\.heic$/i, '.jpg'), { type: 'image/jpeg' });
+      return new File([blob as Blob], file.name.replace(/.heic$/i, '.jpg'), { type: 'image/jpeg' });
     }
   } catch {}
-  // Fallback: decode via createImageBitmap
   try {
     const bitmap = await createImageBitmap(file);
     const canvas = document.createElement('canvas');
-    canvas.width = bitmap.width;
-    canvas.height = bitmap.height;
-    const ctx = canvas.getContext('2d')!;
+    canvas.width = bitmap.width; canvas.height = bitmap.height;
     ctx.drawImage(bitmap, 0, 0);
     return new Promise(resolve => {
       canvas.toBlob(blob => {
-        resolve(new File([blob!], file.name.replace(/\.heic$/i, '.jpg'), { type: 'image/jpeg' }));
       }, 'image/jpeg', 0.9);
     });
   } catch {}
@@ -42,94 +49,57 @@ async function prepareFile(file: File): Promise<File> {
   return file;
 }
 
-export async function compressImage(
-  file: File,
-  format: Format,
-  quality: number
-): Promise<CompressResult> {
+export async function compressImage(file: File, format: Format, quality: number): Promise<CompressResult> {
   const prepared = await prepareFile(file);
-  const options = {
-    maxSizeMB: 10,
-    maxWidthOrHeight: 4096,
-    useWebWorker: true,
-    fileType: format === 'jpeg' ? 'image/jpeg' : format === 'png' ? 'image/png' : format === 'avif' ? 'image/avif' : 'image/webp',
-    initialQuality: quality,
-    onProgress: undefined,
-  };
-  const compressed = await imageCompression(prepared, options);
-  return {
-    file: compressed,
-    originalSize: file.size,
-    compressedSize: compressed.size,
-    savedPercent: Math.round((1 - compressed.size / file.size) * 100),
-  };
+  const mimeType = getSafeFormat(format);
+  try {
+    const compressed = await imageCompression(prepared, {
+      maxSizeMB: 10, maxWidthOrHeight: 4096, useWebWorker: true,
+      fileType: mimeType, initialQuality: quality, onProgress: undefined,
+    });
+    return { file: compressed, originalSize: file.size, compressedSize: compressed.size, savedPercent: Math.round((1 - compressed.size / file.size) * 100) };
+  } catch {
+    const compressed = await imageCompression(prepared, {
+      maxSizeMB: 10, maxWidthOrHeight: 4096, useWebWorker: true,
+      fileType: 'image/jpeg', initialQuality: quality, onProgress: undefined,
+    });
+    return { file: compressed, originalSize: file.size, compressedSize: compressed.size, savedPercent: Math.round((1 - compressed.size / file.size) * 100) };
+  }
 }
 
-export async function compressToTargetKB(
-  file: File,
-  format: Format,
-  targetKB: number
-): Promise<CompressResult> {
+export async function compressToTargetKB(file: File, format: Format, targetKB: number): Promise<CompressResult> {
   const prepared = await prepareFile(file);
   const targetBytes = targetKB * 1024;
+  const mimeType = getSafeFormat(format);
 
   if (prepared.size <= targetBytes) {
-    return {
-      file: prepared,
-      originalSize: file.size,
-      compressedSize: prepared.size,
-      savedPercent: 0,
-    };
+    return { file: prepared, originalSize: file.size, compressedSize: prepared.size, savedPercent: 0 };
   }
 
-  let lo = 0.05;
-  let hi = 0.95;
-  let bestFile: File = prepared;
-  let iterations = 0;
-  const mimeType = format === 'jpeg' ? 'image/jpeg' : format === 'png' ? 'image/png' : 'image/webp';
+  let lo = 0.05, hi = 0.95, bestFile: File = prepared, iterations = 0;
 
   while (hi - lo > 0.03 && iterations < 12) {
     const mid = (lo + hi) / 2;
-    const options = {
-      maxSizeMB: targetBytes / (1024 * 1024) * 1.1,
-      maxWidthOrHeight: 4096,
-      useWebWorker: true,
-      fileType: mimeType,
-      initialQuality: mid,
-      onProgress: undefined,
-    };
     try {
-      const result = await imageCompression(prepared, options);
-      if (result.size <= targetBytes) {
-        lo = mid;
-        bestFile = result;
-      } else {
-        hi = mid;
-      }
-    } catch {
-      hi = mid;
-    }
+      const result = await imageCompression(prepared, {
+        maxSizeMB: targetBytes / (1024 * 1024) * 1.1, maxWidthOrHeight: 4096,
+        useWebWorker: true, fileType: mimeType, initialQuality: mid, onProgress: undefined,
+      });
+      if (result.size <= targetBytes) { lo = mid; bestFile = result; } else { hi = mid; }
+    } catch { hi = mid; }
     iterations++;
   }
 
   if (bestFile.size > targetBytes) {
     try {
       const final = await imageCompression(prepared, {
-        maxSizeMB: targetBytes / (1024 * 1024),
-        maxWidthOrHeight: 4096,
-        useWebWorker: true,
-        fileType: mimeType,
-        initialQuality: 0.1,
-        onProgress: undefined,
+        maxSizeMB: targetBytes / (1024 * 1024), maxWidthOrHeight: 4096,
+        useWebWorker: true, fileType: mimeType === 'image/avif' ? 'image/jpeg' : mimeType,
+        initialQuality: 0.1, onProgress: undefined,
       });
       if (final.size < bestFile.size) bestFile = final;
     } catch {}
   }
 
-  return {
-    file: bestFile,
-    originalSize: file.size,
-    compressedSize: bestFile.size,
-    savedPercent: Math.round((1 - bestFile.size / file.size) * 100),
-  };
+  return { file: bestFile, originalSize: file.size, compressedSize: bestFile.size, savedPercent: Math.round((1 - bestFile.size / file.size) * 100) };
 }
