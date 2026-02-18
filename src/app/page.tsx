@@ -394,7 +394,7 @@ export default function Home() {
         </div>
 
         {/* RIGHT ADS — 30% */}
-        <div className="right-col" className='right-col' style={{flex:'0 0 28%',maxWidth:'28%',display:'flex',flexDirection:'column',gap:'12px',position:'sticky',top:'16px'}}>
+        <div className="right-col" style={{flex:'0 0 28%',maxWidth:'28%',display:'flex',flexDirection:'column',gap:'12px',position:'sticky',top:'16px'}}>
           {/* 300x600 */}
           <div style={{width:'100%',minHeight:'280px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'10px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)',flexDirection:'column',gap:'4px'}}>
             <span>AD</span><span>300×600</span>
