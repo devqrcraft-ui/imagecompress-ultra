@@ -385,7 +385,7 @@ export default function Home() {
       <style>{`
         @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        input[type=range] { height: 4px; }
+        input[type=range] { height: 4px; } @media (max-width: 768px) { .ads-sidebar { display: none; } }
       `}</style>
     </div>
   );
