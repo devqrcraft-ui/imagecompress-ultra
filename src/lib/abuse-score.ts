@@ -6,9 +6,9 @@ export async function getAbuseLevel(ip: string): Promise<AbuseLevel> {
   try {
     const key = `abuse:${ip}`;
     const score = await redis.get<number>(key);
-    if (score >= 100) return 'blocked';
-    if (score >= 50) return 'captcha';
-    if (score >= 20) return 'warn';
+    if ((score ?? 0) >= 100) return 'blocked';
+    if ((score ?? 0) >= 50) return 'captcha';
+    if ((score ?? 0) >= 20) return 'warn';
     return 'ok';
   } catch { return 'ok'; }
 }
