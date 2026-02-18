@@ -1,0 +1,76 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Image Optimization in 2026: The Complete Guide",
+  description: "WebP, AVIF, lazy loading, CDN, and everything else you need to know about image optimization in 2026.",
+  openGraph: {
+    title: "Image Optimization in 2026: The Complete Guide",
+    description: "WebP, AVIF, lazy loading, CDN, and everything else you need to know about image optimization in 2026.",
+    images: [{ url: "/og/image-optimization-2026.png", width: 1200, height: 630 }],
+    type: "article",
+  },
+  twitter: { card: "summary_large_image" },
+};
+
+export default function ImageOptimization2026() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold mb-4">Image Optimization in 2026: The Complete Guide</h1>
+      <p className="text-gray-500 mb-8">Updated February 2026 · 12 min read</p>
+
+      <p className="mb-6 text-lg">Images account for over 50% of the average webpage weight. In 2026, with Core Web Vitals directly affecting rankings, image optimization is no longer optional — it is a business requirement.</p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4">Why Image Optimization Matters More Than Ever</h2>
+      <p className="mb-4">Google's Page Experience signals now include Largest Contentful Paint (LCP), which is almost always an image. A poorly optimized hero image can cost you 2–3 ranking positions and increase bounce rate by up to 32%.</p>
+      <p className="mb-4">Mobile users, who represent over 60% of global traffic, suffer the most from unoptimized images. A 4MB JPEG on a 4G connection adds 3+ seconds of load time — enough for most users to leave.</p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4">Modern Image Formats: WebP vs AVIF vs JPEG</h2>
+      <p className="mb-4"><strong>JPEG</strong> is still widely used but shows its age. At equivalent quality, JPEG files are 2–3× larger than WebP and 4–5× larger than AVIF.</p>
+      <p className="mb-4"><strong>WebP</strong> offers 25–35% smaller files than JPEG with near-universal browser support (96%+ globally). It supports transparency (unlike JPEG) and animation (unlike standard JPEG).</p>
+      <p className="mb-4"><strong>AVIF</strong> is the next-generation format with 50%+ size reduction over JPEG. Browser support reached 90%+ in 2025. Use AVIF for new projects with a WebP fallback.</p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4">Lazy Loading: The Easy Win</h2>
+      <p className="mb-4">Native lazy loading with <code className="bg-gray-100 px-1 rounded">loading="lazy"</code> is supported in all modern browsers. It defers off-screen images until the user scrolls near them, reducing initial page weight by 40–60% for image-heavy pages.</p>
+      <pre className="bg-gray-100 rounded p-4 text-sm overflow-auto mb-6">{`<img
+  src="photo.webp"
+  loading="lazy"
+  width="800"
+  height="600"
+  alt="Description"
+/>`}</pre>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4">Responsive Images with srcset</h2>
+      <p className="mb-4">Serving a 2000px image to a 400px screen wastes 80% of bandwidth. Use <code className="bg-gray-100 px-1 rounded">srcset</code> to serve the right size for each device:</p>
+      <pre className="bg-gray-100 rounded p-4 text-sm overflow-auto mb-6">{`<img
+  srcset="photo-400.webp 400w, photo-800.webp 800w, photo-1600.webp 1600w"
+  sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1600px"
+  src="photo-800.webp"
+  alt="Description"
+/>`}</pre>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4">CDN Delivery</h2>
+      <p className="mb-4">A CDN serves images from edge nodes closest to the user. This reduces latency from 300ms+ (cross-continent) to under 20ms. In 2026, services like Cloudflare Images and Vercel Image Optimization offer automatic format conversion and resizing at the CDN level.</p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4">Compression Tools in 2026</h2>
+      <p className="mb-4">Browser-based tools like <strong>ImageCompress Pro</strong> compress images directly in your browser — no upload to a server, no privacy risk. You get WebP output, batch processing, and API access for free.</p>
+      <p className="mb-4">For automated pipelines, Sharp (Node.js) remains the gold standard. At quality 80, WebP output from Sharp is indistinguishable from the original for most use cases.</p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4">Checklist: Image Optimization in 2026</h2>
+      <ul className="list-disc pl-6 mb-6 space-y-2">
+        <li>Convert all JPEG/PNG to WebP (or AVIF with WebP fallback)</li>
+        <li>Add <code className="bg-gray-100 px-1 rounded">loading="lazy"</code> to all below-fold images</li>
+        <li>Always specify <code className="bg-gray-100 px-1 rounded">width</code> and <code className="bg-gray-100 px-1 rounded">height</code> to prevent layout shift</li>
+        <li>Use <code className="bg-gray-100 px-1 rounded">srcset</code> for responsive images</li>
+        <li>Serve images via CDN</li>
+        <li>Aim for LCP image under 75KB</li>
+        <li>Audit monthly with PageSpeed Insights</li>
+      </ul>
+
+      <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
+        <h3 className="text-xl font-semibold mb-2">Ready to optimize your images?</h3>
+        <p className="text-gray-600 mb-4">Use ImageCompress Pro — free, fast, browser-based WebP compression with no file size limits on free tier.</p>
+        <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Compress Images Now →</a>
+      </div>
+    </main>
+  );
+}
