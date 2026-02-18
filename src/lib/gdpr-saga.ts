@@ -62,7 +62,7 @@ export class GdprSaga {
   // Обробляємо один saga крок
   static async processNext(): Promise<string | null> {
     // Беремо з черги (RPOPLPUSH для at-least-once гарантії)
-    const id = await redis.lmove(COMP_QUEUE, `${COMP_QUEUE}:processing`, "RIGHT", "LEFT") as string | null;
+    const id = await redis.lmove(COMP_QUEUE, `${COMP_QUEUE}:processing`, "right", "left") as string | null;
     if (!id) return null;
 
     const key   = `${SAGA_PREFIX}${id}`;
