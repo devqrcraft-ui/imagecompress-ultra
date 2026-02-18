@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getFingerprint } from "@/lib/fingerprint";
-import { checkAbuse } from "@/lib/abuse-score";
+import { getAbuseLevel as checkAbuse } from "@/lib/abuse-score";
 
 export const config = {
   matcher: ["/api/compress", "/api/task/:path*"],
