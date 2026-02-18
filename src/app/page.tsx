@@ -56,7 +56,7 @@ export default function Home() {
   const addFiles = useCallback((files: FileList|File[]) => {
     const arr = Array.from(files).filter(f=>f.type.startsWith('image/')).slice(0,10);
     setImages(p=>[...p, ...arr.map(f=>({
-      id: crypto.randomUUID(), name: f.name,
+      id: (typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36)), name: f.name,
       origSize: f.size, preview: URL.createObjectURL(f),
       file: f, status: 'pending' as const,
     }))]);
@@ -153,10 +153,10 @@ export default function Home() {
       </div>
 
       {/* MAIN 70/30 LAYOUT */}
-      <div style={{display:'flex',maxWidth:'1200px',margin:'0 auto',padding:'16px',gap:'16px',alignItems:'flex-start'}}>
+      <div style={{display:'flex',maxWidth:'1200px',margin:'0 auto',padding:'16px',gap:'16px',alignItems:'flex-start',flexWrap:'wrap'}}>
 
         {/* LEFT TOOL — 70% */}
-        <div style={{flex:'0 0 70%',maxWidth:'70%'}}>
+        <div style={{flex:'1 1 300px',minWidth:0}}>
 
           {/* H1 SEO */}
           <h1 style={{fontSize:'26px',fontWeight:800,marginBottom:'4px',letterSpacing:'-0.5px'}}>
@@ -345,7 +345,7 @@ export default function Home() {
         </div>
 
         {/* RIGHT ADS — 30% */}
-        <div style={{flex:'0 0 28%',maxWidth:'28%',display:'flex',flexDirection:'column',gap:'12px',position:'sticky',top:'16px'}}>
+        <div style={{flex:'0 0 280px',maxWidth:'280px',display:'flex',flexDirection:'column',gap:'12px',position:'sticky',top:'16px'}}>
           {/* 300x600 */}
           <div style={{width:'100%',minHeight:'280px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'10px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)',flexDirection:'column',gap:'4px'}}>
             <span>AD</span><span>300×600</span>
