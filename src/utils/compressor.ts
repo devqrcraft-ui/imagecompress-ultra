@@ -9,21 +9,54 @@ export interface CompressResult {
   savedPercent: number;
 }
 
-// Базова компресія по якості
+// HEIC conversion using canvas
+async function heicToFile(file: File): Promise<File> {
+  try {
+    // Try heic2any if available
+    if (typeof window !== 'undefined' && (window as any).heic2any) {
+      const blob = await (window as any).heic2any({ blob: file, toType: 'image/jpeg', quality: 0.9 });
+      return new File([blob as Blob], file.name.replace(/\.heic$/i, '.jpg'), { type: 'image/jpeg' });
+    }
+  } catch {}
+  // Fallback: decode via createImageBitmap
+  try {
+    const bitmap = await createImageBitmap(file);
+    const canvas = document.createElement('canvas');
+    canvas.width = bitmap.width;
+    canvas.height = bitmap.height;
+    const ctx = canvas.getContext('2d')!;
+    ctx.drawImage(bitmap, 0, 0);
+    return new Promise(resolve => {
+      canvas.toBlob(blob => {
+        resolve(new File([blob!], file.name.replace(/\.heic$/i, '.jpg'), { type: 'image/jpeg' }));
+      }, 'image/jpeg', 0.9);
+    });
+  } catch {}
+  return file;
+}
+
+async function prepareFile(file: File): Promise<File> {
+  if (file.type === 'image/heic' || file.type === 'image/heif' || file.name.toLowerCase().endsWith('.heic') || file.name.toLowerCase().endsWith('.heif')) {
+    return heicToFile(file);
+  }
+  return file;
+}
+
 export async function compressImage(
   file: File,
   format: Format,
   quality: number
 ): Promise<CompressResult> {
+  const prepared = await prepareFile(file);
   const options = {
     maxSizeMB: 10,
     maxWidthOrHeight: 4096,
     useWebWorker: true,
-    fileType: format === 'jpeg' ? 'image/jpeg' : format === 'png' ? 'image/png' : 'image/webp',
+    fileType: format === 'jpeg' ? 'image/jpeg' : format === 'png' ? 'image/png' : format === 'avif' ? 'image/avif' : 'image/webp',
     initialQuality: quality,
     onProgress: undefined,
   };
-  const compressed = await imageCompression(file, options);
+  const compressed = await imageCompression(prepared, options);
   return {
     file: compressed,
     originalSize: file.size,
@@ -32,28 +65,28 @@ export async function compressImage(
   };
 }
 
-// Exact KB — бінарний пошук якості
 export async function compressToTargetKB(
   file: File,
   format: Format,
   targetKB: number
 ): Promise<CompressResult> {
+  const prepared = await prepareFile(file);
   const targetBytes = targetKB * 1024;
 
-  // Якщо файл вже менший — повертаємо як є
-  if (file.size <= targetBytes) {
+  if (prepared.size <= targetBytes) {
     return {
-      file,
+      file: prepared,
       originalSize: file.size,
-      compressedSize: file.size,
+      compressedSize: prepared.size,
       savedPercent: 0,
     };
   }
 
   let lo = 0.05;
   let hi = 0.95;
-  let bestFile = file;
+  let bestFile: File = prepared;
   let iterations = 0;
+  const mimeType = format === 'jpeg' ? 'image/jpeg' : format === 'png' ? 'image/png' : 'image/webp';
 
   while (hi - lo > 0.03 && iterations < 12) {
     const mid = (lo + hi) / 2;
@@ -61,12 +94,12 @@ export async function compressToTargetKB(
       maxSizeMB: targetBytes / (1024 * 1024) * 1.1,
       maxWidthOrHeight: 4096,
       useWebWorker: true,
-      fileType: format === 'jpeg' ? 'image/jpeg' : format === 'png' ? 'image/png' : 'image/webp',
+      fileType: mimeType,
       initialQuality: mid,
       onProgress: undefined,
     };
     try {
-      const result = await imageCompression(file, options);
+      const result = await imageCompression(prepared, options);
       if (result.size <= targetBytes) {
         lo = mid;
         bestFile = result;
@@ -79,14 +112,13 @@ export async function compressToTargetKB(
     iterations++;
   }
 
-  // Фінальна спроба з maxSizeMB
   if (bestFile.size > targetBytes) {
     try {
-      const final = await imageCompression(file, {
+      const final = await imageCompression(prepared, {
         maxSizeMB: targetBytes / (1024 * 1024),
         maxWidthOrHeight: 4096,
         useWebWorker: true,
-        fileType: format === 'jpeg' ? 'image/jpeg' : 'image/webp',
+        fileType: mimeType,
         initialQuality: 0.1,
         onProgress: undefined,
       });

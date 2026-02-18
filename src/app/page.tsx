@@ -1,5 +1,5 @@
 'use client';
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { compressImage, compressToTargetKB, Format } from '@/utils/compressor';
 
 type Mode = 'quality' | 'exactkb';
@@ -51,12 +51,32 @@ export default function Home() {
   const [drag, setDrag] = useState(false);
   const [proc, setProc] = useState(false);
   const [activePreset, setActivePreset] = useState<string|null>(null);
+  const [compareImg, setCompareImg] = useState<Img|null>(null);
+  const [comparePos, setComparePos] = useState(50);
   const ref = useRef<HTMLInputElement>(null);
 
+  // Load saved settings
+  useEffect(() => {
+    try {
+      const s = localStorage.getItem('cmp_settings');
+      if (s) { const p = JSON.parse(s); setFormat(p.format||'webp'); setQuality(p.quality||80); setMode(p.mode||'quality'); setTargetKB(p.targetKB||20); }
+    } catch {}
+  }, []);
+
+  // Save settings on change
+  useEffect(() => {
+    try { localStorage.setItem('cmp_settings', JSON.stringify({format,quality,mode,targetKB})); } catch {}
+  }, [format,quality,mode,targetKB]);
+
   const addFiles = useCallback((files: FileList|File[]) => {
-    const arr = Array.from(files).filter(f=>f.type.startsWith('image/')).slice(0,10);
+    const arr = Array.from(files).filter(f=>
+      f.type.startsWith('image/') ||
+      f.name.toLowerCase().endsWith('.heic') ||
+      f.name.toLowerCase().endsWith('.heif')
+    ).slice(0,10);
     setImages(p=>[...p, ...arr.map(f=>({
-      id: (typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36)), name: f.name,
+      id: (typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36)),
+      name: f.name,
       origSize: f.size, preview: URL.createObjectURL(f),
       file: f, status: 'pending' as const,
     }))]);
@@ -101,6 +121,29 @@ export default function Home() {
       const a = document.createElement('a');
       a.href = img.outUrl!; a.download = getName(img); a.click();
     });
+  };
+
+  const downloadZip = async () => {
+    const done = images.filter(i=>i.status==='done'&&i.outUrl);
+    if (!done.length) return;
+    try {
+      // dynamic import JSZip from CDN
+      const { default: JSZip } = await import('https://cdn.jsdelivr.net/npm/jszip@3.10.1/+esm' as any);
+      const zip = new JSZip();
+      await Promise.all(done.map(async img => {
+        const res = await fetch(img.outUrl!);
+        const blob = await res.blob();
+        zip.file(getName(img), blob);
+      }));
+      const content = await zip.generateAsync({ type: 'blob' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(content);
+      a.download = 'compressed-images.zip';
+      a.click();
+    } catch {
+      // fallback: download one by one
+      downloadAll();
+    }
   };
 
   return (
@@ -153,10 +196,10 @@ export default function Home() {
       </div>
 
       {/* MAIN 70/30 LAYOUT */}
-      <div style={{display:'flex',maxWidth:'1200px',margin:'0 auto',padding:'16px',gap:'16px',alignItems:'flex-start',flexWrap:'wrap'}}>
+      <div style={{display:'flex',maxWidth:'1200px',margin:'0 auto',padding:'16px',gap:'16px',alignItems:'flex-start'}}>
 
         {/* LEFT TOOL — 70% */}
-        <div style={{flex:'1 1 300px',minWidth:0}}>
+        <div style={{flex:'0 0 70%',maxWidth:'70%'}}>
 
           {/* H1 SEO */}
           <h1 style={{fontSize:'26px',fontWeight:800,marginBottom:'4px',letterSpacing:'-0.5px'}}>
@@ -258,7 +301,7 @@ export default function Home() {
             <div style={{fontSize:'36px',marginBottom:'8px'}}>📁</div>
             <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>Drop images here or click</div>
             <div style={{fontSize:'12px',opacity:0.45}}>JPG · PNG · WebP · AVIF · max 10 files</div>
-            <input ref={ref} type="file" accept="image/*" multiple style={{display:'none'}}
+            <input ref={ref} type="file" accept="image/*,.heic,.heif" multiple style={{display:'none'}}
               onChange={e=>e.target.files&&addFiles(e.target.files)}/>
           </div>
 
@@ -276,9 +319,9 @@ export default function Home() {
                 <div style={{fontSize:'13px',fontWeight:600,opacity:0.7}}>{images.length} image{images.length>1?'s':''} · {done} compressed</div>
                 <div style={{display:'flex',gap:'8px'}}>
                   {done > 0 && (
-                    <button onClick={downloadAll}
+                    <button onClick={downloadZip}
                       style={{padding:'7px 16px',borderRadius:'8px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.4)',color:'#34d399',fontSize:'13px',fontWeight:700,cursor:'pointer'}}>
-                      ⬇️ Download All ({done})
+                      📦 ZIP All ({done})
                     </button>
                   )}
                   <button onClick={compressAll} disabled={proc}
@@ -321,10 +364,16 @@ export default function Home() {
                     {img.status==='processing' && <span style={{color:'#fbbf24'}}>⏳ Processing…</span>}
                     {img.status==='error' && <span style={{color:'#f87171'}}>❌ Error</span>}
                     {img.status==='done' && img.outUrl && (
-                      <a href={img.outUrl} download={getName(img)}
-                        style={{padding:'5px 12px',borderRadius:'7px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.35)',color:'#34d399',fontSize:'12px',fontWeight:700,textDecoration:'none'}}>
-                        ⬇️ Save
-                      </a>
+                      <div style={{display:'flex',gap:'6px',flexShrink:0}}>
+                        <button onClick={()=>setCompareImg(img)}
+                          style={{padding:'5px 10px',borderRadius:'7px',background:'rgba(99,102,241,0.2)',border:'1px solid rgba(99,102,241,0.35)',color:'#a5b4fc',fontSize:'12px',fontWeight:700,cursor:'pointer'}}>
+                          👁️
+                        </button>
+                        <a href={img.outUrl} download={getName(img)}
+                          style={{padding:'5px 12px',borderRadius:'7px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.35)',color:'#34d399',fontSize:'12px',fontWeight:700,textDecoration:'none'}}>
+                          ⬇️ Save
+                        </a>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -345,7 +394,7 @@ export default function Home() {
         </div>
 
         {/* RIGHT ADS — 30% */}
-        <div style={{flex:'0 0 280px',maxWidth:'280px',display:'flex',flexDirection:'column',gap:'12px',position:'sticky',top:'16px'}}>
+        <div style={{flex:'0 0 28%',maxWidth:'28%',display:'flex',flexDirection:'column',gap:'12px',position:'sticky',top:'16px'}}>
           {/* 300x600 */}
           <div style={{width:'100%',minHeight:'280px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'10px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)',flexDirection:'column',gap:'4px'}}>
             <span>AD</span><span>300×600</span>
@@ -382,10 +431,36 @@ export default function Home() {
         <div style={{width:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
       </div>
 
+      {/* BEFORE/AFTER COMPARE MODAL */}
+      {compareImg && (
+        <div onClick={()=>setCompareImg(null)} style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.85)',zIndex:1000,display:'flex',alignItems:'center',justifyContent:'center',padding:'20px'}}>
+          <div onClick={e=>e.stopPropagation()} style={{background:'#1e1b4b',borderRadius:'16px',padding:'20px',maxWidth:'90vw',width:'600px'}}>
+            <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'12px'}}>
+              <div style={{fontSize:'14px',fontWeight:700}}>Before / After — {compareImg.name}</div>
+              <button onClick={()=>setCompareImg(null)} style={{background:'none',border:'none',color:'white',fontSize:'20px',cursor:'pointer'}}>✕</button>
+            </div>
+            <div style={{position:'relative',overflow:'hidden',borderRadius:'10px',userSelect:'none'}}
+              onMouseMove={e=>{const r=e.currentTarget.getBoundingClientRect();setComparePos(Math.round(((e.clientX-r.left)/r.width)*100));}}
+              onTouchMove={e=>{const r=e.currentTarget.getBoundingClientRect();setComparePos(Math.round(((e.touches[0].clientX-r.left)/r.width)*100));}}>
+              <img src={compareImg.outUrl} alt="after" style={{width:'100%',display:'block',borderRadius:'10px'}}/>
+              <div style={{position:'absolute',inset:0,overflow:'hidden',width:`${comparePos}%`}}>
+                <img src={compareImg.preview} alt="before" style={{width:`${10000/comparePos}%`,maxWidth:'none',display:'block',borderRadius:'10px'}}/>
+              </div>
+              <div style={{position:'absolute',top:0,bottom:0,left:`${comparePos}%`,width:'2px',background:'white',transform:'translateX(-50%)',cursor:'ew-resize'}}>
+                <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',background:'white',borderRadius:'50%',width:'28px',height:'28px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'12px',color:'#1e1b4b',fontWeight:900}}>⟺</div>
+              </div>
+              <div style={{position:'absolute',top:'8px',left:'8px',background:'rgba(0,0,0,0.6)',padding:'3px 8px',borderRadius:'6px',fontSize:'11px',fontWeight:700}}>BEFORE {fmtSize(compareImg.origSize)}</div>
+              <div style={{position:'absolute',top:'8px',right:'8px',background:'rgba(16,185,129,0.8)',padding:'3px 8px',borderRadius:'6px',fontSize:'11px',fontWeight:700}}>AFTER {fmtSize(compareImg.compSize||0)}</div>
+            </div>
+            <div style={{marginTop:'12px',textAlign:'center',fontSize:'13px',opacity:0.5}}>Drag to compare · Click outside to close</div>
+          </div>
+        </div>
+      )}
+
       <style>{`
         @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        input[type=range] { height: 4px; } @media (max-width: 768px) { .ads-sidebar { display: none; } }
+        input[type=range] { height: 4px; }
       `}</style>
     </div>
   );

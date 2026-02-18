@@ -48,11 +48,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "acceptedAnswer": { "@type": "Answer", "text": "Yes — our tool processes everything in your browser. Your passport photo never leaves your device." }},
             { "@type": "Question", "name": "How to compress images for Shopify for free?",
               "acceptedAnswer": { "@type": "Answer", "text": "Use our Shopify preset — it automatically sets WebP format, optimal quality, and keeps images under 1MB. No app installation needed." }},
+            { "@type": "Question", "name": "Does this tool support HEIC photos from iPhone?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes — we support HEIC and HEIF files taken with iPhone or iPad. They are automatically converted in your browser without any upload." }},
+            { "@type": "Question", "name": "Can I compress multiple images at once?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes — you can upload up to 10 images at once and download them all as a ZIP file. Batch compression is completely free." }},
+          ]
+        })}} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "How to Compress an Image to 20KB Online",
+          "description": "Step-by-step guide to compress any image to exactly 20KB for free, without uploading to a server.",
+          "totalTime": "PT30S",
+          "step": [
+            { "@type": "HowToStep", "position": 1, "name": "Upload Your Image", "text": "Click the drop zone or drag your image. Supports JPG, PNG, WebP, HEIC — up to 10 files." },
+            { "@type": "HowToStep", "position": 2, "name": "Select Exact KB Mode", "text": "Click 'Exact KB Mode' tab and type 20 in the target field, or click the Gov 20KB preset." },
+            { "@type": "HowToStep", "position": 3, "name": "Compress and Download", "text": "Click Compress. Your file is ready in seconds — download it directly to your device." }
           ]
         })}} />
       </head>
       <body style={{ margin: 0, padding: 0 }}>{children}</body>
-    <Analytics />
+      <Analytics />
     </html>
   );
 }
