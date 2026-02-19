@@ -3,6 +3,12 @@ import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: 'Compress Image to 20KB Free Online — 100% Private, No Upload',
   description: 'Compress images to exact KB (20KB, 50KB, 100KB) free online. Files never leave your device. Presets for Shopify, Etsy, Amazon, passport photos. No upload, no signup.',
@@ -55,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             { "@type": "Question", "name": "Does this tool support HEIC photos from iPhone?",
               "acceptedAnswer": { "@type": "Answer", "text": "Yes — we support HEIC and HEIF files taken with iPhone or iPad. They are automatically converted in your browser without any upload." }},
             { "@type": "Question", "name": "Can I compress multiple images at once?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes — you can upload up to 10 images at once and download them all as a ZIP file. Batch compression is completely free." }},
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes — you can upload up to 50 images at once and download them all as a ZIP file. Batch compression is completely free." }},
           ]
         })}} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
