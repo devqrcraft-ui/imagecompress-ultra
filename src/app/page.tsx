@@ -164,17 +164,6 @@ export default function Home() {
         <a href='#compress' style={{background:'linear-gradient(135deg,#6366f1,#22d3ee)',color:'#fff',fontSize:'13px',fontWeight:800,padding:'9px 18px',borderRadius:'100px',whiteSpace:'nowrap',textDecoration:'none',flexShrink:0,boxShadow:'0 0 20px rgba(99,102,241,0.5)',border:'1px solid rgba(255,255,255,0.2)'}}>📦 Download ZIP</a>
       </header>
 
-      {/* ZERO UPLOAD BADGE */}
-          ['⚡','Instant compression in browser'],
-          ['🛡️','No upload · No server · 100% Private'],
-          ['🆓','Free forever · No account needed'],
-        ].map(([icon,text],i)=>(
-          <div key={i} style={{display:'flex',alignItems:'center',gap:'6px',fontSize:'12px',fontWeight:600,color:'#34d399'}}>
-            <span>{icon}</span><span style={{color:'rgba(255,255,255,0.85)'}}>{text}</span>
-          </div>
-        ))}
-      </div>
-
       {/* AD TOP 728x90 */}
       <div style={{display:'flex',justifyContent:'center',padding:'8px 0',background:'rgba(0,0,0,0.2)'}}>
         <div style={{width:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
