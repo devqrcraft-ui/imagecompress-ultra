@@ -166,7 +166,7 @@ export default function Home() {
 
       {/* AD TOP 728x90 */}
       <div style={{display:'flex',justifyContent:'center',padding:'8px 0',background:'rgba(0,0,0,0.2)'}}>
-        <div style={{width:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
+        <div style={{width:'100%',maxWidth:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
       </div>
 
       {/* MAIN 70/30 LAYOUT */}
@@ -402,7 +402,7 @@ export default function Home() {
 
       {/* BOTTOM AD */}
       <div style={{display:'flex',justifyContent:'center',padding:'8px 0 16px',background:'rgba(0,0,0,0.2)'}}>
-        <div style={{width:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
+        <div style={{width:'100%',maxWidth:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
       </div>
 
       {/* BEFORE/AFTER COMPARE MODAL */}
