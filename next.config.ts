@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
         // Блокує камеру, мікрофон, геолокацію
         { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
         // Захист від копіювання контенту ботами
-        { key: "X-Robots-Tag", value: "noarchive, nosnippet" },
+        { key: "X-Robots-Tag", value: "noarchive" },
         // CSP — блокує сторонні скрипти/стилі
         {
           key: "Content-Security-Policy",
