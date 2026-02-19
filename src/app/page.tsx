@@ -73,7 +73,7 @@ export default function Home() {
       f.type.startsWith('image/') ||
       f.name.toLowerCase().endsWith('.heic') ||
       f.name.toLowerCase().endsWith('.heif')
-    ).slice(0,10);
+    ).slice(0,50);
     setImages(p=>[...p, ...arr.map(f=>({
       id: (typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36)),
       name: f.name,
@@ -274,7 +274,7 @@ export default function Home() {
               transition:'all 0.2s',marginBottom:'14px'}}>
             <div style={{fontSize:'36px',marginBottom:'8px'}}>📁</div>
             <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>Drop images here or click</div>
-            <div style={{fontSize:'12px',opacity:0.45}}>JPG · PNG · WebP · AVIF · max 10 files</div>
+            <div style={{fontSize:'12px',opacity:0.45}}>JPG · PNG · WebP · AVIF · Up to 50 files · Free</div>
             <input ref={ref} type="file" accept="image/*,.heic,.heif" multiple style={{display:'none'}}
               onChange={e=>e.target.files&&addFiles(e.target.files)}/>
           </div>
