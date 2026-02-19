@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     description: 'Files never leave your device. Exact KB compression. Free forever.',
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "7FuVvWbV1QrWtkykfZ-plrojhmUeYuo5Daj26upXyLY",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
