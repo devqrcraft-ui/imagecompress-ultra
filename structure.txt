@@ -1,0 +1,85 @@
+./check-task.js
+./manual-worker.js
+./sentry.edge.config.ts
+./sentry.server.config.ts
+./src/app/about/page.tsx
+./src/app/api/compress/route.ts
+./src/app/api/cron/stuck-tasks/route.ts
+./src/app/api/sentry-example-api/route.ts
+./src/app/api/task/[id]/route.ts
+./src/app/blog/best-image-formats/page.tsx
+./src/app/blog/ecommerce-image-optimization/page.tsx
+./src/app/blog/free-vs-paid-compressors/page.tsx
+./src/app/blog/image-optimization-2026/page.tsx
+./src/app/blog/page.tsx
+./src/app/blog/pagespeed-images/page.tsx
+./src/app/blog/[slug]/page.tsx
+./src/app/compress-for-shopify/page.tsx
+./src/app/compress-passport-photo/page.tsx
+./src/app/compress-to-100kb/page.tsx
+./src/app/compress-to-200kb/page.tsx
+./src/app/compress-to-20kb/page.tsx
+./src/app/compress-to-500kb/page.tsx
+./src/app/compress-to-50kb/page.tsx
+./src/app/compress-without-uploading/page.tsx
+./src/app/contact/page.tsx
+./src/app/faq/page.tsx
+./src/app/global-error.tsx
+./src/app/layout.tsx
+./src/app/page.tsx
+./src/app/robots.ts
+./src/app/sentry-example-page/page.tsx
+./src/app/sitemap.ts
+./src/app/use/[slug]/page.tsx
+./src/components/AdSenseLayout.tsx
+./src/components/Honeypot.tsx
+./src/components/MarqueeBanner.tsx
+./src/components/Navbar.tsx
+./src/components/ZeroUploadBanner.tsx
+./src/instrumentation-client.ts
+./src/instrumentation.ts
+./src/lib/abuse-score.ts
+./src/lib/circuit-breaker.ts
+./src/lib/fingerprint.ts
+./src/lib/gdpr-saga.ts
+./src/lib/queue.ts
+./src/lib/redis.ts
+./src/lib/sharp-compress.ts
+./src/lib/turnstile.ts
+./src/proxy.ts
+./src/utils/compressor.ts
+./test-redis-keys.js
+./worker-loop.js
+{
+  "name": "imagecompress-ultra",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@sentry/nextjs": "^10.39.0",
+    "@upstash/redis": "^1.36.2",
+    "@vercel/analytics": "^1.6.1",
+    "@vercel/blob": "^2.2.0",
+    "browser-image-compression": "^2.0.2",
+    "next": "^16.1.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/sharp": "^0.31.1",
+    "eslint": "^9",
+    "eslint-config-next": "^16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
