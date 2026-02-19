@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://compressto20kb.com';
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://imagecompress-ultra.vercel.app";
   const pages = [
     { url: '/', priority: 1.0, changeFrequency: 'weekly' as const },
     { url: '/compress-to-20kb', priority: 0.95, changeFrequency: 'monthly' as const },
