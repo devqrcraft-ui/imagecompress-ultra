@@ -1,3 +1,4 @@
+import MarqueeBanner from "@/components/MarqueeBanner";
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
@@ -67,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           ]
         })}} />
       </head>
-      <body style={{ margin: 0, padding: 0 }}>{children}</body>
+      <body style={{ margin: 0, padding: 0 }}><MarqueeBanner />{children}</body>
       <Analytics />
     </html>
   );

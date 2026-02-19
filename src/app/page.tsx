@@ -159,21 +159,16 @@ export default function Home() {
       </div>
 
       {/* HEADER */}
-      <header style={{padding:'12px 20px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.07)'}}>
-        <div style={{display:'flex',alignItems:'center',gap:'10px'}}>
-          <span style={{fontSize:'24px'}}>🗜️</span>
-          <div>
-            <div style={{fontWeight:800,fontSize:'18px',letterSpacing:'-0.5px'}}>
-              Compress<span style={{color:'#818cf8'}}>To20KB</span>
-            </div>
-            <div style={{fontSize:'10px',opacity:0.5,marginTop:'-2px'}}>Free · Private · Instant</div>
-          </div>
-        </div>
-        <nav style={{display:'flex',gap:'20px',fontSize:'13px',opacity:0.7}}>
-          <a href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</a>
-          <a href="/faq" style={{color:'white',textDecoration:'none'}}>FAQ</a>
-          <a href="/about" style={{color:'white',textDecoration:'none'}}>About</a>
+      <header style={{background:'#0a0a14',borderBottom:'1px solid #1a1a2e',padding:'0 16px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'56px',position:'sticky',top:0,zIndex:50}}>
+        <a href='/' style={{textDecoration:'none',fontWeight:800,fontSize:'18px',color:'#fff',letterSpacing:'-0.5px'}}>Compress<span style={{color:'#22d3ee'}}>20KB</span></a>
+        <nav style={{display:'flex',gap:'2px',alignItems:'center'}}>
+          {([['/?mode=quality','🗜️ Compress'],['/compress-for-shopify','🛍️ Shopify'],['/compress-passport-photo','🪪 Passport'],['/faq','FAQ']] as [string,string][]).map(([href,label])=>(
+            <a key={href} href={href} style={{color:'#8888bb',textDecoration:'none',fontSize:'12.5px',fontWeight:500,padding:'5px 8px',borderRadius:'7px',whiteSpace:'nowrap'}}
+              onMouseEnter={e=>{(e.currentTarget as HTMLElement).style.color='#fff';(e.currentTarget as HTMLElement).style.background='#1a1a30'}}
+              onMouseLeave={e=>{(e.currentTarget as HTMLElement).style.color='#8888bb';(e.currentTarget as HTMLElement).style.background='transparent'}}>{label}</a>
+          ))}
         </nav>
+        <a href='#compress' style={{background:'linear-gradient(135deg,#6366f1,#22d3ee)',color:'#fff',fontSize:'13px',fontWeight:800,padding:'9px 18px',borderRadius:'100px',whiteSpace:'nowrap',textDecoration:'none',flexShrink:0,boxShadow:'0 0 20px rgba(99,102,241,0.5)',border:'1px solid rgba(255,255,255,0.2)'}}>📦 Download ZIP</a>
       </header>
 
       {/* ZERO UPLOAD BADGE */}
