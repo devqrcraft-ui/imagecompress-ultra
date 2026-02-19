@@ -150,13 +150,6 @@ export default function Home() {
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,-apple-system,sans-serif',color:'white'}}>
 
       {/* TOP TICKER */}
-      <div style={{background:'linear-gradient(90deg,#6366f1,#8b5cf6)',padding:'6px 0',overflow:'hidden',fontSize:'12px',fontWeight:500}}>
-        <div style={{display:'flex',gap:'40px',whiteSpace:'nowrap',animation:'ticker 25s linear infinite'}}>
-          {['🔒 Files NEVER leave your device','⚡ 100% Client-side Processing','🆓 Free Forever — No Signup','🛍️ Shopify · Etsy · Amazon Presets','🎯 Compress to Exact KB','📦 Batch up to 10 images'].map((t,i)=>(
-            <span key={i} style={{opacity:0.95}}>{t} &nbsp;•</span>
-          ))}
-        </div>
-      </div>
 
       {/* HEADER */}
       <header style={{background:'#0a0a14',borderBottom:'1px solid #1a1a2e',padding:'0 16px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'56px',position:'sticky',top:0,zIndex:50}}>
@@ -172,9 +165,6 @@ export default function Home() {
       </header>
 
       {/* ZERO UPLOAD BADGE */}
-      <div style={{background:'linear-gradient(90deg,rgba(16,185,129,0.15),rgba(99,102,241,0.15))',borderBottom:'1px solid rgba(16,185,129,0.3)',padding:'8px 20px',display:'flex',alignItems:'center',justifyContent:'center',gap:'24px',flexWrap:'wrap'}}>
-        {[
-          ['🔒','Your files NEVER leave your device'],
           ['⚡','Instant compression in browser'],
           ['🛡️','No upload · No server · 100% Private'],
           ['🆓','Free forever · No account needed'],
