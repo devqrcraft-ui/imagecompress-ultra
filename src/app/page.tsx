@@ -42,6 +42,19 @@ function fmtSize(b: number) {
   return (b/(1024*1024)).toFixed(2) + ' MB';
 }
 
+const TICKER_ITEMS = [
+  '⚡ 100% Free — No Signup Required',
+  '🔒 Files Never Leave Your Device',
+  '📦 Compress for Shopify · Etsy · Amazon',
+  '🎯 Compress to Exact KB — 20KB · 50KB · 100KB',
+  '🖼️ WebP · AVIF · JPEG · PNG · HEIC Support',
+  '📱 Works on All Devices — Mobile · Tablet · Desktop',
+  '🚀 Instant Compression in Your Browser',
+  '✅ No Upload · No Server · 100% Private',
+  '🗜️ Batch Up to 50 Images at Once',
+  '💾 Save Space — Average 70% Size Reduction',
+];
+
 export default function Home() {
   const [images, setImages] = useState<Img[]>([]);
   const [format, setFormat] = useState<Format>('webp');
@@ -55,7 +68,6 @@ export default function Home() {
   const [comparePos, setComparePos] = useState(50);
   const ref = useRef<HTMLInputElement>(null);
 
-  // Load saved settings
   useEffect(() => {
     try {
       const s = localStorage.getItem('cmp_settings');
@@ -63,7 +75,6 @@ export default function Home() {
     } catch {}
   }, []);
 
-  // Save settings on change
   useEffect(() => {
     try { localStorage.setItem('cmp_settings', JSON.stringify({format,quality,mode,targetKB})); } catch {}
   }, [format,quality,mode,targetKB]);
@@ -127,7 +138,6 @@ export default function Home() {
     const done = images.filter(i=>i.status==='done'&&i.outUrl);
     if (!done.length) return;
     try {
-      // dynamic import JSZip from CDN
       const { default: JSZip } = await import('https://cdn.jsdelivr.net/npm/jszip@3.10.1/+esm' as any);
       const zip = new JSZip();
       await Promise.all(done.map(async img => {
@@ -141,7 +151,6 @@ export default function Home() {
       a.download = 'compressed-images.zip';
       a.click();
     } catch {
-      // fallback: download one by one
       downloadAll();
     }
   };
@@ -150,6 +159,13 @@ export default function Home() {
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,-apple-system,sans-serif',color:'white'}}>
 
       {/* TOP TICKER */}
+      <div style={{background:'linear-gradient(90deg,#6366f1,#8b5cf6,#22d3ee)',padding:'9px 0',overflow:'hidden',whiteSpace:'nowrap',fontSize:'13px',fontWeight:600,color:'white',letterSpacing:'0.2px'}}>
+        <div style={{display:'inline-block',animation:'ticker 60s linear infinite'}}>
+          {[...TICKER_ITEMS, ...TICKER_ITEMS].map((t,i)=>(
+            <span key={i} style={{padding:'0 36px'}}>{t}</span>
+          ))}
+        </div>
+      </div>
 
       {/* HEADER */}
       <header style={{background:'#0a0a14',borderBottom:'1px solid #1a1a2e',padding:'0 16px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'56px',position:'sticky',top:0,zIndex:50}}>
@@ -169,13 +185,12 @@ export default function Home() {
         <div style={{width:'100%',maxWidth:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
       </div>
 
-      {/* MAIN 70/30 LAYOUT */}
-      <div style={{display:'flex',maxWidth:'1200px',margin:'0 auto',padding:'16px',gap:'16px',alignItems:'flex-start'}}>
+      {/* MAIN LAYOUT */}
+      <div className="layout-row" style={{display:'flex',maxWidth:'1200px',margin:'0 auto',padding:'16px',gap:'16px',alignItems:'flex-start'}}>
 
-        {/* LEFT TOOL — 70% */}
-        <div style={{flex:'0 0 70%',maxWidth:'70%'}}>
+        {/* LEFT TOOL */}
+        <div className="main-col" style={{flex:'0 0 70%',maxWidth:'70%'}}>
 
-          {/* H1 SEO */}
           <h1 style={{fontSize:'26px',fontWeight:800,marginBottom:'4px',letterSpacing:'-0.5px'}}>
             Compress Image to <span style={{color:'#818cf8'}}>20KB</span> Free Online
           </h1>
@@ -184,7 +199,7 @@ export default function Home() {
           {/* PRESETS */}
           <div style={{marginBottom:'16px'}}>
             <div style={{fontSize:'11px',fontWeight:600,opacity:0.5,textTransform:'uppercase',letterSpacing:'1px',marginBottom:'8px'}}>⚡ Quick Presets</div>
-            <div style={{display:'flex',gap:'8px',flexWrap:'wrap'}}>
+            <div className="preset-row" style={{display:'flex',gap:'8px',flexWrap:'wrap'}}>
               {PRESETS.map(pr=>(
                 <button key={pr.name} onClick={()=>applyPreset(pr)}
                   style={{padding:'6px 12px',borderRadius:'20px',border:'1px solid',
@@ -212,7 +227,7 @@ export default function Home() {
           </div>
 
           {/* FORMAT */}
-          <div style={{display:'flex',gap:'8px',marginBottom:'14px'}}>
+          <div className="format-row" style={{display:'flex',gap:'8px',marginBottom:'14px'}}>
             {FMTS.map(([f,label,sub])=>(
               <button key={f} onClick={()=>setFormat(f)}
                 style={{flex:1,padding:'10px 8px',borderRadius:'10px',border:'1px solid',
@@ -263,7 +278,7 @@ export default function Home() {
           )}
 
           {/* DROP ZONE */}
-          <div
+          <div id="compress"
             onDragOver={e=>{e.preventDefault();setDrag(true);}}
             onDragLeave={()=>setDrag(false)}
             onDrop={e=>{e.preventDefault();setDrag(false);addFiles(e.dataTransfer.files);}}
@@ -273,8 +288,8 @@ export default function Home() {
               background: drag ? 'rgba(129,140,248,0.1)' : 'rgba(255,255,255,0.03)',
               transition:'all 0.2s',marginBottom:'14px'}}>
             <div style={{fontSize:'36px',marginBottom:'8px'}}>📁</div>
-            <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>Drop images here or click</div>
-            <div style={{fontSize:'12px',opacity:0.45}}>JPG · PNG · WebP · AVIF · Up to 50 files · Free</div>
+            <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>Drop images here or click to upload</div>
+            <div style={{fontSize:'12px',opacity:0.45}}>JPG · PNG · WebP · AVIF · HEIC · Up to 50 files · Free</div>
             <input ref={ref} type="file" accept="image/*,.heic,.heif" multiple style={{display:'none'}}
               onChange={e=>e.target.files&&addFiles(e.target.files)}/>
           </div>
@@ -289,7 +304,7 @@ export default function Home() {
           {/* IMAGE LIST */}
           {images.length > 0 && (
             <div>
-              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'10px'}}>
+              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'10px',flexWrap:'wrap',gap:'8px'}}>
                 <div style={{fontSize:'13px',fontWeight:600,opacity:0.7}}>{images.length} image{images.length>1?'s':''} · {done} compressed</div>
                 <div style={{display:'flex',gap:'8px'}}>
                   {done > 0 && (
@@ -307,7 +322,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* STATS */}
               {done > 0 && (
                 <div style={{display:'flex',gap:'12px',marginBottom:'12px',flexWrap:'wrap'}}>
                   {[
@@ -355,7 +369,6 @@ export default function Home() {
             </div>
           )}
 
-          {/* COMPRESS BUTTON (empty state) */}
           {images.length > 0 && images.some(i=>i.status==='pending') && (
             <button onClick={compressAll} disabled={proc}
               style={{width:'100%',padding:'14px',marginTop:'10px',borderRadius:'10px',
@@ -368,19 +381,16 @@ export default function Home() {
         </div>
 
         {/* RIGHT ADS — 30% */}
-        <div className="right-col" style={{flex:'0 0 28%',maxWidth:'28%',display:'flex',flexDirection:'column',gap:'12px',position:'sticky',top:'16px'}}>
-          {/* 300x600 */}
+        <div className="right-col" style={{flex:'0 0 28%',maxWidth:'28%',display:'flex',flexDirection:'column',gap:'12px',position:'sticky',top:'72px'}}>
           <div style={{width:'100%',minHeight:'280px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'10px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)',flexDirection:'column',gap:'4px'}}>
             <span>AD</span><span>300×600</span>
           </div>
-          {/* Trust box */}
           <div style={{background:'rgba(16,185,129,0.08)',border:'1px solid rgba(16,185,129,0.25)',borderRadius:'10px',padding:'14px'}}>
             <div style={{fontSize:'13px',fontWeight:700,color:'#34d399',marginBottom:'8px'}}>🔒 Privacy First</div>
             {['Your images stay on your device','No server upload ever','No account required','GDPR compliant by design'].map((t,i)=>(
               <div key={i} style={{fontSize:'11px',opacity:0.75,padding:'3px 0',borderBottom: i<3 ? '1px solid rgba(255,255,255,0.05)':'none'}}>✓ {t}</div>
             ))}
           </div>
-          {/* 300x250 */}
           <div style={{width:'100%',height:'160px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'10px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)',flexDirection:'column',gap:'4px'}}>
             <span>AD</span><span>300×250</span>
           </div>
@@ -432,10 +442,24 @@ export default function Home() {
       )}
 
       <style>{`
-        @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} } @media(max-width:768px){.right-col{display:none!important} .layout-row{flex-direction:column!important} .main-col{max-width:100%!important;flex:1 1 100%!important}}
-        @media(max-width:768px){.right-col{display:none!important}.main-col{max-width:100%!important;flex:1 1 100%!important}.layout-row{flex-direction:column!important}}
+        @keyframes ticker {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         input[type=range] { height: 4px; }
+        @media (max-width: 768px) {
+          .right-col { display: none !important; }
+          .layout-row { flex-direction: column !important; padding: 12px !important; }
+          .main-col { max-width: 100% !important; flex: 1 1 100% !important; }
+          .preset-row { gap: 6px !important; }
+          .format-row { gap: 4px !important; }
+        }
+        @media (max-width: 480px) {
+          h1 { font-size: 20px !important; }
+          .format-row button { padding: 8px 4px !important; }
+          .format-row button div:first-child { font-size: 11px !important; }
+        }
       `}</style>
     </div>
   );
