@@ -6,7 +6,7 @@ export const config = {
   matcher: ["/api/compress", "/api/task/:path*"],
 };
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   try {
     const fp = await getFingerprint(req);
     const level = await checkAbuse(fp);
@@ -36,7 +36,7 @@ export async function middleware(req: NextRequest) {
 
     return NextResponse.next({ request: { headers: requestHeaders } });
   } catch (err) {
-    console.error("[middleware] error:", err);
+    console.error("[proxy] error:", err);
     return NextResponse.next(); // fail-open
   }
 }
