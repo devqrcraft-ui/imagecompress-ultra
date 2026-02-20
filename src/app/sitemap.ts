@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/blog/uscis-photo-size-requirements', priority: 0.76, changeFrequency: 'monthly' as const },
     { url: '/blog/image-optimization-2026', priority: 0.74, changeFrequency: 'monthly' as const },
     { url: '/blog/pagespeed-images', priority: 0.73, changeFrequency: 'monthly' as const },
+    
+    { url: '/blog/compress-images-for-etsy-listings', priority: 0.80, changeFrequency: 'monthly' as const },
+    { url: '/blog/compress-images-for-shopify-store', priority: 0.80, changeFrequency: 'monthly' as const },
+    { url: '/blog/compress-images-for-amazon-seller', priority: 0.80, changeFrequency: 'monthly' as const },
+    { url: '/blog/reduce-image-size-for-government-forms-usa', priority: 0.79, changeFrequency: 'monthly' as const },
+    { url: '/blog/best-free-image-compressor-for-small-business-usa', priority: 0.78, changeFrequency: 'monthly' as const },
     { url: '/about', priority: 0.50, changeFrequency: 'yearly' as const },
     { url: '/use', priority: 0.60, changeFrequency: 'monthly' as const },
   ];
