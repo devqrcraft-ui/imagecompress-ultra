@@ -18,7 +18,7 @@ export default function Page() {
       <p className="text-slate-400 text-lg mb-8">100% Private · Files never leave your browser · No upload needed</p>
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-white mb-4">Why Compress an Image to Exactly 20KB?</h2>
-        <p className="text-slate-300 leading-relaxed mb-4">Millions search for compress image to 20KB monthly. Government portals across India, Pakistan, Ukraine enforce strict limits. Standard tools like TinyPNG estimate — our tool hits your target within 1KB every time using binary search.</p>
+        <p className="text-slate-300 leading-relaxed mb-4">Millions search for compress image to 20KB monthly. Government portals across India, Pakistan, Ukraine enforce strict limits. Standard tools like PNG Shrinker estimate — our tool hits your target within 1KB every time using binary search.</p>
         <p className="text-slate-300 leading-relaxed">Most tools upload your photo to a server — a serious privacy concern for passport photos and ID documents. CompressTo20KB processes everything in your browser. Your image is never transmitted anywhere.</p>
       </section>
       <section className="mb-10">

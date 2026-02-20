@@ -406,7 +406,7 @@ export default function Home() {
         </p>
         <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'10px'}}>Compress Images for Shopify, Etsy & Amazon</h2>
         <p style={{fontSize:'13px',lineHeight:'1.7',opacity:0.65,marginBottom:'12px'}}>
-          Use our free Shopify preset to compress product images to WebP under 1MB. Unlike paid apps like Crush.pics ($10/month) that have been reported to accidentally delete store photos, our tool processes everything locally — zero risk, zero cost.
+          Use our free Shopify preset to compress product images to WebP under 1MB. Unlike paid apps like App Compressor ($10/month) that have been reported to accidentally delete store photos, our tool processes everything locally — zero risk, zero cost.
         </p>
       </div>
 

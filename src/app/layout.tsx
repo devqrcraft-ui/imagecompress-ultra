@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Compress Image to 20KB Free Online',
-    description: 'Files never leave your device. Exact KB compression. Free forever.',
+    description: 'Files never leave your device. Exact KB compression. Free.',
   },
   robots: { index: true, follow: true },
 };

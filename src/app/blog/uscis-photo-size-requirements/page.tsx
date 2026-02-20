@@ -166,7 +166,7 @@ export default function USCISPhotoRequirements() {
       <div className="mt-12 p-6 bg-indigo-50 rounded-2xl border border-indigo-200">
         <h3 className="text-xl font-semibold mb-2">Compress your USCIS photo now — free & private</h3>
         <p className="text-gray-600 mb-4">
-          Reduce to under 50KB instantly. Your photo never leaves your device — unlike TinyPNG or Fotor. No account needed.
+          Reduce to under 50KB instantly. Your photo never leaves your device — unlike PNG Shrinker or Fotor. No account needed.
         </p>
         <div className="flex gap-3 flex-wrap">
           <a href="/compress-for-uscis" className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">

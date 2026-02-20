@@ -120,7 +120,7 @@ export default function DVLotteryPage() {
           <span style={{fontSize:'24px'}}>🔒</span>
           <div>
             <div style={{fontWeight:700,fontSize:'14px',color:'#34d399',marginBottom:'4px'}}>Your immigration photo is 100% private</div>
-            <div style={{fontSize:'13px',opacity:0.65}}>Unlike TinyPNG, Fotor or Zamzar — your photo never leaves your device. Everything is processed locally in your browser. GDPR compliant, no account needed.</div>
+            <div style={{fontSize:'13px',opacity:0.65}}>Unlike PNG Shrinker, Fotor or Zamzar — your photo never leaves your device. Everything is processed locally in your browser. GDPR compliant, no account needed.</div>
           </div>
         </div>
 

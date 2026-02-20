@@ -86,7 +86,7 @@ export default function PassportPage() {
           Compress your passport photo for <strong style={{color:'white'}}>US State Department</strong>, <strong style={{color:'white'}}>USCIS</strong>, <strong style={{color:'white'}}>DS-11</strong>, <strong style={{color:'white'}}>DS-160</strong>, India UIDAI, Pakistan NADRA, Ukraine Diia and 50+ other government portals. Meet any file size requirement — 20KB, 50KB or 240KB — instantly and for free.
         </p>
         <p style={{fontSize:'13px',lineHeight:'1.7',opacity:0.45,marginBottom:'24px'}}>
-          Unlike TinyPNG, Fotor or Zamzar — your passport or ID photo never leaves your device. All compression happens locally in your browser. No account needed, no registration, GDPR compliant.
+          Unlike PNG Shrinker, Fotor or Zamzar — your passport or ID photo never leaves your device. All compression happens locally in your browser. No account needed, no registration, GDPR compliant.
         </p>
 
         {/* Privacy banner */}

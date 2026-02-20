@@ -18,7 +18,7 @@ export default function Page() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-white mb-4">Why 100KB?</h2>
         <p className="text-slate-300 leading-relaxed mb-4">100KB is the sweet spot for email attachments, job applications, university portals, and profile photos. Most online forms and HR platforms reject photos larger than 100KB. Our tool compresses your image to exactly 100KB — or less — while keeping the best possible quality.</p>
-        <p className="text-slate-300 leading-relaxed">Unlike TinyPNG or Squoosh, you choose the exact target. No guessing, no re-uploading.</p>
+        <p className="text-slate-300 leading-relaxed">Unlike PNG Shrinker or Squoosh, you choose the exact target. No guessing, no re-uploading.</p>
       </section>
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-white mb-4">Common Uses for 100KB Images</h2>

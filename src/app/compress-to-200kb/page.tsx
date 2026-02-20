@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Compress Image to 200KB Free Online — No Upload, 100% Private',
-  description: 'Compress any image to exactly 200KB free online. Browser-based, files never leave your device. JPG, PNG, WebP, HEIC supported. Free forever.',
+  description: 'Compress any image to exactly 200KB free online. Browser-based, files never leave your device. JPG, PNG, WebP, HEIC supported. Free.',
   alternates: { canonical: 'https://compressto20kb.com/compress-to-200kb' },
 };
 const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[

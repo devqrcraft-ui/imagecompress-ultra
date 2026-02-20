@@ -44,10 +44,10 @@ export default function FreeVsPaidCompressors() {
           </thead>
           <tbody>
             <tr><td className="border p-2">ImageCompress Pro</td><td className="border p-2">Free</td><td className="border p-2">✓</td><td className="border p-2">✓</td><td className="border p-2">✓</td><td className="border p-2">Local</td></tr>
-            <tr><td className="border p-2">TinyPNG</td><td className="border p-2">Free / $25/mo</td><td className="border p-2">✓</td><td className="border p-2">Limited</td><td className="border p-2">Paid</td><td className="border p-2">Upload</td></tr>
+            <tr><td className="border p-2">PNG Shrinker</td><td className="border p-2">Free / $25/mo</td><td className="border p-2">✓</td><td className="border p-2">Limited</td><td className="border p-2">Paid</td><td className="border p-2">Upload</td></tr>
             <tr><td className="border p-2">Squoosh</td><td className="border p-2">Free</td><td className="border p-2">✓</td><td className="border p-2">✗</td><td className="border p-2">✗</td><td className="border p-2">Local</td></tr>
             <tr><td className="border p-2">Cloudinary</td><td className="border p-2">Free / $89/mo</td><td className="border p-2">✓</td><td className="border p-2">✓</td><td className="border p-2">✓</td><td className="border p-2">Upload</td></tr>
-            <tr><td className="border p-2">ShortPixel</td><td className="border p-2">$4.99/mo+</td><td className="border p-2">✓</td><td className="border p-2">✓</td><td className="border p-2">✓</td><td className="border p-2">Upload</td></tr>
+            <tr><td className="border p-2">Pixel Cruncher</td><td className="border p-2">$4.99/mo+</td><td className="border p-2">✓</td><td className="border p-2">✓</td><td className="border p-2">✓</td><td className="border p-2">Upload</td></tr>
           </tbody>
         </table>
       </div>
@@ -58,8 +58,8 @@ export default function FreeVsPaidCompressors() {
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Free Tier Limits: What to Watch For</h2>
       <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li><strong>File size limits:</strong> TinyPNG free tier limits files to 5MB. ImageCompress Pro has no file size limit on the free tier.</li>
-        <li><strong>Monthly image limits:</strong> TinyPNG free: 500 images/month. Cloudinary free: 25 credits/month.</li>
+        <li><strong>File size limits:</strong> PNG Shrinker free tier limits files to 5MB. ImageCompress Pro has no file size limit on the free tier.</li>
+        <li><strong>Monthly image limits:</strong> PNG Shrinker free: 500 images/month. Cloudinary free: 25 credits/month.</li>
         <li><strong>Batch limits:</strong> Most free tiers limit batch to 5–10 files. ImageCompress Pro allows 20 per batch.</li>
         <li><strong>API access:</strong> Almost all tools require paid plans for API. ImageCompress Pro includes API access free.</li>
         <li><strong>Format support:</strong> Many free tools only output JPEG or PNG. WebP and AVIF output usually require paid plans — except ImageCompress Pro.</li>
@@ -79,7 +79,7 @@ export default function FreeVsPaidCompressors() {
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Verdict</h2>
       <p className="mb-4">For individuals and small businesses: a good free tool covers everything you need. ImageCompress Pro gives you WebP output, batch processing, API access, and local processing — all free, with no account required.</p>
-      <p className="mb-4">For agencies, large e-commerce stores, or automated pipelines: look at Cloudinary or ShortPixel. The automation alone saves hours per week.</p>
+      <p className="mb-4">For agencies, large e-commerce stores, or automated pipelines: look at Cloudinary or Pixel Cruncher. The automation alone saves hours per week.</p>
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Try the best free compressor</h3>

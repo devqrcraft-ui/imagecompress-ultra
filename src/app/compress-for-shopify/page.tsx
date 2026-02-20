@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Free Image Compressor for Shopify — No App, No Upload, No Cost',
-  description: 'Compress Shopify product images to WebP under 1MB free. No app installation. Unlike Crush.pics ($10/month), your images are never deleted. 100% private, browser-based.',
+  description: 'Compress Shopify product images to WebP under 1MB free. No app installation. Unlike App Compressor ($10/month), your images are never deleted. 100% private, browser-based.',
   alternates: { canonical: '/compress-for-shopify' },
 };
 
@@ -31,7 +31,7 @@ export default function ShopifyPage() {
         <div style={{background:'rgba(239,68,68,0.08)',border:'1px solid rgba(239,68,68,0.3)',borderRadius:'12px',padding:'16px 20px',marginBottom:'24px'}}>
           <div style={{fontWeight:700,fontSize:'14px',color:'#f87171',marginBottom:'8px'}}>⚠️ Warning about Shopify image optimizer apps</div>
           <p style={{fontSize:'13px',opacity:0.7,lineHeight:'1.6',margin:0}}>
-            Paid apps like Crush.pics ($9.99/month) have been reported to accidentally <strong style={{color:'#fca5a5'}}>permanently delete product photos</strong> from stores. Our browser-based tool has zero risk — nothing touches your Shopify store directly.
+            Paid apps like App Compressor ($9.99/month) have been reported to accidentally <strong style={{color:'#fca5a5'}}>permanently delete product photos</strong> from stores. Our browser-based tool has zero risk — nothing touches your Shopify store directly.
           </p>
         </div>
 
@@ -67,14 +67,14 @@ export default function ShopifyPage() {
           <table style={{width:'100%',borderCollapse:'collapse',fontSize:'13px'}}>
             <thead>
               <tr style={{background:'rgba(129,140,248,0.15)'}}>
-                {['Feature','CompressTo20KB','Crush.pics','TinyIMG'].map(h=>(
+                {['Feature','CompressTo20KB','App Compressor','Size Optimizer'].map(h=>(
                   <th key={h} style={{padding:'10px 14px',textAlign:'left',fontWeight:700,borderBottom:'1px solid rgba(255,255,255,0.1)'}}>{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {[
-                ['Price','🆓 Free forever','$9.99/month','$9.99/month'],
+                ['Price','🆓 Free','$9.99/month','$9.99/month'],
                 ['Risk to store','✅ Zero','❌ Can delete photos','⚠️ Modifies originals'],
                 ['Privacy','✅ 100% local','❌ Uploads to server','❌ Uploads to server'],
                 ['WebP support','✅ Yes','✅ Yes','✅ Yes'],
