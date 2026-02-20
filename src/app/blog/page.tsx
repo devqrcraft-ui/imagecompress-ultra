@@ -33,8 +33,8 @@ export default function BlogIndex() {
       <div style={{display:'grid',gap:'16px'}}>
         {posts.map(post => (
           <a key={post.slug} href={`/blog/${post.slug}`} style={{textDecoration:'none',display:'block',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'20px',transition:'border-color 0.2s'}}
-            onMouseEnter={e=>(e.currentTarget as HTMLElement).style.borderColor='rgba(129,140,248,0.4)'}
-            onMouseLeave={e=>(e.currentTarget as HTMLElement).style.borderColor='rgba(255,255,255,0.08)'}>
+            
+            >
             <div style={{display:'flex',gap:'14px',alignItems:'flex-start'}}>
               <span style={{fontSize:'28px',flexShrink:0}}>{post.emoji}</span>
               <div>
