@@ -40,7 +40,7 @@ export default function DPIConverterPage() {
       const buffer = await blob.arrayBuffer();
       const bytes = new Uint8Array(buffer);
       const patched = patchJFIFDPI(bytes, targetDPI);
-      const outBlob = new Blob([patched], { type: 'image/jpeg' });
+      const outBlob = new Blob([patched.buffer as ArrayBuffer], { type: 'image/jpeg' });
 
       setResult({
         url: URL.createObjectURL(outBlob),
