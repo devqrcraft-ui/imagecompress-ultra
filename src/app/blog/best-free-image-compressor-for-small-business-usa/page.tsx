@@ -26,6 +26,26 @@ export default function Page() {
       <div style={{textAlign:'center',marginTop:'40px'}}>
         <a href='/' style={{display:'inline-block',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',padding:'14px 32px',borderRadius:'10px',textDecoration:'none',fontWeight:600,fontSize:'16px'}}>Compress Images Free →</a>
       </div>
+    
+      <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>
+        <h2 style={{fontSize:'20px',fontWeight:700,color:'white',marginBottom:'16px'}}>Related Articles</h2>
+        <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
+        <a href='/blog/compress-images-for-etsy-listings' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+          → Compress Images for Etsy Listings
+        </a>
+        <a href='/blog/compress-images-for-shopify-store' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+          → Compress Images for Shopify Store
+        </a>
+        <a href='/blog/free-vs-paid-compressors' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+          → Free vs Paid Image Compressors
+        </a>
+        </div>
+        <div style={{marginTop:'24px',textAlign:'center'}}>
+          <a href='/' style={{display:'inline-block',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#818cf8',padding:'10px 24px',borderRadius:'8px',textDecoration:'none',fontWeight:600,fontSize:'14px'}}>
+            ← Back to Image Compressor
+          </a>
+        </div>
+      </section>
     </article>
   );
 }

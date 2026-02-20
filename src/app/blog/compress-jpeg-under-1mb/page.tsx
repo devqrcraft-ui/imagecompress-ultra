@@ -87,6 +87,26 @@ export default function CompressJpegUnder1mb() {
         <h3 className="text-xl font-semibold mb-2">Compress Your JPEG Under 1MB Now</h3>
         <p className="text-gray-600 mb-4">Free, instant, no signup. Works on any device.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Open Compressor →</a>
+
+      <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>
+        <h2 style={{fontSize:'20px',fontWeight:700,color:'white',marginBottom:'16px'}}>Related Articles</h2>
+        <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
+        <a href='/blog/reduce-image-size-for-email' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+          → Reduce Image Size for Email
+        </a>
+        <a href='/blog/compress-images-for-etsy-listings' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+          → Compress Images for Etsy Listings
+        </a>
+        <a href='/blog/best-image-formats' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+          → Best Image Formats Guide
+        </a>
+        </div>
+        <div style={{marginTop:'24px',textAlign:'center'}}>
+          <a href='/' style={{display:'inline-block',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#818cf8',padding:'10px 24px',borderRadius:'8px',textDecoration:'none',fontWeight:600,fontSize:'14px'}}>
+            ← Back to Image Compressor
+          </a>
+        </div>
+      </section>
       </div>
     </main>
   );

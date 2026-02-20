@@ -121,6 +121,26 @@ export default function RootLayout({ children }) {
         <h3 className="text-xl font-semibold mb-2">Fix your PageSpeed image score now</h3>
         <p className="text-gray-600 mb-4">Convert JPEG and PNG to WebP instantly with ImageCompress Pro — free, browser-based, no upload required.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Compress Images Now →</a>
+
+      <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>
+        <h2 style={{fontSize:'20px',fontWeight:700,color:'white',marginBottom:'16px'}}>Related Articles</h2>
+        <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
+        <a href='/blog/ecommerce-image-optimization' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+          → Ecommerce Image Optimization
+        </a>
+        <a href='/blog/compress-images-for-shopify-store' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+          → Compress Images for Shopify Store
+        </a>
+        <a href='/blog/image-optimization-2026' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+          → Image Optimization 2026
+        </a>
+        </div>
+        <div style={{marginTop:'24px',textAlign:'center'}}>
+          <a href='/' style={{display:'inline-block',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#818cf8',padding:'10px 24px',borderRadius:'8px',textDecoration:'none',fontWeight:600,fontSize:'14px'}}>
+            ← Back to Image Compressor
+          </a>
+        </div>
+      </section>
       </div>
     </main>
   );
