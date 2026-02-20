@@ -55,6 +55,19 @@ export default function CompressTo50KB() {
             <div><div style={{fontWeight:700,fontSize:'13px',marginBottom:'2px'}}>{t}</div><div style={{fontSize:'12px',opacity:0.5}}>{d}</div></div>
           </div>
         ))}
+        <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'14px'}}>FAQ — Compress Image to 50KB</h2>
+        {[
+          ['What requires images under 50KB?','Many government ID uploads, job application portals, and academic admission forms require photos under 50KB.'],
+          ['Can I keep good quality at 50KB?','For small profile photos and ID images, 50KB is sufficient. For large prints, some quality loss is expected.'],
+          ['What dimensions work best at 50KB?','For 50KB, aim for 600x600px or smaller. Larger dimensions at 50KB will look pixelated.'],
+          ['How do I compress a selfie to 50KB?','Upload your photo, set the target to 50KB, and download. The whole process takes under 5 seconds.'],
+          ['Is this tool free?','Yes — completely free, no signup, no watermarks.'],
+        ].map(([q,a])=>(
+          <details key={q} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',marginBottom:'8px',border:'1px solid rgba(255,255,255,0.07)',padding:'14px 16px'}}>
+            <summary style={{fontWeight:600,fontSize:'14px',cursor:'pointer',listStyle:'none'}}>▶ {q}</summary>
+            <p style={{fontSize:'13px',opacity:0.6,marginTop:'10px',lineHeight:'1.7'}}>{a}</p>
+          </details>
+        ))}
         <div style={{display:'flex',gap:'10px',flexWrap:'wrap',marginTop:'24px'}}>
           {[['/compress-to-20kb','Compress to 20KB'],['/compress-passport-photo','Passport Photo'],['/compress-for-shopify','Shopify Preset'],['/compress-without-uploading','No Upload']].map(([href,label])=>(
             <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
