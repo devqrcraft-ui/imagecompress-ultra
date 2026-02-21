@@ -452,6 +452,7 @@ export default function Home() {
           </div>
         </div>
       )}
+    )
 
     </div>
     <FAQSchema faqs={faqData} />
