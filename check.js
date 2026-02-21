@@ -1,0 +1,1 @@
+const fs=require('fs');const c=fs.readFileSync('src/app/page.tsx','utf8');const lines=c.split('\n');let d=0;for(let i=169;i<lines.length;i++){const l=lines[i];const o=(l.match(/<[a-zA-Z]/g)||[]).length;const cl=(l.match(/<\/[a-zA-Z]|\/>/g)||[]).length;d+=o-cl;}console.log('final depth:',d);
