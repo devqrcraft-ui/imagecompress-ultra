@@ -1,58 +1,49 @@
 import type { Metadata } from 'next';
-
+import Link from 'next/link';
 export const metadata: Metadata = {
-  title: 'Image Compression Blog — Tips, Guides & Tools 2026',
-  description: 'Learn how to compress images for Etsy, Shopify, Amazon, email, and government forms. Free guides updated for 2026.',
+  title: 'Image Compression Blog — Tips, Guides & Requirements',
+  description: 'Free guides on image compression for USCIS, passports, visas, eBay, WooCommerce, LinkedIn and more. Expert tips to meet every platform\'s photo requirements.',
   alternates: { canonical: '/blog' },
 };
-
-const posts = [
-  { slug: 'webp-vs-jpeg-2026', title: 'WebP vs JPEG in 2026: Which Format Should You Use?', desc: 'Complete comparison of file size, quality, browser support, and when to use each format.', date: 'Feb 2026', emoji: '🖼️' },
-  { slug: 'compress-jpeg-under-1mb', title: 'How to Compress JPEG Under 1MB Free', desc: 'Step-by-step guide to reduce JPEG file size without losing visible quality.', date: 'Feb 2026', emoji: '📦' },
-  { slug: 'reduce-image-size-for-email', title: 'Reduce Image Size for Email — Gmail, Outlook, Mailchimp', desc: 'Best image sizes for email marketing in 2026. Avoid spam filters and slow loading.', date: 'Feb 2026', emoji: '📧' },
-  { slug: 'best-image-formats', title: 'Best Image Formats for Web in 2026', desc: 'WebP, AVIF, JPEG, PNG — when to use each format for maximum performance.', date: 'Jan 2026', emoji: '🎯' },
-  { slug: 'ecommerce-image-optimization', title: 'E-commerce Image Optimization Guide 2026', desc: 'How to optimize product images for Shopify, Etsy, Amazon and WooCommerce.', date: 'Jan 2026', emoji: '🛒' },
-  { slug: 'free-vs-paid-compressors', title: 'Free vs Paid Image Compressors — Honest Comparison', desc: 'Is TinyPNG worth it? We compare 8 tools so you can make the right choice.', date: 'Jan 2026', emoji: '⚖️' },
-  { slug: 'ds-160-photo-requirements', title: 'DS-160 Photo Requirements — How to Compress to 20KB', desc: 'US visa application photo specs and how to compress to exact size for free.', date: 'Jan 2026', emoji: '🪪' },
-  { slug: 'uscis-photo-size-requirements', title: 'USCIS Photo Size Requirements 2026', desc: 'Complete guide to USCIS photo specs with free compression tool.', date: 'Jan 2026', emoji: '🇺🇸' },
-  { slug: 'image-optimization-2026', title: 'Image Optimization in 2026 — Complete Guide', desc: 'Everything you need to know about optimizing images for speed, SEO, and UX.', date: 'Dec 2025', emoji: '🚀' },
-  { slug: 'pagespeed-images', title: 'How Images Affect PageSpeed Score', desc: 'Fix LCP, reduce layout shift, and pass Core Web Vitals with better images.', date: 'Dec 2025', emoji: '⚡' },
+const posts=[
+  {slug:'how-to-compress-image-for-uscis',title:'How to Compress Image for USCIS',desc:'Step-by-step guide to compressing photos for N-400, DS-160, I-485 forms under 240KB.',tag:'USCIS'},
+  {slug:'compress-passport-photo-to-50kb',title:'Compress Passport Photo to 50KB',desc:'For visa portals that require photos under 50KB. Works for India, Philippines, and more.',tag:'Passport'},
+  {slug:'image-size-requirements-for-green-card',title:'Green Card Photo Size Requirements 2025',desc:'Complete guide for I-485, I-130, I-90 photo requirements with free compression tool.',tag:'Green Card'},
+  {slug:'how-to-compress-photo-for-ds160',title:'How to Compress Photo for DS-160',desc:'US nonimmigrant visa photo requirements and how to meet them in under 60 seconds.',tag:'Visa'},
+  {slug:'best-image-size-for-ebay-listings',title:'Best Image Size for eBay Listings 2025',desc:'Optimize your eBay photos to boost search rankings and increase sales conversions.',tag:'eBay'},
+  {slug:'us-passport-photo-requirements',title:'US Passport Photo Requirements 2025',desc:'Official State Department requirements for US passport photos — print and digital.',tag:'Passport'},
+  {slug:'compress-image-for-linkedin-profile',title:'Compress Image for LinkedIn Profile',desc:'Perfect LinkedIn photo and banner sizes for a professional online presence.',tag:'LinkedIn'},
+  {slug:'how-to-compress-images-for-woocommerce',title:'How to Compress Images for WooCommerce',desc:'Speed up your WooCommerce store by optimizing product images — boost SEO and sales.',tag:'eCommerce'},
 ];
-
-export default function BlogIndex() {
-  return (
-    <div>
-      <div style={{marginBottom:'40px'}}>
-        <h1 style={{fontSize:'36px',fontWeight:800,marginBottom:'12px',letterSpacing:'-0.5px'}}>
-          Image Compression <span style={{color:'#818cf8'}}>Blog</span>
-        </h1>
-        <p style={{fontSize:'15px',lineHeight:'1.7',color:'rgba(255,255,255,0.5)'}}>
-          Guides, tips, and tutorials for compressing images — for Etsy, Shopify, Amazon, email, and government forms.
-        </p>
+const tagColor:Record<string,string>={
+  'USCIS':'rgba(239,68,68,0.2)','Passport':'rgba(99,102,241,0.2)','Green Card':'rgba(52,211,153,0.2)',
+  'Visa':'rgba(251,191,36,0.2)','eBay':'rgba(234,88,12,0.2)','LinkedIn':'rgba(14,165,233,0.2)','eCommerce':'rgba(168,85,247,0.2)',
+};
+export default function BlogIndex(){
+  return(
+    <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
+      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
+        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
+        <div style={{display:'flex',gap:'16px',fontSize:'13px',opacity:0.75}}>
+          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
+          <Link href="/compress-for-uscis" style={{color:'white',textDecoration:'none'}}>USCIS</Link>
+          <Link href="/bulk-image-compressor" style={{color:'white',textDecoration:'none'}}>Bulk</Link>
+        </div>
+      </nav>
+      <div style={{maxWidth:'860px',margin:'0 auto',padding:'48px 16px'}}>
+        <h1 style={{fontSize:'clamp(28px,4vw,44px)',fontWeight:900,marginBottom:'12px'}}>Image Compression Blog</h1>
+        <p style={{fontSize:'16px',opacity:0.6,marginBottom:'40px'}}>Guides, requirements, and tips for every platform and use case.</p>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(360px,1fr))',gap:'16px'}}>
+          {posts.map(p=>(
+            <Link key={p.slug} href={`/blog/${p.slug}`} style={{textDecoration:'none',color:'white',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'20px',display:'block',transition:'border-color 0.2s'}}>
+              <span style={{fontSize:'11px',fontWeight:700,padding:'3px 10px',borderRadius:'20px',background:tagColor[p.tag]||'rgba(99,102,241,0.2)',marginBottom:'12px',display:'inline-block'}}>{p.tag}</span>
+              <h2 style={{fontSize:'17px',fontWeight:800,margin:'0 0 8px',lineHeight:1.3}}>{p.title}</h2>
+              <p style={{fontSize:'13px',opacity:0.6,margin:0,lineHeight:1.6}}>{p.desc}</p>
+            </Link>
+          ))}
+        </div>
       </div>
-      <div style={{display:'grid',gap:'16px'}}>
-        {posts.map(post => (
-          <a key={post.slug} href={`/blog/${post.slug}`} style={{textDecoration:'none',display:'block',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'20px',transition:'border-color 0.2s'}}
-            
-            >
-            <div style={{display:'flex',gap:'14px',alignItems:'flex-start'}}>
-              <span style={{fontSize:'28px',flexShrink:0}}>{post.emoji}</span>
-              <div>
-                <div style={{fontSize:'11px',color:'rgba(255,255,255,0.3)',marginBottom:'4px'}}>{post.date}</div>
-                <h2 style={{fontSize:'17px',fontWeight:700,color:'white',marginBottom:'6px'}}>{post.title}</h2>
-                <p style={{fontSize:'13px',color:'rgba(255,255,255,0.5)',lineHeight:'1.6'}}>{post.desc}</p>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-      <div style={{marginTop:'40px',background:'rgba(99,102,241,0.1)',border:'1px solid rgba(99,102,241,0.3)',borderRadius:'14px',padding:'24px',textAlign:'center'}}>
-        <h3 style={{fontSize:'18px',fontWeight:700,marginBottom:'8px'}}>Ready to compress your images?</h3>
-        <p style={{fontSize:'13px',color:'rgba(255,255,255,0.5)',marginBottom:'16px'}}>Free, private, no upload needed.</p>
-        <a href="/" style={{display:'inline-block',padding:'12px 28px',borderRadius:'10px',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',fontWeight:800,fontSize:'15px',textDecoration:'none'}}>
-          ⚡ Try Free Compressor →
-        </a>
-      </div>
+      <footer style={{textAlign:'center',padding:'20px',fontSize:'12px',opacity:0.4,borderTop:'1px solid rgba(255,255,255,0.06)'}}>© 2025 CompressTo20KB · <Link href="/" style={{color:'white'}}>Home</Link></footer>
     </div>
-  )
+  );
 }
