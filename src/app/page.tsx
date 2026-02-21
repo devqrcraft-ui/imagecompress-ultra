@@ -470,7 +470,7 @@ export default function Home() {
           .format-row button { padding: 8px 4px !important; }
           .format-row button div:first-child { font-size: 11px !important; }
         }
-      `}} />
+      }} />
     </div>
     <FAQSchema faqs={faqData} />
   );
