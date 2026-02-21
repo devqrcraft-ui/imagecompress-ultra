@@ -1,0 +1,1 @@
+const fs=require('fs');let c=fs.readFileSync('src/app/page.tsx','utf8');c=c.replace("'use client';","\"use client\";");fs.writeFileSync('src/app/page.tsx',c);console.log(require('fs').readFileSync('src/app/page.tsx','utf8').split('\n')[0]);

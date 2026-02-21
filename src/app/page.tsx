@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import './ticker.css';
 import { useState, useCallback, useRef, useEffect } from 'react';
 import FAQSchema from '@/components/FAQSchema';
