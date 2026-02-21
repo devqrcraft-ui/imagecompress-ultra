@@ -451,7 +451,7 @@ export default function Home() {
         </div>
       )}
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{__html: `
         @keyframes ticker {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
@@ -470,7 +470,7 @@ export default function Home() {
           .format-row button { padding: 8px 4px !important; }
           .format-row button div:first-child { font-size: 11px !important; }
         }
-      `}</style>
+      `}} />
     </div>
     <FAQSchema faqs={faqData} />
   );
