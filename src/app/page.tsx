@@ -1,4 +1,5 @@
 'use client';
+import './ticker.css';
 import { useState, useCallback, useRef, useEffect } from 'react';
 import FAQSchema from '@/components/FAQSchema';
 import { compressImage, compressToTargetKB, Format } from '@/utils/compressor';
@@ -451,26 +452,6 @@ export default function Home() {
         </div>
       )}
 
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes ticker {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        input[type=range] { height: 4px; }
-        @media (max-width: 768px) {
-          .right-col { display: none !important; }
-          .layout-row { flex-direction: column !important; padding: 12px !important; }
-          .main-col { max-width: 100% !important; flex: 1 1 100% !important; }
-          .preset-row { gap: 6px !important; }
-          .format-row { gap: 4px !important; }
-        }
-        @media (max-width: 480px) {
-          h1 { font-size: 20px !important; }
-          .format-row button { padding: 8px 4px !important; }
-          .format-row button div:first-child { font-size: 11px !important; }
-        }
-      `}} />
     </div>
     <FAQSchema faqs={faqData} />
   );
