@@ -168,6 +168,7 @@ export default function Home() {
   };
 
   return (
+    <>
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,-apple-system,sans-serif',color:'white'}}>
 
       {/* TOP TICKER */}
@@ -455,5 +456,6 @@ export default function Home() {
 
     </div>
     <FAQSchema faqs={faqData} />
+    </>
   );
 }
