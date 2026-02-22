@@ -1,9 +1,7 @@
 import { MetadataRoute } from 'next';
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://compressto20kb.com';
   const lastModified = new Date();
-
   return [
     { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${baseUrl}/compress-to-50kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
@@ -29,9 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/compress-passport-photo-to-50kb`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/image-size-requirements-for-green-card`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/how-to-compress-photo-for-ds160`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/dv-lottery-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/best-image-size-for-ebay-listings`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/us-passport-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/compress-image-for-linkedin-profile`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/how-to-compress-images-for-woocommerce`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-image-for-shopify-product-page`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/vs/tinypng`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/vs/squoosh`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/vs/compressor-io`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
   ];
 }
