@@ -159,6 +159,7 @@ export default function Home() {
 
   return (
     <>
+    <style>{"      @media (max-width: 600px) {\n        .desktop-nav { display: none !important; }\n        .zip-btn { font-size: 11px !important; padding: 7px 10px !important; }\n        .layout-row { flex-direction: column !important; }\n        .main-col { flex: none !important; max-width: 100% !important; width: 100% !important; }\n        .right-col { display: none !important; }\n        .format-row { gap: 4px !important; }\n        .preset-row { gap: 6px !important; }\n      }"}</style>
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,-apple-system,sans-serif',color:'white'}}>
 
       {/* TOP TICKER */}
@@ -171,16 +172,16 @@ export default function Home() {
       </div>
 
       {/* HEADER */}
-      <header style={{background:'#0a0a14',borderBottom:'1px solid #1a1a2e',padding:'0 16px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'56px',position:'sticky',top:0,zIndex:50}}>
-        <a href='/' style={{textDecoration:'none',fontWeight:800,fontSize:'18px',color:'#fff',letterSpacing:'-0.5px'}}>Compress<span style={{color:'#22d3ee'}}>20KB</span></a>
-        <nav style={{display:'flex',gap:'2px',alignItems:'center'}}>
-          {([['/?mode=quality','🗜️ Compress'],['/compress-for-shopify','🛍️ Shopify'],['/compress-passport-photo','🪪 Passport'],['/faq','FAQ']] as [string,string][]).map(([href,label])=>(
-            <a key={href} href={href} style={{color:'#8888bb',textDecoration:'none',fontSize:'12.5px',fontWeight:500,padding:'5px 8px',borderRadius:'7px',whiteSpace:'nowrap'}}
+      <header style={{background:'#0a0a14',borderBottom:'1px solid #1a1a2e',padding:'0 12px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'56px',position:'sticky',top:0,zIndex:50,gap:'6px'}}>
+        <a href='/' style={{textDecoration:'none',fontWeight:800,fontSize:'18px',color:'#fff',letterSpacing:'-0.5px',flexShrink:0}}>Compress<span style={{color:'#22d3ee'}}>20KB</span></a>
+        <nav style={{display:'flex',gap:'1px',alignItems:'center',overflow:'hidden',flex:1,justifyContent:'center'}}>
+          {([['/?mode=quality','🗜️'],['/?mode=quality','Compress'],['/compress-for-shopify','🛍️ Shopify'],['/compress-passport-photo','🪪 Passport'],['/faq','FAQ']] as [string,string][]).filter((_,i)=>i!==0).map(([href,label])=>(
+            <a key={href+label} href={href} style={{color:'#8888bb',textDecoration:'none',fontSize:'12px',fontWeight:500,padding:'5px 7px',borderRadius:'7px',whiteSpace:'nowrap'}}
               onMouseEnter={e=>{(e.currentTarget as HTMLElement).style.color='#fff';(e.currentTarget as HTMLElement).style.background='#1a1a30'}}
               onMouseLeave={e=>{(e.currentTarget as HTMLElement).style.color='#8888bb';(e.currentTarget as HTMLElement).style.background='transparent'}}>{label}</a>
           ))}
         </nav>
-        <a href='#compress' style={{background:'linear-gradient(135deg,#6366f1,#22d3ee)',color:'#fff',fontSize:'13px',fontWeight:800,padding:'9px 18px',borderRadius:'100px',whiteSpace:'nowrap',textDecoration:'none',flexShrink:0,boxShadow:'0 0 20px rgba(99,102,241,0.5)',border:'1px solid rgba(255,255,255,0.2)'}}>📦 Download ZIP</a>
+        <a href='#compress' style={{background:'linear-gradient(135deg,#6366f1,#22d3ee)',color:'#fff',fontSize:'12px',fontWeight:800,padding:'8px 12px',borderRadius:'100px',whiteSpace:'nowrap',textDecoration:'none',flexShrink:0,boxShadow:'0 0 16px rgba(99,102,241,0.4)',border:'1px solid rgba(255,255,255,0.2)'}}>📦 ZIP</a>
       </header>
 
       {/* AD TOP 728x90 */}
@@ -361,7 +362,7 @@ export default function Home() {
                           👁️
                         </button>
                         <a href={img.outUrl} download={getName(img)}
-                          style={{padding:'5px 12px',borderRadius:'7px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.35)',color:'#34d399',fontSize:'12px',fontWeight:700,textDecoration:'none'}}>
+                          style={{padding:'7px 16px',borderRadius:'7px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.35)',color:'#34d399',fontSize:'13px',fontWeight:700,textDecoration:'none'}}>
                           ⬇️ Save
                         </a>
                       </div>
@@ -405,7 +406,7 @@ export default function Home() {
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'20px 16px 10px'}}>
         <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'10px'}}>Why Compress Images to 20KB?</h2>
         <p style={{fontSize:'13px',lineHeight:'1.7',opacity:0.65,marginBottom:'12px'}}>
-          Government portals in India, Pakistan, USA, Ukraine require documents and passport photos under 20KB or 50KB. Our tool compresses images to an exact file size without uploading anything to a server — your files stay 100% private on your device.
+          US government portals (USCIS, DS-160, passport applications) and job portals require photos under 20KB or 50KB. Our tool compresses images to an exact file size without uploading anything to a server — your files stay 100% private on your device.
         </p>
         <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'10px'}}>Compress Images for Shopify, Etsy & Amazon</h2>
         <p style={{fontSize:'13px',lineHeight:'1.7',opacity:0.65,marginBottom:'12px'}}>
@@ -426,9 +427,9 @@ export default function Home() {
               <div style={{fontSize:'14px',fontWeight:700}}>Before / After — {compareImg.name}</div>
               <button onClick={()=>setCompareImg(null)} style={{background:'none',border:'none',color:'white',fontSize:'20px',cursor:'pointer'}}>✕</button>
             </div>
-            <div style={{position:'relative',overflow:'hidden',borderRadius:'10px',userSelect:'none'}}
-              onMouseMove={e=>{const r=e.currentTarget.getBoundingClientRect();setComparePos(Math.round(((e.clientX-r.left)/r.width)*100));}}
-              onTouchMove={e=>{const r=e.currentTarget.getBoundingClientRect();setComparePos(Math.round(((e.touches[0].clientX-r.left)/r.width)*100));}}>
+            <div style={{position:'relative',overflow:'hidden',borderRadius:'10px',userSelect:'none',touchAction:'none'}}
+              onMouseMove={e=>{const r=e.currentTarget.getBoundingClientRect();setComparePos(Math.min(98,Math.max(2,Math.round(((e.clientX-r.left)/r.width)*100))));}}
+              onTouchMove={e=>{e.preventDefault();const r=e.currentTarget.getBoundingClientRect();setComparePos(Math.min(98,Math.max(2,Math.round(((e.touches[0].clientX-r.left)/r.width)*100))));}}>
               <img src={compareImg.outUrl} alt="after" style={{width:'100%',display:'block',borderRadius:'10px'}}/>
               <div style={{position:'absolute',inset:0,overflow:'hidden',width:`${comparePos}%`}}>
                 <img src={compareImg.preview} alt="before" style={{width:`${10000/comparePos}%`,maxWidth:'none',display:'block',borderRadius:'10px'}}/>
