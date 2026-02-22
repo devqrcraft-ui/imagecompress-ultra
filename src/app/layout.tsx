@@ -176,7 +176,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }} />
       </head>
-      <body style={{ margin: 0, padding: 0 }}><main>{children}</main></body>
+      <body style={{ margin: 0, padding: 0 }}>
+        <main>{children}</main>
+        <footer style={{
+          textAlign: 'center',
+          padding: '16px 24px',
+          fontSize: '12px',
+          color: 'rgba(255,255,255,0.3)',
+          borderTop: '1px solid rgba(255,255,255,0.06)',
+          background: 'rgba(0,0,0,0.4)',
+          display: 'flex',
+          flexWrap: 'wrap' as const,
+          justifyContent: 'center',
+          gap: '16px',
+        }}>
+          <span>© 2025 CompressTo20KB</span>
+          <a href='/privacy-policy' style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Privacy Policy</a>
+          <a href='/terms' style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Terms of Service</a>
+          <a href='/blog' style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Blog</a>
+          <a href='/faq' style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>FAQ</a>
+          <a href='/contact' style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Contact</a>
+          <span style={{opacity:0.6}}>🔒 Files never leave your browser</span>
+        </footer>
+      </body>
       <Analytics />
     </html>
   );
