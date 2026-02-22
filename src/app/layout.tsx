@@ -67,12 +67,7 @@ const schemaWebApp = {
     'WebP, AVIF, JPEG, PNG, HEIC support',
     'Download as ZIP',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '1240',
-    bestRating: '5',
-  },
+
 };
 
 const schemaFAQ = {
@@ -161,7 +156,10 @@ const schemaOrg = {
   name: 'CompressTo20KB',
   url: 'https://compressto20kb.com',
   logo: 'https://compressto20kb.com/logo.png',
-  sameAs: [],
+  sameAs: [
+    'https://www.producthunt.com/products/compressto20kb',
+    'https://twitter.com/compressto20kb',
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,7 +1,6 @@
 "use client";
 import './ticker.css';
 import { useState, useCallback, useRef, useEffect } from 'react';
-import FAQSchema from '@/components/FAQSchema';
 import { compressImage, compressToTargetKB, Format } from '@/utils/compressor';
 
 type Mode = 'quality' | 'exactkb';
@@ -44,15 +43,6 @@ function fmtSize(b: number) {
 
   return (b/(1024*1024)).toFixed(2) + ' MB';
 }
-
-const faqData = [
-    { q: 'Is this image compressor really free?', a: '100% free. No signup, no credit card, no watermarks. Compress unlimited images at no cost.' },
-    { q: 'What image formats are supported?', a: 'JPEG, JPG, PNG, and WebP formats are supported.' },
-    { q: 'Will compressing reduce image quality?', a: 'Our tool uses smart compression to minimize visible quality loss. You can preview before downloading.' },
-    { q: 'Can I compress images for Etsy, Shopify, or Amazon?', a: 'Yes. Set your target size to meet each platform requirements. Works for all major e-commerce platforms.' },
-    { q: 'Does it work for USCIS and government form photos?', a: 'Yes. Compress your photo to under 240KB for USCIS N-400, DS-160 visa forms, and US passport applications.' },
-    { q: 'Is my image stored on your servers?', a: 'No. All compression happens in your browser. Your images are never uploaded to our servers.' },
-  ];
 
 const TICKER_ITEMS = [
   '⚡ 100% Free — No Signup Required',
@@ -455,7 +445,6 @@ export default function Home() {
       )}
 
     </div>
-    <FAQSchema faqs={faqData} />
     </>
   );
 }
