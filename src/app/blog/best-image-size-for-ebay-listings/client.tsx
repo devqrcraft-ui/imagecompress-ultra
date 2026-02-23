@@ -2,17 +2,18 @@
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const tips=[
-  {title:'Minimum 500×500 pixels',desc:'eBay requires at least 500×500px. For zoom functionality (which increases sales), use 1600×1600px or larger.'},
-  {title:'JPEG for product photos',desc:'JPEG gives the best balance of quality and file size for product photography. Use PNG only for images with transparent backgrounds.'},
-  {title:'Keep files under 12MB',desc:'eBay\'s hard limit is 12MB per image. But for fast loading, aim for under 500KB — buyers on mobile will thank you.'},
-  {title:'White or neutral background',desc:'eBay recommends white backgrounds for primary product images. It looks more professional and ranks better in search.'},
-  {title:'Compress before uploading',desc:'Smaller files load faster. Faster pages rank higher in eBay Cassini search. Every second of load time costs you sales.'},
+  {n:'1',t:'Main image: 1600px minimum',d:'eBay requires at least 500px but recommends 1600px for zoom. Compress to under 1MB at 1600px for fast loading.'},
+  {n:'2',t:'JPEG format for photos',d:'Use JPEG for product photos — smallest file size with best quality. PNG only if your product has transparent background.'},
+  {n:'3',t:'White background for main image',d:'eBay search ranks listings with white background higher. Required for most categories.'},
+  {n:'4',t:'Under 7MB per image',d:'eBay accepts up to 7MB but images over 1MB slow down your listing page and hurt conversion rates.'},
+  {n:'5',t:'12 photos maximum',d:'eBay allows up to 12 photos per listing. Use all 12 — listings with more photos rank higher in search.'},
 ];
 const faq=[
-  {q:'What is the ideal eBay listing image size?',a:'eBay recommends 1600×1600 pixels with a white background. The file should be JPEG format and ideally under 500KB for fast loading.'},
-  {q:'Does image size affect eBay search ranking?',a:'Yes. eBay\'s Cassini algorithm considers listing quality including image quality and page performance. High-resolution, fast-loading images help rankings.'},
-  {q:'Can I upload PNG images to eBay?',a:'Yes, eBay accepts JPEG, PNG, GIF, TIFF, and BMP. JPEG is recommended for photos due to smaller file size and good quality.'},
-  {q:'How many images can I add to an eBay listing?',a:'eBay allows up to 24 images per listing. Adding multiple high-quality images from different angles significantly increases buyer confidence and conversion rates.'},
+  {q:'What is the best image size for eBay listings?',a:'eBay recommends 1600×1600 pixels for the main listing image to enable zoom. The file should be JPEG under 1MB for fast loading. Minimum accepted size is 500×500 pixels.'},
+  {q:'Does image quality affect eBay search ranking?',a:'Yes. eBay\'s Cassini search algorithm favors listings with high-quality images. White background, high resolution, and multiple photos all improve ranking.'},
+  {q:'How do I compress images for eBay without losing quality?',a:'Use our tool at quality 85% in JPEG format. This reduces file size by 60–70% with no visible quality loss. For a 1600×1600 product photo, target 200–400KB.'},
+  {q:'Can I use PNG for eBay product images?',a:'Yes, but JPEG is better for photos. PNG is only useful if your product image has a transparent background that you want to preserve.'},
+  {q:'How many images should I add to an eBay listing?',a:'Use all 12 available slots. Listings with more photos rank higher and convert better. Include main shot, detail shots, angles, and scale reference.'},
 ];
 export default function ClientPage(){
   return(
@@ -21,24 +22,29 @@ export default function ClientPage(){
         <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
         <div style={{display:'flex',gap:'16px',fontSize:'13px',opacity:0.75}}>
           <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/compress-for-ebay" style={{color:'white',textDecoration:'none'}}>eBay Tool</Link>
           <Link href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
         </div>
       </nav>
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>
-          <Link href="/blog" style={{color:'#a5b4fc',textDecoration:'none'}}>Blog</Link> → Best Image Size for eBay Listings
-        </div>
+        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → eBay Image Guide</div>
+        <div style={{display:'inline-block',background:'rgba(234,88,12,0.1)',border:'1px solid rgba(234,88,12,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#fdba74'}}>🛒 eBay · eCommerce</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Best Image Size for eBay Listings 2025<br/><span style={{color:'#818cf8'}}>Boost Rankings & Sales</span></h1>
-        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>Your eBay listing photos directly affect your search ranking, click-through rate, and conversion rate. Here's everything you need to know about optimal image sizes and how to compress them for maximum performance.</p>
-        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'20px'}}>5 Image Tips to Boost Your eBay Sales</h2>
-        {tips.map((t,i)=>(
-          <div key={i} style={{marginBottom:'16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:'12px',padding:'16px'}}>
-            <strong style={{fontSize:'15px',color:'#a5b4fc'}}>0{i+1}. {t.title}</strong>
-            <p style={{fontSize:'13px',opacity:0.65,margin:'6px 0 0',lineHeight:1.6}}>{t.desc}</p>
-          </div>
-        ))}
-        <h2 style={{fontSize:'20px',fontWeight:800,margin:'32px 0 16px'}}>Compress eBay Images — Free Tool</h2>
+        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>eBay's search algorithm ranks listings with optimized images higher. The right image size, format and compression can directly increase your visibility and conversion rate.</p>
+        <div style={{background:'rgba(234,88,12,0.08)',border:'1px solid rgba(234,88,12,0.2)',borderRadius:'12px',padding:'16px 20px',marginBottom:'32px'}}>
+          <strong style={{color:'#fdba74'}}>📋 eBay Image Requirements:</strong>
+          <span style={{fontSize:'14px',opacity:0.85}}> 1600×1600 px recommended · JPEG or PNG · Under 7MB · White background for main image · Up to 12 photos</span>
+        </div>
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>5 Tips to Optimize eBay Images</h2>
+        <div style={{display:'flex',flexDirection:'column',gap:'12px',marginBottom:'36px'}}>
+          {tips.map((s,i)=>(
+            <div key={i} style={{display:'flex',gap:'16px',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'12px',padding:'16px'}}>
+              <div style={{width:'32px',height:'32px',borderRadius:'50%',background:'rgba(234,88,12,0.2)',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:900,flexShrink:0,color:'#fdba74'}}>{s.n}</div>
+              <div><div style={{fontWeight:700,marginBottom:'4px'}}>{s.t}</div><div style={{fontSize:'13px',opacity:0.65,lineHeight:1.5}}>{s.d}</div></div>
+            </div>
+          ))}
+        </div>
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'12px'}}>Compress Your eBay Images (Free)</h2>
+        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Compress product photos to under 500KB JPEG at quality 85% — perfect for eBay listings.</p>
         <div style={{marginBottom:'40px'}}><CompressorWidget defaultMode="quality" defaultFormat="jpeg"/></div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>FAQ</h2>
         {faq.map((f,i)=>(
@@ -48,19 +54,15 @@ export default function ClientPage(){
           </details>
         ))}
         <div style={{marginTop:'36px',padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>
+          <p style={{fontWeight:700,marginBottom:'12px',fontSize:'14px'}}>Related guides:</p>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'13px'}}>
-            {([
-              ['/compress-for-ebay','eBay Compressor'],
-              ['/compress-for-shopify','Shopify Images'],
-              ['/compress-for-amazon','Amazon Images'],
-              ['/bulk-image-compressor','Bulk Compress'],
-            ] as [string,string][]).map(([href,label])=>(
+            {([['/compress-for-ebay','eBay Compressor'],['/blog/compress-image-for-shopify-product-page','Shopify Guide'],['/compress-for-amazon','Amazon Tool'],['/bulk-image-compressor','Bulk Compress']] as [string,string][]).map(([href,label])=>(
               <Link key={href} href={href} style={{color:'#a5b4fc',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>
         </div>
       </div>
-      <footer style={{textAlign:'center',padding:'20px',fontSize:'12px',opacity:0.4,borderTop:'1px solid rgba(255,255,255,0.06)'}}>© 2025 CompressTo20KB · Not affiliated with eBay · <Link href="/" style={{color:'white'}}>Home</Link></footer>
+      <footer style={{textAlign:'center',padding:'20px',fontSize:'12px',opacity:0.4,borderTop:'1px solid rgba(255,255,255,0.06)'}}>© 2025 CompressTo20KB · <Link href="/" style={{color:'white'}}>Home</Link></footer>
     </div>
   );
 }

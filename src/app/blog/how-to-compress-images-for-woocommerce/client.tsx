@@ -2,17 +2,17 @@
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const tips=[
-  {title:'Use JPEG for product photos',desc:'JPEG compresses photographic images much better than PNG. Switch all product photos from PNG to JPEG and you\'ll cut file sizes by 60–80%.'},
-  {title:'Target 100–200KB per image',desc:'For most product images, 100–200KB gives excellent visual quality at fast loading speeds. Avoid going over 300KB for any product photo.'},
-  {title:'Resize before uploading',desc:'WooCommerce generates multiple image sizes automatically. Upload your source image at 1000×1000px — WooCommerce handles the rest.'},
-  {title:'Use WebP where possible',desc:'WebP offers 25–35% smaller files than JPEG at the same quality. Our tool supports WebP output for modern browsers.'},
-  {title:'Compress bulk images',desc:'If you have dozens of product images, use our bulk compressor to process them all at once before uploading to WooCommerce.'},
+  {n:'1',t:'Target 800×800px for product images',d:'WooCommerce displays product images at 300–600px on most themes. 800×800px gives 2x retina quality without excessive file size.'},
+  {n:'2',t:'Use WebP format',d:'WebP is 30% smaller than JPEG at the same quality. All modern browsers support it. Switch from JPEG to WebP to cut your page size significantly.'},
+  {n:'3',t:'Compress to under 100KB per image',d:'Product pages with 5–10 images should keep each image under 100KB. This keeps total page weight under 1MB for fast loading.'},
+  {n:'4',t:'Use consistent aspect ratios',d:'WooCommerce looks best with square product images (1:1). Set all images to the same dimensions before uploading.'},
+  {n:'5',t:'Batch compress before uploading',d:'Compress all images before uploading to WordPress. Our batch tool handles up to 50 images at once — faster than any WordPress plugin.'},
 ];
 const faq=[
-  {q:'What is the recommended image size for WooCommerce?',a:'WooCommerce recommends uploading product images at 800×800 to 1000×1000 pixels. The default thumbnail size is 300×300px and single product image is 600px wide.'},
-  {q:'How does image size affect WooCommerce page speed?',a:'Large images are the #1 cause of slow WooCommerce stores. Google PageSpeed and Core Web Vitals directly measure image performance — slow stores rank lower.'},
-  {q:'Should I use JPEG or WebP for WooCommerce?',a:'WebP is ideal if your hosting and theme support it. Otherwise, high-quality JPEG (70–85% quality) is the best choice for product photos.'},
-  {q:'How many product images should I have per listing?',a:'Industry data shows that listings with 6–8 product images have significantly higher conversion rates than those with 1–2 images. More angles = more trust.'},
+  {q:'What is the best image size for WooCommerce?',a:'WooCommerce recommends 800×800 pixels for product images. Compress each image to under 100KB in WebP or JPEG format for fast page loading and better Google rankings.'},
+  {q:'Does image size affect WooCommerce SEO?',a:'Yes. Page speed is a Google ranking factor. Large uncompressed images slow down your WooCommerce store and hurt both SEO and conversion rates.'},
+  {q:'Should I use WebP or JPEG for WooCommerce?',a:'WebP is recommended for WooCommerce in 2025. It produces files 25–35% smaller than JPEG at the same quality. All major browsers support WebP.'},
+  {q:'Is it better to compress before or after uploading to WordPress?',a:'Before. Pre-compressing images gives you full control over quality and file size. WordPress plugins like Smush recompress already-compressed images, which can reduce quality.'},
 ];
 export default function ClientPage(){
   return(
@@ -21,25 +21,30 @@ export default function ClientPage(){
         <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
         <div style={{display:'flex',gap:'16px',fontSize:'13px',opacity:0.75}}>
           <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/compress-for-woocommerce" style={{color:'white',textDecoration:'none'}}>WooCommerce Tool</Link>
           <Link href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
         </div>
       </nav>
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>
-          <Link href="/blog" style={{color:'#a5b4fc',textDecoration:'none'}}>Blog</Link> → Compress Images for WooCommerce
+        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → WooCommerce Guide</div>
+        <div style={{display:'inline-block',background:'rgba(168,85,247,0.1)',border:'1px solid rgba(168,85,247,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#d8b4fe'}}>🛍️ WooCommerce · WordPress</div>
+        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Images for WooCommerce<br/><span style={{color:'#818cf8'}}>Speed Up Your Store in 2025</span></h1>
+        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>Slow WooCommerce stores lose sales. Uncompressed product images are the #1 cause of slow page loads. Here is how to compress images for WooCommerce without losing quality.</p>
+        <div style={{background:'rgba(168,85,247,0.08)',border:'1px solid rgba(168,85,247,0.2)',borderRadius:'12px',padding:'16px 20px',marginBottom:'32px'}}>
+          <strong style={{color:'#d8b4fe'}}>📋 WooCommerce Image Best Practice:</strong>
+          <span style={{fontSize:'14px',opacity:0.85}}> 800×800 px · WebP or JPEG · Under 100KB per image · Square aspect ratio · Batch compress before upload</span>
         </div>
-        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>How to Compress Images for WooCommerce<br/><span style={{color:'#818cf8'}}>Speed Up Your Store in 2025</span></h1>
-        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>Slow product images kill WooCommerce conversions. A 1-second delay in page load can reduce conversions by 7%. Here's how to compress your product images without sacrificing quality — and speed up your store today.</p>
-        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'20px'}}>5 Image Optimization Tips for WooCommerce</h2>
-        {tips.map((t,i)=>(
-          <div key={i} style={{marginBottom:'16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.07)',borderRadius:'12px',padding:'16px'}}>
-            <strong style={{fontSize:'15px',color:'#a5b4fc'}}>0{i+1}. {t.title}</strong>
-            <p style={{fontSize:'13px',opacity:0.65,margin:'6px 0 0',lineHeight:1.6}}>{t.desc}</p>
-          </div>
-        ))}
-        <h2 style={{fontSize:'20px',fontWeight:800,margin:'32px 0 16px'}}>Compress WooCommerce Images — Free Tool</h2>
-        <div style={{marginBottom:'40px'}}><CompressorWidget defaultMode="quality" defaultFormat="jpeg"/></div>
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>5 WooCommerce Image Optimization Tips</h2>
+        <div style={{display:'flex',flexDirection:'column',gap:'12px',marginBottom:'36px'}}>
+          {tips.map((s,i)=>(
+            <div key={i} style={{display:'flex',gap:'16px',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'12px',padding:'16px'}}>
+              <div style={{width:'32px',height:'32px',borderRadius:'50%',background:'rgba(168,85,247,0.2)',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:900,flexShrink:0,color:'#d8b4fe'}}>{s.n}</div>
+              <div><div style={{fontWeight:700,marginBottom:'4px'}}>{s.t}</div><div style={{fontSize:'13px',opacity:0.65,lineHeight:1.5}}>{s.d}</div></div>
+            </div>
+          ))}
+        </div>
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'12px'}}>Compress WooCommerce Images (Free)</h2>
+        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Batch compress up to 50 product images at once. Choose WebP for maximum compression.</p>
+        <div style={{marginBottom:'40px'}}><CompressorWidget defaultMode="quality" defaultFormat="webp"/></div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>FAQ</h2>
         {faq.map((f,i)=>(
           <details key={i} style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',padding:'14px 16px',marginBottom:'8px',cursor:'pointer'}}>
@@ -49,18 +54,13 @@ export default function ClientPage(){
         ))}
         <div style={{marginTop:'36px',padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'13px'}}>
-            {([
-              ['/compress-for-woocommerce','WooCommerce Tool'],
-              ['/compress-for-shopify','Shopify Tool'],
-              ['/compress-for-squarespace','Squarespace Tool'],
-              ['/bulk-image-compressor','Bulk Compress'],
-            ] as [string,string][]).map(([href,label])=>(
+            {([['/compress-for-woocommerce','WooCommerce Tool'],['/bulk-image-compressor','Bulk Compress'],['/blog/compress-image-for-shopify-product-page','Shopify Guide'],['/compress-for-squarespace','Squarespace Tool']] as [string,string][]).map(([href,label])=>(
               <Link key={href} href={href} style={{color:'#a5b4fc',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>
         </div>
       </div>
-      <footer style={{textAlign:'center',padding:'20px',fontSize:'12px',opacity:0.4,borderTop:'1px solid rgba(255,255,255,0.06)'}}>© 2025 CompressTo20KB · Not affiliated with WooCommerce · <Link href="/" style={{color:'white'}}>Home</Link></footer>
+      <footer style={{textAlign:'center',padding:'20px',fontSize:'12px',opacity:0.4,borderTop:'1px solid rgba(255,255,255,0.06)'}}>© 2025 CompressTo20KB · <Link href="/" style={{color:'white'}}>Home</Link></footer>
     </div>
   );
 }
