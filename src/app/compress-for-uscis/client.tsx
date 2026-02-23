@@ -1,72 +1,127 @@
 "use client";
 import Link from 'next/link';
-import CompressorWidget from '@/components/CompressorWidget';
-const forms=[
-  {form:'N-400',name:'Application for Naturalization',maxKB:'240KB',dim:'600×600 px',fmt:'JPEG'},
-  {form:'DS-160',name:'Nonimmigrant Visa Application',maxKB:'240KB',dim:'600×600 px',fmt:'JPEG'},
-  {form:'I-485',name:'Adjustment of Status',maxKB:'240KB',dim:'2×2 inches',fmt:'JPEG'},
-  {form:'US Passport Online',name:'US Passport Renewal',maxKB:'240KB',dim:'600×600 px',fmt:'JPEG'},
-  {form:'I-130',name:'Petition for Alien Relative',maxKB:'240KB',dim:'2×2 inches',fmt:'JPEG'},
+
+const tips = [
+  { title: 'Use JPEG format', desc: 'JPEG is the most efficient format for reaching exact small sizes like 30KB. For a typical photo, JPEG at 60–70% quality usually lands near 30KB without visible degradation.' },
+  { title: 'Resize before compressing', desc: 'Reducing dimensions from 3000px to 800px can cut file size by 80% before any quality compression. Combine resize + compress for best results at 30KB.' },
+  { title: 'Use Exact KB Mode', desc: 'Our tool has a dedicated "Exact KB Mode" — just type 30 and click Compress. The algorithm automatically finds the right quality level to hit exactly 30KB.' },
+  { title: 'Avoid PNG for small targets', desc: 'PNG is lossless and rarely compresses below 50KB for photos. Use JPEG or WebP when targeting 30KB or less.' },
+  { title: 'Check the preview before saving', desc: 'Use our Before/After comparison slider to verify quality is acceptable before downloading. At 30KB most portrait and document photos look clean.' },
 ];
-const faq=[
-  {q:'What is the photo size requirement for USCIS forms?',a:'USCIS requires photos in JPEG format, 2×2 inches (600×600 pixels), under 240KB for online forms like N-400, DS-160, and I-485.'},
-  {q:'How do I compress a photo to under 240KB for USCIS?',a:'Upload your photo, switch to Exact KB Mode, type 200 (safely under 240KB), choose JPEG format, and compress.'},
-  {q:'Can I use this for DS-160 visa photo compression?',a:'Yes. DS-160 requires a JPEG under 240KB at 600×600 pixels. Upload your photo and compress to 200KB using our tool.'},
-  {q:'Is my passport photo safe using this tool?',a:'Completely. All processing happens in your browser. Your photo is never uploaded to any server.'},
+
+const faq = [
+  { q: 'Can I compress any image to exactly 30KB?', a: 'Yes — our Exact KB Mode targets 30KB precisely. Very large or high-resolution images may need to be resized first, but the tool handles this automatically.' },
+  { q: 'Will the image look bad at 30KB?', a: 'For most document photos, ID photos, and form uploads, 30KB looks fine. For detailed product or landscape photos, 30KB may show slight compression — use the preview to judge.' },
+  { q: 'What formats can I compress to 30KB?', a: 'You can output as JPEG, WebP, PNG, or AVIF. For 30KB targets, JPEG and WebP give the best quality-to-size ratio.' },
+  { q: 'Why do some portals require exactly 30KB?', a: 'Government and HR portals often set strict file size limits (20KB–50KB) to reduce server load and ensure fast uploads on slow connections. 30KB is a common limit for profile photos and document uploads.' },
+  { q: 'Is my photo uploaded to a server?', a: 'No — our tool runs entirely in your browser. Your image never leaves your device. This makes it safe for ID photos, passport photos, and sensitive documents.' },
 ];
-export default function ClientPage(){
-  return(
-    <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
-      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
-        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
-        <div style={{display:'flex',gap:'16px',fontSize:'13px',opacity:0.75}}>
-          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/compress-passport-photo-usa" style={{color:'white',textDecoration:'none'}}>Passport</Link>
-          <Link href="/compress-image-for-visa" style={{color:'white',textDecoration:'none'}}>Visa</Link>
+
+export default function ClientPage() {
+  return (
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
+
+      {/* NAV */}
+      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
+        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
+        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
+          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
+          <Link href="/compress-to-50kb" style={{ color: 'white', textDecoration: 'none' }}>50KB Tool</Link>
+          <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
         </div>
       </nav>
-      <div style={{textAlign:'center',padding:'48px 16px 24px'}}>
-        <div style={{display:'inline-block',background:'rgba(239,68,68,0.1)',border:'1px solid rgba(239,68,68,0.3)',borderRadius:'10px',padding:'8px 16px',fontSize:'13px',marginBottom:'20px',color:'#fca5a5'}}>
-          ⚠️ USCIS requires: JPEG · 2×2 inches (600×600 px) · Under 240KB · White background
+
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
+
+        {/* BREADCRUMB */}
+        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>
+          <Link href="/blog" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Blog</Link> → Compress Image to 30KB
         </div>
-        <h1 style={{fontSize:'clamp(24px,4vw,42px)',fontWeight:900,margin:'0 0 16px'}}>Compress Photo for USCIS Forms<br/><span style={{color:'#818cf8'}}>N-400 · DS-160 · I-485 · US Passport</span></h1>
-        <p style={{fontSize:'16px',opacity:0.65,maxWidth:'580px',margin:'0 auto 32px',lineHeight:1.6}}>Meet USCIS photo requirements in seconds. Pre-set to 200KB JPEG — safely under the 240KB limit. 100% private, no upload.</p>
-      </div>
-      <div style={{maxWidth:'860px',margin:'0 auto',padding:'0 16px 40px'}}><CompressorWidget defaultMode="exactkb" defaultTargetKB={200} defaultFormat="jpeg"/></div>
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'0 16px 40px'}}>
-        <h2 style={{fontSize:'22px',fontWeight:800,marginBottom:'16px'}}>USCIS Form Photo Requirements</h2>
-        <div style={{overflowX:'auto',marginBottom:'32px'}}>
-          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'13px'}}>
-            <thead><tr style={{background:'rgba(99,102,241,0.15)'}}>
-              {['Form','Purpose','Max Size','Dimensions','Format'].map(h=><th key={h} style={{padding:'10px 12px',textAlign:'left',border:'1px solid rgba(255,255,255,0.08)',fontWeight:700}}>{h}</th>)}
-            </tr></thead>
-            <tbody>{forms.map((r,i)=>(
-              <tr key={i} style={{background:i%2===0?'rgba(255,255,255,0.02)':'transparent'}}>
-                <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',fontWeight:700,color:'#a5b4fc'}}>{r.form}</td>
-                <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',opacity:0.75}}>{r.name}</td>
-                <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',color:'#34d399',fontWeight:700}}>{r.maxKB}</td>
-                <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',opacity:0.75}}>{r.dim}</td>
-                <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',opacity:0.75}}>{r.fmt}</td>
-              </tr>
-            ))}</tbody>
-          </table>
+
+        {/* HERO */}
+        <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
+          How to Compress an Image to <span style={{ color: '#818cf8' }}>30KB</span> Free Online
+        </h1>
+        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>
+          Many job portals, HR systems, and government forms require profile photos or document images under 30KB. This guide shows you how to compress any image to exactly 30KB — free, without uploading to any server.
+        </p>
+
+        {/* CTA TOOL */}
+        <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
+          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to Exactly 30KB — Free Tool</div>
+          <p style={{ fontSize: '13px', opacity: 0.65, marginBottom: '16px' }}>No upload. Files stay on your device. JPEG, PNG, WebP, HEIC supported.</p>
+          <Link href="/?mode=exactkb&target=30" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
+            ⚡ Open 30KB Compressor
+          </Link>
         </div>
-        <h2 style={{fontSize:'22px',fontWeight:800,marginBottom:'16px'}}>FAQ</h2>
-        {faq.map((f,i)=>(
-          <details key={i} style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',padding:'14px 16px',marginBottom:'8px',cursor:'pointer'}}>
-            <summary style={{fontWeight:700,fontSize:'14px',listStyle:'none'}}>❓ {f.q}</summary>
-            <p style={{marginTop:'10px',fontSize:'13px',opacity:0.7,lineHeight:1.6}}>{f.a}</p>
-          </details>
-        ))}
-        <div style={{marginTop:'32px',padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>
-          <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'13px'}}>
-            {([['/', '20KB'],['/compress-to-50kb','50KB'],['/compress-passport-photo-usa','US Passport'],['/compress-image-for-visa','Visa Photo']] as [string,string][]).map(([href,label])=>(
-              <Link key={href} href={href} style={{color:'#a5b4fc',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
-            ))}
+
+        {/* STEPS */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Step-by-Step: Compress to 30KB</h2>
+        {[
+          { step: '1', title: 'Open the tool', desc: 'Click the button above or go to compressto20kb.com. No signup, no install.' },
+          { step: '2', title: 'Upload your image', desc: 'Drag and drop or click to select. Supports JPG, PNG, WebP, HEIC — up to 50 files at once.' },
+          { step: '3', title: 'Switch to Exact KB Mode', desc: 'Click the "🎯 Exact KB Mode" tab at the top of the tool.' },
+          { step: '4', title: 'Enter 30 in the target field', desc: 'Type 30 or click the custom field. The tool automatically finds the right compression level.' },
+          { step: '5', title: 'Click Compress and Download', desc: 'Your image is compressed to 30KB in seconds — right in your browser. Click Save to download.' },
+        ].map(({ step, title, desc }) => (
+          <div key={step} style={{ display: 'flex', gap: '16px', marginBottom: '16px', alignItems: 'flex-start' }}>
+            <div style={{ background: 'rgba(129,140,248,0.2)', border: '1px solid rgba(129,140,248,0.4)', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '15px', flexShrink: 0 }}>{step}</div>
+            <div>
+              <div style={{ fontWeight: 700, fontSize: '15px', marginBottom: '4px' }}>{title}</div>
+              <div style={{ fontSize: '13px', opacity: 0.65 }}>{desc}</div>
+            </div>
           </div>
+        ))}
+
+        {/* TIPS */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '40px 0 16px' }}>Tips for Best Quality at 30KB</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
+          {tips.map((tip, i) => (
+            <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: '3px solid #818cf8' }}>
+              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>✓ {tip.title}</div>
+              <div style={{ fontSize: '13px', opacity: 0.65 }}>{tip.desc}</div>
+            </div>
+          ))}
         </div>
+
+        {/* USE CASES */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>When Do You Need a 30KB Image?</h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.7, marginBottom: '12px' }}>
+          30KB is a common file size limit for profile photos on job portals and HR systems in the USA. Common platforms and forms that require images under 30KB or close to it include Indeed profile photos, government employee portals, university application uploads, and some state DMV systems.
+        </p>
+        <p style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>
+          For US government immigration forms, the limit is typically 20KB — use our <Link href="/" style={{ color: '#a5b4fc' }}>Gov 20KB preset</Link> for USCIS, DS-160, and passport applications. For forms allowing up to 50KB, see our <Link href="/compress-to-50kb" style={{ color: '#a5b4fc' }}>compress to 50KB tool</Link>.
+        </p>
+
+        {/* FAQ */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — Compress Image to 30KB</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
+          {faq.map((item, i) => (
+            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
+              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
+              <div style={{ fontSize: '13px', opacity: 0.7 }}>{item.a}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* RELATED */}
+        <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Related Tools</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '40px' }}>
+          {[
+            { href: '/', label: '🪪 Compress to 20KB' },
+            { href: '/compress-to-50kb', label: '📄 Compress to 50KB' },
+            { href: '/compress-to-100kb', label: '📁 Compress to 100KB' },
+            { href: '/compress-for-uscis', label: '🏛️ USCIS Photo Tool' },
+            { href: '/compress-passport-photo', label: '🛂 Passport Photo' },
+            { href: '/blog/compress-passport-photo-to-50kb', label: '📖 Passport to 50KB Guide' },
+          ].map(({ href, label }) => (
+            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize: '13px', fontWeight: 600 }}>
+              {label}
+            </Link>
+          ))}
+        </div>
+
       </div>
-      <footer style={{textAlign:'center',padding:'20px',fontSize:'12px',opacity:0.4,borderTop:'1px solid rgba(255,255,255,0.06)'}}>© 2025 CompressTo20KB · Not affiliated with USCIS · <Link href="/" style={{color:'white'}}>Home</Link></footer>
     </div>
   );
 }

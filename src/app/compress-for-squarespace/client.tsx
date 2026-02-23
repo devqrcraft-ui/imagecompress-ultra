@@ -1,32 +1,147 @@
 "use client";
 import Link from 'next/link';
-import CompressorWidget from '@/components/CompressorWidget';
-export default function ClientPage(){
-  return(
-    <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
-      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
-        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
-        <div style={{display:'flex',gap:'16px',fontSize:'13px',opacity:0.75}}>
-          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/compress-for-woocommerce" style={{color:'white',textDecoration:'none'}}>WooCommerce</Link>
-          <Link href="/bulk-image-compressor" style={{color:'white',textDecoration:'none'}}>Bulk</Link>
+
+const methods = [
+  { title: 'Browser-based tool (best option)', desc: 'Open Chrome or Edge on Windows 11, go to compressto20kb.com. Upload your image — it compresses locally in your browser. No software install, no upload to server, completely free.' },
+  { title: 'Windows built-in Paint (basic)', desc: 'Open Paint, load the image, go to File → Save As, choose JPEG, and adjust quality. This gives limited control — you cannot target an exact KB size, but it works for basic needs.' },
+  { title: 'Photos app resize (dimensions only)', desc: 'Open an image in the Windows 11 Photos app, click the three-dot menu → Resize. This only reduces dimensions, not compression quality — file size reduction is limited.' },
+  { title: 'Right-click Send To (email resize)', desc: 'Right-click an image in File Explorer → Send To → Mail recipient. Windows offers Small/Medium/Large resize options. This is very basic and does not allow exact KB targeting.' },
+];
+
+const faq = [
+  { q: 'How do I compress an image on Windows 11 without any software?', a: 'Open Edge or Chrome, go to compressto20kb.com, upload your image and compress. Everything runs in your browser — no download, no install required.' },
+  { q: 'Can Windows 11 compress images natively?', a: 'Windows 11 has very limited native image compression. Paint can save as JPEG with some quality reduction, and the Photos app can resize dimensions. For precise KB-level compression, a browser-based tool gives much better results.' },
+  { q: 'What is the fastest way to reduce image file size on Windows?', a: 'Using compressto20kb.com in your browser is the fastest — upload, pick a target size, compress, done in under 10 seconds. No installation required.' },
+  { q: 'How do I compress multiple images at once on Windows 11?', a: 'On compressto20kb.com you can upload up to 50 images at once and download them all as a ZIP file. It is significantly faster than processing images one by one.' },
+  { q: 'Does compressing images on Windows reduce quality?', a: 'All lossy compression (JPEG, WebP) reduces some quality to save space. Our tool includes a Before/After preview slider so you can see the result and adjust quality before downloading.' },
+  { q: 'Can I compress a PNG to under 100KB on Windows?', a: 'Yes — PNG compression is limited, but converting to JPEG or WebP while compressing can easily bring most images under 100KB. Use our Exact KB Mode and select JPEG or WebP as the output format.' },
+];
+
+export default function ClientPage() {
+  return (
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
+
+      {/* NAV */}
+      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
+        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
+        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
+          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
+          <Link href="/bulk-image-compressor" style={{ color: 'white', textDecoration: 'none' }}>Bulk Compress</Link>
+          <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
         </div>
       </nav>
-      <div style={{textAlign:'center',padding:'48px 16px 24px'}}>
-        <h1 style={{fontSize:'clamp(24px,4vw,42px)',fontWeight:900,margin:'0 0 16px'}}>Compress Images for <span style={{color:'#818cf8'}}>Squarespace</span></h1>
-        <p style={{fontSize:'16px',opacity:0.65,maxWidth:'580px',margin:'0 auto 32px',lineHeight:1.6}}>Squarespace has a 20MB limit but large images slow your site and hurt SEO. Compress to WebP under 300KB before uploading — your site will load 3× faster.</p>
-      </div>
-      <div style={{maxWidth:'860px',margin:'0 auto',padding:'0 16px 40px'}}><CompressorWidget defaultMode="quality" defaultFormat="webp" defaultQuality={82}/></div>
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'0 16px 40px'}}>
-        <div style={{padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>
-          <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'13px'}}>
-            {([['/', 'Shopify'],['/compress-for-woocommerce','WooCommerce'],['/compress-for-ebay','eBay'],['/bulk-image-compressor','Bulk']] as [string,string][]).map(([href,label])=>(
-              <Link key={href} href={href} style={{color:'#a5b4fc',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
-            ))}
-          </div>
+
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
+
+        {/* BREADCRUMB */}
+        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>
+          <Link href="/blog" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Blog</Link> → Compress Images on Windows 11
         </div>
+
+        {/* HERO */}
+        <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
+          How to Compress Images on <span style={{ color: '#818cf8' }}>Windows 11</span> — Free, No Software Install
+        </h1>
+        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '8px' }}>
+          Windows 11 has very limited built-in image compression tools. This guide covers the fastest methods to reduce image file size on any Windows PC — including a browser-based option that works in under 10 seconds without installing anything.
+        </p>
+        <div style={{ fontSize: '13px', opacity: 0.45, marginBottom: '32px' }}>Updated February 2026 · Works on Windows 10 and Windows 11</div>
+
+        {/* CTA */}
+        <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
+          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>💻 Compress Images on Windows — Free in Chrome or Edge</div>
+          <p style={{ fontSize: '13px', opacity: 0.65, marginBottom: '16px' }}>No install · Exact KB targeting · Bulk up to 50 images · 100% private</p>
+          <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
+            ⚡ Open in Chrome / Edge
+          </Link>
+        </div>
+
+        {/* COMPARISON TABLE */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Methods Compared</h2>
+        <div style={{ overflowX: 'auto', marginBottom: '40px' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
+            <thead>
+              <tr style={{ background: 'rgba(129,140,248,0.15)' }}>
+                {['Method', 'Exact KB?', 'Bulk?', 'Install needed?', 'Best for'].map((h) => (
+                  <th key={h} style={{ padding: '10px 14px', textAlign: 'left', borderBottom: '1px solid rgba(255,255,255,0.1)', fontWeight: 700 }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['compressto20kb.com', '✅ Yes', '✅ 50 files', '❌ No', 'All use cases'],
+                ['Windows Paint', '❌ No', '❌ No', '❌ Built-in', 'Basic JPEG save'],
+                ['Photos app', '❌ No', '❌ No', '❌ Built-in', 'Resize only'],
+                ['Send To Mail', '❌ No', '❌ No', '❌ Built-in', 'Email only'],
+              ].map((row, i) => (
+                <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)', background: i === 0 ? 'rgba(129,140,248,0.07)' : 'transparent' }}>
+                  {row.map((cell, j) => (
+                    <td key={j} style={{ padding: '10px 14px', opacity: j === 0 ? 1 : 0.75, fontWeight: j === 0 ? 700 : 400 }}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* STEPS */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Step-by-Step: Browser Method (Fastest)</h2>
+        {[
+          { step: '1', title: 'Open Chrome or Edge', desc: 'Both browsers work. Go to compressto20kb.com — no login, no setup.' },
+          { step: '2', title: 'Drag images from File Explorer', desc: 'Open File Explorer, find your images, drag them directly into the browser tab. Or click to browse.' },
+          { step: '3', title: 'Select format and mode', desc: 'Choose JPEG or WebP for smallest size. Switch to "Exact KB Mode" if you need a specific size like 100KB or 200KB.' },
+          { step: '4', title: 'Click Compress All', desc: 'Processing is instant — images are compressed in your browser, no upload needed.' },
+          { step: '5', title: 'Download as ZIP', desc: 'Click "ZIP All" to download all compressed images in one file. Open the ZIP directly in Windows 11 File Explorer — no WinZip needed.' },
+        ].map(({ step, title, desc }) => (
+          <div key={step} style={{ display: 'flex', gap: '16px', marginBottom: '16px', alignItems: 'flex-start' }}>
+            <div style={{ background: 'rgba(129,140,248,0.2)', border: '1px solid rgba(129,140,248,0.4)', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '15px', flexShrink: 0 }}>{step}</div>
+            <div>
+              <div style={{ fontWeight: 700, fontSize: '15px', marginBottom: '4px' }}>{title}</div>
+              <div style={{ fontSize: '13px', opacity: 0.65 }}>{desc}</div>
+            </div>
+          </div>
+        ))}
+
+        {/* METHODS */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '40px 0 16px' }}>All Windows 11 Compression Methods</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
+          {methods.map((m, i) => (
+            <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: `3px solid ${i === 0 ? '#22d3ee' : '#475569'}` }}>
+              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>{i === 0 ? '⭐ ' : ''}{m.title}</div>
+              <div style={{ fontSize: '13px', opacity: 0.65 }}>{m.desc}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* FAQ */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — Compress Images on Windows 11</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
+          {faq.map((item, i) => (
+            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
+              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
+              <div style={{ fontSize: '13px', opacity: 0.7 }}>{item.a}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* RELATED */}
+        <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Related Tools & Guides</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '40px' }}>
+          {[
+            { href: '/', label: '🎯 Compress to Exact KB' },
+            { href: '/bulk-image-compressor', label: '📦 Bulk Compressor' },
+            { href: '/compress-to-100kb', label: '📁 Compress to 100KB' },
+            { href: '/compress-to-200kb', label: '📁 Compress to 200KB' },
+            { href: '/blog/best-image-compressor-for-mac', label: '📖 Best Compressor for Mac' },
+            { href: '/blog/webp-vs-jpeg-2026', label: '📖 WebP vs JPEG Guide' },
+          ].map(({ href, label }) => (
+            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize: '13px', fontWeight: 600 }}>
+              {label}
+            </Link>
+          ))}
+        </div>
+
       </div>
-      <footer style={{textAlign:'center',padding:'20px',fontSize:'12px',opacity:0.4,borderTop:'1px solid rgba(255,255,255,0.06)'}}>© 2025 CompressTo20KB · <Link href="/" style={{color:'white'}}>Home</Link></footer>
     </div>
   );
 }
