@@ -10,32 +10,10 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-          '@type': 'Question',
-          name: 'Can I compress my passport photo without uploading it?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Our tool compresses passport photos entirely in your browser using JavaScript. Your photo never leaves your device — no server upload, 100% private.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the USCIS passport photo file size limit?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'USCIS requires photos under 240KB in JPEG format. However many portals reject files over 50KB. Use our tool to compress to any exact size.',
-          },
-        },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://compressto20kb.com' },
-        { '@type': 'ListItem', position: 2, name: 'Compress Passport Photo', item: 'https://compressto20kb.com/compress-passport-photo' },
-      ],
-    },
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://compressto20kb.com' },
+    { '@type': 'ListItem', position: 2, name: 'Compress Passport Photo', item: 'https://compressto20kb.com/compress-passport-photo' },
   ],
 };
 
