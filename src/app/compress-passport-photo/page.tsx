@@ -12,17 +12,6 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What size should a US passport photo be?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'US State Department requires passport photos in JPEG format, 600×600 to 1200×1200 pixels, max 240KB. For DS-11 and online portals, files under 50KB work best.',
-          },
-        },
-        {
           '@type': 'Question',
           name: 'Can I compress my passport photo without uploading it?',
           acceptedAnswer: {
