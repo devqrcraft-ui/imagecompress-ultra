@@ -1,9 +1,14 @@
 import { MetadataRoute } from 'next';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://compressto20kb.com';
   const lastModified = new Date();
+
   return [
+    // ── Головна ──
     { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
+
+    // ── Інструменти (landing pages) ──
     { url: `${baseUrl}/compress-to-50kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-to-100kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-to-200kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
@@ -21,22 +26,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/compress-for-amazon`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-for-instagram`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-passport-photo`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/faq`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/blog/how-to-compress-image-for-uscis`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/compress-passport-photo-to-50kb`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/image-size-requirements-for-green-card`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/how-to-compress-photo-for-ds160`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/dv-lottery-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/best-image-size-for-ebay-listings`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/us-passport-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/compress-image-for-linkedin-profile`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/how-to-compress-images-for-woocommerce`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/compress-image-for-shopify-product-page`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/compress-for-dv-lottery`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/compress-without-uploading`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/dpi-converter`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+
+    // ── VS сторінки ──
     { url: `${baseUrl}/vs/tinypng`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/squoosh`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/compressor-io`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/privacy-policy`, lastModified, changeFrequency: 'yearly' as const, priority: 0.3 },
-    { url: `${baseUrl}/terms`, lastModified, changeFrequency: 'yearly' as const, priority: 0.3 },
+    { url: `${baseUrl}/vs/iloveimg`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/vs/kraken`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/vs/imageresizer`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/vs/picresize`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+
+    // ── Сервісні сторінки ──
+    { url: `${baseUrl}/faq`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/about`, lastModified, changeFrequency: 'yearly', priority: 0.5 },
+    { url: `${baseUrl}/contact`, lastModified, changeFrequency: 'yearly', priority: 0.5 },
+    { url: `${baseUrl}/privacy-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/terms`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
+
+    // ── Блог — головна ──
+    { url: `${baseUrl}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
+
+    // ── Блог — всі 33 статті ──
+    { url: `${baseUrl}/blog/best-free-image-compressor-for-small-business-usa`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/best-image-compressor-for-mac`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/best-image-formats`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/best-image-size-for-ebay-listings`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-image-for-google-forms`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-image-for-linkedin-profile`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-image-for-microsoft-teams`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-image-for-shopify-product-page`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-image-for-usps`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-images-for-amazon-seller`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-images-for-etsy-listings`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-images-for-shopify-store`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-jpeg-under-1mb`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-passport-photo-to-50kb`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/ds-160-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/dv-lottery-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/ecommerce-image-optimization`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/free-vs-paid-compressors`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/h1b-visa-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/how-to-compress-image-for-uscis`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/how-to-compress-images-for-woocommerce`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/how-to-compress-photo-for-ds160`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/image-optimization-2026`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/image-size-for-amazon-product-listing`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/image-size-requirements-for-green-card`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/pagespeed-images`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/reduce-image-size-for-email`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/reduce-image-size-for-government-forms-usa`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/us-passport-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/uscis-photo-size-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/webp-vs-jpeg-2026`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
   ];
 }
