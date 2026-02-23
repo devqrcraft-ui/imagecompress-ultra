@@ -251,7 +251,7 @@ export default function Home() {
                 <span style={{fontSize:'13px',fontWeight:600}}>Quality</span>
                 <span style={{fontSize:'13px',fontWeight:800,color:'#818cf8'}}>{quality}%</span>
               </div>
-              <input type="range" min={10} max={100} value={quality} onChange={e=>setQuality(+e.target.value)}
+              <input type="range" min={10} max={100} value={quality} onChange={e=>setQuality(+e.target.value)} aria-label="Compression quality percentage"
                 style={{width:'100%',accentColor:'#818cf8'}}/>
               <div style={{display:'flex',justifyContent:'space-between',fontSize:'10px',opacity:0.4,marginTop:'4px'}}>
                 <span>Smaller file</span><span>Better quality</span>

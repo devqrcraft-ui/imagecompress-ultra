@@ -192,11 +192,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gap: '16px',
         }}>
           <span>© 2025 CompressTo20KB</span>
-          <a href='/privacy-policy' style={{color:'rgba(255,255,255,0.7)',textDecoration:'none'}}>Privacy Policy</a>
-          <a href='/terms' style={{color:'rgba(255,255,255,0.7)',textDecoration:'none'}}>Terms of Service</a>
-          <a href='/blog' style={{color:'rgba(255,255,255,0.7)',textDecoration:'none'}}>Blog</a>
-          <a href='/faq' style={{color:'rgba(255,255,255,0.7)',textDecoration:'none'}}>FAQ</a>
-          <a href='/contact' style={{color:'rgba(255,255,255,0.7)',textDecoration:'none'}}>Contact</a>
+          <a href='/privacy-policy' style={{color:'rgba(255,255,255,0.9)',textDecoration:'none'}}>Privacy Policy</a>
+          <a href='/terms' style={{color:'rgba(255,255,255,0.9)',textDecoration:'none'}}>Terms of Service</a>
+          <a href='/blog' style={{color:'rgba(255,255,255,0.9)',textDecoration:'none'}}>Blog</a>
+          <a href='/faq' style={{color:'rgba(255,255,255,0.9)',textDecoration:'none'}}>FAQ</a>
+          <a href='/contact' style={{color:'rgba(255,255,255,0.9)',textDecoration:'none'}}>Contact</a>
           <span style={{opacity:0.6}}>🔒 Files never leave your browser</span>
         </footer>
       </body>
