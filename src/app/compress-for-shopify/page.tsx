@@ -110,6 +110,7 @@ export default function ShopifyPage() {
           ))}
         </div>
       </div>
+    <div style={{textAlign:"center",padding:"16px 0"}}><a href="/blog/compress-images-for-shopify-store" style={{color:"#818cf8",fontSize:"14px",textDecoration:"none"}}>📖 Full Guide: Compress Images for Shopify →</a></div>
     </div>
   );
 }

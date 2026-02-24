@@ -56,6 +56,7 @@ export default function ClientPage() {
         </div>
       </div>
       <footer style={{ textAlign: 'center', padding: '20px', fontSize: '12px', opacity: 0.4, borderTop: '1px solid rgba(255,255,255,0.06)' }}>© 2025 CompressTo20KB · Not affiliated with Shopify · <Link href="/" style={{ color: 'white' }}>Home</Link></footer>
+    <div style={{textAlign:"center",padding:"16px 0"}}><a href="/blog/compress-images-for-shopify-store" style={{color:"#818cf8",fontSize:"14px",textDecoration:"none"}}>📖 Full Guide: Compress Images for Shopify →</a></div>
     </div>
   );
 }
