@@ -1,28 +1,24 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FAQ — ImageCompress Pro",
-  description: "Frequently asked questions about ImageCompress Pro: formats, privacy, file size limits, API, and more.",
+  title: "FAQ — CompressTo20KB Image Compressor",
+  description: "Frequently asked questions about CompressTo20KB: privacy, formats, exact KB compression, USCIS photos, Shopify images, and more.",
+  alternates: { canonical: '/faq' },
 };
 
 const faqs = [
-  { q: "Is ImageCompress Pro really free?", a: "Yes, completely free. No credit card, no account, no watermarks, no hidden limits on the free tier. We offer optional Pro features for power users, but the core compression tool is and will remain free." },
-  { q: "Are my images private? Do you upload them to a server?", a: "Your images never leave your device. All compression happens locally in your browser using WebAssembly. We have no servers involved in the compression process and cannot access your files." },
-  { q: "What image formats does ImageCompress Pro support?", a: "Input: JPEG, PNG, WebP, GIF (first frame). Output: WebP, AVIF, JPEG, PNG. We recommend WebP output for the best balance of quality and file size." },
-  { q: "What is the maximum file size I can compress?", a: "There is no server-side file size limit. The practical limit is your device's available memory — typically up to 50MB per image on modern devices. For very large files (100MB+), we recommend processing one at a time." },
-  { q: "How many images can I compress at once?", a: "The free tier supports batch processing of up to 20 images simultaneously. All 20 are processed in parallel and available for download individually or as a ZIP archive." },
-  { q: "What quality setting should I use?", a: "Quality 80 is the recommended default for most use cases. It produces files that are 35–50% smaller than quality 100 with no visible difference on screen. For photos where maximum quality is critical (print, archiving), use quality 90–95." },
-  { q: "What is WebP and why should I use it?", a: "WebP is a modern image format developed by Google. It produces files 25–35% smaller than JPEG at the same visual quality, supports transparency (like PNG), and is supported by 96%+ of browsers globally. It is the best default format for web images in 2026." },
-  { q: "What is AVIF and how is it different from WebP?", a: "AVIF is a newer format based on the AV1 video codec. It produces files 50%+ smaller than JPEG and 20–30% smaller than WebP. Browser support is around 92% globally. Use AVIF with a WebP fallback for new projects where maximum compression is important." },
-  { q: "Will compression reduce my image quality?", a: "Lossy compression at quality 80 is visually indistinguishable from the original for most images on screen. The quality slider lets you control the trade-off. At quality 100, output is lossless (for PNG/WebP lossless modes) or near-lossless." },
-  { q: "Does ImageCompress Pro work on mobile?", a: "Yes. The tool works on any modern browser on iOS Safari, Chrome for Android, and other mobile browsers. Performance may be slower on older devices for very large images due to device memory constraints." },
-  { q: "Do I need to create an account?", a: "No account is needed for the free compression tool. An account is only required if you want to save compression presets, access the API, or use Pro features." },
-  { q: "Is there an API available?", a: "Yes. ImageCompress Pro provides a REST API for developers who need to automate compression in their workflows. The API is available on the free tier with rate limits. See our API documentation for details." },
-  { q: "Can I compress animated GIFs?", a: "Currently, only the first frame of an animated GIF is compressed. Full animated GIF compression is on our roadmap. For animated content, we recommend converting to animated WebP using a dedicated tool." },
-  { q: "Why is my WebP file larger than the original JPEG?", a: "This can happen with images that were already heavily compressed (low-quality source JPEG). Re-compressing an already lossy image can sometimes increase file size. Try lowering the quality slider or use a higher-quality source image." },
-  { q: "Does compression affect image dimensions?", a: "Compression alone does not change image dimensions. If you want to resize images, use the optional resize feature before compressing. Resizing and compressing together gives the maximum file size reduction." },
-  { q: "How do I compress images for a specific file size (e.g., under 100KB)?", a: "Use the quality slider and preview the file size shown next to the output. Start at quality 80, then lower until the target size is reached. For most photos, quality 60–70 achieves under 100KB." },
-  { q: "Is ImageCompress Pro open source?", a: "The core compression engine uses open-source libraries (libwebp, libavif, sharp). The application itself is currently proprietary. We plan to open-source parts of the codebase in the future." },
+  { q: "Is CompressTo20KB really free?", a: "Yes — completely free. No account, no credit card, no watermarks, no hidden limits. The tool is free for personal and commercial use." },
+  { q: "Are my images private? Do you upload them to a server?", a: "Your images never leave your device. All compression happens locally in your browser. We have no servers involved in the compression process and cannot access your files." },
+  { q: "What image formats are supported?", a: "Input: JPEG, PNG, WebP, AVIF, HEIC/HEIF (iPhone photos). Output: WebP, AVIF, JPEG, PNG. WebP is recommended for the best balance of quality and file size." },
+  { q: "How do I compress an image to exactly 20KB?", a: "Upload your image, click the '🎯 Exact KB Mode' tab, type 20 in the target field, and click Compress. The tool uses binary search to hit your target within 1KB." },
+  { q: "How many images can I compress at once?", a: "You can compress up to 50 images simultaneously in batch mode. All are processed in parallel and can be downloaded individually or as a ZIP archive." },
+  { q: "Does it work for USCIS and passport photos?", a: "Yes — use the 'Gov 20KB' preset. It compresses your photo to under 20KB as required by USCIS N-400, DS-160 visa forms, and US passport online applications. All processing stays on your device." },
+  { q: "What is the best format for Shopify images?", a: "WebP is the best format for Shopify product images. It is 25–35% smaller than JPEG at the same visual quality. Use our Shopify preset — it compresses to WebP under 1MB at 2048px automatically." },
+  { q: "Does compressing an image reduce its quality?", a: "Smart compression at 80% quality is visually indistinguishable from the original for most images on screen. Use the Before/After preview slider to compare before downloading." },
+  { q: "Does it work on iPhone and Android?", a: "Yes — the tool works in Safari on iPhone and Chrome on Android. HEIC photos from iPhone Camera Roll are automatically converted during compression." },
+  { q: "Why do government portals require photos under 20KB?", a: "US government portals (USCIS, DS-160, passport applications) and many job portals set strict file size limits to reduce server load and ensure fast uploads on slow connections." },
+  { q: "Can I compress PNG to under 20KB?", a: "PNG is lossless and rarely compresses below 50KB for photos. For 20KB targets, convert to JPEG or WebP — select your output format in the format selector before compressing." },
+  { q: "What is the maximum file size I can compress?", a: "There is no server-side limit. The practical limit is your device's available memory — typically up to 50MB per image on modern devices." },
 ];
 
 export default function FAQPage() {
@@ -39,25 +35,36 @@ export default function FAQPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main className="max-w-3xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">Frequently Asked Questions</h1>
-        <p className="text-gray-600 mb-12">Everything you need to know about ImageCompress Pro.</p>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
+        <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
+          <a href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</a>
+          <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
+            <a href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</a>
+            <a href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</a>
+            <a href="/contact" style={{ color: 'white', textDecoration: 'none' }}>Contact</a>
+          </div>
+        </nav>
 
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <div key={i} className="border border-gray-200 rounded-2xl p-6">
-              <h2 className="text-lg font-semibold mb-2">{faq.q}</h2>
-              <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
-            </div>
-          ))}
-        </div>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 48px' }}>
+          <h1 style={{ fontSize: '32px', fontWeight: 800, marginBottom: '8px' }}>Frequently Asked Questions</h1>
+          <p style={{ fontSize: '15px', opacity: 0.6, marginBottom: '40px' }}>Everything you need to know about CompressTo20KB.</p>
 
-        <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
-          <h3 className="text-xl font-semibold mb-2">Still have questions?</h3>
-          <p className="text-gray-600 mb-4">We are happy to help. Send us a message and we will respond within 24 hours.</p>
-          <a href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Contact Us →</a>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '48px' }}>
+            {faqs.map((faq, i) => (
+              <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 24px' }}>
+                <h2 style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px', color: '#a5b4fc' }}>{faq.q}</h2>
+                <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '14px', padding: '24px', textAlign: 'center' }}>
+            <div style={{ fontSize: '16px', fontWeight: 700, marginBottom: '8px' }}>Still have questions?</div>
+            <p style={{ fontSize: '13px', opacity: 0.65, marginBottom: '16px' }}>We are happy to help. Send us a message and we will respond within 24 hours.</p>
+            <a href="/contact" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '10px 24px', borderRadius: '100px', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}>Contact Us →</a>
+          </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
