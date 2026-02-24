@@ -65,7 +65,7 @@ export default function Navbar() {
               }}
               onMouseLeave={e=>{
                 const el = e.currentTarget as HTMLElement;
-                el.style.color = '#c0c0d8';
+                el.style.color = '#e0e0ff';
                 el.style.background = 'rgba(255,255,255,0.04)';
                 el.style.borderColor = 'rgba(255,255,255,0.08)';
                 el.style.boxShadow = '0 1px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)';
