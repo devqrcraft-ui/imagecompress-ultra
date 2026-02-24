@@ -39,7 +39,7 @@ export default function Navbar() {
               href={href}
               className="nav-btn"
               style={{
-                color:'#c0c0d8',
+                color:'#e0e0ff',
                 textDecoration:'none',
                 fontSize:'13px',
                 fontWeight:600,
