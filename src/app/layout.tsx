@@ -120,7 +120,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }} />
       </head>
       <body style={{ margin: 0, padding: 0 }}>
-        <main>{children}</main>
+        <main role="main">{children}</main>
         <footer style={{
           textAlign: 'center',
           padding: '16px 24px',
