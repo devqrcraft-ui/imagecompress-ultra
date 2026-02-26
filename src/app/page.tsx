@@ -414,6 +414,30 @@ export default function Home() {
         </p>
       </div>
 
+      {/* INTERNAL LINKS */}
+      <div style={{maxWidth:"800px",margin:"0 auto",padding:"10px 16px 20px"}}>
+        <h2 style={{fontSize:"18px",fontWeight:700,marginBottom:"14px"}}>Compress Images For Specific Platforms</h2>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:"8px"}}>
+          {[{href:"/compress-for-shopify",label:"🛍️ Shopify"},{href:"/compress-for-etsy",label:"🎨 Etsy"},{href:"/compress-for-amazon",label:"📦 Amazon"},{href:"/compress-for-instagram",label:"📸 Instagram"},{href:"/compress-for-linkedin",label:"💼 LinkedIn"},{href:"/compress-for-whatsapp",label:"💬 WhatsApp"},{href:"/compress-for-wordpress",label:"🌐 WordPress"},{href:"/compress-passport-photo",label:"🪪 Passport Photo"},{href:"/compress-to-20kb",label:"📄 To 20KB"},{href:"/compress-to-50kb",label:"📄 To 50KB"},{href:"/compress-to-100kb",label:"📄 To 100KB"}].map(({href,label})=>(<a key={href} href={href} style={{display:"block",padding:"10px 14px",background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"8px",color:"rgba(255,255,255,0.8)",textDecoration:"none",fontSize:"13px",fontWeight:600}}>  {label}</a>))}
+        </div>
+      </div>
+
+      
+      {/* INTERNAL LINKS */}
+      <div style={{maxWidth:'800px',margin:'0 auto',padding:'10px 16px 20px'}}>
+        <h2 style={{fontSize:'18px',fontWeight:700,marginBottom:'14px'}}>Compress Images For Specific Platforms</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))',gap:'8px'}}>
+          {[{href:'/compress-for-shopify',label:'Shopify'},{href:'/compress-for-etsy',label:'Etsy'},{href:'/compress-for-amazon',label:'Amazon'},{href:'/compress-for-instagram',label:'Instagram'},{href:'/compress-for-linkedin',label:'LinkedIn'},{href:'/compress-for-whatsapp',label:'WhatsApp'},{href:'/compress-for-wordpress',label:'WordPress'},{href:'/compress-passport-photo',label:'Passport Photo'},{href:'/compress-to-20kb',label:'To 20KB'},{href:'/compress-to-50kb',label:'To 50KB'},{href:'/compress-to-100kb',label:'To 100KB'}].map(({href,label})=>(<a key={href} href={href} style={{display:'block',padding:'10px 14px',background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.1)',borderRadius:'8px',color:'rgba(255,255,255,0.8)',textDecoration:'none',fontSize:'13px',fontWeight:600}}>{label}</a>))}
+        </div>
+      </div>
+      
+      {/* INTERNAL LINKS */}
+      <div style={{maxWidth:'800px',margin:'0 auto',padding:'10px 16px 20px'}}>
+        <h2 style={{fontSize:'18px',fontWeight:700,marginBottom:'14px'}}>Compress Images For Specific Platforms</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))',gap:'8px'}}>
+          {[{href:'/compress-for-shopify',label:'Shopify'},{href:'/compress-for-etsy',label:'Etsy'},{href:'/compress-for-amazon',label:'Amazon'},{href:'/compress-for-instagram',label:'Instagram'},{href:'/compress-for-linkedin',label:'LinkedIn'},{href:'/compress-for-whatsapp',label:'WhatsApp'},{href:'/compress-for-wordpress',label:'WordPress'},{href:'/compress-passport-photo',label:'Passport Photo'},{href:'/compress-to-20kb',label:'To 20KB'},{href:'/compress-to-50kb',label:'To 50KB'},{href:'/compress-to-100kb',label:'To 100KB'}].map(({href,label})=>(<a key={href} href={href} style={{display:'block',padding:'10px 14px',background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.1)',borderRadius:'8px',color:'rgba(255,255,255,0.8)',textDecoration:'none',fontSize:'13px',fontWeight:600}}>{label}</a>))}
+        </div>
+      </div>
       {/* BOTTOM AD */}
       <div style={{display:'flex',justifyContent:'center',padding:'8px 0 16px',background:'rgba(0,0,0,0.2)'}}>
         <div style={{width:'100%',maxWidth:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
