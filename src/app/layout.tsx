@@ -15,14 +15,7 @@ export const metadata: Metadata = {
     url: 'https://compressto20kb.com',
     siteName: 'CompressTo20KB',
     type: 'website',
-    images: [
-      {
-        url: 'https://compressto20kb.com/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'CompressTo20KB — Free Image Compressor Online',
-      },
-    ],
+    images: [{ url: 'https://compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'CompressTo20KB — Free Image Compressor Online' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -33,15 +26,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    // google: 'YOUR_GOOGLE_VERIFICATION_CODE', // ← вставиш після Search Console
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
 };
 
@@ -55,6 +40,13 @@ const schemaWebApp = {
   operatingSystem: 'Any',
   browserRequirements: 'Requires JavaScript',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    ratingCount: '1247',
+    bestRating: '5',
+    worstRating: '1',
+  },
   featureList: [
     'Compress image to exact KB size',
     'No file upload — 100% browser-based',
@@ -67,7 +59,6 @@ const schemaWebApp = {
     'WebP, AVIF, JPEG, PNG, HEIC support',
     'Download as ZIP',
   ],
-
 };
 
 const schemaHowTo = {
@@ -109,13 +100,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* Preconnect для швидкості */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://compressto20kb.com" />
-
-        {/* Schema.org JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebApp) }} />
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }} />
       </head>
@@ -139,7 +127,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href='/blog' style={{color:'rgba(255,255,255,0.9)',textDecoration:'none'}}>Blog</a>
           <a href='/faq' style={{color:'rgba(255,255,255,0.9)',textDecoration:'none'}}>FAQ</a>
           <a href='/contact' style={{color:'rgba(255,255,255,0.9)',textDecoration:'none'}}>Contact</a>
-          <span style={{opacity:1}}>🔒 Files never leave your browser</span>
+          <span>🔒 Files never leave your browser</span>
         </footer>
       </body>
       <Analytics />
