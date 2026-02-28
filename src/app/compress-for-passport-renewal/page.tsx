@@ -3,33 +3,21 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Compress Photo for US Passport Renewal — Free Online Tool',
-  description: 'Compress photo for US passport renewal online. Under 240KB, white background, 600×600px JPEG.',
+  description: 'Compress photo for US passport renewal. Under 240KB, white background, 600x600px.',
   alternates: { canonical: '/compress-for-passport-renewal' },
   keywords: 'compress photo for passport-renewal, US Passport Renewal photo requirements, US Passport Renewal photo size',
 };
 
 export default function Page() {
-  const maxDisplay = 240 >= 1024 ? Math.round(240/1024)+'MB' : '240KB';
+  const maxKB = 240;
+  const maxDisplay = maxKB >= 1024 ? Math.round(maxKB/1024)+'MB' : maxKB+'KB';
   const faq = [
-    { q: 'What are the photo requirements for US Passport Renewal?', a: 'US passport renewal photo: JPEG, under 240KB, 600×600px (2×2 inch), white background, taken within 6 months.' },
-    { q: 'How do I compress a photo for US Passport Renewal?', a: 'Use our free tool above. Select Exact KB Mode, enter 240 as target, download your compressed photo.' },
+    { q: 'What are the photo requirements for US Passport Renewal?', a: 'US passport renewal photo: JPEG, under 240KB, 600x600px 2x2 inch, white background, taken within 6 months.' },
+    { q: 'How do I compress a photo for US Passport Renewal?', a: 'Click the button above, select Exact KB Mode, enter 240 as target size and download your compressed photo.' },
     { q: 'Is my photo uploaded to a server?', a: 'No — all processing happens in your browser. Your photo never leaves your device.' },
   ];
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org', '@type': 'WebApplication',
-        name: 'US Passport Renewal Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-passport-renewal',
-        description: 'Compress photo for US passport renewal online. Under 240KB, white background, 600×600px JPEG.',
-        applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '1034', bestRating: '5', worstRating: '1' },
-      })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org', '@type': 'FAQPage',
-        mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-      })}} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
         <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '13px', opacity: 0.75 }}>← Home</Link>
@@ -41,11 +29,11 @@ export default function Page() {
         <h1 style={{ fontSize: 'clamp(26px,4vw,42px)', fontWeight: 900, lineHeight: 1.2, marginBottom: '12px' }}>
           🏛️ Compress Photo for <span style={{ color: '#818cf8' }}>US Passport Renewal</span>
         </h1>
-        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>US passport renewal photo: JPEG, under 240KB, 600×600px (2×2 inch), white background, taken within 6 months.</p>
+        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>US passport renewal photo: JPEG, under 240KB, 600x600px 2x2 inch, white background, taken within 6 months.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(140px,1fr))', gap: '12px', marginBottom: '28px' }}>
           {[
             { label: 'Max File Size', value: maxDisplay, icon: '📦', color: '#4ade80' },
-            { label: 'Dimensions', value: '600×600px', icon: '📐', color: '#818cf8' },
+            { label: 'Dimensions', value: '600x600px', icon: '📐', color: '#818cf8' },
             { label: 'Background', value: 'White', icon: '⬜', color: '#fbbf24' },
             { label: 'Format', value: 'JPEG', icon: '🖼️', color: '#fb923c' },
           ].map(s => (
@@ -59,10 +47,10 @@ export default function Page() {
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
           <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to {maxDisplay} — US Passport Renewal Ready</div>
           <p style={{ fontSize: '13px', opacity: 0.65, marginBottom: '16px' }}>No upload. Files stay on your device. JPEG, PNG, WebP, HEIC supported.</p>
-          <a href={"/?mode=exactkb&target=240"} style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
+          <a href={`/?mode=exactkb&target=${maxKB}`} style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
             ⚡ Open US Passport Renewal Photo Compressor
           </a>
-          <div style={{ marginTop: '12px', fontSize: '12px', opacity: 0.5 }>Apply at: <a href="https://travel.state.gov" target="_blank" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>https://travel.state.gov</a></div>}
+                    <div style={{ marginTop: '12px', fontSize: '12px', opacity: 0.5 }}>Apply at: <a href="https://travel.state.gov" target="_blank" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>https://travel.state.gov</a></div>
         </div>
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — US Passport Renewal Photo Requirements</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
@@ -80,7 +68,7 @@ export default function Page() {
         </div>
       </div>
       <footer style={{ textAlign: 'center', padding: '20px', fontSize: '12px', opacity: 0.4, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-        © 2026 CompressTo20KB · <Link href="/" style={{ color: 'white' }}>Home</Link> · 🔒 Files never leave your browser
+        2026 CompressTo20KB · <Link href="/" style={{ color: 'white' }}>Home</Link> · Files never leave your browser
       </footer>
     </div>
   );
