@@ -1,19 +1,35 @@
 import { MetadataRoute } from 'next';
+import { VISA_COUNTRIES } from '@/lib/visaCountries';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://compressto20kb.com';
   const lastModified = new Date();
 
-  return [
-    // ── Головна ──
-    { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
+  const visaPages = VISA_COUNTRIES.map(c => ({
+    url: `${baseUrl}/compress-for-${c.slug}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
 
-    // ── Інструменти (landing pages) ──
+  return [
+    // ── Core ──
+    { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${baseUrl}/visa-photo-compressor`, lastModified, changeFrequency: 'monthly', priority: 0.95 },
+
+    // ── KB Tools ──
     { url: `${baseUrl}/compress-to-20kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/compress-to-500kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/compress-to-30kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-to-50kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-to-100kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-to-200kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/compress-to-240kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/compress-to-500kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/compress-to-1mb`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-to-2mb`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-to-5mb`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+
+    // ── Platform tools ──
     { url: `${baseUrl}/bulk-image-compressor`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-for-uscis`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-passport-photo-usa`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
@@ -32,36 +48,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/compress-without-uploading`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/dpi-converter`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
 
-    // ── VS сторінки ──
+    // ── US Gov Forms ──
+    { url: `${baseUrl}/compress-for-ds160`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/compress-for-global-entry`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-real-id`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-tsa-precheck`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-n400`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-i485`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+
+    // ── Visa country pages (47 countries) ──
+    ...visaPages,
+
+    // ── VS pages ──
     { url: `${baseUrl}/vs/tinypng`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/squoosh`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/compressor-io`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/iloveimg`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-canva`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-google-classroom`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-discord`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-fiverr`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-upwork`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-twitter`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-pinterest`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-whatsapp`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-zoom`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/compress-for-wordpress`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/kraken`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/imageresizer`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/picresize`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
 
-    // ── Сервісні сторінки ──
+    // ── Service pages ──
     { url: `${baseUrl}/faq`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/about`, lastModified, changeFrequency: 'yearly', priority: 0.5 },
     { url: `${baseUrl}/contact`, lastModified, changeFrequency: 'yearly', priority: 0.5 },
     { url: `${baseUrl}/privacy-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
 
-    // ── Блог — головна ──
+    // ── Blog ──
     { url: `${baseUrl}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
-
-    // ── Блог — всі 33 статті ──
     { url: `${baseUrl}/blog/best-free-image-compressor-for-small-business-usa`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/best-image-compressor-for-mac`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/best-image-formats`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
