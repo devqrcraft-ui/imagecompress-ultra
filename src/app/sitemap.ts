@@ -13,11 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [
-    // ── Core ──
+    // Core
     { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${baseUrl}/visa-photo-compressor`, lastModified, changeFrequency: 'monthly', priority: 0.95 },
 
-    // ── KB Tools ──
+    // KB Tools
     { url: `${baseUrl}/compress-to-20kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-to-30kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-to-50kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
@@ -27,9 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/compress-to-500kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-to-1mb`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/compress-to-2mb`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-to-3mb`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/compress-to-5mb`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-to-10mb`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
 
-    // ── Platform tools ──
+    // Platform tools
     { url: `${baseUrl}/bulk-image-compressor`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-for-uscis`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-passport-photo-usa`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
@@ -48,18 +50,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/compress-without-uploading`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/dpi-converter`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
 
-    // ── US Gov Forms ──
+    // US Gov Forms (нові)
     { url: `${baseUrl}/compress-for-ds160`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/compress-for-f1-visa`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-for-global-entry`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/compress-for-real-id`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-green-card`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/compress-for-passport-renewal`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/compress-for-social-security`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-uscis-n400`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/compress-for-tsa-precheck`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/compress-for-n400`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/compress-for-i485`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
 
-    // ── Visa country pages (47 countries) ──
+    // Job portals (нові)
+    { url: `${baseUrl}/compress-for-indeed`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-greenhouse`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-workday`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-upwork-profile`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-resume-photo`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+
+    // Exam pages (нові)
+    { url: `${baseUrl}/compress-for-common-app`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-sat-registration`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-gre-registration`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-gmat-registration`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-neet-exam`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-ssc-exam`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/compress-for-upsc-exam`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
+
+    // Visa country pages
     ...visaPages,
 
-    // ── VS pages ──
+    // VS pages
     { url: `${baseUrl}/vs/tinypng`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/squoosh`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/compressor-io`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
@@ -68,14 +91,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/vs/imageresizer`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/picresize`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
 
-    // ── Service pages ──
+    // Service pages
     { url: `${baseUrl}/faq`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/about`, lastModified, changeFrequency: 'yearly', priority: 0.5 },
     { url: `${baseUrl}/contact`, lastModified, changeFrequency: 'yearly', priority: 0.5 },
     { url: `${baseUrl}/privacy-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
 
-    // ── Blog ──
+    // Blog
     { url: `${baseUrl}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/blog/best-free-image-compressor-for-small-business-usa`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/best-image-compressor-for-mac`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
