@@ -1,52 +1,48 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+
 export const metadata: Metadata = {
-  title: 'Image Compression Blog — Tips, Guides & Requirements',
-  description: 'Free guides on image compression for USCIS, passports, visas, DV Lottery, eBay, WooCommerce, Shopify, LinkedIn and more.',
+  title: 'Blog — Photo Compression Guides & Visa Photo Tips',
+  description: 'Free guides on how to compress photos for visa applications, government forms, and online portals. DS-160, DV Lottery, UK Visa, and more.',
   alternates: { canonical: '/blog' },
 };
+
 const posts = [
-  { slug: 'how-to-compress-image-for-uscis', title: 'How to Compress Image for USCIS', desc: 'Step-by-step guide to compressing photos for N-400, DS-160, I-485 under 240KB.', tag: 'USCIS' },
-  { slug: 'compress-passport-photo-to-50kb', title: 'Compress Passport Photo to 50KB', desc: 'For visa portals that require photos under 50KB. Works globally.', tag: 'Passport' },
-  { slug: 'image-size-requirements-for-green-card', title: 'Green Card Photo Size Requirements 2025', desc: 'Complete guide for I-485, I-130, I-90 with free compression tool.', tag: 'Green Card' },
-  { slug: 'how-to-compress-photo-for-ds160', title: 'How to Compress Photo for DS-160', desc: 'US nonimmigrant visa photo requirements in under 60 seconds.', tag: 'Visa' },
-  { slug: 'dv-lottery-photo-requirements', title: 'DV Lottery Photo Requirements 2026', desc: 'Official DV-2026 photo specs — get it wrong and your entry is disqualified.', tag: 'DV Lottery' },
-  { slug: 'us-passport-photo-requirements', title: 'US Passport Photo Requirements 2025', desc: 'Official State Department requirements for US passport photos.', tag: 'Passport' },
-  { slug: 'compress-image-for-shopify-product-page', title: 'Compress Images for Shopify Product Pages', desc: 'Speed up your Shopify store, improve Core Web Vitals and Google rankings.', tag: 'Shopify' },
-  { slug: 'best-image-size-for-ebay-listings', title: 'Best Image Size for eBay Listings 2025', desc: 'Optimize eBay photos to boost search rankings and sales conversions.', tag: 'eBay' },
-  { slug: 'compress-image-for-linkedin-profile', title: 'Compress Image for LinkedIn Profile', desc: 'Perfect LinkedIn photo and banner sizes for a professional presence.', tag: 'LinkedIn' },
-  { slug: 'how-to-compress-images-for-woocommerce', title: 'Compress Images for WooCommerce', desc: 'Speed up your WooCommerce store by optimizing product images.', tag: 'eCommerce' },
+  { slug: 'ds160-photo-requirements', title: 'DS-160 Photo Requirements 2025: Complete Guide', desc: 'Everything you need to know about DS-160 photo requirements. Size, format, common mistakes and how to fix them.', date: 'Feb 2026', tag: 'US Visa' },
+  { slug: 'compress-photo-for-visa', title: 'How to Compress Photo for Visa Application (Any Country)', desc: 'Step-by-step guide to compress visa photos to meet exact KB and pixel requirements for any country.', date: 'Feb 2026', tag: 'Visa' },
+  { slug: 'iphone-photo-ds160', title: 'iPhone Photo for DS-160: HEIC, Display P3 & How to Fix', desc: 'Why iPhone photos fail DS-160 upload and how to convert HEIC to JPEG and fix Display P3 color space.', date: 'Feb 2026', tag: 'iPhone' },
+  { slug: 'dv-lottery-photo-guide', title: 'DV Lottery Photo Requirements 2026/2027: Full Guide', desc: 'Complete DV Lottery photo requirements with common rejection reasons and free compression tool.', date: 'Feb 2026', tag: 'DV Lottery' },
+  { slug: 'compress-photo-under-50kb', title: 'How to Compress Photo Under 50KB for SSC, NEET & Indian Exams', desc: 'Guide for Indian exam applicants: compress photo to 50KB, 100KB, 200KB for SSC, NEET, UPSC online forms.', date: 'Feb 2026', tag: 'India Exams' },
 ];
-const tagColor: Record<string, string> = {
-  'USCIS': 'rgba(239,68,68,0.2)', 'Passport': 'rgba(99,102,241,0.2)', 'Green Card': 'rgba(52,211,153,0.2)',
-  'Visa': 'rgba(251,191,36,0.2)', 'DV Lottery': 'rgba(236,72,153,0.2)', 'eBay': 'rgba(234,88,12,0.2)',
-  'Shopify': 'rgba(52,211,153,0.15)', 'LinkedIn': 'rgba(14,165,233,0.2)', 'eCommerce': 'rgba(168,85,247,0.2)',
-};
-export default function BlogIndex() {
+
+export default function BlogPage() {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
-          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
-          <Link href="/compress-for-uscis" style={{ color: 'white', textDecoration: 'none' }}>USCIS</Link>
-          <Link href="/bulk-image-compressor" style={{ color: 'white', textDecoration: 'none' }}>Bulk</Link>
-        </div>
+        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '13px', opacity: 0.75 }}>← Home</Link>
       </nav>
-      <div style={{ maxWidth: '860px', margin: '0 auto', padding: '48px 16px' }}>
-        <h1 style={{ fontSize: 'clamp(28px,4vw,44px)', fontWeight: 900, marginBottom: '12px' }}>Image Compression Blog</h1>
-        <p style={{ fontSize: '16px', opacity: 0.6, marginBottom: '40px' }}>Guides, requirements, and tips for every platform and use case.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(360px,1fr))', gap: '16px' }}>
-          {posts.map(p => (
-            <Link key={p.slug} href={`/blog/${p.slug}`} style={{ textDecoration: 'none', color: 'white', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px', padding: '20px', display: 'block' }}>
-              <span style={{ fontSize: '11px', fontWeight: 700, padding: '3px 10px', borderRadius: '20px', background: tagColor[p.tag] || 'rgba(99,102,241,0.2)', marginBottom: '12px', display: 'inline-block' }}>{p.tag}</span>
-              <h2 style={{ fontSize: '17px', fontWeight: 800, margin: '0 0 8px', lineHeight: 1.3 }}>{p.title}</h2>
-              <p style={{ fontSize: '13px', opacity: 0.6, margin: 0, lineHeight: 1.6 }}>{p.desc}</p>
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
+        <h1 style={{ fontSize: 'clamp(26px,4vw,36px)', fontWeight: 900, marginBottom: '8px' }}>📝 Blog & Guides</h1>
+        <p style={{ fontSize: '15px', opacity: 0.6, marginBottom: '40px' }}>Photo compression guides, visa photo tips, and government form requirements.</p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {posts.map(post => (
+            <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
+              <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 24px', transition: 'border-color 0.2s' }}>
+                <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '8px' }}>
+                  <span style={{ background: 'rgba(129,140,248,0.2)', color: '#a5b4fc', fontSize: '11px', fontWeight: 700, padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
+                  <span style={{ fontSize: '12px', opacity: 0.4 }}>{post.date}</span>
+                </div>
+                <div style={{ fontWeight: 800, fontSize: '17px', marginBottom: '6px', color: 'white' }}>{post.title}</div>
+                <div style={{ fontSize: '13px', opacity: 0.6 }}>{post.desc}</div>
+              </div>
             </Link>
           ))}
         </div>
       </div>
-      <footer style={{ textAlign: 'center', padding: '20px', fontSize: '12px', opacity: 0.4, borderTop: '1px solid rgba(255,255,255,0.06)' }}>© 2025 CompressTo20KB · <Link href="/" style={{ color: 'white' }}>Home</Link></footer>
+      <footer style={{ textAlign: 'center', padding: '20px', fontSize: '12px', opacity: 0.4, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        © 2026 CompressTo20KB · <Link href="/" style={{ color: 'white' }}>Home</Link> · 🔒 Files never leave your browser
+      </footer>
     </div>
   );
 }

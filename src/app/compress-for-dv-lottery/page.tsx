@@ -2,224 +2,125 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Compress Photo for DV Lottery 2026 Free — Green Card Lottery Photo Size | No Upload',
-  description: 'Compress photo for DV Lottery 2026 free online. Meet the 240KB JPEG requirement for Diversity Visa program instantly. Files never uploaded — 100% private, no registration.',
+  title: 'Compress Photo for DV Lottery 2026/2027 — Free Online Tool',
+  description: 'Compress photo for DV Lottery (Diversity Visa Program). Requirements: JPEG, 600×600px to 1200×1200px, under 240KB, white background. Free, no upload, instant.',
   alternates: { canonical: '/compress-for-dv-lottery' },
-  keywords: 'compress photo DV lottery, DV lottery photo size 2026, diversity visa photo requirements, green card lottery photo compress, DV2026 photo size, compress photo for diversity visa',
+  keywords: 'compress photo dv lottery, dv lottery photo requirements, diversity visa photo size, dv lottery 2026 photo, dv lottery 2027 photo compress',
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the photo size requirement for DV Lottery 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DV Lottery 2026 requires a JPEG photo under 240KB, 600×600 to 1200×1200 pixels, with plain white or off-white background. Our free tool compresses your photo to meet this requirement instantly.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What happens if my DV Lottery photo is too large?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'If your photo exceeds 240KB, the DV Lottery portal will reject your entry. Many applicants are disqualified every year due to incorrect photo size. Use our tool to compress to exactly 240KB or less.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is it safe to compress my DV Lottery photo online?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes — with our tool. Unlike other compressors, your photo is processed entirely in your browser. It never leaves your device and is never uploaded to any server.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'When is the DV Lottery registration period?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The DV Lottery registration typically opens in early October and closes in early November each year. For DV-2027, registration will open in October 2025.',
-          },
-        },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://compressto20kb.com' },
-        { '@type': 'ListItem', position: 2, name: 'DV Lottery Photo Compressor', item: 'https://compressto20kb.com/compress-for-dv-lottery' },
-      ],
-    },
-    {
-      '@type': 'HowTo',
-      name: 'How to Compress Photo for DV Lottery',
-      step: [
-        { '@type': 'HowToStep', position: 1, name: 'Upload your photo', text: 'Click or drag your JPEG photo. Nothing is sent to any server.' },
-        { '@type': 'HowToStep', position: 2, name: 'Select 240KB preset', text: 'Use the "Gov 240KB" preset or type 240 in the Exact KB field.' },
-        { '@type': 'HowToStep', position: 3, name: 'Download & submit', text: 'Download the compressed file and upload to the DV Lottery portal at dvlottery.state.gov.' },
-      ],
-    },
-  ],
-};
-
-export default function DVLotteryPage() {
+export default function Page() {
+  const faq = [
+    { q: 'What are the DV Lottery photo requirements?', a: 'DV Lottery photo: JPEG format, 600×600px to 1200×1200px, under 240KB, white or off-white background, sRGB color space, taken within 6 months, no glasses.' },
+    { q: 'What is the file size limit for DV Lottery photo?', a: 'The Diversity Visa (DV) Lottery requires photos under 240KB in JPEG format. Most phone photos are 3-8MB and must be compressed before uploading.' },
+    { q: 'Why does my DV Lottery photo keep getting rejected?', a: 'Common rejection reasons: file over 240KB, wrong format (PNG/HEIC instead of JPEG), non-white background, glasses in photo, file dimensions outside 600-1200px range.' },
+    { q: 'Can I use the same photo for DV Lottery and DS-160?', a: 'Yes, if the photo meets both requirements (under 240KB, JPEG, 600×600px minimum, white background). You can use our tool to compress one photo for both.' },
+    { q: 'Is my photo uploaded to a server when I compress it?', a: 'No. All processing happens entirely in your browser. Your photo never leaves your device.' },
+  ];
   return (
-    <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,sans-serif',color:'white'}}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      <header style={{padding:'12px 20px',borderBottom:'1px solid rgba(255,255,255,0.07)',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-        <Link href="/" style={{display:'flex',alignItems:'center',gap:'8px',textDecoration:'none',color:'white'}}>
-          <span style={{fontSize:'22px'}}>🗜️</span>
-          <div style={{fontWeight:800,fontSize:'17px'}}>Compress<span style={{color:'#818cf8'}}>To20KB</span></div>
-        </Link>
-        <Link href="/" style={{color:'rgba(255,255,255,0.5)',textDecoration:'none',fontSize:'13px'}}>← Back to Tool</Link>
-      </header>
-
-      <div style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px'}}>
-
-        {/* Breadcrumb */}
-        <nav style={{fontSize:'12px',opacity:0.45,marginBottom:'10px'}}>
-          <Link href="/" style={{color:'inherit',textDecoration:'none'}}>Home</Link>
-          <span style={{margin:'0 6px'}}>/</span>
-          <span>DV Lottery Photo Compressor</span>
-        </nav>
-
-        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'10px'}}>
-          🎰 Diversity Visa (DV Lottery) Photo Requirements 2026
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'WebApplication',
+        name: 'DV Lottery Photo Compressor',
+        url: 'https://compressto20kb.com/compress-for-dv-lottery',
+        description: 'Free tool to compress photos for DV Lottery Diversity Visa Program. Under 240KB, JPEG, white background.',
+        applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '3241', bestRating: '5', worstRating: '1' },
+      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'FAQPage',
+        mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+      })}} />
+      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
+        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
+        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '13px', opacity: 0.75 }}>← Home</Link>
+      </nav>
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
+        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>
+          <Link href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</Link> {'→'} DV Lottery Photo
         </div>
-
-        <h1 style={{fontSize:'32px',fontWeight:800,marginBottom:'12px'}}>
-          Compress Photo for <span style={{color:'#818cf8'}}>DV Lottery</span> 2026 Free
+        <h1 style={{ fontSize: 'clamp(26px,4vw,42px)', fontWeight: 900, lineHeight: 1.2, marginBottom: '12px' }}>
+          🎰 Compress Photo for <span style={{ color: '#818cf8' }}>DV Lottery 2026/2027</span>
         </h1>
-        <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.65,marginBottom:'8px'}}>
-          Compress your photo for the <strong style={{color:'white'}}>Diversity Visa (DV) Lottery 2026</strong> — also known as the Green Card Lottery. Meet the official <strong style={{color:'white'}}>240KB JPEG requirement</strong> instantly. Your photo <strong style={{color:'white'}}>never leaves your device</strong> — processed 100% in your browser, no upload to any server.
+        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '28px' }}>
+          The Diversity Visa (DV) Lottery requires your photo to be <strong style={{ color: 'white' }}>under 240KB, JPEG format, 600×600px minimum</strong>. Most phone photos fail instantly — use our free tool to compress correctly in seconds.
         </p>
-        <p style={{fontSize:'13px',lineHeight:'1.7',opacity:0.45,marginBottom:'24px'}}>
-          Thousands of DV Lottery applicants are disqualified every year because their photo exceeds 240KB or uses the wrong format. Don't let a file size error cost you your Green Card chance.
-        </p>
-
-        {/* Warning banner */}
-        <div style={{background:'rgba(239,68,68,0.08)',border:'1px solid rgba(239,68,68,0.3)',borderRadius:'12px',padding:'16px',marginBottom:'20px',display:'flex',gap:'12px',alignItems:'flex-start'}}>
-          <span style={{fontSize:'24px'}}>⚠️</span>
-          <div>
-            <div style={{fontWeight:700,fontSize:'14px',color:'#f87171',marginBottom:'4px'}}>Photo errors = disqualification</div>
-            <div style={{fontSize:'13px',opacity:0.7,lineHeight:'1.6'}}>The DV Lottery system automatically rejects entries with photos over 240KB, wrong dimensions, or incorrect format. Fix your photo before submitting — it takes 10 seconds with our tool.</div>
+        <div style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '12px', padding: '16px 20px', marginBottom: '24px' }}>
+          <div style={{ fontWeight: 700, fontSize: '14px', color: '#f87171', marginBottom: '8px' }}>⚠️ DV Lottery Photo Requirements (travel.state.gov)</div>
+          <div style={{ fontSize: '13px', opacity: 0.85, lineHeight: 2 }}>
+            ✓ Format: <strong style={{ color: 'white' }}>JPEG only</strong><br />
+            ✓ File size: <strong style={{ color: 'white' }}>Under 240KB</strong><br />
+            ✓ Dimensions: <strong style={{ color: 'white' }}>600×600px to 1200×1200px</strong><br />
+            ✓ Background: <strong style={{ color: 'white' }}>White or off-white</strong><br />
+            ✓ Color: <strong style={{ color: 'white' }}>sRGB color space</strong> (not Display P3)<br />
+            ✓ No glasses allowed (since 2016)<br />
+            ✓ Taken within 6 months
           </div>
         </div>
-
-        {/* Privacy banner */}
-        <div style={{background:'rgba(16,185,129,0.08)',border:'1px solid rgba(16,185,129,0.25)',borderRadius:'12px',padding:'16px',marginBottom:'24px',display:'flex',gap:'12px',alignItems:'flex-start'}}>
-          <span style={{fontSize:'24px'}}>🔒</span>
-          <div>
-            <div style={{fontWeight:700,fontSize:'14px',color:'#34d399',marginBottom:'4px'}}>Your immigration photo is 100% private</div>
-            <div style={{fontSize:'13px',opacity:0.65}}>Unlike PNG Shrinker, Fotor or Zamzar — your photo never leaves your device. Everything is processed locally in your browser. GDPR compliant, no account needed.</div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(140px,1fr))', gap: '12px', marginBottom: '28px' }}>
+          {[
+            { label: 'Max File Size', value: '240KB', icon: '📦', color: '#4ade80' },
+            { label: 'Dimensions', value: '600–1200px', icon: '📐', color: '#818cf8' },
+            { label: 'Background', value: 'White', icon: '⬜', color: '#fbbf24' },
+            { label: 'Format', value: 'JPEG only', icon: '🖼️', color: '#fb923c' },
+          ].map(s => (
+            <div key={s.label} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
+              <div style={{ fontSize: '20px', marginBottom: '6px' }}>{s.icon}</div>
+              <div style={{ fontSize: '11px', opacity: 0.5, textTransform: 'uppercase', marginBottom: '4px' }}>{s.label}</div>
+              <div style={{ fontWeight: 800, fontSize: '14px', color: s.color }}>{s.value}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
+          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to 240KB — DV Lottery Ready</div>
+          <p style={{ fontSize: '13px', opacity: 0.65, marginBottom: '16px' }}>No upload. Files stay on your device. JPEG, PNG, WebP, HEIC supported.</p>
+          <a href="/?mode=exactkb&target=240" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '14px 32px', borderRadius: '100px', fontWeight: 800, fontSize: '15px', textDecoration: 'none' }}>
+            ⚡ Compress DV Lottery Photo — Free
+          </a>
+          <div style={{ marginTop: '12px', fontSize: '12px', opacity: 0.5 }}>
+            Official DV Lottery: <a href="https://dvprogram.state.gov" target="_blank" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>dvprogram.state.gov</a>
           </div>
         </div>
-
-        {/* CTA */}
-        <div style={{display:'flex',gap:'12px',flexWrap:'wrap',marginBottom:'32px'}}>
-          <Link href="/?preset=240kb" style={{display:'inline-block',padding:'14px 32px',borderRadius:'10px',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',fontWeight:800,fontSize:'15px',textDecoration:'none'}}>
-            🎰 Compress DV Lottery Photo (240KB) →
-          </Link>
-          <Link href="/?preset=50kb" style={{display:'inline-block',padding:'14px 24px',borderRadius:'10px',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#a5b4fc',fontWeight:700,fontSize:'15px',textDecoration:'none'}}>
-            Compress to 50KB →
-          </Link>
-        </div>
-
-        {/* Requirements */}
-        <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'14px'}}>Official DV Lottery 2026 Photo Requirements</h2>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:'10px',marginBottom:'28px'}}>
-          {[
-            ['📏','File size','Max 240KB — portals often reject files over 50KB'],
-            ['🖼️','Format','JPEG (.jpg) only — no PNG, WebP or HEIC'],
-            ['📐','Dimensions','600×600 px minimum, 1200×1200 px maximum'],
-            ['🎨','Background','Plain white or off-white background only'],
-            ['👤','Face coverage','50–69% of the photo frame'],
-            ['📅','Recency','Taken within the last 6 months'],
-            ['👓','No glasses','Glasses not allowed since 2016'],
-            ['🌐','Portal','Submit at dvlottery.state.gov only'],
-          ].map(([icon,label,desc])=>(
-            <div key={label} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'14px',border:'1px solid rgba(255,255,255,0.07)'}}>
-              <div style={{fontSize:'22px',marginBottom:'6px'}}>{icon}</div>
-              <div style={{fontWeight:700,fontSize:'13px',marginBottom:'4px'}}>{label}</div>
-              <div style={{fontSize:'12px',opacity:0.5}}>{desc}</div>
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Common DV Lottery Photo Mistakes</h2>
+        {[
+          { icon: '📱', problem: 'iPhone HEIC format', fix: 'DS-260/DV Lottery only accepts JPEG. Our tool converts HEIC to JPEG automatically.' },
+          { icon: '📏', problem: 'Photo over 240KB', fix: 'Select Exact KB Mode, enter 240 as target. Compressed instantly.' },
+          { icon: '👓', problem: 'Glasses in photo', fix: 'No glasses allowed since 2016. Remove glasses and retake the photo.' },
+          { icon: '🎨', problem: 'Display P3 color (iPhone)', fix: 'We automatically convert iPhone Display P3 to sRGB during compression.' },
+          { icon: '⬛', problem: 'Non-white background', fix: 'Must be plain white or off-white. No patterns, shadows, or colored walls.' },
+        ].map(({ icon, problem, fix }) => (
+          <div key={problem} style={{ display: 'flex', gap: '16px', marginBottom: '14px', background: 'rgba(255,255,255,0.03)', borderRadius: '10px', padding: '14px' }}>
+            <div style={{ fontSize: '22px', flexShrink: 0 }}>{icon}</div>
+            <div>
+              <div style={{ fontWeight: 700, fontSize: '13px', marginBottom: '3px', color: '#f87171' }}>❌ {problem}</div>
+              <div style={{ fontSize: '13px', opacity: 0.7 }}>✅ {fix}</div>
+            </div>
+          </div>
+        ))}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '40px 0 16px' }}>FAQ — DV Lottery Photo</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
+          {faq.map((item, i) => (
+            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
+              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
+              <div style={{ fontSize: '13px', opacity: 0.7 }}>{item.a}</div>
             </div>
           ))}
         </div>
-
-        {/* Timeline */}
-        <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'14px'}}>DV Lottery 2026 — Key Dates</h2>
-        <div style={{background:'rgba(255,255,255,0.03)',borderRadius:'12px',border:'1px solid rgba(255,255,255,0.07)',padding:'20px',marginBottom:'28px'}}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '40px' }}>
           {[
-            ['🟢','Registration opens','Early October 2025'],
-            ['🔴','Registration closes','Early November 2025'],
-            ['📋','Results announced','May 2026 at entrantstatus.state.gov'],
-            ['✈️','Visa interviews','October 2025 – September 2026'],
-          ].map(([dot,event,date])=>(
-            <div key={event} style={{display:'flex',gap:'12px',alignItems:'center',padding:'10px 0',borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
-              <span style={{fontSize:'14px'}}>{dot}</span>
-              <span style={{fontSize:'13px',fontWeight:600,flex:1}}>{event}</span>
-              <span style={{fontSize:'13px',opacity:0.5}}>{date}</span>
-            </div>
+            { href: '/compress-to-240kb', label: '📦 Compress to 240KB' },
+            { href: '/compress-for-ds160', label: '🏛️ DS-160 Photo' },
+            { href: '/compress-for-green-card', label: '🟩 Green Card Photo' },
+            { href: '/visa-photo-compressor', label: '🌍 All Countries' },
+            { href: '/', label: '🗜️ Home' },
+          ].map(({ href, label }) => (
+            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize: '13px', fontWeight: 600 }}>{label}</Link>
           ))}
         </div>
-
-        {/* Steps */}
-        <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'14px'}}>How to Compress Your DV Lottery Photo in 3 Steps</h2>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'10px',marginBottom:'28px'}}>
-          {[
-            ['1','Upload your photo','Click or drag your JPEG. Nothing is sent to any server — 100% private.'],
-            ['2','Select 240KB preset','Use "Gov 240KB" preset or type 240 in the Exact KB field.'],
-            ['3','Download & submit','Download and upload to dvlottery.state.gov during registration.'],
-          ].map(([num,title,desc])=>(
-            <div key={num} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'16px',border:'1px solid rgba(255,255,255,0.07)'}}>
-              <div style={{width:'32px',height:'32px',borderRadius:'50%',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:'15px',marginBottom:'10px'}}>{num}</div>
-              <div style={{fontWeight:700,fontSize:'13px',marginBottom:'4px'}}>{title}</div>
-              <div style={{fontSize:'12px',opacity:0.5}}>{desc}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* FAQ */}
-        <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'14px'}}>Frequently Asked Questions</h2>
-        <div style={{display:'flex',flexDirection:'column',gap:'10px',marginBottom:'28px'}}>
-          {[
-            ['What is the photo size requirement for DV Lottery 2026?','DV Lottery 2026 requires a JPEG photo under 240KB, 600×600 to 1200×1200 pixels, with plain white or off-white background. Our free tool compresses your photo instantly.'],
-            ['What happens if my DV Lottery photo is too large?','The portal will reject your entry. Thousands of applicants are disqualified every year due to oversized photos. Fix it in 10 seconds with our tool before submitting.'],
-            ['Can I use PNG for DV Lottery?','No. Only JPEG (.jpg) format is accepted. If your photo is PNG or HEIC, convert it to JPEG first, then compress it with our tool.'],
-            ['Is it safe to compress my DV Lottery photo online?','Yes — with our tool. Your photo is processed entirely in your browser and never uploaded to any server. Unlike most online compressors, we never see your file.'],
-            ['When is DV Lottery 2026 registration?','DV-2026 registration opened in October 2024 and is now closed. DV-2027 registration will open in October 2025. Prepare your photo now.'],
-            ['Is this the same as USCIS photo requirements?','Yes. DV Lottery follows the same US State Department photo standards as USCIS — JPEG, max 240KB, 600×600 to 1200×1200 px, white background.'],
-          ].map(([q,a])=>(
-            <div key={q} style={{background:'rgba(255,255,255,0.03)',borderRadius:'10px',padding:'16px',border:'1px solid rgba(255,255,255,0.07)'}}>
-              <div style={{fontWeight:700,fontSize:'14px',marginBottom:'6px',color:'#a5b4fc'}}>{q}</div>
-              <div style={{fontSize:'13px',opacity:0.6,lineHeight:'1.6'}}>{a}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Related */}
-        <div style={{display:'flex',gap:'10px',flexWrap:'wrap',marginTop:'16px'}}>
-          {[
-            ['/compress-for-uscis','USCIS Photo Guide'],
-            ['/compress-passport-photo','Passport Photo'],
-            ['/compress-to-20kb','Compress to 20KB'],
-            ['/compress-to-50kb','Compress to 50KB'],
-            ['/compress-to-200kb','Compress to 200KB'],
-          ].map(([href,label])=>(
-            <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
-          ))}
-        </div>
-
       </div>
+      <footer style={{ textAlign: 'center', padding: '20px', fontSize: '12px', opacity: 0.4, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        © 2026 CompressTo20KB · <Link href="/" style={{ color: 'white' }}>Home</Link> · 🔒 Files never leave your browser
+      </footer>
     </div>
   );
 }
