@@ -54,7 +54,7 @@ export async function GET(req: NextRequest) {
         failed++;
       } else {
         // Повертаємо в чергу для retry
-        const pipeline = redis.pipeline();
+        const pipeline = redis!.pipeline();
         pipeline.lrem("compression-processing", 1, taskId);
         pipeline.set(`task:${taskId}`, JSON.stringify({
           ...task,
