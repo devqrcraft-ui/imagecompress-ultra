@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Compress Image to 20KB Free Online — 100% Private, No Upload',
@@ -129,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href='/contact' style={{color:'rgba(255,255,255,0.9)',textDecoration:'none'}}>Contact</a>
           <span>🔒 Files never leave your browser</span>
         </footer>
+      <Footer />
       </body>
       <Analytics />
     </html>
