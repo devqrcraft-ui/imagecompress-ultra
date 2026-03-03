@@ -6,7 +6,7 @@ export const dynamicParams = false;
 
 const posts: Record<string, { title: string; desc: string; date: string; tag: string; content: string }> = {
   'ds160-photo-requirements': {
-    title: 'DS-160 Photo Requirements 2025: Complete Guide',
+    title: 'DS-160 Photo Requirements 2026: Complete Guide',
     desc: 'Everything you need to know about DS-160 photo requirements. Size, format, common mistakes and how to fix them.',
     date: 'February 2026',
     tag: 'US Visa',

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Compress Image for USPS — File Size & Format Requirements 2025",
+  title: "Compress Image for USPS — File Size & Format Requirements 2026",
   description: "USPS image requirements for Click-N-Ship, personalized stamps, and USPS.com. How to compress images to meet USPS size limits free online.",
   keywords: "compress image for USPS, USPS photo requirements, USPS image size, usps stamp image size",
   alternates: { canonical: "https://compressto20kb.com/blog/compress-image-for-usps" },

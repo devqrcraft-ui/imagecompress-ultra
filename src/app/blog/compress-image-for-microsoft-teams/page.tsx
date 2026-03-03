@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Compress Images for Microsoft Teams — Fast & Free 2025',
+  title: 'Compress Images for Microsoft Teams — Fast & Free 2026',
   description: 'Microsoft Teams has a 250MB file upload limit but slow previews for large images. Learn how to compress images for Teams in seconds.',
   keywords: 'compress image for microsoft teams, teams image size, reduce image size for teams, microsoft teams photo upload limit',
   alternates: { canonical: '/blog/compress-image-for-microsoft-teams' },

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const posts = [
-  { slug: 'ds160-photo-requirements', title: 'DS-160 Photo Requirements 2025: Complete Guide', desc: 'Everything you need to know about DS-160 photo requirements. Size, format, common mistakes and how to fix them.', date: 'Feb 2026', tag: 'US Visa' },
+  { slug: 'ds160-photo-requirements', title: 'DS-160 Photo Requirements 2026: Complete Guide', desc: 'Everything you need to know about DS-160 photo requirements. Size, format, common mistakes and how to fix them.', date: 'Feb 2026', tag: 'US Visa' },
   { slug: 'compress-photo-for-visa', title: 'How to Compress Photo for Visa Application (Any Country)', desc: 'Step-by-step guide to compress visa photos to meet exact KB and pixel requirements for any country.', date: 'Feb 2026', tag: 'Visa' },
   { slug: 'iphone-photo-ds160', title: 'iPhone Photo for DS-160: HEIC, Display P3 & How to Fix', desc: 'Why iPhone photos fail DS-160 upload and how to convert HEIC to JPEG and fix Display P3 color space.', date: 'Feb 2026', tag: 'iPhone' },
   { slug: 'dv-lottery-photo-guide', title: 'DV Lottery Photo Requirements 2026/2027: Full Guide', desc: 'Complete DV Lottery photo requirements with common rejection reasons and free compression tool.', date: 'Feb 2026', tag: 'DV Lottery' },

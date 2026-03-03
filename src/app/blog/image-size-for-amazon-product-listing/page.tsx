@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Amazon Product Image Size Requirements 2025 — Full Guide",
+  title: "Amazon Product Image Size Requirements 2026 — Full Guide",
   description: "Amazon product image requirements: minimum 1000px, white background, JPEG format, under 10MB. How to compress and optimize Amazon listing images free.",
   keywords: "amazon product image size, amazon listing image requirements, compress image for amazon, amazon seller image specs",
   alternates: { canonical: "https://compressto20kb.com/blog/image-size-for-amazon-product-listing" },

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "H1B Visa Photo Requirements 2025 — Size, Format & How to Compress",
+  title: "H1B Visa Photo Requirements 2026 — Size, Format & How to Compress",
   description: "Complete guide to H1B visa photo requirements: dimensions, file size limits, background. How to compress your photo to 20KB for USCIS forms free.",
   keywords: "h1b visa photo requirements, h1b photo size, uscis photo requirements, compress photo for h1b",
   alternates: { canonical: "https://compressto20kb.com/blog/h1b-visa-photo-requirements" },

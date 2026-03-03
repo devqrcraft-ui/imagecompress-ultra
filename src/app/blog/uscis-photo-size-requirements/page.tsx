@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "USCIS Photo Size Requirements 2025 — Complete Guide",
-  description: "Complete USCIS photo size requirements 2025: file size 240KB, dimensions, format, background. Which forms need a photo? How to compress free — no upload.",
+  title: "USCIS Photo Size Requirements 2026 — Complete Guide",
+  description: "Complete USCIS photo size requirements 2026: file size 240KB, dimensions, format, background. Which forms need a photo? How to compress free — no upload.",
   alternates: { canonical: '/blog/uscis-photo-size-requirements' },
   keywords: 'USCIS photo size requirements 2025, USCIS photo requirements, compress USCIS photo, USCIS 240KB photo, green card photo requirements, I-485 photo size',
   openGraph: {
-    title: "USCIS Photo Size Requirements 2025 — Complete Guide",
-    description: "Everything about USCIS photo requirements 2025: size, format, dimensions, which forms need photos, and how to compress free.",
+    title: "USCIS Photo Size Requirements 2026 — Complete Guide",
+    description: "Everything about USCIS photo requirements 2026: size, format, dimensions, which forms need photos, and how to compress free.",
     images: [{ url: "/og/uscis-photo-size-requirements.png", width: 1200, height: 630 }],
     type: "article",
   },
