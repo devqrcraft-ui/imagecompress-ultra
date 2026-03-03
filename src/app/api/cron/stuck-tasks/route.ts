@@ -26,7 +26,7 @@ export async function GET(req: NextRequest) {
 
   try {
     // Отримуємо всі задачі зі статусом "processing"
-    const processingIds = await redis.lrange("compression-processing", 0, -1);
+    const processingIds = await redis!.lrange("compression-processing", 0, -1);
 
     for (const taskId of processingIds) {
       const heartbeatKey = `heartbeat:${taskId}`;
