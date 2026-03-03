@@ -1,15 +1,8 @@
-// src/lib/redis.ts
-// Singleton Upstash Redis — один екземпляр на весь cold start
 import { Redis } from "@upstash/redis";
 
-if (!process.env.UPSTASH_REDIS_REST_URL) {
-  throw new Error("Missing UPSTASH_REDIS_REST_URL");
-}
-if (!process.env.UPSTASH_REDIS_REST_TOKEN) {
-  throw new Error("Missing UPSTASH_REDIS_REST_TOKEN");
-}
-
-export const redis = new Redis({
-  url:   process.env.UPSTASH_REDIS_REST_URL,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN,
-});
+export const redis = process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+  ? new Redis({
+      url: process.env.UPSTASH_REDIS_REST_URL,
+      token: process.env.UPSTASH_REDIS_REST_TOKEN,
+    })
+  : null;
