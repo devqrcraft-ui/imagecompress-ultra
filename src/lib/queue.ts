@@ -46,7 +46,7 @@ export async function enqueueTask(
     quality,
   };
 
-  const depth = (await redis.eval(
+  const depth = (await redis!.eval(
     scripts.enqueue,
     [id],
     [JSON.stringify(task), "86400"],
@@ -59,7 +59,7 @@ export async function enqueueTask(
 // FIX Bug #3: помилка pickTask не вбиває worker
 export async function pickTask(): Promise<{ id: string; task: CompressionTask } | null> {
   try {
-    const result = (await redis.eval(
+    const result = (await redis!.eval(
       scripts.pick,
       [],
       [Date.now().toString()],
@@ -75,7 +75,7 @@ export async function pickTask(): Promise<{ id: string; task: CompressionTask } 
 
 // ── ackTask ──────────────────────────────────────────────────────
 export async function ackTask(id: string, outputBlobUrl: string): Promise<void> {
-  await redis.eval(scripts.ack, [id], [outputBlobUrl, Date.now().toString()]);
+  await redis!.eval(scripts.ack, [id], [outputBlobUrl, Date.now().toString()]);
 }
 
 // ── failTask ─────────────────────────────────────────────────────
@@ -92,7 +92,7 @@ export async function failTask(
 
 // ── getTask ──────────────────────────────────────────────────────
 export async function getTask(id: string): Promise<CompressionTask | null> {
-  const raw = await redis.get<string>(`task:${id}`);
+  const raw = await redis!.get<string>(`task:${id}`);
   if (!raw) return null;
   return typeof raw === "string" ? JSON.parse(raw) : raw;
 }

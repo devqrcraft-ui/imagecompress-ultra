@@ -30,7 +30,7 @@ export class CircuitBreaker {
   private key() { return `circuit-breaker:${this.name}`; }
 
   async getStatus(): Promise<CBStatus> {
-    const raw = await redis.get(this.key());
+    const raw = await redis!.get(this.key());
     if (!raw) {
       return { state: "CLOSED", failures: 0, lastFailed: 0, nextRetry: 0 };
     }
@@ -62,7 +62,7 @@ export class CircuitBreaker {
     const status = await this.getStatus();
     if (status.state !== "CLOSED") {
       // Відновлення — скидаємо лічильник
-      await redis.del(this.key());
+      await redis!.del(this.key());
     }
   }
 
@@ -93,7 +93,7 @@ export class CircuitBreaker {
       ...(lastError ? { lastError } : {}),
     };
     // TTL = recovery timeout * 2 щоб не висіло вічно
-    await redis.set(this.key(), JSON.stringify(status), {
+    await redis!.set(this.key(), JSON.stringify(status), {
       ex: Math.ceil((RECOVERY_TIMEOUT * 2) / 1000),
     });
   }

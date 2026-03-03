@@ -51,7 +51,7 @@ export class GdprSaga {
     };
 
     // Атомарно: зберігаємо стан + кладемо в чергу компенсації
-    const pipeline = redis.pipeline();
+    const pipeline = redis!.pipeline();
     pipeline.set(key, JSON.stringify(state), { ex: SAGA_TTL });
     pipeline.lpush(COMP_QUEUE, id);
     await pipeline.exec();
@@ -62,14 +62,14 @@ export class GdprSaga {
   // Обробляємо один saga крок
   static async processNext(): Promise<string | null> {
     // Беремо з черги (RPOPLPUSH для at-least-once гарантії)
-    const id = await redis.lmove(COMP_QUEUE, `${COMP_QUEUE}:processing`, "right", "left") as string | null;
+    const id = await redis!.lmove(COMP_QUEUE, `${COMP_QUEUE}:processing`, "right", "left") as string | null;
     if (!id) return null;
 
     const key   = `${SAGA_PREFIX}${id}`;
-    const raw   = await redis.get(key);
+    const raw   = await redis!.get(key);
     if (!raw) {
       // Стан втрачено — видаляємо з processing
-      await redis.lrem(`${COMP_QUEUE}:processing`, 1, id);
+      await redis!.lrem(`${COMP_QUEUE}:processing`, 1, id);
       return null;
     }
 
@@ -87,12 +87,12 @@ export class GdprSaga {
         state.steps[step] = "done";
 
         // Зберігаємо прогрес після кожного кроку
-        await redis.set(key, JSON.stringify(state), { ex: SAGA_TTL });
+        await redis!.set(key, JSON.stringify(state), { ex: SAGA_TTL });
       }
 
       state.status = "completed";
-      await redis.set(key, JSON.stringify(state), { ex: SAGA_TTL });
-      await redis.lrem(`${COMP_QUEUE}:processing`, 1, id);
+      await redis!.set(key, JSON.stringify(state), { ex: SAGA_TTL });
+      await redis!.lrem(`${COMP_QUEUE}:processing`, 1, id);
 
       return id;
     } catch (err) {
@@ -100,19 +100,19 @@ export class GdprSaga {
 
       if (state.attempts >= 5) {
         state.status = "failed";
-        await redis.set(key, JSON.stringify(state), { ex: SAGA_TTL });
-        await redis.lrem(`${COMP_QUEUE}:processing`, 1, id);
+        await redis!.set(key, JSON.stringify(state), { ex: SAGA_TTL });
+        await redis!.lrem(`${COMP_QUEUE}:processing`, 1, id);
         // Алерт — потрібне ручне втручання
         console.error(`[GDPR-SAGA] Failed after 5 attempts: ${id}`, err);
       } else {
         // Retry з exponential backoff — повертаємо в основну чергу
         state.status = "compensating";
-        await redis.set(key, JSON.stringify(state), { ex: SAGA_TTL });
-        await redis.lrem(`${COMP_QUEUE}:processing`, 1, id);
+        await redis!.set(key, JSON.stringify(state), { ex: SAGA_TTL });
+        await redis!.lrem(`${COMP_QUEUE}:processing`, 1, id);
 
         const backoff = Math.pow(2, state.attempts) * 1000; // 2s, 4s, 8s, 16s
         setTimeout(async () => {
-          await redis.lpush(COMP_QUEUE, id);
+          await redis!.lpush(COMP_QUEUE, id);
         }, backoff);
       }
 
@@ -126,7 +126,7 @@ export class GdprSaga {
       case "delete_blob": {
         const { del } = await import("@vercel/blob");
         for (const taskId of state.taskIds) {
-          const taskRaw = await redis.get(`task:${taskId}`);
+          const taskRaw = await redis!.get(`task:${taskId}`);
           if (!taskRaw) continue;
           const task = JSON.parse(taskRaw as string);
           if (task.inputBlobUrl) await del(task.inputBlobUrl);
@@ -137,7 +137,7 @@ export class GdprSaga {
       case "delete_output_blob": {
         const { del } = await import("@vercel/blob");
         for (const taskId of state.taskIds) {
-          const taskRaw = await redis.get(`task:${taskId}`);
+          const taskRaw = await redis!.get(`task:${taskId}`);
           if (!taskRaw) continue;
           const task = JSON.parse(taskRaw as string);
           if (task.outputBlobUrl) await del(task.outputBlobUrl);
@@ -146,7 +146,7 @@ export class GdprSaga {
       }
 
       case "delete_task_meta": {
-        const pipeline = redis.pipeline();
+        const pipeline = redis!.pipeline();
         for (const taskId of state.taskIds) {
           pipeline.del(`task:${taskId}`);
         }
@@ -156,7 +156,7 @@ export class GdprSaga {
 
       case "audit_log": {
         // Записуємо лог видалення для compliance (зберігаємо 30 днів)
-        await redis.set(
+        await redis!.set(
           `gdpr:audit:${state.userId}:${state.id}`,
           JSON.stringify({
             userId:    state.userId,
@@ -172,7 +172,7 @@ export class GdprSaga {
 
   // Отримати статус saga
   static async getStatus(id: string): Promise<SagaState | null> {
-    const raw = await redis.get(`${SAGA_PREFIX}${id}`);
+    const raw = await redis!.get(`${SAGA_PREFIX}${id}`);
     return raw ? JSON.parse(raw as string) : null;
   }
 }
