@@ -34,7 +34,7 @@ export async function POST(request: Request) {
     }
 
     // ── Перевірка черги ──────────────────────────────────────────
-    const queueDepth = redis ? await redis.llen("compression-queue");
+    const queueDepth = redis ? await redis.llen("compression-queue") : 0;
     if (queueDepth > MAX_QUEUE_DEPTH) {
       return NextResponse.json(
         { error: "Server busy — retry later", code: "QUEUE_FULL" },
