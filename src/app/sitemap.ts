@@ -17,6 +17,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${baseUrl}/visa-photo-compressor`, lastModified, changeFrequency: 'monthly', priority: 0.95 },
 
+    // Social & Platform Tools
+    { url: `${baseUrl}/compress-for-canva`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/compress-for-discord`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/compress-for-fiverr`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/compress-for-google-classroom`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/compress-for-pinterest`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/compress-for-twitter`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/compress-for-upwork`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/compress-for-whatsapp`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/compress-for-wordpress`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/compress-for-zoom`, lastModified, changeFrequency: 'monthly' as const, priority: 0.85 },
+
     // KB Tools
     { url: `${baseUrl}/compress-to-20kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-to-30kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
