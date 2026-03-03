@@ -83,7 +83,7 @@ export async function failTask(
   id: string,
   error: string,
 ): Promise<"FAILED" | "RETRYING" | "NOT_FOUND"> {
-  return redis.eval(
+  return redis!.eval(
     scripts.fail,
     [id],
     [error, Date.now().toString()],
