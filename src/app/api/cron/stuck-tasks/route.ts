@@ -30,7 +30,7 @@ export async function GET(req: NextRequest) {
 
     for (const taskId of processingIds) {
       const heartbeatKey = `heartbeat:${taskId}`;
-      const heartbeat    = await redis.get(heartbeatKey);
+      const heartbeat    = await redis!.get(heartbeatKey);
 
       if (heartbeat !== null) {
         // Heartbeat живий — пропускаємо
@@ -38,10 +38,10 @@ export async function GET(req: NextRequest) {
       }
 
       // Heartbeat відсутній → задача зависла
-      const taskRaw = await redis.get(`task:${taskId}`);
+      const taskRaw = await redis!.get(`task:${taskId}`);
       if (!taskRaw) {
         // Метадані втрачені — прибираємо з черги
-        await redis.lrem("compression-processing", 1, taskId);
+        await redis!.lrem("compression-processing", 1, taskId);
         failed++;
         continue;
       }
