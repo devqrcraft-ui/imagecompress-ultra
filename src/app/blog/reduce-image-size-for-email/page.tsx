@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     type: "article",
   },
   twitter: { card: "summary_large_image" },
-  alternates: { canonical: '/blog/reduce-image-size-for-email' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/reduce-image-size-for-email' },
 };
 
 export default function ReduceImageSizeForEmail() {

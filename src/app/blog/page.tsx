@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Blog — Photo Compression Guides & Visa Photo Tips',
   description: 'Free guides on how to compress photos for visa applications, government forms, and online portals. DS-160, DV Lottery, UK Visa, and more.',
-  alternates: { canonical: '/blog' },
+  alternates: { canonical: 'https://compressto20kb.com/blog' },
 };
 
 const posts = [

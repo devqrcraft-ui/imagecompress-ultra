@@ -3,7 +3,7 @@ export const metadata: Metadata = {
   title: 'How to Compress Images for Google Forms — Free Guide 2026',
   description: 'Google Forms has a 10MB file upload limit. Learn how to compress images for Google Forms quickly — no upload needed, works on any device.',
   keywords: 'compress image for google forms, google forms image size limit, reduce image size for google forms, google forms photo upload',
-  alternates: { canonical: '/blog/compress-image-for-google-forms' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/compress-image-for-google-forms' },
 };
 export default function Page() {
   return (
