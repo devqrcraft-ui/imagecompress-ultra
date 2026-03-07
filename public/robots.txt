@@ -17,4 +17,4 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
-Sitemap: https://compressto20kb.com/sitemap.xml
+Sitemap: https://www.compressto20kb.com/sitemap.xml
