@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Compress Images for Instagram Free — Resize to 1080px Online',
-  description: 'Compress and resize images for Instagram instantly. Square 1080×1080, portrait 1080×1350, Stories 1080×1920. No upload, 100% private, free.',
+  title: 'Compress Photos for Instagram – Under 1MB, No Quality Loss, Free',
+  description: 'Instagram compresses your photos automatically — but badly. Pre-compress your images to under 1MB for crisp, high-quality Instagram posts. Free, instant, no signup.',
   keywords: 'compress image for instagram, resize image for instagram, instagram photo size, compress photo for instagram, instagram image optimizer',
   alternates: { canonical: '/compress-for-instagram' },
   openGraph: {

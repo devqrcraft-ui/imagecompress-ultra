@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Compress Images for Shopify Store — Speed Up Your USA Sales',
-  description: 'Slow Shopify stores lose customers. Compress product images to boost pagespeed and increase conversions for US buyers.',
+  title: 'Compress Images for Shopify 2026 – Speed Up Your Store for Free',
+  description: 'Slow Shopify store? Compress product images to under 200KB without losing quality — free tool, no app install. Faster pages = more sales.',
   keywords: 'compress images shopify, shopify image optimization, reduce product photo size shopify',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-images-for-shopify-store' },
 };
