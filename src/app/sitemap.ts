@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { VISA_COUNTRIES } from '@/lib/visaCountries';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://compressto20kb.com';
+  const baseUrl = 'https://www.compressto20kb.com';
   const lastModified = new Date();
 
   const visaPages = VISA_COUNTRIES.map(c => ({
