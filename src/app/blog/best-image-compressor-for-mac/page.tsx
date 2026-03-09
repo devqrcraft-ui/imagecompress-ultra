@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Best Free Image Compressor for Mac 2026 — No Install Needed',
+  title: 'Best Image Compressor for Mac 2026 — No Download, Works in Safari',
   description: 'Looking for the best image compressor for Mac? CompressTo20KB works in Safari and Chrome — no download, no install, 100% free. Compress HEIC, PNG, JPEG instantly.',
   keywords: 'best image compressor for mac, compress images mac free, mac image compressor no download, compress heic mac, reduce image size mac',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-compressor-for-mac' },
