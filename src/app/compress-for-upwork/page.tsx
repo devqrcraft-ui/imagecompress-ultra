@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: 'Compress Image for Upwork — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Upwork free in your browser. No upload, no signup. Resize to exact KB for Upwork requirements instantly.',
   keywords: ['compress image for upwork', 'upwork image size', 'upwork photo requirements', 'compress for upwork free'],
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-upwork' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-upwork' },
   openGraph: {
     title: 'Compress Image for Upwork — Free & Private',
     description: 'Browser-based compression for Upwork. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-upwork',
+    url: 'https://www.compressto20kb.com/compress-for-upwork',
   },
 };
 

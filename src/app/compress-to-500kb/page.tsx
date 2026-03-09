@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Compress Image to 500KB Free Online — No Upload, 100% Private',
   description: 'Compress any image to exactly 500KB free online. Browser-based processing — your files never leave your device. JPG, PNG, WebP, HEIC. No signup.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-to-500kb' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-to-500kb' },
 };
 const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
   {'@type':'Question',name:'How do I compress an image to 500KB?',acceptedAnswer:{'@type':'Answer',text:'Upload your image, select Exact KB Mode, type 500 and click Compress. The tool processes everything locally in your browser.'}},

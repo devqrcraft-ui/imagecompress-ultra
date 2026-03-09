@@ -3,7 +3,7 @@ export const metadata: Metadata = {
   title: 'How to Compress Images for Google Forms — Free Guide 2026',
   description: 'Google Forms has a 10MB file upload limit. Learn how to compress images for Google Forms quickly — no upload needed, works on any device.',
   keywords: 'compress image for google forms, google forms image size limit, reduce image size for google forms, google forms photo upload',
-  alternates: { canonical: 'https://compressto20kb.com/blog/compress-image-for-google-forms' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-for-google-forms' },
 };
 export default function Page() {
   return (
@@ -30,7 +30,7 @@ export default function Page() {
 
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>How to Compress an Image for Google Forms (Step by Step)</h2>
         <ol style={{ paddingLeft: '20px', fontSize: '15px', lineHeight: 2.2, opacity: 0.8 }}>
-          <li>Go to <a href="https://compressto20kb.com" style={{ color: '#818cf8' }}>compressto20kb.com</a></li>
+          <li>Go to <a href="https://www.compressto20kb.com" style={{ color: '#818cf8' }}>compressto20kb.com</a></li>
           <li>Drop your image into the upload zone</li>
           <li>Choose <strong>Exact KB Mode</strong> and type your target (e.g., 200KB)</li>
           <li>Select <strong>JPEG</strong> or <strong>WebP</strong> format</li>
@@ -54,7 +54,7 @@ export default function Page() {
 
         <div style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '12px', padding: '20px', margin: '32px 0', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', fontWeight: 700, marginBottom: '12px' }}>Compress your image now — free, no upload</p>
-          <a href="https://compressto20kb.com" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#22d3ee)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Open CompressTo20KB →</a>
+          <a href="https://www.compressto20kb.com" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#22d3ee)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Open CompressTo20KB →</a>
         </div>
 
         <div style={{ marginTop: '40px', display: 'flex', gap: '10px', flexWrap: 'wrap', fontSize: '13px' }}>

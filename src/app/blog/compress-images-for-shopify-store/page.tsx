@@ -3,7 +3,7 @@ export const metadata: Metadata = {
   title: 'Compress Images for Shopify Store — Speed Up Your USA Sales',
   description: 'Slow Shopify stores lose customers. Compress product images to boost pagespeed and increase conversions for US buyers.',
   keywords: 'compress images shopify, shopify image optimization, reduce product photo size shopify',
-  alternates: { canonical: 'https://compressto20kb.com/blog/compress-images-for-shopify-store' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-images-for-shopify-store' },
 };
 export default function Page() {
   return (

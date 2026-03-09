@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "CompressTo20KB vs iLoveIMG — Better Privacy & Exact KB",
   description: "CompressTo20KB vs iLoveIMG: no-upload compression, exact KB targeting, US government photo presets. Full comparison.",
-  alternates: { canonical: "https://compressto20kb.com/vs/iloveimg" },
+  alternates: { canonical: "https://www.compressto20kb.com/vs/iloveimg" },
 };
 
 const rows = [

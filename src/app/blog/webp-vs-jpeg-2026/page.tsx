@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     type: "article",
   },
   twitter: { card: "summary_large_image" },
-  alternates: { canonical: 'https://compressto20kb.com/blog/webp-vs-jpeg-2026' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/webp-vs-jpeg-2026' },
 };
 
 export default function WebpVsJpeg2026() {

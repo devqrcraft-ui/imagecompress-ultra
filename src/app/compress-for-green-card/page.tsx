@@ -21,7 +21,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'Green Card Form I-485 Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-green-card',
+        url: 'https://www.compressto20kb.com/compress-for-green-card',
         description: 'Compress photo for Green Card application Form I-485. Under 240KB, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
