@@ -131,7 +131,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <span>🔒 Files never leave your browser</span>
         </footer>
       <Footer />
-      </body>
+      <script src="/ai-chat-widget.js"></script></body>
       <Analytics />
     </html>
   );
