@@ -3,8 +3,8 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Compress Photos for Instagram – Under 1MB, No Quality Loss, Free',
-  description: 'Instagram compresses your photos automatically — but badly. Pre-compress your images to under 1MB for crisp, high-quality Instagram posts. Free, instant, no signup.',
+  title: 'Compress Photos for Instagram 2026 — Keep Quality, Under 1MB, Free',
+  description: 'Instagram recompresses uploads and destroys quality. Pre-compress to under 1MB at 1080px — our tool preserves sharpness Instagram would crush. Free, instant, no signup.',
   keywords: 'compress image for instagram, resize image for instagram, instagram photo size, compress photo for instagram, instagram image optimizer',
   alternates: { canonical: '/compress-for-instagram' },
   openGraph: {

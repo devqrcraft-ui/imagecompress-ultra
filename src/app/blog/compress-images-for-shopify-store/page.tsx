@@ -2,8 +2,8 @@
 const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What image size does Shopify recommend?","acceptedAnswer":{"@type":"Answer","text":"Shopify recommends product images under 20MB, ideally under 1MB for fast loading. Use JPEG for photos, PNG for graphics with transparency. Dimensions of 2048x2048px are ideal. Compress to under 500KB for best store performance."}},{"@type":"Question","name":"Does image compression hurt Shopify SEO?","acceptedAnswer":{"@type":"Answer","text":"No — proper compression improves Shopify SEO. Google PageSpeed rewards fast-loading stores. Compress product images to under 200-500KB, use WebP format, and add descriptive alt text. This combination can significantly improve organic search rankings."}},{"@type":"Question","name":"How do I bulk compress images for Shopify?","acceptedAnswer":{"@type":"Answer","text":"Use our bulk image compressor — select all product photos, set target format to WebP or JPEG, compress, and download. For ongoing Shopify optimization, consider the Crush.pics or TinyIMG Shopify app for automatic compression on upload."}}]};
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Compress Images for Shopify 2026 – Speed Up Your Store for Free',
-  description: 'Slow Shopify store? Compress product images to under 200KB without losing quality — free tool, no app install. Faster pages = more sales.',
+  title: 'Compress Shopify Images 2026 — Faster Store, Higher Rankings, Free Tool',
+  description: 'Shopify images should be under 500KB for fast loading. WebP saves 34% vs JPEG. Compress product photos free — no app install, no Shopify plan required. Boost PageSpeed instantly.',
   keywords: 'compress images shopify, shopify image optimization, reduce product photo size shopify',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-images-for-shopify-store' },
 };

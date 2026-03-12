@@ -2,8 +2,8 @@
 const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the best image compressor for Mac in 2026?","acceptedAnswer":{"@type":"Answer","text":"For online use: CompressTo20KB (browser-based, no upload). For desktop apps: ImageOptim (free, excellent PNG/JPEG compression). For bulk workflow: Squash or JPEGmini Pro. CompressTo20KB requires no installation and works instantly in Safari or Chrome."}},{"@type":"Question","name":"Can I compress images on Mac without installing software?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use CompressTo20KB directly in Safari or Chrome — no download required. For basic compression, Mac's built-in Preview app can also reduce JPEG quality. For batch compression without installation, CompressTo20KB handles unlimited files free."}},{"@type":"Question","name":"Does Preview on Mac compress images well?","acceptedAnswer":{"@type":"Answer","text":"Preview can reduce JPEG quality but has limited control and no WebP/AVIF support. For serious compression, use CompressTo20KB in your browser — it offers target file sizes, format conversion, and processes images without uploading them."}}]};
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Best Image Compressor for Mac 2026 — No Download, Works in Safari',
-  description: 'Looking for the best image compressor for Mac? CompressTo20KB works in Safari and Chrome — no download, no install, 100% free. Compress HEIC, PNG, JPEG instantly.',
+  title: 'Best Image Compressor for Mac 2026 — Free, No Download, Works in Safari',
+  description: 'Top free image compressors for Mac in 2026: CompressTo20KB (browser, no install), ImageOptim (desktop), Squash. Compress HEIC, PNG, JPEG instantly in Safari or Chrome.',
   keywords: 'best image compressor for mac, compress images mac free, mac image compressor no download, compress heic mac, reduce image size mac',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-compressor-for-mac' },
 };
