@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is CompressTo20KB?","acceptedAnswer":{"@type":"Answer","text":"CompressTo20KB is a free online image compressor that reduces image file sizes without uploading to any server. All compression happens in your browser using Canvas API and WebAssembly for maximum privacy and speed."}},{"@type":"Question","name":"Is CompressTo20KB really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is completely free with no hidden fees, no account required, no watermarks, and no file limits. We support ourselves through non-intrusive ads."}},{"@type":"Question","name":"How is CompressTo20KB different from other compressors?","acceptedAnswer":{"@type":"Answer","text":"Unlike TinyPNG, Kraken.io, and Squoosh which upload your files to their servers, CompressTo20KB processes everything locally in your browser. Your images never leave your device, making it ideal for sensitive documents and photos."}}]};
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,6 +10,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-16">
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-6">About ImageCompress Pro</h1>
       <p className="text-lg text-gray-600 mb-6">ImageCompress Pro is a free, browser-based image compression tool built for developers, designers, and anyone who cares about web performance.</p>
 

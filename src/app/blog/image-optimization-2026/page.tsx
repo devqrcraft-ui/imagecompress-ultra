@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is image optimization in 2026?","acceptedAnswer":{"@type":"Answer","text":"Image optimization in 2026 means using modern formats (WebP, AVIF), lazy loading, responsive images with srcset, CDN delivery, and compression. Google PageSpeed and Core Web Vitals heavily penalize unoptimized images which directly impacts SEO rankings."}},{"@type":"Question","name":"Should I use WebP or AVIF in 2026?","acceptedAnswer":{"@type":"Answer","text":"AVIF offers 20-50% better compression than WebP at the same quality but has slightly less browser support. For maximum compatibility use WebP. For cutting-edge performance use AVIF with WebP fallback. Both are far superior to JPEG for web use."}},{"@type":"Question","name":"How much does image optimization improve PageSpeed?","acceptedAnswer":{"@type":"Answer","text":"Images typically account for 50-70% of page weight. Proper optimization (WebP/AVIF, compression, lazy loading) can improve PageSpeed scores by 20-40 points and reduce page load time by 1-3 seconds for image-heavy pages."}}]};
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,6 +17,8 @@ export const metadata: Metadata = {
 export default function ImageOptimization2026() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-16">
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">Image Optimization in 2026: The Complete Guide</h1>
       <p className="text-gray-500 mb-8">Updated February 2026 · 12 min read</p>
 

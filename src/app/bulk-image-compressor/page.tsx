@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many images can I compress at once?","acceptedAnswer":{"@type":"Answer","text":"You can compress multiple images in bulk with no limit. Select all files at once and the tool processes them simultaneously in your browser. No upload, no queue, no waiting."}},{"@type":"Question","name":"Is bulk image compression free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bulk compression is completely free with no account required. All images are processed locally in your browser — none of your files are sent to any server."}},{"@type":"Question","name":"What formats does bulk compression support?","acceptedAnswer":{"@type":"Answer","text":"Bulk compression supports JPEG, PNG, WebP, and AVIF. You can compress mixed batches of different formats at the same time and download all results as individual files."}}]};
 import type { Metadata } from 'next';
 import ClientPage from './client';
 export const metadata: Metadata = {

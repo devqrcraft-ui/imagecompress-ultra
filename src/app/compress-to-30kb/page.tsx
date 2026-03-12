@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image to 30KB?","acceptedAnswer":{"@type":"Answer","text":"Upload your image, select 30KB as the target size, and click compress. Our tool automatically reduces quality and resolution to hit exactly 30KB or under. All processing happens in your browser."}},{"@type":"Question","name":"Will compressing reduce image quality?","acceptedAnswer":{"@type":"Answer","text":"Some quality reduction is necessary to reach very small file sizes. Our tool minimizes visible quality loss by using smart compression algorithms. WebP format produces the best quality at small sizes."}},{"@type":"Question","name":"Is there a file size limit for compression?","acceptedAnswer":{"@type":"Answer","text":"No. You can compress images of any size — from smartphone photos (3-5MB) to DSLR RAW exports (20MB+). The tool runs entirely in your browser so there are no server upload limits."}}]};
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Compress Image to 30KB Free Online — 100% Private, No Upload',
@@ -10,6 +12,8 @@ export default function Page() {
       <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">Compress Image to 30KB Free Online</h1>
       <p className="text-slate-400 text-lg mb-8">100% Private · Files never leave your browser · No upload needed</p>
       <section className="mb-10">
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
         <h2 className="text-2xl font-bold text-white mb-4">Why Compress to Exactly 30KB?</h2>
         <p className="text-slate-300 leading-relaxed mb-4">Many government portals and online forms require photos under 30KB. Our tool hits your target within 1KB every time using binary search — no guessing.</p>
         <p className="text-slate-300 leading-relaxed">Everything processed in your browser. Your image never leaves your device.</p>

@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How can I contact CompressTo20KB?","acceptedAnswer":{"@type":"Answer","text":"Use the contact form on this page for questions, feedback, or bug reports. We respond within 1-2 business days."}},{"@type":"Question","name":"How do I report a bug with the image compressor?","acceptedAnswer":{"@type":"Answer","text":"Use the contact form and describe: your browser, operating system, image format, and what happened. Screenshots are helpful. We fix reported bugs as quickly as possible."}}]};
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,6 +10,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="max-w-2xl mx-auto px-4 py-16">
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
       <p className="text-gray-600 mb-10">Have a question, bug report, or feature request? Fill in the form below — we respond within 24 hours.</p>
 

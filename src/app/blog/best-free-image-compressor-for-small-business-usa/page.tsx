@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image without losing quality?","acceptedAnswer":{"@type":"Answer","text":"Use modern formats like WebP or AVIF which offer 25-50% smaller file sizes than JPEG at the same visual quality. Our tool compresses images client-side in your browser with no upload required, preserving maximum quality."}},{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is 100% free with no file size limits, no account required, and no watermarks. All compression happens in your browser — your images never leave your device."}},{"@type":"Question","name":"What image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"We support JPEG, PNG, WebP, AVIF, and GIF. You can compress and convert between formats. WebP and AVIF produce the smallest file sizes for web use."}}]};
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Best Free Image Compressor for US Small Businesses in 2026',
@@ -11,6 +13,8 @@ export default function Page() {
       <h1 style={{fontSize:'32px',fontWeight:700,marginBottom:'16px',lineHeight:1.3}}>Best Free Image Compressor for US Small Businesses in 2026</h1>
       <p style={{fontSize:'16px',color:'rgba(255,255,255,0.6)',marginBottom:'32px',lineHeight:1.7}}>American small business owners need fast, free tools. Whether you run an Etsy shop, local service website, or email newsletter — compressing images saves bandwidth and speeds up your online presence.</p>
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
         <h2 style={{fontSize:'22px',fontWeight:600,marginBottom:'12px'}}>Why Image Compression Matters for US Small Business</h2>
         <p style={{color:'rgba(255,255,255,0.7)',lineHeight:1.7}}>53% of US mobile users abandon sites that take over 3 seconds to load. Unoptimized images are the #1 cause of slow websites. Google PageSpeed and Core Web Vitals directly affect your local search ranking.</p>
       </section>

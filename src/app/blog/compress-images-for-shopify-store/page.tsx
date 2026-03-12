@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What image size does Shopify recommend?","acceptedAnswer":{"@type":"Answer","text":"Shopify recommends product images under 20MB, ideally under 1MB for fast loading. Use JPEG for photos, PNG for graphics with transparency. Dimensions of 2048x2048px are ideal. Compress to under 500KB for best store performance."}},{"@type":"Question","name":"Does image compression hurt Shopify SEO?","acceptedAnswer":{"@type":"Answer","text":"No — proper compression improves Shopify SEO. Google PageSpeed rewards fast-loading stores. Compress product images to under 200-500KB, use WebP format, and add descriptive alt text. This combination can significantly improve organic search rankings."}},{"@type":"Question","name":"How do I bulk compress images for Shopify?","acceptedAnswer":{"@type":"Answer","text":"Use our bulk image compressor — select all product photos, set target format to WebP or JPEG, compress, and download. For ongoing Shopify optimization, consider the Crush.pics or TinyIMG Shopify app for automatic compression on upload."}}]};
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Compress Images for Shopify 2026 – Speed Up Your Store for Free',
@@ -11,6 +13,8 @@ export default function Page() {
       <h1 style={{fontSize:'32px',fontWeight:700,marginBottom:'16px',lineHeight:1.3}}>Compress Images for Shopify Store — Speed Up Your USA Sales</h1>
       <p style={{fontSize:'16px',color:'rgba(255,255,255,0.6)',marginBottom:'32px',lineHeight:1.7}}>Page speed directly impacts your Shopify conversion rate. US shoppers abandon slow stores within 3 seconds. Compressing your product images is the fastest win for store speed.</p>
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
         <h2 style={{fontSize:'22px',fontWeight:600,marginBottom:'12px'}}>Shopify Image Requirements 2026</h2>
         <p style={{color:'rgba(255,255,255,0.7)',lineHeight:1.7}}>Shopify recommends product images under 70KB for optimal Core Web Vitals scores. Google ranks fast Shopify stores higher in USA search results.</p>
       </section>

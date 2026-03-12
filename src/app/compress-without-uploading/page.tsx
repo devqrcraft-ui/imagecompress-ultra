@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you compress images without uploading?","acceptedAnswer":{"@type":"Answer","text":"Our tool uses the browser's built-in Canvas API and WebAssembly to compress images entirely on your device. No files are sent to any server. This means faster compression and complete privacy."}},{"@type":"Question","name":"Is client-side image compression safe?","acceptedAnswer":{"@type":"Answer","text":"Yes. Because compression happens in your browser, your images never leave your device. This is the safest way to compress sensitive documents, visa photos, and personal images."}},{"@type":"Question","name":"Does compression without upload work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes. The tool works on iOS Safari, Android Chrome, and all modern mobile browsers. No app download required. Just open the website and compress your images instantly."}}]};
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -10,6 +12,8 @@ export const metadata: Metadata = {
 export default function NoUploadPage() {
   return (
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,sans-serif',color:'white'}}>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <header style={{padding:'12px 20px',borderBottom:'1px solid rgba(255,255,255,0.07)',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
         <Link href="/" style={{display:'flex',alignItems:'center',gap:'8px',textDecoration:'none',color:'white'}}>
           <span style={{fontSize:'22px'}}>🗜️</span>

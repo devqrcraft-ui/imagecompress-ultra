@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the best image compressor for Mac in 2026?","acceptedAnswer":{"@type":"Answer","text":"For online use: CompressTo20KB (browser-based, no upload). For desktop apps: ImageOptim (free, excellent PNG/JPEG compression). For bulk workflow: Squash or JPEGmini Pro. CompressTo20KB requires no installation and works instantly in Safari or Chrome."}},{"@type":"Question","name":"Can I compress images on Mac without installing software?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use CompressTo20KB directly in Safari or Chrome — no download required. For basic compression, Mac's built-in Preview app can also reduce JPEG quality. For batch compression without installation, CompressTo20KB handles unlimited files free."}},{"@type":"Question","name":"Does Preview on Mac compress images well?","acceptedAnswer":{"@type":"Answer","text":"Preview can reduce JPEG quality but has limited control and no WebP/AVIF support. For serious compression, use CompressTo20KB in your browser — it offers target file sizes, format conversion, and processes images without uploading them."}}]};
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Best Image Compressor for Mac 2026 — No Download, Works in Safari',
@@ -8,6 +10,8 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f172a,#1e1b4b)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
         <div style={{ fontSize: '12px', opacity: 0.5, marginBottom: '12px' }}>Blog → Mac</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>Best Free Image Compressor for Mac in 2025</h1>

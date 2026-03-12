@@ -1,3 +1,5 @@
+
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image without losing quality?","acceptedAnswer":{"@type":"Answer","text":"Use modern formats like WebP or AVIF which offer 25-50% smaller file sizes than JPEG at the same visual quality. Our tool compresses images client-side in your browser with no upload required, preserving maximum quality."}},{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is 100% free with no file size limits, no account required, and no watermarks. All compression happens in your browser — your images never leave your device."}},{"@type":"Question","name":"What image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"We support JPEG, PNG, WebP, AVIF, and GIF. You can compress and convert between formats. WebP and AVIF produce the smallest file sizes for web use."}}]};
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Reduce Image Size for US Government Forms (USCIS, Passport, Visa)',
@@ -11,6 +13,8 @@ export default function Page() {
       <h1 style={{fontSize:'32px',fontWeight:700,marginBottom:'16px',lineHeight:1.3}}>Reduce Image Size for US Government Forms (USCIS, Passport, Visa)</h1>
       <p style={{fontSize:'16px',color:'rgba(255,255,255,0.6)',marginBottom:'32px',lineHeight:1.7}}>US government forms like USCIS N-400, passport applications, and visa forms require photos under strict file size limits. This free tool helps you meet all requirements instantly.</p>
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
         <h2 style={{fontSize:'22px',fontWeight:600,marginBottom:'12px'}}>US Government Photo Requirements</h2>
         <p style={{color:'rgba(255,255,255,0.7)',lineHeight:1.7}}>USCIS requires photos under 240KB. US passport portals often reject files over 200KB. DS-160 visa forms require photos under 240KB in JPEG format. Our tool compresses to exact limits.</p>
       </section>
