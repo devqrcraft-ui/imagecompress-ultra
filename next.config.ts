@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
             "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com",
             "style-src 'self' 'unsafe-inline'",
             "img-src 'self' data: blob:",
-            "connect-src 'self' https://*.upstash.io https://sentry.io",
+            "connect-src 'self' https://*.upstash.io https://sentry.io https://*.workers.dev",
             "frame-src https://challenges.cloudflare.com",
             "object-src 'none'",
             "base-uri 'self'",
