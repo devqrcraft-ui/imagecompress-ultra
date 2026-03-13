@@ -1,0 +1,11 @@
+{
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "compressto20kb.com" }],
+      "destination": "https://www.compressto20kb.com/$1",
+      "permanent": true
+    }
+  ]
+}

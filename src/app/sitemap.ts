@@ -142,6 +142,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/reduce-image-size-for-government-forms-usa`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/us-passport-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/uscis-photo-size-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/blog/webp-vs-jpeg-2026`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-image-on-iphone`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+  { url: `${baseUrl}/blog/compress-image-on-windows-11`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+  { url: `${baseUrl}/blog/compress-image-to-30kb`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+  { url: `${baseUrl}/blog/compress-image-without-losing-quality`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+  { url: `${baseUrl}/blog/webp-vs-jpeg-2026`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
   ];
 }

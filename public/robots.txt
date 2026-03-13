@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /sentry-example-page
+Disallow: /monitoring
 
 User-agent: GPTBot
 Disallow: /
