@@ -1,7 +1,7 @@
 import Link from 'next/link';
 export default function Footer() {
   return (
-    <footer style={{borderTop:'1px solid rgba(255,255,255,0.1)',marginTop:'60px',padding:'40px 20px',background:'rgba(0,0,0,0.3)'}}>
+    <footer style={{borderTop:'1px solid rgba(255,255,255,0.1)',padding:'40px 20px',background:'rgba(0,0,0,0.3)'}}>
       <div style={{maxWidth:'1200px',margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'32px'}}>
         <div>
           <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Tools</h3>
