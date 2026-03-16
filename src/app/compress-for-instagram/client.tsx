@@ -138,15 +138,7 @@ export default function InstagramPage() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '24px', textAlign: 'center', fontSize: '13px', color: '#334155' }}>
-        <Link href="/" style={{ color: '#475569', textDecoration: 'none' }}>← Back to CompressTo20KB</Link>
-        {' · '}
-        <Link href="/compress-for-shopify" style={{ color: '#475569', textDecoration: 'none' }}>Shopify</Link>
-        {' · '}
-        <Link href="/compress-passport-photo" style={{ color: '#475569', textDecoration: 'none' }}>Passport Photo</Link>
-        {' · '}
-        <Link href="/faq" style={{ color: '#475569', textDecoration: 'none' }}>FAQ</Link>
-      </footer>
+      
     </div>
   );
 }
