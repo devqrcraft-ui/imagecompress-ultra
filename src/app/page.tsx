@@ -184,10 +184,7 @@ export default function Home() {
         <a href='#compress' style={{background:'linear-gradient(135deg,#6366f1,#22d3ee)',color:'#fff',fontSize:'12px',fontWeight:800,padding:'8px 12px',borderRadius:'100px',whiteSpace:'nowrap',textDecoration:'none',flexShrink:0,boxShadow:'0 0 16px rgba(99,102,241,0.4)',border:'1px solid rgba(255,255,255,0.2)'}}>📦 ZIP</a>
       </header>
 
-      {/* AD TOP 728x90 */}
-      <div style={{display:'flex',justifyContent:'center',padding:'8px 0',background:'rgba(0,0,0,0.2)'}}>
-        <div style={{width:'100%',maxWidth:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
-      </div>
+
 
       {/* MAIN LAYOUT */}
       <div className="layout-row" style={{display:'flex',maxWidth:'1200px',margin:'0 auto',padding:'16px',gap:'16px',alignItems:'flex-start'}}>
@@ -298,12 +295,25 @@ export default function Home() {
               onChange={e=>e.target.files&&addFiles(e.target.files)}/>
           </div>
 
-          {/* AD BETWEEN TOOL AND RESULTS */}
-          {images.length > 0 && (
-            <div style={{display:'flex',justifyContent:'center',marginBottom:'14px'}}>
-              <div style={{width:'100%',maxWidth:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.1)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
+          {/* HOW IT WORKS */}
+          {images.length === 0 && (
+            <div style={{display:'flex',gap:'0',marginBottom:'20px',background:'rgba(255,255,255,0.03)',borderRadius:'12px',overflow:'hidden',border:'1px solid rgba(255,255,255,0.08)'}}>
+              {[
+                {icon:'📁',step:'1',title:'Drop your image',desc:'JPG, PNG, WebP, HEIC — up to 50 files'},
+                {icon:'🎯',step:'2',title:'Choose mode',desc:'Quality slider or exact KB target'},
+                {icon:'⬇️',step:'3',title:'Download free',desc:'Instant — no upload, no account'},
+              ].map((s,i)=>(
+                <div key={i} style={{flex:1,padding:'16px 12px',textAlign:'center',borderRight: i<2 ? '1px solid rgba(255,255,255,0.06)' : 'none'}}>
+                  <div style={{fontSize:'24px',marginBottom:'6px'}}>{s.icon}</div>
+                  <div style={{fontSize:'11px',fontWeight:800,color:'#818cf8',letterSpacing:'1px',marginBottom:'4px'}}>STEP {s.step}</div>
+                  <div style={{fontSize:'13px',fontWeight:700,marginBottom:'4px'}}>{s.title}</div>
+                  <div style={{fontSize:'11px',opacity:0.45,lineHeight:1.4}}>{s.desc}</div>
+                </div>
+              ))}
             </div>
           )}
+
+
 
           {/* IMAGE LIST */}
           {images.length > 0 && (
@@ -402,6 +412,32 @@ export default function Home() {
 
       </div>
 
+      {/* WHY US vs COMPETITION */}
+      <div style={{maxWidth:'800px',margin:'0 auto',padding:'24px 16px 0'}}>
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px',textAlign:'center'}}>
+          Why Choose Us Over <span style={{color:'#818cf8'}}>TinyPNG & Others</span>?
+        </h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'10px',marginBottom:'16px'}}>
+          {[
+            {icon:'🔒',title:'100% On-Device',desc:'TinyPNG uploads your files to their servers. We process everything in your browser — zero upload, zero tracking, GDPR-safe.'},
+            {icon:'🎯',title:'Exact KB Mode',desc:'Need exactly 20KB for DS-160 or USCIS? TinyPNG can't do that. We compress to your exact target size every time.'},
+            {icon:'📦',title:'Batch 50 Files',desc:'Most free tools limit you to 1-5 files. Compress up to 50 images at once, download as ZIP — completely free.'},
+            {icon:'🆓',title:'Always Free',desc:'No daily limits, no watermarks, no signup. Squoosh and iLoveIMG have limits. We don't.'},
+          ].map((item,i)=>(
+            <div key={i} style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',padding:'16px'}}>
+              <div style={{fontSize:'22px',marginBottom:'8px'}}>{item.icon}</div>
+              <div style={{fontSize:'14px',fontWeight:700,marginBottom:'6px'}}>{item.title}</div>
+              <div style={{fontSize:'12px',opacity:0.55,lineHeight:1.6}}>{item.desc}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'10px',padding:'14px 18px',fontSize:'12px',opacity:0.7,lineHeight:1.7}}>
+          <strong style={{color:'#a5b4fc'}}>Comparison:</strong> TinyPNG — server upload, no exact KB, 20 files/month free limit.
+          Squoosh — 1 file at a time, no batch. iLoveIMG — server upload, watermarks on free tier.
+          <strong style={{color:'#34d399'}}> CompressTo20KB — on-device, exact KB, 50 files, always free.</strong>
+        </div>
+      </div>
+
       {/* SEO CONTENT */}
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'20px 16px 10px'}}>
         <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'10px'}}>Why Compress Images to 20KB?</h2>
@@ -423,21 +459,7 @@ export default function Home() {
       </div>
 
       
-      {/* INTERNAL LINKS */}
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'10px 16px 20px'}}>
-        <h2 style={{fontSize:'18px',fontWeight:700,marginBottom:'14px'}}>Compress Images For Specific Platforms</h2>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))',gap:'8px'}}>
-          {[{href:'/compress-for-shopify',label:'Shopify'},{href:'/compress-for-etsy',label:'Etsy'},{href:'/compress-for-amazon',label:'Amazon'},{href:'/compress-for-instagram',label:'Instagram'},{href:'/compress-for-linkedin',label:'LinkedIn'},{href:'/compress-for-whatsapp',label:'WhatsApp'},{href:'/compress-for-wordpress',label:'WordPress'},{href:'/compress-passport-photo',label:'Passport Photo'},{href:'/compress-to-20kb',label:'To 20KB'},{href:'/compress-to-50kb',label:'To 50KB'},{href:'/compress-to-100kb',label:'To 100KB'}].map(({href,label})=>(<a key={href} href={href} style={{display:'block',padding:'10px 14px',background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.1)',borderRadius:'8px',color:'rgba(255,255,255,0.8)',textDecoration:'none',fontSize:'13px',fontWeight:600}}>{label}</a>))}
-        </div>
-      </div>
       
-      {/* INTERNAL LINKS */}
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'10px 16px 20px'}}>
-        <h2 style={{fontSize:'18px',fontWeight:700,marginBottom:'14px'}}>Compress Images For Specific Platforms</h2>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))',gap:'8px'}}>
-          {[{href:'/compress-for-shopify',label:'Shopify'},{href:'/compress-for-etsy',label:'Etsy'},{href:'/compress-for-amazon',label:'Amazon'},{href:'/compress-for-instagram',label:'Instagram'},{href:'/compress-for-linkedin',label:'LinkedIn'},{href:'/compress-for-whatsapp',label:'WhatsApp'},{href:'/compress-for-wordpress',label:'WordPress'},{href:'/compress-passport-photo',label:'Passport Photo'},{href:'/compress-to-20kb',label:'To 20KB'},{href:'/compress-to-50kb',label:'To 50KB'},{href:'/compress-to-100kb',label:'To 100KB'}].map(({href,label})=>(<a key={href} href={href} style={{display:'block',padding:'10px 14px',background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.1)',borderRadius:'8px',color:'rgba(255,255,255,0.8)',textDecoration:'none',fontSize:'13px',fontWeight:600}}>{label}</a>))}
-        </div>
-      </div>
       {/* BOTTOM AD */}
       <div style={{display:'flex',justifyContent:'center',padding:'8px 0 16px',background:'rgba(0,0,0,0.2)'}}>
         <div style={{width:'100%',maxWidth:'728px',height:'90px',background:'rgba(255,255,255,0.04)',border:'1px dashed rgba(255,255,255,0.12)',borderRadius:'6px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'11px',color:'rgba(255,255,255,0.2)'}}>ADVERTISEMENT · 728×90</div>
