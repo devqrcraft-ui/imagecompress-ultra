@@ -58,7 +58,6 @@ export default function ClientPage() {
           </div>
         </div>
       </div>
-      <footer style={{textAlign:'center',padding:'20px',fontSize:'12px',opacity:0.4,borderTop:'1px solid rgba(255,255,255,0.06)'}}>© 2026 CompressTo20KB · <Link href="/" style={{color:'white'}}>Home</Link></footer>
     </div>
   );
 }
