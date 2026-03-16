@@ -53,13 +53,52 @@ export default function ClientPage() {
             </div>
           ))}
         </div>
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>CompressTo20KB vs Competitors — 100KB Compression</h2>
+        <div style={{overflowX:'auto',marginBottom:'32px'}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'13px'}}>
+            <thead>
+              <tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
+                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Feature</th>
+                <th style={{padding:'10px 12px',color:'#818cf8',fontWeight:800}}>CompressTo20KB</th>
+                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>11zon</th>
+                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>Squoosh</th>
+                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>TinyPNG</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['On-device (no upload)','✅ Yes','❌ Server','✅ Yes','❌ Server'],
+                ['Exact 100KB target','✅ Yes','⚠️ Approx','❌ No','❌ No'],
+                ['Batch 50 files','✅ Yes','⚠️ Limited','❌ 1 file','⚠️ 20/month'],
+                ['WebP / AVIF output','✅ Yes','⚠️ Partial','✅ Yes','❌ No'],
+                ['HEIC support','✅ Yes','⚠️ Partial','❌ No','❌ No'],
+                ['Free unlimited','✅ Yes','⚠️ Limits','✅ Yes','⚠️ 20/month'],
+              ].map(([feat,...vals],i)=>(
+                <tr key={i} style={{borderBottom:'1px solid rgba(255,255,255,0.06)',background:i%2===0?'rgba(255,255,255,0.02)':'transparent'}}>
+                  <td style={{padding:'10px 12px',color:'rgba(255,255,255,0.8)',fontWeight:500}}>{feat}</td>
+                  {vals.map((v,j)=>(
+                    <td key={j} style={{padding:'10px 12px',textAlign:'center',color:j===0?'#4ade80':v.startsWith('✅')?'#4ade80':v.startsWith('❌')?'#f87171':'#fbbf24',fontWeight:j===0?800:500}}>{v}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-          {faq.map((item, i) => (
-            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
-              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
-              <div style={{ fontSize: '13px', opacity: 0.7 }}>{item.a}</div>
-            </div>
+          {[
+            {q:'How do I compress an image to exactly 100KB?',a:'Switch to Exact KB Mode, type 100, select JPEG or WebP format, and click Compress. Binary search finds the maximum quality that fits 100KB — within 1KB accuracy.'},
+            {q:'What is 100KB good for?',a:'100KB is ideal for Shopify product images, email attachments, LinkedIn profile photos, and web thumbnails. It balances visual quality and load speed — much better than 20KB or 50KB for product photos.'},
+            {q:'How to compress image to 100KB on iPhone or Android?',a:'Open compressto20kb.com in Safari (iPhone) or Chrome (Android). Tap upload, select your photo, set Exact KB Mode to 100, tap Compress. Downloads instantly — no app needed.'},
+            {q:'Is 100KB good enough for Shopify product images?',a:'Yes — Shopify recommends images under 500KB for fast loading. 100KB WebP gives excellent quality at fast page speed. Use WebP format for best results, or JPEG for maximum compatibility.'},
+            {q:'Can I compress multiple images to 100KB at once?',a:'Yes — upload up to 50 images and batch compress all to 100KB simultaneously. Download as ZIP. Unlike Squoosh (1 file only) or TinyPNG (20/month limit), we process 50 files free with no limits.'},
+            {q:'Is it safe to compress product photos to 100KB here?',a:'Yes — all compression runs in your browser via WebAssembly. Your product images never touch any server. Unlike 11zon or iLoveIMG which upload files to their servers, zero data is transmitted.'},
+          ].map((item, i) => (
+            <details key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px', cursor:'pointer' }}>
+              <summary style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc', listStyle:'none' }}>❓ {item.q}</summary>
+              <div style={{ fontSize: '13px', opacity: 0.7, marginTop:'10px', lineHeight:1.6 }}>{item.a}</div>
+            </details>
           ))}
         </div>
         <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Related Tools</h2>
