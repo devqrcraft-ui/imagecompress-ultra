@@ -6,9 +6,13 @@ export const metadata: Metadata = {
 };
 const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
   {'@type':'Question',name:'How do I compress an image to exactly 20KB?',acceptedAnswer:{'@type':'Answer',text:'Upload your image, select Exact KB Mode, type 20 and click Compress. Uses binary search to hit target within 1KB.'}},
-  {'@type':'Question',name:'Does my image get uploaded to a server?',acceptedAnswer:{'@type':'Answer',text:'No. Everything is processed in your browser. Your image never leaves your device.'}},
+  {'@type':'Question',name:'Does my image get uploaded to a server?',acceptedAnswer:{'@type':'Answer',text:'No. Everything is processed in your browser using WebAssembly. Your image never leaves your device — unlike 11zon, MinifyImage, and Cloudinary which upload files to their servers.'}},
   {'@type':'Question',name:'Why do government forms require 20KB?',acceptedAnswer:{'@type':'Answer',text:'Portals in India, Pakistan, Ukraine set 20KB limits due to legacy infrastructure. Aadhaar and passport forms commonly require exactly 20KB.'}},
   {'@type':'Question',name:'Does it work with iPhone HEIC photos?',acceptedAnswer:{'@type':'Answer',text:'Yes — HEIC and HEIF photos from iPhone are automatically converted in your browser before compression. No upload needed.'}},
+  {'@type':'Question',name:'How to compress image to 20KB on mobile?',acceptedAnswer:{'@type':'Answer',text:'Open compressto20kb.com on your iPhone or Android browser. Tap the upload area, select your photo from Camera Roll, tap Gov 20KB preset, then Compress. Download saves directly to your device. No app needed.'}},
+  {'@type':'Question',name:'Can I compress multiple images to 20KB at once?',acceptedAnswer:{'@type':'Answer',text:'Yes — select up to 50 images at once. All will be compressed to exactly 20KB in your browser simultaneously. Download individually or as a ZIP file. Most competitors like 11zon limit batch compression on free plans.'}},
+  {'@type':'Question',name:'Is this safer than 11zon or MinifyImage for passport photos?',acceptedAnswer:{'@type':'Answer',text:'Yes. 11zon, MinifyImage, and most online compressors upload your images to their servers for processing. For sensitive documents like passport photos, visa photos, or ID documents, this is a privacy risk. CompressTo20KB processes everything locally in your browser — your photo is never transmitted to any server.'}},
+  {'@type':'Question',name:'How to compress JPG to 20KB without losing quality?',acceptedAnswer:{'@type':'Answer',text:'Use JPEG format at the highest quality that still meets 20KB. Our Exact KB Mode uses binary search to find the maximum quality setting that fits within your target. For best results with minimal quality loss, start with a high-resolution original image.'}},
 ]};
 export default function Page() {
   return (<>
@@ -49,6 +53,58 @@ export default function Page() {
           ))}
         </div>
       </section>
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white mb-6">CompressTo20KB vs Competitors</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-slate-700">
+                <th className="text-left py-3 px-4 text-slate-400 font-semibold">Feature</th>
+                <th className="py-3 px-4 text-violet-400 font-bold">CompressTo20KB</th>
+                <th className="py-3 px-4 text-slate-400 font-semibold">11zon</th>
+                <th className="py-3 px-4 text-slate-400 font-semibold">MinifyImage</th>
+                <th className="py-3 px-4 text-slate-400 font-semibold">TinyPNG</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['On-device (no upload)','✅ Yes','❌ Server','❌ Server','❌ Server'],
+                ['Exact KB target','✅ Yes','⚠️ Approx','❌ No','❌ No'],
+                ['Batch files','✅ 50 files','⚠️ Limited','⚠️ Limited','⚠️ 20/month'],
+                ['WebP / AVIF output','✅ Yes','⚠️ Partial','❌ No','❌ No'],
+                ['HEIC (iPhone) support','✅ Yes','⚠️ Partial','❌ No','❌ No'],
+                ['Free tier','✅ Unlimited','⚠️ Limits','⚠️ Limits','⚠️ 20/month'],
+                ['Safe for passport/visa','✅ 100%','❌ Uploads','❌ Uploads','❌ Uploads'],
+              ].map(([feature,...vals],i)=>(
+                <tr key={i} className={`border-b border-slate-800 ${i%2===0?'bg-slate-800/20':''}`}>
+                  <td className="py-3 px-4 text-slate-300 font-medium">{feature}</td>
+                  {vals.map((v,j)=>(
+                    <td key={j} className={`py-3 px-4 text-center ${j===0?'text-green-400 font-bold':v.startsWith('✅')?'text-green-400':v.startsWith('❌')?'text-red-400':'text-yellow-400'}`}>{v}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {[
+            ['How to compress image to 20KB on mobile?','Open compressto20kb.com in your iPhone or Android browser. Tap upload, select photo from Camera Roll, tap Gov 20KB preset, then Compress. No app install needed.'],
+            ['Can I compress multiple images to 20KB at once?','Yes — select up to 50 images at once. All compress to exactly 20KB simultaneously. Download as ZIP. Most competitors limit batch on free plans.'],
+            ['Is this safer than 11zon or MinifyImage for passport photos?','Yes. 11zon, MinifyImage, and most online tools upload files to their servers — a real privacy risk for passport and ID photos. CompressTo20KB never transmits your image anywhere.'],
+            ['How to compress JPG to 20KB without losing quality?','Use Exact KB Mode — it runs binary search to find the maximum quality that fits 20KB. Start with a high-resolution original for best results.'],
+          ].map(([q,a],i)=>(
+            <details key={i} className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-4">
+              <summary className="font-semibold text-white cursor-pointer">{q}</summary>
+              <p className="text-slate-400 text-sm mt-3 leading-relaxed">{a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <section>
         <h2 className="text-xl font-bold text-white mb-4">Related Tools</h2>
         <div className="flex flex-wrap gap-3">

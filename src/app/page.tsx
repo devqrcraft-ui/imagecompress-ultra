@@ -195,7 +195,16 @@ export default function Home() {
           <h1 style={{fontSize:'26px',fontWeight:800,marginBottom:'4px',letterSpacing:'-0.5px'}}>
             Compress Image to <span style={{color:'#818cf8'}}>20KB</span> Free Online
           </h1>
-          <p style={{fontSize:'13px',opacity:0.5,marginBottom:'16px'}}>100% Private · Files never leave your browser · No upload needed</p>
+          <p style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>100% Private · Files never leave your browser · No upload needed</p>
+
+          {/* TECH TRUST BLOCK */}
+          <div style={{background:'rgba(16,185,129,0.06)',border:'1px solid rgba(16,185,129,0.2)',borderRadius:'10px',padding:'12px 16px',marginBottom:'16px',display:'flex',gap:'12px',alignItems:'flex-start'}}>
+            <span style={{fontSize:'20px',flexShrink:0}}>⚙️</span>
+            <div>
+              <div style={{fontSize:'13px',fontWeight:700,color:'#34d399',marginBottom:'4px'}}>How compression works — zero upload</div>
+              <div style={{fontSize:'12px',opacity:0.65,lineHeight:1.6}}>All processing runs directly in your browser via <strong style={{color:'rgba(255,255,255,0.8)'}}>WebAssembly</strong>. No pixels are ever sent to any server — unlike 11zon, MinifyImage, and Cloudinary which process files on their infrastructure. Safe for passport photos, visa documents, and sensitive images.</div>
+            </div>
+          </div>
 
           {/* PRESETS */}
           <div style={{marginBottom:'16px'}}>
@@ -212,6 +221,18 @@ export default function Home() {
                 </button>
               ))}
             </div>
+          </div>
+
+          {/* SIMPLE / ADVANCED TOGGLE */}
+          <div style={{display:'flex',gap:'0',marginBottom:'16px',background:'rgba(255,255,255,0.05)',borderRadius:'10px',padding:'3px',border:'1px solid rgba(255,255,255,0.08)'}}>
+            {([['simple','⚡ Simple'],['advanced','⚙️ Advanced']] as ['simple'|'advanced',string][]).map(([m,label])=>(
+              <button key={m} onClick={()=>{if(m==='simple'){setMode('exactkb');} else {setMode('quality');}}}
+                style={{flex:1,padding:'8px 0',borderRadius:'8px',border:'none',
+                  background: (m==='simple'&&mode==='exactkb')||(m==='advanced'&&mode==='quality') ? 'rgba(129,140,248,0.3)' : 'transparent',
+                  color:'white',fontSize:'13px',fontWeight:700,cursor:'pointer',transition:'background 0.2s'}}>
+                {label}
+              </button>
+            ))}
           </div>
 
           {/* MODE TABS */}
@@ -454,7 +475,7 @@ export default function Home() {
       <div style={{maxWidth:"800px",margin:"0 auto",padding:"10px 16px 20px"}}>
         <h2 style={{fontSize:"18px",fontWeight:700,marginBottom:"14px"}}>Compress Images For Specific Platforms</h2>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:"8px"}}>
-          {[{href:"/compress-for-shopify",label:"🛍️ Shopify"},{href:"/compress-for-etsy",label:"🎨 Etsy"},{href:"/compress-for-amazon",label:"📦 Amazon"},{href:"/compress-for-instagram",label:"📸 Instagram"},{href:"/compress-for-linkedin",label:"💼 LinkedIn"},{href:"/compress-for-whatsapp",label:"💬 WhatsApp"},{href:"/compress-for-wordpress",label:"🌐 WordPress"},{href:"/compress-passport-photo",label:"🪪 Passport Photo"},{href:"/compress-to-20kb",label:"📄 To 20KB"},{href:"/compress-to-50kb",label:"📄 To 50KB"},{href:"/compress-to-100kb",label:"📄 To 100KB"}].map(({href,label})=>(<a key={href} href={href} style={{display:"block",padding:"10px 14px",background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"8px",color:"rgba(255,255,255,0.8)",textDecoration:"none",fontSize:"13px",fontWeight:600}}>  {label}</a>))}
+          {[{href:"/compress-for-shopify",label:"🛍️ Shopify"},{href:"/compress-for-etsy",label:"🎨 Etsy"},{href:"/compress-for-amazon",label:"📦 Amazon"},{href:"/compress-for-instagram",label:"📸 Instagram"},{href:"/compress-passport-photo",label:"🪪 Passport / Gov"},{href:"/compress-to-20kb",label:"📄 Exact 20KB"}].map(({href,label})=>(<a key={href} href={href} style={{display:"block",padding:"10px 14px",background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"8px",color:"rgba(255,255,255,0.8)",textDecoration:"none",fontSize:"13px",fontWeight:600}}>{label}</a>))}
         </div>
       </div>
 
