@@ -441,9 +441,9 @@ export default function Home() {
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'10px',marginBottom:'16px'}}>
           {[
             {icon:'🔒',title:'100% On-Device',desc:'TinyPNG uploads your files to their servers. We process everything in your browser — zero upload, zero tracking, GDPR-safe.'},
-            {icon:'🎯',title:'Exact KB Mode',desc:'Need exactly 20KB for DS-160 or USCIS? TinyPNG can't do that. We compress to your exact target size every time.'},
+            {icon:'🎯',title:'Exact KB Mode',desc:'Need exactly 20KB for DS-160 or USCIS? TinyPNG can&apos;t do that. We compress to your exact target size every time.'},
             {icon:'📦',title:'Batch 50 Files',desc:'Most free tools limit you to 1-5 files. Compress up to 50 images at once, download as ZIP — completely free.'},
-            {icon:'🆓',title:'Always Free',desc:'No daily limits, no watermarks, no signup. Squoosh and iLoveIMG have limits. We don't.'},
+            {icon:'🆓',title:'Always Free',desc:'No daily limits, no watermarks, no signup. Squoosh and iLoveIMG have limits. We don&apos;t.'},
           ].map((item,i)=>(
             <div key={i} style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',padding:'16px'}}>
               <div style={{fontSize:'22px',marginBottom:'8px'}}>{item.icon}</div>
