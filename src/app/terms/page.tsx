@@ -82,12 +82,7 @@ export default function Terms() {
           <p style={{ opacity: 0.75, fontSize: '15px' }}>Questions about these Terms? Contact us at: <strong>legal@compressto20kb.com</strong></p>
         </section>
       </div>
-      <footer style={{ textAlign: 'center', padding: '24px', fontSize: '12px', opacity: 0.35, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-        © 2025 CompressTo20KB ·
-        <Link href="/" style={{ color: 'white', marginLeft: '8px' }}>Home</Link> ·
-        <Link href="/terms" style={{ color: 'white', marginLeft: '8px' }}>Terms</Link> ·
-        <Link href="/privacy-policy" style={{ color: 'white', marginLeft: '8px' }}>Privacy Policy</Link>
-      </footer>
+      
     </div>
   );
 }

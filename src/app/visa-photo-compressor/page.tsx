@@ -105,9 +105,7 @@ export default function VisaHubPage() {
         </div>
       </div>
 
-      <footer style={{ textAlign: 'center', padding: '20px', fontSize: '12px', opacity: 0.4, borderTop: '1px solid rgba(255,255,255,0.06)', marginTop: '20px' }}>
-        © 2026 CompressTo20KB · <Link href="/" style={{ color: 'white' }}>Home</Link> · 🔒 Files never leave your browser
-      </footer>
+      
     </div>
   );
 }

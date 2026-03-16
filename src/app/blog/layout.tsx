@@ -17,16 +17,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'40px 20px 60px'}}>
         {children}
       </div>
-      <footer style={{borderTop:'1px solid #1a1a2e',padding:'24px 20px',textAlign:'center',fontSize:'12px',color:'rgba(255,255,255,0.3)'}}>
-        <div style={{display:'flex',justifyContent:'center',gap:'20px',marginBottom:'12px'}}>
-          <a href="/" style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Home</a>
-          <a href="/blog" style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Blog</a>
-          <a href="/faq" style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>FAQ</a>
-          <a href="/compress-for-shopify" style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Shopify</a>
-          <a href="/compress-for-etsy" style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Etsy</a>
-        </div>
-        © 2026 CompressTo20KB.com — Free Image Compression Tool
-      </footer>
+      
     </div>
   )
 }
