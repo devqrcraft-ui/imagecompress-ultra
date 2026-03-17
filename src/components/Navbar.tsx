@@ -30,8 +30,6 @@ export default function Navbar() {
             ['/','🗜️ Compress','#6366f1'],
             ['/compress-for-shopify','🛍️ Shopify','#f59e0b'],
             ['/compress-passport-photo','🪪 Passport','#10b981'],
-            ['/compress-without-uploading','🔒 No Upload','#22d3ee'],
-            ['/faq','FAQ','#8b5cf6'],
             ['/blog','Blog','#8b5cf6'],
           ].map(([href,label,color])=>(
             <a
@@ -78,18 +76,7 @@ export default function Navbar() {
         </div>
 
         <div style={{display:'flex',alignItems:'center',gap:'8px'}}>
-          <span style={{
-            background:'linear-gradient(135deg,#6366f1,#22d3ee)',
-            color:'#fff',
-            fontSize:'12px',
-            fontWeight:700,
-            padding:'5px 12px',
-            borderRadius:'100px',
-            whiteSpace:'nowrap',
-            boxShadow:'0 0 16px rgba(99,102,241,0.4)',
-          }}>
-            📦 ZIP included
-          </span>
+
           <button
             onClick={()=>setOpen(!open)}
             className="nav-burger"
