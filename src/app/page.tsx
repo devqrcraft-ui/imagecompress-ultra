@@ -203,6 +203,7 @@ export default function Home() {
             <div>
               <div style={{fontSize:'13px',fontWeight:700,color:'#34d399',marginBottom:'4px'}}>How compression works — zero upload</div>
               <div style={{fontSize:'12px',opacity:0.65,lineHeight:1.6}}>All processing runs directly in your browser via <strong style={{color:'rgba(255,255,255,0.8)'}}>WebAssembly</strong>. No pixels are ever sent to any server — unlike 11zon, MinifyImage, and Cloudinary which process files on their infrastructure. Safe for passport photos, visa documents, and sensitive images.</div>
+              <span style={{padding:'6px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.4)',background:'rgba(99,102,241,0.15)',color:'#a5b4fc',fontSize:'12px',fontWeight:600,display:'inline-flex',alignItems:'center',gap:'4px',whiteSpace:'nowrap'}}>📦 ZIP</span>
             </div>
           </div>
 
