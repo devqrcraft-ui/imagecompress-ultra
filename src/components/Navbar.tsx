@@ -25,9 +25,8 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div style={{display:'flex',alignItems:'center',gap:'6px'}} className="nav-links">
+        <div style={{display:'flex',alignItems:'center',gap:'4px'}} className="nav-links">
           {[
-            ['/','🗜️ Compress','#6366f1'],
             ['/compress-for-shopify','🛍️ Shopify','#f59e0b'],
             ['/compress-passport-photo','🪪 Passport','#10b981'],
             ['/blog','Blog','#8b5cf6'],
@@ -41,7 +40,7 @@ export default function Navbar() {
                 textDecoration:'none',
                 fontSize:'13px',
                 fontWeight:600,
-                padding:'6px 12px',
+                padding:'5px 9px',
                 borderRadius:'8px',
                 whiteSpace:'nowrap',
                 border:'1px solid rgba(255,255,255,0.08)',
