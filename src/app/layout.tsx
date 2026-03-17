@@ -99,7 +99,7 @@ const schemaOrg = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{overflowX:"hidden",maxWidth:"100vw"}}>
       <head>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://compressto20kb.com" />
