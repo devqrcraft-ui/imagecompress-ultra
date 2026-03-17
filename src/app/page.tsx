@@ -159,7 +159,8 @@ export default function Home() {
 
   return (
     <>
-    <style>{"      @media (max-width: 600px) {\n        .desktop-nav { display: none !important; }\n        .zip-btn { font-size: 11px !important; padding: 7px 10px !important; }\n        .layout-row { flex-direction: column !important; }\n        .main-col { flex: none !important; max-width: 100% !important; width: 100% !important; }\n        .right-col { display: none !important; }\n        .format-row { gap: 4px !important; }\n        .preset-row { gap: 6px !important; }\n      }"}</style>
+    <style>{"      @media (max-width: 600px) {\n        .desktop-nav { display: none !important; }
+        .mobile-menu-btn { display: flex !important; }\n        .zip-btn { font-size: 11px !important; padding: 7px 10px !important; }\n        .layout-row { flex-direction: column !important; }\n        .main-col { flex: none !important; max-width: 100% !important; width: 100% !important; }\n        .right-col { display: none !important; }\n        .format-row { gap: 4px !important; }\n        .preset-row { gap: 6px !important; }\n      }"}</style>
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,-apple-system,sans-serif',color:'white'}}>
 
       {/* TOP TICKER */}
@@ -174,15 +175,20 @@ export default function Home() {
       {/* HEADER */}
       <header style={{background:'#0a0a14',borderBottom:'1px solid #1a1a2e',padding:'0 12px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'56px',position:'sticky',top:0,zIndex:50,gap:'6px'}}>
         <a href='/' style={{textDecoration:'none',fontWeight:800,fontSize:'18px',color:'#fff',letterSpacing:'-0.5px',flexShrink:0}}>Compress<span style={{color:'#22d3ee'}}>20KB</span></a>
-        <nav style={{display:'flex',gap:'1px',alignItems:'center',overflow:'hidden',flex:1,justifyContent:'center'}}>
+        <nav className="desktop-nav" style={{display:'flex',gap:'1px',alignItems:'center',overflow:'hidden',flex:1,justifyContent:'center'}}>
           {([['/?mode=quality','🗜️'],['/?mode=quality','Compress'],['/compress-for-shopify','🛍️ Shopify'],['/compress-passport-photo','🪪 Passport'],['/faq','FAQ']] as [string,string][]).filter((_,i)=>i!==0).map(([href,label])=>(
             <a key={href+label} href={href} style={{color:'#8888bb',textDecoration:'none',fontSize:'12px',fontWeight:500,padding:'5px 7px',borderRadius:'7px',whiteSpace:'nowrap'}}
               onMouseEnter={e=>{(e.currentTarget as HTMLElement).style.color='#fff';(e.currentTarget as HTMLElement).style.background='#1a1a30'}}
               onMouseLeave={e=>{(e.currentTarget as HTMLElement).style.color='#8888bb';(e.currentTarget as HTMLElement).style.background='transparent'}}>{label}</a>
           ))}
         </nav>
-
+        <button className="mobile-menu-btn" onClick={()=>{const m=document.getElementById('mobile-nav');if(m)m.style.display=m.style.display==='flex'?'none':'flex';}} style={{display:'none',background:'none',border:'1px solid rgba(255,255,255,0.2)',color:'#fff',borderRadius:'6px',padding:'4px 8px',cursor:'pointer',fontSize:'18px',flexShrink:0}}>☰</button>
       </header>
+      <div id="mobile-nav" style={{display:'none',flexDirection:'column',background:'#0a0a14',borderBottom:'1px solid #1a1a2e',position:'sticky',top:'56px',zIndex:49}}>
+        {([['/?mode=quality','Compress'],['/compress-for-shopify','🛍️ Shopify'],['/compress-passport-photo','📷 Passport'],['/faq','FAQ']] as [string,string][]).map(([href,label])=>(
+          <a key={href} href={href} style={{color:'#8888bb',textDecoration:'none',fontSize:'14px',fontWeight:500,padding:'14px 20px',borderBottom:'1px solid rgba(255,255,255,0.05)'}}>{label}</a>
+        ))}
+      </div>
 
 
 
