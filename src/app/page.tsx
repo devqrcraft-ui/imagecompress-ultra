@@ -181,7 +181,7 @@ export default function Home() {
               onMouseLeave={e=>{(e.currentTarget as HTMLElement).style.color='#8888bb';(e.currentTarget as HTMLElement).style.background='transparent'}}>{label}</a>
           ))}
         </nav>
-        <a href='#compress' style={{background:'linear-gradient(135deg,#6366f1,#22d3ee)',color:'#fff',fontSize:'12px',fontWeight:800,padding:'8px 12px',borderRadius:'100px',whiteSpace:'nowrap',textDecoration:'none',flexShrink:0,boxShadow:'0 0 16px rgba(99,102,241,0.4)',border:'1px solid rgba(255,255,255,0.2)'}}>📦 ZIP</a>
+
       </header>
 
 
