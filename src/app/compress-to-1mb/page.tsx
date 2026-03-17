@@ -19,7 +19,7 @@ export default function CompressTo1MBPage() {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: 'Compress Image to 1MB',
-        url: 'https://www.compressto20kb.com/compress-to-1mb',
+        url: 'https://compressto20kb.com/compress-to-1mb',
         description: 'Free tool to compress images to exactly 1MB.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',

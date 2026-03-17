@@ -32,7 +32,7 @@ export default function VisaClientPage({ country: vc }: { country: VisaCountry }
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: `${vc.name} Photo Compressor`,
-        url: `https://www.compressto20kb.com/compress-for-${vc.slug}`,
+        url: `https://compressto20kb.com/compress-for-${vc.slug}`,
         description: `Free tool to compress photos for ${vc.name}. Requirements: ${vc.widthPx}×${vc.heightPx}px, under ${maxDisplay}.`,
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',

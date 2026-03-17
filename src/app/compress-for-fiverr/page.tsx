@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: 'Compress Image for Fiverr — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Fiverr free in your browser. No upload, no signup. Resize to exact KB for Fiverr requirements instantly.',
   keywords: ['compress image for fiverr', 'fiverr image size', 'fiverr photo requirements', 'compress for fiverr free'],
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-fiverr' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-fiverr' },
   openGraph: {
     title: 'Compress Image for Fiverr — Free & Private',
     description: 'Browser-based compression for Fiverr. Files never leave your device.',
-    url: 'https://www.compressto20kb.com/compress-for-fiverr',
+    url: 'https://compressto20kb.com/compress-for-fiverr',
   },
 };
 

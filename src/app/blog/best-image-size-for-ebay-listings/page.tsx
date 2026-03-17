@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   title: 'Best Image Size for eBay Listings 2026 — Exact Specs + Free Compressor',
   description: 'eBay requires images at least 1600px and under 7MB. Get exact size, format & DPI specs for 2026 — plus compress your eBay photos to under 500KB free in one click.',
   keywords: 'best image size for ebay, ebay listing photo size, compress image for ebay, ebay photo requirements, ebay product image size',
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/best-image-size-for-ebay-listings' },
 };
 export default function Page() { return <ClientPage />; }

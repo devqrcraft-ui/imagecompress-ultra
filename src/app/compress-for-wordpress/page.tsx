@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: 'Compress Image for Wordpress — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Wordpress free in your browser. No upload, no signup. Resize to exact KB for Wordpress requirements instantly.',
   keywords: ['compress image for wordpress', 'wordpress image size', 'wordpress photo requirements', 'compress for wordpress free'],
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-wordpress' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-wordpress' },
   openGraph: {
     title: 'Compress Image for Wordpress — Free & Private',
     description: 'Browser-based compression for Wordpress. Files never leave your device.',
-    url: 'https://www.compressto20kb.com/compress-for-wordpress',
+    url: 'https://compressto20kb.com/compress-for-wordpress',
   },
 };
 

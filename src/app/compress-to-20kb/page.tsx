@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Compress Image to 20KB Free Online — 100% Private, No Upload',
   description: 'Compress any image to exactly 20KB free online. Works in your browser, files never leave your device. No upload, no signup. Supports HEIC, JPG, PNG, WebP.',
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-to-20kb' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-to-20kb' },
 };
 const faq = { '@context':'https://schema.org','@type':'FAQPage', mainEntity:[
   {'@type':'Question',name:'How do I compress an image to exactly 20KB?',acceptedAnswer:{'@type':'Answer',text:'Upload your image, select Exact KB Mode, type 20 and click Compress. Uses binary search to hit target within 1KB.'}},

@@ -21,7 +21,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'DS-160 US Visa Photo Compressor',
-        url: 'https://www.compressto20kb.com/compress-for-ds160',
+        url: 'https://compressto20kb.com/compress-for-ds160',
         description: 'Compress photo for DS-160 US visa application. Max 240KB, JPEG, white background. Free instant tool.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

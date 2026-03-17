@@ -21,7 +21,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'Global Entry TSA PreCheck Photo Compressor',
-        url: 'https://www.compressto20kb.com/compress-for-global-entry',
+        url: 'https://compressto20kb.com/compress-for-global-entry',
         description: 'Compress photo for Global Entry or TSA PreCheck application. Under 5MB, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
