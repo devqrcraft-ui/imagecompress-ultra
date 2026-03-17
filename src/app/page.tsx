@@ -159,8 +159,16 @@ export default function Home() {
 
   return (
     <>
-    <style>{"      @media (max-width: 600px) {\n        .desktop-nav { display: none !important; }
-        .mobile-menu-btn { display: flex !important; }\n        .zip-btn { font-size: 11px !important; padding: 7px 10px !important; }\n        .layout-row { flex-direction: column !important; }\n        .main-col { flex: none !important; max-width: 100% !important; width: 100% !important; }\n        .right-col { display: none !important; }\n        .format-row { gap: 4px !important; }\n        .preset-row { gap: 6px !important; }\n      }"}</style>
+    <style>{`@media (max-width: 600px) {
+        .desktop-nav { display: none !important; }
+        .mobile-menu-btn { display: flex !important; }
+        .zip-btn { font-size: 11px !important; padding: 7px 10px !important; }
+        .layout-row { flex-direction: column !important; }
+        .main-col { flex: none !important; max-width: 100% !important; width: 100% !important; }
+        .right-col { display: none !important; }
+        .format-row { gap: 4px !important; }
+        .preset-row { gap: 6px !important; }
+      }`}</style>
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,-apple-system,sans-serif',color:'white'}}>
 
       {/* TOP TICKER */}
