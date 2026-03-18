@@ -572,6 +572,31 @@ export default function Home() {
         </div>
       </div>
 
+      {/* POPULAR TOOLS — internal links SEO block */}
+      <div style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 48px'}}>
+        <div style={{borderTop:'1px solid rgba(255,255,255,0.07)',paddingTop:'32px'}}>
+          <div style={{fontSize:'13px',fontWeight:600,opacity:0.4,textTransform:'uppercase',letterSpacing:'1px',marginBottom:'16px'}}>Popular Tools</div>
+          <div style={{display:'flex',flexWrap:'wrap',gap:'10px'}}>
+            {[
+              {href:'/compress-to-20kb',   label:'Compress to 20KB'},
+              {href:'/compress-to-50kb',   label:'Compress to 50KB'},
+              {href:'/compress-to-100kb',  label:'Compress to 100KB'},
+              {href:'/compress-to-200kb',  label:'Compress to 200KB'},
+              {href:'/compress-to-500kb',  label:'Compress to 500KB'},
+              {href:'/compress-for-email', label:'For Email'},
+              {href:'/compress-for-shopify',label:'For Shopify'},
+              {href:'/compress-for-etsy',  label:'For Etsy'},
+              {href:'/compress-for-amazon',label:'For Amazon'},
+              {href:'/compress-for-instagram',label:'For Instagram'},
+              {href:'/compress-for-linkedin',  label:'For LinkedIn'},
+              {href:'/compress-passport-photo',label:'Passport Photo'},
+            ].map(({href,label})=>(
+              <a key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>{label} →</a>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* BEFORE/AFTER COMPARE MODAL */}
       {compareImg && (
         <div onClick={()=>setCompareImg(null)} style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.85)',zIndex:1000,display:'flex',alignItems:'center',justifyContent:'center',padding:'20px'}}>
