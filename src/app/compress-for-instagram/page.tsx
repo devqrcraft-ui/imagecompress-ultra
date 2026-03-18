@@ -128,7 +128,7 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {[
-              ['Why do my Instagram photos look blurry?', 'Instagram re-compresses every uploaded photo. Upload a clean JPEG at 1080px width and under 1MB — this matches Instagram's internal target and minimizes visible quality loss.'],
+              ['Why do my Instagram photos look blurry?', 'Instagram re-compresses every uploaded photo. Upload a clean JPEG at 1080px width and under 1MB — this matches Instagram&apos;s internal target and minimizes visible quality loss.'],
               ['What format should I use for Instagram photos?', 'JPEG — Instagram requires JPEG for feed posts. WebP and PNG are not accepted. Use 85-90% quality at 1080px width.'],
               ['What is the best Instagram image size in 2026?', 'Square: 1080x1080px. Portrait: 1080x1350px (best for feed visibility). Landscape: 1080x566px. Stories and Reels: 1080x1920px. All under 1MB as JPEG.'],
               ['Will my photos be uploaded to compress them?', 'No — all compression runs locally in your browser. Your photos never leave your device.'],
