@@ -207,9 +207,20 @@ export default function Home() {
         <div className="main-col" style={{flex:'0 0 70%',maxWidth:'70%'}}>
 
           <h1 style={{fontSize:'26px',fontWeight:800,marginBottom:'4px',letterSpacing:'-0.5px'}}>
-            Compress Image to <span style={{color:'#818cf8'}}>20KB</span> Free Online
+            Compress Image to <span style={{color:'#818cf8'}}>20KB, 50KB, 100KB</span> — Free Online, No Upload
           </h1>
-          <p style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>100% Private · Files never leave your browser · No upload needed</p>
+          <p style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>Compress JPG, PNG, WebP, AVIF, HEIC to exact KB directly in your browser — no upload, no tracking, no watermark.</p>
+          {/* USP BULLETS */}
+          <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'14px',fontSize:'12px'}}>
+            {[
+              '🎯 Exact KB target (20–500KB)',
+              '🔒 On-device only, no upload',
+              '🗜️ Batch up to 50 images',
+              '📱 Works on mobile & desktop',
+            ].map(b=>(
+              <span key={b} style={{background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'20px',padding:'4px 10px',color:'rgba(255,255,255,0.7)',whiteSpace:'nowrap'}}>{b}</span>
+            ))}
+          </div>
 
           {/* TECH TRUST BLOCK */}
           <div style={{background:'rgba(16,185,129,0.06)',border:'1px solid rgba(16,185,129,0.2)',borderRadius:'10px',padding:'12px 16px',marginBottom:'16px',display:'flex',gap:'12px',alignItems:'flex-start'}}>
@@ -537,6 +548,28 @@ export default function Home() {
           </div>
           <div style={{background:'#B8924A',color:'#07111F',fontSize:'12px',fontWeight:700,padding:'8px 14px',borderRadius:'5px',whiteSpace:'nowrap' as const,flexShrink:0}}>View Checklists →</div>
         </a>
+      </div>
+
+      {/* WHY CHOOSE BLOCK */}
+      <div style={{maxWidth:'900px',margin:'0 auto',padding:'32px 16px 0'}}>
+        <h2 style={{fontSize:'20px',fontWeight:800,color:'#fff',marginBottom:'16px',letterSpacing:'-0.3px'}}>
+          Why Choose This Image Compressor vs Other Tools
+        </h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:'12px',marginBottom:'32px'}}>
+          {[
+            {icon:'🔒',title:'True no-upload processing',desc:'Every pixel stays on your device via WebAssembly. Many online compressors upload your images to their servers — this one never does.'},
+            {icon:'🎯',title:'Exact KB targeting in main UI',desc:'Set 20KB, 50KB, 100KB or any target directly — not hidden in advanced settings like most tools.'},
+            {icon:'🗜️',title:'Batch up to 50 images at once',desc:'Compress an entire product catalog or photo set in one go, with instant preview for each file.'},
+            {icon:'⚡',title:'Presets for every platform',desc:'Shopify, Etsy, Amazon, Instagram, passport photos — one click sets the right format and size.'},
+            {icon:'🆓',title:'100% free, no watermark',desc:'No subscription, no watermark, no signup required. Works on any device — mobile, tablet, desktop.'},
+          ].map(item=>(
+            <div key={item.title} style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(129,140,248,0.2)',borderRadius:'10px',padding:'18px'}}>
+              <div style={{fontSize:'22px',marginBottom:'8px'}}>{item.icon}</div>
+              <div style={{fontSize:'14px',fontWeight:700,color:'#fff',marginBottom:'6px'}}>{item.title}</div>
+              <div style={{fontSize:'13px',color:'rgba(255,255,255,0.55)',lineHeight:1.65}}>{item.desc}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* BEFORE/AFTER COMPARE MODAL */}
