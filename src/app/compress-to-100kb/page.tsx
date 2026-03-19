@@ -75,13 +75,13 @@ export default function Page() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-6">
             {[
-              ['📧', 'Email Attachments', 'Keep inline images under 100KB to avoid Gmail and Outlook warnings. Smaller attachments load faster on mobile data.'],
-              ['🛒', 'Ecommerce Listings', 'Shopify, Etsy, and WooCommerce product thumbnails load noticeably faster under 100KB — directly impacting conversion rates.'],
-              ['🎓', 'University & Exam Portals', 'Many application portals (SAT, GRE, GMAT, UPSC, NEET) require profile photos under 100KB in JPEG format.'],
-              ['📝', 'Web Forms & Job Applications', 'LinkedIn, Indeed, Workday, and Greenhouse profile photo uploads work best when images are 100KB or under.'],
-            ].map(([icon, title, desc]) => (
+              { icon: 'email', title: 'Email Attachments', desc: 'Keep inline images under 100KB to avoid Gmail and Outlook warnings. Smaller attachments load faster on mobile data.' },
+              { icon: 'shop', title: 'Ecommerce Listings', desc: 'Shopify, Etsy, and WooCommerce product thumbnails load noticeably faster under 100KB.' },
+              { icon: 'edu', title: 'University & Exam Portals', desc: 'Many application portals (SAT, GRE, GMAT, UPSC, NEET) require profile photos under 100KB in JPEG format.' },
+              { icon: 'job', title: 'Web Forms & Job Applications', desc: 'LinkedIn, Indeed, Workday, and Greenhouse profile photo uploads work best when images are 100KB or under.' },
+            ].map(({ icon, title, desc }) => (
               <div key={title} className="p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
-                <div className="text-2xl mb-2">{icon}</div>
+                <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#6366f1', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px', fontSize: '14px', fontWeight: 700, color: '#fff' }}>{icon.slice(0,2).toUpperCase()}</div>
                 <div className="font-semibold text-white text-sm mb-1">{title}</div>
                 <div className="text-slate-400 text-xs leading-relaxed">{desc}</div>
               </div>
