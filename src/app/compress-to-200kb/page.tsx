@@ -10,9 +10,25 @@ export const metadata: Metadata = {
 
 const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image to exactly 200KB?","acceptedAnswer":{"@type":"Answer","text":"Open compressto20kb.com, upload your image, switch to Exact KB Mode, type 200, and click Compress. Binary search finds the maximum quality that fits 200KB within 1KB accuracy."}},{"@type":"Question","name":"Does compressing to 200KB reduce visible quality?","acceptedAnswer":{"@type":"Answer","text":"200KB preserves much more detail than 20KB or 100KB. For most product photos and blog images at typical web sizes (800–1200px wide), a 200KB WebP looks nearly identical to the original."}},{"@type":"Question","name":"What is 200KB good for?","acceptedAnswer":{"@type":"Answer","text":"200KB is ideal for ecommerce product photos, blog hero images, email newsletter graphics, and government portal uploads. It gives noticeably better quality than 100KB while still loading fast on mobile."}},{"@type":"Question","name":"How to compress an image to 200KB on iPhone or Android?","acceptedAnswer":{"@type":"Answer","text":"Open compressto20kb.com in Safari (iPhone) or Chrome (Android). Tap upload, select your photo, set Exact KB Mode to 200, tap Compress. Downloads instantly — no app needed."}},{"@type":"Question","name":"Can I batch compress multiple images to 200KB?","acceptedAnswer":{"@type":"Answer","text":"Yes — upload up to 50 images at once. Set Exact KB Mode to 200 and click Compress All. Download individually or as a ZIP. All processing stays on your device."}},{"@type":"Question","name":"Is WebP or JPEG better for 200KB images?","acceptedAnswer":{"@type":"Answer","text":"WebP gives better visual quality at 200KB than JPEG. At 200KB, WebP retains more sharpness and detail. Use JPEG only if you need broad compatibility with older browsers or email clients."}}]};
 
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Compress an Image to 200KB Online',
+  description: 'Step-by-step guide to compress any image to exactly 200KB free, without uploading to a server.',
+  totalTime: 'PT30S',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Upload your image', text: 'Click upload or drag your file. Accepts JPEG, PNG, WebP, AVIF, HEIC. Up to 50 files at once.' },
+    { '@type': 'HowToStep', position: 2, name: 'Switch to Exact KB Mode', text: 'Toggle the mode to Exact KB. Type 200 in the target field.' },
+    { '@type': 'HowToStep', position: 3, name: 'Select output format', text: 'Choose WebP for best quality at 200KB, JPEG for maximum compatibility.' },
+    { '@type': 'HowToStep', position: 4, name: 'Compress and download', text: 'Click Compress. Your browser processes instantly — nothing uploaded. Download the 200KB file.' },
+  ],
+};
+
 export default function Page() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <ClientPage />
     </>

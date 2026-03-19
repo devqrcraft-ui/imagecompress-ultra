@@ -34,14 +34,6 @@ const faqItems = [
 export default function ClientPage() {
   return (
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
-      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
-        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
-        <div style={{display:'flex',gap:'16px',fontSize:'13px',opacity:0.75}}>
-          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/compress-to-100kb" style={{color:'white',textDecoration:'none'}}>100KB Tool</Link>
-          <Link href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
-        </div>
-      </nav>
 
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
         <div style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>
@@ -155,3 +147,24 @@ export default function ClientPage() {
     </div>
   );
 }
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>CompressTo20KB vs Competitors — 200KB Compression</h2>
+        <div style={{overflowX:'auto',marginBottom:'32px'}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'13px'}}>
+            <thead><tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
+              <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Feature</th>
+              <th style={{padding:'10px 12px',color:'#818cf8',fontWeight:800}}>This Tool</th>
+              <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>TinyPNG</th>
+              <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>11zon</th>
+            </tr></thead>
+            <tbody>
+              {[['On-device, no upload','✅ Yes','❌ Server','❌ Server'],['Exact KB targeting','✅ Yes','❌ No','⚠️ Approx'],['Batch up to 50 files','✅ Yes','⚠️ 20/month','⚠️ Limited'],['WebP & AVIF output','✅ Yes','❌ No','⚠️ Partial'],['Free, no signup','✅ Unlimited','⚠️ Limits','⚠️ Limits']].map(([f,a,b,c])=>(
+                <tr key={f} style={{borderBottom:'1px solid rgba(255,255,255,0.06)'}}>
+                  <td style={{padding:'10px 12px',color:'rgba(255,255,255,0.8)'}}>{f}</td>
+                  <td style={{padding:'10px 12px',textAlign:'center',color:'#4ade80'}}>{a}</td>
+                  <td style={{padding:'10px 12px',textAlign:'center',opacity:0.6}}>{b}</td>
+                  <td style={{padding:'10px 12px',textAlign:'center',opacity:0.6}}>{c}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
