@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ClientPage from './client';
 
 export const metadata: Metadata = {
   title: 'Compress Image to 50KB Free Online — No Upload, 100% Private',
