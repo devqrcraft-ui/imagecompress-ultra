@@ -1,3 +1,5 @@
+            {q:'Can I compress multiple images to 50KB at once?',a:'Yes — upload up to 50 images, set Exact KB Mode to 50, and compress all at once. Download as ZIP. All processing stays in your browser.'},
+            {q:'What format should I use for 50KB government photos?',a:'JPEG — always, for government portals. Most portals explicitly require JPEG and will reject WebP or PNG even if the file size is correct.'},
 "use client";
 import Link from 'next/link';
 
@@ -34,14 +36,6 @@ const faqItems = [
 export default function ClientPage() {
   return (
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
-      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
-        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
-        <div style={{display:'flex',gap:'16px',fontSize:'13px',opacity:0.75}}>
-          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/compress-to-100kb" style={{color:'white',textDecoration:'none'}}>100KB Tool</Link>
-          <Link href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
-        </div>
-      </nav>
 
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
         <div style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>
