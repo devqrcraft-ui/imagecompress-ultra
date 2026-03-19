@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import ClientPage from './client';
 export const metadata: Metadata = {
   title: 'Compress Image to 20KB Online — Free, No Upload, 100% Private',
   description: 'Reduce any image to exactly 20KB free online. All compression runs in your browser — files never leave your device. No upload, no signup. HEIC, JPG, PNG, WebP supported.',
@@ -151,6 +150,5 @@ export default function Page() {
       </section>
 
     </article>
-    <ClientPage />
   </>);
 }
