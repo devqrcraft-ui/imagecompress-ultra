@@ -3,32 +3,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <nav style={{
-        background:'#0f0f1a',
-        borderBottom:'1px solid #1e1e35',
-        padding:'0 24px',
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'space-between',
-        height:'56px',
-        position:'sticky',
-        top:0,
-        zIndex:50,
-        fontFamily:'system-ui,-apple-system,sans-serif',
-      }}>
-        <a href="/" style={{textDecoration:'none',display:'flex',alignItems:'center',gap:'6px'}}>
-          <span style={{fontSize:'20px',fontWeight:800,color:'#fff',letterSpacing:'-0.5px'}}>
-            Compress<span style={{color:'#22d3ee'}}>20KB</span>
-          </span>
-        </a>
-
-        <div style={{display:'flex',alignItems:'center',gap:'4px'}} className="nav-links">
-          {[
-            ['/compress-for-shopify','🛍️ Shopify','#f59e0b'],
-            ['/compress-passport-photo','🪪 Passport','#10b981'],
+  const ['/','Home','#22d3ee'],
+            ['/compress-to-50kb','50KB','#6366f1'],
+            ['/compress-to-100kb','100KB','#6366f1'],
+            ['/compress-to-200kb','200KB','#6366f1'],
+            ['/compress-for-shopify','Shopify','#f59e0b'],
+            ['/compress-passport-photo','Passport','#10b981'],
             ['/blog','Blog','#8b5cf6'],
           ].map(([href,label,color])=>(
             <a
