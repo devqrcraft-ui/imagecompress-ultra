@@ -474,29 +474,6 @@ export default function HomeClient() {
           <strong style={{color:'#34d399'}}> CompressTo20KB — on-device, exact KB, 50 files, always free.</strong>
         </div>
       </div>
-
-      
-      
-
-      {/* SISTER SITES */}
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'16px 16px 24px'}}>
-        <div style={{fontSize:'11px',fontWeight:700,color:'rgba(255,255,255,0.3)',letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'12px'}}>Free Tax Tools for Freelancers & Gig Workers</div>
-        <div style={{display:'flex',flexDirection:'column',gap:'10px'}}>
-          <a href="https://gigwisetax.com" target="_blank" rel="noopener" style={{display:'flex',alignItems:'center',gap:'12px',padding:'14px 16px',background:'rgba(178,34,52,0.08)',border:'1px solid rgba(178,34,52,0.25)',borderRadius:'8px',textDecoration:'none'}}>
-            <span style={{fontSize:'20px'}}>🧾</span>
-            <span style={{fontSize:'13px',color:'rgba(255,255,255,0.75)',lineHeight:1.5}}>Need help with gig worker taxes? <strong style={{color:'#f87171'}}>GigWiseTax.com</strong> — free SE tax calculator for DoorDash, Uber, OnlyFans &amp; more.</span>
-          </a>
-          <a href="https://privatepaycheck.com" target="_blank" rel="noopener" style={{display:'flex',alignItems:'center',gap:'12px',padding:'14px 16px',background:'rgba(245,200,66,0.06)',border:'1px solid rgba(245,200,66,0.2)',borderRadius:'8px',textDecoration:'none'}}>
-            <span style={{fontSize:'20px'}}>💵</span>
-            <span style={{fontSize:'13px',color:'rgba(255,255,255,0.75)',lineHeight:1.5}}>Need a paycheck estimator for a W-2 job? <strong style={{color:'#F5C842'}}>PrivatePaycheck.com</strong> — all 50 states, 2026 IRS brackets, 100% free.</span>
-          </a>
-          <a href="https://1099deductions.com" target="_blank" rel="noopener" style={{display:'flex',alignItems:'center',gap:'12px',padding:'14px 16px',background:'rgba(74,222,128,0.06)',border:'1px solid rgba(74,222,128,0.2)',borderRadius:'8px',textDecoration:'none'}}>
-            <span style={{fontSize:'20px'}}>✅</span>
-            <span style={{fontSize:'13px',color:'rgba(255,255,255,0.75)',lineHeight:1.5}}>Unsure what you can deduct as 1099? <strong style={{color:'#4ade80'}}>1099Deductions.com</strong> — free IRS Schedule C checklists for every gig job.</span>
-          </a>
-        </div>
-      </div>
-
       {/* BOTTOM AD */}
       <div style={{display:'flex',justifyContent:'center',padding:'8px 0 16px',background:'rgba(0,0,0,0.2)'}}>
         <a href="https://1099deductions.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'flex',alignItems:'center',gap:'16px',width:'100%',maxWidth:'728px',background:'linear-gradient(135deg,#0B1E36,#163052)',border:'1px solid rgba(184,146,74,0.3)',borderRadius:'8px',padding:'16px 20px'}}>
