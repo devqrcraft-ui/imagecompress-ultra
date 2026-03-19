@@ -419,6 +419,7 @@ export default function HomeClient() {
           )}
 
         </div>
+      </div>
 
       {/* WHY US vs COMPETITION */}
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'24px 16px 0'}}>
