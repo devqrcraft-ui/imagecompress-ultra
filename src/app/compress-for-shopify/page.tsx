@@ -14,13 +14,7 @@ export default function ShopifyPage() {
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,sans-serif',color:'white'}}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <header style={{padding:'12px 20px',borderBottom:'1px solid rgba(255,255,255,0.07)',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-        <Link href="/" style={{display:'flex',alignItems:'center',gap:'8px',textDecoration:'none',color:'white'}}>
-          <span style={{fontSize:'22px'}}>🗜️</span>
-          <div style={{fontWeight:800,fontSize:'17px'}}>Compress<span style={{color:'#818cf8'}}>To20KB</span></div>
-        </Link>
-        <Link href="/" style={{color:'rgba(255,255,255,0.5)',textDecoration:'none',fontSize:'13px'}}>← Back to Tool</Link>
-      </header>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"HowTo","name":"How to Compress Images for Shopify (Free, No App)","description":"Compress Shopify product images to WebP under 1MB without installing any app.","totalTime":"PT60S","step":[{"@type":"HowToStep","position":1,"name":"Upload Your Product Images","text":"Drag and drop up to 50 product images. Supports JPG, PNG, WebP, HEIC."},{"@type":"HowToStep","position":2,"name":"Select Shopify Preset","text":"Click the Shopify preset — it sets WebP format, 82% quality, and 2048px max dimension automatically."},{"@type":"HowToStep","position":3,"name":"Compress and Download","text":"Click Compress All. Download as ZIP and re-upload to your Shopify product listings."}]}) }} />
 
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px'}}>
         <div style={{display:'inline-block',background:'rgba(16,185,129,0.15)',border:'1px solid rgba(16,185,129,0.3)',borderRadius:'20px',padding:'4px 14px',fontSize:'12px',fontWeight:600,color:'#34d399',marginBottom:'14px'}}>🛍️ Shopify Optimization</div>
@@ -84,6 +78,7 @@ export default function ShopifyPage() {
                 ['WebP support','✅ Yes','✅ Yes','✅ Yes'],
                 ['Batch compress','✅ 10 files free','✅ Unlimited (paid)','✅ Unlimited (paid)'],
                 ['No signup','✅ Yes','❌ Account required','❌ Account required'],
+                ['vs TinyPNG / Squoosh','✅ No upload needed','❌ Server upload','✅ Browser only'],
               ].map((row,i)=>(
                 <tr key={i} style={{borderBottom:'1px solid rgba(255,255,255,0.05)',background: i%2===0 ? 'transparent' : 'rgba(255,255,255,0.02)'}}>
                   {row.map((cell,j)=>(
@@ -108,12 +103,44 @@ export default function ShopifyPage() {
           </details>
         ))}
 
-        <div style={{display:'flex',gap:'10px',flexWrap:'wrap',marginTop:'24px'}}>
+        <h2 style={{fontSize:'18px',fontWeight:700,color:'#a5b4fc',marginBottom:'14px',marginTop:'24px'}}>Related Tools</h2>
+        <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
           {[['/compress-to-20kb','Compress to 20KB'],['/compress-for-etsy','Compress for Etsy'],['/compress-without-uploading','No Upload Compressor']].map(([href,label])=>(
             <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
           ))}
         </div>
       </div>
+
+        {/* WHEN DO YOU NEED */}
+        <section style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px 20px'}}>
+          <h2 style={{fontSize:'clamp(19px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'14px'}}>When Do You Need to Compress Shopify Images?</h2>
+          <p style={{fontSize:'15px',lineHeight:1.7,marginBottom:'10px',opacity:0.9}}>Unoptimized product images are the number one cause of slow Shopify stores. Google PageSpeed and Core Web Vitals directly penalize stores with large images.</p>
+          <ul style={{paddingLeft:'20px',lineHeight:1.9,opacity:0.85,fontSize:'15px'}}>
+            <li><strong>New product listings</strong> — compress photos before uploading to keep your store fast from day one.</li>
+            <li><strong>Slow PageSpeed score</strong> — images over 1MB are flagged by Google Lighthouse as render-blocking resources.</li>
+            <li><strong>Mobile shoppers</strong> — over 70% of Shopify traffic is mobile; large images cause abandonment on slow connections.</li>
+            <li><strong>Bulk catalog updates</strong> — compress 50 product images at once and re-upload as a batch to save hours.</li>
+            <li><strong>Migrating from another platform</strong> — re-optimize all images when switching to Shopify for best performance.</li>
+          </ul>
+        </section>
+
+        {/* TIPS */}
+        <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 28px'}}>
+          <h2 style={{fontSize:'clamp(19px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'14px'}}>Tips for Shopify Image Optimization</h2>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(230px,1fr))',gap:'14px'}}>
+            {[
+              ['Use WebP format','WebP produces 70% smaller files than JPEG at the same visual quality. Shopify supports WebP on all modern browsers.'],
+              ['Keep under 1MB per image','Shopify recommends under 1MB. The Shopify preset (82% quality, 2048px WebP) typically hits 200-500KB for most product photos.'],
+              ['2048px max dimension','Shopify displays product images at max 2048px. Uploading larger files wastes storage and slows loading with no visual benefit.'],
+              ['Batch compress before upload','Upload all product images at once, compress as ZIP, then batch-import to Shopify via the product CSV importer.'],
+            ].map(([t,d]) => (
+              <div key={t} style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}>
+                <div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>{t}</div>
+                <div style={{fontSize:'13px',lineHeight:1.6,opacity:0.8}}>{d}</div>
+              </div>
+            ))}
+          </div>
+        </section>
     <div style={{textAlign:"center",padding:"16px 0"}}><a href="/blog/compress-images-for-shopify-store" style={{color:"#818cf8",fontSize:"14px",textDecoration:"none"}}>📖 Full Guide: Compress Images for Shopify →</a></div>
     </div>
   );
