@@ -75,6 +75,41 @@ export default function Page() {
           ))}
         </section>
 
+
+        {/* SISTER SITES */}
+        <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 56px'}}>
+          <h2 style={{fontSize:'16px',fontWeight:700,color:'rgba(165,180,252,0.7)',marginBottom:'16px',textTransform:'uppercase',letterSpacing:'0.08em'}}>Free Tax Tools for Freelancers & Gig Workers</h2>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:'12px'}}>
+            <a href="https://gigwisetax.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'block',background:'rgba(178,34,52,0.08)',border:'1px solid rgba(178,34,52,0.25)',borderRadius:'8px',padding:'16px 18px'}}>
+              <div style={{fontSize:'11px',fontWeight:700,color:'rgba(178,34,52,0.8)',letterSpacing:'0.08em',textTransform:'uppercase',marginBottom:'6px'}}>1099 Gig Tax Tool</div>
+              <div style={{fontSize:'16px',fontWeight:800,color:'#fff',marginBottom:'4px'}}>GigWiseTax.com</div>
+              <div style={{fontSize:'12px',color:'rgba(255,255,255,0.5)',lineHeight:1.6,marginBottom:'10px'}}>SE tax 15.3% + federal + all 51 states. DoorDash, Uber, OnlyFans & more. 100% free.</div>
+              <div style={{display:'flex',gap:'6px',flexWrap:'wrap',marginBottom:'10px'}}>
+                {['SE Tax 15.3%','All 51 States','100% Free'].map(t=><span key={t} style={{fontSize:'10px',background:'rgba(178,34,52,0.15)',border:'1px solid rgba(178,34,52,0.3)',color:'rgba(255,255,255,0.6)',padding:'2px 7px',borderRadius:'3px'}}>{t}</span>)}
+              </div>
+              <div style={{background:'#B22234',color:'#fff',padding:'8px 0',borderRadius:'4px',fontSize:'12px',fontWeight:700,textAlign:'center'}}>Calculate Gig Taxes →</div>
+            </a>
+            <a href="https://privatepaycheck.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'block',background:'rgba(245,200,66,0.06)',border:'1px solid rgba(245,200,66,0.2)',borderRadius:'8px',padding:'16px 18px'}}>
+              <div style={{fontSize:'11px',fontWeight:700,color:'rgba(245,200,66,0.7)',letterSpacing:'0.08em',textTransform:'uppercase',marginBottom:'6px'}}>W-2 Paycheck Tool</div>
+              <div style={{fontSize:'16px',fontWeight:800,color:'#fff',marginBottom:'4px'}}>PrivatePaycheck.com</div>
+              <div style={{fontSize:'12px',color:'rgba(255,255,255,0.5)',lineHeight:1.6,marginBottom:'10px'}}>Free paycheck calculator. All 50 states, 2026 IRS brackets. Salary & hourly.</div>
+              <div style={{display:'flex',gap:'6px',flexWrap:'wrap',marginBottom:'10px'}}>
+                {['Salary & Hourly','All 50 States','100% Free'].map(t=><span key={t} style={{fontSize:'10px',background:'rgba(245,200,66,0.1)',border:'1px solid rgba(245,200,66,0.25)',color:'rgba(255,255,255,0.6)',padding:'2px 7px',borderRadius:'3px'}}>{t}</span>)}
+              </div>
+              <div style={{background:'#F5C842',color:'#07111f',padding:'8px 0',borderRadius:'4px',fontSize:'12px',fontWeight:700,textAlign:'center'}}>Calculate My Paycheck →</div>
+            </a>
+            <a href="https://1099deductions.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'block',background:'rgba(184,146,74,0.06)',border:'1px solid rgba(184,146,74,0.2)',borderRadius:'8px',padding:'16px 18px'}}>
+              <div style={{fontSize:'11px',fontWeight:700,color:'rgba(184,146,74,0.7)',letterSpacing:'0.08em',textTransform:'uppercase',marginBottom:'6px'}}>1099 Deductions Hub</div>
+              <div style={{fontSize:'16px',fontWeight:800,color:'#fff',marginBottom:'4px'}}>1099Deductions.com</div>
+              <div style={{fontSize:'12px',color:'rgba(255,255,255,0.5)',lineHeight:1.6,marginBottom:'10px'}}>Free IRS Schedule C checklists for every gig job. DoorDash, Uber, Airbnb & more.</div>
+              <div style={{display:'flex',gap:'6px',flexWrap:'wrap',marginBottom:'10px'}}>
+                {['17 Job Types','Schedule C','100% Free'].map(t=><span key={t} style={{fontSize:'10px',background:'rgba(184,146,74,0.1)',border:'1px solid rgba(184,146,74,0.25)',color:'rgba(255,255,255,0.6)',padding:'2px 7px',borderRadius:'3px'}}>{t}</span>)}
+              </div>
+              <div style={{background:'#B8924A',color:'#07111f',padding:'8px 0',borderRadius:'4px',fontSize:'12px',fontWeight:700,textAlign:'center'}}>View Deductions →</div>
+            </a>
+          </div>
+        </section>
+
         {/* INTERNAL LINKS */}
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 56px'}}>
           <h2 style={{fontSize:'18px',fontWeight:700,color:'#a5b4fc',marginBottom:'14px'}}>Popular Compression Tools</h2>
