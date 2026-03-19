@@ -511,8 +511,21 @@ export default function Home() {
       {/* INTERNAL LINKS */}
       <div style={{maxWidth:"800px",margin:"0 auto",padding:"10px 16px 20px"}}>
         <h2 style={{fontSize:"18px",fontWeight:700,marginBottom:"14px"}}>Compress Images For Specific Platforms</h2>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:"8px"}}>
-          {[{href:"/compress-for-shopify",label:"🛍️ Shopify"},{href:"/compress-for-etsy",label:"🎨 Etsy"},{href:"/compress-for-amazon",label:"📦 Amazon"},{href:"/compress-for-instagram",label:"📸 Instagram"},{href:"/compress-passport-photo",label:"🪪 Passport / Gov"},{href:"/compress-to-20kb",label:"📄 Exact 20KB"}].map(({href,label})=>(<a key={href} href={href} style={{display:"block",padding:"10px 14px",background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"8px",color:"rgba(255,255,255,0.8)",textDecoration:"none",fontSize:"13px",fontWeight:600}}>{label}</a>))}
+        <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:"8px"}}>
+          {[
+            {href:"/compress-for-shopify",label:"🛍️ Shopify"},
+            {href:"/compress-for-etsy",label:"🎨 Etsy"},
+            {href:"/compress-for-amazon",label:"📦 Amazon"},
+            {href:"/compress-for-instagram",label:"📸 Instagram"},
+            {href:"/compress-passport-photo",label:"🪪 Passport / Gov"},
+            {href:"/compress-to-20kb",label:"📄 Exact 20KB"},
+            {href:"/compress-for-email",label:"📧 Email"},
+            {href:"/compress-for-pinterest",label:"📌 Pinterest"},
+            {href:"/compress-for-linkedin",label:"💼 LinkedIn"},
+            {href:"/compress-for-whatsapp",label:"💬 WhatsApp"},
+            {href:"/compress-to-100kb",label:"📁 100KB"},
+            {href:"/compress-to-200kb",label:"📦 200KB"},
+          ].map(({href,label})=>(<a key={href} href={href} style={{display:"block",padding:"10px 14px",background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"8px",color:"rgba(255,255,255,0.8)",textDecoration:"none",fontSize:"13px",fontWeight:600,textAlign:"center"}}>{label}</a>))}
         </div>
       </div>
 
