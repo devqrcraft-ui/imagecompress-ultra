@@ -129,6 +129,35 @@ export default function ClientPage() {
           ))}
         </div>
 
+
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>CompressTo20KB vs Competitors — 200KB Compression</h2>
+        <div style={{overflowX:'auto' as const,marginBottom:'32px'}}>
+          <table style={{width:'100%',borderCollapse:'collapse' as const,fontSize:'13px'}}>
+            <thead><tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
+              <th style={{textAlign:'left' as const,padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Feature</th>
+              <th style={{padding:'10px 12px',color:'#818cf8',fontWeight:800}}>This Tool</th>
+              <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>TinyPNG</th>
+              <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>Squoosh</th>
+            </tr></thead>
+            <tbody>
+              {[
+                ['Exact 200KB target','Yes — binary search','No — % only','No — manual'],
+                ['No file upload','Yes — browser only','No — server upload','Yes — browser only'],
+                ['Batch compress 50 images','Yes','No','No'],
+                ['HEIC / iPhone support','Yes','No','Partial'],
+                ['Free, no signup','Yes','Limited free','Yes'],
+              ].map(([feat,a,b,c])=>(
+                <tr key={feat} style={{borderBottom:'1px solid rgba(255,255,255,0.07)'}}>
+                  <td style={{padding:'9px 12px',color:'rgba(255,255,255,0.75)'}}>{feat}</td>
+                  <td style={{padding:'9px 12px',textAlign:'center' as const,color:'#4ade80',fontWeight:700}}>{a}</td>
+                  <td style={{padding:'9px 12px',textAlign:'center' as const,color:'rgba(255,255,255,0.4)'}}>{b}</td>
+                  <td style={{padding:'9px 12px',textAlign:'center' as const,color:'rgba(255,255,255,0.4)'}}>{c}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         <h2 style={{fontSize:'18px',fontWeight:700,marginBottom:'12px'}}>Related Tools</h2>
         <div style={{display:'flex',flexWrap:'wrap' as const,gap:'10px',marginBottom:'40px'}}>
           {[
@@ -147,24 +176,3 @@ export default function ClientPage() {
     </div>
   );
 }
-        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>CompressTo20KB vs Competitors — 200KB Compression</h2>
-        <div style={{overflowX:'auto',marginBottom:'32px'}}>
-          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'13px'}}>
-            <thead><tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
-              <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Feature</th>
-              <th style={{padding:'10px 12px',color:'#818cf8',fontWeight:800}}>This Tool</th>
-              <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>TinyPNG</th>
-              <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>11zon</th>
-            </tr></thead>
-            <tbody>
-              {[['On-device, no upload','✅ Yes','❌ Server','❌ Server'],['Exact KB targeting','✅ Yes','❌ No','⚠️ Approx'],['Batch up to 50 files','✅ Yes','⚠️ 20/month','⚠️ Limited'],['WebP & AVIF output','✅ Yes','❌ No','⚠️ Partial'],['Free, no signup','✅ Unlimited','⚠️ Limits','⚠️ Limits']].map(([f,a,b,c])=>(
-                <tr key={f} style={{borderBottom:'1px solid rgba(255,255,255,0.06)'}}>
-                  <td style={{padding:'10px 12px',color:'rgba(255,255,255,0.8)'}}>{f}</td>
-                  <td style={{padding:'10px 12px',textAlign:'center',color:'#4ade80'}}>{a}</td>
-                  <td style={{padding:'10px 12px',textAlign:'center',opacity:0.6}}>{b}</td>
-                  <td style={{padding:'10px 12px',textAlign:'center',opacity:0.6}}>{c}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>

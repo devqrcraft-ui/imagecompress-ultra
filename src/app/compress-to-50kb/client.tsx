@@ -1,5 +1,3 @@
-            {q:'Can I compress multiple images to 50KB at once?',a:'Yes — upload up to 50 images, set Exact KB Mode to 50, and compress all at once. Download as ZIP. All processing stays in your browser.'},
-            {q:'What format should I use for 50KB government photos?',a:'JPEG — always, for government portals. Most portals explicitly require JPEG and will reject WebP or PNG even if the file size is correct.'},
 "use client";
 import Link from 'next/link';
 
