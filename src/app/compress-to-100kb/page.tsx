@@ -45,10 +45,27 @@ const faqSchema = {
   ],
 };
 
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Compress an Image to 100KB Online',
+  description: 'Step-by-step guide to compress any image to exactly 100KB free, without uploading to a server.',
+  totalTime: 'PT30S',
+  tool: [{ '@type': 'HowToTool', name: 'CompressTo20KB — free online image compressor' }],
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Upload your image', text: 'Click the upload area or drag your file. Accepts JPEG, PNG, WebP, AVIF, and HEIC. Up to 50 files at once.' },
+    { '@type': 'HowToStep', position: 2, name: 'Switch to Exact KB Mode', text: 'Toggle the mode selector from Quality to Exact KB. Type 100 in the target size field.' },
+    { '@type': 'HowToStep', position: 3, name: 'Choose your format', text: 'Select WebP for best quality at small size, or JPEG for universal compatibility.' },
+    { '@type': 'HowToStep', position: 4, name: 'Compress and download', text: 'Click Compress. Your browser processes the image instantly — nothing is uploaded. Download the 100KB file directly.' },
+  ],
+};
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <ClientPage />
     </>
   );
