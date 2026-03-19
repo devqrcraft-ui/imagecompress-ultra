@@ -420,35 +420,6 @@ export default function HomeClient() {
 
         </div>
 
-        {/* RIGHT ADS — 30% */}
-        <div className="right-col" style={{flex:'0 0 28%',maxWidth:'28%',display:'flex',flexDirection:'column',gap:'12px',position:'sticky',top:'72px'}}>
-          <a href="https://gigwisetax.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'block',background:'linear-gradient(135deg,#0d1117,#1a1a2e)',border:'1px solid rgba(178,34,52,0.4)',borderRadius:'10px',padding:'20px 16px'}}>
-            <div style={{fontSize:'10px',fontWeight:700,letterSpacing:'.12em',textTransform:'uppercase',color:'#e8b84b',marginBottom:'10px',fontFamily:'monospace'}}>Free Tax Tool</div>
-            <div style={{fontSize:'17px',fontWeight:800,color:'#fff',marginBottom:'6px',lineHeight:1.3}}>GigWiseTax<span style={{color:'#e8b84b'}}>.com</span></div>
-            <div style={{fontSize:'12px',color:'#7A96B8',marginBottom:'14px',lineHeight:1.6}}>Free self-employment tax calculator for DoorDash, Uber, OnlyFans & more. SE tax + all 51 states.</div>
-            <div style={{display:'flex',flexDirection:'column',gap:'6px',marginBottom:'16px'}}>
-              {['SE Tax 15.3% calculated','All 51 states included','Quarterly payment schedule','100% free, no signup'].map((t,i)=>(
-                <div key={i} style={{fontSize:'11px',color:'rgba(255,255,255,0.6)',padding:'4px 0',borderBottom:'1px solid rgba(255,255,255,0.05)'}}>✓ {t}</div>
-              ))}
-            </div>
-            <div style={{background:'#B22234',color:'#fff',fontSize:'12px',fontWeight:700,padding:'9px 12px',borderRadius:'5px',textAlign:'center' as const}}>Calculate Gig Taxes →</div>
-          </a>
-          <div style={{background:'rgba(16,185,129,0.08)',border:'1px solid rgba(16,185,129,0.25)',borderRadius:'10px',padding:'14px'}}>
-            <div style={{fontSize:'13px',fontWeight:700,color:'#34d399',marginBottom:'8px'}}>🔒 Privacy First</div>
-            {['Your images stay on your device','No server upload ever','No account required','GDPR compliant by design'].map((t,i)=>(
-              <div key={i} style={{fontSize:'11px',opacity:0.75,padding:'3px 0',borderBottom: i<3 ? '1px solid rgba(255,255,255,0.05)':'none'}}>✓ {t}</div>
-            ))}
-          </div>
-          <a href="https://privatepaycheck.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'block',background:'linear-gradient(135deg,#091526,#102040)',border:'1px solid rgba(245,200,66,0.3)',borderRadius:'10px',padding:'16px'}}>
-            <div style={{fontSize:'10px',fontWeight:700,letterSpacing:'.12em',textTransform:'uppercase',color:'#F5C842',marginBottom:'8px',fontFamily:'monospace'}}>W-2 Paycheck Tool</div>
-            <div style={{fontSize:'16px',fontWeight:800,color:'#fff',marginBottom:'6px'}}>PrivatePaycheck<span style={{color:'#F5C842'}}>.com</span></div>
-            <div style={{fontSize:'11px',color:'#7A96B8',marginBottom:'12px',lineHeight:1.5}}>Free paycheck calculator. All 50 states, 2026 IRS brackets. Salary & hourly.</div>
-            <div style={{background:'#F5C842',color:'#091526',fontSize:'12px',fontWeight:700,padding:'8px 12px',borderRadius:'5px',textAlign:'center' as const}}>Calculate Paycheck →</div>
-          </a>
-        </div>
-
-      </div>
-
       {/* WHY US vs COMPETITION */}
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'24px 16px 0'}}>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px',textAlign:'center'}}>
@@ -473,17 +444,6 @@ export default function HomeClient() {
           Squoosh — 1 file at a time, no batch. iLoveIMG — server upload, watermarks on free tier.
           <strong style={{color:'#34d399'}}> CompressTo20KB — on-device, exact KB, 50 files, always free.</strong>
         </div>
-      </div>
-      {/* BOTTOM AD */}
-      <div style={{display:'flex',justifyContent:'center',padding:'8px 0 16px',background:'rgba(0,0,0,0.2)'}}>
-        <a href="https://1099deductions.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'flex',alignItems:'center',gap:'16px',width:'100%',maxWidth:'728px',background:'linear-gradient(135deg,#0B1E36,#163052)',border:'1px solid rgba(184,146,74,0.3)',borderRadius:'8px',padding:'16px 20px'}}>
-          <span style={{fontSize:'28px',flexShrink:0}}>✅</span>
-          <div style={{flex:1}}>
-            <div style={{fontSize:'14px',fontWeight:700,color:'#D4AA66',marginBottom:'3px'}}>1099Deductions.com — Free Tax Write-Off Checklists</div>
-            <div style={{fontSize:'12px',color:'rgba(255,255,255,0.5)'}}>Unsure what you can deduct? Free IRS Schedule C checklists for DoorDash, Uber, Airbnb, OnlyFans & more. No signup.</div>
-          </div>
-          <div style={{background:'#B8924A',color:'#07111F',fontSize:'12px',fontWeight:700,padding:'8px 14px',borderRadius:'5px',whiteSpace:'nowrap' as const,flexShrink:0}}>View Checklists →</div>
-        </a>
       </div>
 
       {/* WHY CHOOSE BLOCK */}
