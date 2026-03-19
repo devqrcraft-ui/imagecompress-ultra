@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import ClientPage from './client';
 
 export const metadata: Metadata = {
   title: 'Compress Image to 200KB Free Online — No Upload, 100% Private',
@@ -63,9 +62,6 @@ export default function Page() {
         <p className="text-slate-400 text-lg mb-8">
           Compress JPG, PNG, WebP, AVIF, HEIC to exactly 200KB directly in your browser — no upload, no tracking, no watermark.
         </p>
-
-        {/* WIDGET */}
-        <ClientPage />
 
         {/* WHEN DO YOU NEED 200KB */}
         <section className="mb-10">
