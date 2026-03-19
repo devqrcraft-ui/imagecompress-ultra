@@ -188,14 +188,14 @@ export default function HomeClient() {
           <h1 style={{fontSize:'26px',fontWeight:800,marginBottom:'4px',letterSpacing:'-0.5px'}}>
             Compress Image to <span style={{color:'#818cf8'}}>20KB, 50KB, 100KB</span> — Free Online, No Upload
           </h1>
-          <p style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>Compress JPG, PNG, WebP, AVIF, HEIC to exact KB directly in your browser — no upload, no tracking, no watermark.</p>
+          <p style={{fontSize:'13px',opacity:0.55,marginBottom:'12px'}}>Free <strong style={{color:'rgba(255,255,255,0.8)'}}>online image compressor</strong> — compress image to 20KB, 50KB, or 100KB in your browser. No upload, 100% private, no watermark.</p>
           {/* USP BULLETS */}
           <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'14px',fontSize:'12px'}}>
             {[
-              '🎯 Exact KB target (20–500KB)',
-              '🔒 On-device only, no upload',
-              '🗜️ Batch up to 50 images',
-              '📱 Works on mobile & desktop',
+              'Exact KB target (20–500KB)',
+              'On-device only, no upload',
+              'Batch up to 50 images',
+              'Works on mobile & desktop',
             ].map(b=>(
               <span key={b} style={{background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'20px',padding:'4px 10px',color:'rgba(255,255,255,0.7)',whiteSpace:'nowrap'}}>{b}</span>
             ))}
@@ -475,39 +475,6 @@ export default function HomeClient() {
         </div>
       </div>
 
-      {/* SEO CONTENT */}
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'20px 16px 10px'}}>
-        <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'10px'}}>Why Compress Images to 20KB?</h2>
-        <p style={{fontSize:'13px',lineHeight:'1.7',opacity:0.65,marginBottom:'12px'}}>
-          US government portals (USCIS, DS-160, passport applications) and job portals require photos under 20KB or 50KB. Our tool compresses images to an exact file size without uploading anything to a server — your files stay 100% private on your device.
-        </p>
-        <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'10px'}}>Compress Images for Shopify, Etsy & Amazon</h2>
-        <p style={{fontSize:'13px',lineHeight:'1.7',opacity:0.65,marginBottom:'12px'}}>
-          Use our free Shopify preset to compress product images to WebP under 1MB. Unlike paid apps like App Compressor ($10/month) that have been reported to accidentally delete store photos, our tool processes everything locally — zero risk, zero cost.
-        </p>
-      </div>
-
-      {/* INTERNAL LINKS */}
-      <div style={{maxWidth:"800px",margin:"0 auto",padding:"10px 16px 20px"}}>
-        <h2 style={{fontSize:"18px",fontWeight:700,marginBottom:"14px"}}>Compress Images For Specific Platforms</h2>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:"8px"}}>
-          {[
-            {href:"/compress-for-shopify",label:"🛍️ Shopify"},
-            {href:"/compress-for-etsy",label:"🎨 Etsy"},
-            {href:"/compress-for-amazon",label:"📦 Amazon"},
-            {href:"/compress-for-instagram",label:"📸 Instagram"},
-            {href:"/compress-passport-photo",label:"🪪 Passport / Gov"},
-            {href:"/compress-to-20kb",label:"📄 Exact 20KB"},
-            {href:"/compress-for-email",label:"📧 Email"},
-            {href:"/compress-for-pinterest",label:"📌 Pinterest"},
-            {href:"/compress-for-linkedin",label:"💼 LinkedIn"},
-            {href:"/compress-for-whatsapp",label:"💬 WhatsApp"},
-            {href:"/compress-to-100kb",label:"📁 100KB"},
-            {href:"/compress-to-200kb",label:"📦 200KB"},
-          ].map(({href,label})=>(<a key={href} href={href} style={{display:"block",padding:"10px 14px",background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"8px",color:"rgba(255,255,255,0.8)",textDecoration:"none",fontSize:"13px",fontWeight:600,textAlign:"center"}}>{label}</a>))}
-        </div>
-      </div>
-
       
       
 
@@ -564,6 +531,56 @@ export default function HomeClient() {
         </div>
       </div>
 
+
+      {/* POPULAR PRESETS GRID */}
+      <div style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 32px'}}>
+        <h2 style={{fontSize:'18px',fontWeight:700,color:'#a5b4fc',marginBottom:'16px'}}>Popular Compression Presets</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'10px'}}>
+          {[
+            {href:'/compress-to-20kb',   label:'20 KB',     sub:'Gov portals & DS-160', color:'#818cf8'},
+            {href:'/compress-to-50kb',   label:'50 KB',     sub:'Job applications',     color:'#818cf8'},
+            {href:'/compress-to-100kb',  label:'100 KB',    sub:'University forms',     color:'#818cf8'},
+            {href:'/compress-for-email', label:'Email',     sub:'Under 100KB, fast',    color:'#34d399'},
+            {href:'/compress-for-shopify',label:'Shopify',  sub:'WebP under 1MB',       color:'#f59e0b'},
+            {href:'/compress-for-pinterest',label:'Pinterest',sub:'1000×1500 optimized',color:'#f87171'},
+          ].map(({href,label,sub,color})=>(
+            <a key={href} href={href} style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'14px 10px',borderRadius:'10px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.2)',color:'#fff',textDecoration:'none',textAlign:'center',transition:'background 0.2s'}}>
+              <span style={{fontSize:'17px',fontWeight:800,color,marginBottom:'3px'}}>{label}</span>
+              <span style={{fontSize:'11px',opacity:0.5,lineHeight:1.3}}>{sub}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* PLATFORMS CHIPS */}
+      <div style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 40px'}}>
+        <h2 style={{fontSize:'18px',fontWeight:700,color:'#a5b4fc',marginBottom:'16px'}}>Compress Images For Specific Platforms</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:'8px'}}>
+          {[
+            {href:'/compress-for-shopify',   label:'Shopify',   icon:'🛍️', sub:'WebP / JPEG · under 1MB'},
+            {href:'/compress-for-etsy',      label:'Etsy',      icon:'🎨', sub:'JPEG · 2000px · under 1MB'},
+            {href:'/compress-for-amazon',    label:'Amazon',    icon:'📦', sub:'JPEG white bg · 2000px'},
+            {href:'/compress-for-instagram', label:'Instagram', icon:'📸', sub:'JPEG · 1080px · 200KB'},
+            {href:'/compress-for-linkedin',  label:'LinkedIn',  icon:'💼', sub:'JPEG · 400×400 · 8MB max'},
+            {href:'/compress-for-whatsapp',  label:'WhatsApp',  icon:'💬', sub:'JPEG · under 100KB'},
+            {href:'/compress-for-wordpress', label:'WordPress', icon:'🌐', sub:'WebP · under 100KB'},
+            {href:'/compress-for-email',     label:'Email',     icon:'📧', sub:'JPEG · under 100KB'},
+            {href:'/compress-for-pinterest', label:'Pinterest', icon:'📌', sub:'JPEG · 1000×1500'},
+            {href:'/compress-passport-photo',label:'Passport',  icon:'🪪', sub:'JPEG · 20–50KB'},
+            {href:'/compress-to-20kb',       label:'20KB Exact',icon:'🎯', sub:'Gov forms & DS-160'},
+            {href:'/compress-to-50kb',       label:'50KB Exact',icon:'📄', sub:'Job & exam portals'},
+          ].map(({href,label,icon,sub})=>(
+            <a key={href} href={href} style={{display:'flex',alignItems:'center',gap:'10px',padding:'11px 14px',borderRadius:'9px',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.1)',color:'rgba(255,255,255,0.85)',textDecoration:'none',transition:'background 0.2s'}}>
+              <span style={{fontSize:'18px',flexShrink:0}}>{icon}</span>
+              <span style={{flex:1}}>
+                <span style={{display:'block',fontSize:'13px',fontWeight:700}}>{label}</span>
+                <span style={{display:'block',fontSize:'11px',opacity:0.45,marginTop:'1px'}}>{sub}</span>
+              </span>
+              <span style={{fontSize:'11px',opacity:0.3}}>→</span>
+            </a>
+          ))}
+        </div>
+      </div>
       {/* POPULAR TOOLS — internal links SEO block */}
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 48px'}}>
         <div style={{borderTop:'1px solid rgba(255,255,255,0.07)',paddingTop:'32px'}}>

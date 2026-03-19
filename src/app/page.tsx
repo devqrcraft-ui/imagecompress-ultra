@@ -1,19 +1,83 @@
 import HomeClient from './home-client';
 
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I compress an image to exactly 20KB?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Upload your image, switch to Exact KB Mode, type 20, and click Compress. The tool runs a binary search in your browser to hit exactly 20KB within 1KB accuracy — nothing is uploaded to any server." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this tool really no-upload?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All compression runs locally in your browser using WebAssembly. Your files never leave your device — unlike TinyPNG, 11zon, and Cloudinary which upload files to their servers." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I compress multiple images at once?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — upload up to 50 images at once. All are compressed simultaneously in your browser. Download individually or as a ZIP file. Completely free, no signup required." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will quality be OK after compression?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The tool uses Exact KB Mode to find the maximum quality that fits within your target size. WebP format gives 25-35% smaller files than JPEG at the same visual quality." }
+    },
+    {
+      "@type": "Question",
+      "name": "What image formats are supported?",
+      "acceptedAnswer": { "@type": "Answer", "text": "JPEG, PNG, WebP, AVIF, and HEIC (iPhone photos) are all supported. Output can be WebP, AVIF, JPEG, or PNG. HEIC files are automatically converted in your browser before compression." }
+    }
+  ]
+};
+
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
       <HomeClient />
 
       {/* SEO CONTENT BELOW THE FOLD */}
       <div style={{background:'#0f0c29',color:'#e2e8f0',fontFamily:'system-ui,sans-serif'}}>
 
-        {/* WHEN DO YOU NEED */}
+        {/* HOW TO COMPRESS TO 20KB */}
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'48px 20px 32px'}}>
-          <h2 style={{fontSize:'clamp(20px,3vw,28px)',fontWeight:700,color:'#a5b4fc',marginBottom:'16px'}}>
+          <h2 style={{fontSize:'clamp(20px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'16px'}}>
+            How to compress an image to exactly 20KB (step-by-step)
+          </h2>
+          <ol style={{paddingLeft:'22px',lineHeight:2,fontSize:'15px',opacity:0.88}}>
+            <li><strong>Upload your image</strong> — drag and drop or click the upload zone. Supports JPG, PNG, WebP, AVIF, HEIC.</li>
+            <li><strong>Switch to Exact KB Mode</strong> — click the "Exact KB Mode" button in the tool.</li>
+            <li><strong>Set 20KB as your target</strong> — click the "20 KB" preset button or type 20 in the custom field.</li>
+            <li><strong>Click Compress</strong> — the tool binary-searches for maximum quality within 1KB of your target, entirely in your browser.</li>
+            <li><strong>Download your file</strong> — click "Save" next to your compressed image. No upload, no watermark, no signup required.</li>
+          </ol>
+        </section>
+
+        {/* BEST USES */}
+        <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 32px'}}>
+          <h2 style={{fontSize:'clamp(20px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'16px'}}>
+            Best uses for 20KB images
+          </h2>
+          <ul style={{paddingLeft:'20px',lineHeight:1.95,opacity:0.85,fontSize:'15px'}}>
+            <li><strong>US government portals</strong> — DS-160 visa application, USCIS forms, DV Lottery, passport and Green Card renewals all require photos under 20KB–240KB.</li>
+            <li><strong>Online job applications</strong> — Indeed, LinkedIn, Workday, Greenhouse cap resume photos at 50KB–100KB.</li>
+            <li><strong>University and exam registration</strong> — Common App, NEET, UPSC, GRE, GMAT, SAT registration portals require images between 10KB and 100KB.</li>
+            <li><strong>Passport and visa photo uploads</strong> — most embassy portals require JPEG under 20KB–50KB with exact pixel dimensions.</li>
+            <li><strong>Corporate HR portals</strong> — employee profile photos in Workday, SAP, Greenhouse must be under 50KB.</li>
+          </ul>
+        </section>
+
+        {/* WHEN DO YOU NEED */}
+        <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 32px'}}>
+          <h2 style={{fontSize:'clamp(20px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'16px'}}>
             When Do You Need to Compress an Image to an Exact Size?
           </h2>
-          <p style={{fontSize:'16px',lineHeight:1.7,marginBottom:'12px',opacity:0.9}}>
+          <p style={{fontSize:'15px',lineHeight:1.7,marginBottom:'12px',opacity:0.9}}>
             Many official portals, job applications, and e-commerce platforms require images under a strict file size limit.
             Uploading a file that is too large results in an error — and most generic compressors only reduce size by percentage,
             not to a precise kilobyte target.
@@ -29,7 +93,7 @@ export default function Page() {
 
         {/* TIPS */}
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 32px'}}>
-          <h2 style={{fontSize:'clamp(20px,3vw,28px)',fontWeight:700,color:'#a5b4fc',marginBottom:'16px'}}>
+          <h2 style={{fontSize:'clamp(20px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'16px'}}>
             Tips for Getting the Best Compression Results
           </h2>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:'16px'}}>
@@ -49,18 +113,20 @@ export default function Page() {
 
         {/* FAQ VISIBLE */}
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 48px'}}>
-          <h2 style={{fontSize:'clamp(20px,3vw,28px)',fontWeight:700,color:'#a5b4fc',marginBottom:'20px'}}>
+          <h2 style={{fontSize:'clamp(20px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'20px'}}>
             Frequently Asked Questions
           </h2>
           {[
             ['How do I compress an image to exactly 20KB?',
              'Upload your image, switch to Exact KB Mode, type 20, and click Compress. The tool runs a binary search in your browser to hit exactly 20KB within 1KB accuracy — nothing is uploaded to any server.'],
-            ['Does this tool upload my images to a server?',
-             'No. All compression runs locally in your browser using WebAssembly. Your files never leave your device — unlike TinyPNG, 11zon, and Cloudinary which upload files to their servers.'],
+            ['Is this tool really no-upload?',
+             'Yes. All compression runs locally in your browser using WebAssembly. Your files never leave your device — unlike TinyPNG, 11zon, and Cloudinary which upload files to their servers.'],
             ['What image formats are supported?',
              'JPEG, PNG, WebP, AVIF, and HEIC (iPhone photos) are all supported. Output can be WebP, AVIF, JPEG, or PNG. HEIC files are automatically converted in your browser before compression.'],
             ['Can I compress multiple images at once?',
              'Yes — upload up to 50 images at once. All are compressed simultaneously in your browser. Download individually or as a ZIP file. Completely free, no signup required.'],
+            ['Will quality be OK after compression?',
+             'Yes. The tool finds the maximum quality that fits within your target size. WebP format gives 25-35% smaller files than JPEG at the same visual quality. Start from the original file for best results.'],
             ['What is Exact KB Mode?',
              'Exact KB Mode lets you set a precise file size target — 20KB, 50KB, 100KB, or any value from 5KB to 500KB. The tool finds the maximum quality that fits within 1KB of your target.'],
             ['Is this tool completely free?',
@@ -74,6 +140,7 @@ export default function Page() {
             </details>
           ))}
         </section>
+
         {/* SISTER SITES */}
         <section style={{maxWidth:'900px',margin:'0 auto',padding:'0 20px 48px'}}>
           <p style={{fontSize:'11px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(165,180,252,0.45)',marginBottom:'14px'}}>Free tools from the same team</p>
