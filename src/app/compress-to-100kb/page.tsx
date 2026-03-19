@@ -78,7 +78,7 @@ export default function Page() {
               ['📧', 'Email Attachments', 'Keep inline images under 100KB to avoid Gmail and Outlook warnings. Smaller attachments load faster on mobile data.'],
               ['🛒', 'Ecommerce Listings', 'Shopify, Etsy, and WooCommerce product thumbnails load noticeably faster under 100KB — directly impacting conversion rates.'],
               ['🎓', 'University & Exam Portals', 'Many application portals (SAT, GRE, GMAT, UPSC, NEET) require profile photos under 100KB in JPEG format.'],
-              ['📋', 'Web Forms & Job Applications', 'LinkedIn, Indeed, Workday, and Greenhouse profile photo uploads work best when images are 100KB or under.'],
+              ['📝', 'Web Forms & Job Applications', 'LinkedIn, Indeed, Workday, and Greenhouse profile photo uploads work best when images are 100KB or under.'],
             ].map(([icon, title, desc]) => (
               <div key={title} className="p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
                 <div className="text-2xl mb-2">{icon}</div>
