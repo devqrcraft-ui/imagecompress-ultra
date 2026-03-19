@@ -36,6 +36,22 @@ export default function ClientPage() {
             ⚡ Open 100KB Compressor
           </Link>
         </div>
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>When Do You Need Exactly 100KB?</h2>
+        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.75, marginBottom: '20px' }}>A 100KB file size limit appears across email clients, government portals, ecommerce platforms, and job application forms. It hits the sweet spot between file size and visual quality.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: '12px', marginBottom: '40px' }}>
+          {[
+            { icon: 'EM', title: 'Email Attachments', desc: 'Keep inline images under 100KB to avoid Gmail and Outlook warnings.' },
+            { icon: 'SH', title: 'Ecommerce Listings', desc: 'Shopify, Etsy, WooCommerce thumbnails load faster under 100KB.' },
+            { icon: 'ED', title: 'University & Exam Portals', desc: 'SAT, GRE, GMAT, UPSC, NEET portals require photos under 100KB.' },
+            { icon: 'JO', title: 'Web Forms & Job Apps', desc: 'LinkedIn, Indeed, Workday profile photos work best under 100KB.' },
+          ].map(({ icon, title, desc }) => (
+            <div key={title} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '16px', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#6366f1', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', fontSize: '11px', fontWeight: 700, color: '#fff' }}>{icon}</div>
+              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>{title}</div>
+              <div style={{ fontSize: '13px', opacity: 0.65 }}>{desc}</div>
+            </div>
+          ))}
+        </div>
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Tips for Best Results at 100KB</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
           {tips.map((tip, i) => (
