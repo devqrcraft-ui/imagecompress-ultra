@@ -18,15 +18,7 @@ const faq = [
 
 export default function ClientPage() {
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
-          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
-          <Link href="/compress-to-200kb" style={{ color: 'white', textDecoration: 'none' }}>200KB Tool</Link>
-          <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
-        </div>
-      </nav>
+      <div style={{ color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
         <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>
           <Link href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</Link> → Compress to 100KB
