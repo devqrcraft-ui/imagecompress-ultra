@@ -117,6 +117,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" style={{overflowX:"hidden",maxWidth:"100vw"}}>
       <head>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9WHFGEEKL"></script>
+        <script dangerouslySetInnerHTML={{ __html: "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K9WHFGEEKL');" }} />
         <link rel="preconnect" href="https://compressto20kb.com" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebApp) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }} />
