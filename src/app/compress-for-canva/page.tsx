@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Image for Canva — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Canva free in your browser. No upload, no signup. Resize to exact KB for Canva requirements instantly.',
   keywords: ['compress image for canva', 'canva image size', 'canva photo requirements', 'compress for canva free'],
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-canva' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-canva' },
   openGraph: {
     title: 'Compress Image for Canva — Free & Private',
     description: 'Browser-based compression for Canva. Files never leave your device.',

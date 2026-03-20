@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Compress Photo for N-400 Naturalization Application — Free',
   description: 'Compress your photo for USCIS N-400 naturalization form. Meet all requirements instantly in your browser. No upload, 100% private.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-n400' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-n400' },
 };
 export default function Page() {
   return (
