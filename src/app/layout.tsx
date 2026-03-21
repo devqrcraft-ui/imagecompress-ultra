@@ -99,18 +99,6 @@ const schemaOrg = {
 };
 
 
-const homeFaqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How do I compress an image to 20KB?', acceptedAnswer: { '@type': 'Answer', text: 'Upload your image, switch to Exact KB Mode, type 20, and click Compress. The tool uses binary search in your browser to hit exactly 20KB within 1KB — no upload to any server.' } },
-    { '@type': 'Question', name: 'Does this tool upload my images to a server?', acceptedAnswer: { '@type': 'Answer', text: 'No. All compression runs locally in your browser using WebAssembly. Your files never leave your device — unlike TinyPNG, 11zon, and Cloudinary which upload files to their servers.' } },
-    { '@type': 'Question', name: 'What image formats are supported?', acceptedAnswer: { '@type': 'Answer', text: 'JPEG, PNG, WebP, AVIF, and HEIC (iPhone photos) are all supported. Output can be WebP, AVIF, JPEG, or PNG. HEIC files from iPhone are automatically converted in your browser before compression.' } },
-    { '@type': 'Question', name: 'Can I compress multiple images at once?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — upload up to 50 images at once. All are compressed simultaneously in your browser. Download individually or as a ZIP file. Free, no signup required.' } },
-    { '@type': 'Question', name: 'What is Exact KB Mode?', acceptedAnswer: { '@type': 'Answer', text: 'Exact KB Mode lets you set a precise file size target — 20KB, 50KB, 100KB, or any value from 5KB to 500KB. The tool uses binary search to find the maximum quality that fits your target, within 1KB accuracy.' } },
-    { '@type': 'Question', name: 'Is this tool free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — completely free with no limits, no watermarks, no signup, and no daily quotas. Compress as many images as you need.' } },
-  ],
-};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -124,7 +112,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }} />
       </head>
       <body style={{ margin: 0, padding: 0, background: '#0f0c29', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Navbar />
