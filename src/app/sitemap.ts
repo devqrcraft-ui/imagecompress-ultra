@@ -94,6 +94,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Visa country pages
     ...visaPages,
 
+
+    // Converter pages
+    { url: `${baseUrl}/jpg-to-png`, lastModified, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/png-to-jpg`, lastModified, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/jpg-to-word`, lastModified, changeFrequency: 'monthly' as const, priority: 0.9 },
+    { url: `${baseUrl}/convert-image-to-pdf`, lastModified, changeFrequency: 'monthly' as const, priority: 0.9 },
+
     // VS pages
     { url: `${baseUrl}/vs/tinypng`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/vs/squoosh`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
