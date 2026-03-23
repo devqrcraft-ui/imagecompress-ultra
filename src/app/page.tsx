@@ -40,6 +40,12 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
       />
       <HomeClient />
+      {/* AS-IS DISCLAIMER */}
+      <div style={{background:'#0f0c29',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'16px 20px',textAlign:'center' as const}}>
+        <p style={{maxWidth:'700px',margin:'0 auto',fontSize:'12px',color:'rgba(255,255,255,0.35)',lineHeight:1.7}}>
+          This tool runs entirely in your browser and does not upload or store any images. It is provided as-is, without warranties. Always keep original copies of important documents.
+        </p>
+      </div>
 
       {/* SEO CONTENT BELOW THE FOLD */}
       <div style={{background:'#0f0c29',color:'#e2e8f0',fontFamily:'system-ui,sans-serif'}}>
