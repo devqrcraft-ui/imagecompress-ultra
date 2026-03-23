@@ -172,7 +172,7 @@
       max-width: 100%;
       padding: 8px 12px;
       border-radius: 10px;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.5;
       word-break: break-word;
     }
