@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: 'compress image to 20kb, compress image to 50kb, compress image to 100kb, compress image without uploading, compress image for shopify, compress image for etsy, compress image for amazon, compress image for instagram, compress passport photo, image compressor free, reduce image size online, compress jpg png webp free, heic to jpg converter',
   authors: [{ name: 'CompressTo20KB' }],
   metadataBase: new URL('https://www.compressto20kb.com'),
-  alternates: { canonical: '/' },
+  alternates: { canonical: 'https://www.compressto20kb.com' },
   openGraph: {
     title: 'Compress Image Online — Free JPG, PNG, WebP, AVIF, HEIC (No Upload)',
     description: 'Free image compressor for JPG, PNG, WebP, AVIF and HEIC. Exact KB mode: 20KB, 50KB, 100KB. No upload, no watermark, 100% private.',
