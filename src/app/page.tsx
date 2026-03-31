@@ -154,13 +154,13 @@ export default function Page() {
 
             <a href="https://gigwisetax.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'flex',flexDirection:'column',gap:'10px',background:'rgba(178,34,52,0.08)',border:'1px solid rgba(178,34,52,0.3)',borderRadius:'10px',padding:'18px 20px'}}>
               <div>
-                <div style={{fontSize:'10px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(248,113,113,0.7)',marginBottom:'5px'}}>1099 Gig Tax Calculator</div>
+                <div style={{fontSize:'10px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(255,140,140,1)',marginBottom:'5px'}}>1099 Gig Tax Calculator</div>
                 <div style={{fontSize:'20px',fontWeight:900,color:'#fff',lineHeight:1.15}}>GigWiseTax<span style={{color:'#f87171'}}>.com</span></div>
               </div>
               <div style={{fontSize:'15px',color:'rgba(255,255,255,0.9)',lineHeight:1.65}}>SE tax 15.3% + federal + state. DoorDash, Uber, OnlyFans. All 51 states.</div>
               <div style={{display:'flex',gap:'6px',flexWrap:'wrap'}}>
                 {['SE Tax 15.3%','All 51 States','100% Free'].map(t=>(
-                  <span key={t} style={{fontSize:'11px',background:'rgba(248,113,113,0.12)',border:'1px solid rgba(248,113,113,0.25)',color:'rgba(248,113,113,0.85)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
+                  <span key={t} style={{fontSize:'11px',background:'rgba(255,100,100,0.15)',border:'1px solid rgba(255,100,100,0.3)',color:'rgba(255,150,150,1)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
                 ))}
               </div>
               <div style={{background:'#B22234',color:'#fff',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'15px',fontWeight:800,marginTop:'2px'}}>Calculate Gig Taxes →</div>

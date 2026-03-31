@@ -463,7 +463,7 @@ export default function HomeClient() {
             <div key={item.title} style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(129,140,248,0.2)',borderRadius:'10px',padding:'18px'}}>
               <div style={{fontSize:'22px',marginBottom:'8px'}}>{item.icon}</div>
               <div style={{fontSize:'14px',fontWeight:700,color:'#fff',marginBottom:'6px'}}>{item.title}</div>
-              <div style={{fontSize:'15px',color:'rgba(255,255,255,0.55)',lineHeight:1.65}}>{item.desc}</div>
+              <div style={{fontSize:'15px',color:'rgba(255,255,255,0.85)',lineHeight:1.65}}>{item.desc}</div>
             </div>
           ))}
         </div>
