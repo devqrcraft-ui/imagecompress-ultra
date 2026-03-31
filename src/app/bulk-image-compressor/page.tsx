@@ -7,5 +7,6 @@ export const metadata: Metadata = {
   description: 'Compress 50+ images at once — free, no upload, no signup. Bulk compress JPG, PNG, WebP, HEIC in seconds. Download as ZIP. 3x faster than TinyPNG for batch compression jobs.',
   keywords: 'bulk image compressor, batch image compressor online free, compress multiple images at once, bulk resize photos online, batch compress jpg png, compress 50 images free',
   alternates: { canonical: '/bulk-image-compressor' },
+  openGraph: { url: 'https://www.compressto20kb.com/bulk-image-compressor' },
 };
 export default function Page() { return <ClientPage />; }

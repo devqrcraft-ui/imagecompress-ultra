@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "USPS image requirements for Click-N-Ship, personalized stamps, and USPS.com. How to compress images to meet USPS size limits free online.",
   keywords: "compress image for USPS, USPS photo requirements, USPS image size, usps stamp image size",
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-for-usps' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-for-usps' },
 };
 
 const faqSchema = {

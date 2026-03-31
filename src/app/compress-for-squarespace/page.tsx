@@ -7,5 +7,6 @@ export const metadata: Metadata = {
   description: 'Compress images for Squarespace websites. Reduce photo size for faster page load and better Google ranking. Convert to WebP, no upload, 100% free.',
   keywords: 'compress images for squarespace, squarespace image size limit, squarespace image optimization, resize photos for squarespace, squarespace webp images',
   alternates: { canonical: '/compress-for-squarespace' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-squarespace' },
 };
 export default function Page() { return <ClientPage />; }

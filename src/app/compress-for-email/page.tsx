@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: 'Compress images for email in seconds. Reduce photo size to 100KB–500KB for Gmail, Outlook and other providers. No upload — all processing happens in your browser.',
   keywords: 'compress image for email, reduce image size for email, compress photo for email attachment, email image compressor, resize image for email free, compress jpg for gmail outlook',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-email' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-email' },
 };
 
 export default function Page() {

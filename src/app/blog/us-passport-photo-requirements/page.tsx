@@ -7,5 +7,6 @@ export const metadata: Metadata = {
   description: 'Official US passport photo requirements for 2026. Size, format, background, and how to compress your photo to under 240KB for online passport renewal.',
   keywords: 'us passport photo requirements, passport photo size, passport photo compression, compress passport photo, us passport online photo',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/us-passport-photo-requirements' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/us-passport-photo-requirements' },
 };
 export default function Page() { return <ClientPage />; }

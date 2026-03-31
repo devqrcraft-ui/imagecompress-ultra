@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Free Image Compressor for Etsy — Compress Product Photos Instantly',
   description: 'Compress Etsy listing images to under 1MB free. No upload, no signup. Browser-based tool that keeps your photos private and your shop fast.',
   alternates: { canonical: '/compress-for-etsy' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-etsy' },
 };
 
 export default function EtsyPage() {

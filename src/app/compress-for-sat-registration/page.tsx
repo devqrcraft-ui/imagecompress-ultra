@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for SAT Registration — Free Online Tool',
   description: 'Compress photo for SAT registration. Under 240KB, white background, JPEG.',
   alternates: { canonical: '/compress-for-sat-registration' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-sat-registration' },
   keywords: 'compress photo for sat-registration, SAT Registration photo requirements, SAT Registration photo size',
 };
 

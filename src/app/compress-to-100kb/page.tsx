@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Compress any image to exactly 100KB free online. Works in your browser — files never leave your device. No upload, no signup. Perfect for email, web, ecommerce, and forms with a 100KB photo limit.',
   keywords: 'compress image to 100kb, reduce image size to 100kb, resize photo to 100kb, 100kb image compressor online free, compress jpg to 100kb, reduce png to 100kb, compress webp to 100kb',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-100kb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-100kb' },
 };
 
 const faqSchema = {

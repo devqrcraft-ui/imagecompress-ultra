@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Image to 2MB — Free Online Tool',
   description: 'Compress any image to exactly 2MB online. Perfect for general document uploads. Free, no upload, 100% private. Works instantly in your browser.',
   alternates: { canonical: '/compress-to-2mb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-2mb' },
   keywords: 'compress image to 2MB, reduce photo to 2MB, compress to 2MB, image compressor 2MB',
 };
 

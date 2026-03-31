@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Amazon requires main images on pure white background under specific file sizes. Compress your Amazon product photos free.',
   keywords: 'compress images amazon seller, amazon product image requirements, reduce image size amazon listing',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-images-for-amazon-seller' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-images-for-amazon-seller' },
 };
 export default function Page() {
   return (

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for SSC Exam India — Free Online Tool',
   description: 'Compress photo for SSC exam India. Under 50KB, white background, JPEG.',
   alternates: { canonical: '/compress-for-ssc-exam' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-ssc-exam' },
   keywords: 'compress photo for ssc-exam, SSC Exam India photo requirements, SSC Exam India photo size',
 };
 

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for UPSC Civil Services — Free Online Tool',
   description: 'Compress photo for UPSC civil services exam registration. Under 300KB, white background.',
   alternates: { canonical: '/compress-for-upsc-exam' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-upsc-exam' },
   keywords: 'compress photo for upsc-exam, UPSC Civil Services photo requirements, UPSC Civil Services photo size',
 };
 

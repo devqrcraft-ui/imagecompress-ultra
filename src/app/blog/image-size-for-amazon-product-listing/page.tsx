@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "Amazon product image requirements: minimum 1000px, white background, JPEG format, under 10MB. How to compress and optimize Amazon listing images free.",
   keywords: "amazon product image size, amazon listing image requirements, compress image for amazon, amazon seller image specs",
   alternates: { canonical: 'https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing' },
 };
 
 const faqSchema = {

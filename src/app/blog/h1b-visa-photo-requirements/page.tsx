@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "Complete guide to H1B visa photo requirements: dimensions, file size limits, background. How to compress your photo to 20KB for USCIS forms free.",
   keywords: "h1b visa photo requirements, h1b photo size, uscis photo requirements, compress photo for h1b",
   alternates: { canonical: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },
 };
 
 const faqSchema = {

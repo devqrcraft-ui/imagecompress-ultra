@@ -7,5 +7,6 @@ export const metadata: Metadata = {
   description: 'CompressTo20KB vs Kraken.io: no upload, no monthly fee, exact KB mode. See why users switch from Kraken.io to our free browser-based tool.',
   keywords: 'kraken.io alternative, kraken.io free alternative, kraken io vs, better than kraken io, image compressor no upload',
   alternates: { canonical: '/vs/kraken' },
+  openGraph: { url: 'https://www.compressto20kb.com/vs/kraken' },
 };
 export default function Page() { return <ClientPage />; }

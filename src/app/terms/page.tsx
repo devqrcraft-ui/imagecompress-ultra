@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service — CompressTo20KB',
   description: 'Terms of Service for CompressTo20KB free image compression tool.',
   alternates: { canonical: '/terms' },
+  openGraph: { url: 'https://www.compressto20kb.com/terms' },
   robots: { index: true, follow: false },
 };
 export default function Terms() {

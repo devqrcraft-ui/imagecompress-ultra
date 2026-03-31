@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for I-485 Green Card Application — Free',
   description: 'Compress your photo for USCIS Form I-485 (Adjustment of Status). Meet requirements instantly. No upload, 100% private.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-i485' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-i485' },
 };
 export default function Page() {
   return (

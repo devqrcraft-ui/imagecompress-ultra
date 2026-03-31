@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Free Image Compressor for Amazon Listings — Resize Product Photos',
   description: 'Compress Amazon product images to meet listing requirements. Free, browser-based, no upload. Get your photos under 10MB with perfect quality.',
   alternates: { canonical: '/compress-for-amazon' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-amazon' },
 };
 
 export default function AmazonPage() {

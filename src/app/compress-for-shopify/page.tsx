@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Free Image Compressor for Shopify — No App, No Upload, No Cost',
   description: 'Compress Shopify product images to WebP under 1MB free. No app installation. Unlike App Compressor ($10/month), your images are never deleted. 100% private, browser-based.',
   alternates: { canonical: '/compress-for-shopify' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-shopify' },
 };
 
 export default function ShopifyPage() {

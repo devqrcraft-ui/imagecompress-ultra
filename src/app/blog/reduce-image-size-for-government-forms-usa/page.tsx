@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'US government forms require specific photo sizes. Free tool to compress and resize photos for USCIS, passport, and visa applications.',
   keywords: 'reduce image size government forms, compress photo for uscis, passport photo size requirements usa',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/reduce-image-size-for-government-forms-usa' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/reduce-image-size-for-government-forms-usa' },
 };
 export default function Page() {
   return (

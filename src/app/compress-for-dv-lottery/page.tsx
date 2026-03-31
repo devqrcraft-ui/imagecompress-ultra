@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for DV Lottery 2026/2027 — Free Online Tool',
   description: 'Compress photo for DV Lottery (Diversity Visa Program). Requirements: JPEG, 600×600px to 1200×1200px, under 240KB, white background. Free, no upload, instant.',
   alternates: { canonical: '/compress-for-dv-lottery' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-dv-lottery' },
   keywords: 'compress photo dv lottery, dv lottery photo requirements, diversity visa photo size, dv lottery 2026 photo, dv lottery 2027 photo compress',
 };
 

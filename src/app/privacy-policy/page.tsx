@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy — CompressTo20KB',
   description: 'Privacy Policy for CompressTo20KB. We never upload, store, or share your images. All processing happens in your browser.',
   alternates: { canonical: '/privacy-policy' },
+  openGraph: { url: 'https://www.compressto20kb.com/privacy-policy' },
   robots: { index: true, follow: false },
 };
 export default function PrivacyPolicy() {

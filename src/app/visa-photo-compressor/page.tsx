@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Visa Photo Compressor by Country — Free, No Upload',
   description: 'Compress passport & visa photos for any country. UK, Schengen, Canada, Australia, India, Japan and 40+ more. Free, browser-based, files never uploaded.',
   alternates: { canonical: '/visa-photo-compressor' },
+  openGraph: { url: 'https://www.compressto20kb.com/visa-photo-compressor' },
   keywords: 'visa photo compressor, passport photo resize, compress photo for visa, visa photo requirements by country',
 };
 

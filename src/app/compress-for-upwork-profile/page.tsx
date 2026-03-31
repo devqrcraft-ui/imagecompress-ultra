@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for Upwork Profile — Free Online Tool',
   description: 'Compress profile photo for Upwork freelancer profile. Under 5MB, square format.',
   alternates: { canonical: '/compress-for-upwork-profile' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-upwork-profile' },
   keywords: 'compress photo for upwork-profile, Upwork Profile profile photo size, Upwork Profile photo requirements',
 };
 

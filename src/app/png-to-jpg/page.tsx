@@ -3,6 +3,7 @@ export const metadata: Metadata = {
   title: 'PNG to JPG Converter — Free Online, No Upload',
   description: 'Convert PNG images to JPG for smaller file sizes. All conversion runs in your browser, so your images never leave your device.',
   alternates: { canonical: 'https://www.compressto20kb.com/png-to-jpg' },
+  openGraph: { url: 'https://www.compressto20kb.com/png-to-jpg' },
 }
 export default function Page() {
   return (

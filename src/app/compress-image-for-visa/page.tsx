@@ -7,5 +7,6 @@ export const metadata: Metadata = {
   description: 'Compress visa application photo to exact KB size for US visa, Schengen visa, UK visa, and more. Free, no upload, instant. Meet photo file size requirements for any country.',
   keywords: 'compress photo for visa application, visa photo size requirements, compress image for us visa, compress photo for schengen visa, resize visa photo online free',
   alternates: { canonical: '/compress-image-for-visa' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-image-for-visa' },
 };
 export default function Page() { return <ClientPage />; }

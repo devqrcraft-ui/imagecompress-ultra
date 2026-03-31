@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "FAQ — CompressTo20KB Image Compressor",
   description: "Frequently asked questions about CompressTo20KB: privacy, formats, exact KB compression, USCIS photos, Shopify images, and more.",
   alternates: { canonical: '/faq' },
+  openGraph: { url: 'https://www.compressto20kb.com/faq' },
 };
 
 const faqs = [

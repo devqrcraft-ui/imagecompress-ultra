@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: 'Compress images without visible quality loss using smart compression. Free online tool — no upload, no signup. Works for JPEG, PNG, WebP. Before/after preview included.',
   keywords: 'compress image without losing quality, compress photo without quality loss, reduce image size without losing quality, lossless image compression free, compress image keep quality',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-on-windows-11' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-on-windows-11' },
 };
 
 export default function Page() { return <ClientPage />; }
