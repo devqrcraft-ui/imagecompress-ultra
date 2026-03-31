@@ -4,14 +4,20 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
 
   compress: true,
+  swcMinify: true,
+  modularizeImports: {
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{member}}',
+    },
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
   },
   productionBrowserSourceMaps: false,
   experimental: {
-    optimizePackageImports: ["react", "react-dom"],
-    optimizeCss: true,
+    optimizePackageImports: ["react", "react-dom", "lucide-react", "@radix-ui/react-icons"],
+    optimizeCss: false,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
