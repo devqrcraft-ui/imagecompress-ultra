@@ -119,7 +119,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main role="main" style={{ flex: 1 }}>{children}</main>
 
       <Footer />
-      <script src="/ai-chat-widget-final.js?v=4"></script>        <SpeedInsights />
+      <script src="/ai-chat-widget-final.js?v=4" defer></script>        <SpeedInsights />
       </body>
       <Analytics />
     </html>
