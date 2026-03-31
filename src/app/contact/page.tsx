@@ -3,8 +3,8 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact ImageCompress Pro",
-  description: "Get in touch with the ImageCompress Pro team. We respond to all inquiries within 24 hours.",
+  title: "Contact — CompressTo20KB",
+  description: "Get in touch with the CompressTo20KB team. We respond to all inquiries within 24 hours.",
 };
 
 export default function ContactPage() {
@@ -13,75 +13,20 @@ export default function ContactPage() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-      <p className="text-gray-600 mb-10">Have a question, bug report, or feature request? Fill in the form below — we respond within 24 hours.</p>
+      <p style={{color:"rgba(255,255,255,0.6)"}}>Have a question, bug report, or feature request? Fill in the form below — we respond within 24 hours.</p>
 
-      <form action="/api/contact" method="POST" className="space-y-6">
-        {/* Honeypot — hidden from real users, bots fill it */}
-        <div style={{ position: "absolute", left: "-9999px", top: "-9999px" }} aria-hidden="true">
-          <label htmlFor="website">Website (leave blank)</label>
-          <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
-        </div>
-
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Your name"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="you@example.com"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-          <select
-            id="subject"
-            name="subject"
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value="general">General question</option>
-            <option value="bug">Bug report</option>
-            <option value="feature">Feature request</option>
-            <option value="api">API inquiry</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            rows={6}
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Describe your question or issue in detail..."
-          />
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:bg-blue-700 transition"
+      <div style={{background:"rgba(129,140,248,0.08)",border:"1px solid rgba(129,140,248,0.2)",borderRadius:"12px",padding:"24px",textAlign:"center" as const}}>
+        <p style={{color:"#c7d2fe",fontSize:"16px",marginBottom:"16px"}}>Have a question, bug report, or feature request?</p>
+        <a
+          href="mailto:kalkulator018@gmail.com?subject=CompressTo20KB%20Feedback"
+          style={{display:"inline-block",background:"#818cf8",color:"#fff",padding:"12px 32px",borderRadius:"8px",fontWeight:700,textDecoration:"none",fontSize:"15px"}}
         >
-          Send Message →
-        </button>
-      </form>
+          Email Us →
+        </a>
+        <p style={{color:"rgba(255,255,255,0.4)",fontSize:"12px",marginTop:"12px"}}>kalkulator018@gmail.com · We respond within 24 hours</p>
+      </div>
 
-      <div className="mt-12 p-6 bg-gray-50 rounded-2xl text-sm text-gray-500">
+      <div style={{background:"rgba(129,140,248,0.06)",border:"1px solid rgba(129,140,248,0.15)",borderRadius:"12px",padding:"24px",marginTop:"48px",fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>
         <p className="mb-2"><strong>Response time:</strong> within 24 hours on business days</p>
         <p className="mb-2"><strong>Bug reports:</strong> please include your browser, OS, and image format</p>
         <p><strong>Privacy:</strong> we do not share your contact information with third parties</p>
