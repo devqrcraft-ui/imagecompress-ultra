@@ -3,8 +3,8 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import type { Metadata } from 'next';
 import ClientPage from './client';
 export const metadata: Metadata = {
-  title: 'Bulk Image Compressor 2026 — Compress 50+ Images at Once, Free & Instant',
-  description: 'Compress 50+ images at once — free, no upload, no signup. Bulk compress JPG, PNG, WebP, HEIC in seconds. Download as ZIP. 3x faster than TinyPNG for batch compression jobs.',
+  title: 'Bulk Image Compressor — Compress 50 Images at Once Free, No Upload',
+  description: 'Compress 50 images at once free. No upload, no signup, no watermark. JPG, PNG, WebP, HEIC → download as ZIP in seconds. Faster than TinyPNG — files never leave your device.',
   keywords: 'bulk image compressor, batch image compressor online free, compress multiple images at once, bulk resize photos online, batch compress jpg png, compress 50 images free',
   alternates: { canonical: '/bulk-image-compressor' },
   openGraph: { url: 'https://www.compressto20kb.com/bulk-image-compressor' },

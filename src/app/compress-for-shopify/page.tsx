@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Free Image Compressor for Shopify — No App, No Upload, No Cost',
-  description: 'Compress Shopify product images to WebP under 1MB free. No app installation. Unlike App Compressor ($10/month), your images are never deleted. 100% private, browser-based.',
+  title: 'Shopify Image Compressor Free 2026 — WebP, No App, Instant, No Upload',
+  description: 'Compress Shopify product images to WebP under 1MB — free, no app install, no monthly fee. Unlike $10/mo apps, files never leave your browser. Bulk compress 50 images at once.',
   alternates: { canonical: '/compress-for-shopify' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-shopify' },
 };
