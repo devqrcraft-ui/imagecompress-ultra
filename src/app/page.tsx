@@ -149,7 +149,7 @@ export default function Page() {
 
         {/* SISTER SITES */}
         <section style={{maxWidth:'900px',margin:'0 auto',padding:'0 20px 48px'}}>
-          <p style={{fontSize:'11px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(165,180,252,0.45)',marginBottom:'14px'}}>Free tools from the same team</p>
+          <p style={{fontSize:'13px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(165,180,252,0.8)',marginBottom:'14px'}}>Free tools from the same team</p>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:'14px'}}>
 
             <a href="https://gigwisetax.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'flex',flexDirection:'column',gap:'10px',background:'rgba(178,34,52,0.08)',border:'1px solid rgba(178,34,52,0.3)',borderRadius:'10px',padding:'18px 20px'}}>
@@ -160,7 +160,7 @@ export default function Page() {
               <div style={{fontSize:'15px',color:'rgba(255,255,255,0.9)',lineHeight:1.65}}>SE tax 15.3% + federal + state. DoorDash, Uber, OnlyFans. All 51 states.</div>
               <div style={{display:'flex',gap:'6px',flexWrap:'wrap'}}>
                 {['SE Tax 15.3%','All 51 States','100% Free'].map(t=>(
-                  <span key={t} style={{fontSize:'11px',background:'rgba(255,100,100,0.15)',border:'1px solid rgba(255,100,100,0.3)',color:'rgba(255,150,150,1)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
+                  <span key={t} style={{fontSize:'13px',background:'rgba(255,100,100,0.15)',border:'1px solid rgba(255,100,100,0.3)',color:'rgba(255,150,150,1)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
                 ))}
               </div>
               <div style={{background:'#B22234',color:'#fff',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'15px',fontWeight:800,marginTop:'2px'}}>Calculate Gig Taxes →</div>
@@ -174,7 +174,7 @@ export default function Page() {
               <div style={{fontSize:'15px',color:'rgba(255,255,255,0.9)',lineHeight:1.65}}>Take-home pay after all taxes. Salary and hourly. All 50 states, 2026 IRS brackets.</div>
               <div style={{display:'flex',gap:'6px',flexWrap:'wrap'}}>
                 {['Salary & Hourly','All 50 States','100% Free'].map(t=>(
-                  <span key={t} style={{fontSize:'11px',background:'rgba(245,200,66,0.1)',border:'1px solid rgba(245,200,66,0.28)',color:'rgba(245,200,66,0.85)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
+                  <span key={t} style={{fontSize:'13px',background:'rgba(245,200,66,0.1)',border:'1px solid rgba(245,200,66,0.28)',color:'rgba(245,200,66,0.85)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
                 ))}
               </div>
               <div style={{background:'#F5C842',color:'#07111f',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'15px',fontWeight:800,marginTop:'2px'}}>Calculate My Paycheck →</div>
@@ -188,7 +188,7 @@ export default function Page() {
               <div style={{fontSize:'15px',color:'rgba(255,255,255,0.9)',lineHeight:1.65}}>Free IRS Schedule C checklists for every gig job. DoorDash, Uber, Airbnb and more.</div>
               <div style={{display:'flex',gap:'6px',flexWrap:'wrap'}}>
                 {['17 Job Types','Schedule C','100% Free'].map(t=>(
-                  <span key={t} style={{fontSize:'11px',background:'rgba(184,146,74,0.1)',border:'1px solid rgba(184,146,74,0.28)',color:'rgba(232,184,75,0.85)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
+                  <span key={t} style={{fontSize:'13px',background:'rgba(184,146,74,0.1)',border:'1px solid rgba(184,146,74,0.28)',color:'rgba(232,184,75,0.85)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
                 ))}
               </div>
               <div style={{background:'#B8924A',color:'#07111f',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'15px',fontWeight:800,marginTop:'2px'}}>View Deductions →</div>
@@ -212,7 +212,7 @@ export default function Page() {
             ].map(([href, size, desc]) => (
               <a key={href} href={href} style={{display:'block',padding:'14px 12px',borderRadius:'12px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',color:'#e2e8f0',textDecoration:'none',transition:'background 0.2s'}}>
                 <div style={{fontSize:'18px',fontWeight:800,color:'#818cf8',marginBottom:'4px'}}>{size}</div>
-                <div style={{fontSize:'11px',opacity:0.65,lineHeight:1.4}}>{desc}</div>
+                <div style={{fontSize:'13px',opacity:0.85,lineHeight:1.4}}>{desc}</div>
               </a>
             ))}
           </div>
@@ -239,7 +239,7 @@ export default function Page() {
             ].map(([href, label, desc]) => (
               <a key={href} href={href} style={{display:'block',padding:'14px 12px',borderRadius:'12px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',color:'#e2e8f0',textDecoration:'none'}}>
                 <div style={{fontSize:'14px',fontWeight:700,color:'#c7d2fe',marginBottom:'4px'}}>{label}</div>
-                <div style={{fontSize:'11px',opacity:0.65,lineHeight:1.4}}>{desc}</div>
+                <div style={{fontSize:'13px',opacity:0.85,lineHeight:1.4}}>{desc}</div>
               </a>
             ))}
           </div>
