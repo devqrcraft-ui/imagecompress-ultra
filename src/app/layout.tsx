@@ -117,7 +117,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-K9WHFGEEKL');
           }}
         />
-        <link rel="preconnect" href="https://www.compressto20kb.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebApp) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
