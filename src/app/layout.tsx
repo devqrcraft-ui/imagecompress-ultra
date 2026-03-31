@@ -7,8 +7,8 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Compress Image Online — Free JPG, PNG, WebP, AVIF, HEIC (No Upload)',
-  description: 'Free online image compressor for JPG, PNG, WebP, AVIF and HEIC. Shrink images for web, email and social media — or hit exact sizes like 20KB, 50KB, 100KB. No upload, no watermark, 100% private in your browser.',
+  title: 'Compress Image Free Online — JPG PNG WebP, Exact KB, No Upload Required',
+  description: 'Compress images free online — JPG, PNG, WebP, AVIF, HEIC. Hit exact sizes: 20KB, 50KB, 100KB. No upload, no watermark, no signup. Files stay on your device. Faster than TinyPNG.',
   keywords: 'compress image to 20kb, compress image to 50kb, compress image to 100kb, compress image without uploading, compress image for shopify, compress image for etsy, compress image for amazon, compress image for instagram, compress passport photo, image compressor free, reduce image size online, compress jpg png webp free, heic to jpg converter',
   authors: [{ name: 'CompressTo20KB' }],
   metadataBase: new URL('https://www.compressto20kb.com'),
