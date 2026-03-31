@@ -54,9 +54,9 @@ export default function Page() {
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 28px'}}>
           <h2 style={{fontSize:'clamp(19px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'14px'}}>When to Use 20KB vs 100KB vs 200KB</h2>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(230px,1fr))',gap:'14px'}}>
-            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>20KB–50KB</div><div style={{fontSize:'13px',lineHeight:1.6,opacity:0.8}}>Tiny logos, signatures, simple icons where speed matters more than detail.</div></div>
-            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>100KB</div><div style={{fontSize:'13px',lineHeight:1.6,opacity:0.8}}>Default target for most inline email images and small hero graphics. Use Exact KB Mode — type 100 and hit Compress.</div></div>
-            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>150–200KB</div><div style={{fontSize:'13px',lineHeight:1.6,opacity:0.8}}>Detailed photos (events, products) where you need more quality but still want fast loading.</div></div>
+            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>20KB–50KB</div><div style={{fontSize:'15px',lineHeight:1.6,opacity:0.8}}>Tiny logos, signatures, simple icons where speed matters more than detail.</div></div>
+            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>100KB</div><div style={{fontSize:'15px',lineHeight:1.6,opacity:0.8}}>Default target for most inline email images and small hero graphics. Use Exact KB Mode — type 100 and hit Compress.</div></div>
+            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>150–200KB</div><div style={{fontSize:'15px',lineHeight:1.6,opacity:0.8}}>Detailed photos (events, products) where you need more quality but still want fast loading.</div></div>
           </div>
           <p style={{fontSize:'15px',lineHeight:1.7,marginTop:'14px',opacity:0.9}}>With Exact KB Mode you can hit these targets precisely instead of guessing a random quality percentage.</p>
         </section>
@@ -74,9 +74,9 @@ export default function Page() {
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 28px'}}>
           <h2 style={{fontSize:'clamp(19px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'14px'}}>CompressTo20KB vs Competitors — Email Image Compression</h2>
           <div style={{overflowX:'auto'}}>
-            <table style={{width:'100%',borderCollapse:'collapse',fontSize:'13px'}}>
+            <table style={{width:'100%',borderCollapse:'collapse',fontSize:'15px'}}>
               <thead><tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
-                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Feature</th>
+                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Feature</th>
                 <th style={{padding:'10px 12px',color:'#818cf8',fontWeight:800}}>This Tool</th>
                 <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>TinyPNG</th>
                 <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>Squoosh</th>
@@ -95,11 +95,11 @@ export default function Page() {
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 52px'}}>
           <h2 style={{fontSize:'18px',fontWeight:700,color:'#a5b4fc',marginBottom:'14px'}}>Related Tools</h2>
           <div style={{display:'flex',flexWrap:'wrap',gap:'10px'}}>
-            <a href="/" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>Home — Image Compressor →</a>
-            <a href="/compress-to-100kb" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>Compress to 100KB →</a>
-            <a href="/compress-to-500kb" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>Compress to 500KB →</a>
-            <a href="/compress-for-shopify" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>For Shopify →</a>
-            <a href="/compress-for-instagram" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>For Instagram →</a>
+            <a href="/" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>Home — Image Compressor →</a>
+            <a href="/compress-to-100kb" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>Compress to 100KB →</a>
+            <a href="/compress-to-500kb" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>Compress to 500KB →</a>
+            <a href="/compress-for-shopify" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>For Shopify →</a>
+            <a href="/compress-for-instagram" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>For Instagram →</a>
           </div>
         </section>
 

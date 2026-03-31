@@ -54,11 +54,11 @@ export default function CompressTo240KBPage() {
 
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '13px', opacity: 0.75 }}>← Home</Link>
+        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Home</Link>
       </nav>
 
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
-        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>
+        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
           <Link href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</Link> {'→'} Compress to 240KB
         </div>
 
@@ -73,7 +73,7 @@ export default function CompressTo240KBPage() {
         {/* DS-160 Requirements Box */}
         <div style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '12px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontWeight: 700, fontSize: '14px', color: '#f87171', marginBottom: '8px' }}>⚠️ DS-160 Photo Requirements (travel.state.gov)</div>
-          <div style={{ fontSize: '13px', opacity: 0.8, lineHeight: 1.8 }}>
+          <div style={{ fontSize:'15px', opacity: 0.8, lineHeight: 1.8 }}>
             ✓ Format: <strong style={{ color: 'white' }}>JPEG only</strong> (not PNG, not HEIC)<br />
             ✓ File size: <strong style={{ color: 'white' }}>Under 240KB</strong><br />
             ✓ Dimensions: <strong style={{ color: 'white' }}>600×600px to 1200×1200px</strong><br />
@@ -86,7 +86,7 @@ export default function CompressTo240KBPage() {
         {/* CTA */}
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
           <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to Under 240KB — Instant, Free</div>
-          <p style={{ fontSize: '13px', opacity: 0.65, marginBottom: '16px' }}>
+          <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>
             No upload. Files stay on your device. JPEG, PNG, WebP, HEIC supported. Works on iPhone, Android, Mac, Windows.
           </p>
           <a
@@ -115,7 +115,7 @@ export default function CompressTo240KBPage() {
             <div style={{ fontSize: '24px', flexShrink: 0 }}>{icon}</div>
             <div>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px', color: '#f87171' }}>❌ {problem}</div>
-              <div style={{ fontSize: '13px', opacity: 0.7 }}>✅ {fix}</div>
+              <div style={{ fontSize:'15px', opacity: 0.7 }}>✅ {fix}</div>
             </div>
           </div>
         ))}
@@ -135,7 +135,7 @@ export default function CompressTo240KBPage() {
             <div style={{ background: 'rgba(129,140,248,0.2)', border: '1px solid rgba(129,140,248,0.4)', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, flexShrink: 0 }}>{step}</div>
             <div>
               <div style={{ fontWeight: 700, fontSize: '15px', marginBottom: '4px' }}>{title}</div>
-              <div style={{ fontSize: '13px', opacity: 0.65 }}>{desc}</div>
+              <div style={{ fontSize:'15px', opacity: 0.65 }}>{desc}</div>
             </div>
           </div>
         ))}
@@ -146,7 +146,7 @@ export default function CompressTo240KBPage() {
           {faq.map((item, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
-              <div style={{ fontSize: '13px', opacity: 0.7 }}>{item.a}</div>
+              <div style={{ fontSize:'15px', opacity: 0.7 }}>{item.a}</div>
             </div>
           ))}
         </div>
@@ -162,7 +162,7 @@ export default function CompressTo240KBPage() {
             { href: '/compress-for-uk-visa', label: '🇬🇧 UK Visa Photo' },
             { href: '/', label: '🗜️ Compress to 20KB' },
           ].map(({ href, label }) => (
-            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize: '13px', fontWeight: 600 }}>
+            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize:'15px', fontWeight: 600 }}>
               {label}
             </Link>
           ))}

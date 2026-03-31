@@ -29,7 +29,7 @@ export default function ShopifyPage() {
         {/* WARNING BOX */}
         <div style={{background:'rgba(239,68,68,0.08)',border:'1px solid rgba(239,68,68,0.3)',borderRadius:'12px',padding:'16px 20px',marginBottom:'24px'}}>
           <div style={{fontWeight:700,fontSize:'14px',color:'#f87171',marginBottom:'8px'}}>⚠️ Warning about Shopify image optimizer apps</div>
-          <p style={{fontSize:'13px',opacity:0.7,lineHeight:'1.6',margin:0}}>
+          <p style={{fontSize:'15px',opacity:0.7,lineHeight:'1.6',margin:0}}>
             Paid apps like App Compressor ($9.99/month) have been reported to accidentally <strong style={{color:'#fca5a5'}}>permanently delete product photos</strong> from stores. Our browser-based tool has zero risk — nothing touches your Shopify store directly.
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function ShopifyPage() {
         {/* TOOL LINK */}
         <div style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.3)',borderRadius:'14px',padding:'20px',marginBottom:'28px',textAlign:'center'}}>
           <div style={{fontSize:'15px',fontWeight:700,marginBottom:'8px',color:'#a5b4fc'}}>🛍️ Shopify Preset — Ready to Use</div>
-          <p style={{fontSize:'13px',opacity:0.6,marginBottom:'14px'}}>Opens with Shopify preset: WebP, 82% quality, optimized for 2048px product images</p>
+          <p style={{fontSize:'15px',opacity:0.6,marginBottom:'14px'}}>Opens with Shopify preset: WebP, 82% quality, optimized for 2048px product images</p>
           <Link href="/?preset=shopify" style={{display:'inline-block',padding:'12px 28px',borderRadius:'10px',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',fontWeight:800,fontSize:'15px',textDecoration:'none'}}>
             ⚡ Open Shopify Compressor →
           </Link>
@@ -54,7 +54,7 @@ export default function ShopifyPage() {
           ].map(([icon,title,desc])=>(
             <div key={title} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'14px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontSize:'20px',marginBottom:'6px'}}>{icon}</div>
-              <div style={{fontWeight:700,fontSize:'13px',marginBottom:'3px'}}>{title}</div>
+              <div style={{fontWeight:700,fontSize:'15px',marginBottom:'3px'}}>{title}</div>
               <div style={{fontSize:'12px',opacity:0.5}}>{desc}</div>
             </div>
           ))}
@@ -63,7 +63,7 @@ export default function ShopifyPage() {
         {/* VS TABLE */}
         <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'14px'}}>CompressTo20KB vs Shopify Apps</h2>
         <div style={{overflowX:'auto',marginBottom:'28px'}}>
-          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'13px'}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'15px'}}>
             <thead>
               <tr style={{background:'rgba(129,140,248,0.15)'}}>
                 {['Feature','CompressTo20KB','App Compressor','Size Optimizer'].map(h=>(
@@ -100,14 +100,14 @@ export default function ShopifyPage() {
         ].map(([q,a])=>(
           <details key={q} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',marginBottom:'8px',border:'1px solid rgba(255,255,255,0.07)',padding:'14px 16px'}}>
             <summary style={{fontWeight:600,fontSize:'14px',cursor:'pointer',listStyle:'none'}}>▶ {q}</summary>
-            <p style={{fontSize:'13px',opacity:0.6,marginTop:'10px',lineHeight:'1.7'}}>{a}</p>
+            <p style={{fontSize:'15px',opacity:0.6,marginTop:'10px',lineHeight:'1.7'}}>{a}</p>
           </details>
         ))}
 
         <h2 style={{fontSize:'18px',fontWeight:700,color:'#a5b4fc',marginBottom:'14px',marginTop:'24px'}}>Related Tools</h2>
         <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
           {[['/compress-to-20kb','Compress to 20KB'],['/compress-for-etsy','Compress for Etsy'],['/compress-without-uploading','No Upload Compressor']].map(([href,label])=>(
-            <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
+            <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
           ))}
         </div>
       </div>
@@ -137,7 +137,7 @@ export default function ShopifyPage() {
             ].map(([t,d]) => (
               <div key={t} style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}>
                 <div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>{t}</div>
-                <div style={{fontSize:'13px',lineHeight:1.6,opacity:0.8}}>{d}</div>
+                <div style={{fontSize:'15px',lineHeight:1.6,opacity:0.8}}>{d}</div>
               </div>
             ))}
           </div>

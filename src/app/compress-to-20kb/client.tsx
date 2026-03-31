@@ -40,7 +40,7 @@ export default function ClientPage() {
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
 
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>
+        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}>
           <Link href="/" style={{color:'#a5b4fc',textDecoration:'none'}}>Home</Link> → Compress to 20KB
         </div>
 
@@ -50,14 +50,14 @@ export default function ClientPage() {
         <p style={{fontSize:'15px',lineHeight:1.7,opacity:0.7,marginBottom:'8px'}}>
           Reduce image size to exactly 20KB online. All processing happens in your browser — your files never leave your device.
         </p>
-        <p style={{fontSize:'13px',opacity:0.5,marginBottom:'32px'}}>
+        <p style={{fontSize:'15px',opacity:0.5,marginBottom:'32px'}}>
           Supports JPEG · PNG · WebP · HEIC (iPhone) · Batch up to 50 images · No signup required
         </p>
 
         {/* CTA */}
         <div style={{background:'rgba(129,140,248,0.12)',border:'1px solid rgba(129,140,248,0.35)',borderRadius:'14px',padding:'24px',marginBottom:'40px',textAlign:'center' as const}}>
           <div style={{fontSize:'15px',fontWeight:700,marginBottom:'8px'}}>🎯 Compress to Exactly 20KB — Free</div>
-          <p style={{fontSize:'13px',opacity:0.65,marginBottom:'16px'}}>No upload · Instant · JPEG, PNG, WebP, HEIC · Bulk up to 50 images</p>
+          <p style={{fontSize:'15px',opacity:0.65,marginBottom:'16px'}}>No upload · Instant · JPEG, PNG, WebP, HEIC · Bulk up to 50 images</p>
           <Link href="/?mode=exactkb&target=20" style={{display:'inline-block',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',padding:'12px 28px',borderRadius:'100px',fontWeight:800,fontSize:'14px',textDecoration:'none'}}>
             ⚡ Open 20KB Compressor
           </Link>
@@ -80,7 +80,7 @@ export default function ClientPage() {
               <div style={{flexShrink:0,width:'36px',height:'36px',borderRadius:'50%',background:'#6366f1',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:'16px'}}>{s.n}</div>
               <div>
                 <div style={{fontWeight:700,fontSize:'14px',marginBottom:'4px'}}>{s.t}</div>
-                <div style={{fontSize:'13px',opacity:0.65,lineHeight:1.6}}>{s.d}</div>
+                <div style={{fontSize:'15px',opacity:0.65,lineHeight:1.6}}>{s.d}</div>
               </div>
             </div>
           ))}
@@ -88,12 +88,12 @@ export default function ClientPage() {
 
         {/* USE CASES */}
         <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'12px'}}>Best Uses for 20KB Images</h2>
-        <p style={{fontSize:'13px',opacity:0.6,marginBottom:'16px',lineHeight:1.6}}>Government portals, university applications, and job boards all enforce strict file size limits. Here are the most common reasons people need to compress images to exactly 20KB:</p>
+        <p style={{fontSize:'15px',opacity:0.6,marginBottom:'16px',lineHeight:1.6}}>Government portals, university applications, and job boards all enforce strict file size limits. Here are the most common reasons people need to compress images to exactly 20KB:</p>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'12px',marginBottom:'40px'}}>
           {useCases.map((u,i)=>(
             <div key={i} style={{background:'rgba(255,255,255,0.05)',borderRadius:'12px',padding:'16px'}}>
               <div style={{fontSize:'24px',marginBottom:'8px'}}>{u.icon}</div>
-              <div style={{fontWeight:700,fontSize:'13px',marginBottom:'4px'}}>{u.title}</div>
+              <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>{u.title}</div>
               <div style={{fontSize:'12px',opacity:0.6,lineHeight:1.5}}>{u.desc}</div>
             </div>
           ))}
@@ -102,10 +102,10 @@ export default function ClientPage() {
         {/* COMPARISON TABLE */}
         <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'16px'}}>CompressTo20KB vs Competitors</h2>
         <div style={{overflowX:'auto',marginBottom:'40px'}}>
-          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'13px'}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'15px'}}>
             <thead>
               <tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
-                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Feature</th>
+                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Feature</th>
                 <th style={{padding:'10px 12px',color:'#818cf8',fontWeight:800}}>CompressTo20KB</th>
                 <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>11zon</th>
                 <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>MinifyImage</th>
@@ -139,7 +139,7 @@ export default function ClientPage() {
           {tips.map((tip,i)=>(
             <div key={i} style={{background:'rgba(255,255,255,0.05)',borderRadius:'10px',padding:'16px 20px',borderLeft:'3px solid #818cf8'}}>
               <div style={{fontWeight:700,fontSize:'14px',marginBottom:'4px'}}>✓ {tip.title}</div>
-              <div style={{fontSize:'13px',opacity:0.65,lineHeight:1.6}}>{tip.desc}</div>
+              <div style={{fontSize:'15px',opacity:0.65,lineHeight:1.6}}>{tip.desc}</div>
             </div>
           ))}
         </div>
@@ -150,7 +150,7 @@ export default function ClientPage() {
           {faqItems.map((item,i)=>(
             <details key={i} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'16px 20px',cursor:'pointer'}}>
               <summary style={{fontWeight:700,fontSize:'14px',color:'#a5b4fc',listStyle:'none'}}>❓ {item.q}</summary>
-              <div style={{fontSize:'13px',opacity:0.7,marginTop:'10px',lineHeight:1.6}}>{item.a}</div>
+              <div style={{fontSize:'15px',opacity:0.7,marginTop:'10px',lineHeight:1.6}}>{item.a}</div>
             </details>
           ))}
         </div>
@@ -166,7 +166,7 @@ export default function ClientPage() {
             {href:'/compress-passport-photo',label:'🪪 Passport Photo'},
             {href:'/compress-for-ds160',label:'📋 DS-160 Photo'},
           ].map(({href,label})=>(
-            <Link key={href} href={href} style={{background:'rgba(255,255,255,0.07)',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'8px',padding:'8px 14px',color:'white',textDecoration:'none',fontSize:'13px',fontWeight:600}}>{label}</Link>
+            <Link key={href} href={href} style={{background:'rgba(255,255,255,0.07)',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'8px',padding:'8px 14px',color:'white',textDecoration:'none',fontSize:'15px',fontWeight:600}}>{label}</Link>
           ))}
         </div>
       </div>

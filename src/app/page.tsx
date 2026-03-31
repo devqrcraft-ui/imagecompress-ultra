@@ -42,7 +42,7 @@ export default function Page() {
       <HomeClient />
       {/* AS-IS DISCLAIMER */}
       <div style={{background:'#0f0c29',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'16px 20px',textAlign:'center' as const}}>
-        <p style={{maxWidth:'700px',margin:'0 auto',fontSize:'12px',color:'rgba(255,255,255,0.35)',lineHeight:1.7}}>
+        <p style={{maxWidth:'700px',margin:'0 auto',fontSize:'12px',color:'rgba(255,255,255,0.85)',lineHeight:1.7}}>
           This tool runs entirely in your browser and does not upload or store any images. It is provided as-is, without warranties. Always keep original copies of important documents.
         </p>
       </div>
@@ -157,13 +157,13 @@ export default function Page() {
                 <div style={{fontSize:'10px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(248,113,113,0.7)',marginBottom:'5px'}}>1099 Gig Tax Calculator</div>
                 <div style={{fontSize:'20px',fontWeight:900,color:'#fff',lineHeight:1.15}}>GigWiseTax<span style={{color:'#f87171'}}>.com</span></div>
               </div>
-              <div style={{fontSize:'13px',color:'rgba(255,255,255,0.6)',lineHeight:1.65}}>SE tax 15.3% + federal + state. DoorDash, Uber, OnlyFans. All 51 states.</div>
+              <div style={{fontSize:'15px',color:'rgba(255,255,255,0.9)',lineHeight:1.65}}>SE tax 15.3% + federal + state. DoorDash, Uber, OnlyFans. All 51 states.</div>
               <div style={{display:'flex',gap:'6px',flexWrap:'wrap'}}>
                 {['SE Tax 15.3%','All 51 States','100% Free'].map(t=>(
                   <span key={t} style={{fontSize:'11px',background:'rgba(248,113,113,0.12)',border:'1px solid rgba(248,113,113,0.25)',color:'rgba(248,113,113,0.85)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
                 ))}
               </div>
-              <div style={{background:'#B22234',color:'#fff',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'13px',fontWeight:800,marginTop:'2px'}}>Calculate Gig Taxes →</div>
+              <div style={{background:'#B22234',color:'#fff',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'15px',fontWeight:800,marginTop:'2px'}}>Calculate Gig Taxes →</div>
             </a>
 
             <a href="https://privatepaycheck.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'flex',flexDirection:'column',gap:'10px',background:'rgba(245,200,66,0.06)',border:'1px solid rgba(245,200,66,0.28)',borderRadius:'10px',padding:'18px 20px'}}>
@@ -171,13 +171,13 @@ export default function Page() {
                 <div style={{fontSize:'10px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(245,200,66,0.65)',marginBottom:'5px'}}>W-2 Paycheck Calculator</div>
                 <div style={{fontSize:'20px',fontWeight:900,color:'#fff',lineHeight:1.15}}>PrivatePaycheck<span style={{color:'#F5C842'}}>.com</span></div>
               </div>
-              <div style={{fontSize:'13px',color:'rgba(255,255,255,0.6)',lineHeight:1.65}}>Take-home pay after all taxes. Salary and hourly. All 50 states, 2026 IRS brackets.</div>
+              <div style={{fontSize:'15px',color:'rgba(255,255,255,0.9)',lineHeight:1.65}}>Take-home pay after all taxes. Salary and hourly. All 50 states, 2026 IRS brackets.</div>
               <div style={{display:'flex',gap:'6px',flexWrap:'wrap'}}>
                 {['Salary & Hourly','All 50 States','100% Free'].map(t=>(
                   <span key={t} style={{fontSize:'11px',background:'rgba(245,200,66,0.1)',border:'1px solid rgba(245,200,66,0.28)',color:'rgba(245,200,66,0.85)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
                 ))}
               </div>
-              <div style={{background:'#F5C842',color:'#07111f',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'13px',fontWeight:800,marginTop:'2px'}}>Calculate My Paycheck →</div>
+              <div style={{background:'#F5C842',color:'#07111f',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'15px',fontWeight:800,marginTop:'2px'}}>Calculate My Paycheck →</div>
             </a>
 
             <a href="https://1099deductions.com" target="_blank" rel="noopener" style={{textDecoration:'none',display:'flex',flexDirection:'column',gap:'10px',background:'rgba(184,146,74,0.06)',border:'1px solid rgba(184,146,74,0.28)',borderRadius:'10px',padding:'18px 20px'}}>
@@ -185,13 +185,13 @@ export default function Page() {
                 <div style={{fontSize:'10px',fontWeight:700,letterSpacing:'0.1em',textTransform:'uppercase',color:'rgba(232,184,75,0.65)',marginBottom:'5px'}}>1099 Deductions Hub</div>
                 <div style={{fontSize:'20px',fontWeight:900,color:'#fff',lineHeight:1.15}}>1099Deductions<span style={{color:'#e8b84b'}}>.com</span></div>
               </div>
-              <div style={{fontSize:'13px',color:'rgba(255,255,255,0.6)',lineHeight:1.65}}>Free IRS Schedule C checklists for every gig job. DoorDash, Uber, Airbnb and more.</div>
+              <div style={{fontSize:'15px',color:'rgba(255,255,255,0.9)',lineHeight:1.65}}>Free IRS Schedule C checklists for every gig job. DoorDash, Uber, Airbnb and more.</div>
               <div style={{display:'flex',gap:'6px',flexWrap:'wrap'}}>
                 {['17 Job Types','Schedule C','100% Free'].map(t=>(
                   <span key={t} style={{fontSize:'11px',background:'rgba(184,146,74,0.1)',border:'1px solid rgba(184,146,74,0.28)',color:'rgba(232,184,75,0.85)',padding:'3px 8px',borderRadius:'4px'}}>{t}</span>
                 ))}
               </div>
-              <div style={{background:'#B8924A',color:'#07111f',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'13px',fontWeight:800,marginTop:'2px'}}>View Deductions →</div>
+              <div style={{background:'#B8924A',color:'#07111f',textAlign:'center',padding:'10px',borderRadius:'6px',fontSize:'15px',fontWeight:800,marginTop:'2px'}}>View Deductions →</div>
             </a>
 
           </div>
@@ -200,7 +200,7 @@ export default function Page() {
         {/* POPULAR PRESETS */}
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 32px'}}>
           <h2 style={{fontSize:'20px',fontWeight:700,color:'#a5b4fc',marginBottom:'8px'}}>Popular Size Presets</h2>
-          <p style={{fontSize:'13px',opacity:0.6,marginBottom:'16px'}}>Hit an exact KB target in one click</p>
+          <p style={{fontSize:'15px',opacity:0.6,marginBottom:'16px'}}>Hit an exact KB target in one click</p>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(130px,1fr))',gap:'10px'}}>
             {[
               ['/compress-to-20kb','20 KB','Visa & ID forms'],
@@ -221,7 +221,7 @@ export default function Page() {
         {/* BY PLATFORM */}
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 56px'}}>
           <h2 style={{fontSize:'20px',fontWeight:700,color:'#a5b4fc',marginBottom:'8px'}}>Compress for Specific Platforms</h2>
-          <p style={{fontSize:'13px',opacity:0.6,marginBottom:'16px'}}>Each page has the exact size requirements for that platform</p>
+          <p style={{fontSize:'15px',opacity:0.6,marginBottom:'16px'}}>Each page has the exact size requirements for that platform</p>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))',gap:'10px'}}>
             {[
               ['/compress-for-email','✉️ Email','Gmail, Outlook, Yahoo'],

@@ -28,7 +28,7 @@ export default function ClientPage() {
   return (
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>
+        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}>
           <Link href="/" style={{color:'#a5b4fc',textDecoration:'none'}}>Home</Link> → Compress for Pinterest
         </div>
         <h1 style={{fontSize:'clamp(26px,4vw,38px)',fontWeight:900,lineHeight:1.2,marginBottom:'12px'}}>
@@ -40,7 +40,7 @@ export default function ClientPage() {
 
         <div style={{background:'rgba(230,0,35,0.1)',border:'1px solid rgba(230,0,35,0.3)',borderRadius:'14px',padding:'24px',marginBottom:'40px',textAlign:'center' as const}}>
           <div style={{fontSize:'15px',fontWeight:700,marginBottom:'8px'}}>📌 Compress for Pinterest — Free</div>
-          <p style={{fontSize:'13px',opacity:0.65,marginBottom:'16px'}}>No upload · Instant · JPEG, PNG, WebP · Bulk up to 50 images</p>
+          <p style={{fontSize:'15px',opacity:0.65,marginBottom:'16px'}}>No upload · Instant · JPEG, PNG, WebP · Bulk up to 50 images</p>
           <Link href="/?mode=exactkb&target=400" style={{display:'inline-block',background:'linear-gradient(135deg,#e60023,#c0001e)',color:'white',padding:'12px 28px',borderRadius:'100px',fontWeight:800,fontSize:'14px',textDecoration:'none'}}>
             ⚡ Open Pinterest Compressor
           </Link>
@@ -51,7 +51,7 @@ export default function ClientPage() {
           {requirements.map((r,i)=>(
             <div key={i} style={{background:'rgba(255,255,255,0.05)',borderRadius:'12px',padding:'16px'}}>
               <div style={{fontSize:'24px',marginBottom:'8px'}}>{r.icon}</div>
-              <div style={{fontWeight:700,fontSize:'13px',marginBottom:'4px'}}>{r.title}</div>
+              <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>{r.title}</div>
               <div style={{fontSize:'12px',opacity:0.6,lineHeight:1.5}}>{r.desc}</div>
             </div>
           ))}
@@ -64,7 +64,7 @@ export default function ClientPage() {
               <div style={{flexShrink:0,width:'36px',height:'36px',borderRadius:'50%',background:'#e60023',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:'16px'}}>{s.n}</div>
               <div>
                 <div style={{fontWeight:700,fontSize:'14px',marginBottom:'4px'}}>{s.t}</div>
-                <div style={{fontSize:'13px',opacity:0.65,lineHeight:1.6}}>{s.d}</div>
+                <div style={{fontSize:'15px',opacity:0.65,lineHeight:1.6}}>{s.d}</div>
               </div>
             </div>
           ))}
@@ -80,7 +80,7 @@ export default function ClientPage() {
           ].map((f,i)=>(
             <div key={i} style={{background:'rgba(255,255,255,0.05)',borderRadius:'12px',padding:'16px',textAlign:'center' as const}}>
               <div style={{fontSize:'24px',marginBottom:'8px'}}>{f.icon}</div>
-              <div style={{fontWeight:700,fontSize:'13px',marginBottom:'4px'}}>{f.t}</div>
+              <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>{f.t}</div>
               <div style={{fontSize:'12px',opacity:0.6,lineHeight:1.5}}>{f.d}</div>
             </div>
           ))}
@@ -91,7 +91,7 @@ export default function ClientPage() {
           {faqItems.map((item,i)=>(
             <details key={i} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'16px 20px',cursor:'pointer'}}>
               <summary style={{fontWeight:700,fontSize:'14px',color:'#a5b4fc',listStyle:'none'}}>❓ {item.q}</summary>
-              <div style={{fontSize:'13px',opacity:0.7,marginTop:'10px',lineHeight:1.6}}>{item.a}</div>
+              <div style={{fontSize:'15px',opacity:0.7,marginTop:'10px',lineHeight:1.6}}>{item.a}</div>
             </details>
           ))}
         </div>
@@ -106,7 +106,7 @@ export default function ClientPage() {
             {href:'/compress-for-email',label:'📧 For Email'},
             {href:'/compress-to-500kb',label:'📦 Compress to 500KB'},
           ].map(({href,label})=>(
-            <Link key={href} href={href} style={{background:'rgba(255,255,255,0.07)',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'8px',padding:'8px 14px',color:'white',textDecoration:'none',fontSize:'13px',fontWeight:600}}>{label}</Link>
+            <Link key={href} href={href} style={{background:'rgba(255,255,255,0.07)',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'8px',padding:'8px 14px',color:'white',textDecoration:'none',fontSize:'15px',fontWeight:600}}>{label}</Link>
           ))}
         </div>
       </div>

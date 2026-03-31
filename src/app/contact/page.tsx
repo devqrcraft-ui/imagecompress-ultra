@@ -13,7 +13,7 @@ export default function ContactPage() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-      <p style={{color:"rgba(255,255,255,0.6)"}}>Have a question, bug report, or feature request? Fill in the form below — we respond within 24 hours.</p>
+      <p style={{color:"rgba(255,255,255,0.9)"}}>Have a question, bug report, or feature request? Fill in the form below — we respond within 24 hours.</p>
 
       <div style={{background:"rgba(129,140,248,0.08)",border:"1px solid rgba(129,140,248,0.2)",borderRadius:"12px",padding:"24px",textAlign:"center" as const}}>
         <p style={{color:"#c7d2fe",fontSize:"16px",marginBottom:"16px"}}>Have a question, bug report, or feature request?</p>
@@ -26,7 +26,7 @@ export default function ContactPage() {
         <p style={{color:"rgba(255,255,255,0.4)",fontSize:"12px",marginTop:"12px"}}>kalkulator018@gmail.com · We respond within 24 hours</p>
       </div>
 
-      <div style={{background:"rgba(129,140,248,0.06)",border:"1px solid rgba(129,140,248,0.15)",borderRadius:"12px",padding:"24px",marginTop:"48px",fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>
+      <div style={{background:"rgba(129,140,248,0.06)",border:"1px solid rgba(129,140,248,0.15)",borderRadius:"12px",padding:"24px",marginTop:"48px",fontSize:"14px",color:"rgba(255,255,255,0.9)"}}>
         <p className="mb-2"><strong>Response time:</strong> within 24 hours on business days</p>
         <p className="mb-2"><strong>Bug reports:</strong> please include your browser, OS, and image format</p>
         <p><strong>Privacy:</strong> we do not share your contact information with third parties</p>

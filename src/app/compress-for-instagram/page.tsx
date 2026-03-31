@@ -52,7 +52,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <article className="max-w-3xl mx-auto px-4 py-8 text-slate-100">
 
-        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>
+        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
           <a href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</a> → Compress for Instagram
         </div>
 

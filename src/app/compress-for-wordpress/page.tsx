@@ -22,13 +22,13 @@ export default function CompressForWordpressPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>⚡ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
+        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
           <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
           <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
         </div>
       </nav>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
-        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}><Link href="/blog" style={{ color: 'inherit', textDecoration: 'none' }}>Blog</Link> → Compress for Wordpress</div>
+        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}><Link href="/blog" style={{ color: 'inherit', textDecoration: 'none' }}>Blog</Link> → Compress for Wordpress</div>
         <div style={{ display: 'inline-block', background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '10px', padding: '6px 14px', fontSize: '12px', marginBottom: '16px' }}>🆓 Wordpress · Free Tool</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>Compress Images for Wordpress<br/><span style={{ color: '#818cf8' }}>Free, Private & Instant</span></h1>
         <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>Need to compress images for Wordpress? Our free browser-based tool compresses JPEG, PNG, WebP instantly — no upload required, no signup needed. Your files never leave your device.</p>
@@ -74,14 +74,14 @@ export default function CompressForWordpressPage() {
             <div key={f.t} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
               <div style={{ fontSize: '24px', marginBottom: '8px' }}>{f.icon}</div>
               <strong style={{ display: 'block', marginBottom: '4px' }}>{f.t}</strong>
-              <span style={{ opacity: 0.65, fontSize: '13px' }}>{f.d}</span>
+              <span style={{ opacity: 0.65, fontSize:'15px' }}>{f.d}</span>
             </div>
           ))}
         </div>
 
         <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: '12px', padding: '20px', marginBottom: '32px' }}>
           <h3 style={{ margin: '0 0 12px', fontSize: '16px' }}>Related Tools</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '13px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize:'15px' }}>
             {[
               { href: '/compress-for-shopify', label: 'Shopify' },
               { href: '/compress-for-etsy', label: 'Etsy' },

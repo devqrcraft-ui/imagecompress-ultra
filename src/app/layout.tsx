@@ -1,5 +1,6 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 import Footer from '@/components/Footer';
@@ -119,7 +120,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main role="main" style={{ flex: 1 }}>{children}</main>
 
       <Footer />
-      <script src="/ai-chat-widget-final.js?v=4" defer></script>        <SpeedInsights />
+      <Script src="/ai-chat-widget-final.js?v=4" strategy="lazyOnload" />        <SpeedInsights />
       </body>
       <Analytics />
     </html>

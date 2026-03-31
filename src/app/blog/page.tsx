@@ -25,7 +25,7 @@ export default function BlogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '13px', opacity: 0.75 }}>← Home</Link>
+        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Home</Link>
       </nav>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
         <h1 style={{ fontSize: 'clamp(26px,4vw,36px)', fontWeight: 900, marginBottom: '8px' }}>📝 Blog & Guides</h1>
@@ -39,7 +39,7 @@ export default function BlogPage() {
                   <span style={{ fontSize: '12px', opacity: 0.4 }}>{post.date}</span>
                 </div>
                 <div style={{ fontWeight: 800, fontSize: '17px', marginBottom: '6px', color: 'white' }}>{post.title}</div>
-                <div style={{ fontSize: '13px', opacity: 0.6 }}>{post.desc}</div>
+                <div style={{ fontSize:'15px', opacity: 0.6 }}>{post.desc}</div>
               </div>
             </Link>
           ))}

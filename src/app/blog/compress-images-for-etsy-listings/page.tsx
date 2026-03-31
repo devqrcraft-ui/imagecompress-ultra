@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <article style={{maxWidth:'800px',margin:'0 auto',padding:'40px 20px',color:'white'}}>
       <h1 style={{fontSize:'32px',fontWeight:700,marginBottom:'16px',lineHeight:1.3}}>How to Compress Images for Etsy Listings (Under 1MB, Free)</h1>
-      <p style={{fontSize:'16px',color:'rgba(255,255,255,0.6)',marginBottom:'32px',lineHeight:1.7}}>Etsy requires product images under certain file sizes for fast loading. Large images hurt your shop ranking and slow down buyer experience. Here is how to compress your Etsy listing photos in seconds — free, no account needed.</p>
+      <p style={{fontSize:'16px',color:'rgba(255,255,255,0.9)',marginBottom:'32px',lineHeight:1.7}}>Etsy requires product images under certain file sizes for fast loading. Large images hurt your shop ranking and slow down buyer experience. Here is how to compress your Etsy listing photos in seconds — free, no account needed.</p>
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />

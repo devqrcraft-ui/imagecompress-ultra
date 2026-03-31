@@ -40,10 +40,10 @@ export default function Page() {
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 28px'}}>
           <h2 style={{fontSize:'clamp(19px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'14px'}}>Tips for Getting the Best Pinterest Image Compression</h2>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(230px,1fr))',gap:'14px'}}>
-            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>Use 2:3 aspect ratio</div><div style={{fontSize:'13px',lineHeight:1.6,opacity:0.8}}>Pinterest displays 1000x1500px or 1080x1620px pins best. Portrait pins get more feed real estate than square ones.</div></div>
-            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>Target 200-500KB</div><div style={{fontSize:'13px',lineHeight:1.6,opacity:0.8}}>Under 200KB may look soft after Pinterest re-compression. Over 1MB slows your board loading.</div></div>
-            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>JPEG for photos, PNG for graphics</div><div style={{fontSize:'13px',lineHeight:1.6,opacity:0.8}}>Use JPEG at 85% for photos. Use PNG for pins with text or logos to avoid compression artifacts.</div></div>
-            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>Pre-compress before bulk upload</div><div style={{fontSize:'13px',lineHeight:1.6,opacity:0.8}}>Compress all pins as a batch ZIP before uploading to Pinterest to save time.</div></div>
+            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>Use 2:3 aspect ratio</div><div style={{fontSize:'15px',lineHeight:1.6,opacity:0.8}}>Pinterest displays 1000x1500px or 1080x1620px pins best. Portrait pins get more feed real estate than square ones.</div></div>
+            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>Target 200-500KB</div><div style={{fontSize:'15px',lineHeight:1.6,opacity:0.8}}>Under 200KB may look soft after Pinterest re-compression. Over 1MB slows your board loading.</div></div>
+            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>JPEG for photos, PNG for graphics</div><div style={{fontSize:'15px',lineHeight:1.6,opacity:0.8}}>Use JPEG at 85% for photos. Use PNG for pins with text or logos to avoid compression artifacts.</div></div>
+            <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'12px',padding:'16px'}}><div style={{fontWeight:700,fontSize:'14px',color:'#c7d2fe',marginBottom:'6px'}}>Pre-compress before bulk upload</div><div style={{fontSize:'15px',lineHeight:1.6,opacity:0.8}}>Compress all pins as a batch ZIP before uploading to Pinterest to save time.</div></div>
           </div>
         </section>
 
@@ -51,9 +51,9 @@ export default function Page() {
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 28px'}}>
           <h2 style={{fontSize:'clamp(19px,3vw,26px)',fontWeight:700,color:'#a5b4fc',marginBottom:'14px'}}>CompressTo20KB vs Competitors — Pinterest Image Compression</h2>
           <div style={{overflowX:'auto' as const}}>
-            <table style={{width:'100%',borderCollapse:'collapse' as const,fontSize:'13px'}}>
+            <table style={{width:'100%',borderCollapse:'collapse' as const,fontSize:'15px'}}>
               <thead><tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
-                <th style={{textAlign:'left' as const,padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Feature</th>
+                <th style={{textAlign:'left' as const,padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Feature</th>
                 <th style={{padding:'10px 12px',color:'#818cf8',fontWeight:800}}>This Tool</th>
                 <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>TinyPNG</th>
                 <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>Squoosh</th>
@@ -73,11 +73,11 @@ export default function Page() {
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 52px'}}>
           <h2 style={{fontSize:'18px',fontWeight:700,color:'#a5b4fc',marginBottom:'14px'}}>Related Tools</h2>
           <div style={{display:'flex',flexWrap:'wrap' as const,gap:'10px'}}>
-            <a href="/" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>Home — Image Compressor →</a>
-            <a href="/compress-to-200kb" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>Compress to 200KB →</a>
-            <a href="/compress-to-500kb" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>Compress to 500KB →</a>
-            <a href="/compress-for-instagram" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>For Instagram →</a>
-            <a href="/compress-for-email" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>For Email →</a>
+            <a href="/" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>Home — Image Compressor →</a>
+            <a href="/compress-to-200kb" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>Compress to 200KB →</a>
+            <a href="/compress-to-500kb" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>Compress to 500KB →</a>
+            <a href="/compress-for-instagram" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>For Instagram →</a>
+            <a href="/compress-for-email" style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap' as const}}>For Email →</a>
           </div>
         </section>
       </div>

@@ -6,11 +6,11 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
           Compress<span style={{color:'#22d3ee'}}>20KB</span>
         </a>
         <nav style={{display:'flex',gap:'12px',alignItems:'center'}}>
-          <a href="/" style={{color:'#8888bb',textDecoration:'none',fontSize:'13px'}}>🗜️ Tool</a>
-          <a href="/blog" style={{color:'#8888bb',textDecoration:'none',fontSize:'13px'}}>📝 Blog</a>
-          <a href="/faq" style={{color:'#8888bb',textDecoration:'none',fontSize:'13px'}}>FAQ</a>
+          <a href="/" style={{color:'#8888bb',textDecoration:'none',fontSize:'15px'}}>🗜️ Tool</a>
+          <a href="/blog" style={{color:'#8888bb',textDecoration:'none',fontSize:'15px'}}>📝 Blog</a>
+          <a href="/faq" style={{color:'#8888bb',textDecoration:'none',fontSize:'15px'}}>FAQ</a>
         </nav>
-        <a href="/" style={{background:'linear-gradient(135deg,#6366f1,#22d3ee)',color:'#fff',fontSize:'13px',fontWeight:800,padding:'8px 16px',borderRadius:'100px',textDecoration:'none'}}>
+        <a href="/" style={{background:'linear-gradient(135deg,#6366f1,#22d3ee)',color:'#fff',fontSize:'15px',fontWeight:800,padding:'8px 16px',borderRadius:'100px',textDecoration:'none'}}>
           ⚡ Compress Free
         </a>
       </header>

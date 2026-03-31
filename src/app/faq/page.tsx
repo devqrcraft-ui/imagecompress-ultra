@@ -39,7 +39,7 @@ export default function FAQPage() {
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
         <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
           <a href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</a>
-          <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
+          <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
             <a href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</a>
             <a href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</a>
             <a href="/contact" style={{ color: 'white', textDecoration: 'none' }}>Contact</a>
@@ -54,14 +54,14 @@ export default function FAQPage() {
             {faqs.map((faq, i) => (
               <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 24px' }}>
                 <h2 style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px', color: '#a5b4fc' }}>{faq.q}</h2>
-                <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
+                <p style={{ fontSize:'15px', opacity: 0.7, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>
 
           <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '14px', padding: '24px', textAlign: 'center' }}>
             <div style={{ fontSize: '16px', fontWeight: 700, marginBottom: '8px' }}>Still have questions?</div>
-            <p style={{ fontSize: '13px', opacity: 0.65, marginBottom: '16px' }}>We are happy to help. Send us a message and we will respond within 24 hours.</p>
+            <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>We are happy to help. Send us a message and we will respond within 24 hours.</p>
             <a href="/contact" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '10px 24px', borderRadius: '100px', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}>Contact Us →</a>
           </div>
         </div>

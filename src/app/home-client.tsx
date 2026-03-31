@@ -172,7 +172,7 @@ export default function HomeClient() {
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,-apple-system,sans-serif',color:'white'}}>
 
       {/* TOP TICKER */}
-      <div style={{background:'linear-gradient(90deg,#6366f1,#8b5cf6,#22d3ee)',padding:'9px 0',overflow:'hidden',whiteSpace:'nowrap',fontSize:'13px',fontWeight:600,color:'white',letterSpacing:'0.2px'}}>
+      <div style={{background:'linear-gradient(90deg,#6366f1,#8b5cf6,#22d3ee)',padding:'9px 0',overflow:'hidden',whiteSpace:'nowrap',fontSize:'15px',fontWeight:600,color:'white',letterSpacing:'0.2px'}}>
         <div style={{display:'inline-block',animation:'ticker 60s linear infinite'}}>
           {[...TICKER_ITEMS, ...TICKER_ITEMS].map((t,i)=>(
             <span key={i} style={{padding:'0 36px'}}>{t}</span>
@@ -188,7 +188,7 @@ export default function HomeClient() {
           <h1 style={{fontSize:'26px',fontWeight:800,marginBottom:'4px',letterSpacing:'-0.5px'}}>
             Compress Image to <span style={{color:'#818cf8'}}>20KB, 50KB, 100KB</span> — Free Online, No Upload
           </h1>
-          <p style={{fontSize:'13px',opacity:0.55,marginBottom:'12px'}}>Free <strong style={{color:'rgba(255,255,255,0.8)'}}>online image compressor</strong> — compress image to 20KB, 50KB, or 100KB in your browser. No upload, 100% private, no watermark.</p>
+          <p style={{fontSize:'15px',opacity:0.55,marginBottom:'12px'}}>Free <strong style={{color:'rgba(255,255,255,0.8)'}}>online image compressor</strong> — compress image to 20KB, 50KB, or 100KB in your browser. No upload, 100% private, no watermark.</p>
           {/* USP BULLETS */}
           <div style={{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'14px',fontSize:'12px'}}>
             {[
@@ -205,7 +205,7 @@ export default function HomeClient() {
           <div style={{background:'rgba(16,185,129,0.06)',border:'1px solid rgba(16,185,129,0.2)',borderRadius:'10px',padding:'12px 16px',marginBottom:'16px',display:'flex',gap:'12px',alignItems:'flex-start'}}>
             <span style={{fontSize:'20px',flexShrink:0}}>⚙️</span>
             <div>
-              <div style={{fontSize:'13px',fontWeight:700,color:'#34d399',marginBottom:'4px'}}>How compression works — zero upload</div>
+              <div style={{fontSize:'15px',fontWeight:700,color:'#34d399',marginBottom:'4px'}}>How compression works — zero upload</div>
               <div style={{fontSize:'12px',opacity:0.65,lineHeight:1.6}}>All processing runs directly in your browser via <strong style={{color:'rgba(255,255,255,0.8)'}}>WebAssembly</strong>. No pixels are ever sent to any server — unlike 11zon, MinifyImage, and Cloudinary which process files on their infrastructure. Safe for passport photos, visa documents, and sensitive images.</div>
               <span style={{padding:'6px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.4)',background:'rgba(99,102,241,0.15)',color:'#a5b4fc',fontSize:'12px',fontWeight:600,display:'inline-flex',alignItems:'center',gap:'4px',whiteSpace:'nowrap'}}>📦 ZIP</span>
             </div>
@@ -234,7 +234,7 @@ export default function HomeClient() {
               <button key={m} onClick={()=>{if(m==='simple'){setMode('exactkb');} else {setMode('quality');}}}
                 style={{flex:1,padding:'8px 0',borderRadius:'8px',border:'none',
                   background: (m==='simple'&&mode==='exactkb')||(m==='advanced'&&mode==='quality') ? 'rgba(129,140,248,0.3)' : 'transparent',
-                  color:'white',fontSize:'13px',fontWeight:700,cursor:'pointer',transition:'background 0.2s'}}>
+                  color:'white',fontSize:'15px',fontWeight:700,cursor:'pointer',transition:'background 0.2s'}}>
                 {label}
               </button>
             ))}
@@ -247,7 +247,7 @@ export default function HomeClient() {
                 style={{padding:'8px 16px',borderRadius:'8px',border:'1px solid',
                   borderColor: mode===m ? '#818cf8' : 'rgba(255,255,255,0.15)',
                   background: mode===m ? 'rgba(129,140,248,0.25)' : 'transparent',
-                  color:'white',fontSize:'13px',fontWeight:600,cursor:'pointer'}}>
+                  color:'white',fontSize:'15px',fontWeight:600,cursor:'pointer'}}>
                 {label}
               </button>
             ))}
@@ -261,7 +261,7 @@ export default function HomeClient() {
                   borderColor: format===f ? '#818cf8' : 'rgba(255,255,255,0.12)',
                   background: format===f ? 'rgba(129,140,248,0.2)' : 'rgba(255,255,255,0.04)',
                   color:'white',cursor:'pointer',textAlign:'center'}}>
-                <div style={{fontSize:'13px',fontWeight:700}}>{label}</div>
+                <div style={{fontSize:'15px',fontWeight:700}}>{label}</div>
                 <div style={{fontSize:'10px',opacity:0.5,marginTop:'2px'}}>{sub}</div>
               </button>
             ))}
@@ -271,8 +271,8 @@ export default function HomeClient() {
           {mode==='quality' ? (
             <div style={{marginBottom:'14px',background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'12px 16px'}}>
               <div style={{display:'flex',justifyContent:'space-between',marginBottom:'8px'}}>
-                <span style={{fontSize:'13px',fontWeight:600}}>Quality</span>
-                <span style={{fontSize:'13px',fontWeight:800,color:'#818cf8'}}>{quality}%</span>
+                <span style={{fontSize:'15px',fontWeight:600}}>Quality</span>
+                <span style={{fontSize:'15px',fontWeight:800,color:'#818cf8'}}>{quality}%</span>
               </div>
               <input type="range" min={10} max={100} value={quality} onChange={e=>setQuality(+e.target.value)} aria-label="Compression quality percentage"
                 style={{width:'100%',accentColor:'#818cf8'}}/>
@@ -282,14 +282,14 @@ export default function HomeClient() {
             </div>
           ) : (
             <div style={{marginBottom:'14px',background:'rgba(129,140,248,0.08)',borderRadius:'10px',padding:'12px 16px',border:'1px solid rgba(129,140,248,0.3)'}}>
-              <div style={{fontSize:'13px',fontWeight:600,marginBottom:'10px',color:'#a5b4fc'}}>🎯 Target file size</div>
+              <div style={{fontSize:'15px',fontWeight:600,marginBottom:'10px',color:'#a5b4fc'}}>🎯 Target file size</div>
               <div style={{display:'flex',gap:'8px',flexWrap:'wrap',marginBottom:'10px'}}>
                 {[20,50,100,200].map(kb=>(
                   <button key={kb} onClick={()=>setTargetKB(kb)}
                     style={{padding:'6px 14px',borderRadius:'8px',border:'1px solid',
                       borderColor: targetKB===kb ? '#818cf8' : 'rgba(255,255,255,0.15)',
                       background: targetKB===kb ? 'rgba(129,140,248,0.3)' : 'rgba(255,255,255,0.05)',
-                      color:'white',fontSize:'13px',fontWeight:700,cursor:'pointer'}}>
+                      color:'white',fontSize:'15px',fontWeight:700,cursor:'pointer'}}>
                     {kb} KB
                   </button>
                 ))}
@@ -298,7 +298,7 @@ export default function HomeClient() {
                 <span style={{fontSize:'12px',opacity:0.6}}>Custom:</span>
                 <input type="number" value={targetKB} min={5} max={5000}
                   onChange={e=>setTargetKB(Math.max(5,+e.target.value))}
-                  style={{width:'80px',padding:'4px 8px',borderRadius:'6px',border:'1px solid rgba(255,255,255,0.2)',background:'rgba(255,255,255,0.08)',color:'white',fontSize:'13px',fontWeight:700}}/>
+                  style={{width:'80px',padding:'4px 8px',borderRadius:'6px',border:'1px solid rgba(255,255,255,0.2)',background:'rgba(255,255,255,0.08)',color:'white',fontSize:'15px',fontWeight:700}}/>
                 <span style={{fontSize:'12px',opacity:0.6}}>KB</span>
               </div>
             </div>
@@ -332,7 +332,7 @@ export default function HomeClient() {
                 <div key={i} style={{flex:1,padding:'16px 12px',textAlign:'center',borderRight: i<2 ? '1px solid rgba(255,255,255,0.06)' : 'none'}}>
                   <div style={{fontSize:'24px',marginBottom:'6px'}}>{s.icon}</div>
                   <div style={{fontSize:'11px',fontWeight:800,color:'#818cf8',letterSpacing:'1px',marginBottom:'4px'}}>STEP {s.step}</div>
-                  <div style={{fontSize:'13px',fontWeight:700,marginBottom:'4px'}}>{s.title}</div>
+                  <div style={{fontSize:'15px',fontWeight:700,marginBottom:'4px'}}>{s.title}</div>
                   <div style={{fontSize:'11px',opacity:0.45,lineHeight:1.4}}>{s.desc}</div>
                 </div>
               ))}
@@ -345,18 +345,18 @@ export default function HomeClient() {
           {images.length > 0 && (
             <div>
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:'10px',flexWrap:'wrap',gap:'8px'}}>
-                <div style={{fontSize:'13px',fontWeight:600,opacity:0.7}}>{images.length} image{images.length>1?'s':''} · {done} compressed</div>
+                <div style={{fontSize:'15px',fontWeight:600,opacity:0.7}}>{images.length} image{images.length>1?'s':''} · {done} compressed</div>
                 <div style={{display:'flex',gap:'8px'}}>
                   {done > 0 && (
                     <button onClick={downloadZip}
-                      style={{padding:'7px 16px',borderRadius:'8px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.4)',color:'#34d399',fontSize:'13px',fontWeight:700,cursor:'pointer'}}>
+                      style={{padding:'7px 16px',borderRadius:'8px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.4)',color:'#34d399',fontSize:'15px',fontWeight:700,cursor:'pointer'}}>
                       📦 ZIP All ({done})
                     </button>
                   )}
                   <button onClick={compressAll} disabled={proc}
                     style={{padding:'7px 20px',borderRadius:'8px',
                       background: proc ? 'rgba(129,140,248,0.3)' : 'linear-gradient(135deg,#6366f1,#8b5cf6)',
-                      border:'none',color:'white',fontSize:'13px',fontWeight:700,cursor:proc?'not-allowed':'pointer'}}>
+                      border:'none',color:'white',fontSize:'15px',fontWeight:700,cursor:proc?'not-allowed':'pointer'}}>
                     {proc ? '⏳ Compressing...' : '⚡ Compress All'}
                   </button>
                 </div>
@@ -387,7 +387,7 @@ export default function HomeClient() {
                       {img.compSize && <span style={{color:'#34d399'}}> → {fmtSize(img.compSize)} <span style={{fontWeight:700}}>(-{img.saved}%)</span></span>}
                     </div>
                   </div>
-                  <div style={{flexShrink:0,fontSize:'13px'}}>
+                  <div style={{flexShrink:0,fontSize:'15px'}}>
                     {img.status==='pending' && <span style={{opacity:0.35}}>⏸️ Ready</span>}
                     {img.status==='processing' && <span style={{color:'#fbbf24'}}>⏳ Processing…</span>}
                     {img.status==='error' && <span style={{color:'#f87171'}}>❌ Error</span>}
@@ -398,7 +398,7 @@ export default function HomeClient() {
                           👁️
                         </button>
                         <a href={img.outUrl} download={getName(img)}
-                          style={{padding:'7px 16px',borderRadius:'7px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.35)',color:'#34d399',fontSize:'13px',fontWeight:700,textDecoration:'none'}}>
+                          style={{padding:'7px 16px',borderRadius:'7px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.35)',color:'#34d399',fontSize:'15px',fontWeight:700,textDecoration:'none'}}>
                           ⬇️ Save
                         </a>
                       </div>
@@ -463,7 +463,7 @@ export default function HomeClient() {
             <div key={item.title} style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(129,140,248,0.2)',borderRadius:'10px',padding:'18px'}}>
               <div style={{fontSize:'22px',marginBottom:'8px'}}>{item.icon}</div>
               <div style={{fontSize:'14px',fontWeight:700,color:'#fff',marginBottom:'6px'}}>{item.title}</div>
-              <div style={{fontSize:'13px',color:'rgba(255,255,255,0.55)',lineHeight:1.65}}>{item.desc}</div>
+              <div style={{fontSize:'15px',color:'rgba(255,255,255,0.55)',lineHeight:1.65}}>{item.desc}</div>
             </div>
           ))}
         </div>
@@ -511,7 +511,7 @@ export default function HomeClient() {
             <a key={href} href={href} style={{display:'flex',alignItems:'center',gap:'10px',padding:'11px 14px',borderRadius:'9px',background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.1)',color:'rgba(255,255,255,0.85)',textDecoration:'none',transition:'background 0.2s'}}>
               <span style={{fontSize:'18px',flexShrink:0}}>{icon}</span>
               <span style={{flex:1}}>
-                <span style={{display:'block',fontSize:'13px',fontWeight:700}}>{label}</span>
+                <span style={{display:'block',fontSize:'15px',fontWeight:700}}>{label}</span>
                 <span style={{display:'block',fontSize:'11px',opacity:0.45,marginTop:'1px'}}>{sub}</span>
               </span>
               <span style={{fontSize:'11px',opacity:0.3}}>→</span>
@@ -522,7 +522,7 @@ export default function HomeClient() {
       {/* POPULAR TOOLS — internal links SEO block */}
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 48px'}}>
         <div style={{borderTop:'1px solid rgba(255,255,255,0.07)',paddingTop:'32px'}}>
-          <div style={{fontSize:'13px',fontWeight:600,opacity:0.4,textTransform:'uppercase',letterSpacing:'1px',marginBottom:'16px'}}>Popular Tools</div>
+          <div style={{fontSize:'15px',fontWeight:600,opacity:0.4,textTransform:'uppercase',letterSpacing:'1px',marginBottom:'16px'}}>Popular Tools</div>
           <div style={{display:'flex',flexWrap:'wrap',gap:'10px'}}>
             {[
               {href:'/compress-to-20kb',   label:'Compress to 20KB'},
@@ -538,7 +538,7 @@ export default function HomeClient() {
               {href:'/compress-for-linkedin',  label:'For LinkedIn'},
               {href:'/compress-passport-photo',label:'Passport Photo'},
             ].map(({href,label})=>(
-              <a key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>{label} →</a>
+              <a key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.2)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none',whiteSpace:'nowrap'}}>{label} →</a>
             ))}
           </div>
         </div>
@@ -565,7 +565,7 @@ export default function HomeClient() {
               <div style={{position:'absolute',top:'8px',left:'8px',background:'rgba(0,0,0,0.6)',padding:'3px 8px',borderRadius:'6px',fontSize:'11px',fontWeight:700}}>BEFORE {fmtSize(compareImg.origSize)}</div>
               <div style={{position:'absolute',top:'8px',right:'8px',background:'rgba(16,185,129,0.8)',padding:'3px 8px',borderRadius:'6px',fontSize:'11px',fontWeight:700}}>AFTER {fmtSize(compareImg.compSize||0)}</div>
             </div>
-            <div style={{marginTop:'12px',textAlign:'center',fontSize:'13px',opacity:0.5}}>Drag to compare · Click outside to close</div>
+            <div style={{marginTop:'12px',textAlign:'center',fontSize:'15px',opacity:0.5}}>Drag to compare · Click outside to close</div>
           </div>
         </div>
       )}

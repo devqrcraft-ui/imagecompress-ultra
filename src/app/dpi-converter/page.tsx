@@ -88,7 +88,7 @@ export default function DPIConverterPage() {
           <span style={{fontSize:'22px'}}>🗜️</span>
           <div style={{fontWeight:800,fontSize:'17px'}}>Compress<span style={{color:'#818cf8'}}>To20KB</span></div>
         </Link>
-        <Link href="/" style={{color:'rgba(255,255,255,0.5)',textDecoration:'none',fontSize:'13px'}}>← Back to Tool</Link>
+        <Link href="/" style={{color:'rgba(255,255,255,0.9)',textDecoration:'none',fontSize:'15px'}}>← Back to Tool</Link>
       </header>
 
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px'}}>
@@ -100,7 +100,7 @@ export default function DPIConverterPage() {
           <span>DPI Converter</span>
         </nav>
 
-        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'10px'}}>🖨️ Free Online DPI Converter — No Upload</div>
+        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'10px'}}>🖨️ Free Online DPI Converter — No Upload</div>
 
         <h1 style={{fontSize:'32px',fontWeight:800,marginBottom:'12px'}}>
           Free Online <span style={{color:'#818cf8'}}>DPI Converter</span>
@@ -108,7 +108,7 @@ export default function DPIConverterPage() {
         <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.65,marginBottom:'8px'}}>
           Change image DPI to <strong style={{color:'white'}}>300 DPI</strong> for printing, <strong style={{color:'white'}}>USCIS</strong>, US passport, government portals, or any other requirement. Works 100% in your browser — your image <strong style={{color:'white'}}>never leaves your device</strong>.
         </p>
-        <p style={{fontSize:'13px',lineHeight:'1.7',opacity:0.45,marginBottom:'24px'}}>
+        <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.45,marginBottom:'24px'}}>
           Supports converting to 72 DPI (web), 96 DPI (screen), 150 DPI (draft print), 300 DPI (standard print), 600 DPI (high quality). Free, no registration, no upload.
         </p>
 
@@ -117,7 +117,7 @@ export default function DPIConverterPage() {
           <span style={{fontSize:'24px'}}>🔒</span>
           <div>
             <div style={{fontWeight:700,fontSize:'14px',color:'#34d399',marginBottom:'4px'}}>100% private — no upload to any server</div>
-            <div style={{fontSize:'13px',opacity:0.65}}>Unlike most DPI converters, your image never leaves your device. All processing happens locally in your browser using JavaScript.</div>
+            <div style={{fontSize:'15px',opacity:0.65}}>Unlike most DPI converters, your image never leaves your device. All processing happens locally in your browser using JavaScript.</div>
           </div>
         </div>
 
@@ -126,14 +126,14 @@ export default function DPIConverterPage() {
 
           {/* DPI selector */}
           <div style={{marginBottom:'20px'}}>
-            <div style={{fontSize:'13px',fontWeight:600,marginBottom:'10px',color:'#a5b4fc'}}>🎯 Target DPI</div>
+            <div style={{fontSize:'15px',fontWeight:600,marginBottom:'10px',color:'#a5b4fc'}}>🎯 Target DPI</div>
             <div style={{display:'flex',gap:'8px',flexWrap:'wrap',marginBottom:'12px'}}>
               {commonDPIs.map(dpi => (
                 <button key={dpi} onClick={() => setTargetDPI(dpi)}
                   style={{padding:'8px 16px',borderRadius:'8px',border:'1px solid',
                     borderColor: targetDPI === dpi ? '#818cf8' : 'rgba(255,255,255,0.15)',
                     background: targetDPI === dpi ? 'rgba(129,140,248,0.25)' : 'rgba(255,255,255,0.04)',
-                    color:'white',fontSize:'13px',fontWeight:700,cursor:'pointer'}}>
+                    color:'white',fontSize:'15px',fontWeight:700,cursor:'pointer'}}>
                   {dpi} DPI
                   {dpi === 300 && <span style={{fontSize:'10px',color:'#818cf8',marginLeft:'4px'}}>✓ USCIS</span>}
                   {dpi === 72 && <span style={{fontSize:'10px',opacity:0.5,marginLeft:'4px'}}>web</span>}
@@ -162,7 +162,7 @@ export default function DPIConverterPage() {
             {image ? (
               <div>
                 <img src={image.preview} alt="preview" style={{maxHeight:'120px',maxWidth:'100%',borderRadius:'8px',marginBottom:'8px'}}/>
-                <div style={{fontSize:'13px',fontWeight:600}}>{image.file.name}</div>
+                <div style={{fontSize:'15px',fontWeight:600}}>{image.file.name}</div>
                 <div style={{fontSize:'12px',opacity:0.5,marginTop:'4px'}}>{fmtSize(image.file.size)} · Click to change</div>
               </div>
             ) : (
@@ -232,7 +232,7 @@ export default function DPIConverterPage() {
           ].map(([icon,title,desc])=>(
             <div key={title} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'14px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontSize:'22px',marginBottom:'6px'}}>{icon}</div>
-              <div style={{fontWeight:700,fontSize:'13px',marginBottom:'4px'}}>{title}</div>
+              <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>{title}</div>
               <div style={{fontSize:'12px',opacity:0.5}}>{desc}</div>
             </div>
           ))}
@@ -251,7 +251,7 @@ export default function DPIConverterPage() {
             <div key={dpi} style={{display:'grid',gridTemplateColumns:'100px 1fr 1fr',gap:'12px',padding:'12px 16px',
               borderBottom: i<4 ? '1px solid rgba(255,255,255,0.05)' : 'none',
               background: dpi==='300 DPI' ? 'rgba(129,140,248,0.08)' : 'transparent'}}>
-              <span style={{fontWeight:800,fontSize:'13px',color: dpi==='300 DPI' ? '#818cf8' : 'white'}}>{dpi}</span>
+              <span style={{fontWeight:800,fontSize:'15px',color: dpi==='300 DPI' ? '#818cf8' : 'white'}}>{dpi}</span>
               <span style={{fontSize:'12px',fontWeight:600,opacity:0.8}}>{use}</span>
               <span style={{fontSize:'12px',opacity:0.5}}>{examples}</span>
             </div>
@@ -270,7 +270,7 @@ export default function DPIConverterPage() {
           ].map(([q,a])=>(
             <div key={q} style={{background:'rgba(255,255,255,0.03)',borderRadius:'10px',padding:'16px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontWeight:700,fontSize:'14px',marginBottom:'6px',color:'#a5b4fc'}}>{q}</div>
-              <div style={{fontSize:'13px',opacity:0.6,lineHeight:'1.6'}}>{a}</div>
+              <div style={{fontSize:'15px',opacity:0.6,lineHeight:'1.6'}}>{a}</div>
             </div>
           ))}
         </div>
@@ -284,7 +284,7 @@ export default function DPIConverterPage() {
             ['/compress-to-20kb','Compress to 20KB'],
             ['/compress-to-50kb','Compress to 50KB'],
           ].map(([href,label])=>(
-            <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
+            <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
           ))}
         </div>
 

@@ -16,7 +16,7 @@ export default function Page() {
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
         <div style={{ fontSize: '12px', opacity: 0.5, marginBottom: '12px' }}>Blog → Microsoft Teams</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>How to Compress Images for Microsoft Teams</h1>
-        <p style={{ opacity: 0.5, fontSize: '13px', marginBottom: '32px' }}>February 2025 · 4 min read</p>
+        <p style={{ opacity: 0.5, fontSize:'15px', marginBottom: '32px' }}>February 2025 · 4 min read</p>
 
         <p style={{ fontSize: '16px', lineHeight: 1.8, opacity: 0.8, marginBottom: '24px' }}>Microsoft Teams allows file uploads up to 250MB — but sending large images in chats slows down the conversation and takes up SharePoint storage. Compressing images before sharing in Teams makes previews load faster and keeps your storage usage under control.</p>
 
@@ -55,7 +55,7 @@ export default function Page() {
           <a href="https://compressto20kb.com" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#22d3ee)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Open CompressTo20KB →</a>
         </div>
 
-        <div style={{ marginTop: '40px', display: 'flex', gap: '10px', flexWrap: 'wrap', fontSize: '13px' }}>
+        <div style={{ marginTop: '40px', display: 'flex', gap: '10px', flexWrap: 'wrap', fontSize:'15px' }}>
           {[['/', 'Home'], ['/compress-to-100kb', 'Compress to 100KB'], ['/compress-for-email', 'Compress for Email'], ['/bulk-image-compressor', 'Bulk Compress']].map(([href, label]) => (
             <a key={href} href={href} style={{ color: '#a5b4fc', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>{label}</a>
           ))}

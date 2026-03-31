@@ -15,14 +15,14 @@ export default function InstagramPage() {
             <Link key={href} href={href} style={{ color: '#8888bb', textDecoration: 'none', fontSize: '12.5px', fontWeight: 500, padding: '5px 8px', borderRadius: '7px', whiteSpace: 'nowrap' }}>{label}</Link>
           ))}
         </nav>
-        <Link href="/" style={{ background: 'linear-gradient(135deg,#6366f1,#22d3ee)', color: '#fff', fontSize: '13px', fontWeight: 800, padding: '9px 18px', borderRadius: '100px', whiteSpace: 'nowrap', textDecoration: 'none' }}>
+        <Link href="/" style={{ background: 'linear-gradient(135deg,#6366f1,#22d3ee)', color: '#fff', fontSize:'15px', fontWeight: 800, padding: '9px 18px', borderRadius: '100px', whiteSpace: 'nowrap', textDecoration: 'none' }}>
           📦 Compress Now
         </Link>
       </header>
 
       {/* HERO */}
       <section style={{ maxWidth: '860px', margin: '0 auto', padding: '64px 24px 48px', textAlign: 'center' }}>
-        <div style={{ display: 'inline-block', background: 'linear-gradient(135deg,rgba(99,102,241,0.2),rgba(236,72,153,0.2))', border: '1px solid rgba(236,72,153,0.3)', borderRadius: '100px', padding: '6px 16px', fontSize: '13px', marginBottom: '24px', color: '#f9a8d4' }}>
+        <div style={{ display: 'inline-block', background: 'linear-gradient(135deg,rgba(99,102,241,0.2),rgba(236,72,153,0.2))', border: '1px solid rgba(236,72,153,0.3)', borderRadius: '100px', padding: '6px 16px', fontSize:'15px', marginBottom: '24px', color: '#f9a8d4' }}>
           📸 Instagram Image Optimizer
         </div>
         <h1 style={{ fontSize: 'clamp(28px,5vw,52px)', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-1.5px', marginBottom: '20px' }}>
@@ -36,7 +36,7 @@ export default function InstagramPage() {
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', marginBottom: '40px' }}>
           {['✅ 1080px Square', '✅ Portrait 4:5', '✅ Stories 9:16', '✅ Reels', '✅ No Upload', '✅ 100% Free'].map(b => (
-            <span key={b} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '100px', padding: '6px 14px', fontSize: '13px', color: '#cbd5e1' }}>{b}</span>
+            <span key={b} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '100px', padding: '6px 14px', fontSize:'15px', color: '#cbd5e1' }}>{b}</span>
           ))}
         </div>
 
@@ -101,7 +101,7 @@ export default function InstagramPage() {
           ].map(item => (
             <div key={item.title} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '12px', padding: '20px' }}>
               <div style={{ fontSize: '14px', fontWeight: 700, marginBottom: '8px', color: '#f472b6' }}>{item.title}</div>
-              <div style={{ fontSize: '13px', color: '#94a3b8', lineHeight: 1.6 }}>{item.desc}</div>
+              <div style={{ fontSize:'15px', color: '#94a3b8', lineHeight: 1.6 }}>{item.desc}</div>
             </div>
           ))}
         </div>
@@ -121,7 +121,7 @@ export default function InstagramPage() {
             ].map((item, i) => (
               <details key={i} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: '10px', padding: '16px', cursor: 'pointer' }}>
                 <summary style={{ fontWeight: 600, fontSize: '14px', listStyle: 'none' }}>{item.q}</summary>
-                <p style={{ marginTop: '10px', fontSize: '13px', color: '#94a3b8', lineHeight: 1.6 }}>{item.a}</p>
+                <p style={{ marginTop: '10px', fontSize:'15px', color: '#94a3b8', lineHeight: 1.6 }}>{item.a}</p>
               </details>
             ))}
           </div>

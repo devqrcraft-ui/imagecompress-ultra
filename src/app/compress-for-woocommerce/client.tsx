@@ -25,7 +25,7 @@ export default function ClientPage() {
       {/* NAV */}
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
+        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
           <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
           <Link href="/compress-without-uploading" style={{ color: 'white', textDecoration: 'none' }}>No-Upload Tool</Link>
           <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
@@ -35,7 +35,7 @@ export default function ClientPage() {
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
 
         {/* BREADCRUMB */}
-        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>
+        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
           <Link href="/blog" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Blog</Link> → Compress Without Losing Quality
         </div>
 
@@ -46,12 +46,12 @@ export default function ClientPage() {
         <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '8px' }}>
           The goal of smart image compression is to reduce file size as much as possible while keeping visual quality indistinguishable from the original. This guide explains exactly how to do it — with a free tool that includes a before/after preview.
         </p>
-        <div style={{ fontSize: '13px', opacity: 0.45, marginBottom: '32px' }}>Updated February 2026</div>
+        <div style={{ fontSize:'15px', opacity: 0.45, marginBottom: '32px' }}>Updated February 2026</div>
 
         {/* CTA */}
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
           <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>👁️ Compress with Before/After Quality Preview</div>
-          <p style={{ fontSize: '13px', opacity: 0.65, marginBottom: '16px' }}>Free · No upload · Drag-slider comparison · JPEG, WebP, PNG, AVIF, HEIC</p>
+          <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>Free · No upload · Drag-slider comparison · JPEG, WebP, PNG, AVIF, HEIC</p>
           <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
             ⚡ Try Free Compressor
           </Link>
@@ -60,7 +60,7 @@ export default function ClientPage() {
         {/* FORMAT TABLE */}
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Format Comparison: Quality vs Size</h2>
         <div style={{ overflowX: 'auto', marginBottom: '40px' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize:'15px' }}>
             <thead>
               <tr style={{ background: 'rgba(129,140,248,0.15)' }}>
                 {['Format', 'Type', 'Best for', 'Quality at small size'].map(h => (
@@ -91,7 +91,7 @@ export default function ClientPage() {
           {tips.map((tip, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: '3px solid #818cf8' }}>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>✓ {tip.title}</div>
-              <div style={{ fontSize: '13px', opacity: 0.65 }}>{tip.desc}</div>
+              <div style={{ fontSize:'15px', opacity: 0.65 }}>{tip.desc}</div>
             </div>
           ))}
         </div>
@@ -106,9 +106,9 @@ export default function ClientPage() {
             { range: 'Below 60%', label: 'Noticeable artifacts', desc: 'Block artifacts visible. Use only when file size target is strict (under 30–50KB).' },
           ].map(({ range, label, desc }, i) => (
             <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', background: 'rgba(255,255,255,0.04)', borderRadius: '8px', padding: '12px 16px' }}>
-              <div style={{ fontWeight: 800, fontSize: '13px', color: ['#22d3ee', '#a5b4fc', '#fbbf24', '#f87171'][i], flexShrink: 0, minWidth: '70px' }}>{range}</div>
+              <div style={{ fontWeight: 800, fontSize:'15px', color: ['#22d3ee', '#a5b4fc', '#fbbf24', '#f87171'][i], flexShrink: 0, minWidth: '70px' }}>{range}</div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: '13px', marginBottom: '2px' }}>{label}</div>
+                <div style={{ fontWeight: 700, fontSize:'15px', marginBottom: '2px' }}>{label}</div>
                 <div style={{ fontSize: '12px', opacity: 0.6 }}>{desc}</div>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function ClientPage() {
           {faq.map((item, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
-              <div style={{ fontSize: '13px', opacity: 0.7 }}>{item.a}</div>
+              <div style={{ fontSize:'15px', opacity: 0.7 }}>{item.a}</div>
             </div>
           ))}
         </div>
@@ -137,7 +137,7 @@ export default function ClientPage() {
             { href: '/blog/best-image-formats', label: '📖 Best Image Formats' },
             { href: '/blog/ecommerce-image-optimization', label: '📖 eCommerce Optimization' },
           ].map(({ href, label }) => (
-            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize: '13px', fontWeight: 600 }}>
+            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize:'15px', fontWeight: 600 }}>
               {label}
             </Link>
           ))}

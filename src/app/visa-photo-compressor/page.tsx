@@ -36,7 +36,7 @@ export default function VisaHubPage() {
 
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
+        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
           <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
           <Link href="/compress-for-uscis" style={{ color: 'white', textDecoration: 'none' }}>USCIS</Link>
           <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
@@ -45,7 +45,7 @@ export default function VisaHubPage() {
 
       <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '48px 16px' }}>
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ display: 'inline-block', background: 'rgba(74,222,128,0.1)', border: '1px solid rgba(74,222,128,0.3)', borderRadius: '20px', padding: '6px 16px', fontSize: '13px', marginBottom: '16px', color: '#4ade80' }}>
+          <div style={{ display: 'inline-block', background: 'rgba(74,222,128,0.1)', border: '1px solid rgba(74,222,128,0.3)', borderRadius: '20px', padding: '6px 16px', fontSize:'15px', marginBottom: '16px', color: '#4ade80' }}>
             🔒 Files never leave your browser
           </div>
           <h1 style={{ fontSize: 'clamp(28px,5vw,52px)', fontWeight: 900, marginBottom: '16px', lineHeight: 1.15 }}>
@@ -100,7 +100,7 @@ export default function VisaHubPage() {
             <div key={f.title} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px' }}>
               <div style={{ fontSize: '28px', marginBottom: '10px' }}>{f.icon}</div>
               <div style={{ fontWeight: 700, marginBottom: '8px' }}>{f.title}</div>
-              <div style={{ fontSize: '13px', opacity: 0.6, lineHeight: 1.6 }}>{f.desc}</div>
+              <div style={{ fontSize:'15px', opacity: 0.6, lineHeight: 1.6 }}>{f.desc}</div>
             </div>
           ))}
         </div>

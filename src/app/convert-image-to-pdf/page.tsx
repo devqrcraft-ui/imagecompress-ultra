@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main style={{maxWidth:800,margin:'0 auto',padding:'48px 24px',fontFamily:'system-ui,sans-serif'}}>
-      <nav style={{fontSize:13,color:'#9aa3bc',marginBottom:24}}>
+      <nav style={{fontSize:15,color:'#9aa3bc',marginBottom:24}}>
         <a href="/" style={{color:'#9aa3bc'}}>Home</a> › Convert Image to PDF
       </nav>
       <h1 style={{fontSize:34,fontWeight:900,marginBottom:8,color:'#fff'}}>Convert Image to PDF</h1>
@@ -37,9 +37,9 @@ export default function Page() {
       <div style={{borderTop:'2px solid #2a3a6a',marginTop:40,paddingTop:28}}>
         <h2 style={{fontSize:16,fontWeight:800,marginBottom:16,color:'#fff'}}>Related Tools</h2>
         <div style={{display:'flex',gap:10,flexWrap:'wrap' as const}}>
-          <a href="/jpg-to-png" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:13,fontWeight:600,color:'#818cf8',textDecoration:'none'}}>JPG to PNG</a>
-          <a href="/" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:13,fontWeight:600,color:'#818cf8',textDecoration:'none'}}>Compress Image</a>
-          <a href="/compress-for-email" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:13,fontWeight:600,color:'#818cf8',textDecoration:'none'}}>Compress for Email</a>
+          <a href="/jpg-to-png" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:15,fontWeight:600,color:'#818cf8',textDecoration:'none'}}>JPG to PNG</a>
+          <a href="/" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:15,fontWeight:600,color:'#818cf8',textDecoration:'none'}}>Compress Image</a>
+          <a href="/compress-for-email" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:15,fontWeight:600,color:'#818cf8',textDecoration:'none'}}>Compress for Email</a>
         </div>
       </div>
     </main>

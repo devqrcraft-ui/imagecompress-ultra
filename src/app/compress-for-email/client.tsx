@@ -34,7 +34,7 @@ export default function ClientPage() {
   return (
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'12px'}}>
+        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}>
           <Link href="/" style={{color:'#a5b4fc',textDecoration:'none'}}>Home</Link> → Compress for Email
         </div>
         <h1 style={{fontSize:'clamp(26px,4vw,38px)',fontWeight:900,lineHeight:1.2,marginBottom:'12px'}}>
@@ -46,7 +46,7 @@ export default function ClientPage() {
 
         <div style={{background:'rgba(129,140,248,0.12)',border:'1px solid rgba(129,140,248,0.35)',borderRadius:'14px',padding:'24px',marginBottom:'40px',textAlign:'center' as const}}>
           <div style={{fontSize:'15px',fontWeight:700,marginBottom:'8px'}}>📧 Compress Images for Email — Free</div>
-          <p style={{fontSize:'13px',opacity:0.65,marginBottom:'16px'}}>No upload · Instant · JPEG, PNG, WebP · Bulk up to 50 images</p>
+          <p style={{fontSize:'15px',opacity:0.65,marginBottom:'16px'}}>No upload · Instant · JPEG, PNG, WebP · Bulk up to 50 images</p>
           <Link href="/?mode=exactkb&target=100" style={{display:'inline-block',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',padding:'12px 28px',borderRadius:'100px',fontWeight:800,fontSize:'14px',textDecoration:'none'}}>
             ⚡ Open Email Compressor
           </Link>
@@ -58,7 +58,7 @@ export default function ClientPage() {
           {emailClients.map((e,i)=>(
             <div key={i} style={{background:'rgba(255,255,255,0.05)',borderRadius:'12px',padding:'16px'}}>
               <div style={{fontSize:'24px',marginBottom:'8px'}}>{e.icon}</div>
-              <div style={{fontWeight:700,fontSize:'13px',marginBottom:'4px'}}>{e.title}</div>
+              <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>{e.title}</div>
               <div style={{fontSize:'12px',opacity:0.6,lineHeight:1.5}}>{e.desc}</div>
             </div>
           ))}
@@ -66,12 +66,12 @@ export default function ClientPage() {
 
         <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'16px'}}>Recommended Email Image Sizes</h2>
         <div style={{overflowX:'auto',marginBottom:'40px'}}>
-          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'13px'}}>
+          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'15px'}}>
             <thead>
               <tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
-                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Use Case</th>
-                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Target Size</th>
-                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.5)',fontWeight:600}}>Format</th>
+                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Use Case</th>
+                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Target Size</th>
+                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Format</th>
               </tr>
             </thead>
             <tbody>
@@ -79,7 +79,7 @@ export default function ClientPage() {
                 <tr key={i} style={{borderBottom:'1px solid rgba(255,255,255,0.06)',background:i%2===0?'rgba(255,255,255,0.02)':'transparent'}}>
                   <td style={{padding:'10px 12px',color:'rgba(255,255,255,0.8)'}}>{use}</td>
                   <td style={{padding:'10px 12px',textAlign:'center' as const,color:'#818cf8',fontWeight:700}}>{size}</td>
-                  <td style={{padding:'10px 12px',textAlign:'center' as const,color:'rgba(255,255,255,0.6)'}}>{fmt}</td>
+                  <td style={{padding:'10px 12px',textAlign:'center' as const,color:'rgba(255,255,255,0.9)'}}>{fmt}</td>
                 </tr>
               ))}
             </tbody>
@@ -93,7 +93,7 @@ export default function ClientPage() {
               <div style={{flexShrink:0,width:'36px',height:'36px',borderRadius:'50%',background:'#6366f1',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:'16px'}}>{s.n}</div>
               <div>
                 <div style={{fontWeight:700,fontSize:'14px',marginBottom:'4px'}}>{s.t}</div>
-                <div style={{fontSize:'13px',opacity:0.65,lineHeight:1.6}}>{s.d}</div>
+                <div style={{fontSize:'15px',opacity:0.65,lineHeight:1.6}}>{s.d}</div>
               </div>
             </div>
           ))}
@@ -104,7 +104,7 @@ export default function ClientPage() {
           {faqItems.map((item,i)=>(
             <details key={i} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'16px 20px',cursor:'pointer'}}>
               <summary style={{fontWeight:700,fontSize:'14px',color:'#a5b4fc',listStyle:'none'}}>❓ {item.q}</summary>
-              <div style={{fontSize:'13px',opacity:0.7,marginTop:'10px',lineHeight:1.6}}>{item.a}</div>
+              <div style={{fontSize:'15px',opacity:0.7,marginTop:'10px',lineHeight:1.6}}>{item.a}</div>
             </details>
           ))}
         </div>
@@ -119,7 +119,7 @@ export default function ClientPage() {
             {href:'/compress-for-linkedin',label:'💼 For LinkedIn'},
             {href:'/compress-without-uploading',label:'🔒 No Upload Compressor'},
           ].map(({href,label})=>(
-            <Link key={href} href={href} style={{background:'rgba(255,255,255,0.07)',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'8px',padding:'8px 14px',color:'white',textDecoration:'none',fontSize:'13px',fontWeight:600}}>{label}</Link>
+            <Link key={href} href={href} style={{background:'rgba(255,255,255,0.07)',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'8px',padding:'8px 14px',color:'white',textDecoration:'none',fontSize:'15px',fontWeight:600}}>{label}</Link>
           ))}
         </div>
       </div>

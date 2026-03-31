@@ -14,13 +14,13 @@ export default function ClientPage() {
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
+        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
           <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
           <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
         </div>
       </nav>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
-        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>
+        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
           <Link href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</Link> → Compress Without Uploading
         </div>
         <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
@@ -31,7 +31,7 @@ export default function ClientPage() {
         </p>
         <div style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.3)', borderRadius: '14px', padding: '20px', marginBottom: '32px' }}>
           {['No server upload ever', 'No account or signup', 'Files never stored anywhere', 'Works for passport photos, ID docs, sensitive images', 'GDPR compliant by design'].map((t, i) => (
-            <div key={i} style={{ fontSize: '13px', padding: '4px 0', opacity: 0.85 }}>✅ {t}</div>
+            <div key={i} style={{ fontSize:'15px', padding: '4px 0', opacity: 0.85 }}>✅ {t}</div>
           ))}
         </div>
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
@@ -45,7 +45,7 @@ export default function ClientPage() {
           {faq.map((item, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
-              <div style={{ fontSize: '13px', opacity: 0.7 }}>{item.a}</div>
+              <div style={{ fontSize:'15px', opacity: 0.7 }}>{item.a}</div>
             </div>
           ))}
         </div>
@@ -56,7 +56,7 @@ export default function ClientPage() {
             { href: '/bulk-image-compressor', label: '📦 Bulk Compressor' },
             { href: '/', label: '🎯 Compress to Exact KB' },
           ].map(({ href, label }) => (
-            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize: '13px', fontWeight: 600 }}>{label}</Link>
+            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize:'15px', fontWeight: 600 }}>{label}</Link>
           ))}
         </div>
       </div>

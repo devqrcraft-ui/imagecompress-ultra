@@ -25,7 +25,7 @@ export default function ClientPage() {
       {/* NAV */}
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize: '13px', opacity: 0.75 }}>
+        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
           <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
           <Link href="/compress-to-100kb" style={{ color: 'white', textDecoration: 'none' }}>100KB Tool</Link>
           <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
@@ -35,7 +35,7 @@ export default function ClientPage() {
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
 
         {/* BREADCRUMB */}
-        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>
+        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
           <Link href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</Link> → Bulk Image Compressor
         </div>
 
@@ -46,12 +46,12 @@ export default function ClientPage() {
         <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '8px' }}>
           Compress up to 50 images in a single batch — free, instant, and 100% private. Everything runs in your browser. Download all compressed images as a ZIP file in one click.
         </p>
-        <div style={{ fontSize: '13px', opacity: 0.45, marginBottom: '32px' }}>No upload · No signup · No file size limit · JPEG, PNG, WebP, HEIC</div>
+        <div style={{ fontSize:'15px', opacity: 0.45, marginBottom: '32px' }}>No upload · No signup · No file size limit · JPEG, PNG, WebP, HEIC</div>
 
         {/* CTA */}
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
           <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>📦 Compress Up to 50 Images — Free</div>
-          <p style={{ fontSize: '13px', opacity: 0.65, marginBottom: '16px' }}>Batch compress · Download as ZIP · 100% browser-based · No upload</p>
+          <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>Batch compress · Download as ZIP · 100% browser-based · No upload</p>
           <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
             ⚡ Open Bulk Compressor
           </Link>
@@ -69,7 +69,7 @@ export default function ClientPage() {
             <div style={{ background: 'rgba(129,140,248,0.2)', border: '1px solid rgba(129,140,248,0.4)', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '15px', flexShrink: 0 }}>{step}</div>
             <div>
               <div style={{ fontWeight: 700, fontSize: '15px', marginBottom: '4px' }}>{title}</div>
-              <div style={{ fontSize: '13px', opacity: 0.65 }}>{desc}</div>
+              <div style={{ fontSize:'15px', opacity: 0.65 }}>{desc}</div>
             </div>
           </div>
         ))}
@@ -80,7 +80,7 @@ export default function ClientPage() {
           {tips.map((tip, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: '3px solid #818cf8' }}>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>✓ {tip.title}</div>
-              <div style={{ fontSize: '13px', opacity: 0.65 }}>{tip.desc}</div>
+              <div style={{ fontSize:'15px', opacity: 0.65 }}>{tip.desc}</div>
             </div>
           ))}
         </div>
@@ -108,7 +108,7 @@ export default function ClientPage() {
           {faq.map((item, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
-              <div style={{ fontSize: '13px', opacity: 0.7 }}>{item.a}</div>
+              <div style={{ fontSize:'15px', opacity: 0.7 }}>{item.a}</div>
             </div>
           ))}
         </div>
@@ -124,7 +124,7 @@ export default function ClientPage() {
             { href: '/compress-for-amazon', label: '📦 Amazon Compressor' },
             { href: '/compress-for-etsy', label: '🎨 Etsy Compressor' },
           ].map(({ href, label }) => (
-            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize: '13px', fontWeight: 600 }}>
+            <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize:'15px', fontWeight: 600 }}>
               {label}
             </Link>
           ))}

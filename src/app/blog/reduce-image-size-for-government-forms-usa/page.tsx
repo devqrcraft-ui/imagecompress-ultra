@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <article style={{maxWidth:'800px',margin:'0 auto',padding:'40px 20px',color:'white'}}>
       <h1 style={{fontSize:'32px',fontWeight:700,marginBottom:'16px',lineHeight:1.3}}>Reduce Image Size for US Government Forms (USCIS, Passport, Visa)</h1>
-      <p style={{fontSize:'16px',color:'rgba(255,255,255,0.6)',marginBottom:'32px',lineHeight:1.7}}>US government forms like USCIS N-400, passport applications, and visa forms require photos under strict file size limits. This free tool helps you meet all requirements instantly.</p>
+      <p style={{fontSize:'16px',color:'rgba(255,255,255,0.9)',marginBottom:'32px',lineHeight:1.7}}>US government forms like USCIS N-400, passport applications, and visa forms require photos under strict file size limits. This free tool helps you meet all requirements instantly.</p>
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />

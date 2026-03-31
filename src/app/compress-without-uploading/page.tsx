@@ -20,7 +20,7 @@ export default function NoUploadPage() {
           <span style={{fontSize:'22px'}}>🗜️</span>
           <div style={{fontWeight:800,fontSize:'17px'}}>Compress<span style={{color:'#818cf8'}}>To20KB</span></div>
         </Link>
-        <Link href="/" style={{color:'rgba(255,255,255,0.5)',textDecoration:'none',fontSize:'13px'}}>← Back to Tool</Link>
+        <Link href="/" style={{color:'rgba(255,255,255,0.9)',textDecoration:'none',fontSize:'15px'}}>← Back to Tool</Link>
       </header>
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px'}}>
         <h1 style={{fontSize:'32px',fontWeight:800,marginBottom:'12px'}}>
@@ -75,12 +75,12 @@ export default function NoUploadPage() {
         ].map(([q,a])=>(
           <details key={q} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',marginBottom:'8px',border:'1px solid rgba(255,255,255,0.07)',padding:'14px 16px'}}>
             <summary style={{fontWeight:600,fontSize:'14px',cursor:'pointer',listStyle:'none'}}>▶ {q}</summary>
-            <p style={{fontSize:'13px',opacity:0.6,marginTop:'10px',lineHeight:'1.7'}}>{a}</p>
+            <p style={{fontSize:'15px',opacity:0.6,marginTop:'10px',lineHeight:'1.7'}}>{a}</p>
           </details>
         ))}
         <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
           {[['/compress-to-20kb','Compress to 20KB'],['/compress-passport-photo','Passport Photo'],['/compress-for-shopify','Shopify Preset']].map(([href,label])=>(
-            <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
+            <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
           ))}
         </div>
       </div>

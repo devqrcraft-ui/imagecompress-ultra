@@ -35,7 +35,7 @@ export default function PassportPage() {
           <span style={{fontSize:'22px'}}>🗜️</span>
           <div style={{fontWeight:800,fontSize:'17px'}}>Compress<span style={{color:'#818cf8'}}>To20KB</span></div>
         </Link>
-        <Link href="/" style={{color:'rgba(255,255,255,0.5)',textDecoration:'none',fontSize:'13px'}}>← Back to Tool</Link>
+        <Link href="/" style={{color:'rgba(255,255,255,0.9)',textDecoration:'none',fontSize:'15px'}}>← Back to Tool</Link>
       </header>
 
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px'}}>
@@ -47,7 +47,7 @@ export default function PassportPage() {
           <span>Compress Passport Photo</span>
         </nav>
 
-        <div style={{fontSize:'13px',opacity:0.5,marginBottom:'10px'}}>
+        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'10px'}}>
           🪪 Passport Photo Compressor — All Countries 2025
         </div>
 
@@ -57,7 +57,7 @@ export default function PassportPage() {
         <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.65,marginBottom:'8px'}}>
           Compress your passport photo for <strong style={{color:'white'}}>US State Department</strong>, <strong style={{color:'white'}}>USCIS</strong>, <strong style={{color:'white'}}>DS-11</strong>, <strong style={{color:'white'}}>DS-160</strong>, India UIDAI, Pakistan NADRA, Ukraine Diia and 50+ other government portals. Meet any file size requirement — 20KB, 50KB or 240KB — instantly and for free.
         </p>
-        <p style={{fontSize:'13px',lineHeight:'1.7',opacity:0.45,marginBottom:'24px'}}>
+        <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.45,marginBottom:'24px'}}>
           Unlike PNG Shrinker, Fotor or Zamzar — your passport or ID photo never leaves your device. All compression happens locally in your browser. No account needed, no registration, GDPR compliant.
         </p>
 
@@ -66,7 +66,7 @@ export default function PassportPage() {
           <span style={{fontSize:'28px'}}>🔒</span>
           <div>
             <div style={{fontWeight:700,fontSize:'14px',color:'#34d399',marginBottom:'4px'}}>Your passport photo is 100% safe</div>
-            <div style={{fontSize:'13px',opacity:0.65}}>Unlike online tools that upload your ID photo to foreign servers, our tool processes everything locally in your browser. No server ever receives your image. Safe for immigration and government use.</div>
+            <div style={{fontSize:'15px',opacity:0.65}}>Unlike online tools that upload your ID photo to foreign servers, our tool processes everything locally in your browser. No server ever receives your image. Safe for immigration and government use.</div>
           </div>
         </div>
 
@@ -102,10 +102,10 @@ export default function PassportPage() {
                   </div>
                 ))}
               </div>
-              <p style={{fontSize:'13px',opacity:0.6,margin:'0 0 12px',lineHeight:'1.6'}}>
+              <p style={{fontSize:'15px',opacity:0.6,margin:'0 0 12px',lineHeight:'1.6'}}>
                 Used for: <strong style={{color:'white'}}>DS-11</strong> (new passport), <strong style={{color:'white'}}>DS-82</strong> (renewal), <strong style={{color:'white'}}>DS-160</strong> (nonimmigrant visa), <strong style={{color:'white'}}>USCIS forms</strong> (I-485, N-400, I-90), <strong style={{color:'white'}}>DV Lottery</strong>.
               </p>
-              <Link href="/compress-for-uscis" style={{display:'inline-block',padding:'8px 18px',borderRadius:'8px',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',fontWeight:700,fontSize:'13px',textDecoration:'none'}}>
+              <Link href="/compress-for-uscis" style={{display:'inline-block',padding:'8px 18px',borderRadius:'8px',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',fontWeight:700,fontSize:'15px',textDecoration:'none'}}>
                 Full USCIS Guide →
               </Link>
             </div>
@@ -127,7 +127,7 @@ export default function PassportPage() {
           ].map(([flag,country,req])=>(
             <div key={country} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'14px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontSize:'22px',marginBottom:'6px'}}>{flag}</div>
-              <div style={{fontWeight:700,fontSize:'13px',marginBottom:'4px'}}>{country}</div>
+              <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>{country}</div>
               <div style={{fontSize:'12px',opacity:0.5}}>{req}</div>
             </div>
           ))}
@@ -145,7 +145,7 @@ export default function PassportPage() {
           ].map(([q,a])=>(
             <div key={q} style={{background:'rgba(255,255,255,0.03)',borderRadius:'10px',padding:'16px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontWeight:700,fontSize:'14px',marginBottom:'6px',color:'#a5b4fc'}}>{q}</div>
-              <div style={{fontSize:'13px',opacity:0.6,lineHeight:'1.6'}}>{a}</div>
+              <div style={{fontSize:'15px',opacity:0.6,lineHeight:'1.6'}}>{a}</div>
             </div>
           ))}
         </div>
@@ -159,7 +159,7 @@ export default function PassportPage() {
             ['/compress-to-200kb','Compress to 200KB'],
             ['/compress-for-shopify','Shopify Compressor'],
           ].map(([href,label])=>(
-            <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'13px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
+            <Link key={href} href={href} style={{padding:'8px 16px',borderRadius:'8px',background:'rgba(129,140,248,0.1)',border:'1px solid rgba(129,140,248,0.25)',color:'#a5b4fc',fontSize:'15px',fontWeight:600,textDecoration:'none'}}>{label} →</Link>
           ))}
         </div>
 
