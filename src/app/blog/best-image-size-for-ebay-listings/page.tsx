@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-const EbayInlineCalc = dynamic(() => import('./EbayInlineCalc'), { ssr: false });
+import EbayInlineCalc from './EbayInlineCalc';
 
 export const metadata: Metadata = {
   title: 'eBay Image Size 2026: Min 1600px, Max 7MB — Free Resize Tool',
