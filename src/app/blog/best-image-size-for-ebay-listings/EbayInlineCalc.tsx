@@ -21,7 +21,7 @@ export default function EbayInlineCalc() {
       }}>
         Target: 300KB &nbsp;|&nbsp; Format: JPEG &nbsp;|&nbsp; No upload — runs in your browser
       </p>
-      <CompressorWidget defaultMode="size" defaultTargetKB={300} defaultFormat="jpeg" defaultQuality={88} />
+      <CompressorWidget defaultMode="exactkb" defaultTargetKB={300} defaultFormat="jpeg" defaultQuality={88} />
     </div>
   );
 }
