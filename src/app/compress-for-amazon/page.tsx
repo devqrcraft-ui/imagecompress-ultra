@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Free Image Compressor for Amazon Listings — Resize Product Photos',
-  description: 'Compress Amazon product images to meet listing requirements. Free, browser-based, no upload. Get your photos under 10MB with perfect quality.',
+  title: 'Amazon Product Image Compressor 2026 — Free, Under 10MB, No App',
+  description: 'Compress Amazon listing images free — under 10MB, 1000px minimum, JPEG. No upload, no app. Meets Amazon image requirements instantly. Bulk up to 50 images.',
   alternates: { canonical: '/compress-for-amazon' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-amazon' },
 };

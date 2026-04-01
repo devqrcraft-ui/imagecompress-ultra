@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'DPI Converter Online Free — Change to 72, 150, 300 DPI Instantly',
-  description: 'Convert image DPI free — 72, 96, 150, 300, 600 DPI. No upload, instant, browser-only. Print-ready in seconds. Works for passport photos, documents, and print files.',
+  title: 'What Is 150 DPI? Free Online DPI Converter — 72, 150, 300, 600 DPI',
+  description: '150 DPI = standard web resolution. 300 DPI = print quality. Convert your image DPI free — no upload, instant, browser-only. Passport photos, documents, print files.',
   alternates: { canonical: 'https://www.compressto20kb.com/dpi-converter' },
   openGraph: {
-    title: 'DPI Converter Online Free — Change to 72, 150, 300 DPI Instantly',
+    title: 'What Is 150 DPI? Free Online DPI Converter — 72, 150, 300, 600 DPI',
     description: 'Convert image DPI free — 72, 96, 150, 300, 600 DPI. No upload, browser-only, instant results.',
     url: 'https://compressto20kb.com/dpi-converter',
     siteName: 'CompressTo20KB',
