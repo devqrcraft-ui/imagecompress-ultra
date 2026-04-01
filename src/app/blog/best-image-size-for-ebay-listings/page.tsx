@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const EbayInlineCalc = dynamic(() => import('./EbayInlineCalc'), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'eBay Image Size 2026: Min 1600px, Max 7MB — Free Resize Tool',
@@ -106,9 +109,7 @@ export default function EbayImageSizePage() {
         No account needed, no upload — your files never leave your device.
       </p>
 
-      <Link href="/compress-for-ebay" style={s.cta}>
-        Open eBay Image Compressor →
-      </Link>
+      <EbayInlineCalc />
 
       <h2 style={s.h2}>Frequently Asked Questions</h2>
       {[
