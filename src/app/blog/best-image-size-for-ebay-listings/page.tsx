@@ -3,8 +3,8 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import type { Metadata } from 'next';
 import ClientPage from './client';
 export const metadata: Metadata = {
-  title: 'eBay Image Size Requirements 2026 — 1600px, Under 7MB + Free Resizer',
-  description: 'eBay image requirements 2026: min 1600px, max 7MB, JPEG format. Compress & resize your eBay listing photos to exact specs free — no upload, instant download.',
+  title: 'eBay Image Size 2026: Min 1600px, Max 7MB — Free Resize Tool',
+  description: 'eBay requires images min 1600px, max 7MB, JPEG. Resize and compress your listing photos to exact eBay specs free — no upload, instant, browser-only.',
   keywords: 'best image size for ebay, ebay listing photo size, compress image for ebay, ebay photo requirements, ebay product image size',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
   openGraph: { url: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
