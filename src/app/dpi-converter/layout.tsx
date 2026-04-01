@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'DPI Converter — Change Image DPI Free Online, No Upload',
-  description: 'Convert image DPI free online. Change from 72 to 300 DPI for print, passport photos, and official documents. Files never leave your device. No signup.',
+  title: 'DPI Converter Online Free — Change to 72, 150, 300 DPI Instantly',
+  description: 'Convert image DPI free — 72, 96, 150, 300, 600 DPI. No upload, instant, browser-only. Print-ready in seconds. Works for passport photos, documents, and print files.',
   alternates: { canonical: 'https://www.compressto20kb.com/dpi-converter' },
   openGraph: {
-    title: 'DPI Converter — Change Image DPI Free, No Upload',
-    description: 'Convert image DPI online for print or documents. 100% private, browser-based.',
+    title: 'DPI Converter Online Free — Change to 72, 150, 300 DPI Instantly',
+    description: 'Convert image DPI free — 72, 96, 150, 300, 600 DPI. No upload, browser-only, instant results.',
     url: 'https://compressto20kb.com/dpi-converter',
     siteName: 'CompressTo20KB',
     type: 'website',
