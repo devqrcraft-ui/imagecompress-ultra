@@ -111,8 +111,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-K9WHFGEEKL"
           onLoad={() => {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
+            (window as any).dataLayer = (window as any).dataLayer || [];
+            function gtag(){(window as any).dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-K9WHFGEEKL');
           }}
