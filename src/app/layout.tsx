@@ -112,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://www.googletagmanager.com/gtag/js?id=G-K9WHFGEEKL"
           onLoad={() => {
             (window as any).dataLayer = (window as any).dataLayer || [];
-            function gtag(){(window as any).dataLayer.push(arguments);}
+            function gtag(...args: any[]){(window as any).dataLayer.push(args);}
             gtag('js', new Date());
             gtag('config', 'G-K9WHFGEEKL');
           }}
