@@ -107,16 +107,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" style={{overflowX:"hidden",maxWidth:"100vw"}}>
       <head>
         <Script
-          id="gtag"
-          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-K9WHFGEEKL"
-          onLoad={() => {
-            (window as any).dataLayer = (window as any).dataLayer || [];
-            function gtag(...args: any[]){(window as any).dataLayer.push(args);}
-            gtag('js', new Date());
-            gtag('config', 'G-K9WHFGEEKL');
-          }}
+          strategy="afterInteractive"
         />
+        <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-K9WHFGEEKL');
+        `}} />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebApp) }} />
