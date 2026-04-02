@@ -3,6 +3,7 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/pagespeed-images' },
   title: "Fix Image Issues in Google PageSpeed Insights",
   description: "Step-by-step guide to resolve all PageSpeed image warnings: serve next-gen formats, properly size images, defer offscreen images.",
   openGraph: {

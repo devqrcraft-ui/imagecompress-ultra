@@ -32,6 +32,11 @@ const FAQ_SCHEMA = {
   ]
 };
 
+
+export const metadata = {
+  alternates: { canonical: 'https://www.compressto20kb.com' },
+};
+
 export default function Page() {
   return (
     <>
