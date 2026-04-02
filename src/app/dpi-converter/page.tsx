@@ -3,9 +3,6 @@ import { useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
 
 
-export const metadata = {
-  alternates: { canonical: 'https://www.compressto20kb.com/dpi-converter' },
-};
 
 export default function DPIConverterPage() {
   const [image, setImage] = useState<{file: File; preview: string; originalDPI: number} | null>(null);
