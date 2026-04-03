@@ -41,7 +41,7 @@ export default function ClientPage() {
 
         {/* HERO */}
         <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
-          Bulk Image Compressor — <span style={{ color: '#818cf8' }}>Compress 50 Photos at Once</span>
+          Bulk Image Compressor – <span style={{ color: '#818cf8' }}>Unlimited Images, No Upload</span>
         </h1>
         <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '8px' }}>
           Compress up to 50 images in a single batch — free, instant, and 100% private. Everything runs in your browser. Download all compressed images as a ZIP file in one click.
