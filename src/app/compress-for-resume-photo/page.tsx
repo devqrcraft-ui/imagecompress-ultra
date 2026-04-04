@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for Resume / CV Photo — Free Online Tool',
   description: 'Compress photo for resume or CV. Under 100KB for email-friendly documents.',
-  alternates: { canonical: '/compress-for-resume-photo' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-resume-photo' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-resume-photo' },
   keywords: 'compress photo for resume-photo, Resume / CV Photo profile photo size, Resume / CV Photo photo requirements',
 };

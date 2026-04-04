@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for Common App College — Free Online Tool',
   description: 'Compress photo for Common App college application. Under 5MB, JPEG or PNG.',
-  alternates: { canonical: '/compress-for-common-app' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-common-app' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-common-app' },
   keywords: 'compress photo for common-app, Common App College photo requirements, Common App College photo size',
 };
