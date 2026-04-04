@@ -115,8 +115,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('js', new Date());
           gtag('config', 'G-K9WHFGEEKL');
         `}} />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebApp) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
@@ -128,8 +126,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <Footer />
       <Script src="/ai-chat-widget-final.js?v=4" strategy="lazyOnload" />        <SpeedInsights />
+        <Analytics />
       </body>
-      <Analytics />
     </html>
   );
 }

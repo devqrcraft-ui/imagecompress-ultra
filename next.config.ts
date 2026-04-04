@@ -56,6 +56,7 @@ const nextConfig: NextConfig = {
 };
 
 export default withSentryConfig(nextConfig, {
+  disableClientWebpackPlugin: true,
   org: "compressto20kb",
   project: "javascript-nextjs",
   silent: !process.env.CI,
