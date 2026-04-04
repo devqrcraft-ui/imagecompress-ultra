@@ -56,7 +56,11 @@ const nextConfig: NextConfig = {
 };
 
 export default withSentryConfig(nextConfig, {
-  disableClientWebpackPlugin: true,
+  bundleSizeOptimizations: {
+    excludeDebugStatements: true,
+    excludeReplayShadowDom: true,
+    excludeReplayWorker: true,
+  },
   org: "compressto20kb",
   project: "javascript-nextjs",
   silent: !process.env.CI,
