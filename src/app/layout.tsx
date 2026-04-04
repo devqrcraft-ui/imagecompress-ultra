@@ -107,9 +107,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-K9WHFGEEKL"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
+        <Script id="gtag-init" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
