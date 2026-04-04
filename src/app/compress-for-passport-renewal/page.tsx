@@ -22,7 +22,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'US Passport Renewal Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-passport-renewal',
+        url: 'https://www.compressto20kb.com/compress-for-passport-renewal',
         description: 'Compress photo for US passport renewal online. Under 240KB, white background, 600x600px JPEG.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

@@ -39,7 +39,7 @@ export default function CompressTo240KBPage() {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: 'Compress Photo to 240KB — DS-160 US Visa Tool',
-        url: 'https://compressto20kb.com/compress-to-240kb',
+        url: 'https://www.compressto20kb.com/compress-to-240kb',
         description: 'Free tool to compress photos to under 240KB for DS-160 US Visa application.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',

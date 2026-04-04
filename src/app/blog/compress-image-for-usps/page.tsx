@@ -23,7 +23,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "Compress Image for USPS — File Size & Format Requirements 2025",
-  url: "https://compressto20kb.com/blog/compress-image-for-usps",
+  url: "https://www.compressto20kb.com/blog/compress-image-for-usps",
   author: { "@type": "Organization", name: "CompressTo20KB" },
   datePublished: "2026-02-22",
 };

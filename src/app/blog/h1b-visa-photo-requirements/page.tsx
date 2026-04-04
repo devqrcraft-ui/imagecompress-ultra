@@ -23,7 +23,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "H1B Visa Photo Requirements 2025",
-  url: "https://compressto20kb.com/blog/h1b-visa-photo-requirements",
+  url: "https://www.compressto20kb.com/blog/h1b-visa-photo-requirements",
   author: { "@type": "Organization", name: "CompressTo20KB" },
   datePublished: "2026-02-22",
 };

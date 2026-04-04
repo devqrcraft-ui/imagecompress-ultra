@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Image for Google Classroom — Free & Private',
     description: 'Browser-based compression for Google Classroom. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-google-classroom',
+    url: 'https://www.compressto20kb.com/compress-for-google-classroom',
   },
 };
 

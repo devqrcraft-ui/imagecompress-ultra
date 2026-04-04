@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Image for Upwork — Free & Private',
     description: 'Browser-based compression for Upwork. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-upwork',
+    url: 'https://www.compressto20kb.com/compress-for-upwork',
   },
 };
 

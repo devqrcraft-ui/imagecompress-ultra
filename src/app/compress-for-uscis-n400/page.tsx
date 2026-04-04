@@ -22,7 +22,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'USCIS N-400 Citizenship Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-uscis-n400',
+        url: 'https://www.compressto20kb.com/compress-for-uscis-n400',
         description: 'Compress photo for USCIS N-400 citizenship application. Under 240KB, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

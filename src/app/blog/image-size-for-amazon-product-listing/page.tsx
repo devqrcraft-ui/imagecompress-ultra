@@ -24,7 +24,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "Amazon Product Image Size Requirements 2025",
-  url: "https://compressto20kb.com/blog/image-size-for-amazon-product-listing",
+  url: "https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing",
   author: { "@type": "Organization", name: "CompressTo20KB" },
   datePublished: "2026-02-22",
 };

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'What Is 150 DPI? Free Online DPI Converter — 72, 150, 300, 600 DPI',
     description: 'Convert image DPI free — 72, 96, 150, 300, 600 DPI. No upload, browser-only, instant results.',
-    url: 'https://compressto20kb.com/dpi-converter',
+    url: 'https://www.compressto20kb.com/dpi-converter',
     siteName: 'CompressTo20KB',
     type: 'website',
   },

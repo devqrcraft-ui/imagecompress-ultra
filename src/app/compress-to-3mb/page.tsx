@@ -20,7 +20,7 @@ export default function CompressTo3MBPage() {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: 'Compress Image to 3MB',
-        url: 'https://compressto20kb.com/compress-to-3mb',
+        url: 'https://www.compressto20kb.com/compress-to-3mb',
         description: 'Free tool to compress images to exactly 3MB.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',

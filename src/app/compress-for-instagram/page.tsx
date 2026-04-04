@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Images for Instagram Free — 1080px, No Upload',
     description: 'Resize and compress photos to perfect Instagram dimensions. Files stay in your browser.',
-    url: 'https://compressto20kb.com/compress-for-instagram',
-    images: [{ url: 'https://compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Compress Images for Instagram Free' }],
+    url: 'https://www.compressto20kb.com/compress-for-instagram',
+    images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Compress Images for Instagram Free' }],
   },
 };
 

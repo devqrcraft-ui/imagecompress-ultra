@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Image for Whatsapp — Free & Private',
     description: 'Browser-based compression for Whatsapp. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-whatsapp',
+    url: 'https://www.compressto20kb.com/compress-for-whatsapp',
   },
 };
 

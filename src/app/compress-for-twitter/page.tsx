@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Image for Twitter — Free & Private',
     description: 'Browser-based compression for Twitter. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-twitter',
+    url: 'https://www.compressto20kb.com/compress-for-twitter',
   },
 };
 
