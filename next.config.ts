@@ -2,6 +2,7 @@ import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
 
   compress: true,
   modularizeImports: {
@@ -16,7 +17,7 @@ const nextConfig: NextConfig = {
   productionBrowserSourceMaps: false,
   experimental: {
     optimizePackageImports: ["react", "react-dom", "lucide-react", "@radix-ui/react-icons"],
-    optimizeCss: false,
+    optimizeCss: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
@@ -66,8 +67,6 @@ export default withSentryConfig(nextConfig, {
   silent: !process.env.CI,
   widenClientFileUpload: true,
   tunnelRoute: "/monitoring",
-  webpack: {
-    automaticVercelMonitors: true,
-    treeshake: { removeDebugLogging: true },
-  },
+  automaticVercelMonitors: true,
+  hideSourceMaps: true,
 });
