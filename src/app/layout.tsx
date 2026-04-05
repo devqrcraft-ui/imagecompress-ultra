@@ -105,6 +105,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" style={{overflowX:"hidden",maxWidth:"100vw"}}>
       <head>
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-K9WHFGEEKL"
           strategy="lazyOnload"
@@ -119,6 +122,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }} />
+            <style>{`
+  *{box-sizing:border-box;}
+  html,body{overflow-x:hidden;max-width:100vw;}
+  body{margin:0;padding:0;}
+  a,button,[role=button]{cursor:pointer;transition:opacity 0.15s;}
+  img{max-width:100%;height:auto;}
+`}</style>
       </head>
       <body style={{ margin: 0, padding: 0, background: '#0f0c29', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Navbar />
