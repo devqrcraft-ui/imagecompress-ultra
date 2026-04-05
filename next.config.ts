@@ -68,5 +68,4 @@ export default withSentryConfig(nextConfig, {
   widenClientFileUpload: true,
   tunnelRoute: "/monitoring",
   automaticVercelMonitors: true,
-  hideSourceMaps: true,
 });
