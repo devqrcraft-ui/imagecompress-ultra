@@ -3,7 +3,7 @@ import ClientPage from './client';
 
 export const metadata: Metadata = {
   title: 'Compress Image to 20KB Online Free — Exact Size, Instant, No Upload',
-  description: 'Compress any photo to exactly 20KB in seconds — free. Works for government forms, visa applications, job portals. JPG, PNG, WebP, HEIC. Files never leave your browser.',
+  description: 'Compress JPG, PNG or WebP to exactly 20KB free — no upload, instant. Works for DS-160 visa forms, government portals, passport photo requirements. Files never leave your browser.',
   keywords: 'compress image to 20kb, reduce image size to 20kb, resize photo to 20kb, 20kb image compressor online free, compress jpg to 20kb, compress png to 20kb',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-20kb' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-to-20kb' },

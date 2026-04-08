@@ -3,7 +3,7 @@ import ClientPage from './client';
 
 export const metadata: Metadata = {
   title: 'Compress Image to 100KB Online Free — Exact Size, Instant, No Upload',
-  description: 'Compress any photo to exactly 100KB in seconds — free. Ideal for email, ecommerce listings, web uploads, forms with a 100KB limit. JPG, PNG, WebP, HEIC supported.',
+  description: 'Compress images to exactly 100KB free — instant, no upload. Ideal for eBay listings, email attachments, forms with 100KB limit. JPG, PNG, WebP supported. Nothing sent to any server.',
   keywords: 'compress image to 100kb, reduce image size to 100kb, resize photo to 100kb, 100kb image compressor online free, compress jpg to 100kb, reduce png to 100kb, compress webp to 100kb',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-100kb' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-to-100kb' },
