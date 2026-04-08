@@ -186,7 +186,7 @@ export default function HomeClient() {
         <div className="main-col" style={{flex:'0 0 70%',maxWidth:'70%'}}>
 
           <h1 style={{fontSize:'26px',fontWeight:800,marginBottom:'4px',letterSpacing:'-0.5px'}}>
-            Compress Image to <span style={{color:'#818cf8'}}>20KB, 50KB, 100KB</span> — Free Online, No Upload
+            Compress Image to <span style={{color:'#818cf8'}}>20KB</span> Free — Instant, No Upload, 100% Private
           </h1>
           <p style={{fontSize:'15px',opacity:0.55,marginBottom:'12px'}}>Free <strong style={{color:'rgba(255,255,255,0.8)'}}>online image compressor</strong> — compress image to 20KB, 50KB, or 100KB in your browser. No upload, 100% private, no watermark.</p>
           {/* USP BULLETS */}
