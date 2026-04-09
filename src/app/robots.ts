@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/'],
+        disallow: ['/api/', '/compress-for-[country]/']
       },
     ],
     sitemap: 'https://www.compressto20kb.com/sitemap.xml',
