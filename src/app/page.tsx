@@ -34,8 +34,8 @@ const FAQ_SCHEMA = {
 
 
 export const metadata = {
-  title: 'Compress Image to 20KB Online Free — Exact Size, No Upload, Instant',
-  description: 'Free online image compressor. Compress to exactly 20KB, 50KB, or 100KB in seconds. No upload — files stay in your browser. JPG, PNG, WebP, HEIC. Faster than TinyPNG.',
+  title: 'Compress Image to 20KB — No Upload, Files Stay in Browser | Free',
+  description: 'Compress JPG, PNG, WebP, HEIC to exactly 20KB, 50KB, or 100KB. All processing in your browser — photos never uploaded to any server. Free, no signup, instant.',
   alternates: { canonical: 'https://www.compressto20kb.com' },
 };
 
