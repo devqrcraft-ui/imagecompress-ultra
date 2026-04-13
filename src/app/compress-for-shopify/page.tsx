@@ -1,5 +1,5 @@
 
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress images for Shopify?","acceptedAnswer":{"@type":"Answer","text":"Upload your product images, select the Shopify preset (WebP, 82% quality, 2048px), and click Compress. Download the optimized files and re-upload them to your Shopify product listings. No app installation needed — everything runs in your browser."}},{"@type":"Question","name":"What image format should I use for Shopify?","acceptedAnswer":{"@type":"Answer","text":"WebP is the best format for Shopify in 2025. It loads 70% faster than JPEG at the same visual quality. Shopify supports WebP on all modern browsers. Use JPEG as a fallback only for compatibility with very old systems."}},{"@type":"Question","name":"What is the recommended image size for Shopify product photos?","acceptedAnswer":{"@type":"Answer","text":"Shopify recommends a maximum of 2048 x 2048 pixels and under 1MB file size for product images. WebP format at 82% quality typically achieves under 300-500KB at 2048px — ideal for fast loading without sacrificing quality."}},{"@type":"Question","name":"Will compressing images affect my live Shopify store?","acceptedAnswer":{"@type":"Answer","text":"No. This tool only compresses images on your local device. You manually re-upload the optimized images to your Shopify admin. Nothing touches your store automatically — unlike Shopify apps that modify your store directly."}},{"@type":"Question","name":"How many Shopify images can I compress at once?","acceptedAnswer":{"@type":"Answer","text":"Up to 50 images simultaneously. All processed locally in your browser — no server upload, no risk to your store, no monthly subscription required."}}]};
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress images for Shopify?","acceptedAnswer":{"@type":"Answer","text":"Upload your product images, select the Shopify preset (WebP, 82% quality, 2048px), and click Compress. Download the optimized files and re-upload them to your Shopify product listings. No app installation needed — everything runs in your browser."}},{"@type":"Question","name":"What image format should I use for Shopify?","acceptedAnswer":{"@type":"Answer","text":"WebP is the best format for Shopify in 2026. It loads 70% faster than JPEG at the same visual quality. Shopify supports WebP on all modern browsers. Use JPEG as a fallback only for compatibility with very old systems."}},{"@type":"Question","name":"What is the recommended image size for Shopify product photos?","acceptedAnswer":{"@type":"Answer","text":"Shopify recommends a maximum of 2048 x 2048 pixels and under 1MB file size for product images. WebP format at 82% quality typically achieves under 300-500KB at 2048px — ideal for fast loading without sacrificing quality."}},{"@type":"Question","name":"Will compressing images affect my live Shopify store?","acceptedAnswer":{"@type":"Answer","text":"No. This tool only compresses images on your local device. You manually re-upload the optimized images to your Shopify admin. Nothing touches your store automatically — unlike Shopify apps that modify your store directly."}},{"@type":"Question","name":"How many Shopify images can I compress at once?","acceptedAnswer":{"@type":"Answer","text":"Up to 50 images simultaneously. All processed locally in your browser — no server upload, no risk to your store, no monthly subscription required."}}]};
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -20,7 +20,7 @@ export default function ShopifyPage() {
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px'}}>
         <div style={{display:'inline-block',background:'rgba(16,185,129,0.15)',border:'1px solid rgba(16,185,129,0.3)',borderRadius:'20px',padding:'4px 14px',fontSize:'12px',fontWeight:600,color:'#34d399',marginBottom:'14px'}}>🛍️ Shopify Optimization</div>
         <h1 style={{fontSize:'32px',fontWeight:800,marginBottom:'12px',letterSpacing:'-0.5px'}}>
-          Free Image Compressor for <span style={{color:'#818cf8'}}>Shopify</span>
+          Free Online Image Compressor for <span style={{color:'#818cf8'}}>Shopify</span> — No App Needed
         </h1>
         <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.65,marginBottom:'24px'}}>
           Compress Shopify product images to WebP format under 1MB — free, instant, no app needed. Your images are processed locally and never uploaded to any server.
@@ -44,7 +44,7 @@ export default function ShopifyPage() {
         </div>
 
         {/* SPECS */}
-        <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'14px'}}>Shopify Image Requirements 2025</h2>
+        <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'14px'}}>Shopify Image Requirements 2026</h2>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'10px',marginBottom:'28px'}}>
           {[
             ['📐','Max dimensions','2048 × 2048 px (recommended)'],
@@ -95,8 +95,8 @@ export default function ShopifyPage() {
         <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'14px'}}>FAQ — Shopify Image Compression</h2>
         {[
           ['Will this affect my live Shopify store?','No — our tool only compresses images on your computer. You manually re-upload the optimized images to Shopify. Nothing touches your store automatically.'],
-          ['What format should Shopify images be in?','WebP is best for Shopify in 2025 — it loads 70% faster than JPEG with the same visual quality. Shopify supports WebP on all modern browsers.'],
-          ['How many images can I compress at once?','Up to 10 images simultaneously for free. All processed locally in your browser.'],
+          ['What format should Shopify images be in?','WebP is best for Shopify in 2026 — it loads 70% faster than JPEG with the same visual quality. Shopify supports WebP on all modern browsers.'],
+          ['How many images can I compress at once?','Up to 50 images simultaneously for free. All processed locally in your browser — no server upload, no signup required.'],
         ].map(([q,a])=>(
           <details key={q} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',marginBottom:'8px',border:'1px solid rgba(255,255,255,0.07)',padding:'14px 16px'}}>
             <summary style={{fontWeight:600,fontSize:'14px',cursor:'pointer',listStyle:'none'}}>▶ {q}</summary>
