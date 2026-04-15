@@ -102,10 +102,10 @@ export default function DPIConverterPage() {
           <span>DPI Converter</span>
         </nav>
 
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'10px'}}>🖨️ Free Online DPI Converter — No Upload</div>
+        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'10px'}}>🖨️ Image DPI Converter Online — No Upload Required</div>
 
         <h1 style={{fontSize:'32px',fontWeight:800,marginBottom:'12px'}}>
-          Free Online <span style={{color:'#818cf8'}}>DPI Converter</span>
+          Image <span style={{color:'#818cf8'}}>DPI Converter</span> — Change to 300 DPI Free
         </h1>
         <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.65,marginBottom:'8px'}}>
           Change image DPI to <strong style={{color:'white'}}>300 DPI</strong> for printing, <strong style={{color:'white'}}>USCIS</strong>, US passport, government portals, or any other requirement. Works 100% in your browser — your image <strong style={{color:'white'}}>never leaves your device</strong>.
