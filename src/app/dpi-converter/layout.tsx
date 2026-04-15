@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'What Is 150 DPI? Free Online DPI Converter — 72, 150, 300, 600 DPI',
-  description: '150 DPI = standard web resolution. 300 DPI = print quality. Convert your image DPI free — no upload, instant, browser-only. Passport photos, documents, print files.',
+  title: 'DPI Converter Online — Change Image to 300 DPI Free | No Upload',
+  description: 'Convert image DPI free — 72, 96, 150, 300, 600 DPI. Change photo to 300 DPI for USCIS, passport, print. No upload, instant, browser-only.',
   alternates: { canonical: 'https://www.compressto20kb.com/dpi-converter' },
   openGraph: {
-    title: 'What Is 150 DPI? Free Online DPI Converter — 72, 150, 300, 600 DPI',
+    title: 'DPI Converter Online — Change Image to 300 DPI Free | No Upload',
     description: 'Convert image DPI free — 72, 96, 150, 300, 600 DPI. No upload, browser-only, instant results.',
     url: 'https://www.compressto20kb.com/dpi-converter',
     siteName: 'CompressTo20KB',
@@ -14,6 +14,43 @@ export const metadata: Metadata = {
   },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Does changing DPI affect image quality?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. Changing DPI metadata does not resize or affect pixel data — it only changes how software interprets the print size. Pixel dimensions stay the same.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What DPI does USCIS require?',
+      acceptedAnswer: { '@type': 'Answer', text: 'USCIS and US State Department recommend 300 DPI for printed photos. For digital uploads (DS-160, DV Lottery online), file size (max 240KB) and pixel dimensions (600-1200px) matter more.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why is my photo 72 DPI?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most smartphone and digital cameras save photos at 72 DPI by default. This is fine for screens but may need changing to 300 DPI for printing or government document submission.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does this tool resize my image?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. This tool only changes the DPI metadata in the JPEG header. Your image pixel dimensions stay exactly the same.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is my image uploaded to a server?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. All processing happens in your browser using JavaScript. Your image never leaves your device.' },
+    },
+  ],
+};
+
 export default function Layout({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      {children}
+    </>
+  );
 }
