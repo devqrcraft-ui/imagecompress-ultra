@@ -105,9 +105,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" style={{overflowX:"hidden",maxWidth:"100vw"}}>
       <head>
-      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-K9WHFGEEKL"
           strategy="lazyOnload"
