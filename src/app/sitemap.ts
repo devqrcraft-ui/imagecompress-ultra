@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/compress-to-10mb`, lastModified, changeFrequency: 'monthly', priority: 0.85 },
 
     // Platform tools
+    { url: `${baseUrl}/batch-image-compressor-zip`, lastModified, changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${baseUrl}/bulk-image-compressor`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-for-uscis`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/compress-passport-photo-usa`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
