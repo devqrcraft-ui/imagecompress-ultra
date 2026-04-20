@@ -3,13 +3,13 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DS-160 Photo Requirements 2026 — Size, Format, How to Compress",
-  description: "Complete guide to DS-160 photo requirements 2026: file size, dimensions, format, background. How to compress your DS-160 photo to under 240KB free — no upload needed.",
+  title: "DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds",
+  description: "Meet all DS-160 photo requirements instantly: 600x600px, JPEG, under 240KB. Free compression — works in browser, no upload, no account.",
   alternates: { canonical: 'https://www.compressto20kb.com/blog/ds-160-photo-requirements' },
   keywords: 'DS-160 photo requirements, DS-160 photo size, compress DS-160 photo, DS-160 JPEG size, nonimmigrant visa photo size 2025',
   openGraph: {
-    title: "DS-160 Photo Requirements 2026 — Size, Format, How to Compress",
-    description: "Complete guide to DS-160 photo requirements: file size, dimensions, format. Compress your photo free in 10 seconds.",
+    title: "DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds",
+    description: "Meet all DS-160 photo requirements instantly: 600x600px, JPEG, under 240KB. Free compression — works in browser, no upload, no account.",
     images: [{ url: "/og/ds-160-photo-requirements.png", width: 1200, height: 630 }],
     type: "article",
   },

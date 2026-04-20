@@ -3,8 +3,8 @@ import Link from 'next/link';
 import EbayInlineCalc from './EbayInlineCalc';
 
 export const metadata: Metadata = {
-  title: 'eBay Image Size Requirements 2026: 1600px Min, JPEG, Max 12MB',
-  description: 'eBay requires min 1600px on longest side, JPEG format, max 12MB per photo. See exact specs for main image, gallery & zoom — plus free resize tool, no upload needed.',
+  title: 'eBay Image Size 2026: Exact Specs + Free Resize Tool (No Upload)',
+  description: 'Resize your eBay photos to exact 2026 specs in seconds — 1600px min, JPEG, under 12MB. Free tool, works in browser, no account needed.',
   keywords: 'best image size for ebay, ebay listing photo size, compress image for ebay, ebay photo requirements, ebay product image size',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
   openGraph: { url: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
