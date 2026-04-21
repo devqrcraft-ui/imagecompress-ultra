@@ -47,7 +47,7 @@ const nextConfig: NextConfig = {
             "default-src 'self'",
             "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com blob:",
             "style-src 'self' 'unsafe-inline'",
-            "img-src 'self' data: blob:",
+            "img-src 'self' data: blob: https://www.googletagmanager.com https://www.google-analytics.com https://stats.g.doubleclick.net",
             "connect-src 'self' https://*.upstash.io https://sentry.io https://*.workers.dev https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net",
             "frame-src https://challenges.cloudflare.com",
             "worker-src blob: 'self'",
