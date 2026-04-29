@@ -1,4 +1,4 @@
-import imageCompression from 'browser-image-compression';
+// dynamic import — loaded only when user compresses
 
 export type Format = 'webp' | 'avif' | 'jpeg' | 'png';
 
@@ -51,6 +51,7 @@ async function prepareFile(file: File): Promise<File> {
 }
 
 export async function compressImage(file: File, format: Format, quality: number): Promise<CompressResult> {
+  const { default: imageCompression } = await import('browser-image-compression');
   const prepared = await prepareFile(file);
   const mimeType = getSafeFormat(format);
   try {
@@ -69,6 +70,7 @@ export async function compressImage(file: File, format: Format, quality: number)
 }
 
 export async function compressToTargetKB(file: File, format: Format, targetKB: number): Promise<CompressResult> {
+  const { default: imageCompression } = await import('browser-image-compression');
   const prepared = await prepareFile(file);
   const targetBytes = targetKB * 1024;
   const mimeType = getSafeFormat(format);
