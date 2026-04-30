@@ -3,7 +3,7 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/free-vs-paid-compressors' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/free-vs-paid-compressors' },
   title: "Free vs Paid Image Compressors: What You Actually Need",
   description: "Honest comparison of free and paid image compression tools in 2026. What free tools offer and when paid plans make sense.",
   openGraph: {

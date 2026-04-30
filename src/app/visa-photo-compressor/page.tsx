@@ -7,8 +7,8 @@ import { VISA_COUNTRIES } from '@/lib/visaCountries';
 export const metadata: Metadata = {
   title: 'Visa Photo Compressor by Country — Free, No Upload',
   description: 'Compress passport & visa photos for any country. UK, Schengen, Canada, Australia, India, Japan and 40+ more. Free, browser-based, files never uploaded.',
-  alternates: { canonical: 'https://www.compressto20kb.com/visa-photo-compressor' },
-  openGraph: { url: 'https://www.compressto20kb.com/visa-photo-compressor' },
+  alternates: { canonical: 'https://compressto20kb.com/visa-photo-compressor' },
+  openGraph: { url: 'https://compressto20kb.com/visa-photo-compressor' },
   keywords: 'visa photo compressor, passport photo resize, compress photo for visa, visa photo requirements by country',
 };
 
@@ -26,7 +26,7 @@ export default function VisaHubPage() {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: 'Visa Photo Compressor — CompressTo20KB',
-        url: 'https://www.compressto20kb.com/visa-photo-compressor',
+        url: 'https://compressto20kb.com/visa-photo-compressor',
         description: 'Free visa and passport photo compressor for 40+ countries. No upload required.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',

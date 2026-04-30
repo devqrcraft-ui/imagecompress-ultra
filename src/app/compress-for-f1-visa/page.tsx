@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for F-1 Student Visa — Free Online Tool',
   description: 'Compress photo for F-1 US student visa DS-160. Under 240KB, white background, JPEG.',
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-f1-visa' },
-  openGraph: { url: 'https://www.compressto20kb.com/compress-for-f1-visa' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-f1-visa' },
+  openGraph: { url: 'https://compressto20kb.com/compress-for-f1-visa' },
   keywords: 'compress photo for f1-visa, F-1 Student Visa photo requirements, F-1 Student Visa photo size',
 };
 
@@ -22,7 +22,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'F-1 Student Visa Photo Compressor',
-        url: 'https://www.compressto20kb.com/compress-for-f1-visa',
+        url: 'https://compressto20kb.com/compress-for-f1-visa',
         description: 'Compress photo for F-1 US student visa DS-160. Under 240KB, white background, JPEG.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

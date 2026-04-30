@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: "H1B Visa Photo Requirements 2026 — Size, Format & How to Compress",
   description: "Complete guide to H1B visa photo requirements: dimensions, file size limits, background. How to compress your photo to 20KB for USCIS forms free.",
   keywords: "h1b visa photo requirements, h1b photo size, uscis photo requirements, compress photo for h1b",
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },
-  openGraph: { url: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/h1b-visa-photo-requirements' },
+  openGraph: { url: 'https://compressto20kb.com/blog/h1b-visa-photo-requirements' },
 };
 
 const faqSchema = {
@@ -23,7 +23,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "H1B Visa Photo Requirements 2025",
-  url: "https://www.compressto20kb.com/blog/h1b-visa-photo-requirements",
+  url: "https://compressto20kb.com/blog/h1b-visa-photo-requirements",
   author: { "@type": "Organization", name: "CompressTo20KB" },
   datePublished: "2026-02-22",
 };

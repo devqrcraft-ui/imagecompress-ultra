@@ -6,8 +6,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for Greenhouse ATS — Free Online Tool',
   description: 'Compress photo for Greenhouse applicant tracking system. Under 5MB, JPEG or PNG.',
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-greenhouse' },
-  openGraph: { url: 'https://www.compressto20kb.com/compress-for-greenhouse' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-greenhouse' },
+  openGraph: { url: 'https://compressto20kb.com/compress-for-greenhouse' },
   keywords: 'compress photo for greenhouse, Greenhouse ATS profile photo size, Greenhouse ATS photo requirements',
 };
 

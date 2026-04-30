@@ -266,7 +266,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} — CompressTo20KB Blog`,
     description: post.desc,
-    alternates: { canonical: `https://www.compressto20kb.com/blog/${slug}` },
+    alternates: { canonical: `https://compressto20kb.com/blog/${slug}` },
   };
 }
 

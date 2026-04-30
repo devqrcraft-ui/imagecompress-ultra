@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: 'How to Compress Images for Etsy Listings (Under 1MB, Free)',
   description: 'Etsy sellers: learn how to compress product photos without losing quality. Free tool, no signup required.',
   keywords: 'compress images etsy, etsy listing photos size, reduce image size etsy seller',
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-images-for-etsy-listings' },
-  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-images-for-etsy-listings' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/compress-images-for-etsy-listings' },
+  openGraph: { url: 'https://compressto20kb.com/blog/compress-images-for-etsy-listings' },
 };
 export default function Page() {
   return (

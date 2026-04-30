@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: "Compress Image for USPS — File Size & Format Requirements 2026",
   description: "USPS image requirements for Click-N-Ship, personalized stamps, and USPS.com. How to compress images to meet USPS size limits free online.",
   keywords: "compress image for USPS, USPS photo requirements, USPS image size, usps stamp image size",
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-for-usps' },
-  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-for-usps' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/compress-image-for-usps' },
+  openGraph: { url: 'https://compressto20kb.com/blog/compress-image-for-usps' },
 };
 
 const faqSchema = {
@@ -23,7 +23,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "Compress Image for USPS — File Size & Format Requirements 2025",
-  url: "https://www.compressto20kb.com/blog/compress-image-for-usps",
+  url: "https://compressto20kb.com/blog/compress-image-for-usps",
   author: { "@type": "Organization", name: "CompressTo20KB" },
   datePublished: "2026-02-22",
 };

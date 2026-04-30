@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: 'Compress Image for Twitter — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Twitter free in your browser. No upload, no signup. Resize to exact KB for Twitter requirements instantly.',
   keywords: ['compress image for twitter', 'twitter image size', 'twitter photo requirements', 'compress for twitter free'],
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-twitter' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-twitter' },
   openGraph: {
     title: 'Compress Image for Twitter — Free & Private',
     description: 'Browser-based compression for Twitter. Files never leave your device.',
-    url: 'https://www.compressto20kb.com/compress-for-twitter',
+    url: 'https://compressto20kb.com/compress-for-twitter',
   },
 };
 

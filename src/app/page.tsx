@@ -36,7 +36,7 @@ const FAQ_SCHEMA = {
 export const metadata = {
   title: 'Compress Image to 20KB — No Upload, Files Stay in Browser | Free',
   description: 'Compress JPG, PNG, WebP, HEIC to exactly 20KB, 50KB, or 100KB. All processing in your browser — photos never uploaded to any server. Free, no signup, instant.',
-  alternates: { canonical: 'https://www.compressto20kb.com' },
+  alternates: { canonical: 'https://compressto20kb.com' },
 };
 
 export default function Page() {

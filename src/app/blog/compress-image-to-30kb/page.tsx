@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: 'How to Compress Images on iPhone Free — No App Needed 2026',
   description: 'Compress photos on iPhone without installing any app. Works in Safari — files never leave your device. Reduce HEIC, JPEG, PNG size instantly. Free.',
   keywords: 'compress image on iPhone, reduce photo size iPhone, compress photo iOS free, shrink image iPhone Safari, compress HEIC iPhone, reduce image size iPhone no app',
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-to-30kb' },
-  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-to-30kb' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/compress-image-to-30kb' },
+  openGraph: { url: 'https://compressto20kb.com/blog/compress-image-to-30kb' },
 };
 
 export default function Page() { return <ClientPage />; }

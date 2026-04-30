@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Batch Image Compressor — Download All as ZIP (Free, No Upload)',
   description: 'Compress up to 50 images at once and download them all as a single ZIP file. Free, instant, no upload to any server. Perfect for bloggers, e-commerce, and documents.',
   keywords: 'batch image compressor, compress multiple images, download as zip, bulk image compressor zip',
-  alternates: { canonical: 'https://www.compressto20kb.com/batch-image-compressor-zip' },
+  alternates: { canonical: 'https://compressto20kb.com/batch-image-compressor-zip' },
   openGraph: {
     title: 'Batch Image Compressor — Download All as ZIP (Free, No Upload)',
     description: 'Compress up to 50 images at once and download as ZIP. Files stay in your browser.',
-    url: 'https://www.compressto20kb.com/batch-image-compressor-zip',
-    images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Batch Image Compressor ZIP' }],
+    url: 'https://compressto20kb.com/batch-image-compressor-zip',
+    images: [{ url: 'https://compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Batch Image Compressor ZIP' }],
   },
 };
 
