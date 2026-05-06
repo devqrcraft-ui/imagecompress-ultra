@@ -1,89 +1,25 @@
-# ImageCompress Ultra
-> Free browser-based image compressor — compress to exact file sizes (20KB, 50KB, 100KB, 200KB), visa photo tools, batch processing. No upload required — all processing runs in your browser.
+# CompressTo20KB
+> Free online image compressor — reduce any image to a target file size (20KB, 50KB, 100KB, 200KB) instantly in your browser. No upload to server, no signup required.
 
 ## What this site does
-ImageCompress Ultra compresses images to specific target sizes entirely in the browser. No files are uploaded to any server. Supports JPEG, PNG, WebP. Key use cases: visa photos, passport photos, email attachments, social media, government forms (DS-160, USCIS, N-400).
+CompressTo20KB compresses JPEG, PNG, and WebP images to a specific file size target directly in the browser using WebAssembly. No files are sent to any server. Supports bulk compression and ZIP download.
 
-## Key USP
-- Files never leave your browser — 100% private
-- Compress to exact KB target (20KB, 50KB, 100KB, 200KB, 500KB, 1MB)
-- Visa photo tools for 70+ countries
-- Batch compression and ZIP download
-- No signup, no watermark, free
-
-## Compress to exact size
-- /compress-to-20kb — Compress image to 20KB
-- /compress-to-30kb — Compress image to 30KB
+## Key pages
+- / — Main image compressor (compress to 20KB)
 - /compress-to-50kb — Compress image to 50KB
 - /compress-to-100kb — Compress image to 100KB
 - /compress-to-200kb — Compress image to 200KB
-- /compress-to-240kb — Compress image to 240KB
-- /compress-to-500kb — Compress image to 500KB
-- /compress-to-1mb — Compress image to 1MB
-- /compress-to-2mb — Compress image to 2MB
-
-## Platform-specific compressors
-- /compress-for-email — Compress image for email (Gmail, Outlook)
-- /compress-for-whatsapp — Compress image for WhatsApp
-- /compress-for-instagram — Compress image for Instagram
-- /compress-for-linkedin — Compress image for LinkedIn
-- /compress-for-discord — Compress image for Discord
-- /compress-for-twitter — Compress image for Twitter/X
-- /compress-for-ebay — Compress image for eBay listings
-- /compress-for-amazon — Compress image for Amazon
-- /compress-for-shopify — Compress image for Shopify
-- /compress-for-wordpress — Compress image for WordPress
-- /compress-for-canva — Compress image for Canva
-- /compress-for-zoom — Compress image for Zoom
-
-## Government and visa photo tools
-- /compress-for-ds160 — DS-160 visa application photo compressor
-- /compress-for-uscis — USCIS form photo compressor
-- /compress-for-uscis-n400 — N-400 citizenship application photo
-- /compress-for-passport-renewal — US passport renewal photo
-- /compress-for-green-card — Green card photo compressor
-- /compress-for-real-id — REAL ID photo compressor
-- /compress-for-global-entry — Global Entry photo compressor
-- /compress-for-tsa-precheck — TSA PreCheck photo compressor
-- /compress-for-dv-lottery — DV Lottery photo compressor
-- /compress-for-i485 — Form I-485 photo compressor
-- /visa-photo-compressor — Universal visa photo compressor
-- /compress-passport-photo — Passport photo compressor
-- /compress-passport-photo-usa — US passport photo compressor
-- /compress-image-for-visa — Visa photo size requirements guide
-## Visa photo tools by country (70+ countries)
-Afghanistan, Albania, Algeria, Argentina, Australia, Austria, Azerbaijan, Bahrain, Bangladesh, Belarus, Belgium, Bolivia, Brazil, Bulgaria, Cambodia, Cameroon, Canada, Chile, China, Colombia, Croatia, Cuba, Czech, Denmark, Ecuador, Egypt, Ethiopia, Finland, France, Georgia, Germany, Ghana, Greece, Hungary, India, Indonesia, Iran, Iraq, Ireland, Israel, Italy, Japan, Jordan, Kazakhstan, Kenya, Malaysia, Mexico, Morocco, Myanmar, Nepal, Netherlands, New Zealand, Nigeria, Norway, Pakistan, Peru, Philippines, Poland, Portugal, Russia, Saudi Arabia, Senegal, Singapore, South Africa, South Korea, Spain, Sri Lanka, Sweden, Switzerland, Thailand, Turkey, UAE, UK, Ukraine, Vietnam.
-
-## Exam and job application photo tools
-- /compress-for-upsc-exam — UPSC exam photo compressor
-- /compress-for-neet-exam — NEET exam photo compressor
-- /compress-for-ssc-exam — SSC exam photo compressor
-- /compress-for-gre-registration — GRE registration photo
-- /compress-for-gmat-registration — GMAT registration photo
-- /compress-for-sat-registration — SAT registration photo
-- /compress-for-common-app — Common App photo compressor
-- /compress-for-indeed — Indeed profile photo compressor
-- /compress-for-upwork — Upwork profile photo compressor
-- /compress-for-fiverr — Fiverr profile photo compressor
-- /compress-for-resume-photo — Resume photo compressor
-
-## Batch and conversion tools
-- /batch-image-compressor-zip — Batch compress images and download as ZIP
-- /bulk-image-compressor — Bulk image compressor
-- /compress-without-uploading — Compress without uploading (client-side)
-- /dpi-converter — DPI converter for images
-- /jpg-to-png — Convert JPG to PNG
-- /png-to-jpg — Convert PNG to JPG
-- /convert-image-to-pdf — Convert image to PDF
-
-## Privacy
-All image processing runs client-side in the browser using JavaScript Canvas API. No image data is uploaded, stored, or transmitted to any server. Files are processed locally and deleted from memory after download.
+- /bulk-image-compressor — Compress multiple images at once
+- /batch-image-compressor-zip — Compress batch and download as ZIP
+- /compress-for-amazon — Compress images for Amazon product listings
+- /compress-for-etsy — Compress images for Etsy listings
+- /blog/how-to-compress-image-for-email — Guide: compress images for email
 
 ## Who this is for
-Anyone needing to compress images to a specific file size: visa applicants, passport photo submissions, email senders, social media users, e-commerce sellers, students submitting exam applications, job seekers.
+Anyone who needs to reduce image file size to a specific KB target: visa applications, job applications, online forms with file size limits, e-commerce product photos, email attachments, and web optimization.
 
-## What this site does NOT cover
-Advanced photo editing, background removal, AI upscaling. For paycheck calculations see privatepaycheck.com.
+## Technical
+All compression happens client-side via WebAssembly. Supported formats: JPEG, PNG, WebP. Output: JPEG. Privacy: zero data sent to servers.
 
-## Sitemap
-https://www.compressto20kb.com/sitemap.xml
+## Optional
+llms-full.txt: https://www.compressto20kb.com/llms-full.txt
