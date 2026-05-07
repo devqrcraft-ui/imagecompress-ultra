@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for GRE Registration — Free Online Tool',
   description: 'Compress photo for GRE exam registration. Under 240KB, white background.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-gre-registration' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-gre-registration' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-gre-registration' },
   keywords: 'compress photo for gre-registration, GRE Registration photo requirements, GRE Registration photo size',
 };

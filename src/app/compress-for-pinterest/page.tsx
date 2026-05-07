@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Image for Pinterest — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Pinterest free in your browser. Optimize pin photos to 200-500KB for fast loading. No upload, no signup. JPEG, PNG, WebP supported.',
   keywords: 'compress image for pinterest, pinterest image size, pinterest photo requirements, compress for pinterest free, pinterest pin size kb',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-pinterest' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-pinterest' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-pinterest' },
 };
 

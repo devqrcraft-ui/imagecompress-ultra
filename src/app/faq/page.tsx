@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "FAQ — CompressTo20KB Image Compressor",
   description: "Frequently asked questions about CompressTo20KB: privacy, formats, exact KB compression, USCIS photos, Shopify images, and more.",
-  alternates: { canonical: 'https://compressto20kb.com/faq' },
+  alternates: { canonical: 'https://www.compressto20kb.com/faq' },
   openGraph: { url: 'https://compressto20kb.com/faq' },
 };
 

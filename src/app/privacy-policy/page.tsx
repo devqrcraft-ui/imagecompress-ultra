@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Privacy Policy — CompressTo20KB',
   description: 'Privacy Policy for CompressTo20KB. We never upload, store, or share your images. All processing happens in your browser.',
-  alternates: { canonical: 'https://compressto20kb.com/privacy-policy' },
+  alternates: { canonical: 'https://www.compressto20kb.com/privacy-policy' },
   openGraph: { url: 'https://compressto20kb.com/privacy-policy' },
   robots: { index: true, follow: false },
 };

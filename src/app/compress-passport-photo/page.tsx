@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Passport Photo Free — US State Department, USCIS, DS-11, India, Ukraine | No Upload',
   description: 'Compress passport photo free online for US State Department, USCIS, DS-160, DS-11, India UIDAI, Pakistan NADRA, Ukraine Diia. Meet 20KB–240KB requirements instantly. Files never uploaded — 100% private.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-passport-photo' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-passport-photo' },
   openGraph: { url: 'https://compressto20kb.com/compress-passport-photo' },
   keywords: 'compress passport photo, US passport photo size, State Department photo requirements, USCIS photo compress, DS-11 photo size, compress passport photo free, passport photo 20KB, passport photo 50KB',
 };

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for US Passport Renewal — Free Online Tool',
   description: 'Compress photo for US passport renewal online. Under 240KB, white background, 600x600px JPEG.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-passport-renewal' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-passport-renewal' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-passport-renewal' },
   keywords: 'compress photo for passport-renewal, US Passport Renewal photo requirements, US Passport Renewal photo size',
 };

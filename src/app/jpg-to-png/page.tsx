@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'JPG to PNG Converter — Free Online, No Upload',
   description: 'Convert JPG images to PNG in your browser. Drag and drop, get transparent PNGs instantly — no upload, no watermark, no signup.',
-  alternates: { canonical: 'https://compressto20kb.com/jpg-to-png' },
+  alternates: { canonical: 'https://www.compressto20kb.com/jpg-to-png' },
   openGraph: { url: 'https://compressto20kb.com/jpg-to-png' },
 }
 export default function Page() {

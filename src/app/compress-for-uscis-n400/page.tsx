@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for USCIS N-400 Citizenship — Free Online Tool',
   description: 'Compress photo for USCIS N-400 citizenship application. Under 240KB, white background.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-uscis-n400' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-uscis-n400' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-uscis-n400' },
   keywords: 'compress photo for uscis-n400, USCIS N-400 Citizenship photo requirements, USCIS N-400 Citizenship photo size',
 };

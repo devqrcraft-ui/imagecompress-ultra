@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Terms of Service — CompressTo20KB',
   description: 'Terms of Service for CompressTo20KB free image compression tool.',
-  alternates: { canonical: 'https://compressto20kb.com/terms' },
+  alternates: { canonical: 'https://www.compressto20kb.com/terms' },
   openGraph: { url: 'https://compressto20kb.com/terms' },
   robots: { index: true, follow: false },
 };

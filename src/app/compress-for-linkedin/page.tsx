@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for LinkedIn Profile — Perfect Size, Free Online',
   description: 'Compress your LinkedIn profile photo and banner to the ideal size. Free, no upload, 100% private. Works instantly in your browser — no signup required.',
   keywords: 'compress photo for linkedin, linkedin profile photo size, linkedin banner image size, resize photo for linkedin, compress linkedin profile picture free',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-linkedin' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-linkedin' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-linkedin' },
 };
 

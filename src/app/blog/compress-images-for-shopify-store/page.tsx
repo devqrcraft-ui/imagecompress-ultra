@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Shopify Images 2026 — Faster Store, Higher Rankings, Free Tool',
   description: 'Shopify images should be under 500KB for fast loading. WebP saves 34% vs JPEG. Compress product photos free — no app install, no Shopify plan required. Boost PageSpeed instantly.',
   keywords: 'compress images shopify, shopify image optimization, reduce product photo size shopify',
-  alternates: { canonical: 'https://compressto20kb.com/blog/compress-images-for-shopify-store' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-images-for-shopify-store' },
   openGraph: { url: 'https://compressto20kb.com/blog/compress-images-for-shopify-store' },
 };
 export default function Page() {

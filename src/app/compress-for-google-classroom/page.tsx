@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Image for Google Classroom — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Google Classroom free in your browser. No upload, no signup. Resize to exact KB for Google Classroom requirements instantly.',
   keywords: ['compress image for google-classroom', 'google-classroom image size', 'google-classroom photo requirements', 'compress for google-classroom free'],
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-google-classroom' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-google-classroom' },
   openGraph: {
     title: 'Compress Image for Google Classroom — Free & Private',
     description: 'Browser-based compression for Google Classroom. Files never leave your device.',

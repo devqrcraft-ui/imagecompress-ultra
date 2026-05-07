@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Image for Discord — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Discord free in your browser. No upload, no signup. Resize to exact KB for Discord requirements instantly.',
   keywords: ['compress image for discord', 'discord image size', 'discord photo requirements', 'compress for discord free'],
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-discord' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-discord' },
   openGraph: {
     title: 'Compress Image for Discord — Free & Private',
     description: 'Browser-based compression for Discord. Files never leave your device.',

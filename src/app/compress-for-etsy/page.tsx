@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Free Image Compressor for Etsy — Compress Product Photos Instantly',
   description: 'Compress Etsy listing images to under 1MB free. No upload, no signup. Browser-based tool that keeps your photos private and your shop fast.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-etsy' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-etsy' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-etsy' },
 };
 

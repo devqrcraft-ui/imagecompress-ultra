@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'eBay Image Size Requirements 2026: 1600px, 12MB, JPEG — Free Tool',
   description: 'Resize your eBay photos to exact 2026 specs in seconds — 1600px min, JPEG, under 12MB. Free tool, works in browser, no account needed.',
   keywords: 'best image size for ebay, ebay listing photo size, compress image for ebay, ebay photo requirements, ebay product image size',
-  alternates: { canonical: 'https://compressto20kb.com/blog/best-image-size-for-ebay-listings' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
   openGraph: { url: 'https://compressto20kb.com/blog/best-image-size-for-ebay-listings' },
 };
 

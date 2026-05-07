@@ -3,7 +3,7 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  alternates: { canonical: 'https://compressto20kb.com/blog/image-optimization-2026' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/image-optimization-2026' },
   title: "Image Optimization 2026: WebP vs AVIF, Lazy Load, PageSpeed +40 Points",
   description: "Complete 2026 image optimization guide: WebP saves 34% vs JPEG, AVIF saves 50%. Fix Core Web Vitals, boost PageSpeed by 20-40 points. Free compression tool included.",
   openGraph: {

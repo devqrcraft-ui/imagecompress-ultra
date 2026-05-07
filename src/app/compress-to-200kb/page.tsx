@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Image to 200KB Free Online — No Upload, 100% Private',
   description: 'Compress any image to exactly 200KB free online. Works in your browser — files never leave your device. No upload, no signup. Perfect for blog posts, ecommerce product photos, and portals with a 200KB photo limit.',
   keywords: 'compress image to 200kb, reduce image size to 200kb, resize photo to 200kb, 200kb image compressor online free, compress jpg to 200kb, reduce png to 200kb',
-  alternates: { canonical: 'https://compressto20kb.com/compress-to-200kb' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-to-200kb' },
   openGraph: { url: 'https://compressto20kb.com/compress-to-200kb' },
 };
 

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Photos for Instagram 2026 — Keep Quality, Under 1MB, Free',
   description: 'Instagram recompresses uploads and destroys quality. Pre-compress to under 1MB at 1080px — our tool preserves sharpness Instagram would crush. Free, instant, no signup.',
   keywords: 'compress image for instagram, resize image for instagram, instagram photo size, compress photo for instagram, instagram image optimizer',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-instagram' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-instagram' },
   openGraph: {
     title: 'Compress Images for Instagram Free — 1080px, No Upload',
     description: 'Resize and compress photos to perfect Instagram dimensions. Files stay in your browser.',

@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Shopify Image Compressor 2026 — Free, No App Install, WebP, Bulk 50',
   description: 'Compress Shopify product photos to WebP under 500KB free — no app, no monthly fee. Bulk 50 images at once. Files never leave your browser. Faster stores, better rankings.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-shopify' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-shopify' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-shopify' },
 };
 

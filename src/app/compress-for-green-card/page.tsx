@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for Green Card Form I-485 — Free Online Tool',
   description: 'Compress photo for Green Card application Form I-485. Under 240KB, white background.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-green-card' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-green-card' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-green-card' },
   keywords: 'compress photo for green-card, Green Card Form I-485 photo requirements, Green Card Form I-485 photo size',
 };

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'JPG to Word Converter — Turn Images into Editable Text',
   description: 'Convert JPG images to editable Word documents using OCR. Extract text from photos and export to .docx — free, with no file upload to a server.',
-  alternates: { canonical: 'https://compressto20kb.com/jpg-to-word' },
+  alternates: { canonical: 'https://www.compressto20kb.com/jpg-to-word' },
   openGraph: { url: 'https://compressto20kb.com/jpg-to-word' },
 }
 export default function Page() {
