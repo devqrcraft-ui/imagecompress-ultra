@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Image to 30KB Free Online — 100% Private, No Upload',
   description: 'Compress any image to exactly 30KB free online. Works in your browser, files never leave your device. No upload, no signup. Supports HEIC, JPG, PNG, WebP.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-30kb' },
-  openGraph: { url: 'https://compressto20kb.com/compress-to-30kb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-30kb' },
 };
 export default function Page() {
   return (

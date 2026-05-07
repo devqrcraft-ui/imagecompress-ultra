@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for Global Entry TSA PreCheck — Free Online Tool',
   description: 'Compress photo for Global Entry or TSA PreCheck application. Under 5MB, white background.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-global-entry' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-global-entry' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-global-entry' },
   keywords: 'compress photo for global-entry, Global Entry TSA PreCheck photo requirements, Global Entry TSA PreCheck photo size',
 };
 
@@ -22,7 +22,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'Global Entry TSA PreCheck Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-global-entry',
+        url: 'https://www.compressto20kb.com/compress-for-global-entry',
         description: 'Compress photo for Global Entry or TSA PreCheck application. Under 5MB, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

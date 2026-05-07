@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for TSA PreCheck Application — Free Online',
   description: 'Compress your photo for TSA PreCheck application. Meet size requirements instantly in your browser. No upload, 100% private.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-tsa-precheck' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-tsa-precheck' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-tsa-precheck' },
 };
 export default function Page() {
   return (

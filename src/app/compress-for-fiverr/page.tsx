@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Image for Fiverr — Free & Private',
     description: 'Browser-based compression for Fiverr. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-fiverr',
+    url: 'https://www.compressto20kb.com/compress-for-fiverr',
   },
 };
 

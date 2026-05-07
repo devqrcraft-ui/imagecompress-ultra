@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Compare the best free image compression tools for American small businesses. No watermarks, no signup, instant download.',
   keywords: 'free image compressor small business usa, compress photos online free 2026, best image optimizer usa',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-free-image-compressor-for-small-business-usa' },
-  openGraph: { url: 'https://compressto20kb.com/blog/best-free-image-compressor-for-small-business-usa' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/best-free-image-compressor-for-small-business-usa' },
 };
 export default function Page() {
   return (

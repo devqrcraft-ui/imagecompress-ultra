@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Image for Wordpress — Free & Private',
     description: 'Browser-based compression for Wordpress. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-wordpress',
+    url: 'https://www.compressto20kb.com/compress-for-wordpress',
   },
 };
 

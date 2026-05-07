@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'DPI Converter Online — Change Image to 300 DPI Free | No Upload',
     description: 'Convert image DPI free — 72, 96, 150, 300, 600 DPI. No upload, browser-only, instant results.',
-    url: 'https://compressto20kb.com/dpi-converter',
+    url: 'https://www.compressto20kb.com/dpi-converter',
     siteName: 'CompressTo20KB',
     type: 'website',
   },

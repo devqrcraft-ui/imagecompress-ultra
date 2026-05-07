@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Image to 5MB — Free Online Tool',
   description: 'Compress any image to exactly 5MB online. Perfect for high-quality document scans. Free, no upload, 100% private. Works instantly in your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-5mb' },
-  openGraph: { url: 'https://compressto20kb.com/compress-to-5mb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-5mb' },
   keywords: 'compress image to 5MB, reduce photo to 5MB, compress to 5MB, image compressor 5MB',
 };
 
@@ -20,7 +20,7 @@ export default function CompressTo5MBPage() {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: 'Compress Image to 5MB',
-        url: 'https://compressto20kb.com/compress-to-5mb',
+        url: 'https://www.compressto20kb.com/compress-to-5mb',
         description: 'Free tool to compress images to exactly 5MB.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',

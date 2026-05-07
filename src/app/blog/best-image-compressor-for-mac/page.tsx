@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Top free image compressors for Mac in 2026: CompressTo20KB (browser, no install), ImageOptim (desktop), Squash. Compress HEIC, PNG, JPEG instantly in Safari or Chrome.',
   keywords: 'best image compressor for mac, compress images mac free, mac image compressor no download, compress heic mac, reduce image size mac',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-compressor-for-mac' },
-  openGraph: { url: 'https://compressto20kb.com/blog/best-image-compressor-for-mac' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/best-image-compressor-for-mac' },
 };
 export default function Page() {
   return (

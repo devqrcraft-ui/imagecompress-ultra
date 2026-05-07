@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Image for Zoom — Free & Private',
     description: 'Browser-based compression for Zoom. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-zoom',
+    url: 'https://www.compressto20kb.com/compress-for-zoom',
   },
 };
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Compress any image to exactly 500KB free online. Browser-based — files never leave your device. Perfect for Shopify product photos, high-quality blog images, and print-on-demand previews. No upload, no signup.',
   keywords: 'compress image to 500kb, reduce image size to 500kb, resize photo to 500kb, 500kb image compressor online free, compress jpg to 500kb, compress png to 500kb',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-500kb' },
-  openGraph: { url: 'https://compressto20kb.com/compress-to-500kb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-500kb' },
 };
 
 const faqSchema = {

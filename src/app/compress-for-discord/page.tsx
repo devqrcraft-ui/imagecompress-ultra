@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Image for Discord — Free & Private',
     description: 'Browser-based compression for Discord. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-discord',
+    url: 'https://www.compressto20kb.com/compress-for-discord',
   },
 };
 

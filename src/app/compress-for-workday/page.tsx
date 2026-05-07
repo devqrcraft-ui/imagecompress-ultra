@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for Workday HR — Free Online Tool',
   description: 'Compress photo for Workday HR system job applications. Under 5MB, square JPEG.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-workday' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-workday' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-workday' },
   keywords: 'compress photo for workday, Workday HR profile photo size, Workday HR photo requirements',
 };
 

@@ -3,7 +3,7 @@ export const metadata: Metadata = {
   title: 'Convert Image to PDF — Free JPG/PNG to PDF, No Upload',
   description: 'Convert JPG and PNG images to PDF documents directly in your browser. Merge multiple images into one PDF, no upload or watermark.',
   alternates: { canonical: 'https://www.compressto20kb.com/convert-image-to-pdf' },
-  openGraph: { url: 'https://compressto20kb.com/convert-image-to-pdf' },
+  openGraph: { url: 'https://www.compressto20kb.com/convert-image-to-pdf' },
 }
 export default function Page() {
   return (

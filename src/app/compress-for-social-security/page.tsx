@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for Social Security Administration — Free Online Tool',
   description: 'Compress photo for Social Security Administration documents. JPEG under 5MB.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-social-security' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-social-security' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-social-security' },
   keywords: 'compress photo for social-security, Social Security Administration photo requirements, Social Security Administration photo size',
 };
 
@@ -22,7 +22,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'Social Security Administration Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-social-security',
+        url: 'https://www.compressto20kb.com/compress-for-social-security',
         description: 'Compress photo for Social Security Administration documents. JPEG under 5MB.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

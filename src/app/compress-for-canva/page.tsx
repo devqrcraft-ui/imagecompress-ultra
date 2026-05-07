@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compress Image for Canva — Free & Private',
     description: 'Browser-based compression for Canva. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-canva',
+    url: 'https://www.compressto20kb.com/compress-for-canva',
   },
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Images Without Uploading — 100% Private, Browser Only',
   description: 'Compress images without uploading to any server. 100% client-side processing in your browser. Safe for private photos, medical images, passport scans.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-without-uploading' },
-  openGraph: { url: 'https://compressto20kb.com/compress-without-uploading' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-without-uploading' },
 };
 
 export default function NoUploadPage() {

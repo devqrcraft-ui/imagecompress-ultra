@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Compress Photo for GMAT Registration — Free Online Tool',
   description: 'Compress photo for GMAT exam. Under 5MB, white background, JPEG.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-gmat-registration' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-gmat-registration' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-gmat-registration' },
   keywords: 'compress photo for gmat-registration, GMAT Registration photo requirements, GMAT Registration photo size',
 };
 
