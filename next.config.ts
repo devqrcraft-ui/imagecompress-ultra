@@ -25,12 +25,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'compressto20kb.com' }],
-        destination: 'https://www.compressto20kb.com/:path*',
-        permanent: true,
-      },
-      {
         source: '/',
         has: [{ type: 'query', key: 'mode' }],
         destination: '/',
