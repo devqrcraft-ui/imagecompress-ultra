@@ -35,8 +35,8 @@ export default function BlogPage() {
             <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
               <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 24px', transition: 'border-color 0.2s' }}>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '8px' }}>
-                  <span style={{ background: 'rgba(129,140,248,0.2)', color: '#a5b4fc', fontSize: '11px', fontWeight: 700, padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
-                  <span style={{ fontSize: '12px', opacity: 0.4 }}>{post.date}</span>
+                  <span style={{ background: 'rgba(129,140,248,0.2)', color: '#a5b4fc', fontSize: '13px', fontWeight: 700, padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
+                  <span style={{ fontSize: '13px', opacity: 0.4 }}>{post.date}</span>
                 </div>
                 <div style={{ fontWeight: 800, fontSize: '17px', marginBottom: '6px', color: 'white' }}>{post.title}</div>
                 <div style={{ fontSize:'15px', opacity: 0.6 }}>{post.desc}</div>

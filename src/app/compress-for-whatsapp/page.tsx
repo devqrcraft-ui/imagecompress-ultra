@@ -29,14 +29,14 @@ export default function CompressForWhatsappPage() {
       </nav>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
         <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}><Link href="/blog" style={{ color: 'inherit', textDecoration: 'none' }}>Blog</Link> → Compress for Whatsapp</div>
-        <div style={{ display: 'inline-block', background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '10px', padding: '6px 14px', fontSize: '12px', marginBottom: '16px' }}>🆓 Whatsapp · Free Tool</div>
+        <div style={{ display: 'inline-block', background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '10px', padding: '6px 14px', fontSize: '13px', marginBottom: '16px' }}>🆓 Whatsapp · Free Tool</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>Compress Images for Whatsapp<br/><span style={{ color: '#818cf8' }}>Free, Private & Instant</span></h1>
         <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>Need to compress images for Whatsapp? Our free browser-based tool compresses JPEG, PNG, WebP instantly — no upload required, no signup needed. Your files never leave your device.</p>
 
         <div style={{ background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '16px', padding: '24px', marginBottom: '32px', textAlign: 'center' }}>
           <p style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Ready to compress for Whatsapp?</p>
           <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '14px 32px', borderRadius: '10px', textDecoration: 'none', fontWeight: 700, fontSize: '16px' }}>⚡ Compress Now — Free</Link>
-          <p style={{ fontSize: '12px', opacity: 0.5, marginTop: '8px' }}>🔒 Files never leave your browser</p>
+          <p style={{ fontSize: '13px', opacity: 0.5, marginTop: '8px' }}>🔒 Files never leave your browser</p>
         </div>
 
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>Whatsapp Image Requirements</h2>

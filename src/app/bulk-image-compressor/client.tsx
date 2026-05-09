@@ -97,7 +97,7 @@ export default function ClientPage() {
             <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px' }}>
               <div style={{ fontSize: '24px', marginBottom: '8px' }}>{icon}</div>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>{title}</div>
-              <div style={{ fontSize: '12px', opacity: 0.6 }}>{desc}</div>
+              <div style={{ fontSize: '13px', opacity: 0.6 }}>{desc}</div>
             </div>
           ))}
         </div>

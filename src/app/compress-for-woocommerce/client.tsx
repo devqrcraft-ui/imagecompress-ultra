@@ -109,7 +109,7 @@ export default function ClientPage() {
               <div style={{ fontWeight: 800, fontSize:'15px', color: ['#22d3ee', '#a5b4fc', '#fbbf24', '#f87171'][i], flexShrink: 0, minWidth: '70px' }}>{range}</div>
               <div>
                 <div style={{ fontWeight: 700, fontSize:'15px', marginBottom: '2px' }}>{label}</div>
-                <div style={{ fontSize: '12px', opacity: 0.6 }}>{desc}</div>
+                <div style={{ fontSize: '13px', opacity: 0.6 }}>{desc}</div>
               </div>
             </div>
           ))}

@@ -53,7 +53,7 @@ export default function Page() {
           ].map(s => (
             <div key={s.label} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
               <div style={{ fontSize: '20px', marginBottom: '6px' }}>{s.icon}</div>
-              <div style={{ fontSize: '11px', opacity: 0.5, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>{s.label}</div>
+              <div style={{ fontSize: '13px', opacity: 0.5, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>{s.label}</div>
               <div style={{ fontWeight: 800, fontSize: '14px', color: s.color }}>{s.value}</div>
             </div>
           ))}

@@ -46,7 +46,7 @@ export default function ClientPage() {
             { icon: 'JO', title: 'Web Forms & Job Apps', desc: 'LinkedIn, Indeed, Workday profile photos work best under 100KB.' },
           ].map(({ icon, title, desc }) => (
             <div key={title} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '16px', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#6366f1', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', fontSize: '11px', fontWeight: 700, color: '#fff' }}>{icon}</div>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#6366f1', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', fontSize: '13px', fontWeight: 700, color: '#fff' }}>{icon}</div>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>{title}</div>
               <div style={{ fontSize:'15px', opacity: 0.65 }}>{desc}</div>
             </div>

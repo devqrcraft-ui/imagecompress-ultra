@@ -14,7 +14,7 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
-        <div style={{ fontSize: '12px', opacity: 0.5, marginBottom: '12px' }}>Blog → Microsoft Teams</div>
+        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>Blog → Microsoft Teams</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>How to Compress Images for Microsoft Teams</h1>
         <p style={{ opacity: 0.5, fontSize:'15px', marginBottom: '32px' }}>February 2025 · 4 min read</p>
 

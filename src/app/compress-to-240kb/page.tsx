@@ -95,7 +95,7 @@ export default function CompressTo240KBPage() {
           >
             ⚡ Compress to 240KB Now — Free
           </a>
-          <div style={{ marginTop: '12px', fontSize: '12px', opacity: 0.5 }}>
+          <div style={{ marginTop: '12px', fontSize: '13px', opacity: 0.5 }}>
             Official DS-160 form: <a href="https://ceac.state.gov/genniv/" target="_blank" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>ceac.state.gov/genniv</a>
           </div>
         </div>

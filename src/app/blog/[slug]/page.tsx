@@ -314,8 +314,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           <Link href="/blog" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Blog</Link> {'→'} {post.tag}
         </div>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '16px' }}>
-          <span style={{ background: 'rgba(129,140,248,0.2)', color: '#a5b4fc', fontSize: '11px', fontWeight: 700, padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
-          <span style={{ fontSize: '12px', opacity: 0.4 }}>{post.date}</span>
+          <span style={{ background: 'rgba(129,140,248,0.2)', color: '#a5b4fc', fontSize: '13px', fontWeight: 700, padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
+          <span style={{ fontSize: '13px', opacity: 0.4 }}>{post.date}</span>
         </div>
         <h1 style={{ fontSize: 'clamp(24px,3.5vw,38px)', fontWeight: 900, lineHeight: 1.25, marginBottom: '24px' }}>{post.title}</h1>
         <div style={{ marginBottom: '40px' }}>

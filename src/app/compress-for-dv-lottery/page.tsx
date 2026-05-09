@@ -67,7 +67,7 @@ export default function Page() {
           ].map(s => (
             <div key={s.label} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
               <div style={{ fontSize: '20px', marginBottom: '6px' }}>{s.icon}</div>
-              <div style={{ fontSize: '11px', opacity: 0.5, textTransform: 'uppercase', marginBottom: '4px' }}>{s.label}</div>
+              <div style={{ fontSize: '13px', opacity: 0.5, textTransform: 'uppercase', marginBottom: '4px' }}>{s.label}</div>
               <div style={{ fontWeight: 800, fontSize: '14px', color: s.color }}>{s.value}</div>
             </div>
           ))}
@@ -78,7 +78,7 @@ export default function Page() {
           <a href="/?mode=exactkb&target=240" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '14px 32px', borderRadius: '100px', fontWeight: 800, fontSize: '15px', textDecoration: 'none' }}>
             ⚡ Compress DV Lottery Photo — Free
           </a>
-          <div style={{ marginTop: '12px', fontSize: '12px', opacity: 0.5 }}>
+          <div style={{ marginTop: '12px', fontSize: '13px', opacity: 0.5 }}>
             Official DV Lottery: <a href="https://dvprogram.state.gov" target="_blank" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>dvprogram.state.gov</a>
           </div>
         </div>

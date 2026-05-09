@@ -68,8 +68,8 @@ export default function VisaHubPage() {
             }}>
               <div style={{ fontSize: '28px', marginBottom: '8px' }}>{vc.flag}</div>
               <div style={{ fontWeight: 700, fontSize: '15px', marginBottom: '4px' }}>{vc.name}</div>
-              <div style={{ fontSize: '12px', opacity: 0.5 }}>Max: {vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} · {vc.widthPx}×{vc.heightPx}px</div>
-              <div style={{ fontSize: '11px', color: '#4ade80', marginTop: '6px' }}>→ Compress now</div>
+              <div style={{ fontSize: '13px', opacity: 0.5 }}>Max: {vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} · {vc.widthPx}×{vc.heightPx}px</div>
+              <div style={{ fontSize: '13px', color: '#4ade80', marginTop: '6px' }}>→ Compress now</div>
             </Link>
           ))}
         </div>
@@ -84,7 +84,7 @@ export default function VisaHubPage() {
             }}>
               <span style={{ fontSize: '20px' }}>{vc.flag}</span>{' '}
               <span style={{ fontWeight: 600, fontSize: '14px' }}>{vc.name}</span>
-              <div style={{ fontSize: '11px', opacity: 0.4, marginTop: '4px' }}>{vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} max</div>
+              <div style={{ fontSize: '13px', opacity: 0.4, marginTop: '4px' }}>{vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} max</div>
             </Link>
           ))}
         </div>

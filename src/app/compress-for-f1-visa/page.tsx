@@ -53,7 +53,7 @@ export default function Page() {
           ].map(s => (
             <div key={s.label} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
               <div style={{ fontSize: '20px', marginBottom: '6px' }}>{s.icon}</div>
-              <div style={{ fontSize: '11px', opacity: 0.5, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>{s.label}</div>
+              <div style={{ fontSize: '13px', opacity: 0.5, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>{s.label}</div>
               <div style={{ fontWeight: 800, fontSize: '14px', color: s.color }}>{s.value}</div>
             </div>
           ))}
@@ -64,7 +64,7 @@ export default function Page() {
           <a href={`/?mode=exactkb&target=${maxKB}`} style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
             ⚡ Open F-1 Student Visa Photo Compressor
           </a>
-          <div style={{ marginTop: '12px', fontSize: '12px', opacity: 0.5 }}>Apply at: <a href="https://ceac.state.gov/genniv/" target="_blank" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>https://ceac.state.gov/genniv/</a></div>
+          <div style={{ marginTop: '12px', fontSize: '13px', opacity: 0.5 }}>Apply at: <a href="https://ceac.state.gov/genniv/" target="_blank" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>https://ceac.state.gov/genniv/</a></div>
         </div>
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>How to Compress Photo for F-1 Student Visa</h2>
         {[
