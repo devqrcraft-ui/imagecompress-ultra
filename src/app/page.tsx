@@ -54,6 +54,17 @@ export default function Page() {
         </p>
       </div>
 
+      {/* B2B BULK BLOCK */}
+      <div style={{background:'#0f0c29',padding:'0 20px 8px'}}>
+        <div style={{maxWidth:'860px',margin:'0 auto'}}>
+          <div style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.3)',borderRadius:8,padding:'20px 24px'}}>
+            <h2 style={{fontSize:16,fontWeight:800,color:'#a5b4fc',marginBottom:8,marginTop:0}}>Need to compress 100+ images at once?</h2>
+            <p style={{fontSize:14,color:'rgba(255,255,255,0.75)',lineHeight:1.7,margin:'0 0 14px 0'}}>We offer a bulk compression API for developers and businesses. Process thousands of images automatically. Starting at $29/month. No file size limits, no watermarks, custom target KB per file.</p>
+            <a href="mailto:dev.qrcraft@gmail.com?subject=Bulk compression inquiry" style={{display:'inline-block',background:'rgba(129,140,248,0.15)',border:'1px solid rgba(129,140,248,0.4)',borderRadius:6,padding:'10px 20px',fontSize:14,fontWeight:700,color:'#a5b4fc',textDecoration:'none'}}>Contact us for bulk pricing →</a>
+          </div>
+        </div>
+      </div>
+
       {/* SEO CONTENT BELOW THE FOLD */}
       <div style={{background:'#0f0c29',color:'#e2e8f0',fontFamily:'system-ui,sans-serif'}}>
 
