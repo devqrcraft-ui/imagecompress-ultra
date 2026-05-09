@@ -43,7 +43,7 @@ export default function InstagramPage() {
         <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#f472b6,#a855f7)', color: '#fff', fontSize: '16px', fontWeight: 800, padding: '16px 40px', borderRadius: '100px', textDecoration: 'none', boxShadow: '0 0 40px rgba(244,114,182,0.3)', marginBottom: '12px' }}>
           🚀 Open Instagram Compressor
         </Link>
-        <div style={{ fontSize: '12px', color: '#475569' }}>Opens instantly · No signup · Completely free</div>
+        <div style={{ fontSize: '12px', color: '#e2e8f0' }}>Opens instantly · No signup · Completely free</div>
       </section>
 
       {/* SIZES GUIDE */}
@@ -62,7 +62,7 @@ export default function InstagramPage() {
             <div key={item.type} style={{ background: 'rgba(244,114,182,0.06)', border: '1px solid rgba(244,114,182,0.15)', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
               <div style={{ fontSize: '11px', color: '#f472b6', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>{item.type}</div>
               <div style={{ fontSize: '16px', fontWeight: 800, marginBottom: '4px' }}>{item.size}</div>
-              <div style={{ fontSize: '11px', color: '#64748b' }}>{item.ratio}</div>
+              <div style={{ fontSize: '11px', color: '#e2e8f0' }}>{item.ratio}</div>
               <div style={{ fontSize: '12px', color: '#94a3b8', marginTop: '6px' }}>{item.tip}</div>
             </div>
           ))}

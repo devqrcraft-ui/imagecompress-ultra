@@ -106,7 +106,7 @@ export default function ClientPage() {
         <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '40px 0 16px' }}>All Windows 11 Compression Methods</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
           {methods.map((m, i) => (
-            <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: `3px solid ${i === 0 ? '#22d3ee' : '#475569'}` }}>
+            <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: `3px solid ${i === 0 ? '#22d3ee' : '#e2e8f0'}` }}>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>{i === 0 ? '⭐ ' : ''}{m.title}</div>
               <div style={{ fontSize:'15px', opacity: 0.65 }}>{m.desc}</div>
             </div>

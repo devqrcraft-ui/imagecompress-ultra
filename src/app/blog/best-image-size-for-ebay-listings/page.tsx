@@ -21,8 +21,8 @@ export default function EbayImageSizePage() {
     p: { fontSize: 15, lineHeight: 1.8, color: '#94a3b8', marginBottom: 16 },
     table: { width: '100%', borderCollapse: 'collapse' as const, marginBottom: 24, fontSize: 14 },
     th: { background: '#1e1b4b', color: '#818cf8', padding: '10px 14px', textAlign: 'left' as const, fontWeight: 700, border: '1px solid #312e81' },
-    td: { padding: '10px 14px', border: '1px solid #1e293b', color: '#c8d0e7', verticalAlign: 'top' as const },
-    tdAlt: { padding: '10px 14px', border: '1px solid #1e293b', color: '#c8d0e7', verticalAlign: 'top' as const, background: '#0f0f1a' },
+    td: { padding: '10px 14px', border: '1px solid #e2e8f0', color: '#c8d0e7', verticalAlign: 'top' as const },
+    tdAlt: { padding: '10px 14px', border: '1px solid #e2e8f0', color: '#c8d0e7', verticalAlign: 'top' as const, background: '#0f0f1a' },
     cta: { display: 'inline-block', background: '#818cf8', color: '#fff', padding: '14px 28px', borderRadius: 8, fontWeight: 800, fontSize: 16, textDecoration: 'none', margin: '8px 0' },
     tip: { background: '#1e1b4b', border: '1px solid #818cf844', borderRadius: 10, padding: '16px 20px', margin: '20px 0' },
     tipTitle: { color: '#818cf8', fontWeight: 800, fontSize: 15, marginBottom: 6 },
@@ -116,7 +116,7 @@ export default function EbayImageSizePage() {
         ['Can I use WebP images on eBay?', 'eBay primarily supports JPEG and PNG formats. Convert WebP to JPEG before uploading to eBay listings. Our free tool handles WebP, HEIC, PNG, and JPEG — convert and compress in one step.'],
         ['Does eBay resize images automatically?', 'eBay does not resize images to meet the 1600px minimum — it just disables the zoom feature if your image is smaller. Always upload at the correct size yourself.'],
       ].map(([q, a]) => (
-        <div key={q} style={{ marginBottom: 24, borderBottom: '1px solid #1e293b', paddingBottom: 16 }}>
+        <div key={q} style={{ marginBottom: 24, borderBottom: '1px solid #e2e8f0', paddingBottom: 16 }}>
           <h3 style={{ color: '#818cf8', fontSize: 16, fontWeight: 700, margin: '0 0 8px' }}>{q}</h3>
           <p style={{ ...s.p, marginBottom: 0 }}>{a}</p>
         </div>
