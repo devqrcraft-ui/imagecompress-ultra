@@ -4,8 +4,8 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "CompressTo20KB vs ImageResizer — Which Is Better?",
   description: "CompressTo20KB vs ImageResizer: privacy, exact KB compression, no-upload vs server-side. See which tool wins for compressing images online.",
-  alternates: { canonical: 'https://www.compressto20kb.com/vs/imageresizer' },
-  openGraph: { url: 'https://www.compressto20kb.com/vs/imageresizer' },
+  alternates: { canonical: 'https://compressto20kb.com/vs/imageresizer' },
+  openGraph: { url: 'https://compressto20kb.com/vs/imageresizer' },
 };
 
 const rows = [

@@ -3,7 +3,7 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/ecommerce-image-optimization' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/ecommerce-image-optimization' },
   title: "E-commerce Image Optimization Guide: Boost Sales with Faster Images",
   description: "Boost sales with faster product images on Shopify and WooCommerce. Real techniques that increase conversion rates.",
   openGraph: {

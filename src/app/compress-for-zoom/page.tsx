@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: 'Compress Image for Zoom — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Zoom free in your browser. No upload, no signup. Resize to exact KB for Zoom requirements instantly.',
   keywords: ['compress image for zoom', 'zoom image size', 'zoom photo requirements', 'compress for zoom free'],
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-zoom' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-zoom' },
   openGraph: {
     title: 'Compress Image for Zoom — Free & Private',
     description: 'Browser-based compression for Zoom. Files never leave your device.',
-    url: 'https://www.compressto20kb.com/compress-for-zoom',
+    url: 'https://compressto20kb.com/compress-for-zoom',
   },
 };
 

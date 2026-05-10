@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for Global Entry TSA PreCheck — Free Online Tool',
   description: 'Compress photo for Global Entry or TSA PreCheck application. Under 5MB, white background.',
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-global-entry' },
-  openGraph: { url: 'https://www.compressto20kb.com/compress-for-global-entry' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-global-entry' },
+  openGraph: { url: 'https://compressto20kb.com/compress-for-global-entry' },
   keywords: 'compress photo for global-entry, Global Entry TSA PreCheck photo requirements, Global Entry TSA PreCheck photo size',
 };
 

@@ -6,8 +6,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Image to 3MB — Free Online Tool',
   description: 'Compress any image to exactly 3MB online. Perfect for medium document uploads. Free, no upload, 100% private. Works instantly in your browser.',
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-to-3mb' },
-  openGraph: { url: 'https://www.compressto20kb.com/compress-to-3mb' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-to-3mb' },
+  openGraph: { url: 'https://compressto20kb.com/compress-to-3mb' },
   keywords: 'compress image to 3MB, reduce photo to 3MB, compress to 3MB, image compressor 3MB',
 };
 

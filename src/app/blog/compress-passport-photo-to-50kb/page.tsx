@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Compress Passport Photo to 50KB — Free Online Tool',
   description: 'Compress your passport photo to exactly 50KB or under. Works for visa applications, government forms, and travel documents. Free, private, instant.',
   keywords: 'compress passport photo to 50kb, reduce passport photo size 50kb, passport photo 50kb online, passport photo compressor',
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-passport-photo-to-50kb' },
-  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-passport-photo-to-50kb' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/compress-passport-photo-to-50kb' },
+  openGraph: { url: 'https://compressto20kb.com/blog/compress-passport-photo-to-50kb' },
 };
 export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }

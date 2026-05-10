@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for REAL ID Application — Free Online Tool',
   description: 'Compress photo for REAL ID driver license application. JPEG under 5MB, plain background.',
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-real-id' },
-  openGraph: { url: 'https://www.compressto20kb.com/compress-for-real-id' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-real-id' },
+  openGraph: { url: 'https://compressto20kb.com/compress-for-real-id' },
   keywords: 'compress photo for real-id, REAL ID Application photo requirements, REAL ID Application photo size',
 };
 

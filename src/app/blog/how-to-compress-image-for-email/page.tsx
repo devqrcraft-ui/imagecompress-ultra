@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   title: 'How to Compress Images for Email — Under 1MB Free (2026)',
   description: 'Compress images for email in seconds. Reduce JPG, PNG, WebP to under 1MB or 200KB without losing quality. Free, no upload, works in Gmail, Outlook, Yahoo.',
   keywords: 'compress image for email, reduce image size for email, compress photo for email, how to compress image for email attachment',
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/how-to-compress-image-for-email' },
-  openGraph: { url: 'https://www.compressto20kb.com/blog/how-to-compress-image-for-email' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/how-to-compress-image-for-email' },
+  openGraph: { url: 'https://compressto20kb.com/blog/how-to-compress-image-for-email' },
 };
 export default function Page() {
   return (

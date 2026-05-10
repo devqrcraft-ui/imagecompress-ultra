@@ -3,7 +3,7 @@ const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntit
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-formats' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/best-image-formats' },
   title: "WebP vs AVIF vs JPEG: Best Image Format in 2026",
   description: "Practical comparison of every major image format for the web. Which format should you use in 2026?",
   openGraph: {

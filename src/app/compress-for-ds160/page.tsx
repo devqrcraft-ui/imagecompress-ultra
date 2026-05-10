@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'DS-160 Photo Compressor — Under 240KB, JPEG, Instant — Free',
   description: 'DS-160 requires photo under 240KB, JPEG, white background. Compress instantly in your browser — no upload, no signup, 100% free. Meets all US visa requirements.',
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-ds160' },
-  openGraph: { url: 'https://www.compressto20kb.com/compress-for-ds160' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-ds160' },
+  openGraph: { url: 'https://compressto20kb.com/compress-for-ds160' },
   keywords: 'compress photo for ds160, DS-160 US Visa photo requirements, DS-160 US Visa photo size',
 };
 

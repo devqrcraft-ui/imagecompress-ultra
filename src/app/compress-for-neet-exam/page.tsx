@@ -6,8 +6,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for NEET Medical Exam — Free Online Tool',
   description: 'Compress photo for NEET medical entrance exam India. Under 200KB, white background.',
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-neet-exam' },
-  openGraph: { url: 'https://www.compressto20kb.com/compress-for-neet-exam' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-neet-exam' },
+  openGraph: { url: 'https://compressto20kb.com/compress-for-neet-exam' },
   keywords: 'compress photo for neet-exam, NEET Medical Exam photo requirements, NEET Medical Exam photo size',
 };
 

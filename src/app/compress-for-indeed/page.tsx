@@ -6,8 +6,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for Indeed — Free Online Tool',
   description: 'Compress profile photo for Indeed job portal. Under 5MB, square format recommended.',
-  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-indeed' },
-  openGraph: { url: 'https://www.compressto20kb.com/compress-for-indeed' },
+  alternates: { canonical: 'https://compressto20kb.com/compress-for-indeed' },
+  openGraph: { url: 'https://compressto20kb.com/compress-for-indeed' },
   keywords: 'compress photo for indeed, Indeed profile photo size, Indeed photo requirements',
 };
 

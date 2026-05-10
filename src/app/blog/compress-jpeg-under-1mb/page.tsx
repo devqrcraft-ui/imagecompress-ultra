@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: "article",
   },
   twitter: { card: "summary_large_image" },
-  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-jpeg-under-1mb' },
+  alternates: { canonical: 'https://compressto20kb.com/blog/compress-jpeg-under-1mb' },
 };
 
 export default function CompressJpegUnder1mb() {
