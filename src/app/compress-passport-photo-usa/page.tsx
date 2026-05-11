@@ -54,6 +54,11 @@ export default function Page() {
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
           Compress <span style={{ color: '#818cf8' }}>US Passport Photo</span> — Meet State Dept Requirements
         </h1>
+        <div style={{ background: "rgba(129,140,248,0.13)", border: "1px solid rgba(129,140,248,0.35)", borderRadius: "14px", padding: "20px 24px", marginBottom: "24px" }}>
+          <p style={{ margin: 0, fontSize: "15px", lineHeight: 1.7, color: "#e2e8f0" }}>
+            <strong style={{ color: "#818cf8" }}>Quick answer:</strong> A US passport photo must be 2×2 inches (51×51mm), JPEG format, under 240KB for digital submission, plain white or off-white background. Your face must fill 70–80% of the frame, taken within 6 months. Upload your photo, enable <strong>Exact KB Mode</strong>, set target to 200KB — compressed locally, never uploaded.
+          </p>
+        </div>
         <p className="text-slate-400 text-lg mb-8">
           Compress your passport photo to under 240KB JPEG for online US passport applications and renewals. Free, no upload, 100% private — your photo never leaves your browser.
         </p>

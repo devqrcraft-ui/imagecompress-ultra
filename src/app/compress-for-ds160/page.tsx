@@ -43,6 +43,11 @@ export default function Page() {
         <h1 style={{ fontSize: 'clamp(26px,4vw,42px)', fontWeight: 900, lineHeight: 1.2, marginBottom: '12px' }}>
           🏛️ Compress Photo for <span style={{ color: '#818cf8' }}>DS-160 US Visa</span>
         </h1>
+        <div style={{ background: "rgba(129,140,248,0.13)", border: "1px solid rgba(129,140,248,0.35)", borderRadius: "14px", padding: "20px 24px", marginBottom: "24px" }}>
+          <p style={{ margin: 0, fontSize: "15px", lineHeight: 1.7, color: "#e2e8f0" }}>
+            <strong style={{ color: "#818cf8" }}>Quick answer:</strong> To compress a photo for DS-160, upload your JPEG, enable <strong>Exact KB Mode</strong>, set target to 200KB (portal accepts up to 240KB), and download. All processing runs in your browser — your photo never leaves your device. Requirements: JPEG only, under 240KB, 600×600px to 1200×1200px, plain white background, face fills 50–69% of frame, taken within 6 months.
+          </p>
+        </div>
         <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>DS-160 photo: JPEG only, under 240KB, 600x600px to 1200x1200px, white background, sRGB color. Head must fill 50-69% of frame. Taken within 6 months.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(140px,1fr))', gap: '12px', marginBottom: '28px' }}>
           {[
