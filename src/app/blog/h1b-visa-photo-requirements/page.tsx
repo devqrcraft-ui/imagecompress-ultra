@@ -34,11 +34,11 @@ export default function H1BPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="max-w-3xl mx-auto px-4 py-16">
-        <nav className="text-sm text-gray-500 mb-8">
+        <nav className="text-sm text-slate-300 mb-8">
           <Link href="/" className="hover:underline">Home</Link> / <Link href="/blog" className="hover:underline">Blog</Link> / <span>H1B Visa Photo Requirements</span>
         </nav>
         <h1 className="text-4xl font-bold mb-4">H1B Visa Photo Requirements 2025</h1>
-        <p className="text-gray-500 text-sm mb-8">Updated February 2026 · 5 min read</p>
+        <p className="text-slate-300 text-sm mb-8">Updated February 2026 · 5 min read</p>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">Getting your H1B visa photo wrong — wrong size, background, or file too large — is one of the most common causes of delays. This guide covers every requirement.</p>
 
         <section className="mb-10">
@@ -56,7 +56,7 @@ export default function H1BPage() {
               ["Glasses", "Not allowed"],
               ["Expression", "Neutral, mouth closed"],
             ].map(([l, v]) => (
-              <div key={l}><span className="font-semibold text-gray-800">{l}:</span> <span className="text-gray-600">{v}</span></div>
+              <div key={l}><span className="font-semibold text-gray-800">{l}:</span> <span className="text-slate-300">{v}</span></div>
             ))}
           </div>
         </section>
@@ -80,7 +80,7 @@ export default function H1BPage() {
             ].map(([n, t, d]) => (
               <li key={n} className="flex gap-4">
                 <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">{n}</span>
-                <div><div className="font-semibold">{t}</div><div className="text-gray-600 text-sm mt-1">{d}</div></div>
+                <div><div className="font-semibold">{t}</div><div className="text-slate-300 text-sm mt-1">{d}</div></div>
               </li>
             ))}
           </ol>
@@ -104,7 +104,7 @@ export default function H1BPage() {
             ].map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-6">
                 <h3 className="font-semibold mb-2">{f.q}</h3>
-                <p className="text-gray-600 text-sm">{f.a}</p>
+                <p className="text-slate-300 text-sm">{f.a}</p>
               </div>
             ))}
           </div>
@@ -115,7 +115,7 @@ export default function H1BPage() {
           <p className="text-blue-100 mb-6">No upload. No account. Takes 10 seconds.</p>
           <Link href="/" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">Compress Photo Now →</Link>
         </div>
-        <div className="mt-8 text-sm text-gray-500">
+        <div className="mt-8 text-sm text-slate-300">
           Related: <Link href="/compress-passport-photo" className="text-blue-600 hover:underline">Compress Passport Photo</Link> · <Link href="/blog/dv-lottery-photo-requirements" className="text-blue-600 hover:underline">DV Lottery Photo Requirements</Link>
         </div>
       </main>

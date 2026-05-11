@@ -35,11 +35,11 @@ export default function AmazonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="max-w-3xl mx-auto px-4 py-16">
-        <nav className="text-sm text-gray-500 mb-8">
+        <nav className="text-sm text-slate-300 mb-8">
           <Link href="/" className="hover:underline">Home</Link> / <Link href="/blog" className="hover:underline">Blog</Link> / <span>Amazon Product Image Size</span>
         </nav>
         <h1 className="text-4xl font-bold mb-4">Amazon Product Image Size Requirements 2025</h1>
-        <p className="text-gray-500 text-sm mb-8">Updated February 2026 · 6 min read</p>
+        <p className="text-slate-300 text-sm mb-8">Updated February 2026 · 6 min read</p>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">Wrong image size or background on Amazon gets your listing suppressed. This guide covers every Amazon image spec and shows you how to optimize product photos free.</p>
 
         <section className="mb-10">
@@ -101,7 +101,7 @@ export default function AmazonPage() {
             ].map(([n, t, d]) => (
               <li key={n} className="flex gap-4">
                 <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">{n}</span>
-                <div><div className="font-semibold">{t}</div><div className="text-gray-600 text-sm mt-1">{d}</div></div>
+                <div><div className="font-semibold">{t}</div><div className="text-slate-300 text-sm mt-1">{d}</div></div>
               </li>
             ))}
           </ol>
@@ -133,7 +133,7 @@ export default function AmazonPage() {
             ].map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-6">
                 <h3 className="font-semibold mb-2">{f.q}</h3>
-                <p className="text-gray-600 text-sm">{f.a}</p>
+                <p className="text-slate-300 text-sm">{f.a}</p>
               </div>
             ))}
           </div>
@@ -144,7 +144,7 @@ export default function AmazonPage() {
           <p className="text-blue-100 mb-6">Amazon preset included. Batch 50 images. No upload, no account.</p>
           <Link href="/" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">Compress for Amazon Free →</Link>
         </div>
-        <div className="mt-8 text-sm text-gray-500">
+        <div className="mt-8 text-sm text-slate-300">
           Related: <Link href="/compress-for-shopify" className="text-blue-600 hover:underline">Compress for Shopify</Link> · <Link href="/blog/compress-image-for-usps" className="text-blue-600 hover:underline">Compress Image for USPS</Link>
         </div>
       </main>

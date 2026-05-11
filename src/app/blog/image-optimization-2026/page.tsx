@@ -21,7 +21,7 @@ export default function ImageOptimization2026() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">Image Optimization in 2026: The Complete Guide</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 12 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 12 min read</p>
 
       <p className="mb-6 text-lg">Images account for over 50% of the average webpage weight. In 2026, with Core Web Vitals directly affecting rankings, image optimization is no longer optional — it is a business requirement.</p>
 
@@ -73,7 +73,7 @@ export default function ImageOptimization2026() {
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Ready to optimize your images?</h3>
-        <p className="text-gray-600 mb-4">Use ImageCompress Pro — free, fast, browser-based WebP compression with no file size limits on free tier.</p>
+        <p className="text-slate-300 mb-4">Use ImageCompress Pro — free, fast, browser-based WebP compression with no file size limits on free tier.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Compress Images Now →</a>
 
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>

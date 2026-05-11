@@ -21,7 +21,7 @@ export default function BestImageFormats() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">WebP vs AVIF vs JPEG: Best Image Format in 2026</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 10 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 10 min read</p>
 
       <p className="mb-6 text-lg">Choosing the right image format can cut your page weight in half. Here is a complete, practical comparison of every major format — with real numbers.</p>
 
@@ -93,7 +93,7 @@ export default function BestImageFormats() {
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Convert to WebP in seconds</h3>
-        <p className="text-gray-600 mb-4">ImageCompress Pro converts JPEG and PNG to WebP instantly — free, private, no upload needed.</p>
+        <p className="text-slate-300 mb-4">ImageCompress Pro converts JPEG and PNG to WebP instantly — free, private, no upload needed.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Convert Images Now →</a>
 
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>

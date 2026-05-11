@@ -21,7 +21,7 @@ export default function EcommerceImageOptimization() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">E-commerce Image Optimization Guide: Boost Sales with Faster Images</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 13 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 13 min read</p>
 
       <p className="mb-6 text-lg">A 1-second delay in page load time reduces conversions by 7%. For an e-commerce store doing $10,000/month, that is $700 lost every second of extra load time. Product images are the #1 cause of slow e-commerce pages.</p>
 
@@ -124,7 +124,7 @@ fs.readdirSync(inputDir).forEach(file => {
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Start optimizing your product images</h3>
-        <p className="text-gray-600 mb-4">ImageCompress Pro supports batch WebP conversion — compress up to 20 product images at once, free.</p>
+        <p className="text-slate-300 mb-4">ImageCompress Pro supports batch WebP conversion — compress up to 20 product images at once, free.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Compress Product Images →</a>
 
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>

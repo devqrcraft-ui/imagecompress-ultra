@@ -21,11 +21,11 @@ export default function USCISPhotoRequirements() {
     <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <div className="text-sm text-gray-400 mb-3">
+      <div className="text-sm text-slate-400 mb-3">
         🇺🇸 USCIS · Immigration Guide 2025
       </div>
       <h1 className="text-4xl font-bold mb-4">USCIS Photo Size Requirements 2025 — Complete Guide</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 9 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 9 min read</p>
 
       <p className="mb-6 text-lg">
         USCIS (US Citizenship and Immigration Services) requires a specific digital photo for most immigration forms. Getting the photo wrong — wrong size, format or dimensions — can delay or invalidate your application. This guide covers every requirement for 2025 and shows you how to fix your photo for free in seconds.
@@ -99,7 +99,7 @@ export default function USCISPhotoRequirements() {
               <tr key={form} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                 <td className="p-3 border border-gray-100 font-semibold text-indigo-600">{form}</td>
                 <td className="p-3 border border-gray-100 text-gray-700">{purpose}</td>
-                <td className="p-3 border border-gray-100 text-gray-600">{photo}</td>
+                <td className="p-3 border border-gray-100 text-slate-300">{photo}</td>
               </tr>
             ))}
           </tbody>
@@ -147,7 +147,7 @@ export default function USCISPhotoRequirements() {
         ].map(([problem, fix]) => (
           <div key={problem} className="flex gap-3 p-3 bg-red-50 border border-red-100 rounded-lg">
             <span className="text-red-500 font-bold text-sm min-w-[120px]">❌ {problem}</span>
-            <span className="text-gray-600 text-sm">{fix}</span>
+            <span className="text-slate-300 text-sm">{fix}</span>
           </div>
         ))}
       </div>
@@ -169,7 +169,7 @@ export default function USCISPhotoRequirements() {
       {/* CTA */}
       <div className="mt-12 p-6 bg-indigo-50 rounded-2xl border border-indigo-200">
         <h3 className="text-xl font-semibold mb-2">Compress your USCIS photo now — free & private</h3>
-        <p className="text-gray-600 mb-4">
+        <p className="text-slate-300 mb-4">
           Reduce to under 50KB instantly. Your photo never leaves your device — unlike PNG Shrinker or Fotor. No account needed.
         </p>
         <div className="flex gap-3 flex-wrap">
@@ -184,7 +184,7 @@ export default function USCISPhotoRequirements() {
 
       {/* Related */}
       <div className="mt-10">
-        <p className="text-sm font-semibold text-gray-500 mb-3">Related guides:</p>
+        <p className="text-sm font-semibold text-slate-300 mb-3">Related guides:</p>
         <div className="flex gap-3 flex-wrap">
           {[
             ['/blog/ds-160-photo-requirements', 'DS-160 Photo Guide'],

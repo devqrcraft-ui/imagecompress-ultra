@@ -21,7 +21,7 @@ export default function PageSpeedImages() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">Fix Image Issues in Google PageSpeed Insights</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 11 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 11 min read</p>
 
       <p className="mb-6 text-lg">PageSpeed Insights flags image problems more than any other category. Here is exactly how to fix every image warning — with code examples.</p>
 
@@ -124,7 +124,7 @@ export default function RootLayout({ children }) {
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Fix your PageSpeed image score now</h3>
-        <p className="text-gray-600 mb-4">Convert JPEG and PNG to WebP instantly with ImageCompress Pro — free, browser-based, no upload required.</p>
+        <p className="text-slate-300 mb-4">Convert JPEG and PNG to WebP instantly with ImageCompress Pro — free, browser-based, no upload required.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Compress Images Now →</a>
 
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>

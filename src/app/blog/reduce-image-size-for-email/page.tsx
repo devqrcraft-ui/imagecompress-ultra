@@ -20,7 +20,7 @@ export default function ReduceImageSizeForEmail() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">How to Reduce Image Size for Email Free (Gmail, Outlook, Yahoo)</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 6 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 6 min read</p>
 
       <p className="mb-6 text-lg">Sending photos by email and hitting the attachment size limit? A single iPhone photo can be 8–12MB. Most email services cap attachments at 20–25MB total. Here's how to compress photos for email in seconds — free.</p>
 
@@ -79,13 +79,13 @@ export default function ReduceImageSizeForEmail() {
       ].map(([q, a]) => (
         <details key={q} className="border rounded-lg mb-3 p-4">
           <summary className="font-semibold cursor-pointer">▶ {q}</summary>
-          <p className="mt-3 text-gray-600">{a}</p>
+          <p className="mt-3 text-slate-300">{a}</p>
         </details>
       ))}
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Compress Photos for Email — Free</h3>
-        <p className="text-gray-600 mb-4">No upload, no signup, works on any device. Reduce photo size in 10 seconds.</p>
+        <p className="text-slate-300 mb-4">No upload, no signup, works on any device. Reduce photo size in 10 seconds.</p>
         <a href="/compress-for-email" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Compress for Email →</a>
 
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>

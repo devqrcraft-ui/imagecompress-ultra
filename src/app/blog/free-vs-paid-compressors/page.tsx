@@ -21,7 +21,7 @@ export default function FreeVsPaidCompressors() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">Free vs Paid Image Compressors: What You Actually Need</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 9 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 9 min read</p>
 
       <p className="mb-6 text-lg">The image compression market has dozens of tools. Here is an honest breakdown of what you get free versus paid — and when each makes sense.</p>
 
@@ -88,7 +88,7 @@ export default function FreeVsPaidCompressors() {
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Try the best free compressor</h3>
-        <p className="text-gray-600 mb-4">ImageCompress Pro: WebP output, batch processing, API access — all free, no account needed, processes locally.</p>
+        <p className="text-slate-300 mb-4">ImageCompress Pro: WebP output, batch processing, API access — all free, no account needed, processes locally.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Compress Images Now →</a>
 
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>

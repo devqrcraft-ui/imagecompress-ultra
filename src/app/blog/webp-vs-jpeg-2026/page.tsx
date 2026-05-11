@@ -20,7 +20,7 @@ export default function WebpVsJpeg2026() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">WebP vs JPEG in 2026: Which Format Should You Use?</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 8 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 8 min read</p>
 
       <p className="mb-6 text-lg">JPEG has been the default photo format for 30 years. WebP promises smaller files and better quality. In 2026, which one should you actually use — and does it depend on your use case?</p>
 
@@ -92,13 +92,13 @@ export default function WebpVsJpeg2026() {
       ].map(([q, a]) => (
         <details key={q} className="border rounded-lg mb-3 p-4">
           <summary className="font-semibold cursor-pointer">▶ {q}</summary>
-          <p className="mt-3 text-gray-600">{a}</p>
+          <p className="mt-3 text-slate-300">{a}</p>
         </details>
       ))}
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Convert JPEG to WebP Free</h3>
-        <p className="text-gray-600 mb-4">Browser-based, instant, no signup. Save 30% on file size.</p>
+        <p className="text-slate-300 mb-4">Browser-based, instant, no signup. Save 30% on file size.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Convert Now →</a>
 
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>

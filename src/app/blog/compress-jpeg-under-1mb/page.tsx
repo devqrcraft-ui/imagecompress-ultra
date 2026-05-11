@@ -20,7 +20,7 @@ export default function CompressJpegUnder1mb() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">How to Compress JPEG Under 1MB Free (Without Losing Quality)</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 7 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 7 min read</p>
 
       <p className="mb-6 text-lg">Need to get a JPEG file under 1MB? Whether it's for a website, email, job application, or government form — this guide shows you exactly how to do it in under 60 seconds, for free.</p>
 
@@ -83,13 +83,13 @@ export default function CompressJpegUnder1mb() {
       ].map(([q, a]) => (
         <details key={q} className="border rounded-lg mb-3 p-4">
           <summary className="font-semibold cursor-pointer">▶ {q}</summary>
-          <p className="mt-3 text-gray-600">{a}</p>
+          <p className="mt-3 text-slate-300">{a}</p>
         </details>
       ))}
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Compress Your JPEG Under 1MB Now</h3>
-        <p className="text-gray-600 mb-4">Free, instant, no signup. Works on any device.</p>
+        <p className="text-slate-300 mb-4">Free, instant, no signup. Works on any device.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Open Compressor →</a>
 
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>

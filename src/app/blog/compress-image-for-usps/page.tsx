@@ -34,11 +34,11 @@ export default function USPSPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="max-w-3xl mx-auto px-4 py-16">
-        <nav className="text-sm text-gray-500 mb-8">
+        <nav className="text-sm text-slate-300 mb-8">
           <Link href="/" className="hover:underline">Home</Link> / <Link href="/blog" className="hover:underline">Blog</Link> / <span>Compress Image for USPS</span>
         </nav>
         <h1 className="text-4xl font-bold mb-4">Compress Image for USPS</h1>
-        <p className="text-gray-500 text-sm mb-8">Updated February 2026 · 4 min read</p>
+        <p className="text-slate-300 text-sm mb-8">Updated February 2026 · 4 min read</p>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">Uploading images to USPS Click-N-Ship, ordering personalized stamps, or submitting through USPS.com — each has specific file size and format requirements. Here is what you need to know.</p>
 
         <section className="mb-10">
@@ -80,7 +80,7 @@ export default function USPSPage() {
             ].map(([n, t, d]) => (
               <li key={n} className="flex gap-4">
                 <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">{n}</span>
-                <div><div className="font-semibold">{t}</div><div className="text-gray-600 text-sm mt-1">{d}</div></div>
+                <div><div className="font-semibold">{t}</div><div className="text-slate-300 text-sm mt-1">{d}</div></div>
               </li>
             ))}
           </ol>
@@ -96,7 +96,7 @@ export default function USPSPage() {
             ].map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-6">
                 <h3 className="font-semibold mb-2">{f.q}</h3>
-                <p className="text-gray-600 text-sm">{f.a}</p>
+                <p className="text-slate-300 text-sm">{f.a}</p>
               </div>
             ))}
           </div>
@@ -107,7 +107,7 @@ export default function USPSPage() {
           <p className="text-blue-100 mb-6">Set any exact KB target. No upload. Works on all devices.</p>
           <Link href="/" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">Compress Image Free →</Link>
         </div>
-        <div className="mt-8 text-sm text-gray-500">
+        <div className="mt-8 text-sm text-slate-300">
           Related: <Link href="/blog/image-size-for-amazon-product-listing" className="text-blue-600 hover:underline">Amazon Product Image Requirements</Link> · <Link href="/compress-for-shopify" className="text-blue-600 hover:underline">Compress for Shopify</Link>
         </div>
       </main>

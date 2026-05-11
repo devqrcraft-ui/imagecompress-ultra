@@ -21,11 +21,11 @@ export default function DS160PhotoRequirements() {
     <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <div className="text-sm text-gray-400 mb-3">
+      <div className="text-sm text-slate-400 mb-3">
         🇺🇸 US Visa · DS-160 Guide
       </div>
       <h1 className="text-4xl font-bold mb-4">DS-160 Photo Requirements 2025 — Complete Guide</h1>
-      <p className="text-gray-500 mb-8">Updated February 2026 · 8 min read</p>
+      <p className="text-slate-300 mb-8">Updated February 2026 · 8 min read</p>
 
       <p className="mb-6 text-lg">
         The DS-160 online nonimmigrant visa application requires a digital photo that meets strict US State Department standards. Every year thousands of applications are delayed or rejected because of incorrect photo size, format, or dimensions. This guide covers every requirement and shows you how to fix your photo in seconds.
@@ -117,7 +117,7 @@ export default function DS160PhotoRequirements() {
         ].map(([problem, fix]) => (
           <div key={problem} className="flex gap-3 p-3 bg-red-50 border border-red-100 rounded-lg">
             <span className="text-red-500 font-bold text-sm min-w-[140px]">❌ {problem}</span>
-            <span className="text-gray-600 text-sm">{fix}</span>
+            <span className="text-slate-300 text-sm">{fix}</span>
           </div>
         ))}
       </div>
@@ -144,7 +144,7 @@ export default function DS160PhotoRequirements() {
       {/* CTA */}
       <div className="mt-12 p-6 bg-indigo-50 rounded-2xl border border-indigo-200">
         <h3 className="text-xl font-semibold mb-2">Compress your DS-160 photo now — free</h3>
-        <p className="text-gray-600 mb-4">
+        <p className="text-slate-300 mb-4">
           Reduce your photo to under 50KB instantly. Files never leave your device — 100% private. No registration, no account needed.
         </p>
         <div className="flex gap-3 flex-wrap">
@@ -159,7 +159,7 @@ export default function DS160PhotoRequirements() {
 
       {/* Related articles */}
       <div className="mt-10">
-        <p className="text-sm font-semibold text-gray-500 mb-3">Related guides:</p>
+        <p className="text-sm font-semibold text-slate-300 mb-3">Related guides:</p>
         <div className="flex gap-3 flex-wrap">
           {[
             ['/compress-for-uscis', 'USCIS Photo Requirements'],
