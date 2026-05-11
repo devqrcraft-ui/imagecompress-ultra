@@ -120,7 +120,6 @@ export default function H1BPage() {
           Related: <Link href="/compress-passport-photo" className="text-blue-600 hover:underline">Compress Passport Photo</Link> · <Link href="/blog/dv-lottery-photo-requirements" className="text-blue-600 hover:underline">DV Lottery Photo Requirements</Link>
         </div>
       </main>
-    </>
       <AuthorBox />
     </>
   );

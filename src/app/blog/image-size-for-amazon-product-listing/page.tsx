@@ -149,7 +149,6 @@ export default function AmazonPage() {
           Related: <Link href="/compress-for-shopify" className="text-blue-600 hover:underline">Compress for Shopify</Link> · <Link href="/blog/compress-image-for-usps" className="text-blue-600 hover:underline">Compress Image for USPS</Link>
         </div>
       </main>
-    </>
       <AuthorBox />
     </>
   );

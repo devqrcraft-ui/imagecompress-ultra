@@ -112,7 +112,6 @@ export default function USPSPage() {
           Related: <Link href="/blog/image-size-for-amazon-product-listing" className="text-blue-600 hover:underline">Amazon Product Image Requirements</Link> · <Link href="/compress-for-shopify" className="text-blue-600 hover:underline">Compress for Shopify</Link>
         </div>
       </main>
-    </>
       <AuthorBox />
     </>
   );
