@@ -15,7 +15,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
         <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>Blog → Microsoft Teams</div>
-        <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>How to Compress Images for Microsoft Teams</h1>
+        <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>How to Compress Images for Microsoft Teams</h1><p style={{ fontSize: '16px', lineHeight: 1.8, color: '#e2e8f0', background: 'rgba(129,140,248,0.08)', border: '1px solid rgba(129,140,248,0.3)', borderRadius: '8px', padding: '16px 20px', margin: '16px 0 12px' }}><strong style={{ color: '#818cf8' }}>Yes, Microsoft Teams compresses images automatically</strong> — chat photos are reduced to under 1MB and previews are capped at 800px wide. To send full-quality images, attach as a file (not inline). For fastest load times, compress to <strong>under 500KB</strong> before uploading. Our free tool does it in one click below.</p>
         <p style={{ opacity: 0.5, fontSize:'15px', marginBottom: '32px' }}>February 2025 · 4 min read</p>
 
         <p style={{ fontSize: '16px', lineHeight: 1.8, opacity: 0.8, marginBottom: '24px' }}>Microsoft Teams allows file uploads up to 250MB — but sending large images in chats slows down the conversation and takes up SharePoint storage. Compressing images before sharing in Teams makes previews load faster and keeps your storage usage under control.</p>
