@@ -58,7 +58,8 @@ export default function Page() {
           Compress your LinkedIn profile photo and banner to the perfect size — instantly in your browser. No upload, no signup, 100% private.
         </p>
 
-        <ClientPage />
+        <div style={{maxWidth:'780px',margin:'0 auto',padding:'0 20px 8px',fontFamily:'system-ui,sans-serif'}}><p style={{fontSize:'16px',lineHeight:1.8,color:'#e2e8f0',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.3)',borderRadius:'8px',padding:'16px 20px',margin:'0 0 8px'}}><strong style={{color:'#818cf8'}}>Compress images for LinkedIn profiles and posts. LinkedIn profile photos must be under 8MB — for best quality, compress to under 500KB at 400x400px. Free, instant, no upload required.</strong></p></div>
+      <ClientPage />
 
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-4">LinkedIn Image Size Requirements 2026</h2>
