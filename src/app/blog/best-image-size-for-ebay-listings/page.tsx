@@ -30,7 +30,8 @@ export default function EbayImageSizePage() {
   };
 
   return (
-    <div style={s.wrap}>
+    <>
+      <div style={s.wrap}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <h1 style={s.h1}>Best Image Size for eBay Listings 2026</h1>
@@ -138,5 +139,6 @@ export default function EbayImageSizePage() {
       </div>
     </div>
       <AuthorBox />
+    </>
   );
 }

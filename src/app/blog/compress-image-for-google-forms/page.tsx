@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 };
 export default function Page() {
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f172a,#1e1b4b)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
+    <>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f172a,#1e1b4b)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
@@ -71,5 +72,6 @@ export default function Page() {
       </div>
     </div>
       <AuthorBox />
+    </>
   );
 }

@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 };
 export default function Page() {
   return (
-    <article style={{maxWidth:'800px',margin:'0 auto',padding:'40px 20px',color:'white'}}>
+    <>
+      <article style={{maxWidth:'800px',margin:'0 auto',padding:'40px 20px',color:'white'}}>
       <h1 style={{fontSize:'32px',fontWeight:700,marginBottom:'16px',lineHeight:1.3}}>Image Compression for Amazon Sellers — Meet Size Requirements</h1>
       <p style={{fontSize:'16px',color:'rgba(255,255,255,0.9)',marginBottom:'32px',lineHeight:1.7}}>Amazon has strict image requirements: main images must be at least 1000px on the longest side, but file size matters for upload speed. Here is how sellers compress images to meet all Amazon standards.</p>
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
@@ -53,5 +54,6 @@ export default function Page() {
       </section>
     </article>
       <AuthorBox />
+    </>
   );
 }

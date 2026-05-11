@@ -18,7 +18,8 @@ export const metadata: Metadata = {
 
 export default function PageSpeedImages() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-16">
+    <>
+      <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <h1 className="text-4xl font-bold mb-4">Fix Image Issues in Google PageSpeed Insights</h1>
@@ -150,5 +151,6 @@ export default function RootLayout({ children }) {
       </div>
     </main>
       <AuthorBox />
+    </>
   );
 }

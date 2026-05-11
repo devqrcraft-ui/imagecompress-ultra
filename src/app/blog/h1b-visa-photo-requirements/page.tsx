@@ -122,5 +122,6 @@ export default function H1BPage() {
       </main>
     </>
       <AuthorBox />
+    </>
   );
 }

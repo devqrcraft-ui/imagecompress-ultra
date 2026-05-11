@@ -19,7 +19,8 @@ export const metadata: Metadata = {
 
 export default function USCISPhotoRequirements() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-16">
+    <>
+      <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <div className="text-sm text-slate-400 mb-3">
@@ -221,5 +222,6 @@ export default function USCISPhotoRequirements() {
       </div>
     </main>
       <AuthorBox />
+    </>
   );
 }

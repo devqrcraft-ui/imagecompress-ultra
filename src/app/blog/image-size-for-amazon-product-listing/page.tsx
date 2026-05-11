@@ -151,5 +151,6 @@ export default function AmazonPage() {
       </main>
     </>
       <AuthorBox />
+    </>
   );
 }
