@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/compress-for-[country]/']
       },
     ],
-    sitemap: 'https://www.compressto20kb.com/sitemap.xml',
-    host: 'https://www.compressto20kb.com',
+    sitemap: 'https://compressto20kb.com/sitemap.xml',
+    host: 'https://compressto20kb.com',
   };
 }

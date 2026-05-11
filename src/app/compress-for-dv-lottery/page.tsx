@@ -22,7 +22,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'DV Lottery Photo Compressor',
-        url: 'https://www.compressto20kb.com/compress-for-dv-lottery',
+        url: 'https://compressto20kb.com/compress-for-dv-lottery',
         description: 'Free tool to compress photos for DV Lottery Diversity Visa Program. Under 240KB, JPEG, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

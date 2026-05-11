@@ -22,7 +22,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'F-1 Student Visa Photo Compressor',
-        url: 'https://www.compressto20kb.com/compress-for-f1-visa',
+        url: 'https://compressto20kb.com/compress-for-f1-visa',
         description: 'Compress photo for F-1 US student visa DS-160. Under 240KB, white background, JPEG.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

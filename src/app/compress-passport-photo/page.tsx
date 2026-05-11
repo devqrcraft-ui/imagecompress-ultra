@@ -15,7 +15,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.compressto20kb.com' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://compressto20kb.com' },
     { '@type': 'ListItem', position: 2, name: 'Compress Passport Photo', item: 'https://compressto20kb.com/compress-passport-photo' },
   ],
 };

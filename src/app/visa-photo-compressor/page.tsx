@@ -26,7 +26,7 @@ export default function VisaHubPage() {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: 'Visa Photo Compressor — CompressTo20KB',
-        url: 'https://www.compressto20kb.com/visa-photo-compressor',
+        url: 'https://compressto20kb.com/visa-photo-compressor',
         description: 'Free visa and passport photo compressor for 40+ countries. No upload required.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',

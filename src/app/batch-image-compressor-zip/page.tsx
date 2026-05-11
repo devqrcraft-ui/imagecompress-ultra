@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Batch Image Compressor — Download All as ZIP (Free, No Upload)',
     description: 'Compress up to 50 images at once and download as ZIP. Files stay in your browser.',
     url: 'https://compressto20kb.com/batch-image-compressor-zip',
-    images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Batch Image Compressor ZIP' }],
+    images: [{ url: 'https://compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Batch Image Compressor ZIP' }],
   },
 };
 
