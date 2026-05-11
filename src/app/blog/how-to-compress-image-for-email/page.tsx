@@ -5,6 +5,7 @@ const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity
 {"@type":"Question","name":"What image format is best for email?","acceptedAnswer":{"@type":"Answer","text":"JPEG is best for email photos - it compresses well and is supported by every email client. PNG works for logos with transparency. Avoid HEIC format as many email clients cannot display it."}}
 ]};
 import type { Metadata } from 'next';
+import AuthorBox from '@/app/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'How to Compress Images for Email — Under 1MB Free (2026)',
   description: 'Compress images for email in seconds. Reduce JPG, PNG, WebP to under 1MB or 200KB without losing quality. Free, no upload, works in Gmail, Outlook, Yahoo.',
@@ -75,5 +76,6 @@ export default function Page() {
         </div>
       </div>
     </div>
+      <AuthorBox />
   );
 }

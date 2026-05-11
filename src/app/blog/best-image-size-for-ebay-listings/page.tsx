@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import AuthorBox from '@/app/components/AuthorBox'
 import Link from 'next/link';
 import EbayInlineCalc from './EbayInlineCalc';
 
@@ -136,5 +137,6 @@ export default function EbayImageSizePage() {
         </div>
       </div>
     </div>
+      <AuthorBox />
   );
 }

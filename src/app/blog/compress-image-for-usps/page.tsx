@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import AuthorBox from '@/app/components/AuthorBox'
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -112,5 +113,6 @@ export default function USPSPage() {
         </div>
       </main>
     </>
+      <AuthorBox />
   );
 }

@@ -1,6 +1,7 @@
 
 const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is image optimization in 2026?","acceptedAnswer":{"@type":"Answer","text":"Image optimization in 2026 means using modern formats (WebP, AVIF), lazy loading, responsive images with srcset, CDN delivery, and compression. Google PageSpeed and Core Web Vitals heavily penalize unoptimized images which directly impacts SEO rankings."}},{"@type":"Question","name":"Should I use WebP or AVIF in 2026?","acceptedAnswer":{"@type":"Answer","text":"AVIF offers 20-50% better compression than WebP at the same quality but has slightly less browser support. For maximum compatibility use WebP. For cutting-edge performance use AVIF with WebP fallback. Both are far superior to JPEG for web use."}},{"@type":"Question","name":"How much does image optimization improve PageSpeed?","acceptedAnswer":{"@type":"Answer","text":"Images typically account for 50-70% of page weight. Proper optimization (WebP/AVIF, compression, lazy loading) can improve PageSpeed scores by 20-40 points and reduce page load time by 1-3 seconds for image-heavy pages."}}]};
 import { Metadata } from "next";
+import AuthorBox from '@/app/components/AuthorBox'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://compressto20kb.com/blog/image-optimization-2026' },
@@ -97,5 +98,6 @@ export default function ImageOptimization2026() {
       </section>
       </div>
     </main>
+      <AuthorBox />
   );
 }

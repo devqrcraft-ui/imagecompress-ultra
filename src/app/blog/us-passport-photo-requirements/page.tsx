@@ -1,3 +1,4 @@
+import AuthorBox from '@/app/components/AuthorBox'
 
 const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are US passport photo requirements?","acceptedAnswer":{"@type":"Answer","text":"US passport photos must be: 2x2 inches (51x51mm), JPEG under 240KB for online applications, white background, taken within 6 months, no glasses, neutral expression, full face visible, eyes open. Print size: 600x600px minimum."}},{"@type":"Question","name":"What file size is required for a US passport photo online?","acceptedAnswer":{"@type":"Answer","text":"For the online US passport renewal application, photos must be JPEG under 240KB and at least 600x600px. Use our tool to compress your passport photo to exactly 200KB JPEG while maintaining the required resolution."}},{"@type":"Question","name":"Can I use an iPhone photo for a US passport?","acceptedAnswer":{"@type":"Answer","text":"Yes, if it meets requirements. iPhone photos are typically 3-5MB — compress to under 240KB JPEG using our tool. Ensure white background, proper lighting, and no glasses. The State Department also has a free photo check tool."}}]};
 import type { Metadata } from 'next';
@@ -9,4 +10,4 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://compressto20kb.com/blog/us-passport-photo-requirements' },
   openGraph: { url: 'https://compressto20kb.com/blog/us-passport-photo-requirements' },
 };
-export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }
+export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /><AuthorBox /></>; }

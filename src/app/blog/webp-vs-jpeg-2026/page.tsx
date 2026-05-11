@@ -1,6 +1,7 @@
 
 const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is WebP better than JPEG in 2026?","acceptedAnswer":{"@type":"Answer","text":"Yes for web use. WebP provides 25-34% smaller file sizes than JPEG at equivalent quality. All major browsers support WebP. For maximum compression use AVIF. Only use JPEG when compatibility with older software is required."}},{"@type":"Question","name":"Should I convert my website images to WebP?","acceptedAnswer":{"@type":"Answer","text":"Yes. Converting JPEG/PNG images to WebP can reduce image payload by 25-50%, improving PageSpeed scores and Core Web Vitals. Use srcset with WebP and JPEG fallback for full browser compatibility."}},{"@type":"Question","name":"What are the downsides of WebP?","acceptedAnswer":{"@type":"Answer","text":"WebP is not supported by some older image editing software and some social media platforms still prefer JPEG. For web display, WebP is superior. For editing and archiving, keep originals in JPEG or PNG format."}}]};
 import { Metadata } from "next";
+import AuthorBox from '@/app/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "WebP vs JPEG in 2026: Which Format Should You Use?",
@@ -122,5 +123,6 @@ export default function WebpVsJpeg2026() {
       </section>
       </div>
     </main>
+      <AuthorBox />
   );
 }
