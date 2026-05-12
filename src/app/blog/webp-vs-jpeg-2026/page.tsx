@@ -21,6 +21,8 @@ export default function WebpVsJpeg2026() {
       <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"WebP vs JPEG in 2026: Which Format Should You Use?","item":"https://compressto20kb.com/blog/webp-vs-jpeg-2026"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"WebP vs JPEG in 2026: Which Format Should You Use?","description":"Complete comparison of WebP and JPEG in 2026. File size, quality, browser support, and when to use each format for websites and e-commerce.","url":"https://compressto20kb.com/blog/webp-vs-jpeg-2026","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
       <h1 className="text-4xl font-bold mb-4">WebP vs JPEG in 2026: Which Format Should You Use?</h1>
       <p className="text-slate-300 mb-8">Updated February 2026 · 8 min read</p>
 

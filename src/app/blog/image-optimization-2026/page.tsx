@@ -22,6 +22,8 @@ export default function ImageOptimization2026() {
       <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Image Optimization 2026: WebP vs AVIF, Lazy Load, PageSpeed +40 Points","item":"https://compressto20kb.com/blog/image-optimization-2026"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Image Optimization 2026: WebP vs AVIF, Lazy Load, PageSpeed +40 Points","description":"Complete 2026 image optimization guide: WebP saves 34% vs JPEG, AVIF saves 50%. Fix Core Web Vitals, boost PageSpeed by 20-40 points. Free compression tool included.","url":"https://compressto20kb.com/blog/image-optimization-2026","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
       <h1 className="text-4xl font-bold mb-4">Image Optimization in 2026: The Complete Guide</h1>
       <p className="text-slate-300 mb-8">Updated February 2026 · 12 min read</p>
 

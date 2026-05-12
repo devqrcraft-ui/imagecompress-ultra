@@ -23,6 +23,8 @@ export default function DS160PhotoRequirements() {
       <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds","item":"https://compressto20kb.com/blog/ds-160-photo-requirements"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds","description":"Meet all DS-160 photo requirements instantly: 600x600px, JPEG, under 240KB. Free compression — works in browser, no upload, no account.","url":"https://compressto20kb.com/blog/ds-160-photo-requirements","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
       <div className="text-sm text-slate-400 mb-3">
         🇺🇸 US Visa · DS-160 Guide
       </div>
