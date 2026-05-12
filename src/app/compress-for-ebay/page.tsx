@@ -9,4 +9,4 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://compressto20kb.com/compress-for-ebay' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-ebay' },
 };
-export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }
+export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Images for eBay Listings Free","item":"https://compressto20kb.com/compress-for-ebay"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }

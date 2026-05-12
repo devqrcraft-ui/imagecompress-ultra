@@ -13,6 +13,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Bulk Image Compressor – Compress Unlimited Images Online (No Upload)","item":"https://compressto20kb.com/bulk-image-compressor"}]}' }} />
       <div style={{ background: 'rgba(129,140,248,0.13)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '20px 24px', margin: '24px auto', maxWidth: '720px', fontFamily: 'system-ui,sans-serif', color: '#e2e8f0' }}>
         <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.7 }}>
           <strong style={{ color: '#818cf8' }}>Quick answer:</strong> To bulk compress images, select multiple JPG, PNG, WebP or AVIF files at once — no limit on number. Choose a target size or quality, and all images compress simultaneously in your browser. Download individually or as a ZIP. No upload, no account, completely free.

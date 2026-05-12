@@ -15,6 +15,7 @@ export default function Page() {
       <section className="mb-10">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 30KB Free Online","item":"https://compressto20kb.com/compress-to-30kb"}]}' }} />
         <h2 className="text-2xl font-bold text-white mb-4">Why Compress to Exactly 30KB?</h2>
         <p className="text-slate-300 leading-relaxed mb-4">Many government portals and online forms require photos under 30KB. Our tool hits your target within 1KB every time using binary search — no guessing.</p>
         <p className="text-slate-300 leading-relaxed">Everything processed in your browser. Your image never leaves your device.</p>

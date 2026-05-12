@@ -22,6 +22,7 @@ export default function Page() {
 
         {/* HOWTO SCHEMA */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({"@context":"https://schema.org","@type":"HowTo","name":"How to Compress Images for Pinterest (Free, No Upload)","description":"Compress pin images to 200-500KB for fast Pinterest loading without uploading to a server.","totalTime":"PT30S","step":[{"@type":"HowToStep","position":1,"name":"Upload Your Pin Image","text":"Drag and drop your image or click to upload. Supports JPG, PNG, WebP, HEIC up to 50 files."},{"@type":"HowToStep","position":2,"name":"Set Target to 300KB","text":"Switch to Exact KB Mode and type 300 (or 200-500 depending on your image). This ensures fast loading in Pinterest feeds."},{"@type":"HowToStep","position":3,"name":"Download and Upload to Pinterest","text":"Click Compress, download your optimized pin image, and upload it to your Pinterest board."}]})}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image for Pinterest","item":"https://compressto20kb.com/compress-for-pinterest"}]}' }} />
 
         {/* WHEN DO YOU NEED */}
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'48px 20px 28px'}}>

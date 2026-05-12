@@ -9,4 +9,4 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://compressto20kb.com/compress-for-squarespace' },
   openGraph: { url: 'https://compressto20kb.com/compress-for-squarespace' },
 };
-export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }
+export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Images for Squarespace","item":"https://compressto20kb.com/compress-for-squarespace"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }

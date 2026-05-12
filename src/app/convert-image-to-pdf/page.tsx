@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 }
 export default function Page() {
   return (
+    <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Convert Image to PDF","item":"https://compressto20kb.com/convert-image-to-pdf"}]}' }} />
     <main style={{maxWidth:800,margin:'0 auto',padding:'48px 24px',fontFamily:'system-ui,sans-serif'}}>
       <nav style={{fontSize:15,color:'#9aa3bc',marginBottom:24}}>
         <a href="/" style={{color:'#9aa3bc'}}>Home</a> › Convert Image to PDF
@@ -43,5 +44,6 @@ export default function Page() {
         </div>
       </div>
     </main>
+  </>
   )
 }
