@@ -54,6 +54,11 @@ export default function PassportPage() {
         <h1 style={{fontSize:'32px',fontWeight:800,marginBottom:'12px'}}>
           Compress <span style={{color:'#818cf8'}}>Passport Photo</span> Free Online
         </h1>
+        <div style={{background:'rgba(129,140,248,0.13)',border:'1px solid rgba(129,140,248,0.35)',borderRadius:'14px',padding:'20px 24px',marginBottom:'20px'}}>
+          <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#e2e8f0'}}>
+            <strong style={{color:'#818cf8'}}>Quick answer:</strong> To compress a passport photo, upload your image, enable <strong>Exact KB Mode</strong>, set your target (200KB for US State Dept, 50KB for India UIDAI, 20KB for Pakistan NADRA), select JPEG, and download. All processing runs in your browser — your passport photo never leaves your device. Works for DS-11, DS-160, USCIS, and 50+ government portals worldwide.
+          </p>
+        </div>
         <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.65,marginBottom:'8px'}}>
           Compress your passport photo for <strong style={{color:'white'}}>US State Department</strong>, <strong style={{color:'white'}}>USCIS</strong>, <strong style={{color:'white'}}>DS-11</strong>, <strong style={{color:'white'}}>DS-160</strong>, India UIDAI, Pakistan NADRA, Ukraine Diia and 50+ other government portals. Meet any file size requirement — 20KB, 50KB or 240KB — instantly and for free.
         </p>
