@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block JS widget files
+Disallow: /*.js$
+
+# Block query parameters
+Disallow: /*?*
+
+Sitemap: https://www.compressto20kb.com/sitemap.xml
