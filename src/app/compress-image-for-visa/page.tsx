@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   title: 'Compress Photo for Visa Application — US, Schengen, UK — Free Online',
   description: 'Compress visa application photo to exact KB size for US visa, Schengen visa, UK visa, and more. Free, no upload, instant. Meet photo file size requirements for any country.',
   keywords: 'compress photo for visa application, visa photo size requirements, compress image for us visa, compress photo for schengen visa, resize visa photo online free',
-  alternates: { canonical: 'https://compressto20kb.com/compress-image-for-visa' },
-  openGraph: { url: 'https://compressto20kb.com/compress-image-for-visa' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-image-for-visa' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-image-for-visa' },
 };
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for Visa Application","item":"https://compressto20kb.com/compress-image-for-visa"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for Visa Application","item":"https://www.compressto20kb.com/compress-image-for-visa"}]}' }} />
       <div style={{ background: 'rgba(129,140,248,0.13)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '20px 24px', margin: '24px auto', maxWidth: '720px', fontFamily: 'system-ui,sans-serif', color: '#e2e8f0' }}>
         <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.7 }}>
           <strong style={{ color: '#818cf8' }}>Quick answer:</strong> To compress a visa photo online, upload your image, switch to <strong>Exact KB Mode</strong>, type your target size (e.g. 200 for 200KB or 240 for DS-160), select JPEG, and click Compress. All processing runs in your browser — your photo never leaves your device. Most visa applications require a JPEG under 240KB with a white background, at least 600×600px, taken within 6 months.

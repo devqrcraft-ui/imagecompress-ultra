@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'CompressTo20KB vs Squoosh — Which Compressor is Better? 2025',
   description: 'Squoosh vs CompressTo20KB: bulk compression, exact KB mode, ease of use, and USCIS support. Find the best free image compressor for your needs.',
   keywords: 'squoosh alternative, squoosh vs, better than squoosh, squoosh bulk compress, squoosh exact size',
-  alternates: { canonical: 'https://compressto20kb.com/vs/squoosh' },
-  openGraph: { url: 'https://compressto20kb.com/vs/squoosh' },
+  alternates: { canonical: 'https://www.compressto20kb.com/vs/squoosh' },
+  openGraph: { url: 'https://www.compressto20kb.com/vs/squoosh' },
 };
 export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }

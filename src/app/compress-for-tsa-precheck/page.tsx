@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Compress Photo for TSA PreCheck Application — Free Online',
   description: 'Compress your photo for TSA PreCheck application. Meet size requirements instantly in your browser. No upload, 100% private.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-tsa-precheck' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-tsa-precheck' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-tsa-precheck' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-tsa-precheck' },
 };
 export default function Page() {
   return (
@@ -15,7 +15,7 @@ export default function Page() {
       <section className="mb-10">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for TSA PreCheck Application","item":"https://compressto20kb.com/compress-for-tsa-precheck"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for TSA PreCheck Application","item":"https://www.compressto20kb.com/compress-for-tsa-precheck"}]}' }} />
         <h2 className="text-2xl font-bold text-white mb-4">TSA PreCheck Photo Requirements</h2>
         <ul className="space-y-2 text-slate-300">
           <li>✅ Format: JPEG or PNG</li>

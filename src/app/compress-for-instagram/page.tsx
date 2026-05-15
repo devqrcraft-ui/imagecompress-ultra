@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Compress Photos for Instagram 2026 — Keep Quality, Under 1MB, Free',
   description: 'Instagram recompresses uploads and destroys quality. Pre-compress to under 1MB at 1080px — our tool preserves sharpness Instagram would crush. Free, instant, no signup.',
   keywords: 'compress image for instagram, resize image for instagram, instagram photo size, compress photo for instagram, instagram image optimizer',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-instagram' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-instagram' },
   openGraph: {
     title: 'Compress Images for Instagram Free — 1080px, No Upload',
     description: 'Resize and compress photos to perfect Instagram dimensions. Files stay in your browser.',
-    url: 'https://compressto20kb.com/compress-for-instagram',
-    images: [{ url: 'https://compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Compress Images for Instagram Free' }],
+    url: 'https://www.compressto20kb.com/compress-for-instagram',
+    images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Compress Images for Instagram Free' }],
   },
 };
 
@@ -50,7 +50,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photos for Instagram 2026","item":"https://compressto20kb.com/compress-for-instagram"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photos for Instagram 2026","item":"https://www.compressto20kb.com/compress-for-instagram"}]}' }} />
       <article className="max-w-3xl mx-auto px-4 py-8 text-slate-100">
 
         <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>

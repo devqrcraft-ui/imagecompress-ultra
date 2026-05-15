@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Compress Images for Squarespace — Free, Faster Site, Better SEO',
   description: 'Compress images for Squarespace websites. Reduce photo size for faster page load and better Google ranking. Convert to WebP, no upload, 100% free.',
   keywords: 'compress images for squarespace, squarespace image size limit, squarespace image optimization, resize photos for squarespace, squarespace webp images',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-squarespace' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-squarespace' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-squarespace' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-squarespace' },
 };
-export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Images for Squarespace","item":"https://compressto20kb.com/compress-for-squarespace"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }
+export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Images for Squarespace","item":"https://www.compressto20kb.com/compress-for-squarespace"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }

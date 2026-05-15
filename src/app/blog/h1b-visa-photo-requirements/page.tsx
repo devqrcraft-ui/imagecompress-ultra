@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: "H1B Visa Photo Requirements 2026 — Size, Format & How to Compress",
   description: "Complete guide to H1B visa photo requirements: dimensions, file size limits, background. How to compress your photo to 20KB for USCIS forms free.",
   keywords: "h1b visa photo requirements, h1b photo size, uscis photo requirements, compress photo for h1b",
-  alternates: { canonical: 'https://compressto20kb.com/blog/h1b-visa-photo-requirements' },
-  openGraph: { url: 'https://compressto20kb.com/blog/h1b-visa-photo-requirements' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },
 };
 
 const faqSchema = {
@@ -24,7 +24,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "H1B Visa Photo Requirements 2025",
-  url: "https://compressto20kb.com/blog/h1b-visa-photo-requirements",
+  url: "https://www.compressto20kb.com/blog/h1b-visa-photo-requirements",
   author: { "@type": "Organization", name: "CompressTo20KB" },
   datePublished: "2026-02-22",
 };
@@ -33,8 +33,8 @@ export default function H1BPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"H1B Visa Photo Requirements 2026","item":"https://compressto20kb.com/blog/h1b-visa-photo-requirements"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"H1B Visa Photo Requirements 2026","description":"Complete guide to H1B visa photo requirements: dimensions, file size limits, background. How to compress your photo to 20KB for USCIS forms free.","url":"https://compressto20kb.com/blog/h1b-visa-photo-requirements","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"H1B Visa Photo Requirements 2026","item":"https://www.compressto20kb.com/blog/h1b-visa-photo-requirements"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"H1B Visa Photo Requirements 2026","description":"Complete guide to H1B visa photo requirements: dimensions, file size limits, background. How to compress your photo to 20KB for USCIS forms free.","url":"https://www.compressto20kb.com/blog/h1b-visa-photo-requirements","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="max-w-3xl mx-auto px-4 py-16">
         <nav className="text-sm text-slate-300 mb-8">

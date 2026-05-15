@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for Global Entry TSA PreCheck — Free Online Tool',
   description: 'Compress photo for Global Entry or TSA PreCheck application. Under 5MB, white background.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-global-entry' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-global-entry' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-global-entry' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-global-entry' },
   keywords: 'compress photo for global-entry, Global Entry TSA PreCheck photo requirements, Global Entry TSA PreCheck photo size',
 };
 
@@ -22,13 +22,13 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'Global Entry TSA PreCheck Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-global-entry',
+        url: 'https://www.compressto20kb.com/compress-for-global-entry',
         description: 'Compress photo for Global Entry or TSA PreCheck application. Under 5MB, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '1034', bestRating: '5', worstRating: '1' },
       })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for Global Entry TSA PreCheck","item":"https://compressto20kb.com/compress-for-global-entry"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for Global Entry TSA PreCheck","item":"https://www.compressto20kb.com/compress-for-global-entry"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'FAQPage',
         mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),

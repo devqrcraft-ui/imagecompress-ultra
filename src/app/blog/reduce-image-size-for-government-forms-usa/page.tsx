@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: 'Reduce Image Size for US Government Forms (USCIS, Passport, Visa)',
   description: 'US government forms require specific photo sizes. Free tool to compress and resize photos for USCIS, passport, and visa applications.',
   keywords: 'reduce image size government forms, compress photo for uscis, passport photo size requirements usa',
-  alternates: { canonical: 'https://compressto20kb.com/blog/reduce-image-size-for-government-forms-usa' },
-  openGraph: { url: 'https://compressto20kb.com/blog/reduce-image-size-for-government-forms-usa' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/reduce-image-size-for-government-forms-usa' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/reduce-image-size-for-government-forms-usa' },
 };
 export default function Page() {
   return (
@@ -18,8 +18,8 @@ export default function Page() {
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Reduce Image Size for US Government Forms (USCIS, Passport, Visa)","item":"https://compressto20kb.com/blog/reduce-image-size-for-government-forms-usa"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Reduce Image Size for US Government Forms (USCIS, Passport, Visa)","description":"US government forms require specific photo sizes. Free tool to compress and resize photos for USCIS, passport, and visa applications.","url":"https://compressto20kb.com/blog/reduce-image-size-for-government-forms-usa","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Reduce Image Size for US Government Forms (USCIS, Passport, Visa)","item":"https://www.compressto20kb.com/blog/reduce-image-size-for-government-forms-usa"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Reduce Image Size for US Government Forms (USCIS, Passport, Visa)","description":"US government forms require specific photo sizes. Free tool to compress and resize photos for USCIS, passport, and visa applications.","url":"https://www.compressto20kb.com/blog/reduce-image-size-for-government-forms-usa","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
         <h2 style={{fontSize:'22px',fontWeight:600,marginBottom:'12px'}}>US Government Photo Requirements</h2>
         <p style={{color:'rgba(255,255,255,0.7)',lineHeight:1.7}}>USCIS requires photos under 240KB. US passport portals often reject files over 200KB. DS-160 visa forms require photos under 240KB in JPEG format. Our tool compresses to exact limits.</p>
       </section>

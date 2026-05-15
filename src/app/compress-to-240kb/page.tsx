@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Image to 240KB — DS-160 US Visa Photo Tool',
   description: 'Compress any photo to under 240KB for DS-160 US Visa application. Free, instant, no upload. Meets exact State Department requirements. Works on iPhone, Android, Mac, Windows.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-to-240kb' },
-  openGraph: { url: 'https://compressto20kb.com/compress-to-240kb' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-to-240kb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-240kb' },
   keywords: 'compress photo to 240kb, compress image to 240kb, ds-160 photo size, ds160 photo compress, us visa photo 240kb, compress to 240kb free',
 };
 
@@ -39,14 +39,14 @@ export default function CompressTo240KBPage() {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: 'Compress Photo to 240KB — DS-160 US Visa Tool',
-        url: 'https://compressto20kb.com/compress-to-240kb',
+        url: 'https://www.compressto20kb.com/compress-to-240kb',
         description: 'Free tool to compress photos to under 240KB for DS-160 US Visa application.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '2841', bestRating: '5', worstRating: '1' },
       })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 240KB","item":"https://compressto20kb.com/compress-to-240kb"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 240KB","item":"https://www.compressto20kb.com/compress-to-240kb"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'FAQPage',

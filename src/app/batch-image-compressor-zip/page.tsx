@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Batch Image Compressor — Download All as ZIP (Free, No Upload)',
   description: 'Compress up to 50 images at once and download them all as a single ZIP file. Free, instant, no upload to any server. Perfect for bloggers, e-commerce, and documents.',
   keywords: 'batch image compressor, compress multiple images, download as zip, bulk image compressor zip',
-  alternates: { canonical: 'https://compressto20kb.com/batch-image-compressor-zip' },
+  alternates: { canonical: 'https://www.compressto20kb.com/batch-image-compressor-zip' },
   openGraph: {
     title: 'Batch Image Compressor — Download All as ZIP (Free, No Upload)',
     description: 'Compress up to 50 images at once and download as ZIP. Files stay in your browser.',
-    url: 'https://compressto20kb.com/batch-image-compressor-zip',
-    images: [{ url: 'https://compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Batch Image Compressor ZIP' }],
+    url: 'https://www.compressto20kb.com/batch-image-compressor-zip',
+    images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Batch Image Compressor ZIP' }],
   },
 };
 
@@ -30,7 +30,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Batch Image Compressor","item":"https://compressto20kb.com/batch-image-compressor-zip"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Batch Image Compressor","item":"https://www.compressto20kb.com/batch-image-compressor-zip"}]}' }} />
       <ClientPage />
     </>
   );

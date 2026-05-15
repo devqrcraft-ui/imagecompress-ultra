@@ -7,8 +7,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Amazon Product Image Compressor 2026 — Free, Under 10MB, No App',
   description: 'Compress Amazon listing images free — under 10MB, 1000px minimum, JPEG. No upload, no app. Meets Amazon image requirements instantly. Bulk up to 50 images.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-amazon' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-amazon' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-amazon' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-amazon' },
 };
 
 export default function AmazonPage() {
@@ -16,7 +16,7 @@ export default function AmazonPage() {
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,sans-serif',color:'white'}}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Amazon Product Image Compressor 2026","item":"https://compressto20kb.com/compress-for-amazon"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Amazon Product Image Compressor 2026","item":"https://www.compressto20kb.com/compress-for-amazon"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_howToSchema) }} />
       <header style={{padding:'12px 20px',borderBottom:'1px solid rgba(255,255,255,0.07)',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
         <Link href="/" style={{display:'flex',alignItems:'center',gap:'8px',textDecoration:'none',color:'white'}}>

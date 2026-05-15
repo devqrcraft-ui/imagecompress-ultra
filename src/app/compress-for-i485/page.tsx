@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Compress Photo for I-485 Green Card Application — Free',
   description: 'Compress your photo for USCIS Form I-485 (Adjustment of Status). Meet requirements instantly. No upload, 100% private.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-i485' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-i485' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-i485' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-i485' },
 };
 export default function Page() {
   return (
@@ -15,7 +15,7 @@ export default function Page() {
       <section className="mb-10">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for I-485 Green Card Application","item":"https://compressto20kb.com/compress-for-i485"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for I-485 Green Card Application","item":"https://www.compressto20kb.com/compress-for-i485"}]}' }} />
         <h2 className="text-2xl font-bold text-white mb-4">I-485 Photo Requirements (USCIS)</h2>
         <ul className="space-y-2 text-slate-300">
           <li>✅ Format: JPEG</li>

@@ -6,8 +6,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Image to 2MB — Free Online Tool',
   description: 'Compress any image to exactly 2MB online. Perfect for general document uploads. Free, no upload, 100% private. Works instantly in your browser.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-to-2mb' },
-  openGraph: { url: 'https://compressto20kb.com/compress-to-2mb' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-to-2mb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-2mb' },
   keywords: 'compress image to 2MB, reduce photo to 2MB, compress to 2MB, image compressor 2MB',
 };
 
@@ -20,14 +20,14 @@ export default function CompressTo2MBPage() {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: 'Compress Image to 2MB',
-        url: 'https://compressto20kb.com/compress-to-2mb',
+        url: 'https://www.compressto20kb.com/compress-to-2mb',
         description: 'Free tool to compress images to exactly 2MB.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '892', bestRating: '5', worstRating: '1' },
       })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 2MB","item":"https://compressto20kb.com/compress-to-2mb"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 2MB","item":"https://www.compressto20kb.com/compress-to-2mb"}]}' }} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
         <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Home</Link>

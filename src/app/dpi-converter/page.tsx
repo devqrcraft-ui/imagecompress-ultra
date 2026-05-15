@@ -147,7 +147,7 @@ export default function DPIConverterPage() {
               <input type="number" value={targetDPI} min={1} max={1200}
                 onChange={e => setTargetDPI(Math.max(1, +e.target.value))}
                 style={{width:'80px',padding:'6px 10px',borderRadius:'8px',border:'1px solid rgba(255,255,255,0.2)',background:'rgba(255,255,255,0.08)',color:'white',fontSize:'14px',fontWeight:700}}/>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"dpi-converter","item":"https://compressto20kb.com/dpi-converter"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"dpi-converter","item":"https://www.compressto20kb.com/dpi-converter"}]}' }} />
               <span style={{fontSize:'12px',opacity:0.6}}>DPI</span>
             </div>
           </div>

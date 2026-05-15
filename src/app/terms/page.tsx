@@ -3,13 +3,13 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Terms of Service — CompressTo20KB',
   description: 'Terms of Service for CompressTo20KB free image compression tool.',
-  alternates: { canonical: 'https://compressto20kb.com/terms' },
-  openGraph: { url: 'https://compressto20kb.com/terms' },
+  alternates: { canonical: 'https://www.compressto20kb.com/terms' },
+  openGraph: { url: 'https://www.compressto20kb.com/terms' },
   robots: { index: true, follow: false },
 };
 export default function Terms() {
   return (
-    <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Terms of Service","item":"https://compressto20kb.com/terms"}]}' }} />
+    <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Terms of Service","item":"https://www.compressto20kb.com/terms"}]}' }} />
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>

@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: 'Best Image Compressor for Mac 2026 — Free, No Download, Works in Safari',
   description: 'Top free image compressors for Mac in 2026: CompressTo20KB (browser, no install), ImageOptim (desktop), Squash. Compress HEIC, PNG, JPEG instantly in Safari or Chrome.',
   keywords: 'best image compressor for mac, compress images mac free, mac image compressor no download, compress heic mac, reduce image size mac',
-  alternates: { canonical: 'https://compressto20kb.com/blog/best-image-compressor-for-mac' },
-  openGraph: { url: 'https://compressto20kb.com/blog/best-image-compressor-for-mac' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-compressor-for-mac' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/best-image-compressor-for-mac' },
 };
 export default function Page() {
   return (
@@ -15,8 +15,8 @@ export default function Page() {
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f172a,#1e1b4b)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Best Image Compressor for Mac 2026","item":"https://compressto20kb.com/blog/best-image-compressor-for-mac"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Best Image Compressor for Mac 2026","description":"Top free image compressors for Mac in 2026: CompressTo20KB (browser, no install), ImageOptim (desktop), Squash. Compress HEIC, PNG, JPEG instantly in Safari or Chrome.","url":"https://compressto20kb.com/blog/best-image-compressor-for-mac","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Best Image Compressor for Mac 2026","item":"https://www.compressto20kb.com/blog/best-image-compressor-for-mac"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Best Image Compressor for Mac 2026","description":"Top free image compressors for Mac in 2026: CompressTo20KB (browser, no install), ImageOptim (desktop), Squash. Compress HEIC, PNG, JPEG instantly in Safari or Chrome.","url":"https://www.compressto20kb.com/blog/best-image-compressor-for-mac","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
         <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>Blog → Mac</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>Best Free Image Compressor for Mac in 2025</h1>
@@ -49,7 +49,7 @@ export default function Page() {
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>How to Compress HEIC Photos from iPhone on Mac</h2>
         <ol style={{ paddingLeft: '20px', fontSize: '15px', lineHeight: 2.2, opacity: 0.8 }}>
           <li>AirDrop your HEIC photo from iPhone to Mac</li>
-          <li>Open <a href="https://compressto20kb.com" style={{ color: '#818cf8' }}>compressto20kb.com</a> in Safari</li>
+          <li>Open <a href="https://www.compressto20kb.com" style={{ color: '#818cf8' }}>compressto20kb.com</a> in Safari</li>
           <li>Drop the HEIC file into the upload zone</li>
           <li>Select your target size and output format (JPEG recommended for compatibility)</li>
           <li>Download and use the compressed file</li>
@@ -57,7 +57,7 @@ export default function Page() {
 
         <div style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '12px', padding: '20px', margin: '32px 0', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', fontWeight: 700, marginBottom: '12px' }}>Compress images on Mac — works in Safari, no install</p>
-          <a href="https://compressto20kb.com" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#22d3ee)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Open CompressTo20KB →</a>
+          <a href="https://www.compressto20kb.com" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#22d3ee)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Open CompressTo20KB →</a>
         </div>
 
         <div style={{ marginTop: '40px', display: 'flex', gap: '10px', flexWrap: 'wrap', fontSize:'15px' }}>

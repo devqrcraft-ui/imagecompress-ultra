@@ -6,8 +6,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Image to 5MB — Free Online Tool',
   description: 'Compress any image to exactly 5MB online. Perfect for high-quality document scans. Free, no upload, 100% private. Works instantly in your browser.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-to-5mb' },
-  openGraph: { url: 'https://compressto20kb.com/compress-to-5mb' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-to-5mb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-5mb' },
   keywords: 'compress image to 5MB, reduce photo to 5MB, compress to 5MB, image compressor 5MB',
 };
 
@@ -20,14 +20,14 @@ export default function CompressTo5MBPage() {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
         name: 'Compress Image to 5MB',
-        url: 'https://compressto20kb.com/compress-to-5mb',
+        url: 'https://www.compressto20kb.com/compress-to-5mb',
         description: 'Free tool to compress images to exactly 5MB.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '892', bestRating: '5', worstRating: '1' },
       })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 5MB","item":"https://compressto20kb.com/compress-to-5mb"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 5MB","item":"https://www.compressto20kb.com/compress-to-5mb"}]}' }} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
         <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Home</Link>

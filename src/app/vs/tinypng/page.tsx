@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'CompressTo20KB vs TinyPNG 2026 — Privacy, Speed & Exact KB Mode',
   description: 'CompressTo20KB vs TinyPNG: we compress in your browser (no upload), support exact KB targets, handle HEIC, and are 100% free. TinyPNG uploads your files to their servers.',
   keywords: 'tinypng alternative, tinypng vs, better than tinypng, tinypng free alternative, compress image without tinypng',
-  alternates: { canonical: 'https://compressto20kb.com/vs/tinypng' },
-  openGraph: { url: 'https://compressto20kb.com/vs/tinypng' },
+  alternates: { canonical: 'https://www.compressto20kb.com/vs/tinypng' },
+  openGraph: { url: 'https://www.compressto20kb.com/vs/tinypng' },
 };
 export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }

@@ -6,8 +6,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Shopify Image Compressor 2026 — Free, No App Install, WebP, Bulk 50',
   description: 'Compress Shopify product photos to WebP under 500KB free — no app, no monthly fee. Bulk 50 images at once. Files never leave your browser. Faster stores, better rankings.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-shopify' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-shopify' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-shopify' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-shopify' },
 };
 
 export default function ShopifyPage() {
@@ -16,7 +16,7 @@ export default function ShopifyPage() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"HowTo","name":"How to Compress Images for Shopify (Free, No App)","description":"Compress Shopify product images to WebP under 1MB without installing any app.","totalTime":"PT60S","step":[{"@type":"HowToStep","position":1,"name":"Upload Your Product Images","text":"Drag and drop up to 50 product images. Supports JPG, PNG, WebP, HEIC."},{"@type":"HowToStep","position":2,"name":"Select Shopify Preset","text":"Click the Shopify preset — it sets WebP format, 82% quality, and 2048px max dimension automatically."},{"@type":"HowToStep","position":3,"name":"Compress and Download","text":"Click Compress All. Download as ZIP and re-upload to your Shopify product listings."}]}) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Shopify Image Compressor 2026","item":"https://compressto20kb.com/compress-for-shopify"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Shopify Image Compressor 2026","item":"https://www.compressto20kb.com/compress-for-shopify"}]}' }} />
 
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px'}}>
         <div style={{display:'inline-block',background:'rgba(16,185,129,0.15)',border:'1px solid rgba(16,185,129,0.3)',borderRadius:'20px',padding:'4px 14px',fontSize:'12px',fontWeight:600,color:'#34d399',marginBottom:'14px'}}>🛍️ Shopify Optimization</div>

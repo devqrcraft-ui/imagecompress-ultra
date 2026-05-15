@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: 'Compress Image for Whatsapp — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Whatsapp free in your browser. No upload, no signup. Resize to exact KB for Whatsapp requirements instantly.',
   keywords: ['compress image for whatsapp', 'whatsapp image size', 'whatsapp photo requirements', 'compress for whatsapp free'],
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-whatsapp' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-whatsapp' },
   openGraph: {
     title: 'Compress Image for Whatsapp — Free & Private',
     description: 'Browser-based compression for Whatsapp. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-whatsapp',
+    url: 'https://www.compressto20kb.com/compress-for-whatsapp',
   },
 };
 
@@ -20,7 +20,7 @@ export default function CompressForWhatsappPage() {
     <main style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image for Whatsapp","item":"https://compressto20kb.com/compress-for-whatsapp"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image for Whatsapp","item":"https://www.compressto20kb.com/compress-for-whatsapp"}]}' }} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>⚡ Compress20KB</Link>
         <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>

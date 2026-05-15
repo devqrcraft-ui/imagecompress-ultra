@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: 'Compress Image for Zoom — Free, No Upload | CompressTo20KB',
   description: 'Compress images for Zoom free in your browser. No upload, no signup. Resize to exact KB for Zoom requirements instantly.',
   keywords: ['compress image for zoom', 'zoom image size', 'zoom photo requirements', 'compress for zoom free'],
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-zoom' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-zoom' },
   openGraph: {
     title: 'Compress Image for Zoom — Free & Private',
     description: 'Browser-based compression for Zoom. Files never leave your device.',
-    url: 'https://compressto20kb.com/compress-for-zoom',
+    url: 'https://www.compressto20kb.com/compress-for-zoom',
   },
 };
 
@@ -20,7 +20,7 @@ export default function CompressForZoomPage() {
     <main style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image for Zoom","item":"https://compressto20kb.com/compress-for-zoom"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image for Zoom","item":"https://www.compressto20kb.com/compress-for-zoom"}]}' }} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>⚡ Compress20KB</Link>
         <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>

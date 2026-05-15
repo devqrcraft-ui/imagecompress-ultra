@@ -6,8 +6,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for Upwork Profile — Free Online Tool',
   description: 'Compress profile photo for Upwork freelancer profile. Under 5MB, square format.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-upwork-profile' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-upwork-profile' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-upwork-profile' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-upwork-profile' },
   keywords: 'compress photo for upwork-profile, Upwork Profile profile photo size, Upwork Profile photo requirements',
 };
 
@@ -21,7 +21,7 @@ export default function Page() {
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for Upwork Profile","item":"https://compressto20kb.com/compress-for-upwork-profile"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for Upwork Profile","item":"https://www.compressto20kb.com/compress-for-upwork-profile"}]}' }} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
         <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Home</Link>

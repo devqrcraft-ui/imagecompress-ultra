@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'PNG to JPG Converter — Free Online, No Upload',
   description: 'Convert PNG images to JPG for smaller file sizes. All conversion runs in your browser, so your images never leave your device.',
-  alternates: { canonical: 'https://compressto20kb.com/png-to-jpg' },
-  openGraph: { url: 'https://compressto20kb.com/png-to-jpg' },
+  alternates: { canonical: 'https://www.compressto20kb.com/png-to-jpg' },
+  openGraph: { url: 'https://www.compressto20kb.com/png-to-jpg' },
 }
 export default function Page() {
   return (
-    <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"PNG to JPG Converter","item":"https://compressto20kb.com/png-to-jpg"}]}' }} />
+    <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"PNG to JPG Converter","item":"https://www.compressto20kb.com/png-to-jpg"}]}' }} />
     <main style={{maxWidth:800,margin:'0 auto',padding:'48px 24px',fontFamily:'system-ui,sans-serif'}}>
       <nav style={{fontSize:15,color:'#9aa3bc',marginBottom:24}}>
         <a href="/" style={{color:'#9aa3bc'}}>Home</a> › PNG to JPG Converter

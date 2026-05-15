@@ -3,13 +3,13 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Privacy Policy — CompressTo20KB',
   description: 'Privacy Policy for CompressTo20KB. We never upload, store, or share your images. All processing happens in your browser.',
-  alternates: { canonical: 'https://compressto20kb.com/privacy-policy' },
-  openGraph: { url: 'https://compressto20kb.com/privacy-policy' },
+  alternates: { canonical: 'https://www.compressto20kb.com/privacy-policy' },
+  openGraph: { url: 'https://www.compressto20kb.com/privacy-policy' },
   robots: { index: true, follow: false },
 };
 export default function PrivacyPolicy() {
   return (
-    <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Privacy Policy","item":"https://compressto20kb.com/privacy-policy"}]}' }} />
+    <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Privacy Policy","item":"https://www.compressto20kb.com/privacy-policy"}]}' }} />
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>

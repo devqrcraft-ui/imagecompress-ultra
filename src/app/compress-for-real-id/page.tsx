@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for REAL ID Application — Free Online Tool',
   description: 'Compress photo for REAL ID driver license application. JPEG under 5MB, plain background.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-real-id' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-real-id' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-real-id' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-real-id' },
   keywords: 'compress photo for real-id, REAL ID Application photo requirements, REAL ID Application photo size',
 };
 
@@ -22,13 +22,13 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'REAL ID Application Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-real-id',
+        url: 'https://www.compressto20kb.com/compress-for-real-id',
         description: 'Compress photo for REAL ID driver license application. JPEG under 5MB, plain background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '1034', bestRating: '5', worstRating: '1' },
       })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for REAL ID Application","item":"https://compressto20kb.com/compress-for-real-id"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for REAL ID Application","item":"https://www.compressto20kb.com/compress-for-real-id"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'FAQPage',
         mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),

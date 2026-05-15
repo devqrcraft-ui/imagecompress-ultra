@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: "article",
   },
   twitter: { card: "summary_large_image" },
-  alternates: { canonical: 'https://compressto20kb.com/blog/compress-jpeg-under-1mb' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-jpeg-under-1mb' },
 };
 
 export default function CompressJpegUnder1mb() {
@@ -21,8 +21,8 @@ export default function CompressJpegUnder1mb() {
       <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress JPEG Under 1MB Free (Without Losing Quality)","item":"https://compressto20kb.com/blog/compress-jpeg-under-1mb"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress JPEG Under 1MB Free (Without Losing Quality)","description":"Step-by-step guide to compress any JPEG image under 1MB for free. Works in your browser, no upload needed, no quality loss.","url":"https://compressto20kb.com/blog/compress-jpeg-under-1mb","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress JPEG Under 1MB Free (Without Losing Quality)","item":"https://www.compressto20kb.com/blog/compress-jpeg-under-1mb"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress JPEG Under 1MB Free (Without Losing Quality)","description":"Step-by-step guide to compress any JPEG image under 1MB for free. Works in your browser, no upload needed, no quality loss.","url":"https://www.compressto20kb.com/blog/compress-jpeg-under-1mb","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
       <h1 className="text-4xl font-bold mb-4">How to Compress JPEG Under 1MB Free (Without Losing Quality)</h1>
       <p className="text-slate-300 mb-8">Updated February 2026 · 7 min read</p>
 

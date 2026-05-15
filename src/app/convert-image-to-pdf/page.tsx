@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Convert Image to PDF — Free JPG/PNG to PDF, No Upload',
   description: 'Convert JPG and PNG images to PDF documents directly in your browser. Merge multiple images into one PDF, no upload or watermark.',
-  alternates: { canonical: 'https://compressto20kb.com/convert-image-to-pdf' },
-  openGraph: { url: 'https://compressto20kb.com/convert-image-to-pdf' },
+  alternates: { canonical: 'https://www.compressto20kb.com/convert-image-to-pdf' },
+  openGraph: { url: 'https://www.compressto20kb.com/convert-image-to-pdf' },
 }
 export default function Page() {
   return (
-    <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Convert Image to PDF","item":"https://compressto20kb.com/convert-image-to-pdf"}]}' }} />
+    <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Convert Image to PDF","item":"https://www.compressto20kb.com/convert-image-to-pdf"}]}' }} />
     <main style={{maxWidth:800,margin:'0 auto',padding:'48px 24px',fontFamily:'system-ui,sans-serif'}}>
       <nav style={{fontSize:15,color:'#9aa3bc',marginBottom:24}}>
         <a href="/" style={{color:'#9aa3bc'}}>Home</a> › Convert Image to PDF

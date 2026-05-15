@@ -3,8 +3,8 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "FAQ — CompressTo20KB Image Compressor",
   description: "Frequently asked questions about CompressTo20KB: privacy, formats, exact KB compression, USCIS photos, Shopify images, and more.",
-  alternates: { canonical: 'https://compressto20kb.com/faq' },
-  openGraph: { url: 'https://compressto20kb.com/faq' },
+  alternates: { canonical: 'https://www.compressto20kb.com/faq' },
+  openGraph: { url: 'https://www.compressto20kb.com/faq' },
 };
 
 const faqs = [
@@ -36,7 +36,7 @@ export default function FAQPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"FAQ","item":"https://compressto20kb.com/faq"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"FAQ","item":"https://www.compressto20kb.com/faq"}]}' }} />
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
         <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
           <a href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</a>

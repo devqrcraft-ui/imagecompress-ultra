@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const uc = useCases.find((u) => u.slug === params.slug);
   if (!uc) return {};
   return {
-    alternates: { canonical: `https://compressto20kb.com/use/${params.slug}` },
+    alternates: { canonical: `https://www.compressto20kb.com/use/${params.slug}` },
     
     title: uc.title + " | ImageCompress Pro",
     description: uc.desc,

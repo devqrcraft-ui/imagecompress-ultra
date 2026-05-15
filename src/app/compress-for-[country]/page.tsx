@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   return {
     title: `Compress Photo for ${vc.name} — ${vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} Max — Free`,
     description: `Compress photo for ${vc.name} online. Requirements: ${vc.widthPx}×${vc.heightPx}px, ${vc.background} background, under ${vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'}. Free, no upload, 100% private.`,
-    alternates: { canonical: `https://compressto20kb.com/compress-for-${country}` },
+    alternates: { canonical: `https://www.compressto20kb.com/compress-for-${country}` },
     keywords: `compress photo for ${vc.name.toLowerCase()}, ${vc.name.toLowerCase()} photo requirements, ${vc.name.toLowerCase()} visa photo size, compress image for ${vc.name.toLowerCase()} application`,
   };
 }
@@ -26,5 +26,5 @@ export default async function VisaCountryPage({ params }: { params: Promise<{ co
   const { country } = await params;
   const vc = VISA_SLUG_MAP[country];
   if (!vc) return <div style={{ color: 'white', padding: '40px' }}>Country not found</div>;
-  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Visa Photo Compressor","item":"https://compressto20kb.com/compress-for-[country]"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><VisaClientPage country={vc} /></>;
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Visa Photo Compressor","item":"https://www.compressto20kb.com/compress-for-[country]"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><VisaClientPage country={vc} /></>;
 }

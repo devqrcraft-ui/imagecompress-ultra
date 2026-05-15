@@ -12,7 +12,7 @@ export default function AboutPage() {
     <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"About CompressTo20KB","item":"https://compressto20kb.com/about"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"About CompressTo20KB","item":"https://www.compressto20kb.com/about"}]}' }} />
       <h1 className="text-4xl font-bold mb-6">About CompressTo20KB</h1>
       <p className="text-lg text-slate-300 mb-6">CompressTo20KB is a free, browser-based image compression tool built for developers, designers, and anyone who cares about web performance.</p>
 

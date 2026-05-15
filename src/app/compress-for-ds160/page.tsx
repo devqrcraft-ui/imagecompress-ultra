@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'DS-160 Photo Compressor — Under 240KB, JPEG, Instant — Free',
   description: 'DS-160 requires photo under 240KB, JPEG, white background. Compress instantly in your browser — no upload, no signup, 100% free. Meets all US visa requirements.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-ds160' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-ds160' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-ds160' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-ds160' },
   keywords: 'compress photo for ds160, DS-160 US Visa photo requirements, DS-160 US Visa photo size',
 };
 
@@ -22,13 +22,13 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'DS-160 US Visa Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-ds160',
+        url: 'https://www.compressto20kb.com/compress-for-ds160',
         description: 'Compress photo for DS-160 US visa application. Max 240KB, JPEG, white background. Free instant tool.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '1034', bestRating: '5', worstRating: '1' },
       })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"DS-160 Photo Compressor","item":"https://compressto20kb.com/compress-for-ds160"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"DS-160 Photo Compressor","item":"https://www.compressto20kb.com/compress-for-ds160"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'FAQPage',
         mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),

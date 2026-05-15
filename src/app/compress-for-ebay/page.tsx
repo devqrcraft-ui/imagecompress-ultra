@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Compress Images for eBay Listings Free — Faster Upload, Better Rank',
   description: 'Compress product photos for eBay listings. Reduce image size without losing quality — faster page load, quicker uploads. Free, no upload, works in browser.',
   keywords: 'compress images for ebay, ebay product photo size, resize image for ebay listing, ebay image requirements, compress jpg for ebay, ebay photo compressor free online',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-ebay' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-ebay' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-ebay' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-ebay' },
 };
-export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Images for eBay Listings Free","item":"https://compressto20kb.com/compress-for-ebay"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }
+export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Images for eBay Listings Free","item":"https://www.compressto20kb.com/compress-for-ebay"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }

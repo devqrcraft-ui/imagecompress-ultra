@@ -12,7 +12,7 @@ export default function ContactPage() {
     <main className="max-w-2xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://compressto20kb.com/contact"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.compressto20kb.com/contact"}]}' }} />
       <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
       <p style={{color:"rgba(255,255,255,0.9)"}}>Have a question, bug report, or feature request? Fill in the form below — we respond within 24 hours.</p>
 

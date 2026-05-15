@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: 'Compress Image to 20KB Online Free — Exact Size, Instant, No Upload',
   description: 'Compress JPG, PNG or WebP to exactly 20KB free — no upload, instant. Works for DS-160 visa forms, government portals, passport photo requirements. Files never leave your browser.',
   keywords: 'compress image to 20kb, reduce image size to 20kb, resize photo to 20kb, 20kb image compressor online free, compress jpg to 20kb, compress png to 20kb',
-  alternates: { canonical: 'https://compressto20kb.com/compress-to-20kb' },
-  openGraph: { url: 'https://compressto20kb.com/compress-to-20kb' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-to-20kb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-20kb' },
 };
 
 const faqSchema = {
@@ -38,7 +38,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 20KB Online Free","item":"https://compressto20kb.com/compress-to-20kb"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 20KB Online Free","item":"https://www.compressto20kb.com/compress-to-20kb"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div style={{maxWidth:'780px',margin:'0 auto',padding:'0 20px 8px',fontFamily:'system-ui,sans-serif'}}><p style={{fontSize:'16px',lineHeight:1.8,color:'#e2e8f0',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.3)',borderRadius:'8px',padding:'16px 20px',margin:'0 0 8px'}}><strong style={{color:'#818cf8'}}>Yes — you can compress any image to exactly 20KB free, in your browser.</strong> Upload your file, select Exact KB Mode, type 20, and click Compress. No upload to server, no account required. Supports JPEG, PNG, WebP. Used for Aadhaar, NADRA, DS-160, and other government forms that require photos under 20KB.</p></div>
       <ClientPage />

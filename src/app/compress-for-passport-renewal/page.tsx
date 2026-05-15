@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for US Passport Renewal — Free Online Tool',
   description: 'Compress photo for US passport renewal online. Under 240KB, white background, 600x600px JPEG.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-passport-renewal' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-passport-renewal' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-passport-renewal' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-passport-renewal' },
   keywords: 'compress photo for passport-renewal, US Passport Renewal photo requirements, US Passport Renewal photo size',
 };
 
@@ -22,13 +22,13 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'US Passport Renewal Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-passport-renewal',
+        url: 'https://www.compressto20kb.com/compress-for-passport-renewal',
         description: 'Compress photo for US passport renewal online. Under 240KB, white background, 600x600px JPEG.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '1034', bestRating: '5', worstRating: '1' },
       })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for US Passport Renewal","item":"https://compressto20kb.com/compress-for-passport-renewal"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for US Passport Renewal","item":"https://www.compressto20kb.com/compress-for-passport-renewal"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'FAQPage',
         mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),

@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import AuthorBox from '@/app/components/AuthorBox'
 
 export const metadata: Metadata = {
-  alternates: { canonical: 'https://compressto20kb.com/blog/ecommerce-image-optimization' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/ecommerce-image-optimization' },
   title: "E-commerce Image Optimization Guide: Boost Sales with Faster Images",
   description: "Boost sales with faster product images on Shopify and WooCommerce. Real techniques that increase conversion rates.",
   openGraph: {
@@ -22,8 +22,8 @@ export default function EcommerceImageOptimization() {
       <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"E-commerce Image Optimization Guide: Boost Sales with Faster Images","item":"https://compressto20kb.com/blog/ecommerce-image-optimization"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"E-commerce Image Optimization Guide: Boost Sales with Faster Images","description":"Boost sales with faster product images on Shopify and WooCommerce. Real techniques that increase conversion rates.","url":"https://compressto20kb.com/blog/ecommerce-image-optimization","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"E-commerce Image Optimization Guide: Boost Sales with Faster Images","item":"https://www.compressto20kb.com/blog/ecommerce-image-optimization"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"E-commerce Image Optimization Guide: Boost Sales with Faster Images","description":"Boost sales with faster product images on Shopify and WooCommerce. Real techniques that increase conversion rates.","url":"https://www.compressto20kb.com/blog/ecommerce-image-optimization","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
       <h1 className="text-4xl font-bold mb-4">E-commerce Image Optimization Guide: Boost Sales with Faster Images</h1>
       <p className="text-slate-300 mb-8">Updated February 2026 · 13 min read</p>
 

@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: 'Compress Image to 30KB Free Online — No Upload, Instant',
   description: 'Compress any image to exactly 30KB online for free. No upload to server — files stay on your device. Works for JPEG, PNG, WebP, HEIC. Instant, no signup.',
   keywords: 'compress image to 30kb, reduce image size to 30kb, compress photo to 30kb, image compressor 30kb, resize image to 30kb free',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-woocommerce' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-woocommerce' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-woocommerce' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-woocommerce' },
 };
 
-export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 30KB Free Online","item":"https://compressto20kb.com/compress-for-woocommerce"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }
+export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 30KB Free Online","item":"https://www.compressto20kb.com/compress-for-woocommerce"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }

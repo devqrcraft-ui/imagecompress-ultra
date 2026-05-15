@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for DV Lottery 2026/2027 — Free Online Tool',
   description: 'Compress photo for DV Lottery (Diversity Visa Program). Requirements: JPEG, 600×600px to 1200×1200px, under 240KB, white background. Free, no upload, instant.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-dv-lottery' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-dv-lottery' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-dv-lottery' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-dv-lottery' },
   keywords: 'compress photo dv lottery, dv lottery photo requirements, diversity visa photo size, dv lottery 2026 photo, dv lottery 2027 photo compress',
 };
 
@@ -22,13 +22,13 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'DV Lottery Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-dv-lottery',
+        url: 'https://www.compressto20kb.com/compress-for-dv-lottery',
         description: 'Free tool to compress photos for DV Lottery Diversity Visa Program. Under 240KB, JPEG, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '3241', bestRating: '5', worstRating: '1' },
       })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for DV Lottery 2026/2027","item":"https://compressto20kb.com/compress-for-dv-lottery"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for DV Lottery 2026/2027","item":"https://www.compressto20kb.com/compress-for-dv-lottery"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'FAQPage',
         mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),

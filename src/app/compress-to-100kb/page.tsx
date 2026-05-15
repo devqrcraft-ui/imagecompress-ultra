@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: 'Compress Image to 100KB Online Free — Exact Size, Instant, No Upload',
   description: 'Compress images to exactly 100KB free — instant, no upload. Ideal for eBay listings, email attachments, forms with 100KB limit. JPG, PNG, WebP supported. Nothing sent to any server.',
   keywords: 'compress image to 100kb, reduce image size to 100kb, resize photo to 100kb, 100kb image compressor online free, compress jpg to 100kb, reduce png to 100kb, compress webp to 100kb',
-  alternates: { canonical: 'https://compressto20kb.com/compress-to-100kb' },
-  openGraph: { url: 'https://compressto20kb.com/compress-to-100kb' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-to-100kb' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-to-100kb' },
 };
 
 const faqSchema = {
@@ -66,7 +66,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 100KB Online Free","item":"https://compressto20kb.com/compress-to-100kb"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 100KB Online Free","item":"https://www.compressto20kb.com/compress-to-100kb"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <div style={{maxWidth:'780px',margin:'0 auto',padding:'0 20px 8px',fontFamily:'system-ui,sans-serif'}}><p style={{fontSize:'16px',lineHeight:1.8,color:'#e2e8f0',background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.3)',borderRadius:'8px',padding:'16px 20px',margin:'0 0 8px'}}><strong style={{color:'#818cf8'}}>Compress any image to exactly 100KB free in your browser. No upload, no account. Supports JPEG, PNG, WebP. Used for passport photos, visa applications, and online forms that require files under 100KB.</strong></p></div>
       <ClientPage />

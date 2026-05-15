@@ -6,8 +6,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for GMAT Registration — Free Online Tool',
   description: 'Compress photo for GMAT exam. Under 5MB, white background, JPEG.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-gmat-registration' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-gmat-registration' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-gmat-registration' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-gmat-registration' },
   keywords: 'compress photo for gmat-registration, GMAT Registration photo requirements, GMAT Registration photo size',
 };
 
@@ -21,7 +21,7 @@ export default function Page() {
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for GMAT Registration","item":"https://compressto20kb.com/compress-for-gmat-registration"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for GMAT Registration","item":"https://www.compressto20kb.com/compress-for-gmat-registration"}]}' }} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
         <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Home</Link>

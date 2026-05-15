@@ -9,15 +9,15 @@ export const metadata: Metadata = {
   title: 'Compress Photo for USCIS & U.S. Immigration Forms — Free, No Upload',
   description: 'Compress photos for USCIS, DS-160, N-400 and I-485 forms. Meet strict KB limits without changing the dimensions. No upload — all compression happens in your browser.',
   keywords: 'compress photo for uscis, uscis photo size requirements, compress image for ds-160, compress photo for n-400, resize photo for uscis online, uscis passport photo compressor',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-uscis' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-uscis' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-uscis' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-uscis' },
 };
 
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for USCIS & U.S. Immigration Forms","item":"https://compressto20kb.com/compress-for-uscis"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for USCIS & U.S. Immigration Forms","item":"https://www.compressto20kb.com/compress-for-uscis"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howtoSchema) }} />
       <ClientPage />
 

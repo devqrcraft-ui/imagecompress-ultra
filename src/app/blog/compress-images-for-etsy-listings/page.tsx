@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: 'How to Compress Images for Etsy Listings (Under 1MB, Free)',
   description: 'Etsy sellers: learn how to compress product photos without losing quality. Free tool, no signup required.',
   keywords: 'compress images etsy, etsy listing photos size, reduce image size etsy seller',
-  alternates: { canonical: 'https://compressto20kb.com/blog/compress-images-for-etsy-listings' },
-  openGraph: { url: 'https://compressto20kb.com/blog/compress-images-for-etsy-listings' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-images-for-etsy-listings' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-images-for-etsy-listings' },
 };
 export default function Page() {
   return (
@@ -18,8 +18,8 @@ export default function Page() {
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress Images for Etsy Listings (Under 1MB, Free)","item":"https://compressto20kb.com/blog/compress-images-for-etsy-listings"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Etsy Listings (Under 1MB, Free)","description":"Etsy sellers: learn how to compress product photos without losing quality. Free tool, no signup required.","url":"https://compressto20kb.com/blog/compress-images-for-etsy-listings","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress Images for Etsy Listings (Under 1MB, Free)","item":"https://www.compressto20kb.com/blog/compress-images-for-etsy-listings"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Etsy Listings (Under 1MB, Free)","description":"Etsy sellers: learn how to compress product photos without losing quality. Free tool, no signup required.","url":"https://www.compressto20kb.com/blog/compress-images-for-etsy-listings","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
         <h2 style={{fontSize:'22px',fontWeight:600,marginBottom:'12px'}}>Why Etsy Image Size Matters</h2>
         <p style={{color:'rgba(255,255,255,0.7)',lineHeight:1.7}}>Etsy recommends images under 1MB for fast page loads. Large images hurt your shop SEO and reduce conversion rates from US buyers browsing on mobile.</p>
       </section>

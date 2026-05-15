@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: 'Compress US Passport Photo Free — Meet State Dept Requirements',
   description: 'Compress your US passport photo to meet State Department requirements. JPEG, 2×2 inches, under 240KB. Free, no upload, 100% private. Works for online renewal and applications.',
   keywords: 'compress us passport photo, us passport photo size requirements, resize passport photo for us passport, compress passport photo online free, us passport photo 240kb',
-  alternates: { canonical: 'https://compressto20kb.com/compress-passport-photo-usa' },
-  openGraph: { url: 'https://compressto20kb.com/compress-passport-photo-usa' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-passport-photo-usa' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-passport-photo-usa' },
 };
 
 const faqSchema = {
@@ -45,7 +45,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress US Passport Photo Free","item":"https://compressto20kb.com/compress-passport-photo-usa"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress US Passport Photo Free","item":"https://www.compressto20kb.com/compress-passport-photo-usa"}]}' }} />
       <article className="max-w-3xl mx-auto px-4 py-8 text-slate-100">
 
         <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>

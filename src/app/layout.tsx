@@ -10,20 +10,20 @@ export const metadata: Metadata = {
   description: 'Compress images free online — JPG, PNG, WebP, AVIF, HEIC. Hit exact sizes: 20KB, 50KB, 100KB. No upload, no watermark, no signup. Files stay on your device. Faster than TinyPNG.',
   keywords: 'compress image to 20kb, compress image to 50kb, compress image to 100kb, compress image without uploading, compress image for shopify, compress image for etsy, compress image for amazon, compress image for instagram, compress passport photo, image compressor free, reduce image size online, compress jpg png webp free, heic to jpg converter',
   authors: [{ name: 'CompressTo20KB' }],
-  metadataBase: new URL('https://compressto20kb.com'),
+  metadataBase: new URL('https://www.compressto20kb.com'),
   openGraph: {
     title: 'Compress Image Online — Free JPG, PNG, WebP, AVIF, HEIC (No Upload)',
     description: 'Free image compressor for JPG, PNG, WebP, AVIF and HEIC. Exact KB mode: 20KB, 50KB, 100KB. No upload, no watermark, 100% private.',
-    url: 'https://compressto20kb.com',
+    url: 'https://www.compressto20kb.com',
     siteName: 'CompressTo20KB',
     type: 'website',
-    images: [{ url: 'https://compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'CompressTo20KB — Free Image Compressor Online' }],
+    images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'CompressTo20KB — Free Image Compressor Online' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Compress Image Online Free — JPG, PNG, WebP, No Upload',
     description: 'Files never leave your device. Exact KB compression. Free, no signup. Shopify, Etsy, Amazon, Instagram presets.',
-    images: ['https://compressto20kb.com/og-image.png'],
+    images: ['https://www.compressto20kb.com/og-image.png'],
   },
   robots: {
     index: true,
@@ -43,7 +43,7 @@ const schemaWebApp = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'CompressTo20KB',
-  url: 'https://compressto20kb.com',
+  url: 'https://www.compressto20kb.com',
   description: 'Free online image compressor. Compress to exact KB size — 20KB, 50KB, 100KB. No upload, 100% private. Works for Shopify, Etsy, Amazon, Instagram, passport photos.',
   applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'Any',
@@ -88,8 +88,8 @@ const schemaBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://compressto20kb.com' },
-    { '@type': 'ListItem', position: 2, name: 'Compress Images Free', item: 'https://compressto20kb.com' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.compressto20kb.com' },
+    { '@type': 'ListItem', position: 2, name: 'Compress Images Free', item: 'https://www.compressto20kb.com' },
   ],
 };
 
@@ -97,8 +97,8 @@ const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'CompressTo20KB',
-  url: 'https://compressto20kb.com',
-  logo: 'https://compressto20kb.com/logo.png',
+  url: 'https://www.compressto20kb.com',
+  logo: 'https://www.compressto20kb.com/logo.png',
   sameAs: [
     'https://www.producthunt.com/products/compressto20kb',
     'https://twitter.com/compressto20kb',

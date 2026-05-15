@@ -6,7 +6,7 @@ import AuthorBox from '@/app/components/AuthorBox'
 export const metadata: Metadata = {
   title: "USCIS Photo Size Requirements 2026 — Complete Guide",
   description: "Complete USCIS photo size requirements 2026: file size 240KB, dimensions, format, background. Which forms need a photo? How to compress free — no upload.",
-  alternates: { canonical: 'https://compressto20kb.com/blog/uscis-photo-size-requirements' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/uscis-photo-size-requirements' },
   keywords: 'USCIS photo size requirements 2025, USCIS photo requirements, compress USCIS photo, USCIS 240KB photo, green card photo requirements, I-485 photo size',
   openGraph: {
     title: "USCIS Photo Size Requirements 2026 — Complete Guide",
@@ -23,8 +23,8 @@ export default function USCISPhotoRequirements() {
       <main className="max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"USCIS Photo Size Requirements 2026","item":"https://compressto20kb.com/blog/uscis-photo-size-requirements"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"USCIS Photo Size Requirements 2026","description":"Complete USCIS photo size requirements 2026: file size 240KB, dimensions, format, background. Which forms need a photo? How to compress free — no upload.","url":"https://compressto20kb.com/blog/uscis-photo-size-requirements","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"USCIS Photo Size Requirements 2026","item":"https://www.compressto20kb.com/blog/uscis-photo-size-requirements"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"USCIS Photo Size Requirements 2026","description":"Complete USCIS photo size requirements 2026: file size 240KB, dimensions, format, background. Which forms need a photo? How to compress free — no upload.","url":"https://www.compressto20kb.com/blog/uscis-photo-size-requirements","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
       <div className="text-sm text-slate-400 mb-3">
         🇺🇸 USCIS · Immigration Guide 2025
       </div>

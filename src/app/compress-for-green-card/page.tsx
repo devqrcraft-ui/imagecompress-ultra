@@ -4,8 +4,8 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Compress Photo for Green Card Form I-485 — Free Online Tool',
   description: 'Compress photo for Green Card application Form I-485. Under 240KB, white background.',
-  alternates: { canonical: 'https://compressto20kb.com/compress-for-green-card' },
-  openGraph: { url: 'https://compressto20kb.com/compress-for-green-card' },
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-green-card' },
+  openGraph: { url: 'https://www.compressto20kb.com/compress-for-green-card' },
   keywords: 'compress photo for green-card, Green Card Form I-485 photo requirements, Green Card Form I-485 photo size',
 };
 
@@ -22,13 +22,13 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'WebApplication',
         name: 'Green Card Form I-485 Photo Compressor',
-        url: 'https://compressto20kb.com/compress-for-green-card',
+        url: 'https://www.compressto20kb.com/compress-for-green-card',
         description: 'Compress photo for Green Card application Form I-485. Under 240KB, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '1034', bestRating: '5', worstRating: '1' },
       })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for Green Card Form I-485","item":"https://compressto20kb.com/compress-for-green-card"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for Green Card Form I-485","item":"https://www.compressto20kb.com/compress-for-green-card"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org', '@type': 'FAQPage',
         mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),

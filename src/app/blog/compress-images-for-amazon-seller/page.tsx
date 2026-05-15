@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   title: 'Image Compression for Amazon Sellers — Meet Size Requirements',
   description: 'Amazon requires main images on pure white background under specific file sizes. Compress your Amazon product photos free.',
   keywords: 'compress images amazon seller, amazon product image requirements, reduce image size amazon listing',
-  alternates: { canonical: 'https://compressto20kb.com/blog/compress-images-for-amazon-seller' },
-  openGraph: { url: 'https://compressto20kb.com/blog/compress-images-for-amazon-seller' },
+  alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-images-for-amazon-seller' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-images-for-amazon-seller' },
 };
 export default function Page() {
   return (
@@ -18,8 +18,8 @@ export default function Page() {
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Image Compression for Amazon Sellers","item":"https://compressto20kb.com/blog/compress-images-for-amazon-seller"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Image Compression for Amazon Sellers","description":"Amazon requires main images on pure white background under specific file sizes. Compress your Amazon product photos free.","url":"https://compressto20kb.com/blog/compress-images-for-amazon-seller","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Image Compression for Amazon Sellers","item":"https://www.compressto20kb.com/blog/compress-images-for-amazon-seller"}]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Image Compression for Amazon Sellers","description":"Amazon requires main images on pure white background under specific file sizes. Compress your Amazon product photos free.","url":"https://www.compressto20kb.com/blog/compress-images-for-amazon-seller","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
         <h2 style={{fontSize:'22px',fontWeight:600,marginBottom:'12px'}}>Amazon Image Requirements 2026</h2>
         <p style={{color:'rgba(255,255,255,0.7)',lineHeight:1.7}}>Amazon requires JPEG or PNG format, pure white background (RGB 255,255,255), minimum 1000px on longest side. Smaller files upload faster and index quicker in Amazon search.</p>
       </section>
