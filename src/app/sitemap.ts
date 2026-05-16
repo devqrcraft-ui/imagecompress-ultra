@@ -155,5 +155,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   { url: `${baseUrl}/blog/compress-image-to-30kb`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
   { url: `${baseUrl}/blog/compress-image-without-losing-quality`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
   { url: `${baseUrl}/blog/webp-vs-jpeg-2026`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+  { url: `${baseUrl}/image-size-checker-online`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
   ];
 }
