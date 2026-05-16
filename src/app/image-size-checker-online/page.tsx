@@ -7,7 +7,7 @@ export default function ImageSizeChecker() {
   const [dragging, setDragging] = useState(false)
 
   const processFiles = useCallback((files: FileList | File[]) => {
-    const arr = []
+    const arr: {name:string,size:string,w:number,h:number,type:string}[] = []
     for (const file of files) {
       if (!file.type.startsWith('image/')) continue
       const url = URL.createObjectURL(file)
