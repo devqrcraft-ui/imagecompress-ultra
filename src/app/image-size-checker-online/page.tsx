@@ -3,10 +3,10 @@ import { useState, useCallback } from 'react'
 import AuthorBox from '@/app/components/AuthorBox'
 
 export default function ImageSizeChecker() {
-  const [results, setResults] = useState([])
+  const [results, setResults] = useState<{name:string,size:string,w:number,h:number,type:string}[]>([])
   const [dragging, setDragging] = useState(false)
 
-  const processFiles = useCallback((files) => {
+  const processFiles = useCallback((files: FileList | File[]) => {
     const arr = []
     for (const file of files) {
       if (!file.type.startsWith('image/')) continue
