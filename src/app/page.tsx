@@ -46,6 +46,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
       />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"WebSite","name":"CompressTo20KB","url":"https://compressto20kb.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://compressto20kb.com/blog?q={search_term_string}"},"query-input":"required name=search_term_string"}}' }} />
       <HomeClient />
       {/* AS-IS DISCLAIMER */}
       <div style={{background:'#0f0c29',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'16px 20px',textAlign:'center' as const}}>
