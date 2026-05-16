@@ -58,7 +58,7 @@ export default function ImageSizeChecker() {
             onDrop={onDrop}
             onDragOver={(e)=>{e.preventDefault();setDragging(true)}}
             onDragLeave={()=>setDragging(false)}
-            onClick={()=>document.getElementById('file-input').click()}
+            onClick={()=>(document.getElementById('file-input') as HTMLInputElement)?.click()}
             style={{border:`2px dashed ${dragging?'#818cf8':'rgba(129,140,248,0.3)'}`,borderRadius:12,padding:'48px 24px',textAlign:'center',cursor:'pointer',background:dragging?'rgba(129,140,248,0.08)':'transparent',transition:'all 0.2s',marginBottom:24}}
           >
             <div style={{fontSize:40,marginBottom:12}}>🖼️</div>
