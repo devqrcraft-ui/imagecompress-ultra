@@ -379,7 +379,7 @@ export default function HomeClient() {
 
               {images.map(img=>(
                 <div key={img.id} style={{display:'flex',alignItems:'center',gap:'10px',padding:'10px 12px',background:'rgba(255,255,255,0.04)',borderRadius:'10px',marginBottom:'6px',border:'1px solid rgba(255,255,255,0.07)'}}>
-                  <img src={img.preview} alt={img.name} style={{width:'44px',height:'44px',objectFit:'cover',borderRadius:'6px',flexShrink:0}}/>
+                  <img src={img.preview} alt={img.name} style={{width:'44px',height:'44px',objectFit:'cover',borderRadius:'6px',flexShrink:0}} loading="lazy"/>
                   <div style={{flex:1,minWidth:0}}>
                     <div style={{fontSize:'12px',fontWeight:600,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{img.name}</div>
                     <div style={{fontSize:'11px',opacity:0.5,marginTop:'2px'}}>
@@ -555,9 +555,9 @@ export default function HomeClient() {
             <div style={{position:'relative',overflow:'hidden',borderRadius:'10px',userSelect:'none',touchAction:'none'}}
               onMouseMove={e=>{const r=e.currentTarget.getBoundingClientRect();setComparePos(Math.min(98,Math.max(2,Math.round(((e.clientX-r.left)/r.width)*100))));}}
               onTouchMove={e=>{e.preventDefault();const r=e.currentTarget.getBoundingClientRect();setComparePos(Math.min(98,Math.max(2,Math.round(((e.touches[0].clientX-r.left)/r.width)*100))));}}>
-              <img src={compareImg.outUrl} alt="after" style={{width:'100%',display:'block',borderRadius:'10px'}}/>
+              <img src={compareImg.outUrl} alt="after" style={{width:'100%',display:'block',borderRadius:'10px'}} loading="lazy"/>
               <div style={{position:'absolute',inset:0,overflow:'hidden',width:`${comparePos}%`}}>
-                <img src={compareImg.preview} alt="before" style={{width:`${10000/comparePos}%`,maxWidth:'none',display:'block',borderRadius:'10px'}}/>
+                <img src={compareImg.preview} alt="before" style={{width:`${10000/comparePos}%`,maxWidth:'none',display:'block',borderRadius:'10px'}} loading="lazy"/>
               </div>
               <div style={{position:'absolute',top:0,bottom:0,left:`${comparePos}%`,width:'2px',background:'white',transform:'translateX(-50%)',cursor:'ew-resize'}}>
                 <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',background:'white',borderRadius:'50%',width:'28px',height:'28px',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'12px',color:'#1e1b4b',fontWeight:900}}>{'|'}</div>

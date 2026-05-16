@@ -84,7 +84,7 @@ add_filter('woocommerce_get_image_size_single', function($size) {
       <h2 className="text-2xl font-semibold mt-10 mb-4">Lazy Loading for Product Grids</h2>
       <p className="mb-4">Category pages with 24–48 products are the biggest offenders. Load only the first 4–8 images immediately, lazy-load the rest:</p>
       <pre className="bg-gray-100 rounded p-4 text-sm overflow-auto mb-6">{`<!-- First 4 products: no lazy -->
-<img src="product-1.webp" width="300" height="300" alt="Product 1" />
+<img src="product-1.webp" width="300" height="300" alt="Product 1"  loading="lazy"/>
 
 <!-- All other products: lazy -->
 <img src="product-5.webp" width="300" height="300" alt="Product 5" loading="lazy" />`}</pre>

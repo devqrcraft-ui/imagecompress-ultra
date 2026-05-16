@@ -55,7 +55,7 @@ export default function ImageOptimization2026() {
   sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1600px"
   src="photo-800.webp"
   alt="Description"
-/>`}</pre>
+ loading="lazy"/>`}</pre>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">CDN Delivery</h2>
       <p className="mb-4">A CDN serves images from edge nodes closest to the user. This reduces latency from 300ms+ (cross-continent) to under 20ms. In 2026, services like Cloudflare Images and Vercel Image Optimization offer automatic format conversion and resizing at the CDN level.</p>

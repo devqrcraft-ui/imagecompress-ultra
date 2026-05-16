@@ -34,7 +34,7 @@ export default function BestImageFormats() {
       <pre className="bg-gray-100 rounded p-4 text-sm overflow-auto mb-6">{`<picture>
   <source srcset="image.avif" type="image/avif" />
   <source srcset="image.webp" type="image/webp" />
-  <img src="image.jpg" alt="Description" />
+  <img src="image.jpg" alt="Description"  loading="lazy"/>
 </picture>`}</pre>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">JPEG: The Old Reliable</h2>

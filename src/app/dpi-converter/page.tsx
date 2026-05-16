@@ -164,7 +164,7 @@ export default function DPIConverterPage() {
               transition:'all 0.2s',marginBottom:'16px'}}>
             {image ? (
               <div>
-                <img src={image.preview} alt="preview" style={{maxHeight:'120px',maxWidth:'100%',borderRadius:'8px',marginBottom:'8px'}}/>
+                <img src={image.preview} alt="preview" style={{maxHeight:'120px',maxWidth:'100%',borderRadius:'8px',marginBottom:'8px'}} loading="lazy"/>
                 <div style={{fontSize:'15px',fontWeight:600}}>{image.file.name}</div>
                 <div style={{fontSize:'12px',opacity:0.5,marginTop:'4px'}}>{fmtSize(image.file.size)} · Click to change</div>
               </div>

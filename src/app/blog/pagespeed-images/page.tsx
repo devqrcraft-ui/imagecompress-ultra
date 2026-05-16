@@ -41,7 +41,7 @@ sharp("input.jpg")
       <pre className="bg-gray-100 rounded p-4 text-sm overflow-auto mb-6">{`<picture>
   <source srcset="image.avif" type="image/avif" />
   <source srcset="image.webp" type="image/webp" />
-  <img src="image.jpg" alt="Description" width="800" height="600" />
+  <img src="image.jpg" alt="Description" width="800" height="600"  loading="lazy"/>
 </picture>`}</pre>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Warning 2: "Properly size images"</h2>
@@ -56,7 +56,7 @@ sharp("input.jpg")
          1200px"
   src="img-800.webp"
   alt="Description"
-/>`}</pre>
+ loading="lazy"/>`}</pre>
       <p className="mb-4">In Next.js, the <code className="bg-gray-100 px-1 rounded">Image</code> component handles this automatically:</p>
       <pre className="bg-gray-100 rounded p-4 text-sm overflow-auto mb-6">{`import Image from "next/image";
 <Image src="/photo.jpg" alt="Description" width={800} height={600} />`}</pre>
@@ -64,7 +64,7 @@ sharp("input.jpg")
       <h2 className="text-2xl font-semibold mt-10 mb-4">Warning 3: "Defer offscreen images"</h2>
       <p className="mb-4">Images below the fold are loaded immediately, blocking faster resources. Fix: add <code className="bg-gray-100 px-1 rounded">loading="lazy"</code> to every image that is not in the initial viewport.</p>
       <pre className="bg-gray-100 rounded p-4 text-sm overflow-auto mb-6">{`<!-- Above fold: no lazy (loads immediately) -->
-<img src="hero.webp" alt="Hero" width="1200" height="600" />
+<img src="hero.webp" alt="Hero" width="1200" height="600"  loading="lazy"/>
 
 <!-- Below fold: lazy -->
 <img src="product.webp" alt="Product" width="400" height="400" loading="lazy" />`}</pre>
@@ -73,10 +73,10 @@ sharp("input.jpg")
       <h2 className="text-2xl font-semibold mt-10 mb-4">Warning 4: "Image elements do not have explicit width and height"</h2>
       <p className="mb-4">Without explicit dimensions, the browser cannot reserve space for the image before it loads. This causes Cumulative Layout Shift (CLS) — content jumps around as images load.</p>
       <pre className="bg-gray-100 rounded p-4 text-sm overflow-auto mb-6">{`<!-- Bad: no dimensions -->
-<img src="photo.webp" alt="Photo" />
+<img src="photo.webp" alt="Photo"  loading="lazy"/>
 
 <!-- Good: explicit dimensions -->
-<img src="photo.webp" alt="Photo" width="800" height="600" />`}</pre>
+<img src="photo.webp" alt="Photo" width="800" height="600"  loading="lazy"/>`}</pre>
       <p className="mb-4">You can also use CSS aspect-ratio as a fallback:</p>
       <pre className="bg-gray-100 rounded p-4 text-sm overflow-auto mb-6">{`img {
   aspect-ratio: 4 / 3;
