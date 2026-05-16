@@ -64,7 +64,7 @@ export default function ImageSizeChecker() {
             <div style={{fontSize:40,marginBottom:12}}>🖼️</div>
             <div style={{fontSize:16,fontWeight:700,color:'#818cf8',marginBottom:8}}>Drop images here or click to upload</div>
             <div style={{fontSize:13,color:'rgba(255,255,255,0.4)'}}>JPEG, PNG, WebP, GIF, AVIF · Up to 20 files</div>
-            <input id="file-input" type="file" multiple accept="image/*" style={{display:'none'}} onChange={e=>processFiles(e.target.files)} />
+            <input id="file-input" type="file" multiple accept="image/*" style={{display:'none'}} onChange={e=>e.target.files && processFiles(e.target.files)} />
           </div>
           {results.length > 0 && (
             <div style={{overflowX:'auto'}}>
