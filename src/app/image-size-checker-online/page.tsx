@@ -84,7 +84,7 @@ export default function ImageSizeChecker() {
                       <td style={{padding:'10px 14px',color:'rgba(255,255,255,0.85)',maxWidth:200,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{r.name}</td>
                       <td style={{padding:'10px 14px',textAlign:'center',color:'#c8d0e7'}}>{r.w}px</td>
                       <td style={{padding:'10px 14px',textAlign:'center',color:'#c8d0e7'}}>{r.h}px</td>
-                      <td style={{padding:'10px 14px',textAlign:'center',color:r.size>200?'#f87171':'#4ade80'}}>{r.size} KB</td>
+                      <td style={{padding:'10px 14px',textAlign:'center',color:parseFloat(r.size)>200?'#f87171':'#4ade80'}}>{r.size} KB</td>
                       <td style={{padding:'10px 14px',textAlign:'center',color:'rgba(255,255,255,0.5)',fontSize:12}}>{r.type.split('/')[1].toUpperCase()}</td>
                     </tr>
                   ))}
