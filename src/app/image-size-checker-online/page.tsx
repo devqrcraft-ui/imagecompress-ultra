@@ -1,4 +1,5 @@
 'use client'
+import React from 'react'
 import { useState, useCallback } from 'react'
 import AuthorBox from '@/app/components/AuthorBox'
 
@@ -21,7 +22,7 @@ export default function ImageSizeChecker() {
     }
   }, [])
 
-  const onDrop = useCallback((e) => {
+  const onDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault(); setDragging(false)
     processFiles(e.dataTransfer.files)
   }, [processFiles])
