@@ -1,25 +1,13 @@
 # CompressTo20KB
-> Free online image compressor — reduce any image to a target file size (20KB, 50KB, 100KB, 200KB) instantly in your browser. No upload to server, no signup required.
 
-## What this site does
-CompressTo20KB compresses JPEG, PNG, and WebP images to a specific file size target directly in the browser using WebAssembly. No files are sent to any server. Supports bulk compression and ZIP download.
+> Free online image compressor. Compress JPEG, PNG, WebP images to exact file sizes. Specialized tools for visa photos (Schengen, UK, US), passport photos, and general image compression.
 
 ## Key pages
-- / — Main image compressor (compress to 20KB)
-- /compress-to-50kb — Compress image to 50KB
-- /compress-to-100kb — Compress image to 100KB
-- /compress-to-200kb — Compress image to 200KB
-- /bulk-image-compressor — Compress multiple images at once
-- /batch-image-compressor-zip — Compress batch and download as ZIP
-- /compress-for-amazon — Compress images for Amazon product listings
-- /compress-for-etsy — Compress images for Etsy listings
-- /blog/how-to-compress-image-for-email — Guide: compress images for email
 
-## Who this is for
-Anyone who needs to reduce image file size to a specific KB target: visa applications, job applications, online forms with file size limits, e-commerce product photos, email attachments, and web optimization.
-
-## Technical
-All compression happens client-side via WebAssembly. Supported formats: JPEG, PNG, WebP. Output: JPEG. Privacy: zero data sent to servers.
-
-## Optional
-llms-full.txt: https://www.compressto20kb.com/llms-full.txt
+- / : Free image compressor — compress to any size
+- /compress-to-20kb : Compress image to 20KB free online
+- /compress-to-50kb : Compress image to 50KB free online
+- /compress-to-100kb : Compress image to 100KB free online
+- /schengen-visa-photo : Schengen visa photo requirements and compressor
+- /uk-visa-photo : UK visa photo size requirements 2026
+- /image-size-checker-online : Check image file size online free
