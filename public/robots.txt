@@ -1,10 +1,9 @@
 User-agent: *
 Allow: /
-
-# Block JS widget files
 Disallow: /*.js$
-
-# Block query parameters
 Disallow: /*?*
+
+User-agent: CCBot
+Disallow: /
 
 Sitemap: https://www.compressto20kb.com/sitemap.xml
