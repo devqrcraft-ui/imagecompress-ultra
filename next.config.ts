@@ -24,18 +24,6 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: '/',
-        has: [{ type: 'query', key: 'mode' }],
-        destination: '/',
-        permanent: false,
-      },
-      {
-        source: '/',
-        has: [{ type: 'query', key: 'target' }],
-        destination: '/',
-        permanent: false,
-      },
     ];
   },
   headers: async () => [

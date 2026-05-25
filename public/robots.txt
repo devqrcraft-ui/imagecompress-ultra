@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /ai-chat-widget.js
+Disallow: /ai-chat-widget-final.js
+
 Disallow: /_next/
 Disallow: /*.js$
 Disallow: /*?*
