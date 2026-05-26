@@ -2,9 +2,36 @@
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const faq=[{"q":"How do images affect Google PageSpeed score?","a":"Images are typically 60-70% of page weight. Large images slow LCP which is a Core Web Vitals metric that directly affects Google rankings."},{"q":"What image format does Google recommend for PageSpeed?","a":"Google recommends WebP and AVIF for web images — they produce 25-50% smaller files than JPEG at equal quality."},{"q":"How small should my hero image be for PageSpeed?","a":"Hero and LCP images should be under 200KB for a good PageSpeed score. Use WebP format at quality 80-85%."}];
+
+const schemaData = {
+  blogPosting: {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.compressto20kb.com/blog/pagespeed-images"},
+    "headline": "Image Compression Guide — pagespeed images",
+    "publisher": {"@type": "Organization", "name": "CompressTo20KB", "url": "https://www.compressto20kb.com"},
+    "author": {"@type": "Person", "name": "CompressTo20KB Team"},
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-05-26",
+    "url": "https://www.compressto20kb.com/blog/pagespeed-images"
+  },
+  breadcrumb: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressto20kb.com"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.compressto20kb.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "pagespeed images", "item": "https://www.compressto20kb.com/blog/pagespeed-images"}
+    ]
+  }
+};
+
 export default function ClientPage(){
   return(
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
+
       <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
         <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
         <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>

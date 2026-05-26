@@ -2,9 +2,36 @@
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const faq=[{"q":"What image size is best for eCommerce?","a":"1000-2000px square images compressed to under 500KB in WebP format. This provides zoom quality while keeping pages fast."},{"q":"Does image optimization increase eCommerce sales?","a":"Yes. Faster pages convert better. A 1-second improvement in page load time increases conversions by 7% on average."},{"q":"Should eCommerce images have white backgrounds?","a":"Yes for main product images on Amazon, Etsy, and eBay — required by their policies."}];
+
+const schemaData = {
+  blogPosting: {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.compressto20kb.com/blog/ecommerce-image-optimization"},
+    "headline": "Image Compression Guide — ecommerce image optimization",
+    "publisher": {"@type": "Organization", "name": "CompressTo20KB", "url": "https://www.compressto20kb.com"},
+    "author": {"@type": "Person", "name": "CompressTo20KB Team"},
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-05-26",
+    "url": "https://www.compressto20kb.com/blog/ecommerce-image-optimization"
+  },
+  breadcrumb: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressto20kb.com"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.compressto20kb.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "ecommerce image optimization", "item": "https://www.compressto20kb.com/blog/ecommerce-image-optimization"}
+    ]
+  }
+};
+
 export default function ClientPage(){
   return(
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
+
       <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
         <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
         <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>

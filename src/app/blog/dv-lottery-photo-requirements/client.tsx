@@ -17,9 +17,36 @@ const faq = [
   { q: 'How do I compress my photo to under 240KB for the DV Lottery?', a: 'Upload your photo to our free tool, select Exact KB mode, type 200, choose JPEG format, and compress. Your photo will be safely under the 240KB limit.' },
   { q: 'Can I use a selfie for the DV Lottery photo?', a: 'You can take the photo yourself, but it must meet all technical requirements: white background, correct dimensions, neutral expression, no glasses, and under 240KB.' },
 ];
+
+const schemaData = {
+  blogPosting: {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.compressto20kb.com/blog/dv-lottery-photo-requirements"},
+    "headline": "Image Compression Guide — dv lottery photo requirements",
+    "publisher": {"@type": "Organization", "name": "CompressTo20KB", "url": "https://www.compressto20kb.com"},
+    "author": {"@type": "Person", "name": "CompressTo20KB Team"},
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-05-26",
+    "url": "https://www.compressto20kb.com/blog/dv-lottery-photo-requirements"
+  },
+  breadcrumb: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressto20kb.com"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.compressto20kb.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "dv lottery photo requirements", "item": "https://www.compressto20kb.com/blog/dv-lottery-photo-requirements"}
+    ]
+  }
+};
+
 export default function ClientPage() {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
+
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
         <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>

@@ -2,9 +2,36 @@
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const faq=[{"q":"What size should Amazon product images be?","a":"Amazon requires minimum 1000x1000 pixels for zoom, JPEG or PNG format. Main image must have white background. Compress to under 1MB for fast loading."},{"q":"Does Amazon compress images automatically?","a":"Yes, Amazon recompresses uploaded images. Upload high quality originals and pre-compress to under 1MB before uploading."},{"q":"Should I use JPEG or PNG for Amazon listings?","a":"JPEG for product photos, PNG only if your product has transparent background."}];
+
+const schemaData = {
+  blogPosting: {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.compressto20kb.com/blog/compress-images-for-amazon-seller"},
+    "headline": "Image Compression Guide — compress images for amazon seller",
+    "publisher": {"@type": "Organization", "name": "CompressTo20KB", "url": "https://www.compressto20kb.com"},
+    "author": {"@type": "Person", "name": "CompressTo20KB Team"},
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-05-26",
+    "url": "https://www.compressto20kb.com/blog/compress-images-for-amazon-seller"
+  },
+  breadcrumb: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressto20kb.com"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.compressto20kb.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "compress images for amazon seller", "item": "https://www.compressto20kb.com/blog/compress-images-for-amazon-seller"}
+    ]
+  }
+};
+
 export default function ClientPage(){
   return(
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
+
       <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
         <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
         <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>

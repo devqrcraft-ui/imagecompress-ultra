@@ -2,9 +2,36 @@
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const faq=[{"q":"Which image format has the smallest file size?","a":"AVIF is currently the smallest format — up to 50% smaller than JPEG. WebP is second at 25-35% smaller than JPEG."},{"q":"When should I use PNG instead of JPEG?","a":"Use PNG when your image has a transparent background or contains text with sharp edges. For photos, JPEG or WebP is smaller."},{"q":"Is AVIF supported by all browsers?","a":"AVIF is supported by 92% of browsers including Chrome, Firefox, and Safari. Use WebP as fallback for older browsers."}];
+
+const schemaData = {
+  blogPosting: {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.compressto20kb.com/blog/best-image-formats"},
+    "headline": "Image Compression Guide — best image formats",
+    "publisher": {"@type": "Organization", "name": "CompressTo20KB", "url": "https://www.compressto20kb.com"},
+    "author": {"@type": "Person", "name": "CompressTo20KB Team"},
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-05-26",
+    "url": "https://www.compressto20kb.com/blog/best-image-formats"
+  },
+  breadcrumb: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressto20kb.com"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.compressto20kb.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "best image formats", "item": "https://www.compressto20kb.com/blog/best-image-formats"}
+    ]
+  }
+};
+
 export default function ClientPage(){
   return(
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
+
       <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
         <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
         <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>

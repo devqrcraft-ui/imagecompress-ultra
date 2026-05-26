@@ -2,9 +2,36 @@
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const faq=[{"q":"What is the Teams profile photo size?","a":"Microsoft Teams profile photos should be 648x648 pixels, JPEG or PNG, under 4MB. Square images work best as Teams crops to circle."},{"q":"How do I set a custom background in Teams?","a":"Teams virtual backgrounds should be 1920x1080 pixels (16:9), JPEG or PNG, under 5MB."},{"q":"Can I share large images in Teams chat?","a":"Teams allows file sharing up to 250MB. For inline images in chat, compress to under 1MB for fast loading on all devices."}];
+
+const schemaData = {
+  blogPosting: {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams"},
+    "headline": "Image Compression Guide — compress image for microsoft teams",
+    "publisher": {"@type": "Organization", "name": "CompressTo20KB", "url": "https://www.compressto20kb.com"},
+    "author": {"@type": "Person", "name": "CompressTo20KB Team"},
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-05-26",
+    "url": "https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams"
+  },
+  breadcrumb: {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressto20kb.com"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.compressto20kb.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "compress image for microsoft teams", "item": "https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams"}
+    ]
+  }
+};
+
 export default function ClientPage(){
   return(
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
+
       <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
         <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
         <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>
