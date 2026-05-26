@@ -140,6 +140,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/free-vs-paid-compressors`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/h1b-visa-photo-requirements`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/how-to-compress-image-for-uscis`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/how-to-compress-image-for-email`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/how-to-compress-images-for-woocommerce`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/how-to-compress-photo-for-ds160`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/image-optimization-2026`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
