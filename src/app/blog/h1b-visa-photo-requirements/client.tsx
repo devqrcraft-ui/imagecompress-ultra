@@ -16,6 +16,19 @@ export default function ClientPage(){
         <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → H1B Visa Photo Requirements 2025</div>
         <div style={{display:'inline-block',background:'rgba(99,102,241,0.1)',border:'1px solid rgba(99,102,241,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#a5b4fc'}}>🇺🇸 H1B Visa</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>H1B Visa Photo Requirements 2025<br/><span style={{color:'#818cf8'}}>Work Visa Application Guide</span></h1>
+                <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
+          <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>
+        </div>
+        <div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}>
+          <p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0,textTransform:'uppercase' as const,letterSpacing:'0.06em'}}>Key Takeaways</p>
+          <ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}>
+            <li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li>
+            <li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong> — convert between formats in one click</li>
+            <li>WebP saves <strong style={{color:'#fff'}}>25–50% file size</strong> vs JPEG at the same visual quality</li>
+            <li>No file size limit, no account required, <strong style={{color:'#fff'}}>100% free</strong></li>
+            <li>Use the quality slider to find the sweet spot between size and sharpness</li>
+          </ul>
+        </div>
         <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>H1B visa applications use the DS-160 form which requires a JPEG photo under 240KB. Here is everything you need to know.</p>
         <div style={{background:'rgba(99,102,241,0.1)',border:'1px solid rgba(99,102,241,0.3)',borderRadius:'12px',padding:'16px 20px',marginBottom:'32px'}}>
           <strong style={{color:'#a5b4fc'}}>📋 H1B Photo Requirements:</strong>
