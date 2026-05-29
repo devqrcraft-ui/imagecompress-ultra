@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
   productionBrowserSourceMaps: false,
   experimental: {
     optimizePackageImports: ["react", "react-dom", "lucide-react", "@radix-ui/react-icons"],
-    optimizeCss: false,
+    optimizeCss: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
