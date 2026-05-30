@@ -50,7 +50,7 @@ const schemaData = {
 
 export default function ClientPage(){
   return(
-    <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
+    <div style={{minHeight:'100vh',background:'#0f172a',color:'white',fontFamily:'system-ui,sans-serif'}}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
 
@@ -66,6 +66,7 @@ export default function ClientPage(){
         <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → USCIS Photo Compression Guide</div>
         <div style={{display:'inline-block',background:'rgba(239,68,68,0.1)',border:'1px solid rgba(239,68,68,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#fca5a5'}}>🇺🇸 USCIS · Immigration Forms</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>How to Compress Image for USCIS<br/><span style={{color:'#818cf8'}}>N-400 · I-485 · DS-160 · US Passport</span></h1>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By Ethan Blake &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>
         </div>
@@ -84,6 +85,9 @@ export default function ClientPage(){
           <strong style={{color:'#fca5a5'}}>📋 USCIS Photo Requirements:</strong>
           <span style={{fontSize:'14px',opacity:0.85}}> JPEG only · 600×600 px (2×2 inches) · Under 240KB · White background · Taken within 6 months</span>
         </div>
+        <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
+          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#818cf8'}}>Google PageSpeed Insights</a>
+        </blockquote>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Which USCIS Forms Require Photo Compression?</h2>
         <div style={{overflowX:'auto',marginBottom:'32px'}}>
           <table style={{width:'100%',borderCollapse:'collapse',fontSize:'15px'}}>
@@ -92,7 +96,7 @@ export default function ClientPage(){
             </tr></thead>
             <tbody>{forms.map((r,i)=>(
               <tr key={i} style={{background:i%2===0?'rgba(255,255,255,0.02)':'transparent'}}>
-                <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',fontWeight:700,color:'#a5b4fc'}}>{r.form}</td>
+                <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',fontWeight:700,color:'#818cf8'}}>{r.form}</td>
                 <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',opacity:0.75}}>{r.name}</td>
                 <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',color:'#34d399',fontWeight:700}}>{r.limit}</td>
               </tr>
@@ -122,7 +126,7 @@ export default function ClientPage(){
           <p style={{fontWeight:700,marginBottom:'12px',fontSize:'14px'}}>Related guides:</p>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'15px'}}>
             {([['/compress-for-uscis','USCIS Photo Tool'],['/blog/how-to-compress-photo-for-ds160','DS-160 Guide'],['/blog/dv-lottery-photo-requirements','DV Lottery'],['/blog/image-size-requirements-for-green-card','Green Card']] as [string,string][]).map(([href,label])=>(
-              <Link key={href} href={href} style={{color:'#a5b4fc',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
+              <Link key={href} href={href} style={{color:'#818cf8',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>
         </div>

@@ -16,7 +16,7 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress Images for Google Forms","item":"https://www.compressto20kb.com/blog/compress-image-for-google-forms"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Google Forms","description":"Google Forms has a 10MB file upload limit. Learn how to compress images for Google Forms quickly — no upload needed, works on any device.","url":"https://www.compressto20kb.com/blog/compress-image-for-google-forms","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Google Forms","description":"Google Forms has a 10MB file upload limit. Learn how to compress images for Google Forms quickly — no upload needed, works on any device.","url":"https://www.compressto20kb.com/blog/compress-image-for-google-forms","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist","sameAs":"https://medium.com/@ethan.blake.compress"}}' }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
         <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>Blog → Google Forms</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>How to Compress Images for Google Forms</h1>
@@ -28,7 +28,7 @@ export default function Page() {
         <p style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '16px' }}>Google Forms has a 10MB limit per uploaded file and a 1GB total response limit per form. For most use cases — submitting ID photos, documents, or profile pictures — keeping images under 500KB is ideal. This ensures fast uploads on mobile connections and keeps your Drive organized.</p>
 
         <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)', borderRadius: '12px', padding: '16px 20px', margin: '24px 0' }}>
-          <strong style={{ color: '#a5b4fc' }}>Google Forms File Size Limits:</strong>
+          <strong style={{ color: '#818cf8' }}>Google Forms File Size Limits:</strong>
           <ul style={{ margin: '8px 0 0', paddingLeft: '20px', fontSize: '14px', opacity: 0.8, lineHeight: 2 }}>
             <li>Max file size per upload: 10MB</li>
             <li>Total storage per form: 1GB (Google Drive)</li>
@@ -68,7 +68,7 @@ export default function Page() {
 
         <div style={{ marginTop: '40px', display: 'flex', gap: '10px', flexWrap: 'wrap', fontSize:'15px' }}>
           {[['/', 'Home'], ['/compress-to-200kb', 'Compress to 200KB'], ['/compress-for-email', 'Compress for Email'], ['/bulk-image-compressor', 'Bulk Compress']].map(([href, label]) => (
-            <a key={href} href={href} style={{ color: '#a5b4fc', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>{label}</a>
+            <a key={href} href={href} style={{ color: '#818cf8', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>{label}</a>
           ))}
         </div>
       </div>

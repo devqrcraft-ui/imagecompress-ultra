@@ -40,7 +40,7 @@ const schemaData = {
 
 export default function ClientPage(){
   return(
-    <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
+    <div style={{minHeight:'100vh',background:'#0f172a',color:'white',fontFamily:'system-ui,sans-serif'}}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
 
@@ -55,6 +55,7 @@ export default function ClientPage(){
         <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → WooCommerce Guide</div>
         <div style={{display:'inline-block',background:'rgba(168,85,247,0.1)',border:'1px solid rgba(168,85,247,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#d8b4fe'}}>🛍️ WooCommerce · WordPress</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Images for WooCommerce<br/><span style={{color:'#818cf8'}}>Speed Up Your Store in 2025</span></h1>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By Ethan Blake &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>
         </div>
@@ -73,6 +74,9 @@ export default function ClientPage(){
           <strong style={{color:'#d8b4fe'}}>📋 WooCommerce Image Best Practice:</strong>
           <span style={{fontSize:'14px',opacity:0.85}}> 800×800 px · WebP or JPEG · Under 100KB per image · Square aspect ratio · Batch compress before upload</span>
         </div>
+        <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
+          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#818cf8'}}>Google PageSpeed Insights</a>
+        </blockquote>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>5 WooCommerce Image Optimization Tips</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'12px',marginBottom:'36px'}}>
           {tips.map((s,i)=>(
@@ -95,7 +99,7 @@ export default function ClientPage(){
         <div style={{marginTop:'36px',padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'15px'}}>
             {([['/compress-for-woocommerce','WooCommerce Tool'],['/bulk-image-compressor','Bulk Compress'],['/blog/compress-image-for-shopify-product-page','Shopify Guide'],['/compress-for-squarespace','Squarespace Tool']] as [string,string][]).map(([href,label])=>(
-              <Link key={href} href={href} style={{color:'#a5b4fc',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
+              <Link key={href} href={href} style={{color:'#818cf8',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>
         </div>

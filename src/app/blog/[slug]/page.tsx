@@ -278,7 +278,7 @@ function renderContent(content: string) {
   while (i < lines.length) {
     const line = lines[i];
     if (line.startsWith('## ')) {
-      elements.push(<h2 key={i} style={{ fontSize: '22px', fontWeight: 800, margin: '36px 0 12px', color: '#a5b4fc' }}>{line.replace('## ', '')}</h2>);
+      elements.push(<h2 key={i} style={{ fontSize: '22px', fontWeight: 800, margin: '36px 0 12px', color: '#818cf8' }}>{line.replace('## ', '')}</h2>);
     } else if (line.startsWith('### ')) {
       elements.push(<h3 key={i} style={{ fontSize: '17px', fontWeight: 700, margin: '24px 0 8px', color: '#c4b5fd' }}>{line.replace('### ', '')}</h3>);
     } else if (line.startsWith('- ')) {
@@ -286,11 +286,11 @@ function renderContent(content: string) {
     } else if (line.startsWith('|')) {
       // skip table lines for simplicity
     } else if (line.startsWith('1. ') || line.match(/^\d+\. /)) {
-      elements.push(<li key={i} style={{ fontSize: '14px', opacity: 0.8, marginBottom: '6px', lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: line.replace(/^\d+\. /, '').replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#a5b4fc">$1</a>') }} />);
+      elements.push(<li key={i} style={{ fontSize: '14px', opacity: 0.8, marginBottom: '6px', lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: line.replace(/^\d+\. /, '').replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#818cf8">$1</a>') }} />);
     } else if (line.trim() === '') {
       elements.push(<br key={i} />);
     } else {
-      elements.push(<p key={i} style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '12px' }} dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#a5b4fc">$1</a>') }} />);
+      elements.push(<p key={i} style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '12px' }} dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#818cf8">$1</a>') }} />);
     }
     i++;
   }
@@ -310,11 +310,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       </nav>
       <div style={{ maxWidth: '760px', margin: '0 auto', padding: '48px 16px 24px' }}>
         <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
-          <Link href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</Link> {'→'}{' '}
-          <Link href="/blog" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Blog</Link> {'→'} {post.tag}
+          <Link href="/" style={{ color: '#818cf8', textDecoration: 'none' }}>Home</Link> {'→'}{' '}
+          <Link href="/blog" style={{ color: '#818cf8', textDecoration: 'none' }}>Blog</Link> {'→'} {post.tag}
         </div>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '16px' }}>
-          <span style={{ background: 'rgba(129,140,248,0.2)', color: '#a5b4fc', fontSize: '13px', fontWeight: 700, padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
+          <span style={{ background: 'rgba(129,140,248,0.2)', color: '#818cf8', fontSize: '13px', fontWeight: 700, padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
           <span style={{ fontSize: '13px', opacity: 0.4 }}>{post.date}</span>
         </div>
         <h1 style={{ fontSize: 'clamp(24px,3.5vw,38px)', fontWeight: 900, lineHeight: 1.25, marginBottom: '24px' }}>{post.title}</h1>

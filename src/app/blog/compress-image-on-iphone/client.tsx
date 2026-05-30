@@ -43,7 +43,7 @@ const schemaData = {
 
 export default function ClientPage() {
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
+    <div style={{ minHeight: '100vh', background: '#0f172a', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
 
@@ -62,13 +62,14 @@ export default function ClientPage() {
 
         {/* BREADCRUMB */}
         <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
-          <Link href="/blog" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Blog</Link> → Compress Images on Windows 11
+          <Link href="/blog" style={{ color: '#818cf8', textDecoration: 'none' }}>Blog</Link> → Compress Images on Windows 11
         </div>
 
         {/* HERO */}
         <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
           How to Compress Images on <span style={{ color: '#818cf8' }}>Windows 11</span> — Free, No Software Install
         </h1>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By Ethan Blake &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}><p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p></div><div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}><p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0}}>Key Takeaways</p><ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}><li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li><li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong></li><li>WebP saves <strong style={{color:'#fff'}}>25–50%</strong> vs JPEG at same quality</li><li>No file size limit, 100% free</li></ul></div>
         <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '8px' }}>
           Windows 11 has very limited built-in image compression tools. This guide covers the fastest methods to reduce image file size on any Windows PC — including a browser-based option that works in under 10 seconds without installing anything.
@@ -142,11 +143,14 @@ export default function ClientPage() {
         </div>
 
         {/* FAQ */}
+        <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
+          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#818cf8'}}>Google PageSpeed Insights</a>
+        </blockquote>
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — Compress Images on Windows 11</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
           {faq.map((item, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
-              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
+              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#818cf8' }}>Q: {item.q}</div>
               <div style={{ fontSize:'15px', opacity: 0.7 }}>{item.a}</div>
             </div>
           ))}
