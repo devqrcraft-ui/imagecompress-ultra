@@ -109,7 +109,7 @@ const schemaOrg = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" style={{overflowX:"hidden",maxWidth:"100vw"}}>
+    <html lang="en" suppressHydrationWarning style={{overflowX:"hidden",maxWidth:"100vw"}}>
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
