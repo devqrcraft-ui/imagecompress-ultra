@@ -5,7 +5,11 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/compress-for-[country]/', '/*.js$', '/*?*'],
+        disallow: ['/api/'],
+      },
+      {
+        userAgent: 'CCBot',
+        disallow: '/',
       },
     ],
     sitemap: 'https://www.compressto20kb.com/sitemap.xml',
