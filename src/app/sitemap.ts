@@ -126,6 +126,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/best-image-size-for-ebay-listings`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/compress-image-for-google-forms`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/compress-image-for-linkedin-profile`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/blog/compress-image-for-teams-meeting`, lastModified, changeFrequency: `monthly`, priority: 0.8 },
     { url: `${baseUrl}/blog/compress-image-for-microsoft-teams`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/compress-image-for-shopify-product-page`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog/compress-image-for-usps`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
