@@ -1,6 +1,19 @@
+import { writeFileSync, mkdirSync } from 'fs';
+
+const dir = 'C:/Users/RUSLAN/Desktop/imagecompress-ultra/src/app/blog/compress-image-for-teams-meeting';
+const path = dir + '/page.tsx';
+
+mkdirSync(dir, { recursive: true });
+
 const faqSchema = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Teams compress images in meetings?","acceptedAnswer":{"@type":"Answer","text":"Yes. Microsoft Teams compresses images shared during meetings and in chat. Screen shares are capped at 1080p and inline images are reduced to under 1MB. To share full-resolution images, attach them as files using the paperclip icon."}},{"@type":"Question","name":"What is the best image size for a Teams meeting?","acceptedAnswer":{"@type":"Answer","text":"For Teams meetings, compress images to under 500KB for instant loading. Presentation slides work best at 1920x1080px JPEG at 80% quality. Background images should be under 1MB at 1920x1080px."}},{"@type":"Question","name":"How do I compress an image for a Teams meeting for free?","acceptedAnswer":{"@type":"Answer","text":"Upload your image to compressto20kb.com, select Exact KB Mode, set 500KB as the target, choose JPEG, and download. No account required — compression happens in your browser in under 10 seconds."}},{"@type":"Question","name":"Why do images look blurry when shared in Teams meetings?","acceptedAnswer":{"@type":"Answer","text":"Teams applies automatic compression to images shared in meetings based on available bandwidth. To preserve quality, share images as file attachments or use screen share with HD enabled in meeting settings."}},{"@type":"Question","name":"What file formats does Teams support for meeting images?","acceptedAnswer":{"@type":"Answer","text":"Teams supports JPEG, PNG, GIF, WebP, BMP, and TIFF. JPEG is best for photos shared in meetings due to smallest file size. PNG works better for screenshots and slides with text."}},{"@type":"Question","name":"How do I send full-quality images in Teams?","acceptedAnswer":{"@type":"Answer","text":"Click the paperclip Attach icon in the chat panel and upload as a file instead of pasting inline. This bypasses automatic compression and sends the original file at full resolution."}},{"@type":"Question","name":"Does Teams reduce image quality on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Teams mobile app applies additional compression to reduce data usage. Images pasted inline on mobile are compressed more aggressively than on desktop. Use file attachments to preserve quality."}}]}';
+
 const breadcrumbSchema = '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Compress Image for Teams Meeting","item":"https://www.compressto20kb.com/blog/compress-image-for-teams-meeting"}]}';
+
 const blogSchema = '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Teams Meetings (2026) — Fix Blurry Shares","description":"Microsoft Teams compresses images shared in meetings. Learn exact size limits, how to send full-quality images in Teams, and compress any image in seconds.","url":"https://www.compressto20kb.com/blog/compress-image-for-teams-meeting","datePublished":"2026-06-02","dateModified":"2026-06-02","author":{"@type":"Person","name":"Ethan Blake","url":"https://medium.com/@dev.qrcraft"},"reviewedBy":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}';
+
+const tsx = `const faqSchema = '${faqSchema}';
+const breadcrumbSchema = '${breadcrumbSchema}';
+const blogSchema = '${blogSchema}';
 
 import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox';
@@ -27,9 +40,9 @@ export default function Page() {
       >
         <nav aria-label="breadcrumb" style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginBottom: 16 }}>
           <a href="/" style={{ color: 'rgba(255,255,255,0.55)', textDecoration: 'none' }}>Home</a>
-          {' › '}
+          {' \u203a '}
           <a href="/blog" style={{ color: 'rgba(255,255,255,0.55)', textDecoration: 'none' }}>Blog</a>
-          {' › '}
+          {' \u203a '}
           <span>Compress Image for Teams Meeting</span>
         </nav>
 
@@ -53,15 +66,6 @@ export default function Page() {
           </div>
         </section>
 
-
-          <img
-            src="/images/blog/compress.svg"
-            alt="compress image for teams meeting — compressto20kb.com"
-            width={800}
-            height={420}
-            style={{ width: '100%', height: 'auto', borderRadius: '8px', margin: '24px 0' }}
-            loading="lazy"
-          />
         <section id="key-takeaways">
           <div style={{ background: 'rgba(129,140,248,0.06)', border: '1px solid rgba(129,140,248,0.2)', borderRadius: 8, padding: '18px 22px', marginBottom: 28 }}>
             <div style={{ fontWeight: 800, color: '#818cf8', marginBottom: 10, fontSize: 13 }}>KEY TAKEAWAYS</div>
@@ -311,3 +315,8 @@ export default function Page() {
     </>
   );
 }
+`;
+
+writeFileSync(path, tsx, 'utf8');
+console.log('DONE:', path);
+console.log('Lines:', tsx.split('\n').length);

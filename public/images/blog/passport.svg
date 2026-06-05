@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+<rect width="800" height="420" fill="#0f172a"/>
+<rect x="240" y="50" width="320" height="320" rx="16" fill="#1e1b4b" stroke="#818cf8" stroke-width="1.5"/>
+<rect x="280" y="90" width="240" height="200" rx="8" fill="#2d2b55"/>
+<circle cx="400" cy="165" r="50" fill="#3d3b6e"/>
+<rect x="340" y="225" width="120" height="40" rx="4" fill="#3d3b6e"/>
+<text x="400" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#818cf8" font-weight="600">PASSPORT PHOTO</text>
+<text x="400" y="345" text-anchor="middle" font-family="monospace" font-size="18" fill="#e8edf8">2×2 inch · 600×600px</text>
+<rect x="590" y="150" width="150" height="36" rx="6" fill="#1e1b4b" stroke="#4ade80" stroke-width="1"/>
+<text x="665" y="173" text-anchor="middle" font-family="monospace" font-size="13" fill="#4ade80">≤ 50 KB ✓</text>
+<rect x="60" y="150" width="150" height="36" rx="6" fill="#1e1b4b" stroke="#818cf8" stroke-width="1"/>
+<text x="135" y="173" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#a5b4fc">USCIS / DS-160</text>
+<text x="400" y="395" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#6b7280">Compress passport photo to meet government requirements — Free</text>
+</svg>

@@ -51,6 +51,15 @@ export default function Page() {
           </div>
         </section>
 
+
+          <img
+            src="/images/blog/compress.svg"
+            alt="compress image for microsoft teams — compressto20kb.com"
+            width={800}
+            height={420}
+            style={{ width: '100%', height: 'auto', borderRadius: '8px', margin: '24px 0' }}
+            loading="lazy"
+          />
         <section id="key-takeaways">
           <div style={{ background: 'rgba(129,140,248,0.06)', border: '1px solid rgba(129,140,248,0.2)', borderRadius: 8, padding: '18px 22px', marginBottom: 28 }}>
             <div style={{ fontWeight: 800, color: '#818cf8', marginBottom: 10, fontSize: 13 }}>KEY TAKEAWAYS</div>
