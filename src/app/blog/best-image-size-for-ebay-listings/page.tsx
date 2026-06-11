@@ -37,6 +37,13 @@ export default function EbayImageSizePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"eBay Image Size Requirements 2026: 1600px, 12MB, JPEG","description":"Resize your eBay photos to exact 2026 specs in seconds — 1600px min, JPEG, under 12MB. Free tool, works in browser, no account needed.","url":"https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist","sameAs":"https://medium.com/@ethan.blake.compress"}}' }} />
 
       <h1 style={s.h1}>Best Image Size for eBay Listings 2026</h1>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+          <span>Last updated: June 2026</span>
+          <span>{'·'}</span>
+          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>{'·'}</span>
+          <span>{'~7 min read'}</span>
+        </div>
       <p style={s.lead}>
         eBay has strict image requirements — and getting them wrong means your listing won't show the zoom feature,
         loads slowly, or gets rejected. Here's exactly what you need, plus a free tool to fix your photos instantly.

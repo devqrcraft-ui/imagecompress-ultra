@@ -29,6 +29,13 @@ export default function DS160PhotoRequirements() {
         🇺🇸 US Visa · DS-160 Guide
       </div>
       <h1 className="text-4xl font-bold mb-4">DS-160 Photo Requirements 2025 — Complete Guide</h1>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+          <span>Last updated: June 2026</span>
+          <span>{'·'}</span>
+          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>{'·'}</span>
+          <span>{'~7 min read'}</span>
+        </div>
       <p className="text-slate-300 mb-8">Updated February 2026 · 8 min read</p>
 
       <p className="mb-6 text-lg">

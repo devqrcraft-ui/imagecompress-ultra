@@ -24,6 +24,13 @@ export default function CompressJpegUnder1mb() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress JPEG Under 1MB Free (Without Losing Quality)","item":"https://www.compressto20kb.com/blog/compress-jpeg-under-1mb"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress JPEG Under 1MB Free (Without Losing Quality)","description":"Step-by-step guide to compress any JPEG image under 1MB for free. Works in your browser, no upload needed, no quality loss.","url":"https://www.compressto20kb.com/blog/compress-jpeg-under-1mb","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist","sameAs":"https://medium.com/@ethan.blake.compress"}}' }} />
       <h1 className="text-4xl font-bold mb-4">How to Compress JPEG Under 1MB Free (Without Losing Quality)</h1>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+          <span>Last updated: June 2026</span>
+          <span>{'·'}</span>
+          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>{'·'}</span>
+          <span>{'~7 min read'}</span>
+        </div>
       <p className="text-slate-300 mb-8">Updated February 2026 · 7 min read</p>
 
       <p className="mb-6 text-lg">Need to get a JPEG file under 1MB? Whether it's for a website, email, job application, or government form — this guide shows you exactly how to do it in under 60 seconds, for free.</p>

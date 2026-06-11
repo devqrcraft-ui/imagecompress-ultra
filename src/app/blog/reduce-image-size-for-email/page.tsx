@@ -24,6 +24,13 @@ export default function ReduceImageSizeForEmail() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Reduce Image Size for Email Free (Gmail, Outlook, Yahoo)","item":"https://www.compressto20kb.com/blog/reduce-image-size-for-email"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Reduce Image Size for Email Free (Gmail, Outlook, Yahoo)","description":"Reduce photo size for email attachments in seconds. Free browser-based tool, no upload needed. Works for Gmail, Outlook, and Yahoo Mail.","url":"https://www.compressto20kb.com/blog/reduce-image-size-for-email","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist","sameAs":"https://medium.com/@ethan.blake.compress"}}' }} />
       <h1 className="text-4xl font-bold mb-4">How to Reduce Image Size for Email Free (Gmail, Outlook, Yahoo)</h1>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+          <span>Last updated: June 2026</span>
+          <span>{'·'}</span>
+          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>{'·'}</span>
+          <span>{'~7 min read'}</span>
+        </div>
       <p className="text-slate-300 mb-8">Updated February 2026 · 6 min read</p>
 
       <p className="mb-6 text-lg">Sending photos by email and hitting the attachment size limit? A single iPhone photo can be 8–12MB. Most email services cap attachments at 20–25MB total. Here's how to compress photos for email in seconds — free.</p>

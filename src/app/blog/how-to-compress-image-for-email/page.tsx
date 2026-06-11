@@ -23,6 +23,13 @@ export default function Page() {
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
         <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>Blog &rarr; Email</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>How to Compress Images for Email (Free, No Upload)</h1>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+          <span>Last updated: June 2026</span>
+          <span>{'·'}</span>
+          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>{'·'}</span>
+          <span>{'~7 min read'}</span>
+        </div>
         <img src="/images/blog/email.svg" alt="compress images for email — compressto20kb.com" width={800} height={420} style={{width:"100%",height:"auto",borderRadius:"8px",margin:"24px 0"}} loading="lazy" /><p style={{ opacity: 0.5, fontSize:'15px', marginBottom: '32px' }}>May 2026 &middot; 5 min read</p>
         <p style={{ fontSize: '16px', lineHeight: 1.8, opacity: 0.8, marginBottom: '24px' }}>Images from modern phones are 3-8MB - too large for fast email delivery. Gmail caps attachments at 25MB and Outlook at 20MB, but even a 5MB photo causes slow loading on mobile. Compressing images to under 1MB before sending keeps your emails fast and professional.</p>
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>Recommended Image Sizes for Email</h2>

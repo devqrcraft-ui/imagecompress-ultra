@@ -19,17 +19,6 @@ const faq = [
 
 
 const schemaData = {
-  blogPosting: {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.compressto20kb.com/blog/compress-image-to-30kb"},
-    "headline": "Image Compression Guide — compress image to 30kb",
-    "publisher": {"@type": "Organization", "name": "CompressTo20KB", "url": "https://www.compressto20kb.com"},
-    "author": {"@type": "Person", "name": "CompressTo20KB Team"},
-    "datePublished": "2026-01-01",
-    "dateModified": "2026-05-26",
-    "url": "https://www.compressto20kb.com/blog/compress-image-to-30kb"
-  },
   breadcrumb: {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -44,7 +33,7 @@ const schemaData = {
 export default function ClientPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#0f172a', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
+      
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
 
 

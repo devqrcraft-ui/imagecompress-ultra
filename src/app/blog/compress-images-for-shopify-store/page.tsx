@@ -23,6 +23,13 @@ export default function Page() {
             loading="lazy"
           />
           <h1 style={{fontSize:'32px',fontWeight:700,marginBottom:'16px',lineHeight:1.3}}>Compress Images for Shopify Store — Speed Up Your USA Sales</h1>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+          <span>Last updated: June 2026</span>
+          <span>{'·'}</span>
+          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>{'·'}</span>
+          <span>{'~7 min read'}</span>
+        </div>
       <p style={{fontSize:'16px',color:'rgba(255,255,255,0.9)',marginBottom:'32px',lineHeight:1.7}}>Page speed directly impacts your Shopify conversion rate. US shoppers abandon slow stores within 3 seconds. Compressing your product images is the fastest win for store speed.</p>
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
 

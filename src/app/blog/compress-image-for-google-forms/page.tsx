@@ -20,6 +20,13 @@ export default function Page() {
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
         <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>Blog → Google Forms</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>How to Compress Images for Google Forms</h1>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+          <span>Last updated: June 2026</span>
+          <span>{'·'}</span>
+          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>{'·'}</span>
+          <span>{'~7 min read'}</span>
+        </div>
         <p style={{ opacity: 0.5, fontSize:'15px', marginBottom: '32px' }}>February 2025 · 4 min read</p>
 
         <p style={{ fontSize: '16px', lineHeight: 1.8, opacity: 0.8, marginBottom: '24px' }}>Google Forms allows respondents to upload files up to 10MB per file. While that sounds generous, many users hit this limit when submitting photos taken on modern smartphones — which can easily be 5–15MB each. Compressing your images before submission keeps your forms fast and your Google Drive storage clean.</p>

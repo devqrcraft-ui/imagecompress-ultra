@@ -25,6 +25,13 @@ export default function FreeVsPaidCompressors() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Free vs Paid Image Compressors: What You Actually Need","item":"https://www.compressto20kb.com/blog/free-vs-paid-compressors"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Free vs Paid Image Compressors: What You Actually Need","description":"Honest comparison of free and paid image compression tools in 2026. What free tools offer and when paid plans make sense.","url":"https://www.compressto20kb.com/blog/free-vs-paid-compressors","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist","sameAs":"https://medium.com/@ethan.blake.compress"}}' }} />
       <h1 className="text-4xl font-bold mb-4">Free vs Paid Image Compressors: What You Actually Need</h1>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+          <span>Last updated: June 2026</span>
+          <span>{'·'}</span>
+          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>{'·'}</span>
+          <span>{'~7 min read'}</span>
+        </div>
       <p className="text-slate-300 mb-8">Updated February 2026 · 9 min read</p>
 
       <p className="mb-6 text-lg">The image compression market has dozens of tools. Here is an honest breakdown of what you get free versus paid — and when each makes sense.</p>

@@ -41,6 +41,13 @@ export default function H1BPage() {
           <Link href="/" className="hover:underline">Home</Link> / <Link href="/blog" className="hover:underline">Blog</Link> / <span>H1B Visa Photo Requirements</span>
         </nav>
         <h1 className="text-4xl font-bold mb-4">H1B Visa Photo Requirements 2025</h1>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+          <span>Last updated: June 2026</span>
+          <span>{'·'}</span>
+          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>{'·'}</span>
+          <span>{'~7 min read'}</span>
+        </div>
         <p className="text-slate-300 text-sm mb-8">Updated February 2026 · 5 min read</p>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">Getting your H1B visa photo wrong — wrong size, background, or file too large — is one of the most common causes of delays. This guide covers every requirement.</p>
 

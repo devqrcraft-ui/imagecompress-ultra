@@ -26,17 +26,6 @@ const faq=[
 ];
 
 const schemaData = {
-  blogPosting: {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.compressto20kb.com/blog/how-to-compress-image-for-uscis"},
-    "headline": "Image Compression Guide — how to compress image for uscis",
-    "publisher": {"@type": "Organization", "name": "CompressTo20KB", "url": "https://www.compressto20kb.com"},
-    "author": {"@type": "Person", "name": "CompressTo20KB Team"},
-    "datePublished": "2026-01-01",
-    "dateModified": "2026-05-26",
-    "url": "https://www.compressto20kb.com/blog/how-to-compress-image-for-uscis"
-  },
   breadcrumb: {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -51,7 +40,7 @@ const schemaData = {
 export default function ClientPage(){
   return(
     <div style={{minHeight:'100vh',background:'#0f172a',color:'white',fontFamily:'system-ui,sans-serif'}}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.blogPosting)}} />
+      
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
 
       <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
