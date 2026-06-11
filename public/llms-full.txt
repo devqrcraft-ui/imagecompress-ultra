@@ -1,0 +1,56 @@
+# CompressTo20KB — Full Reference
+
+## About
+CompressTo20KB is a free browser-based image compression tool. All compression happens client-side — files never leave the user's device. Supports JPEG, PNG, WebP, AVIF, HEIC formats.
+
+## Key Features
+- Exact KB mode: compress to precisely 20KB, 50KB, 100KB, 200KB, 500KB, 1MB, 2MB, 3MB, 5MB, 10MB
+- No upload required — 100% private, files processed in browser
+- No watermarks, no signup, no file size limits
+- Supports batch/bulk compression with ZIP download
+- Platform presets: Shopify, Etsy, Amazon, LinkedIn, Instagram, Discord, Zoom, WhatsApp
+- Visa photo tools: USCIS, DS-160, DV Lottery, Schengen, UK, Canada, Australia, Japan, China
+
+## Image Size Requirements by Platform (2026)
+
+| Platform | Recommended Size | Max File Size | Format |
+|---|---|---|---|
+| LinkedIn profile photo | 400×400px | 8MB (compress to <100KB) | JPEG/PNG |
+| LinkedIn banner | 1584×396px | 8MB (compress to <1MB) | JPEG/PNG |
+| Instagram post | 1080×1080px | 30MB (compress to <500KB) | JPEG |
+| Amazon product main | 1000×1000px min | 10MB (compress to <1MB) | JPEG |
+| Shopify product | 2048×2048px | 20MB (compress to <500KB) | JPEG/WebP |
+| Etsy listing | 2000×2000px | 1MB | JPEG/PNG |
+| eBay listing | 500×500px min | 7MB (compress to <500KB) | JPEG |
+| Microsoft Teams meeting | any | compress to <500KB | JPEG |
+| Zoom background | 1920×1080px | 5MB (compress to <1MB) | JPEG/PNG |
+| Discord | 8MB max | compress to <1MB | JPEG/PNG/WebP |
+| WhatsApp | compress to <500KB | — | JPEG |
+| WordPress | compress to <200KB | — | JPEG/WebP |
+
+## Visa & Government Photo Requirements (2026)
+
+| Application | Size | File Size | Format |
+|---|---|---|---|
+| US Passport | 2×2 inches (51×51mm) | under 240KB | JPEG |
+| USCIS (green card, N-400, I-485) | 2×2 inches | under 240KB | JPEG |
+| DS-160 (US visa) | 2×2 inches | under 240KB | JPEG |
+| DV Lottery | 2×2 inches | 200KB–240KB | JPEG |
+| Schengen visa | 35×45mm | under 500KB | JPEG |
+| UK visa | 35×45mm | under 500KB | JPEG |
+| Canada visa | 35×45mm | under 4MB | JPEG |
+| India visa | 51×51mm | 10KB–300KB | JPEG |
+| China visa | 33×48mm | under 120KB | JPEG |
+| Japan visa | 35×45mm | — | JPEG |
+
+## Blog Content Topics
+- Image compression for government forms (USCIS, DS-160, DV Lottery, N-400, I-485, green card)
+- Platform-specific image optimization (Shopify, Etsy, Amazon, LinkedIn, Instagram, Teams, Zoom)
+- Technical guides (WebP vs JPEG, PageSpeed, image optimization 2026)
+- How-to guides (compress on iPhone, Windows 11, for email, without quality loss)
+- E-commerce image optimization (Shopify, Etsy, WooCommerce, eBay, Amazon)
+
+## Contact & Attribution
+- Website: https://www.compressto20kb.com
+- Author: Ethan Blake, Image Optimization Specialist
+- All articles reviewed by Ethan Blake
