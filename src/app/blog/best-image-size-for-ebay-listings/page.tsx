@@ -4,8 +4,8 @@ import Link from 'next/link';
 import EbayInlineCalc from './EbayInlineCalc';
 
 export const metadata: Metadata = {
-  title: 'eBay Image Size Requirements 2026: 1600px, 12MB, JPEG — Free Tool',
-  description: 'Resize your eBay photos to exact 2026 specs in seconds — 1600px min, JPEG, under 12MB. Free tool, works in browser, no account needed.',
+  title: 'eBay Listing Image Size Requirements 2026: 1600px, 12MB, JPEG',
+  description: 'eBay listing image size 2026: minimum 1600px, JPEG, max 12MB. Free browser tool to resize & compress eBay photos instantly — no upload needed.',
   keywords: 'best image size for ebay, ebay listing photo size, compress image for ebay, ebay photo requirements, ebay product image size',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
   openGraph: { url: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
@@ -34,7 +34,7 @@ export default function EbayImageSizePage() {
       <div style={s.wrap}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"eBay Image Size Requirements 2026: 1600px, 12MB, JPEG","item":"https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"eBay Image Size Requirements 2026: 1600px, 12MB, JPEG","description":"Resize your eBay photos to exact 2026 specs in seconds — 1600px min, JPEG, under 12MB. Free tool, works in browser, no account needed.","url":"https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist","sameAs":"https://medium.com/@ethan.blake.compress"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"eBay Image Size Requirements 2026: 1600px, 12MB, JPEG","description":"Resize your eBay photos to exact 2026 specs in seconds — 1600px min, JPEG, under 12MB. Free tool, works in browser, no account needed.","url":"https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings","datePublished":"2026-01-01","dateModified":"2026-06-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist","sameAs":"https://medium.com/@ethan.blake.compress"}}' }} />
 
       <h1 style={s.h1}>Best Image Size for eBay Listings 2026</h1>
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
