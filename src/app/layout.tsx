@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: 'Compress images free online — JPG, PNG, WebP, AVIF, HEIC. Hit exact sizes: 20KB, 50KB, 100KB. No upload, no watermark, no signup. Files stay on your device. Faster than TinyPNG.',
   keywords: 'compress image to 20kb, compress image to 50kb, compress image to 100kb, compress image without uploading, compress image for shopify, compress image for etsy, compress image for amazon, compress image for instagram, compress passport photo, image compressor free, reduce image size online, compress jpg png webp free, heic to jpg converter',
   authors: [{ name: 'Ethan Blake' }],
+  publisher: 'CompressTo20KB',
   metadataBase: new URL('https://www.compressto20kb.com'),
   openGraph: {
     title: 'Compress Image Online — Free JPG, PNG, WebP, AVIF, HEIC (No Upload)',
@@ -107,6 +108,15 @@ const schemaOrg = {
 
 
 
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'CompressTo20KB',
+  url: 'https://www.compressto20kb.com',
+  logo: 'https://www.compressto20kb.com/og-image.png',
+  description: 'Free online image compressor. No upload, 100% private.',
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning style={{overflowX:"hidden",maxWidth:"100vw"}}>
@@ -141,7 +151,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <Footer />
       <Script src="/ai-chat-widget-final.js?v=4" strategy="lazyOnload" />        <Analytics />
-      </body>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+    </body>
     </html>
   );
 }
