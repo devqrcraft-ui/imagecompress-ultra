@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /ai-chat-widget.js
+Disallow: /*?*
 Disallow: /ai-chat-widget-final.js
 Sitemap: https://www.compressto20kb.com/sitemap.xml
 
