@@ -4,11 +4,15 @@ import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox';
 
 export const metadata: Metadata = {
-  title: 'Does Microsoft Teams Compress Images? Yes — Here Is the Fix (2026)',
-  description: 'Microsoft Teams automatically compresses inline chat images. Learn the exact size limits, how to send full-quality images, and how to compress images for Teams in seconds.',
+  title: 'Does Microsoft Teams Compress Images? Size Limit Is 4MB — Fix It Free',
+  description: 'Microsoft Teams compresses inline images over 4MB. Send full-quality files as attachments or compress to under 1MB in seconds. Free tool, no signup.',
+  keywords: 'compress image for microsoft teams, teams image size limit, microsoft teams photo compression, teams image quality',
+  authors: [{ name: 'Ethan Blake' }],
+  robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   keywords: 'compress image for microsoft teams, does teams compress images, teams image size limit, reduce image size for teams',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams' },
-  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams', title: 'Does Microsoft Teams Compress Images? Yes — Here Is the Fix (2026)' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams', siteName: 'CompressTo20KB', type: 'article', title: 'Does Microsoft Teams Compress Images? Size Limit Is 4MB — Fix It Free', images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630 }] },
+  twitter: { card: 'summary_large_image', site: '@compressto20kb', creator: '@compressto20kb', title: 'Microsoft Teams Image Size Limit Is 4MB — Fix Free', description: 'Compress images for Teams in seconds. Free, no signup.' },
 };
 
 export default function Page() {
