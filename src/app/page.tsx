@@ -265,7 +265,7 @@ export default function Page() {
         </section>
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Person","name":"Ethan Blake","jobTitle":"Tax Compliance Specialist","description":"Tax compliance specialist since 2017. Helped 5,000+ freelancers navigate IRS and HMRC rules.","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center","https://www.gov.uk/self-assessment-tax-returns"]}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Person","name":"Ethan Blake"}' }} />
       </div>
     </>
   );

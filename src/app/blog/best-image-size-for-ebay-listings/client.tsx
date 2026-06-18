@@ -5,7 +5,7 @@ const tips=[
   {n:'1',t:'Main image: 1600px minimum',d:'eBay requires at least 500px but recommends 1600px for zoom. Compress to under 1MB at 1600px for fast loading.'},
   {n:'2',t:'JPEG format for photos',d:'Use JPEG for product photos — smallest file size with best quality. PNG only if your product has transparent background.'},
   {n:'3',t:'White background for main image',d:'eBay search ranks listings with white background higher. Required for most categories.'},
-  {n:'4',t:'Under 7MB per image',d:'eBay accepts up to 7MB but images over 1MB slow down your listing page and hurt conversion rates.'},
+  {n:'4',t:'Under 12MB per image',d:'eBay accepts up to 12MB but images over 1MB slow down your listing page and hurt conversion rates.'},
   {n:'5',t:'12 photos maximum',d:'eBay allows up to 12 photos per listing. Use all 12 — listings with more photos rank higher in search.'},
 ];
 const faq=[
@@ -73,7 +73,7 @@ export default function ClientPage(){
         <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>eBay's search algorithm ranks listings with optimized images higher. The right image size, format and compression can directly increase your visibility and conversion rate.</p>
         <div style={{background:'rgba(234,88,12,0.08)',border:'1px solid rgba(234,88,12,0.2)',borderRadius:'12px',padding:'16px 20px',marginBottom:'32px'}}>
           <strong style={{color:'#fdba74'}}>📋 eBay Image Requirements:</strong>
-          <span style={{fontSize:'14px',opacity:0.85}}> 1600×1600 px recommended · JPEG or PNG · Under 7MB · White background for main image · Up to 12 photos</span>
+          <span style={{fontSize:'14px',opacity:0.85}}> 1600×1600 px recommended · JPEG or PNG · Under 12MB · White background for main image · Up to 12 photos</span>
         </div>
         <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
           "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#818cf8'}}>Google PageSpeed Insights</a>

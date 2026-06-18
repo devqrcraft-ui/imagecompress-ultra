@@ -24,11 +24,8 @@ export default function AuthorBox() {
         <div style={{fontWeight:700, color:'#c8d0e7', fontSize:15, marginBottom:2}} itemProp="name">
           Ethan Blake
         </div>
-        <div style={{fontSize:12, color:'rgba(255,255,255,0.5)', marginBottom:8}} itemProp="jobTitle">
-          Tax Compliance Specialist · Since 2017
-        </div>
         <p style={{margin:'0 0 10px', fontSize:13, color:'rgba(255,255,255,0.75)', lineHeight:1.7}} itemProp="description">
-          {'Helped 5,000+ freelancers navigate IRS rules. Specializes in gig economy and self-employed taxation.'}
+          {'Writes about image compression, file formats, and online tools for working with photos.'}
         </p>
         <div style={{display:'flex', gap:16, flexWrap:'wrap' as const}}>
           <a
@@ -39,14 +36,6 @@ export default function AuthorBox() {
             itemProp="url"
           >
             Medium Profile
-          </a>
-          <a
-            href="https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"
-            rel="nofollow"
-            target="_blank"
-            style={{fontSize:12, color:'rgba(255,255,255,0.5)', textDecoration:'none'}}
-          >
-            IRS.gov Source
           </a>
           <a
             href="/blog"
