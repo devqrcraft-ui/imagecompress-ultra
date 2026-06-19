@@ -27,7 +27,7 @@ export default function ReduceImageSizeForEmail() {
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
-          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>By Ethan Blake</span>
           <span>{'·'}</span>
           <span>{'~7 min read'}</span>
         </div>

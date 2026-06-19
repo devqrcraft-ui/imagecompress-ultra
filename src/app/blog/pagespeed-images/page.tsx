@@ -26,12 +26,12 @@ export default function PageSpeedImages() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Fix Image Issues in Google PageSpeed Insights","item":"https://www.compressto20kb.com/blog/pagespeed-images"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Fix Image Issues in Google PageSpeed Insights","description":"Step-by-step guide to resolve all PageSpeed image warnings: serve next-gen formats, properly size images, defer offscreen images.","url":"https://www.compressto20kb.com/blog/pagespeed-images","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist","sameAs":["https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"]},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Person","name":"Ethan Blake","jobTitle":"Image Optimization Specialist","sameAs":"https://medium.com/@ethan.blake.compress"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Fix Image Issues in Google PageSpeed Insights","description":"Step-by-step guide to resolve all PageSpeed image warnings: serve next-gen formats, properly size images, defer offscreen images.","url":"https://www.compressto20kb.com/blog/pagespeed-images","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Person","name":"Ethan Blake","url":"https://medium.com/@dev.qrcraft"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Person","name":"Ethan Blake"}}' }} />
       <h1 className="text-4xl font-bold mb-4">Fix Image Issues in Google PageSpeed Insights</h1>
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
-          <span>By Ethan Blake · Image Optimization Specialist</span>
+          <span>By Ethan Blake</span>
           <span>{'·'}</span>
           <span>{'~7 min read'}</span>
         </div>
