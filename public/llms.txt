@@ -2,123 +2,123 @@
 > Free online image compressor. Compress JPEG, PNG, WebP, AVIF, HEIC to exact KB sizes — 20KB, 50KB, 100KB. No upload, 100% private. Specialized tools for visa photos, passport photos, and platform-specific compression (Shopify, Etsy, Amazon, LinkedIn, Instagram).
 
 ## Core Tools
-- / : Free image compressor — compress to any size, no upload required
-- /compress-to-20kb : Compress image to 20KB free online
-- /compress-to-30kb : Compress image to 30KB free online
-- /compress-to-50kb : Compress image to 50KB free online
-- /compress-to-100kb : Compress image to 100KB free online
-- /compress-to-200kb : Compress image to 200KB free online
-- /compress-to-500kb : Compress image to 500KB free online
-- /compress-to-1mb : Compress image to 1MB free online
-- /compress-to-2mb : Compress image to 2MB free online
-- /compress-to-3mb : Compress image to 3MB free online
-- /compress-to-5mb : Compress image to 5MB free online
-- /compress-to-10mb : Compress image to 10MB free online
-- /bulk-image-compressor : Compress multiple images at once free
-- /batch-image-compressor-zip : Batch compress images and download as ZIP
-- /compress-without-uploading : Compress images without uploading to server
-- /image-size-checker-online : Check image file size online free
-- /dpi-converter : Convert image DPI online free
-- /jpg-to-png : Convert JPG to PNG free online
-- /png-to-jpg : Convert PNG to JPG free online
-- /jpg-to-word : Convert JPG to Word document free
-- /convert-image-to-pdf : Convert image to PDF free online
+- https://www.compressto20kb.com/ : Free image compressor — compress to any size, no upload required
+- https://www.compressto20kb.com/compress-to-20kb : Compress image to 20KB free online
+- https://www.compressto20kb.com/compress-to-30kb : Compress image to 30KB free online
+- https://www.compressto20kb.com/compress-to-50kb : Compress image to 50KB free online
+- https://www.compressto20kb.com/compress-to-100kb : Compress image to 100KB free online
+- https://www.compressto20kb.com/compress-to-200kb : Compress image to 200KB free online
+- https://www.compressto20kb.com/compress-to-500kb : Compress image to 500KB free online
+- https://www.compressto20kb.com/compress-to-1mb : Compress image to 1MB free online
+- https://www.compressto20kb.com/compress-to-2mb : Compress image to 2MB free online
+- https://www.compressto20kb.com/compress-to-3mb : Compress image to 3MB free online
+- https://www.compressto20kb.com/compress-to-5mb : Compress image to 5MB free online
+- https://www.compressto20kb.com/compress-to-10mb : Compress image to 10MB free online
+- https://www.compressto20kb.com/bulk-image-compressor : Compress multiple images at once free
+- https://www.compressto20kb.com/batch-image-compressor-zip : Batch compress images and download as ZIP
+- https://www.compressto20kb.com/compress-without-uploading : Compress images without uploading to server
+- https://www.compressto20kb.com/image-size-checker-online : Check image file size online free
+- https://www.compressto20kb.com/dpi-converter : Convert image DPI online free
+- https://www.compressto20kb.com/jpg-to-png : Convert JPG to PNG free online
+- https://www.compressto20kb.com/png-to-jpg : Convert PNG to JPG free online
+- https://www.compressto20kb.com/jpg-to-word : Convert JPG to Word document free
+- https://www.compressto20kb.com/convert-image-to-pdf : Convert image to PDF free online
 
 ## Visa & Passport Photo Tools
-- /visa-photo-compressor : Compress visa photos to exact requirements
-- /compress-passport-photo-usa : Compress US passport photo to 2x2 inches under 240KB
-- /compress-passport-photo : Compress passport photo to any country standard
-- /compress-image-for-visa : Compress image for visa application
-- /compress-for-uscis : Compress photos for USCIS applications
-- /compress-for-uscis-n400 : Compress photos for USCIS N-400 form
-- /compress-for-green-card : Compress photos for green card application
-- /compress-for-global-entry : Compress photos for Global Entry
-- /compress-for-real-id : Compress photos for REAL ID
-- /compress-for-tsa-precheck : Compress photos for TSA PreCheck
-- /compress-for-passport-renewal : Compress photos for passport renewal
-- /compress-for-social-security : Compress photos for Social Security
-- /compress-for-i485 : Compress photos for Form I-485
-- /compress-for-n400 : Compress photos for Form N-400
-- /compress-for-f1-visa : Compress photos for F-1 student visa
-- /compress-for-ds160 : Compress photos for DS-160 visa application
-- /compress-for-dv-lottery : Compress photos for DV Lottery
-- /compress-for-gmat-registration : Compress photos for GMAT registration
-- /compress-for-gre-registration : Compress photos for GRE registration
-- /compress-for-sat-registration : Compress photos for SAT registration
-- /compress-for-resume-photo : Compress resume/CV photo
+- https://www.compressto20kb.com/visa-photo-compressor : Compress visa photos to exact requirements
+- https://www.compressto20kb.com/compress-passport-photo-usa : Compress US passport photo to 2x2 inches under 240KB
+- https://www.compressto20kb.com/compress-passport-photo : Compress passport photo to any country standard
+- https://www.compressto20kb.com/compress-image-for-visa : Compress image for visa application
+- https://www.compressto20kb.com/compress-for-uscis : Compress photos for USCIS applications
+- https://www.compressto20kb.com/compress-for-uscis-n400 : Compress photos for USCIS N-400 form
+- https://www.compressto20kb.com/compress-for-green-card : Compress photos for green card application
+- https://www.compressto20kb.com/compress-for-global-entry : Compress photos for Global Entry
+- https://www.compressto20kb.com/compress-for-real-id : Compress photos for REAL ID
+- https://www.compressto20kb.com/compress-for-tsa-precheck : Compress photos for TSA PreCheck
+- https://www.compressto20kb.com/compress-for-passport-renewal : Compress photos for passport renewal
+- https://www.compressto20kb.com/compress-for-social-security : Compress photos for Social Security
+- https://www.compressto20kb.com/compress-for-i485 : Compress photos for Form I-485
+- https://www.compressto20kb.com/compress-for-n400 : Compress photos for Form N-400
+- https://www.compressto20kb.com/compress-for-f1-visa : Compress photos for F-1 student visa
+- https://www.compressto20kb.com/compress-for-ds160 : Compress photos for DS-160 visa application
+- https://www.compressto20kb.com/compress-for-dv-lottery : Compress photos for DV Lottery
+- https://www.compressto20kb.com/compress-for-gmat-registration : Compress photos for GMAT registration
+- https://www.compressto20kb.com/compress-for-gre-registration : Compress photos for GRE registration
+- https://www.compressto20kb.com/compress-for-sat-registration : Compress photos for SAT registration
+- https://www.compressto20kb.com/compress-for-resume-photo : Compress resume/CV photo
 
 ## Platform-Specific Tools
-- /compress-for-shopify : Compress images for Shopify store
-- /compress-for-etsy : Compress images for Etsy listings
-- /compress-for-amazon : Compress images for Amazon product listings
-- /compress-for-instagram : Compress images for Instagram
-- /compress-for-linkedin : Compress images for LinkedIn
-- /compress-for-twitter : Compress images for Twitter/X
-- /compress-for-pinterest : Compress images for Pinterest
-- /compress-for-whatsapp : Compress images for WhatsApp
-- /compress-for-discord : Compress images for Discord
-- /compress-for-zoom : Compress images for Zoom meetings
-- /compress-for-google-classroom : Compress images for Google Classroom
-- /compress-for-canva : Compress images for Canva
-- /compress-for-wordpress : Compress images for WordPress
-- /compress-for-woocommerce : Compress images for WooCommerce
-- /compress-for-squarespace : Compress images for Squarespace
-- /compress-for-fiverr : Compress images for Fiverr profile
-- /compress-for-upwork : Compress images for Upwork profile
-- /compress-for-upwork-profile : Compress Upwork profile photo
-- /compress-for-indeed : Compress images for Indeed
-- /compress-for-greenhouse : Compress images for Greenhouse ATS
-- /compress-for-workday : Compress images for Workday
-- /compress-for-ebay : Compress images for eBay listings
-- /compress-for-email : Compress images for email
-- /compress-for-common-app : Compress photos for Common App
+- https://www.compressto20kb.com/compress-for-shopify : Compress images for Shopify store
+- https://www.compressto20kb.com/compress-for-etsy : Compress images for Etsy listings
+- https://www.compressto20kb.com/compress-for-amazon : Compress images for Amazon product listings
+- https://www.compressto20kb.com/compress-for-instagram : Compress images for Instagram
+- https://www.compressto20kb.com/compress-for-linkedin : Compress images for LinkedIn
+- https://www.compressto20kb.com/compress-for-twitter : Compress images for Twitter/X
+- https://www.compressto20kb.com/compress-for-pinterest : Compress images for Pinterest
+- https://www.compressto20kb.com/compress-for-whatsapp : Compress images for WhatsApp
+- https://www.compressto20kb.com/compress-for-discord : Compress images for Discord
+- https://www.compressto20kb.com/compress-for-zoom : Compress images for Zoom meetings
+- https://www.compressto20kb.com/compress-for-google-classroom : Compress images for Google Classroom
+- https://www.compressto20kb.com/compress-for-canva : Compress images for Canva
+- https://www.compressto20kb.com/compress-for-wordpress : Compress images for WordPress
+- https://www.compressto20kb.com/compress-for-woocommerce : Compress images for WooCommerce
+- https://www.compressto20kb.com/compress-for-squarespace : Compress images for Squarespace
+- https://www.compressto20kb.com/compress-for-fiverr : Compress images for Fiverr profile
+- https://www.compressto20kb.com/compress-for-upwork : Compress images for Upwork profile
+- https://www.compressto20kb.com/compress-for-upwork-profile : Compress Upwork profile photo
+- https://www.compressto20kb.com/compress-for-indeed : Compress images for Indeed
+- https://www.compressto20kb.com/compress-for-greenhouse : Compress images for Greenhouse ATS
+- https://www.compressto20kb.com/compress-for-workday : Compress images for Workday
+- https://www.compressto20kb.com/compress-for-ebay : Compress images for eBay listings
+- https://www.compressto20kb.com/compress-for-email : Compress images for email
+- https://www.compressto20kb.com/compress-for-common-app : Compress photos for Common App
 
 ## Country Visa Photo Tools
-- /compress-for-schengen-visa : Schengen visa photo — 35x45mm under 500KB
-- /compress-for-uk-visa : UK visa photo — 35x45mm under 500KB
-- /compress-for-canada-visa : Canada visa photo requirements
-- /compress-for-australia-visa : Australia visa photo requirements
-- /compress-for-india-visa : India visa photo requirements
-- /compress-for-china-visa : China visa photo requirements
-- /compress-for-japan-visa : Japan visa photo requirements
-- /compress-for-germany-visa : Germany visa photo requirements
-- /compress-for-france-visa : France visa photo requirements
-- /compress-for-italy-visa : Italy visa photo requirements
+- https://www.compressto20kb.com/compress-for-schengen-visa : Schengen visa photo — 35x45mm under 500KB
+- https://www.compressto20kb.com/compress-for-uk-visa : UK visa photo — 35x45mm under 500KB
+- https://www.compressto20kb.com/compress-for-canada-visa : Canada visa photo requirements
+- https://www.compressto20kb.com/compress-for-australia-visa : Australia visa photo requirements
+- https://www.compressto20kb.com/compress-for-india-visa : India visa photo requirements
+- https://www.compressto20kb.com/compress-for-china-visa : China visa photo requirements
+- https://www.compressto20kb.com/compress-for-japan-visa : Japan visa photo requirements
+- https://www.compressto20kb.com/compress-for-germany-visa : Germany visa photo requirements
+- https://www.compressto20kb.com/compress-for-france-visa : France visa photo requirements
+- https://www.compressto20kb.com/compress-for-italy-visa : Italy visa photo requirements
 
 ## Blog Articles
-- /blog/compress-image-for-teams-meeting : Compress images for Microsoft Teams — under 500KB
-- /blog/compress-image-for-linkedin-profile : LinkedIn profile photo — under 100KB at 400x400px
-- /blog/compress-image-for-shopify-product-page : Shopify product images — under 500KB
-- /blog/compress-images-for-amazon-seller : Amazon product images — under 1MB
-- /blog/compress-images-for-etsy-listings : Etsy listing photos — under 1MB
-- /blog/compress-images-for-shopify-store : Shopify store images guide
-- /blog/compress-image-for-google-forms : Google Forms image size limits
-- /blog/compress-image-for-usps : USPS shipping label image requirements
-- /blog/compress-image-on-iphone : How to compress images on iPhone free
-- /blog/compress-image-on-windows-11 : How to compress images on Windows 11
-- /blog/compress-image-to-30kb : How to compress image to 30KB
-- /blog/compress-image-without-losing-quality : Compress images without quality loss
-- /blog/compress-jpeg-under-1mb : Compress JPEG under 1MB free
-- /blog/compress-passport-photo-to-50kb : Compress passport photo to 50KB
-- /blog/ds-160-photo-requirements : DS-160 visa photo requirements 2026
-- /blog/dv-lottery-photo-requirements : DV Lottery photo requirements 2026
-- /blog/h1b-visa-photo-requirements : H1B visa photo requirements 2026
-- /blog/how-to-compress-image-for-email : Compress images for email — under 1MB
-- /blog/how-to-compress-image-for-uscis : USCIS photo requirements — under 240KB
-- /blog/how-to-compress-images-for-woocommerce : WooCommerce image optimization
-- /blog/how-to-compress-photo-for-ds160 : DS-160 photo compression guide
-- /blog/image-size-requirements-for-green-card : Green card photo size requirements
-- /blog/us-passport-photo-requirements : US passport photo requirements 2026 — 2x2 inches, under 240KB
-- /blog/uscis-photo-size-requirements : USCIS photo size requirements 2026
-- /blog/image-optimization-2026 : Image optimization guide 2026
-- /blog/ecommerce-image-optimization : E-commerce image optimization guide
-- /blog/pagespeed-images : PageSpeed image optimization guide
-- /blog/best-image-formats : Best image formats for web 2026
-- /blog/best-image-size-for-ebay-listings : eBay listing image size guide
-- /blog/best-image-compressor-for-mac : Best image compressors for Mac 2026
-- /blog/best-free-image-compressor-for-small-business-usa : Best free image compressors for US small businesses
-- /blog/free-vs-paid-compressors : Free vs paid image compressors comparison
-- /blog/webp-vs-jpeg-2026 : WebP vs JPEG 2026 — which is better?
-- /blog/reduce-image-size-for-email : Reduce image size for email attachments
-- /blog/reduce-image-size-for-government-forms-usa : Reduce image size for US government forms
-- /blog/image-size-for-amazon-product-listing : Amazon product image size guide
+- https://www.compressto20kb.com/blog/compress-image-for-teams-meeting : Compress images for Microsoft Teams — under 500KB
+- https://www.compressto20kb.com/blog/compress-image-for-linkedin-profile : LinkedIn profile photo — under 100KB at 400x400px
+- https://www.compressto20kb.com/blog/compress-image-for-shopify-product-page : Shopify product images — under 500KB
+- https://www.compressto20kb.com/blog/compress-images-for-amazon-seller : Amazon product images — under 1MB
+- https://www.compressto20kb.com/blog/compress-images-for-etsy-listings : Etsy listing photos — under 1MB
+- https://www.compressto20kb.com/blog/compress-images-for-shopify-store : Shopify store images guide
+- https://www.compressto20kb.com/blog/compress-image-for-google-forms : Google Forms image size limits
+- https://www.compressto20kb.com/blog/compress-image-for-usps : USPS shipping label image requirements
+- https://www.compressto20kb.com/blog/compress-image-on-iphone : How to compress images on iPhone free
+- https://www.compressto20kb.com/blog/compress-image-on-windows-11 : How to compress images on Windows 11
+- https://www.compressto20kb.com/blog/compress-image-to-30kb : How to compress image to 30KB
+- https://www.compressto20kb.com/blog/compress-image-without-losing-quality : Compress images without quality loss
+- https://www.compressto20kb.com/blog/compress-jpeg-under-1mb : Compress JPEG under 1MB free
+- https://www.compressto20kb.com/blog/compress-passport-photo-to-50kb : Compress passport photo to 50KB
+- https://www.compressto20kb.com/blog/ds-160-photo-requirements : DS-160 visa photo requirements 2026
+- https://www.compressto20kb.com/blog/dv-lottery-photo-requirements : DV Lottery photo requirements 2026
+- https://www.compressto20kb.com/blog/h1b-visa-photo-requirements : H1B visa photo requirements 2026
+- https://www.compressto20kb.com/blog/how-to-compress-image-for-email : Compress images for email — under 1MB
+- https://www.compressto20kb.com/blog/how-to-compress-image-for-uscis : USCIS photo requirements — under 240KB
+- https://www.compressto20kb.com/blog/how-to-compress-images-for-woocommerce : WooCommerce image optimization
+- https://www.compressto20kb.com/blog/how-to-compress-photo-for-ds160 : DS-160 photo compression guide
+- https://www.compressto20kb.com/blog/image-size-requirements-for-green-card : Green card photo size requirements
+- https://www.compressto20kb.com/blog/us-passport-photo-requirements : US passport photo requirements 2026 — 2x2 inches, under 240KB
+- https://www.compressto20kb.com/blog/uscis-photo-size-requirements : USCIS photo size requirements 2026
+- https://www.compressto20kb.com/blog/image-optimization-2026 : Image optimization guide 2026
+- https://www.compressto20kb.com/blog/ecommerce-image-optimization : E-commerce image optimization guide
+- https://www.compressto20kb.com/blog/pagespeed-images : PageSpeed image optimization guide
+- https://www.compressto20kb.com/blog/best-image-formats : Best image formats for web 2026
+- https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings : eBay listing image size guide
+- https://www.compressto20kb.com/blog/best-image-compressor-for-mac : Best image compressors for Mac 2026
+- https://www.compressto20kb.com/blog/best-free-image-compressor-for-small-business-usa : Best free image compressors for US small businesses
+- https://www.compressto20kb.com/blog/free-vs-paid-compressors : Free vs paid image compressors comparison
+- https://www.compressto20kb.com/blog/webp-vs-jpeg-2026 : WebP vs JPEG 2026 — which is better?
+- https://www.compressto20kb.com/blog/reduce-image-size-for-email : Reduce image size for email attachments
+- https://www.compressto20kb.com/blog/reduce-image-size-for-government-forms-usa : Reduce image size for US government forms
+- https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing : Amazon product image size guide
