@@ -5,7 +5,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.compressto20kb.com';
   const lastModified = new Date();
 
-  const visaPages = VISA_COUNTRIES.map(c => ({
+  const KEPT_VISA_SLUGS = ['afghanistan-visa','brazil-visa','egypt-visa','ethiopia-visa','ghana-visa','iran-visa','new-zealand-visa','pakistan-visa','poland-visa','portugal-visa','thailand-visa','turkey-visa','ukraine-visa'];
+  const visaPages = VISA_COUNTRIES.filter(c => KEPT_VISA_SLUGS.includes(c.slug)).map(c => ({
     url: `${baseUrl}/compress-for-${c.slug}`,
     lastModified,
     changeFrequency: 'monthly' as const,
