@@ -265,7 +265,7 @@ export default function Page() {
         </section>
 
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Person","name":"Ethan Blake"}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}' }} />
       </div>
     </>
   );
