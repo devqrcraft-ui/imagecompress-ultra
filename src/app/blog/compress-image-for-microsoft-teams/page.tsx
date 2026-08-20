@@ -6,7 +6,7 @@ import AuthorBox from '@/app/components/AuthorBox';
 export const metadata: Metadata = {
   title: 'Does Microsoft Teams Compress Images? Size Limit Is 4MB — Fix It Free',
   description: 'Microsoft Teams compresses inline images over 4MB. Send full-quality files as attachments or compress to under 1MB in seconds. Free tool, no signup.',
-  authors: [{ name: 'Ethan Blake' }],
+  authors: [{ name: 'the CompressTo20KB Team' }],
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   keywords: 'compress image for microsoft teams, does teams compress images, teams image size limit, reduce image size for teams',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams' },
@@ -41,7 +41,7 @@ export default function Page() {
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: May 2026</span>
           <span>·</span>
-          <span>By Ethan Blake</span>
+          <span>By the CompressTo20KB Team</span>
           <span>·</span>
           <span>{'~9 min read · 2,300 words'}</span>
         </div>

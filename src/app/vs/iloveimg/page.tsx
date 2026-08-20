@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'CompressTo20KB vs iLoveIMG 2026 — Privacy, Exact KB & Gov Presets',
   description: 'iLoveIMG uploads your files to cloud servers and cannot target exact KB. CompressTo20KB: 100% browser, Exact KB Mode, USCIS preset, free. Full 2026 comparison.',
   keywords: 'compressto20kb vs iloveimg, iloveimg alternative, iloveimg no upload, compress image exact kb, iloveimg privacy, iloveimg uscis photo',
-  authors: [{ name: 'Ethan Blake' }],
+  authors: [{ name: 'the CompressTo20KB Team' }],
   alternates: { canonical: 'https://www.compressto20kb.com/vs/iloveimg' },
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   openGraph: {
@@ -86,9 +86,7 @@ export default function VsILoveIMG() {
         <div style={S.meta}>
           <span>Last updated: June 2026</span>
           <span>·</span>
-          <span itemProp="author" itemScope itemType="https://schema.org/Person">
-            By <span itemProp="name">Ethan Blake</span>
-          </span>
+          <span>By the CompressTo20KB Team</span>
           <span>·</span>
           <span>~5 min read</span>
         </div>

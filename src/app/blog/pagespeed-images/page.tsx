@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Fix PageSpeed Image Warnings 2026 — Score 90+ in 5 Steps",
   description: "Fix all Google PageSpeed image warnings: serve WebP/AVIF, properly size images, lazy-load offscreen, compress under 100KB. Free tool included.",
   keywords: 'fix pagespeed image warnings, google pagespeed images, serve next gen formats, compress images for pagespeed, pagespeed insights images 2026',
-  authors: [{ name: 'Ethan Blake' }],
+  authors: [{ name: 'the CompressTo20KB Team' }],
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   openGraph: {
     title: "Fix Image Issues in Google PageSpeed Insights",
@@ -31,7 +31,7 @@ export default function PageSpeedImages() {
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
-          <span>By Ethan Blake</span>
+          <span>By the CompressTo20KB Team</span>
           <span>{'·'}</span>
           <span>{'~7 min read'}</span>
         </div>

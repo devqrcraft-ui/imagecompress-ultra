@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'CompressTo20KB vs Squoosh 2026 — Bulk, Exact KB & USCIS Presets',
   description: 'Squoosh (Google) compresses 1 image at a time, no exact KB mode. CompressTo20KB: bulk 50 images, Exact KB Mode, USCIS/DS-160 preset, 100% browser. 2026 comparison.',
   keywords: 'compressto20kb vs squoosh, squoosh alternative, squoosh bulk compression, squoosh exact kb, squoosh uscis photo, better than squoosh 2026',
-  authors: [{ name: 'Ethan Blake' }],
+  authors: [{ name: 'the CompressTo20KB Team' }],
   alternates: { canonical: 'https://www.compressto20kb.com/vs/squoosh' },
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   openGraph: {
@@ -86,9 +86,7 @@ export default function VsSquoosh() {
         <div style={S.meta}>
           <span>Last updated: June 2026</span>
           <span>·</span>
-          <span itemProp="author" itemScope itemType="https://schema.org/Person">
-            By <span itemProp="name">Ethan Blake</span>
-          </span>
+          <span>By the CompressTo20KB Team</span>
           <span>·</span>
           <span>~5 min read</span>
         </div>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: 'Microsoft Teams compresses images to under 1MB. Learn exact size limits, 3 ways to send full-quality images in Teams, and compress any image to 500KB in 10 seconds.',
   keywords: 'compress image for teams meeting, does teams compress images in meetings, teams meeting image quality, teams image size limit 2026, reduce image size for microsoft teams',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-for-teams-meeting' },
-  authors: [{ name: 'Ethan Blake' }],
+  authors: [{ name: 'the CompressTo20KB Team' }],
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   openGraph: {
     url: 'https://www.compressto20kb.com/blog/compress-image-for-teams-meeting',
@@ -101,9 +101,7 @@ export default function Page() {
         <div style={s.meta}>
           <span>Last updated: June 2026</span>
           <span>·</span>
-          <span itemProp="author" itemScope itemType="https://schema.org/Person">
-            By <span itemProp="name">Ethan Blake</span>
-          </span>
+          <span>By the CompressTo20KB Team</span>
           <span>·</span>
           <span>~6 min read · 1,850 words</span>
         </div>
