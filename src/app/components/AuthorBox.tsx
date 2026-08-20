@@ -2,46 +2,36 @@
 export default function AuthorBox() {
   return (
     <div
-      itemScope
-      itemType="https://schema.org/Person"
       style={{
         display:'flex', alignItems:'flex-start', gap:16,
-        background:'rgba(129,140,248,0.06)',
-        border:'1px solid rgba(129,140,248,0.2)',
+        background:'rgba(120,160,255,0.06)',
+        border:'1px solid rgba(120,160,255,0.2)',
         borderRadius:10, padding:'20px 24px', marginTop:32
       }}
     >
       <div style={{
         width:52, height:52, borderRadius:'50%', flexShrink:0,
-        background:'rgba(129,140,248,0.15)',
+        background:'rgba(120,160,255,0.15)',
         display:'flex', alignItems:'center', justifyContent:'center',
-        fontWeight:800, fontSize:18, color:'#818cf8'
-      }}>EB</div>
+        fontWeight:800, fontSize:18, color:'#78A0FF'
+      }}>C2</div>
       <div>
-        <div style={{fontSize:11, fontWeight:600, color:'rgba(200,208,231,0.6)', textTransform:'uppercase' as const, letterSpacing:'0.08em', marginBottom:4}}>
-          Written & reviewed by
+        <div style={{fontSize:11, fontWeight:600, color:'rgba(255,255,255,0.6)', textTransform:'uppercase' as const, letterSpacing:'0.08em', marginBottom:4}}>
+          Written by
         </div>
-        <div style={{fontWeight:700, color:'#c8d0e7', fontSize:15, marginBottom:2}} itemProp="name">
-          Ethan Blake
+        <div style={{fontWeight:700, color:'#fff', fontSize:15, marginBottom:2}}>
+          the CompressTo20KB Team
         </div>
-        <p style={{margin:'0 0 10px', fontSize:13, color:'rgba(255,255,255,0.75)', lineHeight:1.7}} itemProp="description">
-          {'Writes about image compression, file formats, and online tools for working with photos.'}
+        <p style={{margin:'0 0 10px', fontSize:13, color:'rgba(255,255,255,0.75)', lineHeight:1.7}}>
+          {'We build tools and guides for compressing images to exact file-size targets for government forms, visas, and everyday use.'}
         </p>
         <div style={{display:'flex', gap:16, flexWrap:'wrap' as const}}>
-          <a
-            href="https://medium.com/@dev.qrcraft"
-            rel="nofollow"
-            target="_blank"
-            style={{fontSize:12, color:'#818cf8', textDecoration:'none'}}
-            itemProp="url"
-          >
-            Medium Profile
-          </a>
+          
           <a
             href="/blog"
             style={{fontSize:12, color:'rgba(255,255,255,0.5)', textDecoration:'none'}}
           >
-            All articles by Ethan Blake →
+            All articles →
           </a>
         </div>
       </div>
