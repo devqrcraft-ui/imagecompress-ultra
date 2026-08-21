@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [
+      { url: `https://www.compressto20kb.com/compress-for-shopify`, lastModified: new Date( ) },
+      { url: `https://www.compressto20kb.com/compress-for-dv-lottery-2026`, lastModified: new Date( ) },
     { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${baseUrl}/visa-photo-compressor`, lastModified, changeFrequency: 'monthly', priority: 0.95 },
     { url: `${baseUrl}/compress-to-20kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
