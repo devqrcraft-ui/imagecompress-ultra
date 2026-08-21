@@ -1,30 +1,81 @@
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { VISA_COUNTRIES } from '@/lib/visaCountries';
+import CountryClient from './client';
 
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the photo requirements for a visa application?","acceptedAnswer":{"@type":"Answer","text":"Most visa applications require a JPEG photo under 240KB, at least 600x600px, with a plain white or off-white background, taken within the last 6 months. Always check the official embassy or consulate website for exact requirements for your destination country."}},{"@type":"Question","name":"How do I compress a visa photo to the required size?","acceptedAnswer":{"@type":"Answer","text":"Upload your photo, switch to Exact KB Mode, type your target size (e.g. 200 for 200KB), select JPEG format, and click Compress. All processing runs in your browser — your photo is never uploaded to any server, keeping it safe and private."}},{"@type":"Question","name":"What file size is required for visa application photos?","acceptedAnswer":{"@type":"Answer","text":"File size requirements vary by country. The US visa (DS-160) requires under 240KB. The UK visa requires under 6MB. Schengen visa applications typically require under 2MB. Use Exact KB Mode to hit any specific target precisely."}},{"@type":"Question","name":"Is it safe to compress passport and visa photos online?","acceptedAnswer":{"@type":"Answer","text":"Yes — with this tool. All compression runs locally in your browser using WebAssembly. Your photo never leaves your device. Other tools like 11zon, TinyPNG, and Cloudinary upload files to their servers, which is a privacy risk for identity documents."}},{"@type":"Question","name":"Can I compress multiple visa photos at once?","acceptedAnswer":{"@type":"Answer","text":"Yes — upload up to 50 images at once, set your target size in Exact KB Mode, and compress all at once. Download individually or as a ZIP. Everything runs in your browser — free, no signup required."}}]};
-import type { Metadata } from 'next';
-import { VISA_COUNTRIES, VISA_SLUG_MAP } from '@/lib/visaCountries';
-import VisaClientPage from './client';
+interface Props { params: { country: string }; }
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return VISA_COUNTRIES.map(c => ({ country: c.slug }));
-}
-
-export async function generateMetadata({ params }: { params: Promise<{ country: string }> }): Promise<Metadata> {
-  const { country } = await params;
-  const vc = VISA_SLUG_MAP[country];
-  if (!vc) return { title: 'Visa Photo Compressor' };
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const country = VISA_COUNTRIES.find((c) => c.slug === params.country);
+  if (!country) return {};
   return {
-    title: `Compress Photo for ${vc.name} — ${vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} Max — Free`,
-    description: `Compress photo for ${vc.name} online. Requirements: ${vc.widthPx}×${vc.heightPx}px, ${vc.background} background, under ${vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'}. Free, no upload, 100% private.`,
-    alternates: { canonical: `https://www.compressto20kb.com/compress-for-${country}` },
-    keywords: `compress photo for ${vc.name.toLowerCase()}, ${vc.name.toLowerCase()} photo requirements, ${vc.name.toLowerCase()} visa photo size, compress image for ${vc.name.toLowerCase()} application`,
+    title: `Compress ${country.name} Visa Photo to 20KB — Online Free`,
+    description: `Need ${country.name} visa photo under 20KB? Use our private compressor. No upload required, files stay on your device. Fast, free, and secure.`,
+    alternates: { canonical: `https://www.compressto20kb.com/compress-for-${country.slug}` },
   };
 }
 
-export default async function VisaCountryPage({ params }: { params: Promise<{ country: string }> }) {
-  const { country } = await params;
-  const vc = VISA_SLUG_MAP[country];
-  if (!vc) return <div style={{ color: 'white', padding: '40px' }}>Country not found</div>;
-  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Visa Photo Compressor","item":"https://www.compressto20kb.com/compress-for-[country]"}]}' }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><VisaClientPage country={vc} /></>;
+export default function Page({ params }: Props ) {
+  const country = VISA_COUNTRIES.find((c) => c.slug === params.country);
+  if (!country) notFound();
+
+  const steps = [
+    "Select your photo from your device.",
+    "Choose the required size (e.g., 20KB or 50KB).",
+    "Wait 1 second for instant browser-based compression.",
+    "Download your optimized visa photo."
+  ];
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": `How to compress ${country.name} visa photo`,
+    "step": steps.map((s, i ) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "text": s
+    }))
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <CountryClient country={country} />
+      
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-10 rounded-r-lg">
+          <h2 className="text-xl font-bold text-blue-900 mb-2">Key Benefits for ${country.name} Applicants:</h2>
+          <ul className="list-disc list-inside text-blue-800 space-y-1">
+            <li><strong>100% Private:</strong> Your visa photo never leaves your phone or computer.</li>
+            <li><strong>Exact Size:</strong> Guaranteed to hit the 20KB/50KB limit.</li>
+            <li><strong>No Watermark:</strong> High-quality results ready for official submission.</li>
+          </ul>
+        </div>
+
+        <h2 className="text-3xl font-bold mb-6">How to use ${country.name} Visa Photo Compressor</h2>
+        <ol className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          {steps.map((s, i) => (
+            <li key={i} className="bg-white border p-4 rounded-lg shadow-sm flex items-start">
+              <span className="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center mr-3 flex-shrink-0">{i+1}</span>
+              <span className="text-gray-700">{s}</span>
+            </li>
+          ))}
+        </ol>
+
+        <section className="border-t pt-10">
+          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+          <div className="grid gap-6">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900">What is the photo size for ${country.name} visa?</h3>
+              <p className="text-gray-600">Most digital visa photos must be under 20KB or 50KB. Our tool handles both presets automatically.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900">Do I need to upload my photo to a server?</h3>
+              <p className="text-gray-600">No. Unlike other tools, we use client-side technology. Your photo stays on your device, making it the most secure option for identity documents.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
 }
