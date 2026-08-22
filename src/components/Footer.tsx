@@ -19,7 +19,10 @@ export default function Footer() {
     <footer style={{borderTop:'1px solid rgba(255,255,255,0.1)',padding:'40px 20px',background:'#080619'}}>
       <div style={{maxWidth:'1200px',margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'32px'}}>
         <div>
-          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Tools</h3>
+          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Tax Tools ➔</h3>
+          <a href="https://www.gigwisetax.com" style={{display:'block',color:'#818cf8',fontSize:'15px',marginBottom:'10px',fontWeight:700}}>GigWiseTax ➔</a>
+          <a href="https://www.ukgigtax.com" style={{display:'block',color:'#818cf8',fontSize:'15px',marginBottom:'10px',fontWeight:700}}>UK Gig Tax ➔</a>
+        </div>
           {[['/compress-to-20kb','Compress to 20KB'],['/compress-to-50kb','Compress to 50KB'],['/compress-to-100kb','Compress to 100KB'],['/compress-to-200kb','Compress to 200KB'],['/visa-photo-compressor','Visa Photo Compressor'],['/bulk-image-compressor','Bulk Compressor'],['/compress-without-uploading','No Upload Compressor']].map(([href,label])=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
         </div>
         <div>
