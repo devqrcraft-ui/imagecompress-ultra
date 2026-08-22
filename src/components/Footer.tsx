@@ -2,15 +2,15 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-function HoverLink({ href, children }: { href: string; children: React.ReactNode }) {
+function HoverLink({ href, children, color = 'rgba(255,255,255,0.85)' }: { href: string; children: React.ReactNode; color?: string }) {
   const [hov, setHov] = useState(false);
   return (
-    <Link href={href}
+    <a href={href}
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
-      style={{display:'block',color:hov?'#818cf8':'rgba(255,255,255,0.85)',fontSize:'15px',marginBottom:'10px',textDecoration:hov?'underline':'none',minHeight:'24px',lineHeight:'1.4',transition:'color 0.18s'}}>
+      style={{display:'block',color:hov?'#818cf8':color,fontSize:'15px',marginBottom:'10px',textDecoration:hov?'underline':'none',minHeight:'24px',lineHeight:'1.4',transition:'color 0.18s'}}>
       {children}
-    </Link>
+    </a>
   );
 }
 
@@ -19,29 +19,45 @@ export default function Footer() {
     <footer style={{borderTop:'1px solid rgba(255,255,255,0.1)',padding:'40px 20px',background:'#080619'}}>
       <div style={{maxWidth:'1200px',margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'32px'}}>
         <div>
-          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Tax Tools ➔</h3>
-          <a href="https://www.gigwisetax.com" style={{display:'block',color:'#818cf8',fontSize:'15px',marginBottom:'10px',fontWeight:700}}>GigWiseTax ➔</a>
-          <a href="https://www.ukgigtax.com" style={{display:'block',color:'#818cf8',fontSize:'15px',marginBottom:'10px',fontWeight:700}}>UK Gig Tax ➔</a>
+          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Tools</h3>
+          {[
+            ['/compress-to-20kb','Compress to 20KB'],
+            ['/compress-to-50kb','Compress to 50KB'],
+            ['/compress-to-100kb','Compress to 100KB'],
+            ['/visa-photo-compressor','Visa Photo Compressor'],
+            ['/bulk-image-compressor','Bulk Compressor']
+          ].map(([href,label])=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
         </div>
-          {[['/compress-to-20kb','Compress to 20KB'],['/compress-to-50kb','Compress to 50KB'],['/compress-to-100kb','Compress to 100KB'],['/compress-to-200kb','Compress to 200KB'],['/visa-photo-compressor','Visa Photo Compressor'],['/bulk-image-compressor','Bulk Compressor'],['/compress-without-uploading','No Upload Compressor']].map(([href,label])=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
+        <div>
+          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Tax Tools ➔</h3>
+          <HoverLink href="https://www.gigwisetax.com" color="#818cf8">GigWiseTax ➔</HoverLink>
+          <HoverLink href="https://www.privatepaycheck.com" color="#818cf8">PrivatePaycheck ➔</HoverLink>
+          <HoverLink href="https://www.1099deductions.com" color="#818cf8">1099 Deductions ➔</HoverLink>
+          <HoverLink href="https://www.ukgigtax.com" color="#818cf8">UK Gig Tax ➔</HoverLink>
         </div>
         <div>
           <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Visa & Gov</h3>
-          {[['/compress-for-ds160','DS-160 Photo'],['/compress-for-uscis','USCIS Photo'],['/compress-for-green-card','Green Card Photo'],['/compress-for-passport-renewal','Passport Renewal'],['/compress-for-dv-lottery','DV Lottery Photo'],['/compress-for-f1-visa','F1 Visa Photo'],['/compress-image-for-visa','Visa Photo']].map(([href,label])=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
+          {[
+            ['/compress-for-ds160','DS-160 Photo'],
+            ['/compress-for-uscis','USCIS Photo'],
+            ['/compress-for-green-card','Green Card Photo'],
+            ['/compress-for-passport-renewal','Passport Renewal'],
+            ['/compress-for-dv-lottery','DV Lottery Photo']
+          ].map(([href,label] )=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
         </div>
         <div>
-          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Blog</h3>
-          {[['/blog/best-image-size-for-ebay-listings','eBay Image Size Guide'],['/blog/best-image-compressor-for-mac','Best Compressor for Mac'],['/blog/compress-image-for-google-forms','Compress for Google Forms'],['/blog/compress-images-for-shopify-store','Compress for Shopify'],['/blog/ds-160-photo-requirements','DS-160 Requirements'],['/blog/us-passport-photo-requirements','US Passport Photo'],['/blog/uscis-photo-size-requirements','USCIS Photo Size'],['/blog','All Articles →']].map(([href,label])=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
-        </div>
-        <div>
-          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Compare</h3>
-          {[['/vs/tinypng','vs TinyPNG'],['/vs/squoosh','vs Squoosh'],['/vs/compressor-io','vs Compressor.io'],['/vs/iloveimg','vs iLoveIMG'],['/vs/kraken','vs Kraken.io']].map(([href,label])=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
-          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,margin:'16px 0 12px',textTransform:'uppercase'}}>Company</h3>
-          {[['/about','About'],['/faq','FAQ'],['/contact','Contact'],['/privacy-policy','Privacy Policy'],['/terms','Terms']].map(([href,label])=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
+          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Company</h3>
+          {[
+            ['/about','About'],
+            ['/faq','FAQ'],
+            ['/contact','Contact'],
+            ['/privacy-policy','Privacy Policy'],
+            ['/terms','Terms']
+          ].map(([href,label])=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
         </div>
       </div>
       <div style={{maxWidth:'1200px',margin:'32px auto 0',paddingTop:'20px',borderTop:'1px solid rgba(255,255,255,0.08)',textAlign:'center',color:'rgba(255,255,255,0.6)',fontSize:'13px'}}>
-        © {new Date().getFullYear()} CompressTo20KB.com — Free Online Image Compressor
+        © {new Date().getFullYear()} CompressTo20KB.com — 100% Private Free Online Tool
       </div>
     </footer>
   );
