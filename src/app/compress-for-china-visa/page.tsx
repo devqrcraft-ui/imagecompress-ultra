@@ -1,30 +1,34 @@
-import React from "react";
-import { Metadata } from "next";
-import HomeClient from "../home-client";
+import HomeClient from '../home-client';
 
-export const metadata: Metadata = {
-  title: "Compress Photo for China Visa | Compress Photo to 20KB Online",
-  description: "Fast online tool to compress and resize your China visa photo to 20KB.",
-  alternates: { canonical: "https://www.compressto20kb.com/compress-for-china-visa" }
+export const metadata = {
+  title: 'China Visa Photo Compressor — Compress to 40KB | No Upload',
+  description: 'Official China Visa photo compression to 20KB-80KB.',
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-china-visa' },
 };
 
 export default function Page() {
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4 text-center">Compress Photo for China Visa</h1>
-      <p className="mb-8 text-center text-gray-600">
-        Optimize and compress your photo for China Visa requirements. 
-        Guaranteed to stay under 20KB while maintaining high quality.
-      </p>
-      <HomeClient />
-      <div className="mt-12 prose max-w-none">
-        <h2>How to compress photo for China Visa</h2>
-        <ul>
-          <li>Upload your photo to our secure compressor.</li>
-          <li>Our AI automatically adjusts quality to hit the 20KB target.</li>
-          <li>Download your optimized image ready for upload.</li>
-        </ul>
+    <>
+      <div style={{background:'#0f0c29', padding:'40px 20px', textAlign:'center'}}>
+        <h1 style={{fontSize:'32px', color:'#a5b4fc', marginBottom:'10px'}}>{metadata.title}</h1>
+        <p style={{color:'rgba(255,255,255,0.7)', maxWidth:'700px', margin:'0 auto'}}>
+          Optimize your photo for China Visa Photo Compressor requirements. 
+          Target size: <strong>40KB</strong>. All processing happens in your browser.
+        </p>
       </div>
-    </div>
+      <HomeClient />
+      <div style={{background:'#0f0c29', padding:'40px 20px', color:'#fff', borderTop:'1px solid rgba(255,255,255,0.1)'}}>
+        <div style={{maxWidth:'800px', margin:'0 auto'}}>
+          <h2 style={{color:'#a5b4fc'}}>Requirements for China Visa Photo Compressor</h2>
+          <p>Most portals require images to be under 40KB with specific pixel dimensions. 
+          Our tool ensures maximum quality while staying under the limit.</p>
+          <ul>
+            <li>Format: JPEG / WebP</li>
+            <li>Max Size: 40KB</li>
+            <li>Security: 100% Private (No Upload)</li>
+          </ul>
+        </div>
+      </div>
+    </>
   );
 }

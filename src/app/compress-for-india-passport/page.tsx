@@ -1,20 +1,34 @@
-import React from "react";
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Compress Photo for India Passport Online ★ ✓ 20KB",
-  description: "Perfectly resize and compress photos for India Passport application. ✓ 100% Private.",
-  alternates: { canonical: "https://www.compressto20kb.com/compress-for-india-passport" }
+import HomeClient from '../home-client';
+
+export const metadata = {
+  title: 'India Passport Photo Compressor — Compress to 20KB | No Upload',
+  description: 'Compress India Passport photo to exactly 20KB.',
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-india-passport' },
 };
-export default function Page( ) {
+
+export default function Page() {
   return (
-    <div style={{ background: "#0f172a", color: "#e2e8f0", minHeight: "100vh", padding: "60px 20px", fontFamily: "sans-serif" }}>
-      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-        <h1 style={{ fontSize: "38px", fontWeight: 900, color: "#fff", marginBottom: "20px" }}>★ India Passport Photo Compressor</h1>
-        <div style={{ background: "rgba(37,99,235,0.06)", border: "1px solid rgba(37,99,235,0.2)", borderRadius: "14px", padding: "40px", marginBottom: "40px", boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}>
-          <p style={{ fontSize: "20px", lineHeight: 1.7, marginBottom: "30px" }}>Optimize your photo for the <strong>India Passport</strong> portal instantly.</p>
-          <a href="/" className="btn-3d-blue" style={{ display: "inline-block", textDecoration: "none" }}>Compress Now ➔</a>
+    <>
+      <div style={{background:'#0f0c29', padding:'40px 20px', textAlign:'center'}}>
+        <h1 style={{fontSize:'32px', color:'#a5b4fc', marginBottom:'10px'}}>{metadata.title}</h1>
+        <p style={{color:'rgba(255,255,255,0.7)', maxWidth:'700px', margin:'0 auto'}}>
+          Optimize your photo for India Passport Photo Compressor requirements. 
+          Target size: <strong>20KB</strong>. All processing happens in your browser.
+        </p>
+      </div>
+      <HomeClient />
+      <div style={{background:'#0f0c29', padding:'40px 20px', color:'#fff', borderTop:'1px solid rgba(255,255,255,0.1)'}}>
+        <div style={{maxWidth:'800px', margin:'0 auto'}}>
+          <h2 style={{color:'#a5b4fc'}}>Requirements for India Passport Photo Compressor</h2>
+          <p>Most portals require images to be under 20KB with specific pixel dimensions. 
+          Our tool ensures maximum quality while staying under the limit.</p>
+          <ul>
+            <li>Format: JPEG / WebP</li>
+            <li>Max Size: 20KB</li>
+            <li>Security: 100% Private (No Upload)</li>
+          </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 }

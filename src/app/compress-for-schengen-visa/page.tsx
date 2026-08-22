@@ -1,30 +1,34 @@
-import React from "react";
-import { Metadata } from "next";
-import HomeClient from "../home-client";
+import HomeClient from '../home-client';
 
-export const metadata: Metadata = {
-  title: "Compress Photo for Schengen Visa | Compress Photo to 20KB Online",
-  description: "Fast online tool to compress and resize your Schengen visa photo to 20KB.",
-  alternates: { canonical: "https://www.compressto20kb.com/compress-for-schengen-visa" }
+export const metadata = {
+  title: 'Schengen Visa Photo Compressor — Compress to 60KB | No Upload',
+  description: 'Schengen Visa photo compression to 60KB.',
+  alternates: { canonical: 'https://www.compressto20kb.com/compress-for-schengen-visa' },
 };
 
 export default function Page() {
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4 text-center">Compress Photo for Schengen Visa</h1>
-      <p className="mb-8 text-center text-gray-600">
-        Optimize and compress your photo for Schengen Visa requirements. 
-        Guaranteed to stay under 20KB while maintaining high quality.
-      </p>
-      <HomeClient />
-      <div className="mt-12 prose max-w-none">
-        <h2>How to compress photo for Schengen Visa</h2>
-        <ul>
-          <li>Upload your photo to our secure compressor.</li>
-          <li>Our AI automatically adjusts quality to hit the 20KB target.</li>
-          <li>Download your optimized image ready for upload.</li>
-        </ul>
+    <>
+      <div style={{background:'#0f0c29', padding:'40px 20px', textAlign:'center'}}>
+        <h1 style={{fontSize:'32px', color:'#a5b4fc', marginBottom:'10px'}}>{metadata.title}</h1>
+        <p style={{color:'rgba(255,255,255,0.7)', maxWidth:'700px', margin:'0 auto'}}>
+          Optimize your photo for Schengen Visa Photo Compressor requirements. 
+          Target size: <strong>60KB</strong>. All processing happens in your browser.
+        </p>
       </div>
-    </div>
+      <HomeClient />
+      <div style={{background:'#0f0c29', padding:'40px 20px', color:'#fff', borderTop:'1px solid rgba(255,255,255,0.1)'}}>
+        <div style={{maxWidth:'800px', margin:'0 auto'}}>
+          <h2 style={{color:'#a5b4fc'}}>Requirements for Schengen Visa Photo Compressor</h2>
+          <p>Most portals require images to be under 60KB with specific pixel dimensions. 
+          Our tool ensures maximum quality while staying under the limit.</p>
+          <ul>
+            <li>Format: JPEG / WebP</li>
+            <li>Max Size: 60KB</li>
+            <li>Security: 100% Private (No Upload)</li>
+          </ul>
+        </div>
+      </div>
+    </>
   );
 }
