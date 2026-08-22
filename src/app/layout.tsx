@@ -29,6 +29,19 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.compressto20kb.com"
+    }
+  ]
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode } ) {
   const schema = {
     "@context": "https://schema.org",
@@ -44,10 +57,12 @@ export default function RootLayout({ children }: { children: React.ReactNode } )
     <html lang="en">
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema ) }} />
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       </head>
       <body className="antialiased text-slate-900 bg-white">
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen"><div style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);color:#22c55e;padding:6px 14px;border-radius:20px;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;margin:15px 0;border-left:4px solid #22c55e;"><span>✓</span> 2026 IRS Guidance Compliant</div>
+{children}</main>
         <Footer />
         <Analytics />
       </body>
