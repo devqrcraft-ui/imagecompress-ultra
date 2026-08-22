@@ -1,0 +1,27 @@
+import os
+portals = ["Australia-Visa", "Canada-PR", "India-Passport", "France-Schengen", "Germany-Visa", "Spain-Visa", "Italy-Visa", "Dubai-Work-Permit", "Singapore-EP", "Japan-COE", "Korea-K-ETA", "Turkey-e-Visa", "Egypt-Visa", "Brazil-Visa", "Mexico-FMM", "Indonesia-VoA", "Thailand-Thai-Pass", "Philippines-eTravel", "Malaysia-MDAC", "New-Zealand-NZeTA"]
+template = '''import React from "react";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Compress Photo for [P] Online ★ ✓ 20KB",
+  description: "Perfectly resize and compress photos for [P] application. ✓ 100% Private.",
+  alternates: { canonical: "https://www.compressto20kb.com/compress-for-[S]" }
+};
+export default function Page( ) {
+  return (
+    <div style={{ background: "#0f172a", color: "#e2e8f0", minHeight: "100vh", padding: "60px 20px", fontFamily: "sans-serif" }}>
+      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+        <h1 style={{ fontSize: "38px", fontWeight: 900, color: "#fff", marginBottom: "20px" }}>★ [P] Photo Compressor</h1>
+        <div style={{ background: "rgba(37,99,235,0.06)", border: "1px solid rgba(37,99,235,0.2)", borderRadius: "14px", padding: "40px", marginBottom: "40px", boxShadow: "0 10px 30px rgba(0,0,0,0.3)" }}>
+          <p style={{ fontSize: "20px", lineHeight: 1.7, marginBottom: "30px" }}>Optimize your photo for the <strong>[P]</strong> portal instantly.</p>
+          <a href="/" className="btn-3d-blue" style={{ display: "inline-block", textDecoration: "none" }}>Compress Now ➔</a>
+        </div>
+      </div>
+    </div>
+  );
+}'''
+for p in portals:
+    slug = p.lower()
+    os.makedirs(f"src/app/compress-for-{slug}", exist_ok=True)
+    with open(f"src/app/compress-for-{slug}/page.tsx", "w", encoding="utf-8") as f:
+        f.write(template.replace("[P]", p.replace("-"," ")).replace("[S]", slug))
