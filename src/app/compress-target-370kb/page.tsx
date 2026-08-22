@@ -1,4 +1,4 @@
-import HomeClient from '../home-client';
+import HomeClient from '@/app/home-client';
 
 export const metadata = {
   title: 'Compress Image to 370KB — Compress to 370KB | No Upload',
