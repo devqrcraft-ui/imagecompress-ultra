@@ -29,13 +29,6 @@ export default function Footer() {
           ].map(([href,label])=>(<HoverLink key={href} href={href}>{label}</HoverLink>))}
         </div>
         <div>
-          <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Tax Tools ➔</h3>
-          <HoverLink href="https://www.gigwisetax.com" color="#818cf8">GigWiseTax ➔</HoverLink>
-          <HoverLink href="https://www.privatepaycheck.com" color="#818cf8">PrivatePaycheck ➔</HoverLink>
-          <HoverLink href="https://www.1099deductions.com" color="#818cf8">1099 Deductions ➔</HoverLink>
-          <HoverLink href="https://www.ukgigtax.com" color="#818cf8">UK Gig Tax ➔</HoverLink>
-        </div>
-        <div>
           <h3 style={{color:'#fff',fontSize:'13px',fontWeight:700,marginBottom:'12px',textTransform:'uppercase'}}>Visa & Gov</h3>
           {[
             ['/compress-for-ds160','DS-160 Photo'],
