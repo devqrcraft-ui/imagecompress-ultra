@@ -1,30 +1,74 @@
 import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
 import { VISA_COUNTRIES } from '@/lib/visaCountries';
+import { posts } from './blog/[slug]/page';
+import { useCases } from './use/[slug]/page';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.compressto20kb.com';
-  const lastModified = new Date( );
+const baseUrl = 'https://www.compressto20kb.com';
 
-  // Включаємо ВСІ країни з бази
-  const visaPages = VISA_COUNTRIES.map(c => ({
-    url: `${baseUrl}/compress-for-${c.slug}`,
+function getStaticRoutes() {
+  const appDir = path.join(process.cwd(), 'src', 'app');
+  const routes: string[] = [];
+
+  function walk(dir: string, prefix: string) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    const hasPage = entries.some(e => e.isFile() && /^page\.(tsx|ts|jsx|js)$/.test(e.name));
+    if (hasPage && !prefix.includes('[')) {
+      routes.push(prefix === '' ? '/' : prefix);
+    }
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      if (entry.name === 'api') continue;
+      if (entry.name.startsWith('[')) continue;
+      if (entry.name.startsWith('(')) {
+        walk(path.join(dir, entry.name), prefix);
+        continue;
+      }
+      walk(path.join(dir, entry.name), prefix + '/' + entry.name);
+    }
+  }
+
+  walk(appDir, '');
+  return routes;
+}
+
+export default function sitemap() {
+  const lastModified = new Date();
+
+  const staticRoutes = getStaticRoutes().map(route => ({
+    url: baseUrl + route,
     lastModified,
-    changeFrequency: 'monthly' as const,
-    priority: 0.85,
+    changeFrequency: 'monthly',
+    priority: route === '/' ? 1.0 : 0.7,
   }));
 
-  return [
-      { url: `https://www.compressto20kb.com/compress-for-shopify`, lastModified: new Date( ) },
-      { url: `https://www.compressto20kb.com/compress-for-dv-lottery-2026`, lastModified: new Date( ) },
-    { url: baseUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${baseUrl}/visa-photo-compressor`, lastModified, changeFrequency: 'monthly', priority: 0.95 },
-    { url: `${baseUrl}/compress-to-20kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/compress-to-50kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/compress-to-100kb`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
-    ...visaPages,
-    { url: `${baseUrl}/about`, lastModified, changeFrequency: 'yearly', priority: 0.5 },
-    { url: `${baseUrl}/contact`, lastModified, changeFrequency: 'yearly', priority: 0.5 },
-    { url: `${baseUrl}/privacy-policy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/terms`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
-  ];
+  const visaPages = VISA_COUNTRIES.map(c => ({
+    url: baseUrl + '/compress-for-' + c.slug,
+    lastModified,
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+
+  const blogPages = Object.keys(posts).map(slug => ({
+    url: baseUrl + '/blog/' + slug,
+    lastModified,
+    changeFrequency: 'monthly',
+    priority: 0.75,
+  }));
+
+  const usePages = useCases.map((u: { slug: string }) => ({
+    url: baseUrl + '/use/' + u.slug,
+    lastModified,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  const seen = new Set<string>();
+  const all = [...staticRoutes, ...visaPages, ...blogPages, ...usePages];
+  return all.filter(item => {
+    if (seen.has(item.url)) return false;
+    seen.add(item.url);
+    return true;
+  });
 }

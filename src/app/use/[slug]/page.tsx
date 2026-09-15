@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-const useCases = [
+export const useCases = [
   { slug: "compress-for-instagram", title: "Compress Images for Instagram", desc: "Optimize your photos for Instagram without losing quality. Get the perfect file size for fast uploads and crisp display.", keyword: "compress image for Instagram" },
   { slug: "webp-converter", title: "Free WebP Converter Online", desc: "Convert JPEG and PNG to WebP format instantly in your browser. No upload, no registration, completely free.", keyword: "WebP converter online free" },
   { slug: "compress-for-shopify", title: "Compress Images for Shopify", desc: "Speed up your Shopify store by compressing product images to WebP. Faster pages mean higher conversion rates.", keyword: "compress images for Shopify" },

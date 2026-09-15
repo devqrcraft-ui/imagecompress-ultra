@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 
 export const dynamicParams = false;
 
-const posts: Record<string, { title: string; desc: string; date: string; tag: string; content: string }> = {
+export const posts: Record<string, { title: string; desc: string; date: string; tag: string; content: string }> = {
   'ds160-photo-requirements': {
     title: 'DS-160 Photo Requirements 2026: Complete Guide',
     desc: 'Everything you need to know about DS-160 photo requirements. Size, format, common mistakes and how to fix them.',
