@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import CompressorTool from '@/app/compressor-tool';
 
 const tips = [
   { title: 'Add up to 50 images at once', desc: 'Drag and drop or select multiple files. One batch holds up to 50 images — JPEG, PNG, WebP, AVIF, and HEIC all accepted.' },
@@ -34,10 +35,9 @@ export default function ClientPage({ faq }: { faq: [string, string][] }) {
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
           <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>📦 Compress Up to 50 Images — Free</div>
           <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>Batch compress · Download as ZIP · 100% browser-based · No upload</p>
-          <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#6d28d9)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
-            ⚡ Open Bulk Compressor
-          </Link>
         </div>
+
+        <CompressorTool />
 
         {/* STEPS */}
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>How to Bulk Compress Images</h2>

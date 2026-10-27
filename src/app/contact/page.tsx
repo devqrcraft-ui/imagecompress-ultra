@@ -13,6 +13,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact — CompressTo20KB",
   description: "Get in touch with CompressTo20KB about the browser-based image compressor: questions, feedback, feature requests and bug reports.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
