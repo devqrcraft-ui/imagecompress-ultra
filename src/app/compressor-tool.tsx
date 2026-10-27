@@ -66,7 +66,11 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
   const [clock, setClock] = useState(Date.now());
   const [index, setIndex] = useState(0);
   const [totals, setTotals] = useState(0);
+  const [lifetimeSaved, setLifetimeSaved] = useState(0);
+  const [sticky, setSticky] = useState(false);
   const ref = useRef<HTMLInputElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const lifetimeRef = useRef(0);
 
   useEffect(() => {
     if (!proc) return;
@@ -96,6 +100,53 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
   useEffect(() => {
     try { localStorage.setItem('cmp_settings', JSON.stringify({format,quality,mode,targetKB})); } catch {}
   }, [format,quality,mode,targetKB]);
+
+  useEffect(() => {
+    try {
+      const stored = Number(localStorage.getItem('c20kb_saved_bytes') || 0);
+      if (Number.isFinite(stored) && stored > 0) { lifetimeRef.current = stored; setLifetimeSaved(stored); }
+    } catch {}
+  }, []);
+
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    const footer = document.querySelector('footer');
+    const sync = () => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      const r = root.getBoundingClientRect();
+      const f = footer ? footer.getBoundingClientRect() : null;
+      const toolOnScreen = r.bottom > 8 && r.top < vh - 8;
+      const footerOnScreen = !!f && f.top < vh;
+      setSticky(window.scrollY > 400 && !toolOnScreen && !footerOnScreen);
+    };
+    sync();
+    window.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync, { passive: true });
+    const io = typeof IntersectionObserver !== 'undefined' ? new IntersectionObserver(sync) : null;
+    io?.observe(root);
+    if (footer) io?.observe(footer);
+    return () => {
+      io?.disconnect();
+      window.removeEventListener('scroll', sync);
+      window.removeEventListener('resize', sync);
+    };
+  }, []);
+
+  const recordSaved = (bytes: number) => {
+    if (!(bytes > 0)) return;
+    lifetimeRef.current += bytes;
+    setLifetimeSaved(lifetimeRef.current);
+    try { localStorage.setItem('c20kb_saved_bytes', String(lifetimeRef.current)); } catch {}
+  };
+
+  const clearAll = () => {
+    images.forEach(i => { URL.revokeObjectURL(i.preview); if (i.outUrl) URL.revokeObjectURL(i.outUrl); });
+    setImages([]);
+    setProc(false);
+    setIndex(0);
+    setTotals(0);
+  };
 
   const addFiles = useCallback((files: FileList|File[]) => {
     const arr = Array.from(files).filter(f=>
@@ -135,6 +186,7 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
     const todo = images.filter(i => i.status === 'pending');
     setTotals(todo.length);
     let finished = 0;
+    let batchSaved = 0;
     for (const img of todo) {
       setIndex(finished + 1);
       setImages(p=>p.map(i=>i.id===img.id ? {...i, status:'processing', prog:0.04, plabel:'Starting…', t0:Date.now()} : i));
@@ -162,12 +214,14 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
           ms: Math.round(performance.now() - t0),
           outFmt: result.file.type || 'image/' + format,
         } : i));
+        batchSaved += Math.max(0, img.file.size - result.file.size);
       } catch (e) {
         setImages(p=>p.map(i=>i.id===img.id ? {...i, status:'error', prog:undefined, plabel:undefined, err: e instanceof Error ? e.message : 'Failed'} : i));
       }
       finished++;
     }
     setProc(false);
+    recordSaved(batchSaved);
   };
 
   const done = images.filter(i=>i.status==='done').length;
@@ -205,7 +259,7 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
   };
 
   return (
-    <div style={{background:'#0f0c29',color:'#e2e8f0',borderRadius:'16px',padding:'18px 16px'}}>
+    <div ref={rootRef} style={{background:'#0f0c29',color:'#e2e8f0',borderRadius:'16px',padding:'18px 16px'}}>
     <style>{`@media (max-width: 600px) {
         .zip-btn { font-size: 11px !important; padding: 7px 10px !important; }
         .format-row { gap: 4px !important; }
@@ -334,6 +388,12 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
           onChange={e=>e.target.files&&addFiles(e.target.files)}/>
       </div>
 
+      {lifetimeSaved > 0 && images.length === 0 && (
+        <div style={{textAlign:'center',fontSize:'12px',opacity:0.7,marginTop:'-4px',marginBottom:'14px'}}>
+          💾 {fmtSize(lifetimeSaved)} saved on this device so far — nothing left your browser
+        </div>
+      )}
+
       {/* HOW IT WORKS */}
       {images.length === 0 && (
         <div style={{display:'flex',gap:'0',marginBottom:'20px',background:'rgba(255,255,255,0.03)',borderRadius:'12px',overflow:'hidden',border:'1px solid rgba(255,255,255,0.08)'}}>
@@ -364,6 +424,11 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
                   📦 ZIP All ({done})
                 </button>
               )}
+              <button onClick={clearAll} disabled={proc}
+                aria-label="Remove all images from the list"
+                style={{padding:'7px 12px',borderRadius:'8px',background:'rgba(255,255,255,0.06)',border:'1px solid rgba(255,255,255,0.18)',color:'rgba(255,255,255,0.85)',fontSize:'13px',fontWeight:700,cursor:proc?'not-allowed':'pointer'}}>
+                ✕ Clear
+              </button>
               <button onClick={compressAll} disabled={proc}
                 style={{padding:'7px 20px',borderRadius:'8px',
                   background: proc ? 'rgba(129,140,248,0.3)' : 'linear-gradient(135deg,#4f46e5,#6d28d9)',
@@ -379,6 +444,7 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
                 [`${done}`, 'Compressed'],
                 [fmtSize(images.filter(i=>i.status==='done'&&i.compSize).reduce((a,i)=>a+(i.origSize-i.compSize!),0)), 'Space saved'],
                 [`${Math.round(images.filter(i=>i.status==='done'&&i.saved&&i.saved>0).reduce((a,i)=>a+(i.saved!||0),0)/Math.max(images.filter(i=>i.status==='done'&&i.saved&&i.saved>0).length,1))}%`, 'Avg reduction'],
+                ...(lifetimeSaved > 0 ? [[fmtSize(lifetimeSaved), 'Saved on this device']] : []),
               ].map(([v,l],i)=>(
                 <div key={i} style={{background:'rgba(255,255,255,0.07)',borderRadius:'8px',padding:'8px 14px',textAlign:'center'}}>
                   <div style={{fontSize:'18px',fontWeight:800,color:'#a5b4fc'}}>{v}</div>
@@ -470,6 +536,24 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
             border:'none',color:'white',fontSize:'15px',fontWeight:800,cursor:proc?'not-allowed':'pointer',letterSpacing:'0.3px'}}>
           {proc ? `⏳ Compressing ${index} of ${totals}…` : `⚡ Compress ${images.filter(i=>i.status==='pending').length} Image${images.filter(i=>i.status==='pending').length>1?'s':''}`}
         </button>
+      )}
+
+      {/* STICKY CTA — appears once the tool is out of view, hides over the footer */}
+      {sticky && !compareImg && (
+        <div style={{position:'fixed',left:'8px',right:'8px',bottom:'calc(8px + env(safe-area-inset-bottom))',zIndex:900,display:'flex',justifyContent:'center',pointerEvents:'none'}}>
+          <button type="button" className="cmp-sticky"
+            onClick={()=>{
+              document.getElementById('compress')?.scrollIntoView({block:'center'});
+              ref.current?.click();
+            }}
+            style={{pointerEvents:'auto',width:'100%',maxWidth:'560px',display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',padding:'13px 18px',borderRadius:'12px',border:'1px solid rgba(165,180,252,0.5)',background:'linear-gradient(135deg,#4f46e5,#6d28d9)',color:'#fff',fontSize:'15px',fontWeight:800,cursor:'pointer',boxShadow:'0 12px 32px rgba(0,0,0,0.5)'}}>
+            <span aria-hidden="true">🗜️</span>
+            <span>Compress a photo — free</span>
+            {lifetimeSaved > 0 && (
+              <span style={{fontWeight:700,fontSize:'12px',color:'#c7d2fe'}}>· {fmtSize(lifetimeSaved)} saved here</span>
+            )}
+          </button>
+        </div>
       )}
 
       {/* BEFORE/AFTER COMPARE MODAL */}
