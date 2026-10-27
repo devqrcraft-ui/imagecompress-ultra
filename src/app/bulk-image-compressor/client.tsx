@@ -2,23 +2,14 @@
 import Link from 'next/link';
 
 const tips = [
-  { title: 'Upload up to 50 images at once', desc: 'Drag and drop a folder or select multiple files. Our bulk compressor handles up to 50 images in a single batch — JPEG, PNG, WebP, AVIF, and HEIC all supported.' },
-  { title: 'Use WebP for smallest output', desc: 'Selecting WebP as output format typically reduces file sizes 30–50% compared to JPEG at the same visual quality. All modern browsers support WebP.' },
-  { title: 'Apply a preset for your platform', desc: 'Use the Shopify, Etsy, or Amazon preset to compress all images to platform-optimal settings in one click. No need to adjust each file manually.' },
+  { title: 'Add up to 50 images at once', desc: 'Drag and drop or select multiple files. One batch holds up to 50 images — JPEG, PNG, WebP, AVIF, and HEIC all accepted.' },
+  { title: 'Use WebP for smaller output', desc: 'WebP generally reaches a given file size with less visible loss than JPEG at the same size. Compare the before and after slider before you download to confirm it suits the image.' },
+  { title: 'Apply a preset for your platform', desc: 'Use the Shopify, Etsy, or Amazon preset to set a sensible format and quality for a whole batch in one click. No need to adjust each file manually.' },
   { title: 'Download all as ZIP', desc: 'After compressing, click "ZIP All" to download every compressed image in a single ZIP file. Windows 11 and macOS can open ZIP files without any extra software.' },
-  { title: 'Nothing is uploaded to a server', desc: 'All compression happens in your browser. Your images never leave your device — safe for product photos, ID documents, and sensitive files.' },
+  { title: 'Nothing is uploaded to a server', desc: 'All compression happens in your browser. Your images never leave your device — relevant for product photos, ID documents, and other sensitive files.' },
 ];
 
-const faq = [
-  { q: 'How many images can I compress at once?', a: 'You can compress up to 50 images in a single batch. Each image is processed individually in your browser — the more powerful your device, the faster the batch completes.' },
-  { q: 'Can I compress images of different formats in one batch?', a: 'Yes — you can mix JPEG, PNG, WebP, AVIF, and HEIC files in the same batch. All will be converted to your selected output format.' },
-  { q: 'How do I download all compressed images at once?', a: 'Click the "ZIP All" button after compression completes. All compressed images are packaged into a single ZIP file for one-click download.' },
-  { q: 'Is bulk image compression free?', a: 'Yes — fully free with no limits on file size or number of compressions. No account required.' },
-  { q: 'Will all images have the same compression settings?', a: 'Yes — the same format, quality, and mode settings apply to all images in the batch. Use presets for platform-specific settings like Shopify or Amazon.' },
-  { q: 'Does bulk compression work on mobile?', a: 'Yes — the bulk compressor works in Safari on iPhone and Chrome on Android. Processing speed depends on your device, but most modern phones handle 10–20 images quickly.' },
-];
-
-export default function ClientPage() {
+export default function ClientPage({ faq }: { faq: [string, string][] }) {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
@@ -41,12 +32,12 @@ export default function ClientPage() {
 
         {/* HERO */}
         <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
-          Bulk Image Compressor – <span style={{ color: '#818cf8' }}>Unlimited Images, No Upload</span>
+          Bulk Image Compressor – <span style={{ color: '#818cf8' }}>50 Images Per Batch, No Upload</span>
         </h1>
         <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '8px' }}>
-          Compress up to 50 images in a single batch — free, instant, and 100% private. Everything runs in your browser. Download all compressed images as a ZIP file in one click.
+          Compress up to 50 images in a single batch — free, and 100% in your browser. Download all compressed images as a ZIP file in one click.
         </p>
-        <div style={{ fontSize:'15px', opacity: 0.45, marginBottom: '32px' }}>No upload · No signup · No file size limit · JPEG, PNG, WebP, HEIC</div>
+        <div style={{ fontSize:'15px', opacity: 0.45, marginBottom: '32px' }}>No upload · No signup · Target size from 5 to 5000 KB · JPEG, PNG, WebP, AVIF, HEIC</div>
 
         {/* CTA */}
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
@@ -60,9 +51,9 @@ export default function ClientPage() {
         {/* STEPS */}
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>How to Bulk Compress Images</h2>
         {[
-          { step: '1', title: 'Select all images', desc: 'Click the upload zone and select multiple files, or drag a folder. Up to 50 images accepted per batch.' },
-          { step: '2', title: 'Choose format and settings', desc: 'Pick output format (WebP recommended) and quality level, or choose a platform preset like Shopify or Amazon.' },
-          { step: '3', title: 'Click Compress All', desc: 'All images are compressed simultaneously in your browser. A progress indicator shows status for each file.' },
+          { step: '1', title: 'Select your images', desc: 'Click the drop zone and multi-select the files, or drag them onto it. Up to 50 images are taken per batch — anything past the 50th is ignored until you run again.' },
+          { step: '2', title: 'Choose format and settings', desc: 'Pick the output format for the whole batch (WebP is a good default) and either a quality level or a target size in KB, or start from a preset like Shopify or Amazon.' },
+          { step: '3', title: 'Click Compress All', desc: 'The images are compressed one after another in your browser. Each row shows its own status as the batch moves through the list.' },
           { step: '4', title: 'Download as ZIP', desc: 'Click "ZIP All" to package all compressed images into one ZIP file. Or download them individually.' },
         ].map(({ step, title, desc }) => (
           <div key={step} style={{ display: 'flex', gap: '16px', marginBottom: '16px', alignItems: 'flex-start' }}>
@@ -105,11 +96,11 @@ export default function ClientPage() {
         {/* FAQ */}
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — Bulk Image Compressor</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-          {faq.map((item, i) => (
-            <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
-              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#a5b4fc' }}>Q: {item.q}</div>
-              <div style={{ fontSize:'15px', opacity: 0.7 }}>{item.a}</div>
-            </div>
+          {faq.map(([q, a], i) => (
+            <details key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px', border: '1px solid rgba(255,255,255,0.07)' }}>
+              <summary style={{ fontWeight: 700, fontSize: '14px', color: '#a5b4fc', cursor: 'pointer', listStyle: 'none' }}>{q}</summary>
+              <p style={{ fontSize: '15px', opacity: 0.7, marginTop: '10px', lineHeight: 1.6 }}>{a}</p>
+            </details>
           ))}
         </div>
 
@@ -117,7 +108,7 @@ export default function ClientPage() {
         <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Related Tools</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '40px' }}>
           {[
-            { href: '/', label: '🎯 Compress to Exact KB' },
+            { href: '/', label: '🎯 Compress to Target KB' },
             { href: '/compress-to-100kb', label: '📁 Compress to 100KB' },
             { href: '/compress-to-200kb', label: '📁 Compress to 200KB' },
             { href: '/compress-for-shopify', label: '🛍️ Shopify Compressor' },

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const compare = [
   { feature: 'Bulk compression', us: '✅ Up to 50 images', them: '❌ 1 image at a time' },
-  { feature: 'Exact KB mode', us: '✅ Yes', them: '❌ No' },
+  { feature: 'Target KB mode', us: '✅ Yes', them: '❌ No' },
   { feature: 'Ease of use', us: '✅ Simple, beginner-friendly', them: '⚠️ Complex UI' },
   { feature: 'USCIS / Passport presets', us: '✅ Built-in', them: '❌ No' },
   { feature: 'ZIP download', us: '✅ Yes', them: '❌ No' },
@@ -12,9 +12,9 @@ const compare = [
   { feature: 'Mobile friendly', us: '✅ Yes', them: '⚠️ Limited' },
 ];
 const faq = [
-  { q: 'What is the main difference between Squoosh and CompressTo20KB?', a: 'Squoosh (by Google) is a powerful single-image compressor with advanced controls. CompressTo20KB focuses on bulk compression (up to 50 images), exact KB targeting, and niche presets for USCIS, passports, and e-commerce.' },
+  { q: 'What is the main difference between Squoosh and CompressTo20KB?', a: 'Squoosh (by Google) is a powerful single-image compressor with advanced controls. CompressTo20KB focuses on bulk compression (up to 50 images), target-KB precision, and niche presets for USCIS, passports, and e-commerce.' },
   { q: 'Can Squoosh compress multiple images at once?', a: 'No. Squoosh only processes one image at a time. If you need to compress 10-50 images, CompressTo20KB\'s bulk mode is significantly faster.' },
-  { q: 'Can I compress to an exact file size in Squoosh?', a: 'No. Squoosh lets you adjust quality percentage but cannot target a specific file size like 50KB or 200KB. CompressTo20KB\'s Exact KB mode hits your target precisely.' },
+  { q: 'Can I compress to an exact file size in Squoosh?', a: 'No. Squoosh lets you adjust quality percentage but cannot target a specific file size like 50KB or 200KB. CompressTo20KB\'s Target KB mode returns a file at or under your target.' },
   { q: 'Is Squoosh better for advanced users?', a: 'Squoosh offers more technical controls for advanced users who want fine-grained codec settings. CompressTo20KB is better for everyday users who need fast results without technical knowledge.' },
 ];
 export default function ClientPage() {
@@ -29,8 +29,8 @@ export default function ClientPage() {
       </nav>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
         <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>Comparison → CompressTo20KB vs Squoosh</div>
-        <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>CompressTo20KB vs Squoosh<br /><span style={{ color: '#818cf8' }}>2025 Comparison</span></h1>
-        <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>Squoosh is Google's powerful image compression tool — but it only handles one image at a time and has no exact KB targeting. Here's how it compares to CompressTo20KB for real-world use cases.</p>
+        <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>CompressTo20KB vs Squoosh<br /><span style={{ color: '#818cf8' }}>2026 Comparison</span></h1>
+        <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>Squoosh is Google's powerful image compression tool — but it only handles one image at a time and has no target-KB precision. Here's how it compares to CompressTo20KB for real-world use cases.</p>
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>Feature Comparison</h2>
         <div style={{ overflowX: 'auto', marginBottom: '32px' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize:'15px' }}>

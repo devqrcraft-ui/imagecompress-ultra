@@ -44,7 +44,7 @@ export default function CompressorWidget({defaultMode='quality',defaultTargetKB=
       <div style={{display:'flex',gap:'8px',marginBottom:'16px'}}>
         {(['quality','exactkb'] as Mode[]).map(m=>(
           <button key={m} onClick={()=>setMode(m)} style={{padding:'8px 16px',borderRadius:'8px',border:'none',cursor:'pointer',fontWeight:700,fontSize:'13px',background:mode===m?'linear-gradient(135deg,#6366f1,#8b5cf6)':'rgba(255,255,255,0.06)',color:'white'}}>
-            {m==='quality'?'🎚️ Quality Mode':'🎯 Exact KB Mode'}
+            {m==='quality'?'🎚️ Quality Mode':'🎯 Target KB Mode'}
           </button>
         ))}
       </div>

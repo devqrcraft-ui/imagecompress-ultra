@@ -1,138 +1,97 @@
-'use client'
-import React from 'react'
-import { useState, useCallback } from 'react'
-import AuthorBox from '@/app/components/AuthorBox'
+import type { Metadata } from 'next';
+import ImageSizeCheckerTool from './component';
+import AuthorBox from '@/app/components/AuthorBox';
 
-export default function ImageSizeChecker() {
-  const [results, setResults] = useState<{name:string,size:string,w:number,h:number,type:string}[]>([])
-  const [dragging, setDragging] = useState(false)
+const faq: [string, string][] = [
+  ['How do I check the pixel dimensions and file size of an image?', 'Drop the file into the checker on this page. It reads the image in your browser and reports width and height in pixels, the size in kilobytes, and the format. Nothing is uploaded, so you can check a passport scan or an ID photo here without it leaving your device.'],
+  ['Why does the size say KB but the dimensions say px?', 'They measure different things. Pixels describe how much detail the image holds; kilobytes describe how much room the encoded file takes. Two photos at exactly 3000×2000 px can be 180KB or 4MB depending on format, detail and encoding quality, which is why a form asks for one and an editor talks about the other.'],
+  ['Does this checker compress or resize the image?', 'No. This page only inspects a file. To bring a file under a kilobyte ceiling, use the compressor, which re-encodes on your device and returns the highest quality that still fits under the number you type.'],
+  ['The file size looks wrong compared with my file manager — why?', 'The checker shows decimal-independent KB (bytes divided by 1024) rounded to one decimal, so a 24,576-byte file reads as 24.0 KB. Operating systems sometimes show kilobytes, sometimes kibibytes, and sometimes round to whole numbers, so small differences are normal.'],
+  ['What image dimensions should I aim for?', 'It depends entirely on the destination, and the destination’s own instructions beat any table on a website. The one figure we can cite from an official page is the US State Department rule for visa and passport uploads: a square JPEG, 600×600 to 1200×1200 pixels, equal to or less than 240 KB (travel.state.gov, checked October 2026, linked under the table below). Everywhere else, check the page you are uploading to first and treat the numbers below as starting points, not limits.'],
+  ['Can I check several images at once?', 'Yes. Drop or select as many as you like — the list shows every file you add, and because the work happens in your browser there is no queue or daily quota.'],
+];
 
-  const processFiles = useCallback((files: FileList | File[]) => {
-    const arr: {name:string,size:string,w:number,h:number,type:string}[] = []
-    for (const file of files) {
-      if (!file.type.startsWith('image/')) continue
-      const url = URL.createObjectURL(file)
-      const img = new Image()
-      img.onload = () => {
-        arr.push({ name: file.name, size: (file.size/1024).toFixed(1), w: img.width, h: img.height, type: file.type })
-        setResults([...arr])
-        URL.revokeObjectURL(url)
-      }
-      img.src = url
-    }
-  }, [])
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+};
 
-  const onDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault(); setDragging(false)
-    processFiles(e.dataTransfer.files)
-  }, [processFiles])
+export const metadata: Metadata = {
+  title: 'Image Size Checker — See Pixels, KB and Format Instantly',
+  description: 'Check an image’s width, height, file size in KB and format in your browser. No upload, no account, nothing leaves your device.',
+  alternates: { canonical: 'https://www.compressto20kb.com/image-size-checker-online' },
+  openGraph: { url: 'https://www.compressto20kb.com/image-size-checker-online' },
+};
 
-  const bc = '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Image Size Checker","item":"https://compressto20kb.com/image-size-checker-online"}]}'
-  const faq = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I check image dimensions online?","acceptedAnswer":{"@type":"Answer","text":"Upload your image to this free tool. It instantly shows width, height, file size in KB, and image format. No upload to server — all processing runs in your browser."}},{"@type":"Question","name":"What is the ideal image size for websites?","acceptedAnswer":{"@type":"Answer","text":"For web use: JPEG under 200KB, width 1200-1920px for hero images, 400-800px for thumbnails. For mobile: under 100KB. Use WebP format for best compression."}},{"@type":"Question","name":"How do I check image file size in KB?","acceptedAnswer":{"@type":"Answer","text":"Drop your image into this checker. The tool shows exact file size in KB instantly. No account needed, no upload — 100% private browser-based processing."}}]}'
+const startingPoints = [
+  ['Full-width photo on a website', 'As wide as your content column, usually 1200–1920 px', 'Pick the largest target your host or theme tolerates, then judge the preview'],
+  ['Thumbnail or gallery tile', 'Around the size it is actually displayed', 'Small display size means you can afford a tight kilobyte target'],
+  ['Photo inside a document or slide', 'No fixed figure — the file is what gets capped', 'Compress to the ceiling the portal or email server states'],
+  ['US visa or passport upload', '600×600 to 1200×1200 px, square', 'JPEG, 240 KB or less — see the linked State Department page below'],
+];
 
+export default function ImageSizeCheckerPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: bc }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faq }} />
-      <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a,#1e1b4b)',color:'#c8d0e7',fontFamily:'system-ui,sans-serif',padding:'40px 20px'}}>
-        <div style={{maxWidth:780,margin:'0 auto'}}>
-          <nav style={{fontSize:13,color:'rgba(255,255,255,0.4)',marginBottom:24}}>
-            <a href="/" style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Home</a> › Image Size Checker
-          </nav>
-          <h1 style={{fontSize:'clamp(24px,4vw,36px)',fontWeight:900,color:'#fff',marginBottom:8}}>
-            Image Size Checker Online — Free
-          </h1>
-          <div style={{fontSize:12,color:'rgba(255,255,255,0.4)',marginBottom:16}}>
-            Last updated: May 2026 · No upload · 100% browser-based
-          </div>
-          <div style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:8,padding:'16px 20px',marginBottom:24}}>
-            <div style={{fontWeight:800,color:'#818cf8',marginBottom:10,fontSize:13}}>⚡ KEY TAKEAWAYS</div>
-            <ul style={{margin:0,padding:'0 0 0 18px',fontSize:14,lineHeight:1.9,color:'rgba(255,255,255,0.85)'}}>
-              <li>Check image width, height and file size instantly — no upload needed</li>
-              <li>Supports JPEG, PNG, WebP, GIF, AVIF formats</li>
-              <li>All processing runs in your browser — 100% private</li>
-              <li>Check up to 20 images at once with drag and drop</li>
-            </ul>
-          </div>
-          <div
-            onDrop={onDrop}
-            onDragOver={(e)=>{e.preventDefault();setDragging(true)}}
-            onDragLeave={()=>setDragging(false)}
-            onClick={()=>(document.getElementById('file-input') as HTMLInputElement)?.click()}
-            style={{border:`2px dashed ${dragging?'#818cf8':'rgba(129,140,248,0.3)'}`,borderRadius:12,padding:'48px 24px',textAlign:'center',cursor:'pointer',background:dragging?'rgba(129,140,248,0.08)':'transparent',transition:'all 0.2s',marginBottom:24}}
-          >
-            <div style={{fontSize:40,marginBottom:12}}>🖼️</div>
-            <div style={{fontSize:16,fontWeight:700,color:'#818cf8',marginBottom:8}}>Drop images here or click to upload</div>
-            <div style={{fontSize:13,color:'rgba(255,255,255,0.4)'}}>JPEG, PNG, WebP, GIF, AVIF · Up to 20 files</div>
-            <input id="file-input" type="file" multiple accept="image/*" style={{display:'none'}} onChange={e=>e.target.files && processFiles(e.target.files)} />
-          </div>
-          {results.length > 0 && (
-            <div style={{overflowX:'auto'}}>
-              <table style={{width:'100%',borderCollapse:'collapse',fontSize:14}}>
-                <thead>
-                  <tr style={{background:'rgba(129,140,248,0.15)'}}>
-                    <th style={{padding:'10px 14px',textAlign:'left',color:'#818cf8',fontWeight:700}}>File</th>
-                    <th style={{padding:'10px 14px',textAlign:'center',color:'#818cf8',fontWeight:700}}>Width</th>
-                    <th style={{padding:'10px 14px',textAlign:'center',color:'#818cf8',fontWeight:700}}>Height</th>
-                    <th style={{padding:'10px 14px',textAlign:'center',color:'#818cf8',fontWeight:700}}>Size (KB)</th>
-                    <th style={{padding:'10px 14px',textAlign:'center',color:'#818cf8',fontWeight:700}}>Format</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {results.map((r,i)=>(
-                    <tr key={i} style={{borderBottom:'1px solid rgba(255,255,255,0.07)'}}>
-                      <td style={{padding:'10px 14px',color:'rgba(255,255,255,0.85)',maxWidth:200,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{r.name}</td>
-                      <td style={{padding:'10px 14px',textAlign:'center',color:'#c8d0e7'}}>{r.w}px</td>
-                      <td style={{padding:'10px 14px',textAlign:'center',color:'#c8d0e7'}}>{r.h}px</td>
-                      <td style={{padding:'10px 14px',textAlign:'center',color:parseFloat(r.size)>200?'#f87171':'#4ade80'}}>{r.size} KB</td>
-                      <td style={{padding:'10px 14px',textAlign:'center',color:'rgba(255,255,255,0.5)',fontSize:12}}>{r.type.split('/')[1].toUpperCase()}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-          <div style={{marginTop:40,padding:'24px',background:'rgba(255,255,255,0.03)',borderRadius:8,border:'1px solid rgba(255,255,255,0.07)'}}>
-            <h2 style={{fontSize:20,fontWeight:800,color:'#818cf8',marginBottom:16}}>What Image Dimensions Should I Use?</h2>
-            <table style={{width:'100%',borderCollapse:'collapse',fontSize:13}}>
-              <thead>
-                <tr style={{background:'rgba(129,140,248,0.1)'}}>
-                  <th style={{padding:'8px 12px',textAlign:'left',color:'#818cf8'}}>Use Case</th>
-                  <th style={{padding:'8px 12px',textAlign:'center',color:'#818cf8'}}>Width</th>
-                  <th style={{padding:'8px 12px',textAlign:'center',color:'#818cf8'}}>Max Size</th>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Image Size Checker","item":"https://www.compressto20kb.com/image-size-checker-online"}]}' }} />
+      <ImageSizeCheckerTool />
+      <div style={{ background: 'linear-gradient(135deg,#0f172a,#1e1b4b)', color: '#c8d0e7', fontFamily: 'system-ui,sans-serif', padding: '0 20px 56px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto' }}>
+          <h2 style={{ fontSize: 22, fontWeight: 800, color: '#818cf8', marginBottom: 12 }}>Pixels and kilobytes are two different questions</h2>
+          <p style={{ fontSize: 15, lineHeight: 1.8, opacity: 0.85, marginBottom: 12 }}>
+            This checker answers the first one. It opens the file in your browser, decodes it and tells you what the image actually is: width, height, byte size and format. That is often enough to explain a rejected upload — a portal that says “image too large” may mean the pixel dimensions, the file size, or both, and you cannot fix what you have not measured.
+          </p>
+          <p style={{ fontSize: 15, lineHeight: 1.8, opacity: 0.85, marginBottom: 24 }}>
+            The kilobyte number is the one a form usually cares about, and it is the number this site’s compressor works in. It does not change dimensions: it re-encodes the file at the highest quality that still fits under the ceiling you type, so the output comes back at or under that figure. If the checker shows the wrong pixel dimensions for what you need, resize and crop in an image editor first, then compress here.
+          </p>
+
+          <h2 style={{ fontSize: 20, fontWeight: 800, color: '#818cf8', marginBottom: 14 }}>Starting points, not rules</h2>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+            <thead>
+              <tr style={{ background: 'rgba(129,140,248,0.1)' }}>
+                <th style={{ padding: '8px 12px', textAlign: 'left', color: '#818cf8' }}>What you are making</th>
+                <th style={{ padding: '8px 12px', textAlign: 'left', color: '#818cf8' }}>Dimensions</th>
+                <th style={{ padding: '8px 12px', textAlign: 'left', color: '#818cf8' }}>File size</th>
+              </tr>
+            </thead>
+            <tbody>
+              {startingPoints.map(([use, dims, size], i) => (
+                <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <td style={{ padding: '9px 12px', color: 'rgba(255,255,255,0.85)' }}>{use}</td>
+                  <td style={{ padding: '9px 12px', color: '#c8d0e7' }}>{dims}</td>
+                  <td style={{ padding: '9px 12px', color: 'rgba(255,255,255,0.7)' }}>{size}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {[['Website hero','1200-1920px','200KB'],['Blog thumbnail','800px','100KB'],['Profile photo','400x400px','50KB'],['Visa/passport photo','600x600px','240KB'],['WhatsApp profile','640x640px','5MB'],['LinkedIn banner','1584x396px','8MB']].map(([u,w,s],i)=>(
-                  <tr key={i} style={{borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
-                    <td style={{padding:'8px 12px',color:'rgba(255,255,255,0.8)'}}>{u}</td>
-                    <td style={{padding:'8px 12px',textAlign:'center',color:'#c8d0e7'}}>{w}</td>
-                    <td style={{padding:'8px 12px',textAlign:'center',color:'#4ade80'}}>{s}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div style={{marginTop:32}}>
-            <h2 style={{fontSize:18,fontWeight:800,color:'#fff',marginBottom:16}}>Frequently Asked Questions</h2>
-            {[['How do I check image dimensions online?','Drop your image into the checker above. It instantly shows width, height in pixels, file size in KB, and format. No account, no upload — runs in your browser.'],['What is the ideal image size for a website?','Keep JPEG hero images under 200KB at 1200-1920px wide. Thumbnails: under 100KB at 400-800px. Use WebP for 25-35% better compression than JPEG.'],['How do I reduce image file size?','Use our free image compressor to reduce file size without losing quality. Set a target KB, and the tool compresses in your browser instantly.']].map(([q,a],i)=>(
-              <div key={i} style={{marginBottom:16,padding:'16px',background:'rgba(255,255,255,0.03)',borderRadius:8,border:'1px solid rgba(255,255,255,0.07)'}}>
-                <div style={{fontWeight:700,color:'#818cf8',marginBottom:8,fontSize:15}}>{q}</div>
-                <div style={{fontSize:14,color:'rgba(255,255,255,0.7)',lineHeight:1.7}}>{a}</div>
-              </div>
-            ))}
-          </div>
-          <div style={{marginTop:32,padding:'20px',background:'rgba(129,140,248,0.06)',borderRadius:8,border:'1px solid rgba(129,140,248,0.2)'}}>
-            <div style={{fontSize:13,fontWeight:700,color:'#818cf8',marginBottom:12}}>🔗 Related Tools</div>
-            <div style={{display:'flex',flexDirection:'column',gap:8}}>
-              <a href="/compress-to-200kb" style={{color:'#c8d0e7',fontSize:14,textDecoration:'none'}}>→ Compress Image to 200KB</a>
-              <a href="/compress-to-100kb" style={{color:'#c8d0e7',fontSize:14,textDecoration:'none'}}>→ Compress Image to 100KB</a>
-              <a href="/compress-for-linkedin" style={{color:'#c8d0e7',fontSize:14,textDecoration:'none'}}>→ Compress for LinkedIn</a>
+              ))}
+            </tbody>
+          </table>
+          <p style={{ fontSize: 13, lineHeight: 1.7, opacity: 0.6, marginTop: 12 }}>
+            Everything in the first three rows is our recommendation, not a published limit. Most platforms change their upload rules without announcing it, so read the instructions on the page you are uploading to and treat that as the authority.
+          </p>
+          <p style={{ fontSize: 13, lineHeight: 1.7, opacity: 0.6, marginTop: 8 }}>
+            The last row is the only one taken from an official page: <a href="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos/digital-image-requirements.html" target="_blank" rel="nofollow noopener noreferrer" style={{ color: '#818cf8' }}>travel.state.gov — Digital Image Requirements</a> (square JPEG, 600×600 to 1200×1200 px, 240 KB or less — checked October 2026). The State Department revises it, so re-read it there before you rely on the numbers.
+          </p>
+
+          <h2 style={{ fontSize: 20, fontWeight: 800, color: '#fff', margin: '36px 0 16px' }}>Frequently Asked Questions</h2>
+          {faq.map(([q, a], i) => (
+            <details key={i} style={{ display: 'block', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 8, padding: '14px 16px', marginBottom: 10 }}>
+              <summary style={{ fontWeight: 700, fontSize: 15, color: '#818cf8', cursor: 'pointer' }}>{q}</summary>
+              <p style={{ margin: '9px 0 0', fontSize: 14, lineHeight: 1.75, color: 'rgba(255,255,255,0.72)' }}>{a}</p>
+            </details>
+          ))}
+
+          <div style={{ marginTop: 32, padding: '20px', background: 'rgba(129,140,248,0.06)', borderRadius: 8, border: '1px solid rgba(129,140,248,0.2)' }}>
+            <div style={{ fontSize: 13, fontWeight: 700, color: '#818cf8', marginBottom: 12 }}>If the file is the problem, next step</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <a href="/compress-to-200kb" style={{ color: '#c8d0e7', fontSize: 14, textDecoration: 'none' }}>→ Compress an image to 200KB</a>
+              <a href="/compress-to-100kb" style={{ color: '#c8d0e7', fontSize: 14, textDecoration: 'none' }}>→ Compress an image to 100KB</a>
+              <a href="/blog/compress-image-without-losing-quality" style={{ color: '#c8d0e7', fontSize: 14, textDecoration: 'none' }}>→ How compression actually trades quality for size</a>
             </div>
           </div>
           <AuthorBox />
         </div>
       </div>
     </>
-  )
+  );
 }

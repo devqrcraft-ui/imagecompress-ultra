@@ -4,7 +4,7 @@ import CompressorWidget from '@/components/CompressorWidget';
 const compare = [
   { feature: 'Free images', us: '✅ Unlimited', them: '❌ 30 images/month free' },
   { feature: 'Bulk compression', us: '✅ 50 at once', them: '❌ Limited on free plan' },
-  { feature: 'Exact KB mode', us: '✅ Yes', them: '❌ No' },
+  { feature: 'Target KB mode', us: '✅ Yes', them: '❌ No' },
   { feature: 'Privacy', us: '✅ 100% in-browser', them: '❌ Server upload' },
   { feature: 'File size limit', us: '✅ No limit', them: '❌ 100MB max' },
   { feature: 'Price', us: '✅ Always free', them: '⚠️ $4/month for unlimited' },

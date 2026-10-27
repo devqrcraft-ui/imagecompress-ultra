@@ -18,7 +18,7 @@ export default function ZeroUploadBanner() {
         <div className="hidden sm:block w-px h-8 bg-emerald-500/20"></div>
         <div className="flex items-center gap-2.5">
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-violet-500/15 border border-violet-500/40"><span className="text-violet-400 text-lg">🛡️</span></div>
-          <div><p className="text-violet-300 font-bold text-sm">No Upload · No Server</p><p className="text-violet-500/80 text-xs">100% Private</p></div>
+          <div><p className="text-violet-300 font-bold text-sm">No Upload · No Server</p><p className="text-violet-500/80 text-xs">Private</p></div>
         </div>
         <div className="hidden sm:block w-px h-8 bg-emerald-500/20"></div>
         <div className="flex items-center gap-2.5">

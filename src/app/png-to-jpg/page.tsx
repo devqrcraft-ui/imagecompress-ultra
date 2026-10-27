@@ -16,7 +16,7 @@ export default function Page() {
       <p style={{fontSize:17,color:'#818cf8',marginBottom:32,fontWeight:600}}>Free Online, Smaller File Sizes, No Upload</p>
       
       <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:12,padding:'20px 24px',marginBottom:32}}>
-        <p style={{fontSize:16,color:'#c8d0e7',lineHeight:1.75,margin:0}}>Convert PNG images to JPG format in your browser for smaller file sizes. No upload to any server — your images stay 100% private on your device. Perfect for reducing file size while keeping good visual quality.</p>
+        <p style={{fontSize:16,color:'#c8d0e7',lineHeight:1.75,margin:0}}>Convert PNG images to JPG format in your browser for smaller file sizes. No upload to any server — your images stay private on your device. Perfect for reducing file size while keeping good visual quality.</p>
       </div>
 
       <div style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:12,padding:'20px 24px',marginBottom:32}}>

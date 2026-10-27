@@ -40,9 +40,9 @@ export default function ClientPage(){
         </div>
       </nav>
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → Compress Images for Amazon Sellers 2025</div>
+        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → Compress Images for Amazon Sellers 2026</div>
         <div style={{display:'inline-block',background:'rgba(251,191,36,0.1)',border:'1px solid rgba(251,191,36,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#fde68a'}}>📦 Amazon</div>
-        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Images for Amazon Sellers 2025<br/><span style={{color:'#818cf8'}}>Product Listings · A+ Content · Main Image</span></h1>
+        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Images for Amazon Sellers 2026<br/><span style={{color:'#818cf8'}}>Product Listings · A+ Content · Main Image</span></h1>
         <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>
@@ -57,7 +57,7 @@ export default function ClientPage(){
             <li>Use the quality slider to find the sweet spot between size and sharpness</li>
           </ul>
         </div>
-        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>Amazon product images must meet strict requirements. Properly compressed images load faster, rank higher, and convert better.</p>
+        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>Amazon product images must meet strict requirements. Compressed images load faster on slow mobile connections, which is the version of your listing most shoppers see.</p>
         <div style={{background:'rgba(251,191,36,0.1)',border:'1px solid rgba(251,191,36,0.3)',borderRadius:'12px',padding:'16px 20px',marginBottom:'32px'}}>
           <strong style={{color:'#fde68a'}}>📋 Amazon Requirements:</strong>
           <span style={{fontSize:'14px',opacity:0.85}}> JPEG or PNG · 1000×1000 px minimum · Under 10MB · White background for main image</span>

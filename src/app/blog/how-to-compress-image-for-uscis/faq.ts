@@ -1,0 +1,8 @@
+export const faq: [string, string][] = [
+  ['What photo size does USCIS actually ask for?', "USCIS form instructions ask for identical 2×2 inch photos with a white or plain background when a form calls for photos at all. We could not find a published digital file-size cap on uscis.gov (checked October 2026), so where a USCIS upload screen states a limit, follow that on-screen number."],
+  ['Which US forms do use the 240KB JPEG limit?', "The State Department, not USCIS: passport and visa photo uploads (DS-160, DV Lottery entry) must be a square JPEG between 600×600 and 1200×1200 pixels and no larger than 240KB (travel.state.gov, checked October 2026)."],
+  ['What file size is a safe choice for a government photo upload?', "Our recommendation, not an official rule: square JPEG, at least 600×600 pixels, compressed to 200KB. Target KB mode returns the file at or under the number you type, and a photo already smaller than your target comes back unchanged."],
+  ['Can I use PNG for a US government photo upload?', "The State Department asks for JPEG for passport and visa uploads, so convert before submitting. Our tool can output JPEG (also WebP, AVIF or PNG) from whatever image you add, and it converts in your browser without uploading anything."],
+  ['Does compressing reduce the quality of my photo?', "Lossy recompression always discards some data. Target KB mode picks the highest quality setting that still fits under your number, but you should still view the result at full size before filing a legal document."],
+  ['Is this tool affiliated with USCIS?', "No. This is an independent free tool. The official USCIS website is uscis.gov and the official passport and visa pages are at travel.state.gov — always submit through those government sites."],
+];

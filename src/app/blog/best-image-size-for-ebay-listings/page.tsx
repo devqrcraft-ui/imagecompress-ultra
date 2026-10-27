@@ -1,3 +1,9 @@
+const faq: [string, string][] = [
+  ['What is the best image size for eBay listings?', 'eBay\'s seller help recommends at least 1600px on the longest side so the zoom feature activates, with a 500px floor (checked October 2026). A 1600×1600px JPEG kept small loads fastest on mobile listing pages.'],
+  ['What file size should eBay images be?', 'eBay accepts images up to 12MB but does not publish an ideal KB target. Our recommendation is 200–500KB per photo — small enough to load quickly, large enough to stay sharp at 1600px.'],
+  ['Can I use WebP images on eBay?', 'Upload JPEG or PNG to eBay. Our tool runs entirely in your browser and can re-encode a WebP, HEIC, or PNG file as JPEG in one step, so you can convert and compress before uploading.'],
+  ['Does eBay resize images automatically?', 'eBay does not resize your photo to reach the 1600px zoom threshold — a smaller image simply loses zoom. Our compressor does not resize to arbitrary dimensions either; it only caps the longest side at 4096px and reduces file size.'],
+];
 import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox'
 import Link from 'next/link';
@@ -5,13 +11,12 @@ import EbayInlineCalc from './EbayInlineCalc';
 
 export const metadata: Metadata = {
   title: 'eBay Listing Image Size Requirements 2026: 1600px, 12MB, JPEG',
-  description: 'eBay listing image size 2026: minimum 1600px, JPEG, max 12MB. Free browser tool to resize & compress eBay photos instantly — no upload needed.',
+  description: 'eBay listing image size 2026: minimum 1600px for zoom, JPEG, max 12MB. Free browser tool to compress eBay photos — no upload needed.',
   keywords: 'best image size for ebay, ebay listing photo size, compress image for ebay, ebay photo requirements, ebay product image size',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
   openGraph: { url: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },
 };
 
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the best image size for eBay listings?","acceptedAnswer":{"@type":"Answer","text":"eBay recommends images at least 1600x1600px for zoom functionality. Maximum file size is 12MB per photo. Use JPEG format at 80-85% quality. A 1600x1600px JPEG compressed to 200-500KB is ideal for eBay product listings."}},{"@type":"Question","name":"What file size should eBay images be?","acceptedAnswer":{"@type":"Answer","text":"eBay accepts images up to 12MB but best practice is 200-500KB for fast page loading. Compress your product photos to under 500KB using JPEG. Smaller files load faster on mobile, where 70% of eBay traffic comes from."}},{"@type":"Question","name":"Can I use WebP images on eBay?","acceptedAnswer":{"@type":"Answer","text":"Yes — eBay supports JPEG, PNG, GIF, TIFF, BMP, WebP, HEIC, and AVIF. JPEG is recommended for most product photos. WebP works but convert to JPEG if you experience upload issues."}},{"@type":"Question","name":"What is the minimum image size for eBay?","acceptedAnswer":{"@type":"Answer","text":"eBay requires a minimum of 500px on the longest side. However, the zoom feature only activates at 1600px or larger. Images under 1600px will not allow buyers to zoom in, which reduces buyer confidence and conversions."}},{"@type":"Question","name":"How many photos can I upload to an eBay listing?","acceptedAnswer":{"@type":"Answer","text":"eBay allows up to 24 photos per listing at no extra charge. High-performing listings typically use 10-15 purposeful photos showing front, back, sides, defects, and scale references."}},{"@type":"Question","name":"What is the recommended eBay image size for 2026?","acceptedAnswer":{"@type":"Answer","text":"The recommended eBay image size for 2026 is 1600x1600 pixels in JPEG format, compressed to 200-500KB. This enables the zoom feature, loads fast on mobile, and meets all eBay requirements for product listings."}}]};
 
 export default function EbayImageSizePage() {
   const s = {
@@ -32,9 +37,9 @@ export default function EbayImageSizePage() {
   return (
     <>
       <div style={s.wrap}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"eBay Image Size Requirements 2026: 1600px, 12MB, JPEG","item":"https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"eBay Image Size Requirements 2026: 1600px, 12MB, JPEG","description":"Resize your eBay photos to exact 2026 specs in seconds — 1600px min, JPEG, under 12MB. Free tool, works in browser, no account needed.","url":"https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings","datePublished":"2026-01-01","dateModified":"2026-06-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"eBay Image Size Requirements 2026: 1600px, 12MB, JPEG","description":"Compress your eBay photos for eBay 2026 specs — 1600px min for zoom, JPEG, under 12MB. Free tool, works in browser, no account needed.","url":"https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings","datePublished":"2026-01-01","dateModified":"2026-06-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
 
       <h1 style={s.h1}>Best Image Size for eBay Listings 2026</h1>
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
@@ -45,8 +50,8 @@ export default function EbayImageSizePage() {
           <span>{'~7 min read'}</span>
         </div>
       <p style={s.lead}>
-        eBay has strict image requirements — and getting them wrong means your listing won't show the zoom feature,
-        loads slowly, or gets rejected. Here's exactly what you need, plus a free tool to fix your photos instantly.
+        eBay's image guidance is simple but easy to miss: photos under 1600px lose the zoom feature, and heavy files
+        slow your listing down on mobile. Here's what eBay's own help pages say, plus a free browser tool to fix your photos.
       </p>
 
       <Link href="/compress-for-ebay" style={s.cta}>
@@ -68,7 +73,7 @@ export default function EbayImageSizePage() {
             ['Maximum size', '—', '12MB per image'],
             ['Best format', 'JPEG or PNG', 'JPEG at 85% quality'],
             ['Background', 'Any', 'White (#FFFFFF) for main photo'],
-            ['Max images', '—', '24 images per listing'],
+            ['Max images', '—', 'Varies by category — check your listing form'],
             ['Aspect ratio', 'Any', 'Square (1:1) for consistency'],
           ].map(([req, min, rec], i) => (
             <tr key={req}>
@@ -83,8 +88,8 @@ export default function EbayImageSizePage() {
       <div style={s.tip}>
         <div style={s.tipTitle}>💡 The 1600px Rule</div>
         <p style={{ ...s.p, marginBottom: 0 }}>
-          eBay's zoom feature only activates when your image is at least 1600px on the longest side.
-          Listings with zoom get significantly more buyer engagement. Always upload at 1600×1600px minimum.
+          eBay's zoom feature only activates when your image is at least 1600px on the longest side (per eBay seller help, checked October 2026).
+          Buyers use zoom to inspect details, so uploading at 1600×1600px or larger is worth the extra care.
         </p>
       </div>
 
@@ -95,16 +100,16 @@ export default function EbayImageSizePage() {
         image — small enough to load fast, large enough to look sharp at 1600px.
       </p>
       <p style={s.p}>
-        Our tool compresses your eBay product photos to the exact file size you need, without losing visible quality.
-        No upload to any server — everything runs in your browser.
+        Our tool compresses your eBay product photos to at or under the file size you type, at the highest quality
+        setting that still fits. No upload to any server — everything runs in your browser.
       </p>
 
       <h2 style={s.h2}>eBay Image Compression: Step by Step</h2>
       {[
         ['1. Start with a high-resolution original', 'Use your phone camera or a DSLR at full resolution. You can always compress down, but you cannot add pixels back.'],
-        ['2. Crop to square if needed', 'eBay works best with square images. Crop to 1:1 ratio before compressing.'],
-        ['3. Compress to 200–500KB', 'Use our free tool — drag your image, set the target to 300KB, download instantly.'],
-        ['4. Check the result', 'Your image should be 1600×1600px, JPEG format, under 500KB. Upload directly to your listing.'],
+        ['2. Crop to square if needed', 'eBay works best with square images. Crop to 1:1 in a photo editor first — our tool compresses files but does not crop to a ratio.'],
+        ['3. Compress to 200–500KB', 'Use our free tool — drag your image, set the target to 300KB, download instantly. The output lands at or under that number.'],
+        ['4. Check the result', 'Start from a photo that is already at least 1600×1600px — the tool keeps your dimensions (up to a 4096px cap) and only reduces file size.'],
       ].map(([title, text]) => (
         <div key={title} style={{ marginBottom: 16 }}>
           <strong style={{ color: '#c8d0e7', fontSize: 15 }}>{title}</strong>
@@ -121,12 +126,7 @@ export default function EbayImageSizePage() {
       <EbayInlineCalc />
 
       <h2 style={s.h2}>Frequently Asked Questions</h2>
-      {[
-        ['What is the best image size for eBay listings?', 'eBay recommends images at least 1600px on the longest side for zoom functionality. Maximum file size is 12MB. Use JPEG format at 85% quality. A 1600×1600px JPEG compressed to under 500KB is ideal for eBay product listings.'],
-        ['What file size should eBay images be?', 'eBay accepts images up to 12MB but best practice is under 1MB for fast page loading. Compress your product photos to 200–500KB using JPEG. Smaller files load faster and improve the buyer experience.'],
-        ['Can I use WebP images on eBay?', 'eBay primarily supports JPEG and PNG formats. Convert WebP to JPEG before uploading to eBay listings. Our free tool handles WebP, HEIC, PNG, and JPEG — convert and compress in one step.'],
-        ['Does eBay resize images automatically?', 'eBay does not resize images to meet the 1600px minimum — it just disables the zoom feature if your image is smaller. Always upload at the correct size yourself.'],
-      ].map(([q, a]) => (
+      {faq.map(([q, a]) => (
         <div key={q} style={{ marginBottom: 24, borderBottom: '1px solid #e2e8f0', paddingBottom: 16 }}>
           <h3 style={{ color: '#818cf8', fontSize: 16, fontWeight: 700, margin: '0 0 8px' }}>{q}</h3>
           <p style={{ ...s.p, marginBottom: 0 }}>{a}</p>

@@ -1,5 +1,10 @@
-
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image without losing quality?","acceptedAnswer":{"@type":"Answer","text":"Use modern formats like WebP or AVIF which offer 25-50% smaller file sizes than JPEG at the same visual quality. Our tool compresses images client-side in your browser with no upload required, preserving maximum quality."}},{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is 100% free with no file size limits, no account required, and no watermarks. All compression happens in your browser — your images never leave your device."}},{"@type":"Question","name":"What image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"We support JPEG, PNG, WebP, AVIF, and GIF. You can compress and convert between formats. WebP and AVIF produce the smallest file sizes for web use."}}]};
+const faq: [string, string][] = [
+        ['Can I compress a JPEG to 1MB or under?', 'Yes — set your target file size to 1000KB and the tool will match it as closely as possible.'],
+        ['Does compressing reduce image dimensions?', 'No — dimensions stay the same unless you specifically choose to resize.'],
+        ['Is it safe to compress sensitive photos?', '100% safe — everything happens in your browser. Your photos never leave your device.'],
+        ['Can I compress PNG files the same way?', 'Yes — the tool supports JPEG, PNG, WebP, and GIF.'],
+      ];
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity": faq.map(([q, a]) => ({"@type":"Question","name": q,"acceptedAnswer":{"@type":"Answer","text": a}}))};
 import { Metadata } from "next";
 import AuthorBox from '@/app/components/AuthorBox'
 
@@ -86,12 +91,7 @@ export default function CompressJpegUnder1mb() {
       <p className="mb-4">Need to compress a batch of JPEGs under 1MB? CompressTo20KB supports up to 10 images simultaneously. All processed locally — no waiting for uploads, no privacy concerns.</p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">FAQ</h2>
-      {[
-        ['Can I compress a JPEG to exactly 1MB?', 'Yes — set your target file size to 1000KB and the tool will match it as closely as possible.'],
-        ['Does compressing reduce image dimensions?', 'No — dimensions stay the same unless you specifically choose to resize.'],
-        ['Is it safe to compress sensitive photos?', '100% safe — everything happens in your browser. Your photos never leave your device.'],
-        ['Can I compress PNG files the same way?', 'Yes — the tool supports JPEG, PNG, WebP, and GIF.'],
-      ].map(([q, a]) => (
+      {faq.map(([q, a]) => (
         <details key={q} className="border rounded-lg mb-3 p-4">
           <summary className="font-semibold cursor-pointer">▶ {q}</summary>
           <p className="mt-3 text-slate-300">{a}</p>

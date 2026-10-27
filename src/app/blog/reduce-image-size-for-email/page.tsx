@@ -1,5 +1,11 @@
-
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image without losing quality?","acceptedAnswer":{"@type":"Answer","text":"Use modern formats like WebP or AVIF which offer 25-50% smaller file sizes than JPEG at the same visual quality. Our tool compresses images client-side in your browser with no upload required, preserving maximum quality."}},{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is 100% free with no file size limits, no account required, and no watermarks. All compression happens in your browser — your images never leave your device."}},{"@type":"Question","name":"What image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"We support JPEG, PNG, WebP, AVIF, and GIF. You can compress and convert between formats. WebP and AVIF produce the smallest file sizes for web use."}}]};
+const faq: [string, string][] = [
+        ['Will compressed photos look bad in email?', 'At 500KB–1MB, photos look excellent on any screen. Recipients will not notice any difference from the original.'],
+        ['Can I compress PNG files for email?', 'Yes — PNG, JPEG, WebP, and GIF are all supported. For email, converting PNG to JPEG usually gives the smallest file size.'],
+        ['What if I need to send more than 10 photos?', 'Compress in batches of 10. Or use a ZIP file for large collections.'],
+        ['Does this work on iPhone and Android?', 'Yes — works on any device with a modern browser. No app needed.'],
+        ['Is there a file size limit for compression?', 'Individual files up to 50MB can be compressed. For most email photos, this is more than enough.'],
+      ];
+const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity": faq.map(([q, a]) => ({"@type":"Question","name": q,"acceptedAnswer":{"@type":"Answer","text": a}}))};
 import { Metadata } from "next";
 import AuthorBox from '@/app/components/AuthorBox'
 
@@ -81,13 +87,7 @@ export default function ReduceImageSizeForEmail() {
       <p className="mb-4">Sending a photo album or event photos? Drop up to 10 images at once and they all compress simultaneously. No waiting, no queue — all processed locally in seconds.</p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">FAQ</h2>
-      {[
-        ['Will compressed photos look bad in email?', 'At 500KB–1MB, photos look excellent on any screen. Recipients will not notice any difference from the original.'],
-        ['Can I compress PNG files for email?', 'Yes — PNG, JPEG, WebP, and GIF are all supported. For email, converting PNG to JPEG usually gives the smallest file size.'],
-        ['What if I need to send more than 10 photos?', 'Compress in batches of 10. Or use a ZIP file for large collections.'],
-        ['Does this work on iPhone and Android?', 'Yes — works on any device with a modern browser. No app needed.'],
-        ['Is there a file size limit for compression?', 'Individual files up to 50MB can be compressed. For most email photos, this is more than enough.'],
-      ].map(([q, a]) => (
+      {faq.map(([q, a]) => (
         <details key={q} className="border rounded-lg mb-3 p-4">
           <summary className="font-semibold cursor-pointer">▶ {q}</summary>
           <p className="mt-3 text-slate-300">{a}</p>

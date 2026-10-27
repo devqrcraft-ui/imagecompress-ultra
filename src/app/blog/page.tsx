@@ -1,5 +1,3 @@
-
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What topics does the CompressTo20KB blog cover?","acceptedAnswer":{"@type":"Answer","text":"The blog covers image compression techniques, format comparisons (WebP vs JPEG vs AVIF), platform-specific guides (Shopify, eBay, Amazon, visa applications), PageSpeed optimization, and tutorials for compressing images on different devices and operating systems."}},{"@type":"Question","name":"Are the image compression guides on this blog free?","acceptedAnswer":{"@type":"Answer","text":"Yes. All guides, tutorials, and tools on CompressTo20KB are completely free. No account or subscription required."}}]};
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -22,7 +20,6 @@ export default function BlogPage() {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"}]}' }} />
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
         <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>

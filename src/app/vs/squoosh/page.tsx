@@ -1,7 +1,7 @@
-const orgSchema = '{"@context":"https://schema.org","@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com","logo":"https://www.compressto20kb.com/og-image.png","description":"Free browser-based image compressor. Compress to exact KB — 20KB, 50KB, 100KB. No upload, 100% private."}';
+const orgSchema = '{"@context":"https://schema.org","@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com","logo":"https://www.compressto20kb.com/og-image.png","description":"Free browser-based image compressor. Compress to exact KB — 20KB, 50KB, 100KB. No upload, private."}';
 const breadcrumbSchema = '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Comparisons","item":"https://www.compressto20kb.com/vs"},{"@type":"ListItem","position":3,"name":"CompressTo20KB vs Squoosh","item":"https://www.compressto20kb.com/vs/squoosh"}]}';
-const blogSchema = '{"@context":"https://schema.org","@type":"BlogPosting","headline":"CompressTo20KB vs Squoosh 2026 — Bulk, Exact KB & USCIS Presets","datePublished":"2026-03-01","dateModified":"2026-06-13","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.compressto20kb.com/vs/squoosh"}}';
-const faqSchema = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the main difference between Squoosh and CompressTo20KB?","acceptedAnswer":{"@type":"Answer","text":"Squoosh (by Google) processes 1 image at a time with advanced codec controls. CompressTo20KB focuses on bulk compression (up to 50 images), Exact KB targeting (20KB, 50KB, 100KB), and USCIS/DS-160 presets. Both are 100% browser-based with no upload."}},{"@type":"Question","name":"Can Squoosh compress multiple images at once in 2026?","acceptedAnswer":{"@type":"Answer","text":"No. Squoosh only processes 1 image at a time. If you need to compress 10-50 images, CompressTo20KB bulk mode processes them all simultaneously in your browser — no upload, no queue."}},{"@type":"Question","name":"Can I compress to an exact file size like 20KB in Squoosh?","acceptedAnswer":{"@type":"Answer","text":"No. Squoosh lets you adjust quality percentage but cannot target a specific file size. CompressTo20KB Exact KB Mode hits your target size — 20KB, 50KB, 100KB — automatically using binary search compression."}},{"@type":"Question","name":"Is Squoosh better for advanced users than CompressTo20KB?","acceptedAnswer":{"@type":"Answer","text":"Squoosh offers more technical codec controls (MozJPEG, AVIF encoder settings, bit depth) for users who want fine-grained control. CompressTo20KB is faster for everyday users who need results in seconds without adjusting codec parameters."}},{"@type":"Question","name":"Which is better for USCIS or DS-160 photo requirements?","acceptedAnswer":{"@type":"Answer","text":"CompressTo20KB. It has a dedicated Gov 20KB preset that outputs exactly 20KB JPEG under 240x240px — the USCIS N-400 and DS-160 requirement. Squoosh has no preset system and requires manual trial-and-error to hit 20KB."}}]}';
+const blogSchema = '{"@context":"https://schema.org","@type":"BlogPosting","headline":"CompressTo20KB vs Squoosh 2026 — Bulk, Target KB & USCIS Presets","datePublished":"2026-03-01","dateModified":"2026-06-13","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.compressto20kb.com/vs/squoosh"}}';
+const faqSchema = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the main difference between Squoosh and CompressTo20KB?","acceptedAnswer":{"@type":"Answer","text":"Squoosh (by Google) processes 1 image at a time with advanced codec controls. CompressTo20KB focuses on bulk compression (up to 50 images), Target KB targeting (20KB, 50KB, 100KB), and USCIS/DS-160 presets. Both are 100% browser-based with no upload."}},{"@type":"Question","name":"Can Squoosh compress multiple images at once in 2026?","acceptedAnswer":{"@type":"Answer","text":"No. Squoosh only processes 1 image at a time. If you need to compress 10-50 images, CompressTo20KB bulk mode processes them all simultaneously in your browser — no upload, no queue."}},{"@type":"Question","name":"Can I compress to an exact file size like 20KB in Squoosh?","acceptedAnswer":{"@type":"Answer","text":"No. Squoosh lets you adjust quality percentage but cannot target a specific file size. CompressTo20KB Target KB Mode hits your target size — 20KB, 50KB, 100KB — automatically using binary search compression."}},{"@type":"Question","name":"Is Squoosh better for advanced users than CompressTo20KB?","acceptedAnswer":{"@type":"Answer","text":"Squoosh offers more technical codec controls (MozJPEG, AVIF encoder settings, bit depth) for users who want fine-grained control. CompressTo20KB is faster for everyday users who need results in seconds without adjusting codec parameters."}},{"@type":"Question","name":"Which is better for USCIS or DS-160 photo requirements?","acceptedAnswer":{"@type":"Answer","text":"CompressTo20KB. It has a dedicated Gov 20KB preset that outputs 20KB or under JPEG under 240x240px — the USCIS N-400 and DS-160 requirement. Squoosh has no preset system and requires manual trial-and-error to hit 20KB."}}]}';
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -9,15 +9,15 @@ import CompressorWidget from '@/components/CompressorWidget';
 import AuthorBox from '@/app/components/AuthorBox';
 
 export const metadata: Metadata = {
-  title: 'CompressTo20KB vs Squoosh 2026 — Bulk, Exact KB & USCIS Presets',
-  description: 'Squoosh (Google) compresses 1 image at a time, no exact KB mode. CompressTo20KB: bulk 50 images, Exact KB Mode, USCIS/DS-160 preset, 100% browser. 2026 comparison.',
+  title: 'CompressTo20KB vs Squoosh 2026 — Bulk, Target KB & USCIS Presets',
+  description: 'Squoosh (Google) compresses 1 image at a time, no exact KB mode. CompressTo20KB: bulk 50 images, Target KB Mode, USCIS/DS-160 preset, 100% browser. 2026 comparison.',
   keywords: 'compressto20kb vs squoosh, squoosh alternative, squoosh bulk compression, squoosh exact kb, squoosh uscis photo, better than squoosh 2026',
   authors: [{ name: 'the CompressTo20KB Team' }],
   alternates: { canonical: 'https://www.compressto20kb.com/vs/squoosh' },
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   openGraph: {
-    title: 'CompressTo20KB vs Squoosh 2026 — Bulk, Exact KB & USCIS Presets',
-    description: 'Squoosh: 1 image, no exact KB. CompressTo20KB: bulk 50 images, Exact KB Mode, USCIS preset. Both 100% browser.',
+    title: 'CompressTo20KB vs Squoosh 2026 — Bulk, Target KB & USCIS Presets',
+    description: 'Squoosh: 1 image, no exact KB. CompressTo20KB: bulk 50 images, Target KB Mode, USCIS preset. Both 100% browser.',
     url: 'https://www.compressto20kb.com/vs/squoosh',
     siteName: 'CompressTo20KB',
     type: 'article',
@@ -42,7 +42,7 @@ const S = {
 
 const rows = [
   { feature: 'Bulk compression', us: '✅ Up to 50 images', them: '❌ 1 image at a time' },
-  { feature: 'Exact KB mode (20KB, 50KB, 100KB)', us: '✅ Yes — binary search', them: '❌ No — quality % only' },
+  { feature: 'Target KB mode (20KB, 50KB, 100KB)', us: '✅ Yes — binary search', them: '❌ No — quality % only' },
   { feature: 'USCIS / DS-160 preset', us: '✅ Built-in 20KB preset', them: '❌ Manual only' },
   { feature: 'Ease of use', us: '✅ Simple, beginner-friendly', them: '⚠️ Complex codec UI' },
   { feature: 'HEIC iPhone Support', us: '✅ Convert + compress', them: '❌ No' },
@@ -55,11 +55,11 @@ const rows = [
 ];
 
 const faqs = [
-  { q: 'What is the main difference between Squoosh and CompressTo20KB?', a: 'Squoosh (by Google) processes 1 image at a time with advanced codec controls. CompressTo20KB focuses on bulk compression (up to 50 images), Exact KB targeting (20KB, 50KB, 100KB), and USCIS/DS-160 presets. Both are 100% browser-based with no upload.' },
+  { q: 'What is the main difference between Squoosh and CompressTo20KB?', a: 'Squoosh (by Google) processes 1 image at a time with advanced codec controls. CompressTo20KB focuses on bulk compression (up to 50 images), Target KB targeting (20KB, 50KB, 100KB), and USCIS/DS-160 presets. Both are 100% browser-based with no upload.' },
   { q: 'Can Squoosh compress multiple images at once in 2026?', a: 'No. Squoosh only processes 1 image at a time. If you need to compress 10-50 images, CompressTo20KB bulk mode processes them all simultaneously in your browser — no upload, no queue.' },
-  { q: 'Can I compress to an exact file size like 20KB in Squoosh?', a: 'No. Squoosh lets you adjust quality percentage but cannot target a specific file size. CompressTo20KB Exact KB Mode hits your target size — 20KB, 50KB, 100KB — automatically using binary search compression.' },
+  { q: 'Can I compress to an exact file size like 20KB in Squoosh?', a: 'No. Squoosh lets you adjust quality percentage but cannot target a specific file size. CompressTo20KB Target KB Mode hits your target size — 20KB, 50KB, 100KB — automatically using binary search compression.' },
   { q: 'Is Squoosh better for advanced users than CompressTo20KB?', a: 'Squoosh offers more technical codec controls (MozJPEG, AVIF encoder settings, bit depth) for users who want fine-grained control. CompressTo20KB is faster for everyday users who need results in seconds without adjusting codec parameters.' },
-  { q: 'Which is better for USCIS or DS-160 photo requirements?', a: 'CompressTo20KB. It has a dedicated Gov 20KB preset that outputs exactly 20KB JPEG under 240x240px — the USCIS N-400 and DS-160 requirement. Squoosh has no preset system and requires manual trial-and-error to hit 20KB.' },
+  { q: 'Which is better for USCIS or DS-160 photo requirements?', a: 'CompressTo20KB. It has a dedicated Gov 20KB preset that outputs 20KB or under JPEG under 240x240px — the USCIS N-400 and DS-160 requirement. Squoosh has no preset system and requires manual trial-and-error to hit 20KB.' },
 ];
 
 export default function VsSquoosh() {
@@ -80,7 +80,7 @@ export default function VsSquoosh() {
 
         <h1 itemProp="headline" style={S.h1}>
           CompressTo20KB vs Squoosh 2026<br />
-          <span style={{ color: '#a5b4fc', fontSize: '0.75em' }}>Bulk, Exact KB & USCIS Presets Compared</span>
+          <span style={{ color: '#a5b4fc', fontSize: '0.75em' }}>Bulk, Target KB & USCIS Presets Compared</span>
         </h1>
 
         <div style={S.meta}>
@@ -92,14 +92,14 @@ export default function VsSquoosh() {
         </div>
 
         <div style={S.answer}>
-          <strong style={{ color: '#e8edf8' }}>Bottom line:</strong> Squoosh is Google's excellent single-image compressor — but it only handles 1 image at a time and cannot target an exact file size. If you need to compress 10-50 images or hit exactly 20KB for USCIS, CompressTo20KB is the better choice. Both tools are 100% browser-based with no upload.
+          <strong style={{ color: '#e8edf8' }}>Bottom line:</strong> Squoosh is Google's excellent single-image compressor — but it only handles 1 image at a time and cannot target an exact file size. If you need to compress 10-50 images or hit 20KB or under for USCIS, CompressTo20KB is the better choice. Both tools are 100% browser-based with no upload.
         </div>
 
         <div style={{ background: 'rgba(165,180,252,0.06)', border: '1px solid rgba(165,180,252,0.15)', borderRadius: 12, padding: '14px 18px', marginBottom: 24 }}>
           <strong style={{ color: '#e8edf8' }}>Key Takeaways:</strong>
           <ul style={{ margin: '10px 0 0', paddingLeft: 20, lineHeight: 2 }}>
             <li>Squoosh: 1 image at a time — CompressTo20KB: up to 50 images simultaneously</li>
-            <li>Exact KB Mode: hit 20KB, 50KB, 100KB precisely — Squoosh cannot do this</li>
+            <li>Target KB Mode: reach 20KB, 50KB or 100KB and under — Squoosh cannot do this</li>
             <li>USCIS DS-160 preset: 20KB JPEG in 1 click — Squoosh requires manual adjustment</li>
             <li>Both tools are 100% browser-based — neither uploads your files</li>
             <li>Squoosh wins for advanced codec control — CompressTo20KB wins for speed and presets</li>
@@ -165,9 +165,9 @@ export default function VsSquoosh() {
 
         <div style={S.cta}>
           <div style={{ fontSize: 20, fontWeight: 800, color: '#e8edf8', marginBottom: 8 }}>
-            Try CompressTo20KB — Bulk, Exact KB, No Upload
+            Try CompressTo20KB — Bulk, Target KB, No Upload
           </div>
-          <div style={{ opacity: 0.7, marginBottom: 16, fontSize: 14 }}>50 images at once · USCIS preset · 100% private · Free</div>
+          <div style={{ opacity: 0.7, marginBottom: 16, fontSize: 14 }}>50 images at once · USCIS preset · private · Free</div>
           <a href="/" style={{ display: 'inline-block', background: '#a5b4fc', color: '#07111f', fontWeight: 800, padding: '12px 28px', borderRadius: 10, textDecoration: 'none', fontSize: 16 }}>
             Compress Images Free →
           </a>

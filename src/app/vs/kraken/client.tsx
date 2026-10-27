@@ -2,22 +2,14 @@
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const compare = [
-  { feature: 'Privacy', us: '✅ 100% in-browser', them: '❌ Uploads to server' },
-  { feature: 'Price', us: '✅ Free', them: '❌ $5–$9/month' },
-  { feature: 'Exact KB mode', us: '✅ Any target KB', them: '❌ No' },
-  { feature: 'Bulk compression', us: '✅ Up to 50 images', them: '⚠️ API only for bulk' },
-  { feature: 'Output formats', us: '✅ WebP, AVIF, JPEG, PNG', them: '⚠️ JPEG, PNG, GIF, SVG' },
-  { feature: 'USCIS / Passport mode', us: '✅ Built-in presets', them: '❌ No' },
-  { feature: 'No signup required', us: '✅ Zero signup', them: '❌ Account required' },
-  { feature: 'Shopify preset', us: '✅ One-click', them: '❌ Manual settings' },
+  { feature: 'Where the work happens', us: '✅ In your browser, nothing uploaded', them: '❌ On Kraken\'s servers' },
+  { feature: 'Free allowance', us: '✅ No quota, no account', them: '⚠️ Free account with 100 MB test quota' },
+  { feature: 'Paid plans', us: '✅ None — the tool is free', them: '⚠️ Listed from $5/month' },
+  { feature: 'Target size in KB', us: '✅ Type any number from 5 to 5000', them: '❌ No target-size option we could find' },
+  { feature: 'Batch without writing code', us: '✅ Up to 50 files, one ZIP download', them: '⚠️ Bulk work is aimed at their API' },
+  { feature: 'Formats', us: '✅ WebP, AVIF, JPEG, PNG output', them: '✅ JPG, PNG, WebP, GIF, SVG, AVIF, HEIC, PDF' },
 ];
-const faq = [
-  { q: 'Is CompressTo20KB a free Kraken.io alternative?', a: 'Yes. CompressTo20KB is completely free with no account required. Kraken.io requires a paid plan for full access and an account even for free features.' },
-  { q: 'Does Kraken.io upload my images to their server?', a: 'Yes. Kraken.io processes all images on their servers. CompressTo20KB processes everything in your browser — your images never leave your device.' },
-  { q: 'Can I compress to an exact file size like 20KB?', a: 'CompressTo20KB has a unique Exact KB mode — type any target like 20KB, 50KB, or 200KB and the tool hits it precisely. Kraken.io does not offer this feature.' },
-  { q: 'Which is better for Shopify images?', a: 'CompressTo20KB has a built-in Shopify preset that automatically sets WebP format, optimal quality, and correct dimensions. No app installation or monthly fee needed.' },
-];
-export default function ClientPage() {
+export default function ClientPage({ faq }: { faq: [string, string][] }) {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
@@ -29,10 +21,10 @@ export default function ClientPage() {
       </nav>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
         <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>Comparison → CompressTo20KB vs Kraken.io</div>
-        <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>CompressTo20KB vs Kraken.io<br /><span style={{ color: '#818cf8' }}>2025 Comparison</span></h1>
-        <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>Kraken.io is popular among developers and Shopify merchants — but it requires a paid account, uploads your images to their servers, and has no exact KB targeting. Here is how the two tools compare.</p>
+        <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>CompressTo20KB vs Kraken.io<br /><span style={{ color: '#818cf8' }}>2026 Comparison</span></h1>
+        <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>Kraken.io is a long-running optimisation service aimed at developers and store owners. It does the work on its own servers and sells quota by the month, which is a different shape of tool to a browser tab where you type the KB number a form asked for. Here is where the two diverge.</p>
         <div style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: '12px', padding: '16px 20px', marginBottom: '32px' }}>
-          <strong style={{ color: '#fca5a5' }}>⚠️ Kraken.io Cost:</strong><span style={{ fontSize: '14px', opacity: 0.8 }}> Kraken.io starts at $5/month. CompressTo20KB is 100% free with no account required.</span>
+          <strong style={{ color: '#fca5a5' }}>⚠️ Kraken.io costs and servers:</strong><span style={{ fontSize: '14px', opacity: 0.8 }}> Kraken&apos;s own site says all optimisation and compression is carried out by its servers, and its plans start from a free account with a 100 MB testing quota before paid tiers at $5/month. CompressTo20KB has no quota to fill and no plan to buy.</span>
         </div>
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>Feature Comparison</h2>
         <div style={{ overflowX: 'auto', marginBottom: '32px' }}>
@@ -52,10 +44,10 @@ export default function ClientPage() {
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>Try Our Free Alternative</h2>
         <div style={{ marginBottom: '40px' }}><CompressorWidget defaultMode="quality" defaultFormat="webp" /></div>
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>FAQ</h2>
-        {faq.map((f, i) => (
+        {faq.map(([q, a], i) => (
           <details key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', padding: '14px 16px', marginBottom: '8px', cursor: 'pointer' }}>
-            <summary style={{ fontWeight: 700, fontSize: '14px', listStyle: 'none' }}>❓ {f.q}</summary>
-            <p style={{ marginTop: '10px', fontSize:'15px', opacity: 0.7, lineHeight: 1.6 }}>{f.a}</p>
+            <summary style={{ fontWeight: 700, fontSize: '14px', listStyle: 'none' }}>{q}</summary>
+            <p style={{ marginTop: '10px', fontSize:'15px', opacity: 0.7, lineHeight: 1.6 }}>{a}</p>
           </details>
         ))}
         <div style={{ marginTop: '36px', padding: '20px', background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: '12px' }}>

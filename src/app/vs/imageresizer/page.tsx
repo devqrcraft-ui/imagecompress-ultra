@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const rows = [
   { feature: "File Upload to Server", us: "❌ Never — 100% browser", them: "✅ Uploads to server" },
-  { feature: "Exact KB Target (20KB, 50KB)", us: "✅ Yes — Exact KB Mode", them: "❌ No" },
+  { feature: "Target KB Target (20KB, 50KB)", us: "✅ Yes — Target KB Mode", them: "❌ No" },
   { feature: "Gov / Passport Photo Preset", us: "✅ USCIS, DS-160", them: "❌ No" },
   { feature: "Shopify / Amazon / Etsy Preset", us: "✅ Yes", them: "❌ No" },
   { feature: "HEIC iPhone Support", us: "✅ Yes", them: "⚠️ Limited" },
@@ -20,7 +20,7 @@ const rows = [
 ];
 
 const faqs = [
-  { q: "Can ImageResizer compress to exactly 20KB?", a: "No. ImageResizer does not support exact KB targeting. CompressTo20KB is the only free tool with Exact KB Mode that hits a precise file size like 20KB, 50KB, or 100KB." },
+  { q: "Can ImageResizer compress to 20KB or under?", a: "No. ImageResizer does not support target-KB precision. CompressTo20KB is the only free tool with Target KB Mode that hits a precise file size like 20KB, 50KB, or 100KB." },
   { q: "Does ImageResizer upload files to a server?", a: "Yes. ImageResizer processes images server-side. CompressTo20KB runs entirely in your browser — no upload, no server, no data retention." },
   { q: "Which is better for passport photo compression?", a: "CompressTo20KB. It includes a Gov 20KB preset designed for USCIS, DS-160, and US passport requirements. ImageResizer has no such preset." },
 ];
@@ -45,7 +45,7 @@ export default function VsImageResizer() {
           <span className="text-4xl">🏆</span>
           <div>
             <div className="font-bold text-green-800 text-lg">CompressTo20KB wins — privacy & exact KB</div>
-            <div className="text-green-700 text-sm mt-1">Zero upload · Exact KB Mode · USCIS preset · 100% free</div>
+            <div className="text-green-700 text-sm mt-1">Zero upload · Target KB Mode · USCIS preset · 100% free</div>
           </div>
         </div>
         <div className="overflow-x-auto mb-12">

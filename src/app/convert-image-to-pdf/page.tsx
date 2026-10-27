@@ -21,7 +21,7 @@ export default function Page() {
 
       <div style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:12,padding:'20px 24px',marginBottom:32}}>
         <h2 style={{fontSize:20,fontWeight:800,marginBottom:12,color:'#fff'}}>Why Convert Images to PDF?</h2>
-        <p style={{fontSize:15,color:'#b0b8d1',lineHeight:1.75,margin:0}}>PDF format is ideal for sharing multiple images as a single document, printing, or archiving. Use this free converter to combine photos into one PDF for visa applications, portfolios, or reports. All processing runs locally — 100% private.</p>
+        <p style={{fontSize:15,color:'#b0b8d1',lineHeight:1.75,margin:0}}>PDF format is ideal for sharing multiple images as a single document, printing, or archiving. Use this free converter to combine photos into one PDF for visa applications, portfolios, or reports. All processing runs locally — private.</p>
       </div>
 
       <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:12,padding:'20px 24px',marginBottom:32}}>

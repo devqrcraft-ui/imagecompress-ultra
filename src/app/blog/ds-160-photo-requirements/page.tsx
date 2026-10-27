@@ -1,5 +1,4 @@
 
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image without losing quality?","acceptedAnswer":{"@type":"Answer","text":"Use modern formats like WebP or AVIF which offer 25-50% smaller file sizes than JPEG at the same visual quality. Our tool compresses images client-side in your browser with no upload required, preserving maximum quality."}},{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is 100% free with no file size limits, no account required, and no watermarks. All compression happens in your browser — your images never leave your device."}},{"@type":"Question","name":"What image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"We support JPEG, PNG, WebP, AVIF, and GIF. You can compress and convert between formats. WebP and AVIF produce the smallest file sizes for web use."}}]};
 import { Metadata } from "next";
 import AuthorBox from '@/app/components/AuthorBox'
 
@@ -7,7 +6,7 @@ export const metadata: Metadata = {
   title: "DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds",
   description: "Meet all DS-160 photo requirements instantly: 600x600px, JPEG, under 240KB. Free compression — works in browser, no upload, no account.",
   alternates: { canonical: 'https://www.compressto20kb.com/blog/ds-160-photo-requirements' },
-  keywords: 'DS-160 photo requirements, DS-160 photo size, compress DS-160 photo, DS-160 JPEG size, nonimmigrant visa photo size 2025',
+  keywords: 'DS-160 photo requirements, DS-160 photo size, compress DS-160 photo, DS-160 JPEG size, nonimmigrant visa photo size 2026',
   openGraph: {
     title: "DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds",
     description: "Meet all DS-160 photo requirements instantly: 600x600px, JPEG, under 240KB. Free compression — works in browser, no upload, no account.",
@@ -22,13 +21,12 @@ export default function DS160PhotoRequirements() {
     <>
       <main className="max-w-3xl mx-auto px-4 py-16">
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds","item":"https://www.compressto20kb.com/blog/ds-160-photo-requirements"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds","description":"Meet all DS-160 photo requirements instantly: 600x600px, JPEG, under 240KB. Free compression — works in browser, no upload, no account.","url":"https://www.compressto20kb.com/blog/ds-160-photo-requirements","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
       <div className="text-sm text-slate-400 mb-3">
         🇺🇸 US Visa · DS-160 Guide
       </div>
-      <h1 className="text-4xl font-bold mb-4">DS-160 Photo Requirements 2025 — Complete Guide</h1>
+      <h1 className="text-4xl font-bold mb-4">DS-160 Photo Requirements 2026 — Complete Guide</h1>
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
@@ -84,7 +82,7 @@ export default function DS160PhotoRequirements() {
         <ol className="text-sm text-blue-700 list-decimal pl-4 space-y-1">
           <li>Go to <a href="/?preset=50kb" className="underline font-semibold">CompressTo20KB.com</a></li>
           <li>Upload your JPEG photo (never leaves your device)</li>
-          <li>Type <strong>50</strong> in the Exact KB field or select "Gov 240KB" preset</li>
+          <li>Type <strong>50</strong> in the Target KB field or select "Gov 240KB" preset</li>
           <li>Download and upload to DS-160 portal</li>
         </ol>
       </div>
@@ -156,7 +154,7 @@ export default function DS160PhotoRequirements() {
       <div className="mt-12 p-6 bg-indigo-50 rounded-2xl border border-indigo-200">
         <h3 className="text-xl font-semibold mb-2">Compress your DS-160 photo now — free</h3>
         <p className="text-slate-300 mb-4">
-          Reduce your photo to under 50KB instantly. Files never leave your device — 100% private. No registration, no account needed.
+          Reduce your photo to under 50KB instantly. Files never leave your device — private. No registration, no account needed.
         </p>
         <div className="flex gap-3 flex-wrap">
           <a href="/?preset=50kb" className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">

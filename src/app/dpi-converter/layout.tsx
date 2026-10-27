@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { faq } from './faq';
 
 export const metadata: Metadata = {
   title: 'DPI Converter & Changer Online — 300 DPI Free, No Upload',
@@ -17,33 +18,7 @@ export const metadata: Metadata = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Does changing DPI affect image quality?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. Changing DPI metadata does not resize or affect pixel data — it only changes how software interprets the print size. Pixel dimensions stay the same.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What DPI does USCIS require?',
-      acceptedAnswer: { '@type': 'Answer', text: 'USCIS and US State Department recommend 300 DPI for printed photos. For digital uploads (DS-160, DV Lottery online), file size (max 240KB) and pixel dimensions (600-1200px) matter more.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why is my photo 72 DPI?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Most smartphone and digital cameras save photos at 72 DPI by default. This is fine for screens but may need changing to 300 DPI for printing or government document submission.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does this tool resize my image?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. This tool only changes the DPI metadata in the JPEG header. Your image pixel dimensions stay exactly the same.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is my image uploaded to a server?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. All processing happens in your browser using JavaScript. Your image never leaves your device.' },
-    },
-  ],
+  mainEntity: faq.map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })),
 };
 
 export default function Layout({ children }: { children: ReactNode }) {

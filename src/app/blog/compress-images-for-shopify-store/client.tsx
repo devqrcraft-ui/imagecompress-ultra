@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
-const faq=[{"q":"What image format should I use for Shopify?","a":"WebP is best for Shopify in 2025 — 30% smaller than JPEG at same quality. All modern browsers support WebP."},{"q":"How do I speed up my Shopify store with image compression?","a":"Compress all product images to under 500KB in WebP format before uploading."},{"q":"Does Shopify compress images automatically?","a":"Shopify converts images to WebP for delivery but does not resize them. Pre-compress to under 1MB for best results."}];
+const faq=[{"q":"What image format should I use for Shopify?","a":"WebP is best for Shopify in 2026 — 30% smaller than JPEG at same quality. All modern browsers support WebP."},{"q":"How do I speed up my Shopify store with image compression?","a":"Compress all product images to under 500KB in WebP format before uploading."},{"q":"Does Shopify compress images automatically?","a":"Shopify converts images to WebP for delivery but does not resize them. Pre-compress to under 1MB for best results."}];
 
 const schemaData = {
   blogPosting: {
@@ -40,9 +40,9 @@ export default function ClientPage(){
         </div>
       </nav>
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → Compress Images for Shopify Store 2025</div>
+        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → Compress Images for Shopify Store 2026</div>
         <div style={{display:'inline-block',background:'rgba(52,211,153,0.1)',border:'1px solid rgba(52,211,153,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#6ee7b7'}}>🛍️ Shopify</div>
-        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Images for Shopify Store 2025<br/><span style={{color:'#818cf8'}}>Speed Up Your Store · Boost SEO</span></h1>
+        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Images for Shopify Store 2026<br/><span style={{color:'#818cf8'}}>Speed Up Your Store · Boost SEO</span></h1>
         <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>

@@ -1,5 +1,4 @@
 
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image without losing quality?","acceptedAnswer":{"@type":"Answer","text":"Use modern formats like WebP or AVIF which offer 25-50% smaller file sizes than JPEG at the same visual quality. Our tool compresses images client-side in your browser with no upload required, preserving maximum quality."}},{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is 100% free with no file size limits, no account required, and no watermarks. All compression happens in your browser — your images never leave your device."}},{"@type":"Question","name":"What image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"We support JPEG, PNG, WebP, AVIF, and GIF. You can compress and convert between formats. WebP and AVIF produce the smallest file sizes for web use."}}]};
 import { Metadata } from "next";
 import AuthorBox from '@/app/components/AuthorBox'
 
@@ -7,7 +6,7 @@ export const metadata: Metadata = {
   title: "USCIS Photo Size Requirements 2026 — Complete Guide",
   description: "Complete USCIS photo size requirements 2026: file size 240KB, dimensions, format, background. Which forms need a photo? How to compress free — no upload.",
   alternates: { canonical: 'https://www.compressto20kb.com/blog/uscis-photo-size-requirements' },
-  keywords: 'USCIS photo size requirements 2025, USCIS photo requirements, compress USCIS photo, USCIS 240KB photo, green card photo requirements, I-485 photo size',
+  keywords: 'USCIS photo size requirements 2026, USCIS photo requirements, compress USCIS photo, USCIS 240KB photo, green card photo requirements, I-485 photo size',
   openGraph: {
     title: "USCIS Photo Size Requirements 2026 — Complete Guide",
     description: "Everything about USCIS photo requirements 2026: size, format, dimensions, which forms need photos, and how to compress free.",
@@ -22,13 +21,12 @@ export default function USCISPhotoRequirements() {
     <>
       <main className="max-w-3xl mx-auto px-4 py-16">
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"USCIS Photo Size Requirements 2026","item":"https://www.compressto20kb.com/blog/uscis-photo-size-requirements"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"USCIS Photo Size Requirements 2026","description":"Complete USCIS photo size requirements 2026: file size 240KB, dimensions, format, background. Which forms need a photo? How to compress free — no upload.","url":"https://www.compressto20kb.com/blog/uscis-photo-size-requirements","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
       <div className="text-sm text-slate-400 mb-3">
-        🇺🇸 USCIS · Immigration Guide 2025
+        🇺🇸 USCIS · Immigration Guide 2026
       </div>
-      <h1 className="text-4xl font-bold mb-4">USCIS Photo Size Requirements 2025 — Complete Guide</h1>
+      <h1 className="text-4xl font-bold mb-4">USCIS Photo Size Requirements 2026 — Complete Guide</h1>
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
@@ -39,12 +37,12 @@ export default function USCISPhotoRequirements() {
       <p className="text-slate-300 mb-8">Updated February 2026 · 9 min read</p>
 
       <p className="mb-6 text-lg">
-        USCIS (US Citizenship and Immigration Services) requires a specific digital photo for most immigration forms. Getting the photo wrong — wrong size, format or dimensions — can delay or invalidate your application. This guide covers every requirement for 2025 and shows you how to fix your photo for free in seconds.
+        USCIS (US Citizenship and Immigration Services) requires a specific digital photo for most immigration forms. Getting the photo wrong — wrong size, format or dimensions — can delay or invalidate your application. This guide covers every requirement for 2026 and shows you how to fix your photo for free in seconds.
       </p>
 
       {/* Quick reference */}
       <div className="bg-indigo-50 border border-indigo-200 rounded-2xl p-6 mb-10">
-        <h2 className="text-xl font-bold mb-4">⚡ USCIS Photo Requirements — Quick Reference 2025</h2>
+        <h2 className="text-xl font-bold mb-4">⚡ USCIS Photo Requirements — Quick Reference 2026</h2>
         <div className="grid grid-cols-2 gap-3 text-sm">
           {[
             ['File size', 'Max 240KB (portals often reject >50KB)'],
@@ -163,7 +161,7 @@ export default function USCISPhotoRequirements() {
         ))}
       </div>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">USCIS Photo Checklist 2025</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-4">USCIS Photo Checklist 2026</h2>
       <ul className="list-disc pl-6 mb-8 space-y-2">
         <li>File under 240KB (ideally under 50KB) in JPEG format</li>
         <li>Square crop, 600×600 to 1200×1200 pixels</li>

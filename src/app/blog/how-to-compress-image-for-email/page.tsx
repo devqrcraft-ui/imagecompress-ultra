@@ -1,9 +1,3 @@
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is the best image size for email attachments?","acceptedAnswer":{"@type":"Answer","text":"Keep email image attachments under 1MB. Most email clients including Gmail, Outlook, and Yahoo handle images under 1MB without issues. For inline images in email newsletters, aim for under 200KB per image."}},
-{"@type":"Question","name":"How do I compress an image for email without losing quality?","acceptedAnswer":{"@type":"Answer","text":"Use CompressTo20KB.com - drop your JPG, PNG, or WebP image, select Quality Mode at 80%, and download. The result is visually identical but 60-80% smaller. All processing happens in your browser."}},
-{"@type":"Question","name":"Why is my image too large to email?","acceptedAnswer":{"@type":"Answer","text":"Images from modern phones are typically 3-8MB. Compressing to under 500KB makes emails load instantly on mobile and avoids triggering spam filters."}},
-{"@type":"Question","name":"What image format is best for email?","acceptedAnswer":{"@type":"Answer","text":"JPEG is best for email photos - it compresses well and is supported by every email client. PNG works for logos with transparency. Avoid HEIC format as many email clients cannot display it."}}
-]};
 import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox'
 export const metadata: Metadata = {
@@ -17,7 +11,6 @@ export default function Page() {
   return (
     <>
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f172a,#1e1b4b)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
-      <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress Images for Email","item":"https://www.compressto20kb.com/blog/how-to-compress-image-for-email"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Email","description":"Compress images for email in seconds. Reduce JPG, PNG, WebP to under 1MB or 200KB without losing quality. Free, no upload, works in Gmail, Outlook, Yahoo.","url":"https://www.compressto20kb.com/blog/how-to-compress-image-for-email","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>

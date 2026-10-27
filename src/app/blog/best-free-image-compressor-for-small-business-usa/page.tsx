@@ -1,5 +1,11 @@
 
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image without losing quality?","acceptedAnswer":{"@type":"Answer","text":"Use modern formats like WebP or AVIF which offer 25-50% smaller file sizes than JPEG at the same visual quality. Our tool compresses images client-side in your browser with no upload required, preserving maximum quality."}},{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is 100% free with no file size limits, no account required, and no watermarks. All compression happens in your browser — your images never leave your device."}},{"@type":"Question","name":"What image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"We support JPEG, PNG, WebP, AVIF, and GIF. You can compress and convert between formats. WebP and AVIF produce the smallest file sizes for web use."}}]};
+const faq: [string, string][] = [
+  ['What should a small business look for in a free image compressor?', 'Practical needs come first: batch processing for product photos, a target file size you control, and no upload step that puts customer data on someone else\'s server. CompressTo20KB handles up to 50 files in one batch with a ZIP download, costs nothing (ads pay for the site), and runs entirely in your browser — no account and no watermark.'],
+  ['A payment portal asks my shop for an exact KB size — how close does the result land?', 'Target KB Mode searches the encoding quality range in up to 12 binary-search passes and returns the file at or under the number you type (5–5000 KB). It promises at-or-under, never "exactly that many bytes", and a file already smaller than your target comes back unchanged.'],
+  ['Can this tool put my product photos on a white background or crop them square for a marketplace?', 'No. This tool only re-encodes files smaller: it does not crop, does not change or remove backgrounds, and does not resize to arbitrary dimensions — it simply caps the longest side at 4096 pixels. Fix composition in a photo editor first, then compress here.'],
+  ['Which output format should our website, emails and listings use?', 'WebP or AVIF for your own site, JPEG for portals and email that demand it, and PNG or WebP when transparency matters. All four — WebP, AVIF, JPEG and PNG — can be output from the same tool in one pass.'],
+  ['Is "100% free" really unlimited, and what is the catch?', 'There is no file-count fee, no watermark and no queue: up to 50 files per batch is free. The honest catch is that lossy re-encoding always discards some data — size-targeted mode simply keeps the highest quality that still fits under your number.'],
+];
 import { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox'
 export const metadata: Metadata = {
@@ -33,11 +39,11 @@ export default function Page() {
       <p style={{fontSize:'16px',color:'rgba(255,255,255,0.9)',marginBottom:'32px',lineHeight:1.7}}>American small business owners need fast, free tools. Whether you run an Etsy shop, local service website, or email newsletter — compressing images saves bandwidth and speeds up your online presence.</p>
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Best Free Image Compressor for US Small Businesses in 2026","item":"https://www.compressto20kb.com/blog/best-free-image-compressor-for-small-business-usa"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Best Free Image Compressor for US Small Businesses in 2026","description":"Compare the best free image compression tools for American small businesses. No watermarks, no signup, instant download.","url":"https://www.compressto20kb.com/blog/best-free-image-compressor-for-small-business-usa","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
         <h2 style={{fontSize:'22px',fontWeight:600,marginBottom:'12px'}}>Why Image Compression Matters for US Small Business</h2>
-        <p style={{color:'rgba(255,255,255,0.7)',lineHeight:1.7}}>53% of US mobile users abandon sites that take over 3 seconds to load. Unoptimized images are the #1 cause of slow websites. Google PageSpeed and Core Web Vitals directly affect your local search ranking.</p>
+        <p style={{color:'rgba(255,255,255,0.7)',lineHeight:1.7}}>Buyers leave pages that take several seconds to load, and page speed is a known search-ranking input. On most small-business sites the heaviest elements are the images — so shrinking them is usually the cheapest speed win available.</p>
       </section>
       <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
         <h2 style={{fontSize:'22px',fontWeight:600,marginBottom:'12px'}}>Why Our Tool is Best for Small Business</h2>
@@ -45,8 +51,18 @@ export default function Page() {
           <li>100% free — no subscription, no credit card</li>
           <li>No watermarks added to your images</li>
           <li>Works for JPEG, PNG, WebP — all formats small businesses use</li>
-          <li>Compress to exact KB target: 20KB, 50KB, 100KB, 200KB, or custom</li>
+          <li>Type any target from 5 to 5000 KB — output lands at or under it</li>
+          <li>Batch up to 50 files in one run, download as a single ZIP</li>
         </ol>
+      </section>
+      <section style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'14px',padding:'24px',marginBottom:'24px'}}>
+        <h2 style={{fontSize:'22px',fontWeight:600,marginBottom:'12px'}}>Frequently Asked Questions</h2>
+        {faq.map(([q, a], i) => (
+          <details key={i} style={{background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.1)',borderRadius:'12px',padding:'14px 16px',marginBottom:'10px'}}>
+            <summary style={{fontWeight:600,color:'white',cursor:'pointer'}}>{q}</summary>
+            <p style={{color:'rgba(255,255,255,0.7)',fontSize:'14px',lineHeight:1.7,marginTop:'10px'}}>{a}</p>
+          </details>
+        ))}
       </section>
       <div style={{textAlign:'center',marginTop:'40px'}}>
         <a href='/' style={{display:'inline-block',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',padding:'14px 32px',borderRadius:'10px',textDecoration:'none',fontWeight:600,fontSize:'16px'}}>Compress Images Free →</a>

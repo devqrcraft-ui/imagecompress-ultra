@@ -21,7 +21,7 @@ export default function ClientPage() {
         <div className="space-y-4">
           {[
             { n: '1', t: 'Upload up to 50 images', d: 'Drag and drop or click to select. Accepts JPEG, PNG, WebP, and HEIC. All files load directly in your browser.' },
-            { n: '2', t: 'Set target format and size', d: 'Choose output format (JPEG, PNG, WebP) and a quality level or exact KB target. Settings apply to every image in the batch.' },
+            { n: '2', t: 'Set target format and size', d: 'Choose output format (JPEG, PNG, WebP) and a quality level or target KB size. Settings apply to every image in the batch.' },
             { n: '3', t: 'Compress all at once', d: 'Click Compress. All images are processed in your browser using Canvas API — no waiting for server round-trips.' },
             { n: '4', t: 'Download as ZIP', d: 'Click Download All as ZIP to get every image bundled into a single file. Or download individually if you prefer.' },
           ].map(s => (

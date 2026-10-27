@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const compare = [
   { feature: 'Free images', us: '✅ Unlimited', them: '⚠️ Limited free tier' },
-  { feature: 'Exact KB mode', us: '✅ Yes', them: '❌ No' },
+  { feature: 'Target KB mode', us: '✅ Yes', them: '❌ No' },
   { feature: 'Bulk compression', us: '✅ 50 at once', them: '❌ One at a time' },
   { feature: 'Privacy', us: '✅ 100% in-browser', them: '❌ Server upload' },
   { feature: 'AVIF/HEIC support', us: '✅ Yes', them: '❌ Limited' },
@@ -11,7 +11,7 @@ const compare = [
 ];
 const faq = [
   { q: 'What is the difference between CompressTo20KB and ImageResizer?', a: 'ImageResizer uploads your files to servers and focuses on resizing. CompressTo20KB is browser-based, supports exact KB compression, bulk processing, and never uploads your files.' },
-  { q: 'Can I compress to an exact KB size instead of just resizing?', a: 'Yes — CompressTo20KB has an Exact KB Mode where you type a target like 20KB, 100KB or 200KB and it hits that target precisely. ImageResizer only resizes by dimensions.' },
+  { q: 'Can I compress to an exact KB size instead of just resizing?', a: 'Yes — CompressTo20KB has an Target KB Mode where you type a target like 20KB, 100KB or 200KB and it returns a file at or under that target. ImageResizer only resizes by dimensions.' },
 ];
 export default function ClientPage() {
   return (
@@ -26,7 +26,7 @@ export default function ClientPage() {
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
         <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}>Comparison → CompressTo20KB vs ImageResizer</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>CompressTo20KB vs ImageResizer<br/><span style={{color:'#818cf8'}}>Better Free Alternative 2026</span></h1>
-        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>ImageResizer focuses on dimensions. CompressTo20KB goes further — exact KB targets, bulk compression, AVIF/HEIC support, and 100% browser-based privacy.</p>
+        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>ImageResizer focuses on dimensions. CompressTo20KB goes further — target KB sizes, bulk compression, AVIF/HEIC support, and 100% browser-based privacy.</p>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Feature Comparison</h2>
         <div style={{overflowX:'auto',marginBottom:'32px'}}>
           <table style={{width:'100%',borderCollapse:'collapse',fontSize:'15px'}}>

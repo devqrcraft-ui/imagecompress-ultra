@@ -43,8 +43,7 @@ export default function CompressTo240KBPage() {
         description: 'Free tool to compress photos to under 240KB for DS-160 US Visa application.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '2841', bestRating: '5', worstRating: '1' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 240KB","item":"https://www.compressto20kb.com/compress-to-240kb"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,7 +67,7 @@ export default function CompressTo240KBPage() {
           Compress Photo to <span style={{ color: '#818cf8' }}>240KB</span> — DS-160 US Visa Ready
         </h1>
         <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>
-          The DS-160 US Visa application requires photos under <strong style={{ color: 'white' }}>240KB in JPEG format</strong>. Most phone photos are 3-8MB — way too large. Our free tool compresses any photo to exactly under 240KB in seconds, no upload needed.
+          The DS-160 US Visa application requires photos under <strong style={{ color: 'white' }}>240KB in JPEG format</strong>. Most phone photos are 3-8MB — way too large. Our free tool compresses any photo to 240KB or under in seconds, no upload needed.
         </p>
 
         {/* DS-160 Requirements Box */}
@@ -108,7 +107,7 @@ export default function CompressTo240KBPage() {
         {[
           { icon: '📱', problem: 'iPhone HEIC format rejected', fix: 'DS-160 only accepts JPEG. Our tool automatically converts HEIC to JPEG during compression.' },
           { icon: '🎨', problem: 'Display P3 color space rejected', fix: 'iPhones shoot in Display P3 color space. DS-160 requires sRGB. Our tool converts automatically.' },
-          { icon: '📏', problem: 'Photo too large (3MB, 5MB, 8MB)', fix: 'Click Exact KB Mode, enter 240 as target. We compress to under 240KB while maintaining quality.' },
+          { icon: '📏', problem: 'Photo too large (3MB, 5MB, 8MB)', fix: 'Click Target KB Mode, enter 240 as target. We compress to under 240KB while maintaining quality.' },
           { icon: '⬛', problem: 'Wrong background color', fix: 'DS-160 requires white or off-white background. Make sure no shadows or patterns are visible.' },
           { icon: '😐', problem: 'Face too small or too large', fix: 'Your head must fill 50-69% of the frame. Crop your photo so face is centered and appropriately sized.' },
         ].map(({ icon, problem, fix }) => (
@@ -128,7 +127,7 @@ export default function CompressTo240KBPage() {
         {[
           { step: '1', title: 'Click the button above', desc: 'Opens free compressor. No signup, no install, works instantly.' },
           { step: '2', title: 'Upload your photo', desc: 'Drag & drop or click to select. JPEG, PNG, WebP, HEIC all supported.' },
-          { step: '3', title: 'Select Exact KB Mode', desc: 'Click the "🎯 Exact KB Mode" tab and enter 240 as your target size.' },
+          { step: '3', title: 'Select Target KB Mode', desc: 'Click the "🎯 Target KB Mode" tab and enter 240 as your target size.' },
           { step: '4', title: 'Download your compressed photo', desc: 'Download the JPEG file. It will be under 240KB and ready for DS-160 upload.' },
           { step: '5', title: 'Upload to DS-160', desc: 'Go to ceac.state.gov/genniv and upload your compressed photo to the application.' },
         ].map(({ step, title, desc }) => (

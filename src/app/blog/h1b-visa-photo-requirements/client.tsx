@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
-const faq=[{"q":"What photo is needed for H1B visa?","a":"H1B uses the DS-160 form. Photo must be JPEG, 600x600px minimum, under 240KB, white background, taken within 6 months."},{"q":"Is H1B photo different from other US visas?","a":"No. All US nonimmigrant visas use DS-160 with the same photo requirements: JPEG under 240KB, white background."},{"q":"How do I compress photo for H1B DS-160?","a":"Upload your photo, switch to Exact KB Mode, set 200KB, select JPEG, and download. Takes under 30 seconds."}];
+const faq=[{"q":"What photo is needed for H1B visa?","a":"H1B uses the DS-160 form. Photo must be JPEG, 600x600px minimum, under 240KB, white background, taken within 6 months."},{"q":"Is H1B photo different from other US visas?","a":"No. All US nonimmigrant visas use DS-160 with the same photo requirements: JPEG under 240KB, white background."},{"q":"How do I compress photo for H1B DS-160?","a":"Upload your photo, switch to Target KB Mode, set 200KB, select JPEG, and download. Takes under 30 seconds."}];
 
 const schemaData = {
   blogPosting: {
@@ -40,9 +40,9 @@ export default function ClientPage(){
         </div>
       </nav>
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → H1B Visa Photo Requirements 2025</div>
+        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → H1B Visa Photo Requirements 2026</div>
         <div style={{display:'inline-block',background:'rgba(99,102,241,0.1)',border:'1px solid rgba(99,102,241,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#818cf8'}}>🇺🇸 H1B Visa</div>
-        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>H1B Visa Photo Requirements 2025<br/><span style={{color:'#818cf8'}}>Work Visa Application Guide</span></h1>
+        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>H1B Visa Photo Requirements 2026<br/><span style={{color:'#818cf8'}}>Work Visa Application Guide</span></h1>
         <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>

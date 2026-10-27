@@ -1,11 +1,23 @@
 
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress a passport photo to the required size?","acceptedAnswer":{"@type":"Answer","text":"Upload your passport photo, select JPEG format, switch to Exact KB Mode, type your target (e.g. 200 for under 240KB for US passport), and click Compress. All processing runs in your browser — your photo never leaves your device."}},{"@type":"Question","name":"What file size is required for US passport photos?","acceptedAnswer":{"@type":"Answer","text":"For online US passport applications and renewals, photos must be JPEG format under 240KB, at least 600x600px. For printed photos submitted by mail, the photo must be 2x2 inches printed at high resolution."}},{"@type":"Question","name":"Is it safe to compress passport photos using an online tool?","acceptedAnswer":{"@type":"Answer","text":"Yes — with this tool. All compression runs locally in your browser using WebAssembly. Your passport photo never leaves your device. Other tools that upload files to their servers pose a real privacy risk for identity documents."}},{"@type":"Question","name":"Can I compress passport photos for other countries?","acceptedAnswer":{"@type":"Answer","text":"Yes — use Exact KB Mode to target the specific file size required by any country's passport or visa portal. Common targets: US under 240KB, UK under 6MB, Schengen under 2MB, India under 50KB."}},{"@type":"Question","name":"Does compressing a passport photo affect its print quality?","acceptedAnswer":{"@type":"Answer","text":"For online submissions, file size is all that matters — visual quality at 200-240KB JPEG is more than sufficient for digital review. For printed photos, use the highest quality setting that fits under the file size limit."}}]};
+const faq: [string, string][] = [
+  ['What file size should a passport photo be?', 'Whatever the portal in front of you states. This page links no official document, so we will not publish a per-country figure as if it were a rule: read the ceiling on the upload screen of your own application, then type it into Target KB Mode, which accepts 5-5000 KB. The compressor does not care which country you are filing for, only which number you give it.'],
+  ['How do I compress a passport photo to that size?', 'Add the photo, select JPEG, switch to Target KB Mode and enter your number. The tool searches quality downward inside your browser and returns the best encode that lands at or under the target. A photo already smaller than the target comes back unchanged; if a very large file cannot reach an aggressive number, reduce the pixel dimensions first and run it again.'],
+  ['Can this tool produce the 2x2 inch photo a paper form asks for?', 'No. It changes file size and encoding only: it cannot print, crop to an aspect ratio, enforce a pixel box, or remove a background, and while compressing it caps the longest side at 4096 px. Crop the photo to the spec in an editor or have it printed, then compress the digital file here.'],
+  ['Is my passport photo uploaded anywhere?', 'No. The image is decoded and re-encoded on your own device, so there is no server copy to store or leak. Open DevTools and watch the Network tab while you compress to confirm it - a check worth running before trusting any tool with a biometric photo.'],
+  ['Will a compressed photo still pass digital review?', 'Compression removes encoding overhead, not composition: the background, face position and framing are exactly what you uploaded. Check the Before/After preview before you submit, and if a portal still rejects the file, read the message - it will name something this tool cannot change, such as dimensions or background, rather than the kilobytes.'],
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+};
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Compress Passport Photo Free — US State Department, USCIS, DS-11, India, Ukraine | No Upload',
-  description: 'Compress passport photo free online for US State Department, USCIS, DS-160, DS-11, India UIDAI, Pakistan NADRA, Ukraine Diia. Meet 20KB–240KB requirements instantly. Files never uploaded — 100% private.',
+  title: 'Compress Passport Photo Free — Fits Any Portal Size Limit, No Upload',
+  description: 'Compress a passport or visa photo to whatever ceiling your form states — JPEG, in your browser, never uploaded. Set 20KB, 50KB, 240KB or any other target and get the best quality that fits.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-passport-photo' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-passport-photo' },
   keywords: 'compress passport photo, US passport photo size, State Department photo requirements, USCIS photo compress, DS-11 photo size, compress passport photo free, passport photo 20KB, passport photo 50KB',
@@ -24,7 +36,7 @@ export default function PassportPage() {
   return (
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f2a1e 100%)',fontFamily:'Inter,sans-serif',color:'white'}}>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -48,7 +60,7 @@ export default function PassportPage() {
         </nav>
 
         <div style={{fontSize:'15px',opacity:0.5,marginBottom:'10px'}}>
-          🪪 Passport Photo Compressor — All Countries 2025
+          🪪 Passport Photo Compressor — Set the Size Your Form Asks For
         </div>
 
         <h1 style={{fontSize:'32px',fontWeight:800,marginBottom:'12px'}}>
@@ -56,14 +68,14 @@ export default function PassportPage() {
         </h1>
         <div style={{background:'rgba(129,140,248,0.13)',border:'1px solid rgba(129,140,248,0.35)',borderRadius:'14px',padding:'20px 24px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#e2e8f0'}}>
-            <strong style={{color:'#818cf8'}}>Quick answer:</strong> To compress a passport photo, upload your image, enable <strong>Exact KB Mode</strong>, set your target (200KB for US State Dept, 50KB for India UIDAI, 20KB for Pakistan NADRA), select JPEG, and download. All processing runs in your browser — your passport photo never leaves your device. Works for DS-11, DS-160, USCIS, and 50+ government portals worldwide.
+            <strong style={{color:'#818cf8'}}>Quick answer:</strong> Add your image to the compressor, enable <strong>Target KB Mode</strong>, type the number printed on your own form, select JPEG and download. The tool returns the best quality that still fits at or under that target, and it works entirely in your browser, so a passport photo never leaves your device. We deliberately do not restate any country&#39;s figure on this page: specs change and this page links no official document, so the limit on your submission screen is the one to use.
           </p>
         </div>
         <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.65,marginBottom:'8px'}}>
-          Compress your passport photo for <strong style={{color:'white'}}>US State Department</strong>, <strong style={{color:'white'}}>USCIS</strong>, <strong style={{color:'white'}}>DS-11</strong>, <strong style={{color:'white'}}>DS-160</strong>, India UIDAI, Pakistan NADRA, Ukraine Diia and 50+ other government portals. Meet any file size requirement — 20KB, 50KB or 240KB — instantly and for free.
+          Built for anyone filing to a portal that states a file-size ceiling - consular, immigration, passport or ID uploads included: type the ceiling your own form shows into Target KB Mode and the tool returns the highest quality that stays at or under it.
         </p>
         <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.45,marginBottom:'24px'}}>
-          Unlike PNG Shrinker, Fotor or Zamzar — your passport or ID photo never leaves your device. All compression happens locally in your browser. No account needed, no registration, GDPR compliant.
+          Your passport or ID photo is decoded and re-encoded inside this tab, so nothing is stored on anyone else's server. No account, no registration, no watermark.
         </p>
 
         {/* Privacy banner */}
@@ -71,7 +83,7 @@ export default function PassportPage() {
           <span style={{fontSize:'28px'}}>🔒</span>
           <div>
             <div style={{fontWeight:700,fontSize:'14px',color:'#34d399',marginBottom:'4px'}}>Your passport photo is 100% safe</div>
-            <div style={{fontSize:'15px',opacity:0.65}}>Unlike online tools that upload your ID photo to foreign servers, our tool processes everything locally in your browser. No server ever receives your image. Safe for immigration and government use.</div>
+            <div style={{fontSize:'15px',opacity:0.65}}>There is no upload step in this tool at all: the image is decoded and re-encoded in your own browser tab, so no server ever receives it. You can confirm that yourself in DevTools under Network while you compress.</div>
           </div>
         </div>
 
@@ -84,7 +96,7 @@ export default function PassportPage() {
             Compress to 50KB →
           </Link>
           <Link href="/?preset=240kb" style={{display:'inline-block',padding:'14px 24px',borderRadius:'10px',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#a5b4fc',fontWeight:700,fontSize:'15px',textDecoration:'none'}}>
-            🇺🇸 USCIS 240KB →
+            Compress to 240KB →
           </Link>
         </div>
 
@@ -93,13 +105,13 @@ export default function PassportPage() {
           <div style={{display:'flex',gap:'10px',alignItems:'flex-start'}}>
             <span style={{fontSize:'28px'}}>🇺🇸</span>
             <div>
-              <div style={{fontWeight:800,fontSize:'15px',color:'#a5b4fc',marginBottom:'6px'}}>US Passport & USCIS Photo Requirements</div>
+              <div style={{fontWeight:800,fontSize:'15px',color:'#a5b4fc',marginBottom:'6px'}}>US Passport and Immigration Uploads: Where the Spec Comes From</div>
               <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'8px',marginBottom:'12px'}}>
                 {[
-                  ['📏','File size','Max 240KB (JPEG)'],
-                  ['📐','Dimensions','600×600 — 1200×1200 px'],
-                  ['🎨','Background','Plain white or off-white'],
-                  ['🖨️','DPI','300 DPI recommended'],
+                  ['📏','File size','Read it from the upload page you are filing on'],
+                  ['📐','Dimensions','Stated by the agency, not by this page'],
+                  ['🎨','Background','Plain and light, as your form describes it'],
+                  ['🖼️','What this tool changes','Encoding and file weight only - never the crop'],
                 ].map(([icon,label,val])=>(
                   <div key={label} style={{fontSize:'12px',opacity:0.7}}>
                     <span style={{marginRight:'4px'}}>{icon}</span>
@@ -108,7 +120,7 @@ export default function PassportPage() {
                 ))}
               </div>
               <p style={{fontSize:'15px',opacity:0.6,margin:'0 0 12px',lineHeight:'1.6'}}>
-                Used for: <strong style={{color:'white'}}>DS-11</strong> (new passport), <strong style={{color:'white'}}>DS-82</strong> (renewal), <strong style={{color:'white'}}>DS-160</strong> (nonimmigrant visa), <strong style={{color:'white'}}>USCIS forms</strong> (I-485, N-400, I-90), <strong style={{color:'white'}}>DV Lottery</strong>.
+                The published US specifications live on the State Department and USCIS sites themselves. This page does not copy those figures out of context: open the page where you are uploading, note the file size and pixel box it prints, and set that as your target here.
               </p>
               <Link href="/compress-for-uscis" style={{display:'inline-block',padding:'8px 18px',borderRadius:'8px',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',fontWeight:700,fontSize:'15px',textDecoration:'none'}}>
                 Full USCIS Guide →
@@ -118,17 +130,18 @@ export default function PassportPage() {
         </div>
 
         {/* Requirements by country */}
-        <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'14px'}}>Requirements by Country</h2>
+        <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'14px'}}>Where to Read Your Own Limit</h2>
+        <p style={{fontSize:'15px',opacity:0.6,marginBottom:'14px',lineHeight:1.7}}>The per-country kilobyte and pixel figures that used to sit in this list have been removed: we cannot cite an official page for each of them from here, they change without notice, and the number that decides whether your upload is accepted is the one your own form prints.</p>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:'10px',marginBottom:'28px'}}>
           {[
-            ['🇺🇸','USA — State Dept / USCIS / DS-11','Max 240KB, JPEG, 600×600 to 1200×1200 px, white background'],
-            ['🇮🇳','India — UIDAI / Passport Seva','Max 20KB, JPEG, white background'],
-            ['🇵🇰','Pakistan — NADRA / HEC','Max 20KB, JPEG format required'],
-            ['🇺🇦','Ukraine — Diia / Prozorro','20–50KB, JPEG, 35×45mm'],
-            ['🇧🇩','Bangladesh — NID / Passport','Max 30KB, JPEG'],
-            ['🇵🇭','Philippines — PSA / DFA','Max 50KB, JPEG'],
-            ['🇬🇧','UK — His Majesty\'s Passport','Max 50KB, JPEG, 35×45mm'],
-            ['🇨🇦','Canada — IRCC Passport','Max 240KB, JPEG, white background'],
+            ['🇺🇸','USA — passport and nonimmigrant visa uploads','The State Department publishes its own digital image requirements; set your target from what that page prints today.'],
+            ['🇬🇧','UK — visa and immigration digital photo','The gov.uk photo page for the specific application type you are filing.'],
+            ['🇮🇳','India — e-Visa and Passport Seva','The upload screen of your own application; those specs are revised periodically.'],
+            ['🇨🇦','Canada — IRCC online application','The photo requirements attached to the online form you are completing.'],
+            ['🇯🇵','Japan — visa submission','The Ministry of Foreign Affairs page for the visa category you applied under.'],
+            ['🇵🇰','Pakistan — e-Visa','The e-Visa portal you file on, which states the accepted photo file size.'],
+            ['🇨🇳','China — visa','The visa application centre instructions for your jurisdiction.'],
+            ['🇹🇷','Türkiye — e-Visa','The e-Visa site itself, which lists the photo conditions for your nationality.'],
           ].map(([flag,country,req])=>(
             <div key={country} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'14px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontSize:'22px',marginBottom:'6px'}}>{flag}</div>
@@ -141,17 +154,11 @@ export default function PassportPage() {
         {/* FAQ */}
         <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'14px'}}>Frequently Asked Questions</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'10px',marginBottom:'28px'}}>
-          {[
-            ['What size should a US passport photo be?','US State Department requires passport photos in JPEG format, 600×600 to 1200×1200 pixels, max 240KB file size. For DS-11 and DS-82 online portals, files under 50KB work best.'],
-            ['Can I use this for DS-11 or DS-82 passport renewal?','Yes. Both forms require a JPEG photo under 240KB. Upload your photo, select 50KB or 240KB preset, and download instantly.'],
-            ['What is the difference between USCIS and State Department photo requirements?','Both require JPEG format, max 240KB, 600×600 to 1200×1200 pixels, and white background. The requirements are essentially identical.'],
-            ['Does India UIDAI require a 20KB photo?','Yes. UIDAI (Aadhaar) and Passport Seva portals require photos under 20KB in JPEG format. Our tool compresses to exactly 20KB.'],
-            ['Is my passport photo safe?','Yes. All compression happens in your browser — your photo never leaves your device and is never stored on any server.'],
-          ].map(([q,a])=>(
-            <div key={q} style={{background:'rgba(255,255,255,0.03)',borderRadius:'10px',padding:'16px',border:'1px solid rgba(255,255,255,0.07)'}}>
-              <div style={{fontWeight:700,fontSize:'14px',marginBottom:'6px',color:'#a5b4fc'}}>{q}</div>
-              <div style={{fontSize:'15px',opacity:0.6,lineHeight:'1.6'}}>{a}</div>
-            </div>
+          {faq.map(([q, a], i) => (
+            <details key={i} style={{ background: 'rgba(255,255,255,0.03)', borderRadius: '10px', padding: '16px', border: '1px solid rgba(129,140,248,0.22)' }}>
+              <summary style={{ fontWeight: 700, fontSize: '15px', cursor: 'pointer', color: '#a5b4fc' }}>{q}</summary>
+              <p style={{ margin: '9px 0 0', fontSize: '15px', opacity: 0.65, lineHeight: 1.65 }}>{a}</p>
+            </details>
           ))}
         </div>
 

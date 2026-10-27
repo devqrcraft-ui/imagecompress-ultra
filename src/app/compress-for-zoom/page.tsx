@@ -1,122 +1,166 @@
-
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Will my images be uploaded to a server when compressing?","acceptedAnswer":{"@type":"Answer","text":"No. All compression runs locally in your browser using WebAssembly. Your files never leave your device — unlike TinyPNG, 11zon, and Cloudinary which upload files to their servers."}},{"@type":"Question","name":"Can I compress multiple images at once?","acceptedAnswer":{"@type":"Answer","text":"Yes — upload up to 50 images at once and compress them all in one batch. Download individually or as a ZIP. All processing stays in your browser — free, no signup required."}},{"@type":"Question","name":"What formats are supported?","acceptedAnswer":{"@type":"Answer","text":"JPEG, PNG, WebP, AVIF, and HEIC (iPhone photos) are all supported as input. Output can be WebP, AVIF, JPEG, or PNG. HEIC files from iPhone are automatically converted in your browser."}},{"@type":"Question","name":"Is this tool free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free with no limits, no watermarks, no signup, and no daily quotas."}}]};
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Zoom — Free, No Upload | CompressTo20KB',
-  description: 'Compress images for Zoom free in your browser. No upload, no signup. Resize to exact KB for Zoom requirements instantly.',
-  keywords: ['compress image for zoom', 'zoom image size', 'zoom photo requirements', 'compress for zoom free'],
+  title: 'Zoom Image Sizes: 2MB Photo, 1MB Logo, 15MB Background',
+  description: 'Zoom sets three limits, not one: a 2 MB profile photo, a 1 MB waiting-room logo, a 15 MB background. Match the file to the right one, offline.',
+  keywords: 'zoom profile picture size, zoom virtual background 15mb, zoom waiting room image 1mb, compress image for zoom, zoom background resolution 1920x1080',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-zoom' },
   openGraph: {
-    title: 'Compress Image for Zoom — Free & Private',
-    description: 'Browser-based compression for Zoom. Files never leave your device.',
+    title: 'Zoom Image Requirements: Photo, Background, Waiting Room',
+    description: 'Zoom applies a different ceiling to every image you upload. Match your file to the correct one, locally, in your browser.',
     url: 'https://www.compressto20kb.com/compress-for-zoom',
   },
 };
 
+const faq: [string, string][] = [
+  ['Why will Zoom reject my virtual background?', 'Zoom’s support article on changing your virtual background image accepts 24-bit PNG or JPG/JPEG only, and caps the file at 15 MB. A background that fails to load is usually outside one of those two conditions — a different container, or a heavier file — rather than a network problem.'],
+  ['What resolution should a Zoom background be?', 'Zoom recommends matching the image to your camera’s aspect ratio, giving 1280 x 720 or 1920 x 1080 as the working sizes, and its requirements article notes that a virtual background without a green screen caps your outgoing video at 720p. Encoding a 4000-pixel-wide background buys detail the pipeline will not display.'],
+  ['Is the 1 MB and the 2 MB limit the same upload?', 'No, and mixing them up is the usual frustration. Zoom’s waiting-room customization page puts its branding image at GIF, JPG or PNG, maximum 1 MB, minimum 400 x 200 px with 2:1 recommended; the profile picture on the web portal allows JPG/JPEG, GIF or PNG smaller than 2 MB. Two different fields, two different ceilings.'],
+  ['Can this tool square-crop my Zoom profile photo?', 'It cannot. Zoom handles the framing itself — both the web portal and the account profile let you adjust the crop area after uploading — while this page’s compressor only changes how heavily the file is encoded. Get the framing right in Zoom, get the weight right here.'],
+  ['Is my face copied anywhere when I shrink a Zoom picture?', 'No. The decode and re-encode happen inside the browser tab, so no upload occurs, no queue forms and no watermark is added. Watching the Network panel during a run is a quick way to satisfy yourself that nothing goes out.'],
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+};
+
+const ceilings: { figure: string; label: string; detail: string; source: string }[] = [
+  {
+    figure: '1 MB',
+    label: 'Waiting-room branding image',
+    detail: 'GIF, JPG or PNG. Minimum resolution 400 x 200 px, with a 2:1 aspect ratio recommended at larger sizes.',
+    source: 'Enabling and customizing the waiting room',
+  },
+  {
+    figure: '2 MB',
+    label: 'Your own profile picture',
+    detail: 'JPG/JPEG, GIF or PNG, smaller than 2 MB, uploaded on the web portal — with an optional crop step inside Zoom.',
+    source: 'Managing your profile picture on the Zoom web portal',
+  },
+  {
+    figure: '15 MB',
+    label: 'Virtual background',
+    detail: '24-bit PNG or JPG/JPEG only, with 1280 x 720 or 1920 x 1080 the recommended working sizes.',
+    source: 'Changing your virtual background image',
+  },
+];
+
 export default function CompressForZoomPage() {
   return (
-    <main style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image for Zoom","item":"https://www.compressto20kb.com/compress-for-zoom"}]}' }} />
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>⚡ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
-          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
-          <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
-        </div>
-      </nav>
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
-        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}><Link href="/blog" style={{ color: 'inherit', textDecoration: 'none' }}>Blog</Link> → Compress for Zoom</div>
-        <div style={{ display: 'inline-block', background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '10px', padding: '6px 14px', fontSize: '13px', marginBottom: '16px' }}>🆓 Zoom · Free Tool</div>
-        <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>Compress Images for Zoom<br/><span style={{ color: '#818cf8' }}>Free, Private & Instant</span></h1>
-        <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>Need to compress images for Zoom? Our free browser-based tool compresses JPEG, PNG, WebP instantly — no upload required, no signup needed. Your files never leave your device.</p>
 
-        <div style={{ background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '16px', padding: '24px', marginBottom: '32px', textAlign: 'center' }}>
-          <p style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Ready to compress for Zoom?</p>
-          <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '14px 32px', borderRadius: '10px', textDecoration: 'none', fontWeight: 700, fontSize: '16px' }}>⚡ Compress Now — Free</Link>
-          <p style={{ fontSize: '13px', opacity: 0.5, marginTop: '8px' }}>🔒 Files never leave your browser</p>
-        </div>
-
-        <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>Zoom Image Requirements</h2>
-        <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '12px', padding: '20px', marginBottom: '24px' }}>
-          <ul style={{ margin: 0, paddingLeft: '20px', lineHeight: 2, opacity: 0.85, fontSize: '15px' }}>
-            <li>Maximum file size: typically <strong>1MB–5MB</strong> depending on plan</li>
-            <li>Recommended format: <strong>JPEG or PNG</strong></li>
-            <li>Optimal resolution: <strong>1080×1080px</strong> to <strong>2048×2048px</strong></li>
-            <li>For best results: compress to <strong>under 500KB</strong></li>
-          </ul>
+      <div style={{ minHeight: '100vh', background: '#0a1024', color: '#d8e0f5', fontFamily: 'system-ui,sans-serif' }}>
+        <div style={{ maxWidth: '840px', margin: '0 auto', padding: '36px 20px 10px' }}>
+          <div style={{ fontSize: '14px', opacity: 0.5, marginBottom: '10px' }}>
+            <Link href="/" style={{ color: '#7ea2ff', textDecoration: 'none', fontWeight: 600 }}>Home</Link> → Compress for Zoom
+          </div>
+          <h1 style={{ fontSize: 'clamp(25px,4vw,35px)', fontWeight: 800, lineHeight: 1.22, margin: '0 0 14px', color: '#f3f7ff' }}>
+            Zoom Does Not Have One Image Limit.<br />
+            <span style={{ color: '#0b53f6' }}>It Has Three, And They Live In Different Menus.</span>
+          </h1>
+          <p style={{ fontSize: '16px', lineHeight: 1.8, margin: '0 0 10px', color: 'rgba(216,224,245,0.82)' }}>
+            Most guides for this platform quote a single number and move on. Zoom’s own support articles are more specific than that: the branding picture on your waiting room, the small round photo next to your name, and the background behind your video each carry their own format list and their own byte ceiling. Pick the wrong one and either the upload refuses or you waste an afternoon shrinking a file that never needed shrinking.
+          </p>
+          <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'rgba(216,224,245,0.82)' }}>
+            Everything on this page is quoted from support.zoom.com and was read there in October 2026. Where Zoom stays silent, this page says so. Encoding runs locally in your tab — relevant for the profile photo, which is your face, and for a waiting-room graphic that may carry your company’s branding.
+          </p>
         </div>
 
-        <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>How to Compress Images for Zoom (3 Steps)</h2>
-        <div style={{ display: 'grid', gap: '12px', marginBottom: '32px' }}>
-          {[
-            { n: '1', t: 'Upload Your Image', d: 'Drag & drop or click to select. Supports JPEG, PNG, WebP, HEIC up to 50MB.' },
-            { n: '2', t: 'Set Target Size', d: 'Type your target KB — or use the Zoom preset for instant optimization.' },
-            { n: '3', t: 'Download Compressed File', d: 'Click download. Your optimized image is ready for Zoom in seconds.' },
-          ].map(s => (
-            <div key={s.n} style={{ display: 'flex', gap: '16px', background: 'rgba(255,255,255,0.04)', borderRadius: '12px', padding: '16px' }}>
-              <div style={{ width: '32px', height: '32px', background: 'rgba(99,102,241,0.3)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, flexShrink: 0 }}>{s.n}</div>
-              <div><strong>{s.t}</strong><br/><span style={{ opacity: 0.65, fontSize: '14px' }}>{s.d}</span></div>
-            </div>
-          ))}
+        <div style={{ maxWidth: '840px', margin: '0 auto', padding: '16px 20px 30px' }}>
+          <CompressorTool initialTargetKB={200} />
         </div>
 
-        <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>Why Use CompressTo20KB for Zoom?</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '12px', marginBottom: '32px' }}>
-          {[
-            { icon: '🔒', t: '100% Private', d: 'Files processed locally in your browser. Zero uploads.' },
-            { icon: '🎯', t: 'Exact KB Control', d: 'Hit any file size target precisely.' },
-            { icon: '⚡', t: 'Instant Results', d: 'No waiting, no queue, no server delays.' },
-            { icon: '🆓', t: 'Always Free', d: 'No account, no subscription, no limits.' },
-          ].map(f => (
-            <div key={f.t} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '24px', marginBottom: '8px' }}>{f.icon}</div>
-              <strong style={{ display: 'block', marginBottom: '4px' }}>{f.t}</strong>
-              <span style={{ opacity: 0.65, fontSize:'15px' }}>{f.d}</span>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: '12px', padding: '20px', marginBottom: '32px' }}>
-          <h3 style={{ margin: '0 0 12px', fontSize: '16px' }}>Related Tools</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize:'15px' }}>
-            {[
-              { href: '/compress-for-shopify', label: 'Shopify' },
-              { href: '/compress-for-etsy', label: 'Etsy' },
-              { href: '/compress-for-instagram', label: 'Instagram' },
-              { href: '/compress-for-amazon', label: 'Amazon' },
-              { href: '/compress-for-linkedin', label: 'LinkedIn' },
-              { href: '/compress-for-email', label: 'Email' },
-            ].map(l => (
-              <Link key={l.href} href={l.href} style={{ background: 'rgba(255,255,255,0.08)', padding: '6px 12px', borderRadius: '6px', color: 'white', textDecoration: 'none' }}>Compress for {l.label}</Link>
+        <section style={{ maxWidth: '840px', margin: '0 auto', padding: '0 20px 32px' }}>
+          <h2 style={{ fontSize: '21px', fontWeight: 800, color: '#9fbbff', marginBottom: '14px' }}>Three Ceilings, Before Anything Else</h2>
+          <div style={{ display: 'grid', gap: '12px', gridTemplateColumns: 'repeat(auto-fit,minmax(230px,1fr))' }}>
+            {ceilings.map((c) => (
+              <div key={c.figure} style={{ background: 'rgba(11,83,246,0.09)', border: '1px solid rgba(11,83,246,0.3)', borderRadius: '14px', padding: '16px' }}>
+                <div style={{ fontSize: '30px', fontWeight: 900, color: '#9fbbff', lineHeight: 1 }}>{c.figure}</div>
+                <div style={{ fontSize: '15px', fontWeight: 700, margin: '8px 0 6px', color: '#eaf1ff' }}>{c.label}</div>
+                <p style={{ margin: 0, fontSize: '14.5px', lineHeight: 1.7, opacity: 0.78 }}>{c.detail}</p>
+                <p style={{ margin: '8px 0 0', fontSize: '13px', opacity: 0.5 }}>Zoom support article: {c.source}</p>
+              </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '24px' }}>
-          <h2 style={{ fontSize: '18px', fontWeight: 800, marginBottom: '16px' }}>FAQ — Compress Images for Zoom</h2>
-          {[
-            { q: 'Is this tool really free for Zoom?', a: 'Yes, 100% free. No signup, no subscription, no hidden fees.' },
-            { q: 'Does it upload my files to a server?', a: 'No. All compression happens locally in your browser. Your files never leave your device.' },
-            { q: 'What image formats does it support?', a: 'JPEG, PNG, WebP, AVIF, HEIC — all major formats supported.' },
-            { q: 'How small can I compress images for Zoom?', a: 'You can compress to any target size — from 5KB to 5MB. Just type your desired file size.' },
-          ].map((f, i) => (
-            <div key={i} style={{ marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '16px' }}>
-              <strong style={{ display: 'block', marginBottom: '6px', fontSize: '15px' }}>Q: {f.q}</strong>
-              <p style={{ margin: 0, opacity: 0.7, fontSize: '14px', lineHeight: 1.6 }}>A: {f.a}</p>
-            </div>
+        <section style={{ maxWidth: '840px', margin: '0 auto', padding: '0 20px 30px' }}>
+          <h2 style={{ fontSize: '21px', fontWeight: 800, color: '#9fbbff', marginBottom: '10px' }}>The Profile Photo Is The Smallest Thing You Will Ever Over-Prepare</h2>
+          <p style={{ fontSize: '15.5px', lineHeight: 1.8, color: 'rgba(216,224,245,0.8)', margin: '0 0 10px' }}>
+            Zoom lets you adjust the crop area after uploading, and the photo is displayed small — in a participant list, next to a chat message, inside a circle. Two MB of headroom therefore does not mean you should ship two MB; it means the door is wide and you can walk through it with a tidy file. Our own suggestion, unambiguously not Zoom’s rule: a headshot around 800 x 800 px kept near 150–200 KB reads perfectly everywhere the avatar appears.
+          </p>
+          <p style={{ fontSize: '15.5px', lineHeight: 1.8, color: 'rgba(216,224,245,0.8)' }}>
+            The thing that actually ruins a profile photo is not weight. It is a crop that put your chin outside the circle, or a wide shot where you were the third person from the left. Zoom’s crop box is the place to settle that; the compressor cannot help, because it never touches geometry.
+          </p>
+        </section>
+
+        <section style={{ maxWidth: '840px', margin: '0 auto', padding: '0 20px 30px' }}>
+          <h2 style={{ fontSize: '21px', fontWeight: 800, color: '#9fbbff', marginBottom: '10px' }}>Virtual Backgrounds: The One Upload Worth Headroom</h2>
+          <p style={{ fontSize: '15.5px', lineHeight: 1.8, color: 'rgba(216,224,245,0.8)', margin: '0 0 10px' }}>
+            Here Zoom’s published maximum jumps to 15 MB and its recommended working sizes become 1280 x 720 or 1920 x 1080, which it also ties to matching the aspect ratio of your camera. The container rules tighten at the same time: 24-bit PNG or JPG/JPEG, and nothing else. A HEIC off an iPhone will not go in as it stands, so converting first is part of the job.
+          </p>
+          <p style={{ fontSize: '15.5px', lineHeight: 1.8, color: 'rgba(216,224,245,0.8)' }}>
+            Zoom’s own background requirements page adds a limit that is easy to miss: without a green screen, your outgoing video is capped at 720p. Push a giant 15 MB graphic through that and the extra pixels are trimmed by Zoom before anyone in the call sees them. A well-encoded 1920 x 1080 JPEG or 24-bit PNG, kept in the low hundreds of kilobytes, gives the same picture at a fraction of the weight.
+          </p>
+        </section>
+
+        <section style={{ maxWidth: '840px', margin: '0 auto', padding: '0 20px 30px' }}>
+          <h2 style={{ fontSize: '21px', fontWeight: 800, color: '#9fbbff', marginBottom: '10px' }}>Waiting-Room Branding Is A Different Shape Entirely</h2>
+          <p style={{ fontSize: '15.5px', lineHeight: 1.8, color: 'rgba(216,224,245,0.8)' }}>
+            A 2:1 recommendation with a 400 x 200 px floor, GIF/JPG/PNG accepted, and a hard 1 MB cap — the smallest of Zoom’s three ceilings and the one hosted on an account-level setting rather than your personal profile. Because it is landscape and usually carries a logo plus a wordmark, it is also the upload most often submitted as a tall screenshot that then needs framing. Rebuild the canvas at 2:1 in your editor; the compressor will happily shrink whatever shape you hand it, but it will not turn a portrait into a banner.
+          </p>
+        </section>
+
+        <section style={{ maxWidth: '840px', margin: '0 auto', padding: '0 20px 30px' }}>
+          <h2 style={{ fontSize: '21px', fontWeight: 800, color: '#9fbbff', marginBottom: '10px' }}>Batch Runs Share A Number, So Split The Session</h2>
+          <p style={{ fontSize: '15.5px', lineHeight: 1.8, color: 'rgba(216,224,245,0.8)', margin: '0 0 10px' }}>
+            One run of up to 50 files applies one target to everything in it. Useful when you are prepping a set of background frames; wrong when you have an avatar and a banner and a background sitting in the same queue, since those want 150 KB, 1 MB and “comfortably under 15 MB” respectively.
+          </p>
+          <p style={{ fontSize: '15.5px', lineHeight: 1.8, color: 'rgba(216,224,245,0.8)' }}>
+            The practical routine is two short passes: batch the files that share a budget, compress, download the ZIP, then change the number in the Custom box (anywhere from 5 to 5000 KB, or the 20 / 50 / 100 / 200 chips above it) and run the rest. Format buttons sit beside the target control — choose JPEG or PNG for anything Zoom ingests; leave WebP and AVIF for your own site, because neither appears in the format lists above and a rejected background teaches you that faster than this paragraph does.
+          </p>
+        </section>
+
+        <section style={{ maxWidth: '840px', margin: '0 auto', padding: '0 20px 30px' }}>
+          <h2 style={{ fontSize: '21px', fontWeight: 800, color: '#9fbbff', marginBottom: '10px' }}>A Worked Pass: The Background That Would Not Load</h2>
+          <p style={{ fontSize: '15.5px', lineHeight: 1.85, color: 'rgba(216,224,245,0.8)' }}>
+            Start with the file that fails: say a PNG screen-composite at 3000 x 1685, weighing in past Zoom’s 15 MB line. Set the format button to <strong>PNG</strong> if it is flat design art you want kept lossless, or <strong>JPEG</strong> if it is a photographic scene. Open <strong>🎯 Target KB Mode</strong>, tap <strong>200 KB</strong>, drop the image on the panel, press <strong>⚡ Compress All</strong>. The search tries quality values between 0.05 and 0.95 — up to twelve attempts, stopping once the range narrows below 0.03 — and hands back the best fit it found that stays under 200 KB. Inspect it full-size: text in the graphic should still be legible, and if it is not, move the target up. Because the longest side is handled at 4096 px, this 3000 px image is not downscaled on the way in — the savings come from the encoder, not from a silent resize.
+          </p>
+        </section>
+
+        <section style={{ maxWidth: '840px', margin: '0 auto', padding: '0 20px 32px' }}>
+          <h2 style={{ fontSize: '21px', fontWeight: 800, color: '#9fbbff', marginBottom: '14px' }}>Asked Before Opening Zoom Settings</h2>
+          {faq.map(([q, a], i) => (
+            <details key={i} style={{ marginBottom: '9px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(11,83,246,0.28)', borderRadius: '10px', padding: '13px 16px' }}>
+              <summary style={{ fontWeight: 700, fontSize: '15.5px', cursor: 'pointer', color: '#b7c9ff' }}>{q}</summary>
+              <p style={{ margin: '9px 0 0', fontSize: '15px', lineHeight: 1.75, opacity: 0.78 }}>{a}</p>
+            </details>
           ))}
-        </div>
+        </section>
 
-        <div style={{ textAlign: 'center', marginTop: '40px', padding: '32px', background: 'rgba(99,102,241,0.1)', borderRadius: '16px', border: '1px solid rgba(99,102,241,0.2)' }}>
-          <h2 style={{ fontSize: '22px', fontWeight: 800, marginBottom: '8px' }}>Start Compressing for Zoom Now</h2>
-          <p style={{ opacity: 0.65, marginBottom: '20px' }}>Free, instant, private — no account needed</p>
-          <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '16px 40px', borderRadius: '12px', textDecoration: 'none', fontWeight: 700, fontSize: '18px' }}>⚡ Compress Images Free</Link>
-        </div>
+        <section style={{ maxWidth: '840px', margin: '0 auto', padding: '0 20px 52px' }}>
+          <h2 style={{ fontSize: '17px', fontWeight: 800, color: '#9fbbff', marginBottom: '12px' }}>Related Pages</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+            {[
+              ['/compress-for-google-classroom', 'Google Classroom images'],
+              ['/compress-for-resume-photo', 'Resume & headshot files'],
+              ['/compress-for-twitter', 'X / Twitter image slots'],
+              ['/image-size-checker-online', 'Check pixel dimensions first'],
+              ['/compress-to-100kb', 'Compress to 100 KB'],
+              ['/compress-to-500kb', 'Compress to 500 KB'],
+              ['/vs/squoosh', 'This tool compared with Squoosh'],
+            ].map(([href, label]) => (
+              <a key={href} href={href} style={{ padding: '8px 15px', borderRadius: '8px', background: 'rgba(11,83,246,0.1)', border: '1px solid rgba(11,83,246,0.28)', color: '#9fbbff', fontSize: '14.5px', fontWeight: 600, textDecoration: 'none' }}>{label} →</a>
+            ))}
+          </div>
+        </section>
       </div>
-    </main>
+    </>
   );
 }

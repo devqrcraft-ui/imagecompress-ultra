@@ -2,22 +2,14 @@
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
 const compare = [
-  { feature: 'Privacy', us: '✅ 100% in-browser', them: '❌ Uploads to server' },
-  { feature: 'Exact KB targeting', us: '✅ Any KB target', them: '❌ Percentage only' },
-  { feature: 'WebP / AVIF output', us: '✅ Full support', them: '❌ No WebP/AVIF' },
-  { feature: 'Batch compression', us: '✅ Up to 50 images', them: '❌ One at a time' },
-  { feature: 'HEIC support', us: '✅ iPhone photos', them: '❌ No HEIC' },
-  { feature: 'Passport / Gov presets', us: '✅ Built-in presets', them: '❌ No' },
-  { feature: 'Mobile friendly', us: '✅ Full mobile support', them: '⚠️ Limited' },
-  { feature: 'Price', us: '✅ Free, no ads', them: '⚠️ Free with ads' },
+  { feature: 'Where the work happens', us: '✅ In your browser, nothing uploaded', them: '❌ You upload the pictures first' },
+  { feature: 'The number you control', us: '✅ A target file size in KB', them: '✅ Pixel width and height' },
+  { feature: 'Resize to exact dimensions', us: '❌ No — 4096 px longest-side cap only', them: '✅ Yes, that is its job' },
+  { feature: 'Batch', us: '✅ Up to 50 files, one ZIP download', them: '✅ Free batch resize advertised on their site' },
+  { feature: 'Target size in KB', us: '✅ Type any number from 5 to 5000', them: '❌ Not a control the tool offers' },
+  { feature: 'Output formats', us: '✅ WebP, AVIF, JPEG, PNG', them: '❓ No format list we could confirm' },
 ];
-const faq = [
-  { q: 'Is CompressTo20KB better than PicResize?', a: 'For most use cases yes. CompressTo20KB supports WebP and AVIF output, processes everything in your browser, allows batch compression of 50 images, and has exact KB targeting — features PicResize lacks.' },
-  { q: 'Does PicResize support WebP format?', a: 'No. PicResize only outputs JPEG, PNG, and GIF. CompressTo20KB supports modern formats including WebP and AVIF which can be 70% smaller than JPEG.' },
-  { q: 'Can I compress multiple images at once with PicResize?', a: 'No. PicResize processes one image at a time. CompressTo20KB supports batch compression of up to 50 images with a single ZIP download.' },
-  { q: 'Which tool is better for passport photos?', a: 'CompressTo20KB has built-in presets for US passport, USCIS, DS-160, and other government requirements. PicResize has no such presets.' },
-];
-export default function ClientPage() {
+export default function ClientPage({ faq }: { faq: [string, string][] }) {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
@@ -29,10 +21,10 @@ export default function ClientPage() {
       </nav>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
         <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>Comparison → CompressTo20KB vs PicResize</div>
-        <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>CompressTo20KB vs PicResize<br /><span style={{ color: '#818cf8' }}>2025 Comparison</span></h1>
-        <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>PicResize has been around for years, but it lacks modern format support, only processes one image at a time, and uploads your files to their servers. Here is how CompressTo20KB compares.</p>
+        <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>CompressTo20KB vs PicResize<br /><span style={{ color: '#818cf8' }}>2026 Comparison</span></h1>
+        <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>PicResize has been a go-to free resizer for years, and it is honest to say the two tools answer different questions: it asks how many pixels you want, we ask how many kilobytes. It also uploads your picture to do it. Here is the side-by-side.</p>
         <div style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: '12px', padding: '16px 20px', marginBottom: '32px' }}>
-          <strong style={{ color: '#fca5a5' }}>⚠️ PicResize Limitation:</strong><span style={{ fontSize: '14px', opacity: 0.8 }}> PicResize processes one image at a time and has no WebP or AVIF output. CompressTo20KB supports batch up to 50 images and all modern formats.</span>
+          <strong style={{ color: '#fca5a5' }}>⚠️ Different jobs:</strong><span style={{ fontSize: '14px', opacity: 0.8 }}> PicResize is built for dimensions and its own instructions start by having you upload the pictures. This tool is built for a file-size ceiling and never sees the network again after the page loads. If your form states a KB limit, the ceiling is the control you need.</span>
         </div>
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>Feature Comparison</h2>
         <div style={{ overflowX: 'auto', marginBottom: '32px' }}>
@@ -52,10 +44,10 @@ export default function ClientPage() {
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>Try Our Free Alternative</h2>
         <div style={{ marginBottom: '40px' }}><CompressorWidget defaultMode="quality" defaultFormat="webp" /></div>
         <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '16px' }}>FAQ</h2>
-        {faq.map((f, i) => (
+        {faq.map(([q, a], i) => (
           <details key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', padding: '14px 16px', marginBottom: '8px', cursor: 'pointer' }}>
-            <summary style={{ fontWeight: 700, fontSize: '14px', listStyle: 'none' }}>❓ {f.q}</summary>
-            <p style={{ marginTop: '10px', fontSize:'15px', opacity: 0.7, lineHeight: 1.6 }}>{f.a}</p>
+            <summary style={{ fontWeight: 700, fontSize: '14px', listStyle: 'none' }}>{q}</summary>
+            <p style={{ marginTop: '10px', fontSize:'15px', opacity: 0.7, lineHeight: 1.6 }}>{a}</p>
           </details>
         ))}
         <div style={{ marginTop: '36px', padding: '20px', background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)', borderRadius: '12px' }}>

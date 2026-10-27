@@ -1,10 +1,10 @@
-const orgSchema = '{"@context":"https://schema.org","@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com","logo":"https://www.compressto20kb.com/og-image.png","description":"Free online image compressor. Compress to exact KB size — 20KB, 50KB, 100KB. No upload, 100% private."}';
+const orgSchema = '{"@context":"https://schema.org","@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com","logo":"https://www.compressto20kb.com/og-image.png","description":"Free online image compressor. Compress to a KB ceiling you choose — 20KB, 50KB, 100KB. No upload, private."}';
 
 const breadcrumbSchema = '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Compress Image for Teams Meeting","item":"https://www.compressto20kb.com/blog/compress-image-for-teams-meeting"}]}';
 
 const blogSchema = '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Teams Meetings (2026) — Fix Blurry Shares","description":"Microsoft Teams compresses images shared in meetings. Learn exact size limits, how to send full-quality images in Teams, and compress any image to under 500KB in seconds.","url":"https://www.compressto20kb.com/blog/compress-image-for-teams-meeting","datePublished":"2026-06-02","dateModified":"2026-06-13","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.compressto20kb.com/blog/compress-image-for-teams-meeting"}}';
 
-const faqSchema = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Microsoft Teams compress images in meetings?","acceptedAnswer":{"@type":"Answer","text":"Yes. Teams automatically compresses images shared during meetings and in chat. Screen shares are capped at 1080p and inline images are reduced to under 1MB. For full-resolution sharing, attach files using the paperclip icon instead of pasting inline."}},{"@type":"Question","name":"What is the best image size for a Teams meeting in 2026?","acceptedAnswer":{"@type":"Answer","text":"For Teams meetings, keep images under 500KB for instant loading. Presentation slides work best at 1920x1080px JPEG at 80% quality. Background images should be under 1MB at 1920x1080px. Profile photos should be under 240KB at 648x648px."}},{"@type":"Question","name":"How do I compress an image for Teams for free?","acceptedAnswer":{"@type":"Answer","text":"Upload your image to compressto20kb.com, select Exact KB Mode, set 500KB as the target, choose JPEG, and download. No account required — compression runs in your browser in under 10 seconds. Nothing is uploaded to any server."}},{"@type":"Question","name":"Why do images look blurry when shared in Teams meetings?","acceptedAnswer":{"@type":"Answer","text":"Teams applies automatic compression to images pasted inline in meetings based on available bandwidth. Images larger than 1MB are resampled. To preserve quality, share images as file attachments via the paperclip icon, or enable HD video in meeting settings before sharing your screen."}},{"@type":"Question","name":"What file formats does Teams support for meeting images?","acceptedAnswer":{"@type":"Answer","text":"Teams supports JPEG, PNG, GIF, WebP, BMP, and TIFF. JPEG is best for photos in meetings due to smallest file size at equivalent quality. PNG works better for screenshots and slides with text. WebP gives 25-35% smaller files than JPEG at the same quality."}},{"@type":"Question","name":"How do I send full-quality images in Teams without compression?","acceptedAnswer":{"@type":"Answer","text":"Click the paperclip Attach icon in the chat panel and upload as a file instead of pasting inline. This bypasses automatic compression and sends the original file at full resolution. Files up to 250MB are supported in Teams channels."}},{"@type":"Question","name":"Does Teams compress images differently on mobile in 2026?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Teams mobile app applies additional compression to reduce data usage. Images pasted inline on mobile are compressed more aggressively than on desktop — often to under 200KB. Use the file attachment option to send originals. On iOS, save the image to Files app first for best quality."}}]}';
+const faqSchema = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Microsoft Teams compress images in meetings?","acceptedAnswer":{"@type":"Answer","text":"Yes. Teams automatically compresses images shared during meetings and in chat. Screen shares are capped at 1080p and inline images are reduced to under 1MB. For full-resolution sharing, attach files using the paperclip icon instead of pasting inline."}},{"@type":"Question","name":"What is the best image size for a Teams meeting in 2026?","acceptedAnswer":{"@type":"Answer","text":"For Teams meetings, keep images under 500KB for instant loading. Presentation slides work best at 1920x1080px JPEG at 80% quality. Background images should be under 1MB at 1920x1080px. Profile photos should be under 240KB at 648x648px."}},{"@type":"Question","name":"How do I compress an image for Teams for free?","acceptedAnswer":{"@type":"Answer","text":"Upload your image to compressto20kb.com, select Target KB Mode, set 500KB as the target, choose JPEG, and download. No account required — compression runs in your browser in under 10 seconds. Nothing is uploaded to any server."}},{"@type":"Question","name":"Why do images look blurry when shared in Teams meetings?","acceptedAnswer":{"@type":"Answer","text":"Teams applies automatic compression to images pasted inline in meetings based on available bandwidth. Images larger than 1MB are resampled. To preserve quality, share images as file attachments via the paperclip icon, or enable HD video in meeting settings before sharing your screen."}},{"@type":"Question","name":"What file formats does Teams support for meeting images?","acceptedAnswer":{"@type":"Answer","text":"Teams supports JPEG, PNG, GIF, WebP, BMP, and TIFF. JPEG is best for photos in meetings due to smallest file size at equivalent quality. PNG works better for screenshots and slides with text. WebP gives 25-35% smaller files than JPEG at the same quality."}},{"@type":"Question","name":"How do I send full-quality images in Teams without compression?","acceptedAnswer":{"@type":"Answer","text":"Click the paperclip Attach icon in the chat panel and upload as a file instead of pasting inline. This bypasses automatic compression and sends the original file at full resolution. Files up to 250MB are supported in Teams channels."}},{"@type":"Question","name":"Does Teams compress images differently on mobile in 2026?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Teams mobile app applies additional compression to reduce data usage. Images pasted inline on mobile are compressed more aggressively than on desktop — often to under 200KB. Use the file attachment option to send originals. On iOS, save the image to Files app first for best quality."}}]}';
 
 import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox';
@@ -110,7 +110,7 @@ export default function Page() {
         <div style={s.answerFirst}>
           <div style={s.answerFirstTitle}>Quick Answer</div>
           <p style={s.answerFirstText}>
-            Microsoft Teams auto-compresses inline images to under 1MB and caps screen shares at 1080p. To avoid blurry shares: compress images to under 500KB before pasting, or attach as a file using the paperclip icon to bypass all compression. Use Exact KB Mode at compressto20kb.com — no upload, done in 10 seconds.
+            Microsoft Teams auto-compresses inline images to under 1MB and caps screen shares at 1080p. To avoid blurry shares: compress images to under 500KB before pasting, or attach as a file using the paperclip icon to bypass all compression. Use Target KB Mode at compressto20kb.com — no upload, done in 10 seconds.
           </p>
         </div>
 
@@ -224,7 +224,7 @@ export default function Page() {
 
         <div style={s.answerFirst}>
           <p style={s.answerFirstText}>
-            Use compressto20kb.com Exact KB Mode: upload your image, set 500KB as the target, choose JPEG, click Compress. Done in under 10 seconds. Nothing leaves your browser.
+            Use compressto20kb.com Target KB Mode: upload your image, set 500KB as the target, choose JPEG, click Compress. Done in under 10 seconds. Nothing leaves your browser.
           </p>
         </div>
 
@@ -235,8 +235,8 @@ export default function Page() {
         </div>
         <div style={s.stepBox}>
           <div style={s.stepNum}>STEP 2</div>
-          <div style={s.stepTitle}>Select Exact KB Mode and set 500KB</div>
-          <p style={s.stepText}>Click "Exact KB Mode" in the toolbar. Type 500 in the target size field. For profile photos or quick previews, use 240KB instead.</p>
+          <div style={s.stepTitle}>Select Target KB Mode and set 500KB</div>
+          <p style={s.stepText}>Click "Target KB Mode" in the toolbar. Type 500 in the target size field. For profile photos or quick previews, use 240KB instead.</p>
         </div>
         <div style={s.stepBox}>
           <div style={s.stepNum}>STEP 3</div>
@@ -336,7 +336,7 @@ export default function Page() {
             },
             {
               q: 'How do I compress an image for Teams for free?',
-              a: 'Upload your image to compressto20kb.com, select Exact KB Mode, set 500KB as the target, choose JPEG, and download. No account required — compression runs in your browser in under 10 seconds. Nothing is uploaded to any server.',
+              a: 'Upload your image to compressto20kb.com, select Target KB Mode, set 500KB as the target, choose JPEG, and download. No account required — compression runs in your browser in under 10 seconds. Nothing is uploaded to any server.',
             },
             {
               q: 'Why do images look blurry when shared in Teams meetings?',
@@ -371,16 +371,16 @@ export default function Page() {
         <nav style={s.related} aria-label="Related articles">
           <h2 style={s.relatedTitle}>Related Guides</h2>
           <a href="/blog/compress-image-for-microsoft-teams" style={s.relatedLink}>→ Compress Image for Microsoft Teams Chat (General Guide)</a>
-          <a href="/blog/compress-image-for-email" style={s.relatedLink}>→ How to Compress Images for Email — Under 1MB Instantly</a>
+          <a href="/blog/how-to-compress-image-for-email" style={s.relatedLink}>→ How to Compress Images for Email — Under 1MB Instantly</a>
           <a href="/vs/tinypng" style={s.relatedLink}>→ CompressTo20KB vs TinyPNG — Which is Better in 2026?</a>
           <a href="/vs/squoosh" style={s.relatedLink}>→ CompressTo20KB vs Squoosh — Full Comparison</a>
-          <a href="/blog/best-image-format-for-web-2026" style={s.relatedLink}>→ JPEG vs WebP vs AVIF in 2026 — Which Format is Best?</a>
+          <a href="/blog/webp-vs-jpeg-2026" style={s.relatedLink}>→ WebP vs JPEG in 2026: Which Format Should You Use?</a>
         </nav>
 
         {/* CTA */}
         <div style={s.cta}>
           <h2 style={s.ctaTitle}>Compress Your Teams Image Now — Free, No Upload</h2>
-          <p style={s.ctaText}>Hit exactly 500KB in 10 seconds. JPEG, PNG, WebP — all formats. Works in your browser, nothing sent to any server.</p>
+          <p style={s.ctaText}>Hit 500KB or under in 10 seconds. JPEG, PNG, WebP — all formats. Works in your browser, nothing sent to any server.</p>
           <a href="/" style={s.ctaBtn}>Compress Image Free →</a>
         </div>
       </article>

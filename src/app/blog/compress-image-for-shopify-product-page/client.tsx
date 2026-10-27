@@ -1,18 +1,13 @@
 "use client";
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
+import { faq } from './faq';
 const tips = [
   { title: 'Use WebP format', desc: 'WebP files are 25–35% smaller than JPEG at the same quality. Shopify fully supports WebP and serves it to all modern browsers automatically.' },
   { title: 'Target under 500KB per image', desc: 'Shopify recommends keeping product images under 500KB. For hero images aim for under 200KB. Every 100KB saved improves mobile load time.' },
   { title: 'Upload at 2048×2048px', desc: 'Shopify recommends square images at 2048×2048px. This supports zoom functionality while keeping a manageable file size when compressed to WebP.' },
   { title: 'Compress before upload — not after', desc: 'Shopify does some automatic optimization but it\'s minimal. Always compress before uploading for maximum performance gains.' },
   { title: 'Use bulk compression', desc: 'If you have a catalog of 20–50 products, use our bulk compressor to process all images at once. Download as ZIP and upload to Shopify.' },
-];
-const faq = [
-  { q: 'What image format is best for Shopify?', a: 'WebP is the best format for Shopify product images. It\'s 25–35% smaller than JPEG with the same visual quality, and Shopify supports it fully for all modern browsers.' },
-  { q: 'What is the ideal image size for Shopify?', a: 'Shopify recommends 2048×2048px square images. Keep file sizes under 500KB per image, ideally under 200KB for fast mobile loading.' },
-  { q: 'Does Shopify compress images automatically?', a: 'Shopify applies basic optimization but it\'s not aggressive. You\'ll get significantly better performance by compressing images yourself before uploading.' },
-  { q: 'How do slow images affect Shopify SEO?', a: 'Google\'s Core Web Vitals (LCP, CLS) are ranking factors. Large images are the #1 cause of poor LCP scores. Faster Shopify stores rank higher and convert better.' },
 ];
 
 const schemaData = {
@@ -45,7 +40,7 @@ export default function ClientPage() {
         <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
           <Link href="/blog" style={{ color: '#818cf8', textDecoration: 'none' }}>Blog</Link> → Compress Images for Shopify
         </div>
-        <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>How to Compress Images for Shopify<br /><span style={{ color: '#818cf8' }}>Speed Up Your Store in 2025</span></h1>
+        <h1 style={{ fontSize: 'clamp(24px,4vw,40px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>How to Compress Images for Shopify<br /><span style={{ color: '#818cf8' }}>Speed Up Your Store in 2026</span></h1>
         <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}><p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p></div><div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}><p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0}}>Key Takeaways</p><ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}><li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li><li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong></li><li>WebP saves <strong style={{color:'#fff'}}>25-50%</strong> vs JPEG at same quality</li><li>No file size limit, 100% free</li></ul></div>
         <p style={{ fontSize: '16px', opacity: 0.65, marginBottom: '32px', lineHeight: 1.7 }}>Unoptimized product images are the #1 cause of slow Shopify stores. A slow store means lower Google rankings, higher bounce rates, and fewer sales. Here's how to fix it — free, in minutes.</p>

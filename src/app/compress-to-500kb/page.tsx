@@ -1,44 +1,26 @@
 import type { Metadata } from 'next';
-import ClientPage from './client';
+import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
-  title: 'Compress Image to 500KB Free Online — No Upload, 100% Private',
-  description: 'Compress any image to exactly 500KB free online. Browser-based — files never leave your device. Perfect for Shopify product photos, high-quality blog images, and print-on-demand previews. No upload, no signup.',
+  title: 'Compress Image to 500KB Free Online — No Upload, Private',
+  description: 'Compress any image to 500KB or under free online. Browser-based — files never leave your device. Perfect for Shopify product photos, high-quality blog images, and print-on-demand previews. No upload, no signup.',
   keywords: 'compress image to 500kb, reduce image size to 500kb, resize photo to 500kb, 500kb image compressor online free, compress jpg to 500kb, compress png to 500kb',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-500kb' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-to-500kb' },
 };
 
+const faq: [string, string][] = [
+  ['How do I compress an image to 500KB or under?', 'Drop the image in above, switch to Target KB Mode and type 500. The tool searches JPEG or WebP quality downward and returns the highest quality that still fits under 500KB — never above it.'],
+  ['What is 500KB a good size for?', 'It is the roomy end of web images: a product photo that still needs to survive zoom, a full-width blog hero, a high-resolution Pinterest pin, or an attachment you want to stay under a 10MB mailbox budget with.'],
+  ['Should I use WebP or JPEG at 500KB?', 'For photos on the web, WebP usually holds detail better than JPEG at the same size, so it is the first thing to try. Choose JPEG when the destination is an email client or a platform where you know WebP is not rendered — and keep a copy you can re-upload.'],
+  ['Can I compress multiple images to 500KB at once?', 'Yes — add up to 50 images, set one 500KB target and compress the batch. Download individually or as a ZIP, all processed in your browser.'],
+  ['Does this work on iPhone or Android?', 'Yes. Open compressto20kb.com in Safari or Chrome, tap upload, choose the photo, turn on Target KB Mode, type 500 and compress. No app to install — and HEIC from the Camera Roll is converted for you.'],
+];
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How do I compress an image to exactly 500KB?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Open compressto20kb.com, upload your image, switch to Exact KB Mode, type 500, and click Compress. Binary search finds the maximum quality that fits 500KB within 1KB accuracy — instantly, in your browser.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is 500KB good for?',
-      acceptedAnswer: { '@type': 'Answer', text: '500KB is ideal for Shopify and WooCommerce product photos, high-quality blog hero images, print-on-demand previews (Printful, Redbubble), and Pinterest posts where image detail directly affects clicks and sales.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is WebP or JPEG better for 500KB images?',
-      acceptedAnswer: { '@type': 'Answer', text: 'WebP is clearly better at 500KB — it retains more sharpness and color accuracy than JPEG at the same file size. Use JPEG only if your platform does not support WebP (e.g. Amazon product listings, some email clients).' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I compress multiple images to 500KB at once?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — upload up to 50 images, set Exact KB Mode to 500, and compress all at once. Download individually or as a ZIP. All processing stays in your browser — nothing uploaded.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How to compress an image to 500KB on iPhone or Android?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Open compressto20kb.com in Safari (iPhone) or Chrome (Android). Tap upload, select your photo, switch to Exact KB Mode, type 500, tap Compress. Downloads instantly — no app needed.' },
-    },
-  ],
+  mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
 };
 
 export default function Page() {
@@ -53,25 +35,27 @@ export default function Page() {
         </div>
 
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-          Compress Image to <span style={{ color: '#818cf8' }}>500KB</span> Free Online — No Upload, 100% Private
+          Compress Image to <span style={{ color: '#818cf8' }}>500KB</span> Free Online — No Upload, Private
         </h1>
         <p className="text-slate-400 text-lg mb-8">
-          Compress JPG, PNG, WebP, AVIF, HEIC to exactly 500KB directly in your browser — no upload, no tracking, no watermark.
+          Compress JPG, PNG, WebP, AVIF, HEIC to 500KB or under directly in your browser — no upload, no tracking, no watermark.
         </p>
 
-        <ClientPage />
+        <div className="mb-10" style={{maxWidth:'780px',margin:'0 auto'}}>
+          <CompressorTool initialTargetKB={500} />
+        </div>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-white mb-4">When Do You Need Exactly 500KB?</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">When Do You Need 500KB or under?</h2>
           <p className="text-slate-300 leading-relaxed mb-4">
-            500KB is the high-quality end of web image optimization. It is large enough to retain sharp detail for product zoom, print previews, and full-width hero images — while still loading significantly faster than uncompressed originals of 3–8MB. At 500KB, most web users on 4G or faster connections see instant load times with no visible quality compromise.
+            500KB sits at the roomy end of web image sizing: enough budget to keep product detail sharp when someone zooms, a hero image crisp on a high-density screen, or a design proof legible before it is printed. It is also small enough that a page of these files still loads quickly, which a folder of 3–8MB originals would not.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-6">
             {[
-              ['🛍️', 'Shopify & WooCommerce', 'Product photos at 500KB load fast on mobile while retaining enough detail for the zoom feature buyers expect.'],
-              ['🖨️', 'Print-on-Demand (Printful, Redbubble)', 'Preview images for POD products benefit from 500KB — large enough to show design detail without exceeding platform upload limits.'],
-              ['✍️', 'Blog Hero Images', 'Full-width blog header images at 500KB score well on PageSpeed Insights while looking sharp on retina displays.'],
-              ['📌', 'Pinterest & Visual Social Media', 'Pinterest recommends high-quality images. 500KB gives enough detail for pins to drive clicks from discovery feeds.'],
+              ['🛍️', 'Store product photos', 'Shopify and WooCommerce re-encode uploads into their own responsive sizes, so a clean ~500KB source gives that pipeline something good to work from without bloating the page.'],
+              ['🖨️', 'Print-on-demand previews', 'A POD mock-up needs to show the artwork detail a customer judges by. Compress for the web at 500KB and keep the original print file separate — they are different jobs.'],
+              ['✍️', 'Blog hero images', 'A full-width header is usually the largest image above the fold. Capping it around 500KB is one of the cheaper wins for Largest Contentful Paint.'],
+              ['📌', 'Pinterest and visual feeds', 'Pins are judged on detail at a small preview size, so over-compression hurts more here than a few extra kilobytes do.'],
             ].map(([icon, title, desc]) => (
               <div key={title} className="p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
                 <div className="text-2xl mb-2">{icon}</div>
@@ -87,9 +71,9 @@ export default function Page() {
           <div className="space-y-4">
             {[
               { n: '1', t: 'Upload your image', d: 'Click upload or drag your file. Accepts JPEG, PNG, WebP, AVIF, HEIC. Up to 50 files at once for batch processing.' },
-              { n: '2', t: 'Switch to Exact KB Mode', d: 'Toggle from Quality to Exact KB mode. Type 500 in the target size field.' },
-              { n: '3', t: 'Choose WebP for best quality', d: 'At 500KB, WebP retains noticeably more sharpness than JPEG. Use JPEG only if your platform requires it (e.g. Amazon).' },
-              { n: '4', t: 'Compress and download', d: 'Click Compress. Your browser hits exactly 500KB using binary search — no upload, no wait. Download instantly.' },
+              { n: '2', t: 'Switch to Target KB Mode', d: 'Toggle from Quality to Target KB mode. Type 500 in the target size field.' },
+              { n: '3', t: 'Pick the format', d: 'Try WebP first for a photo at this size — it usually keeps more detail per byte. Fall back to JPEG when the destination will not render WebP, such as an email or an older CMS.' },
+              { n: '4', t: 'Compress and download', d: 'Click Compress. The quality search lands at 500KB or under and never above it — nothing uploaded, no queue, no watermark.' },
             ].map(s => (
               <div key={s.n} className="flex gap-4 p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-violet-600 flex items-center justify-center font-bold text-white">{s.n}</div>
@@ -112,11 +96,11 @@ export default function Page() {
               </thead>
               <tbody>
                 {[
-                  ['20KB', 'Government forms, passport photos', 'Low — use only when required'],
-                  ['50KB', 'Exam portals, USCIS, NADRA', 'Low-medium'],
-                  ['100KB', 'Thumbnails, email, job portals', 'Good'],
-                  ['200KB', 'Ecommerce thumbs, newsletters', 'Very good'],
-                  ['500KB', 'Product zoom, hero images, POD', 'Excellent'],
+                  ['20KB', 'Forms that state a 20KB ceiling', 'Low — use only when the form asks for it'],
+                  ['50KB', 'NADRA e-Visa photo, exam portals that specify it', 'Low-medium'],
+                  ['100KB', 'Thumbnails, email inline images, job portals', 'Good'],
+                  ['200KB', 'Store thumbnails, newsletter graphics', 'Very good'],
+                  ['500KB', 'Product zoom, hero images, proofs', 'Excellent'],
                 ].map(([size, use, quality], i) => (
                   <tr key={i} className={`border-b border-slate-800 ${i === 4 ? 'bg-violet-900/20' : i % 2 === 0 ? 'bg-slate-800/20' : ''}`}>
                     <td className={`py-3 px-4 font-bold ${i === 4 ? 'text-violet-400' : 'text-slate-300'}`}>{size}{i === 4 ? ' ← this page' : ''}</td>
@@ -132,12 +116,7 @@ export default function Page() {
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
           <div className="space-y-4">
-            {[
-              ['How do I compress an image to exactly 500KB?', 'Switch to Exact KB Mode, type 500, choose WebP or JPEG, and click Compress. Binary search finds the maximum quality that fits 500KB — within 1KB accuracy.'],
-              ['Is 500KB enough quality for product photos?', 'Yes — for most ecommerce use. At 2000px wide and 500KB, WebP retains all the detail buyers need for zoom. Only very high-end fashion or print use cases need larger files.'],
-              ['Is WebP or JPEG better at 500KB?', 'WebP is clearly better at 500KB — sharper, cleaner, with fewer artifacts. Use JPEG only when the platform requires it, such as Amazon product listings.'],
-              ['Can I compress multiple images to 500KB at once?', 'Yes — upload up to 50 images, set Exact KB Mode to 500, compress all at once. Download individually or as a ZIP.'],
-            ].map(([q, a], i) => (
+            {faq.map(([q, a], i) => (
               <details key={i} className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-4">
                 <summary className="font-semibold text-white cursor-pointer">{q}</summary>
                 <p className="text-slate-400 text-sm mt-3 leading-relaxed">{a}</p>

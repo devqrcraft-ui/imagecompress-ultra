@@ -18,3 +18,5 @@ out/
 
 .vercel
 .env*.local
+
+__pycache__/

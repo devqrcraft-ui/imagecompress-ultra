@@ -13,7 +13,7 @@ export default function Page() {
         <a href="/" style={{color:'#9aa3bc'}}>Home</a> › JPG to PNG Converter
       </nav>
       <h1 style={{fontSize:34,fontWeight:900,marginBottom:8,color:'#fff'}}>JPG to PNG Converter</h1>
-      <p style={{fontSize:17,color:'#818cf8',marginBottom:32,fontWeight:600}}>Free Online, No Upload, 100% Private</p>
+      <p style={{fontSize:17,color:'#818cf8',marginBottom:32,fontWeight:600}}>Free Online, No Upload, Private</p>
       
       <div style={{background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:12,padding:'20px 24px',marginBottom:32}}>
         <p style={{fontSize:16,color:'#c8d0e7',lineHeight:1.75,margin:0}}>Convert JPG images to PNG format instantly in your browser. No file is uploaded to any server — all conversion runs locally on your device. Get high-quality PNG output with transparency support, completely free.</p>

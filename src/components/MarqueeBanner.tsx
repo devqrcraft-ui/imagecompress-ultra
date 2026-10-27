@@ -5,7 +5,7 @@ export default function MarqueeBanner() {
     '🔒 Your files NEVER leave your device',
     '🚀 Compress to exact KB — WebP, JPEG, PNG, AVIF',
     '📦 Batch compress up to 10 images at once',
-    '✅ No upload to server — 100% Private',
+    '✅ No upload to server — Private',
     '🛒 Shopify, Etsy, Amazon, Instagram presets',
     '📄 Gov 20KB & 50KB forms — one click ready',
     '🌍 Works offline — no internet needed after load',

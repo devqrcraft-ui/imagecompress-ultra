@@ -4,26 +4,17 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "H1B Visa Photo Requirements 2026 — Size, Format & How to Compress",
-  description: "Complete guide to H1B visa photo requirements: dimensions, file size limits, background. How to compress your photo to 20KB for USCIS forms free.",
+  description: "H1B and USCIS photo rules: square JPEG, 600×600 to 1200×1200 px, under 240KB, white background — plus how to compress the file in your browser without uploading it.",
   keywords: "h1b visa photo requirements, h1b photo size, uscis photo requirements, compress photo for h1b",
   alternates: { canonical: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },
   openGraph: { url: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What are the photo requirements for H1B visa?", acceptedAnswer: { "@type": "Answer", text: "2x2 inches (51x51mm), color, white background, JPEG format, taken within 6 months, minimum 600x600px, under 240KB for USCIS online forms." } },
-    { "@type": "Question", name: "What file size is required for USCIS photo uploads?", acceptedAnswer: { "@type": "Answer", text: "USCIS requires photos under 240KB. Many state portals require under 20KB. Always check your specific form." } },
-    { "@type": "Question", name: "How do I compress a photo for H1B visa to 20KB?", acceptedAnswer: { "@type": "Answer", text: "Use CompressTo20KB — select the Gov 20KB preset. Photo compressed locally in your browser, never uploaded to any server." } },
-  ],
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "H1B Visa Photo Requirements 2025",
+  headline: "H1B Visa Photo Requirements 2026",
   url: "https://www.compressto20kb.com/blog/h1b-visa-photo-requirements",
   author: { "@type": "Organization", name: "CompressTo20KB" },
   datePublished: "2026-02-22",
@@ -35,12 +26,11 @@ export default function H1BPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"H1B Visa Photo Requirements 2026","item":"https://www.compressto20kb.com/blog/h1b-visa-photo-requirements"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"H1B Visa Photo Requirements 2026","description":"Complete guide to H1B visa photo requirements: dimensions, file size limits, background. How to compress your photo to 20KB for USCIS forms free.","url":"https://www.compressto20kb.com/blog/h1b-visa-photo-requirements","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="max-w-3xl mx-auto px-4 py-16">
         <nav className="text-sm text-slate-300 mb-8">
           <Link href="/" className="hover:underline">Home</Link> / <Link href="/blog" className="hover:underline">Blog</Link> / <span>H1B Visa Photo Requirements</span>
         </nav>
-        <h1 className="text-4xl font-bold mb-4">H1B Visa Photo Requirements 2025</h1>
+        <h1 className="text-4xl font-bold mb-4">H1B Visa Photo Requirements 2026</h1>
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
@@ -60,7 +50,6 @@ export default function H1BPage() {
               ["Background", "Plain white or off-white"],
               ["File format", "JPEG only"],
               ["Max file size (USCIS)", "Under 240KB"],
-              ["Max file size (state portals)", "Often under 20KB"],
               ["Color", "Full color only"],
               ["Recency", "Within last 6 months"],
               ["Glasses", "Not allowed"],
@@ -72,20 +61,20 @@ export default function H1BPage() {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-bold mb-4">Why 20KB Matters</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">USCIS accepts up to 240KB for most online forms. However, many state labor department portals required for H1B LCA filing impose a strict 20KB limit. DS-160 also recommends smaller files for faster upload.</p>
+          <h2 className="text-2xl font-bold mb-4">How Big Should the File Be?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">The photo that goes with US visa and immigration filings is a square JPEG between 600×600 and 1200×1200 pixels and under 240KB — that is the ceiling USCIS and the DS-160 describe. The H1B petition itself is filed on paper forms, and a Labor Condition Application has no photo step, so there is no official 20KB rule to chase. Compress to the number on the screen in front of you, not to a size a blog told you about.</p>
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 text-sm text-yellow-800">
             <strong>Tip:</strong> Always check your specific portal's size requirement before uploading.
           </div>
         </section>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-bold mb-4">How to Compress to 20KB Free</h2>
+          <h2 className="text-2xl font-bold mb-4">How to Compress the Photo Free</h2>
           <ol className="space-y-4">
             {[
               ["1", "Go to CompressTo20KB", "Free, no account needed."],
               ["2", "Upload your photo", "Drag your JPEG. Nothing is sent to any server."],
-              ["3", "Select Gov 20KB preset", "Automatically targets 20KB JPEG for USCIS requirements."],
+              ["3", "Set the target in KB", "Type 240 for a USCIS upload, or the ceiling your form prints."],
               ["4", "Download and upload", "Ready for any government form."],
             ].map(([n, t, d]) => (
               <li key={n} className="flex gap-4">
@@ -110,7 +99,7 @@ export default function H1BPage() {
           <div className="space-y-4">
             {[
               { q: "What are the photo requirements for H1B visa?", a: "2×2 inches, color, white background, JPEG, taken within 6 months, min 600×600px, under 240KB for USCIS." },
-              { q: "How do I compress a photo for H1B visa to 20KB?", a: "Use CompressTo20KB — select the Gov 20KB preset. Compressed locally, nothing uploaded." },
+              { q: "How do I compress a photo for an H1B upload?", a: "Open the tool, set Target KB Mode to 240 (or the number on your form) and download. Encoding happens on your device — nothing is uploaded." },
             ].map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-6">
                 <h3 className="font-semibold mb-2">{f.q}</h3>
@@ -121,7 +110,7 @@ export default function H1BPage() {
         </section>
 
         <div className="bg-blue-600 rounded-2xl p-8 text-white text-center">
-          <h2 className="text-2xl font-bold mb-3">Compress Your H1B Photo to 20KB Free</h2>
+          <h2 className="text-2xl font-bold mb-3">Compress Your H1B Photo Free</h2>
           <p className="text-blue-100 mb-6">No upload. No account. Takes 10 seconds.</p>
           <Link href="/" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">Compress Photo Now →</Link>
         </div>

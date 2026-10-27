@@ -1,9 +1,7 @@
 import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
-import { VISA_COUNTRIES } from '@/lib/visaCountries';
 import { posts } from './blog/[slug]/page';
-import { useCases } from './use/[slug]/page';
 
 const baseUrl = 'https://www.compressto20kb.com';
 
@@ -43,13 +41,6 @@ export default function sitemap() {
     priority: route === '/' ? 1.0 : 0.7,
   }));
 
-  const visaPages = VISA_COUNTRIES.map(c => ({
-    url: baseUrl + '/compress-for-' + c.slug,
-    lastModified,
-    changeFrequency: 'monthly',
-    priority: 0.6,
-  }));
-
   const blogPages = Object.keys(posts).map(slug => ({
     url: baseUrl + '/blog/' + slug,
     lastModified,
@@ -57,15 +48,8 @@ export default function sitemap() {
     priority: 0.75,
   }));
 
-  const usePages = useCases.map((u: { slug: string }) => ({
-    url: baseUrl + '/use/' + u.slug,
-    lastModified,
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }));
-
   const seen = new Set<string>();
-  const all = [...staticRoutes, ...visaPages, ...blogPages, ...usePages];
+  const all = [...staticRoutes, ...blogPages];
   return all.filter(item => {
     if (seen.has(item.url)) return false;
     seen.add(item.url);

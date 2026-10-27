@@ -1,10 +1,16 @@
-
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the photo requirements for a visa application?","acceptedAnswer":{"@type":"Answer","text":"Most visa applications require a JPEG photo under 240KB, at least 600x600px, with a plain white or off-white background, taken within the last 6 months. Always check the official embassy or consulate website for exact requirements for your destination country."}},{"@type":"Question","name":"How do I compress a visa photo to the required size?","acceptedAnswer":{"@type":"Answer","text":"Upload your photo, switch to Exact KB Mode, type your target size (e.g. 200 for 200KB), select JPEG format, and click Compress. All processing runs in your browser — your photo is never uploaded to any server, keeping it safe and private."}},{"@type":"Question","name":"What file size is required for visa application photos?","acceptedAnswer":{"@type":"Answer","text":"File size requirements vary by country. The US visa (DS-160) requires under 240KB. The UK visa requires under 6MB. Schengen visa applications typically require under 2MB. Use Exact KB Mode to hit any specific target precisely."}},{"@type":"Question","name":"Is it safe to compress passport and visa photos online?","acceptedAnswer":{"@type":"Answer","text":"Yes — with this tool. All compression runs locally in your browser using WebAssembly. Your photo never leaves your device. Other tools like 11zon, TinyPNG, and Cloudinary upload files to their servers, which is a privacy risk for identity documents."}},{"@type":"Question","name":"Can I compress multiple visa photos at once?","acceptedAnswer":{"@type":"Answer","text":"Yes — upload up to 50 images at once, set your target size in Exact KB Mode, and compress all at once. Download individually or as a ZIP. Everything runs in your browser — free, no signup required."}}]};
+import { faq } from './faq';
 import type { Metadata } from 'next';
 import ClientPage from './client';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+};
+
 export const metadata: Metadata = {
   title: 'Compress Photo for Visa Application — US, Schengen, UK — Free Online',
-  description: 'Compress visa application photo to exact KB size for US visa, Schengen visa, UK visa, and more. Free, no upload, instant. Meet photo file size requirements for any country.',
+  description: 'Compress a visa application photo down to the KB limit printed on your own form. Free, no upload, instant: everything runs in your browser.',
   keywords: 'compress photo for visa application, visa photo size requirements, compress image for us visa, compress photo for schengen visa, resize visa photo online free',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-image-for-visa' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-image-for-visa' },
@@ -16,7 +22,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for Visa Application","item":"https://www.compressto20kb.com/compress-image-for-visa"}]}' }} />
       <div style={{ background: 'rgba(129,140,248,0.13)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '20px 24px', margin: '24px auto', maxWidth: '720px', fontFamily: 'system-ui,sans-serif', color: '#e2e8f0' }}>
         <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.7 }}>
-          <strong style={{ color: '#818cf8' }}>Quick answer:</strong> To compress a visa photo online, upload your image, switch to <strong>Exact KB Mode</strong>, type your target size (e.g. 200 for 200KB or 240 for DS-160), select JPEG, and click Compress. All processing runs in your browser — your photo never leaves your device. Most visa applications require a JPEG under 240KB with a white background, at least 600×600px, taken within 6 months.
+          <strong style={{ color: '#818cf8' }}>Quick answer:</strong> Open the compressor from the button on this page, choose <strong>JPEG</strong>, switch to <strong>Target KB Mode</strong> and type the KB limit printed on your own application form. The tool returns the best quality that still fits at or under that number, and it runs entirely in your browser, so the photo never leaves your device. We deliberately do not publish a per-country figure here: specs change and this page links no official document, so read the size off the form you are filling in.
         </p>
       </div>
       <ClientPage />

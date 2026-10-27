@@ -1,28 +1,21 @@
 "use client";
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
+import { faq } from './faq';
 const forms=[
-  {form:'N-400',name:'Application for Naturalization',limit:'240KB'},
-  {form:'DS-160',name:'Nonimmigrant Visa (B1/B2, F1, H1B)',limit:'240KB'},
-  {form:'I-485',name:'Adjustment of Status (Green Card)',limit:'240KB'},
-  {form:'I-130',name:'Petition for Alien Relative',limit:'240KB'},
-  {form:'US Passport Online',name:'Passport Renewal',limit:'240KB'},
+  {form:'N-400',name:'Application for Naturalization',limit:'Printed 2×2 photos per form instructions'},
+  {form:'DS-160',name:'Nonimmigrant Visa (B1/B2, F1, H1B) — State Department',limit:'Digital JPEG, 240KB max'},
+  {form:'I-485',name:'Adjustment of Status (Green Card)',limit:'Printed 2×2 photos per form instructions'},
+  {form:'I-130',name:'Petition for Alien Relative',limit:'See current form instructions'},
+  {form:'US Passport Online',name:'Passport application/renewal — State Department',limit:'Digital JPEG, 240KB max'},
 ];
 const steps=[
   {n:'1',t:'Check your photo dimensions',d:'Your photo must be at least 600×600 pixels (2×2 inches). If it is smaller, reshoot or upscale before compressing.'},
-  {n:'2',t:'Ensure white background',d:'USCIS requires a plain white or off-white background. No shadows, no patterns, no other people.'},
+  {n:'2',t:'Ensure white background',d:'US government photo rules ask for a plain white or off-white background. No shadows, no patterns, no other people.'},
   {n:'3',t:'Upload your photo below',d:'Drag and drop or click to upload. Supports JPEG, PNG, HEIC from iPhone, and WebP.'},
-  {n:'4',t:'Select Exact KB Mode → 200KB',d:'Type 200 in the target field. This gives you a safe margin below the 240KB USCIS limit.'},
-  {n:'5',t:'Choose JPEG format',d:'USCIS only accepts JPEG. Select JPEG in the format options.'},
+  {n:'4',t:'Select Target KB Mode → 200KB',d:'Type 200 in the target field. That sits comfortably under the 240KB ceiling the State Department publishes for passport and visa uploads.'},
+  {n:'5',t:'Choose JPEG format',d:'Passport and visa uploads ask for JPEG. Select JPEG in the format options.'},
   {n:'6',t:'Click Compress and download',d:'Your compressed photo is ready in seconds. Everything happens in your browser — no upload to any server.'},
-];
-const faq=[
-  {q:'What is the USCIS photo size requirement?',a:'USCIS requires photos in JPEG format, 2×2 inches (600×600 pixels), under 240KB for all online forms including N-400, DS-160, I-485, and US passport applications.'},
-  {q:'What happens if my USCIS photo is over 240KB?',a:'The USCIS online portal will reject your upload with an error message. You must compress the photo and re-upload before you can continue with your application.'},
-  {q:'Is 200KB safe for USCIS forms?',a:'Yes. 200KB gives you a comfortable margin below the 240KB limit and ensures your photo is accepted by the USCIS portal without issues.'},
-  {q:'Can I use PNG for USCIS photo?',a:'No. USCIS requires JPEG format only. Our tool automatically converts your photo to JPEG during compression.'},
-  {q:'Does compressing reduce photo quality?',a:'At 200KB, the quality loss is minimal and not visible on screen. USCIS officers review digital versions — a properly compressed JPEG at 200KB looks identical to the original.'},
-  {q:'Is this tool affiliated with USCIS?',a:'No. This is an independent free tool. The official USCIS website is uscis.gov. Always submit your application directly through official government portals.'},
 ];
 
 const schemaData = {
@@ -64,20 +57,17 @@ export default function ClientPage(){
           <ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}>
             <li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li>
             <li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong> — convert between formats in one click</li>
-            <li>WebP saves <strong style={{color:'#fff'}}>25–50% file size</strong> vs JPEG at the same visual quality</li>
-            <li>No file size limit, no account required, <strong style={{color:'#fff'}}>100% free</strong></li>
+            <li>Lossy WebP runs about <strong style={{color:'#fff'}}>25–34% smaller</strong> than comparable JPEG (Google’s own figures)</li>
+            <li>Free, no account, no watermark — targets from 5 to 5000 KB, up to 50 files per batch</li>
             <li>Use the quality slider to find the sweet spot between size and sharpness</li>
           </ul>
         </div>
-        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>Every USCIS online form requires a JPEG photo under 240KB. If your photo is too large, the portal will reject it. This guide shows you how to compress any photo to meet USCIS requirements in under 60 seconds — free, no upload.</p>
+        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>If a US immigration or visa form asks for a digital photo, the file usually needs to be smaller than what your phone produces. This guide separates the limits that are actually published from the ones bloggers repeat, and shows how to compress any photo with a free tool that runs entirely in your browser.</p>
         <div style={{background:'rgba(239,68,68,0.08)',border:'1px solid rgba(239,68,68,0.2)',borderRadius:'12px',padding:'16px 20px',marginBottom:'32px'}}>
-          <strong style={{color:'#fca5a5'}}>📋 USCIS Photo Requirements:</strong>
-          <span style={{fontSize:'14px',opacity:0.85}}> JPEG only · 600×600 px (2×2 inches) · Under 240KB · White background · Taken within 6 months</span>
+          <strong style={{color:'#fca5a5'}}>📋 What is actually published:</strong>
+          <span style={{fontSize:'14px',opacity:0.85}}> State Department passport and visa uploads: square JPEG, 600×600 to 1200×1200 px, 240KB max (travel.state.gov, checked October 2026). USCIS paper forms ask for printed 2×2 photos in their instructions; we found no universal digital KB cap on uscis.gov.</span>
         </div>
-        <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
-          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#818cf8'}}>Google PageSpeed Insights</a>
-        </blockquote>
-        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Which USCIS Forms Require Photo Compression?</h2>
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Which Forms Ask for What</h2>
         <div style={{overflowX:'auto',marginBottom:'32px'}}>
           <table style={{width:'100%',borderCollapse:'collapse',fontSize:'15px'}}>
             <thead><tr style={{background:'rgba(99,102,241,0.15)'}}>
@@ -92,6 +82,7 @@ export default function ClientPage(){
             ))}</tbody>
           </table>
         </div>
+        <p style={{fontSize:'13px',opacity:0.55,marginTop:'-20px',marginBottom:'32px'}}>Note: the DS-160 is a State Department form filed at ceac.state.gov, not a USCIS form. When an online portal asks for a digital photo, it states its own limit on the upload screen — trust the screen.</p>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Step-by-Step: Compress Photo for USCIS</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'12px',marginBottom:'36px'}}>
           {steps.map((s,i)=>(
@@ -102,13 +93,13 @@ export default function ClientPage(){
           ))}
         </div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'12px'}}>Compress Your USCIS Photo Now (Free)</h2>
-        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Pre-set to 200KB JPEG — safely under the USCIS 240KB limit. 100% private, files never leave your browser.</p>
+        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Pre-set to 200KB JPEG, a comfortable margin under the 240KB ceiling the State Department publishes for DS-160 and DV Lottery uploads. USCIS does not publish that same digital-file limit, so treat this as our recommendation rather than a rule. private: the file is processed in your browser and never uploaded.</p>
         <div style={{marginBottom:'40px'}}><CompressorWidget defaultMode="exactkb" defaultTargetKB={200} defaultFormat="jpeg"/></div>
-        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>FAQ</h2>
-        {faq.map((f,i)=>(
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Frequently Asked Questions</h2>
+        {faq.map(([q, a], i)=>(
           <details key={i} style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',padding:'14px 16px',marginBottom:'8px',cursor:'pointer'}}>
-            <summary style={{fontWeight:700,fontSize:'14px',listStyle:'none'}}>❓ {f.q}</summary>
-            <p style={{marginTop:'10px',fontSize:'15px',opacity:0.7,lineHeight:1.6}}>{f.a}</p>
+            <summary style={{fontWeight:700,fontSize:'14px',listStyle:'none'}}>{q}</summary>
+            <p style={{marginTop:'10px',fontSize:'15px',opacity:0.7,lineHeight:1.6}}>{a}</p>
           </details>
         ))}
         <div style={{marginTop:'36px',padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>

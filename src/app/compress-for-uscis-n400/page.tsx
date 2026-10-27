@@ -14,7 +14,7 @@ export default function Page() {
   const maxDisplay = maxKB >= 1024 ? Math.round(maxKB / 1024) + 'MB' : maxKB + 'KB';
   const faq = [
     { q: 'What are the photo requirements for USCIS N-400 Citizenship?', a: 'USCIS N-400 photo: JPEG under 240KB, 2x2 inch 600x600px, white background, taken within 30 days.' },
-    { q: 'How do I compress a photo for USCIS N-400 Citizenship?', a: 'Click the button above, select Exact KB Mode, enter 240 as target size and download.' },
+    { q: 'How do I compress a photo for USCIS N-400 Citizenship?', a: 'Click the button above, select Target KB Mode, enter 240 as target size and download.' },
     { q: 'Is my photo uploaded to a server?', a: 'No. All processing happens in your browser. Your photo never leaves your device.' },
   ];
   return (
@@ -25,8 +25,7 @@ export default function Page() {
         url: 'https://www.compressto20kb.com/compress-for-uscis-n400',
         description: 'Compress photo for USCIS N-400 citizenship application. Under 240KB, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '1034', bestRating: '5', worstRating: '1' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for USCIS N-400 Citizenship","item":"https://www.compressto20kb.com/compress-for-uscis-n400"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -71,7 +70,7 @@ export default function Page() {
         {[
           { step: '1', title: 'Click the button above', desc: 'Opens the free compressor. No signup or install needed.' },
           { step: '2', title: 'Upload your photo', desc: 'Drag and drop or click to select. Supports JPG, PNG, WebP, HEIC.' },
-          { step: '3', title: 'Select Exact KB Mode', desc: 'Click the Exact KB Mode tab and enter 240 as your target size.' },
+          { step: '3', title: 'Select Target KB Mode', desc: 'Click the Target KB Mode tab and enter 240 as your target size.' },
           { step: '4', title: 'Download and submit', desc: 'Your photo is compressed and ready to upload to your USCIS N-400 Citizenship application.' },
         ].map(({ step, title, desc }) => (
           <div key={step} style={{ display: 'flex', gap: '16px', marginBottom: '16px', alignItems: 'flex-start' }}>

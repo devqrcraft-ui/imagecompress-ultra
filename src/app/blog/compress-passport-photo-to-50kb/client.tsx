@@ -1,20 +1,15 @@
 "use client";
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
+import { faq } from './faq';
 const portals=[
-  {portal:'India UIDAI (Aadhaar)',limit:'20KB',format:'JPEG'},
-  {portal:'India Passport Seva',limit:'50KB',format:'JPEG'},
-  {portal:'Pakistan NADRA',limit:'20KB',format:'JPEG'},
-  {portal:'Philippines DFA',limit:'50KB',format:'JPEG'},
-  {portal:'Bangladesh NID',limit:'30KB',format:'JPEG'},
-  {portal:'UK HMPO',limit:'50KB',format:'JPEG'},
-  {portal:'US USCIS / DS-160',limit:'240KB',format:'JPEG'},
-];
-const faq=[
-  {q:'How do I compress a passport photo to 50KB?',a:'Upload your photo, switch to Exact KB Mode, type 50 in the target field, select JPEG, and click Compress. Your photo will be compressed to exactly 50KB.'},
-  {q:'Which countries require passport photos under 50KB?',a:'India Passport Seva, Philippines DFA, UK HMPO, and many other government portals require photos under 50KB. USCIS (USA) allows up to 240KB.'},
-  {q:'Will my passport photo look bad at 50KB?',a:'No. A properly compressed 600×600 JPEG at 50KB looks sharp on screen. Government portals review digital images — the quality is more than sufficient.'},
-  {q:'What is the difference between 20KB and 50KB passport photo?',a:'India UIDAI requires 20KB, while Passport Seva accepts 50KB. Use our Exact KB Mode to compress to the exact limit required by your specific portal.'},
+  {portal:'US — DS-160 / online passport upload',limit:'under 240KB',format:'JPEG'},
+  {portal:'UK — visa & immigration digital photo',limit:'600×750 px, under 6MB',format:'JPEG'},
+  {portal:'Pakistan — e-Visa (NADRA)',limit:'under 50KB',format:'JPEG'},
+  {portal:'India — e-Visa',limit:'350×350 px, under 300KB',format:'JPEG'},
+  {portal:'Japan — visa (online submission)',limit:'under 240KB',format:'JPEG'},
+  {portal:'Canada — IRCC online application',limit:'420×540 px, under 4MB',format:'JPEG'},
+  {portal:'China — visa',limit:'354×472 px, under 120KB',format:'JPEG'},
 ];
 
 const schemaData = {
@@ -46,7 +41,7 @@ export default function ClientPage(){
         <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → Compress Passport Photo to 50KB</div>
         <div style={{display:'inline-block',background:'rgba(99,102,241,0.1)',border:'1px solid rgba(99,102,241,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#818cf8'}}>🪪 Passport · Global</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Passport Photo to 50KB<br/><span style={{color:'#818cf8'}}>For Visa Portals Worldwide</span></h1>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Size limits checked against official portals in October 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>
         </div>
@@ -60,9 +55,9 @@ export default function ClientPage(){
             <li>Use the quality slider to find the sweet spot between size and sharpness</li>
           </ul>
         </div>
-        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>Many visa and passport portals worldwide require photos under 50KB. Use our Exact KB Mode to compress your passport photo to exactly 50KB — or any other target size.</p>
+        <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>Document-upload ceilings run from a few tens of kilobytes to several megabytes, and only the one on your form matters. Set that number in Target KB Mode — 50KB, 20KB, 240KB or anything else — and the tool keeps the best quality that stays under it.</p>
         <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
-          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#818cf8'}}>Google PageSpeed Insights</a>
+          Google's image guidance comes down to two moves: deliver the picture no larger than it is displayed, and compress until the bytes drop without the image visibly changing. That page is written for page speed, not document photos, but the same two moves decide how sharp a 50KB passport crop looks. <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow noopener noreferrer" target="_blank" style={{color:'#818cf8'}}>Google: optimize images</a>
         </blockquote>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Photo Size Limits by Portal</h2>
         <div style={{overflowX:'auto',marginBottom:'32px'}}>
@@ -79,8 +74,9 @@ export default function ClientPage(){
             ))}</tbody>
           </table>
         </div>
-        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'12px'}}>Compress to Exactly 50KB (Free)</h2>
-        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Switch to Exact KB Mode and type your target size. Works for 20KB, 50KB, 100KB, 240KB — any portal requirement.</p>
+        <p style={{fontSize:'13px',opacity:0.5,lineHeight:1.6,marginBottom:'20px'}}>Every figure above was read from that portal's own published guidance in October 2026. Requirements change without notice — confirm on the page you upload from before submitting an application.</p>
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'12px'}}>Compress to 50KB or under (Free)</h2>
+        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Switch to Target KB Mode and type your target size. Works for 20KB, 50KB, 100KB, 240KB — any portal requirement.</p>
         <div style={{marginBottom:'40px'}}><CompressorWidget defaultMode="exactkb" defaultTargetKB={50} defaultFormat="jpeg"/></div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>FAQ</h2>
         {faq.map((f,i)=>(

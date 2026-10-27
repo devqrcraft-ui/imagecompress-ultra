@@ -1,25 +1,31 @@
-const faqSchema = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Microsoft Teams compress images automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. Microsoft Teams automatically compresses inline chat images to under 1MB and caps preview width at 800px. To send full-resolution images, attach them as files rather than pasting inline."}},{"@type":"Question","name":"What is the best image size for Microsoft Teams chat?","acceptedAnswer":{"@type":"Answer","text":"For Teams chat, compress images to under 500KB for instant preview loading. Profile photos should be under 100KB at 648x648px square. Background images should be under 1MB at 1920x1080px."}},{"@type":"Question","name":"How do I compress an image for Microsoft Teams for free?","acceptedAnswer":{"@type":"Answer","text":"Upload your image to compressto20kb.com, select Quality Mode at 80%, choose JPEG output, and download. The whole process takes under 10 seconds and requires no account or software installation."}},{"@type":"Question","name":"Does Teams reduce image quality in video calls?","acceptedAnswer":{"@type":"Answer","text":"Yes. Teams caps video resolution based on your network speed and plan. Microsoft 365 Business Basic supports 1080p HD video but will drop to 540p or lower on slow connections."}},{"@type":"Question","name":"What file types does Microsoft Teams support for images?","acceptedAnswer":{"@type":"Answer","text":"Teams supports JPEG, PNG, GIF, WebP, BMP, and TIFF for image sharing. JPEG is recommended for photos (smallest file size) and PNG for screenshots or graphics with text."}},{"@type":"Question","name":"Why do Teams images look blurry?","acceptedAnswer":{"@type":"Answer","text":"Teams applies automatic compression to inline images pasted into chat, reducing resolution to speed up loading. To preserve quality, share images as file attachments rather than pasting them directly."}},{"@type":"Question","name":"How do I send a high-quality image in Teams?","acceptedAnswer":{"@type":"Answer","text":"Instead of pasting an image inline, click the paperclip icon and attach it as a file. This bypasses Teams automatic compression and sends the original file at full resolution."}}]}';
-
+const faq: [string, string][] = [
+  ['Does Microsoft Teams compress images automatically?', 'Pasting an image inline shows a resized, compressed preview for speed, while attaching it as a file sends the original untouched. Microsoft does not publish the exact inline compression threshold (checked October 2026), so use the paperclip Attach option when quality matters.'],
+  ['What is the best image size for Microsoft Teams chat?', 'Teams publishes no official KB target for chat images, so treat this as our recommendation: keep shared photos around 200–500KB so previews load quickly. Our free tool compresses in your browser — type a target and the output lands at or under it.'],
+  ['How do I compress an image for Teams for free?', 'Open compressto20kb.com, add your image, and set a target size between 5 and 5000 KB or pick a quality level. Nothing is uploaded to a server and no account is needed — processing happens entirely in your browser.'],
+  ['What size should a Teams meeting background image be?', 'Microsoft\'s background customization docs specify JPEG or PNG at up to 3840×2160px, with 1920×1080px recommended (checked October 2026). No KB limit is published, so we suggest compressing to under 1MB as a safety margin.'],
+  ['Can I resize or crop an image to a Teams profile photo with this tool?', 'No — our tool does not crop to a square or resize to specific dimensions; Teams itself crops profile photos into a square. Crop in a photo editor first, then compress the result to 50–100KB (our recommendation) here in your browser.'],
+  ['Are work images safe to compress in a browser tool?', 'Yes. Everything runs locally in your browser tab, so internal screenshots, mockups, or contracts never leave your device — nothing is uploaded and nothing is stored.'],
+];
 import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox';
 
 export const metadata: Metadata = {
-  title: 'Does Microsoft Teams Compress Images? Size Limit Is 4MB — Fix It Free',
-  description: 'Microsoft Teams compresses inline images over 4MB. Send full-quality files as attachments or compress to under 1MB in seconds. Free tool, no signup.',
+  title: 'Does Microsoft Teams Compress Images? How to Fix It Free (2026)',
+  description: 'Microsoft Teams compresses images pasted inline in chat. Send full-quality files as attachments, or pre-compress them in your browser. Free tool, no signup.',
   authors: [{ name: 'the CompressTo20KB Team' }],
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   keywords: 'compress image for microsoft teams, does teams compress images, teams image size limit, reduce image size for teams',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams' },
-  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams', siteName: 'CompressTo20KB', type: 'article', title: 'Does Microsoft Teams Compress Images? Size Limit Is 4MB — Fix It Free', images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630 }] },
-  twitter: { card: 'summary_large_image', site: '@compressto20kb', creator: '@compressto20kb', title: 'Microsoft Teams Image Size Limit Is 4MB — Fix Free', description: 'Compress images for Teams in seconds. Free, no signup.' },
+  openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams', siteName: 'CompressTo20KB', type: 'article', title: 'Does Microsoft Teams Compress Images? How to Fix It Free (2026)', images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630 }] },
+  twitter: { card: 'summary_large_image', site: '@compressto20kb', creator: '@compressto20kb', title: 'Does Microsoft Teams Compress Images? How to Fix It Free', description: 'Compress images for Teams in your browser. Free, no signup.' },
 };
 
 export default function Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqSchema }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Does Microsoft Teams Compress Images?","item":"https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Does Microsoft Teams Compress Images? Yes — Here Is the Fix (2026)","description":"Microsoft Teams automatically compresses inline chat images. Learn the exact size limits, how to send full-quality images, and how to compress images for Teams in seconds.","url":"https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams","datePublished":"2026-01-01","dateModified":"2026-05-30","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Does Microsoft Teams Compress Images? Yes — Here Is the Fix (2026)","description":"Microsoft Teams automatically compresses inline chat images. Learn what Microsoft actually publishes, how to send full-quality images, and how to pre-compress images for Teams in your browser.","url":"https://www.compressto20kb.com/blog/compress-image-for-microsoft-teams","datePublished":"2026-01-01","dateModified":"2026-05-30","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
 
       <article
         itemScope
@@ -49,7 +55,7 @@ export default function Page() {
         <section id="answer-first">
           <div style={{ background: 'rgba(129,140,248,0.07)', borderLeft: '3px solid #818cf8', borderRadius: '0 8px 8px 0', padding: '18px 20px', marginBottom: 24 }}>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: 'rgba(200,208,231,0.95)' }}>
-              <strong style={{ color: '#818cf8' }}>Yes — Microsoft Teams automatically compresses images pasted inline in chat</strong>, reducing them to under 1MB and capping preview width at 800px. To send full-resolution images, attach them as files using the paperclip icon instead of pasting. For fastest load times, compress images to <strong>under 500KB</strong> before sharing — our free tool does it in under 10 seconds.
+              <strong style={{ color: '#818cf8' }}>Yes — Microsoft Teams degrades images pasted inline in chat</strong>, showing a resized, compressed preview for faster loading. Microsoft does not publish the exact threshold it uses. To send full-resolution images, attach them as files using the paperclip icon instead of pasting. For fastest previews, compress images yourself first — around <strong>200–500KB</strong> is our recommendation, and our free tool does it entirely in your browser.
             </p>
           </div>
         </section>
@@ -67,12 +73,12 @@ export default function Page() {
           <div style={{ background: 'rgba(129,140,248,0.06)', border: '1px solid rgba(129,140,248,0.2)', borderRadius: 8, padding: '18px 22px', marginBottom: 28 }}>
             <div style={{ fontWeight: 800, color: '#818cf8', marginBottom: 10, fontSize: 13 }}>KEY TAKEAWAYS</div>
             <ul style={{ margin: 0, padding: '0 0 0 18px', fontSize: 14, lineHeight: 1.9, color: 'rgba(200,208,231,0.9)' }}>
-              <li>Teams <strong style={{ color: '#e8edf8' }}>compresses inline chat images</strong> to under 1MB automatically — use file attachments to avoid this</li>
-              <li>Best chat image size: <strong style={{ color: '#e8edf8' }}>under 500KB</strong> for instant preview loading</li>
-              <li>Profile photos: <strong style={{ color: '#e8edf8' }}>under 100KB</strong>, square format, 648×648px recommended</li>
-              <li>Background images: <strong style={{ color: '#e8edf8' }}>under 1MB</strong>, 1920×1080px</li>
+              <li>Teams <strong style={{ color: '#e8edf8' }}>renders pasted inline images as compressed previews</strong> — use file attachments to keep the original</li>
+              <li>Best chat image size: <strong style={{ color: '#e8edf8' }}>200–500KB</strong> (our recommendation — Microsoft publishes no KB limit)</li>
+              <li>Profile photos: <strong style={{ color: '#e8edf8' }}>square crop, 50–100KB</strong> as our practical guidance</li>
+              <li>Meeting backgrounds: <strong style={{ color: '#e8edf8' }}>JPEG or PNG up to 3840×2160px</strong>, 1920×1080px recommended, per Microsoft's docs (checked October 2026)</li>
               <li>JPEG format gives the <strong style={{ color: '#e8edf8' }}>smallest file size</strong> for photos; PNG for screenshots with text</li>
-              <li>Teams file upload limit is <strong style={{ color: '#e8edf8' }}>250MB</strong> per file (SharePoint storage applies)</li>
+              <li>Attached files follow <strong style={{ color: '#e8edf8' }}>SharePoint/OneDrive storage limits</strong>, far above any photo you would share</li>
             </ul>
           </div>
         </section>
@@ -105,17 +111,17 @@ export default function Page() {
             Yes. When you paste an image directly into a Teams chat, Teams applies automatic compression before sending. This is by design — it reduces bandwidth usage and speeds up preview loading for all participants.
           </p>
           <ul style={{ paddingLeft: 20, marginBottom: 16, lineHeight: 1.9, fontSize: 14, color: 'rgba(200,208,231,0.9)' }}>
-            <li><strong style={{ color: '#e8edf8' }}>Inline paste:</strong> Teams compresses to under 1MB and caps display width at 800px</li>
-            <li><strong style={{ color: '#e8edf8' }}>File attachment:</strong> original file is preserved at full resolution, no compression applied</li>
-            <li><strong style={{ color: '#e8edf8' }}>Profile photos:</strong> compressed on upload, displayed at 648×648px maximum</li>
-            <li><strong style={{ color: '#e8edf8' }}>Meeting backgrounds:</strong> rendered at up to 1920×1080px, files over 1MB may be rejected</li>
+            <li><strong style={{ color: '#e8edf8' }}>Inline paste:</strong> Teams renders a resized, compressed preview — the exact threshold is not published in Microsoft's docs</li>
+            <li><strong style={{ color: '#e8edf8' }}>File attachment:</strong> the original file is stored and shared at full resolution, with no chat-side recompression</li>
+            <li><strong style={{ color: '#e8edf8' }}>Profile photos:</strong> cropped to a square thumbnail by Teams and the rest of Microsoft 365, so upload a square image</li>
+            <li><strong style={{ color: '#e8edf8' }}>Meeting backgrounds:</strong> JPEG or PNG, up to 3840×2160px with 1920×1080px recommended (Microsoft docs, checked October 2026); no KB cap is published</li>
           </ul>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(200,208,231,0.9)', marginBottom: 16 }}>
             If you need colleagues to receive an image at full resolution — for example a product mockup, architectural drawing, or marketing creative — always use the <strong style={{ color: '#e8edf8' }}>paperclip attachment</strong> rather than copy-paste. The recipient can then download and view at original quality.
           </p>
           <blockquote style={{ borderLeft: '3px solid rgba(129,140,248,0.5)', margin: '24px 0', padding: '12px 20px', background: 'rgba(129,140,248,0.04)', borderRadius: '0 6px 6px 0' }}>
             <p style={{ margin: 0, fontSize: 13, fontStyle: 'italic', color: 'rgba(200,208,231,0.75)', lineHeight: 1.7 }}>
-              {'Teams supports file sizes up to 250 GB per file when uploaded to SharePoint, but inline image previews in chat are optimised for performance and rendered at reduced resolution.'} — <a href="https://learn.microsoft.com/en-us/microsoftteams/limits-specifications-teams" rel="nofollow" target="_blank" style={{ color: '#818cf8' }}>Microsoft Teams limits and specifications</a>
+              {'Microsoft\'s Teams limits documentation lists file uploads up to 250 GB under SharePoint storage (checked October 2026). Inline chat previews, by contrast, are rendered at reduced resolution for performance — attaching the file is the way to preserve originals.'} — <a href="https://learn.microsoft.com/en-us/microsoftteams/limits-specifications-teams" rel="nofollow" target="_blank" style={{ color: '#818cf8' }}>Microsoft Teams limits and specifications</a>
             </p>
           </blockquote>
         </section>
@@ -125,7 +131,9 @@ export default function Page() {
             Microsoft Teams Image Size Limits in 2026
           </h2>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(200,208,231,0.9)', marginBottom: 16 }}>
-            Teams has different size limits depending on where you are sharing an image. Here is a complete breakdown:
+            Microsoft does not publish a per-location KB table for images in Teams. The verified details are the
+            background specs on learn.microsoft.com (checked October 2026) and SharePoint storage limits. Everything
+            in the Recommended column below is our practical guidance, not an official rule:
           </p>
           <div style={{ overflowX: 'auto' as const, marginBottom: 24, borderRadius: 6, border: '1px solid rgba(255,255,255,0.08)' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' as const, fontSize: 13 }}>
@@ -138,12 +146,12 @@ export default function Page() {
               </thead>
               <tbody>
                 {[
-                  ['Chat (inline paste)', '1MB (auto-compressed)', 'Under 500KB', 'JPEG'],
-                  ['Chat (file attachment)', '250MB', 'Any', 'Any'],
-                  ['Profile photo', '4MB', 'Under 100KB', 'JPEG'],
-                  ['Meeting background', '1MB', 'Under 800KB', 'JPEG / PNG'],
-                  ['SharePoint / Files tab', '250MB', 'Under 5MB', 'Any'],
-                  ['Channel banner image', '1MB', 'Under 500KB', 'JPEG / PNG'],
+                  ['Chat (inline paste)', 'No published limit (compressed preview)', 'Under 500KB', 'JPEG'],
+                  ['Chat (file attachment)', 'SharePoint/OneDrive limits apply', 'Any', 'Any'],
+                  ['Profile photo', 'No published KB limit', 'Under 100KB', 'JPEG'],
+                  ['Meeting background', 'No KB limit (max 3840×2160)', 'Under 1MB', 'JPEG / PNG'],
+                  ['SharePoint / Files tab', 'Storage limits apply', 'Under 5MB', 'Any'],
+                  ['Channel banner image', 'No published KB limit', 'Under 500KB', 'JPEG / PNG'],
                 ].map((row, i, arr) => (
                   <tr key={i} style={i === arr.length - 1 ? { background: 'rgba(129,140,248,0.08)', borderTop: '1px solid rgba(129,140,248,0.3)' } : { borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                     {row.map((cell, j) => (
@@ -179,17 +187,18 @@ export default function Page() {
             How to Compress Images for Microsoft Teams (Step-by-Step)
           </h2>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(200,208,231,0.9)', marginBottom: 16 }}>
-            If you are sending images inline in chat and want them to load fast without letting Teams degrade them further, compress them yourself first. Here is how to do it in under 10 seconds using a free browser-based tool:
+            If you are sending images inline in chat and want them to load fast without letting Teams degrade them
+            further, compress them yourself first. It runs entirely in your browser — no upload, no waiting on a server:
           </p>
           <ol style={{ paddingLeft: 20, marginBottom: 16, lineHeight: 1.9, fontSize: 14, color: 'rgba(200,208,231,0.9)' }}>
             <li>Go to <a href="https://www.compressto20kb.com" style={{ color: '#818cf8', textDecoration: 'none' }}>compressto20kb.com</a> — no account or install required</li>
-            <li>Click <strong style={{ color: '#e8edf8' }}>Upload Image</strong> and select your file (JPEG, PNG, WebP, HEIC supported)</li>
-            <li>Set Quality to <strong style={{ color: '#e8edf8' }}>80%</strong> for photos — this removes ~60% of file size with no visible difference</li>
+            <li>Add your image (JPEG, PNG, WebP, HEIC supported — up to 50 files at once)</li>
+            <li>Either set a target size like <strong style={{ color: '#e8edf8' }}>300KB</strong> — the output lands at or under it — or raise the quality slider until the preview looks right</li>
             <li>Select <strong style={{ color: '#e8edf8' }}>JPEG</strong> as output format for smallest file size</li>
             <li>Click <strong style={{ color: '#e8edf8' }}>Compress</strong> and download — the compressed image is ready to paste into Teams</li>
           </ol>
           <div style={{ background: 'rgba(129,140,248,0.06)', border: '1px solid rgba(129,140,248,0.2)', borderRadius: 8, padding: '18px 20px', marginBottom: 20 }}>
-            <div style={{ fontWeight: 700, color: '#818cf8', marginBottom: 8, fontSize: 14 }}>Pro tip: Target file sizes for Teams</div>
+            <div style={{ fontWeight: 700, color: '#818cf8', marginBottom: 8, fontSize: 14 }}>Pro tip: our recommended target sizes for Teams (no official KB limits are published)</div>
             <ul style={{ margin: 0, padding: '0 0 0 18px', fontSize: 14, lineHeight: 1.9, color: 'rgba(200,208,231,0.85)' }}>
               <li>Chat photos: compress to <strong style={{ color: '#e8edf8' }}>200–500KB</strong></li>
               <li>Profile photo: compress to <strong style={{ color: '#e8edf8' }}>50–100KB</strong></li>
@@ -209,13 +218,14 @@ export default function Page() {
             Teams profile photos are shared across Microsoft 365 — they appear in Outlook, SharePoint, and Teams simultaneously. Getting them right once saves you from blurry thumbnails everywhere.
           </p>
           <ul style={{ paddingLeft: 20, marginBottom: 16, lineHeight: 1.9, fontSize: 14, color: 'rgba(200,208,231,0.9)' }}>
-            <li><strong style={{ color: '#e8edf8' }}>Dimensions:</strong> 648×648px square (minimum 96×96px)</li>
-            <li><strong style={{ color: '#e8edf8' }}>File size:</strong> under 4MB upload limit — but under 100KB for fast loading</li>
-            <li><strong style={{ color: '#e8edf8' }}>Format:</strong> JPEG recommended; PNG and GIF also supported</li>
-            <li><strong style={{ color: '#e8edf8' }}>Compression:</strong> Teams further compresses profile photos on upload — pre-compress to control output quality</li>
+            <li><strong style={{ color: '#e8edf8' }}>Shape:</strong> use a square photo — Teams and Microsoft 365 crop profile pictures to a circle/square thumbnail</li>
+            <li><strong style={{ color: '#e8edf8' }}>File size:</strong> Microsoft publishes no official KB limit (checked October 2026); our recommendation is under 100KB for fast loading</li>
+            <li><strong style={{ color: '#e8edf8' }}>Format:</strong> JPEG is the safe choice for photos</li>
+            <li><strong style={{ color: '#e8edf8' }}>Compression:</strong> pre-compress yourself so you control the output quality rather than leaving it to the platform</li>
           </ul>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(200,208,231,0.9)', marginBottom: 16 }}>
-            A 648×648px JPEG compressed to 80% quality typically lands around 60–90KB — well within limits and loading instantly on all devices including mobile.
+            Our advice: crop to a square in any photo editor (this tool does not crop), then compress to a 50–100KB
+            target — the output will land at or under that number at the highest quality setting that still fits.
           </p>
         </section>
 
@@ -228,8 +238,8 @@ export default function Page() {
           </p>
           <ul style={{ paddingLeft: 20, marginBottom: 16, lineHeight: 1.9, fontSize: 14, color: 'rgba(200,208,231,0.9)' }}>
             <li><strong style={{ color: '#e8edf8' }}>Recommended resolution:</strong> 1920×1080px (16:9 aspect ratio)</li>
-            <li><strong style={{ color: '#e8edf8' }}>Maximum file size:</strong> 1MB — files larger than this are rejected</li>
-            <li><strong style={{ color: '#e8edf8' }}>Supported formats:</strong> JPEG and PNG</li>
+            <li><strong style={{ color: '#e8edf8' }}>Maximum file size:</strong> no KB limit is published by Microsoft (checked October 2026) — keeping it under 1MB is our recommendation</li>
+            <li><strong style={{ color: '#e8edf8' }}>Supported formats:</strong> JPEG and PNG, up to 3840×2160px per Microsoft's background docs (checked October 2026)</li>
             <li><strong style={{ color: '#e8edf8' }}>Location on PC:</strong> {'C:\Users\[YourName]\AppData\Roaming\Microsoft\Teams\Backgrounds\Uploads'}</li>
           </ul>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(200,208,231,0.9)', marginBottom: 16 }}>
@@ -279,15 +289,7 @@ export default function Page() {
           <h2 style={{ fontSize: 'clamp(18px,4vw,20px)', fontWeight: 800, color: '#e8edf8', margin: '0 0 14px', lineHeight: 1.35 }}>
             Frequently Asked Questions
           </h2>
-          {[
-            ['Does Microsoft Teams compress images automatically?', 'Yes. Teams compresses images pasted inline in chat to under 1MB and caps preview width at 800px. Use file attachments to send images at full resolution.'],
-            ['What is the best image size for Microsoft Teams chat?', 'Under 500KB for instant preview loading. Profile photos should be under 100KB at 648×648px. Background images should be under 1MB at 1920×1080px.'],
-            ['How do I compress an image for Teams for free?', 'Upload to compressto20kb.com, set quality to 80%, choose JPEG, and download. No account required — compression happens in your browser in under 10 seconds.'],
-            ['Does Teams reduce image quality in video calls?', 'Yes. Teams adjusts video resolution based on network speed. Microsoft 365 Business Basic supports up to 1080p HD but will drop to 540p or lower on slow connections.'],
-            ['What file types does Teams support for images?', 'JPEG, PNG, GIF, WebP, BMP, and TIFF. JPEG is recommended for photos and PNG for screenshots or graphics with text.'],
-            ['Why do Teams images look blurry?', 'Teams compresses inline images automatically to speed up loading. Share images as file attachments instead of pasting to preserve full quality.'],
-            ['How do I send a high-quality image in Teams?', 'Click the paperclip Attach icon and upload as a file instead of pasting inline. This bypasses compression and sends the original file at full resolution.'],
-          ].map(([q, a], i, arr) => (
+          {faq.map(([q, a], i, arr) => (
             <div key={i} style={{ borderBottom: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.07)' : 'none', padding: '18px 0' }}>
               <h3 style={{ fontSize: 15, fontWeight: 600, color: '#e8edf8', margin: '0 0 8px' }}>{q}</h3>
               <p style={{ fontSize: 14, color: 'rgba(200,208,231,0.85)', margin: 0, lineHeight: 1.7 }}>{a}</p>

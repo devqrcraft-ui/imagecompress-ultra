@@ -6,7 +6,7 @@ const tips=[
   {n:'2',t:'JPEG format for photos',d:'Use JPEG for product photos — smallest file size with best quality. PNG only if your product has transparent background.'},
   {n:'3',t:'White background for main image',d:'eBay search ranks listings with white background higher. Required for most categories.'},
   {n:'4',t:'Under 12MB per image',d:'eBay accepts up to 12MB but images over 1MB slow down your listing page and hurt conversion rates.'},
-  {n:'5',t:'12 photos maximum',d:'eBay allows up to 12 photos per listing. Use all 12 — listings with more photos rank higher in search.'},
+  {n:'5',t:'12 photos maximum',d:'eBay allows up to 12 photos per listing. Use all 12 — eBay\'s gallery shows every angle, and more photos give shoppers more to judge before they buy.'},
 ];
 const faq=[
   {q:'What is the best image size for eBay listings?',a:'eBay recommends 1600×1600 pixels for the main listing image to enable zoom. The file should be JPEG under 1MB for fast loading. Minimum accepted size is 500×500 pixels.'},
@@ -55,7 +55,7 @@ export default function ClientPage(){
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
         <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → eBay Image Guide</div>
         <div style={{display:'inline-block',background:'rgba(234,88,12,0.1)',border:'1px solid rgba(234,88,12,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#fdba74'}}>🛒 eBay · eCommerce</div>
-        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Best Image Size for eBay Listings 2025<br/><span style={{color:'#818cf8'}}>Boost Rankings & Sales</span></h1>
+        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Best Image Size for eBay Listings 2026<br/><span style={{color:'#818cf8'}}>Boost Rankings & Sales</span></h1>
         <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>

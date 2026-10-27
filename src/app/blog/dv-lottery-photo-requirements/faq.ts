@@ -1,0 +1,7 @@
+export const faq: [string, string][] = [
+  ['What are the photo requirements for the DV Lottery?', "The Diversity Visa entry photo must be a square JPEG between 600×600 and 1200×1200 pixels, no larger than 240KB, on a plain white or off-white background, taken within the last six months and without glasses — the standard published by the State Department for visa photos (travel.state.gov, checked October 2026)."],
+  ['What happens if my DV Lottery photo is rejected?', "A photo that breaks the State Department rules disqualifies the entire DV entry, so it is worth checking the dimensions, background and file size before you submit rather than after."],
+  ['How do I compress my photo to under 240KB for the DV Lottery?', "Add your photo to the tool above, choose Target KB mode, type 200, pick JPEG and download. The output always comes back at or under the number you type, and a photo that is already smaller comes back unchanged. Nothing is uploaded — compression runs in your browser."],
+  ['Can I use a selfie for the DV Lottery photo?', "You can photograph yourself, but the file must still meet every rule above. Our tool only shrinks the file: it cannot crop the shot to a square, replace the background, or sharpen a blurry face, so get those right before compressing."],
+  ['Is 20KB a real DV Lottery file-size rule?', "No. We found no 20KB figure on the official pages — the published ceiling for DV and other US visa photo uploads is 240KB (travel.state.gov, checked October 2026). The 20KB number is a forum rumor, not a government requirement."],
+];

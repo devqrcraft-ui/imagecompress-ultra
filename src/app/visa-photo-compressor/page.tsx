@@ -1,5 +1,15 @@
+const faq: [string, string][] = [
+  ['What photo size does a visa application actually require?', 'Whatever your own application form prints. Digital photo specs differ by country, by submission route (online upload versus a paper or appointment-based application) and they change without notice, so the limit on the page in front of you is the one that binds. Read it off that page, then type that number in KB into Target KB Mode.'],
+  ['How do I compress a photo for a visa application?', 'Choose JPEG - the format most consular portals expect for a photo - switch to Target KB Mode, and enter a value slightly below the ceiling your form states, for example 200 when the limit is 240. The tool returns the highest quality that still fits under that number, and a photo already smaller than the target comes back unchanged.'],
+  ['Can this tool crop or resize the photo to the required dimensions?', 'No. It changes file size and encoding only. It will not crop to a square, enforce a 2x2 inch ratio, or guarantee a particular pixel count; while compressing it does cap the longest side at 4096 px, which only matters for very large camera files. Crop and frame the photo first, then compress the result.'],
+  ['Is it safe to compress visa photos with an online tool?', 'With this one, yes: the image is decoded and re-encoded in your browser and never reaches our server, which is the point when the file is a biometric photo. Open DevTools, watch the Network tab while you compress, and confirm no request carries your image.'],
+];
 
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the photo requirements for a visa application?","acceptedAnswer":{"@type":"Answer","text":"Most visa applications require a JPEG photo under 240KB, 2x2 inches (600x600px minimum), white background, taken within 6 months. Exact requirements vary by country — check the official embassy website for your destination."}},{"@type":"Question","name":"How do I compress a photo for a visa application?","acceptedAnswer":{"@type":"Answer","text":"Upload your photo, select the target size (usually under 200KB or 240KB), and download the compressed JPEG. Our tool compresses without uploading to any server — your photo stays private on your device."}},{"@type":"Question","name":"What file size is required for visa photos?","acceptedAnswer":{"@type":"Answer","text":"Most countries require visa photos under 200-240KB. The US visa requires under 240KB, Schengen visa under 2MB, UK visa under 6MB. Use our visa photo compressor to hit the exact size required."}}]};
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+};
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { VISA_COUNTRIES } from '@/lib/visaCountries';
@@ -21,7 +31,7 @@ export default function VisaHubPage() {
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
@@ -30,8 +40,7 @@ export default function VisaHubPage() {
         description: 'Free visa and passport photo compressor for 40+ countries. No upload required.',
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '2847', bestRating: '5', worstRating: '1' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Visa Photo Compressor by Country","item":"https://www.compressto20kb.com/visa-photo-compressor"}]}' }} />
 
@@ -54,7 +63,7 @@ export default function VisaHubPage() {
             <span style={{ color: '#818cf8' }}>By Country</span>
           </h1>
           <p style={{ fontSize: '16px', opacity: 0.65, maxWidth: '600px', margin: '0 auto', lineHeight: 1.7 }}>
-            Compress your passport or visa photo to meet exact requirements for any country. Free, instant, no upload.
+            Compress your passport or visa photo down to the file size your own application states. Free, instant, no upload.
           </p>
         </div>
 
@@ -93,9 +102,9 @@ export default function VisaHubPage() {
         {/* Why */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: '16px' }}>
           {[
-            { icon: '🔒', title: '100% Private', desc: 'Your photos never leave your device. No server upload, no data collection.' },
+            { icon: '🔒', title: 'Private', desc: 'Your photos never leave your device. No server upload, no data collection.' },
             { icon: '⚡', title: 'Instant Results', desc: 'Browser-based compression in seconds. No waiting, no queue.' },
-            { icon: '🎯', title: 'Exact Requirements', desc: 'Each country page has the exact KB limit, dimensions and specs pre-loaded.' },
+            { icon: '🎯', title: 'Start From Your Form', desc: 'Each country page shows the photo spec we recorded for it and a ready-made target. Confirm the number on your own application before you submit.' },
             { icon: '🆓', title: 'Always Free', desc: 'No signup, no watermark, no limits. Compress as many photos as you need.' },
           ].map(f => (
             <div key={f.title} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px' }}>
@@ -103,6 +112,16 @@ export default function VisaHubPage() {
               <div style={{ fontWeight: 700, marginBottom: '8px' }}>{f.title}</div>
               <div style={{ fontSize:'15px', opacity: 0.6, lineHeight: 1.6 }}>{f.desc}</div>
             </div>
+          ))}
+        </div>
+
+        <div style={{ marginTop: '48px' }}>
+          <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Frequently Asked Questions</h2>
+          {faq.map(([q, a], i) => (
+            <details key={i} style={{ display: 'block', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(129,140,248,0.25)', borderRadius: '10px', padding: '13px 16px', marginBottom: '8px' }}>
+              <summary style={{ fontWeight: 700, fontSize: '15px', cursor: 'pointer', color: '#c7d2fe' }}>{q}</summary>
+              <p style={{ margin: '9px 0 0', fontSize: '15px', lineHeight: 1.7, opacity: 0.75 }}>{a}</p>
+            </details>
           ))}
         </div>
       </div>

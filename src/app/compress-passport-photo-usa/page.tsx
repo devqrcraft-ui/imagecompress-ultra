@@ -1,44 +1,26 @@
 import type { Metadata } from 'next';
-import ClientPage from './client';
+import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
   title: 'Compress US Passport Photo Free — Meet State Dept Requirements',
-  description: 'Compress your US passport photo to meet State Department requirements. JPEG, 2×2 inches, under 240KB. Free, no upload, 100% private. Works for online renewal and applications.',
+  description: 'Compress your US passport photo to meet State Department requirements. JPEG, 2×2 inches, under 240KB. Free, no upload, private. Works for online renewal and applications.',
   keywords: 'compress us passport photo, us passport photo size requirements, resize passport photo for us passport, compress passport photo online free, us passport photo 240kb',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-passport-photo-usa' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-passport-photo-usa' },
 };
 
+const faq: [string, string][] = [
+  ['What are US passport photo requirements for online submission?', 'The State Department’s digital photo spec asks for a JPEG, square, between 600×600 and 1200×1200 pixels, 240KB or smaller, taken within the last six months against a plain white or off-white background, full face front view with the head between 1 and 1-3/8 inches from chin to crown. Those are the photo rules; this tool handles only the file-size part.'],
+  ['How do I compress a US passport photo to under 240KB?', 'Drop the photo in above, choose JPEG, turn on Target KB Mode and enter 200 — a margin under the 240KB ceiling. The tool searches quality downward and returns the best encode that still fits, so you get maximum quality inside the limit.'],
+  ['Is it safe to compress US passport photos online?', 'With this tool, yes: the image is decoded and re-encoded locally in your browser and never sent to our server. A passport photo is biometric data, so check any tool you use — in DevTools, watch the Network tab while compressing.'],
+  ['Can I use this for the State Department online passport renewal?', 'Yes, for the file-size requirement. The online renewal system takes a JPEG digital photo under 240KB, and a 200KB target sits safely inside that. Whether the photo itself is accepted still depends on how it was taken — — background, head size, recency.'],
+  ['What is the difference between print and online requirements?', 'Printed photos for a mailed application are 2×2 inches (51×51mm) on paper — there is no file size involved. Online submissions are a JPEG file under 240KB at 600×600 to 1200×1200 pixels. This tool is for the online file.'],
+];
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What are US passport photo requirements for online submission?',
-      acceptedAnswer: { '@type': 'Answer', text: 'US passport photos for online submission must be JPEG format, under 240KB, at least 600x600px, with a plain white or off-white background. The photo must show a full face front view taken within 6 months. Head must be between 1 inch and 1-3/8 inches from chin to top of head.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I compress a US passport photo to under 240KB?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Upload your passport photo, select JPEG format, switch to Exact KB Mode, type 200 (safe margin under 240KB), and click Compress. All processing runs in your browser — your photo is never uploaded to any server.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is it safe to compress US passport photos online?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — with this tool. All compression runs locally in your browser using WebAssembly. Your passport photo never leaves your device. Other tools upload files to their servers, which is a significant privacy risk for identity documents.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I use this tool for the US passport renewal application online?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. The State Department online passport renewal system requires a JPEG photo under 240KB. Use Exact KB Mode set to 200KB with JPEG format. This gives a safe margin under the 240KB limit while maximizing quality.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between passport photo requirements for print vs online?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For online submission: JPEG under 240KB, at least 600x600px. For printed photos submitted by mail: 2x2 inches (51x51mm) printed at high resolution (300 DPI), no file size limit. This tool is ideal for online submissions.' },
-    },
-  ],
+  mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
 };
 
 export default function Page() {
@@ -57,21 +39,23 @@ export default function Page() {
         </h1>
         <div style={{ background: "rgba(129,140,248,0.13)", border: "1px solid rgba(129,140,248,0.35)", borderRadius: "14px", padding: "20px 24px", marginBottom: "24px" }}>
           <p style={{ margin: 0, fontSize: "15px", lineHeight: 1.7, color: "#e2e8f0" }}>
-            <strong style={{ color: "#818cf8" }}>Quick answer:</strong> A US passport photo must be 2×2 inches (51×51mm), JPEG format, under 240KB for digital submission, plain white or off-white background. Your face must fill 70–80% of the frame, taken within 6 months. Upload your photo, enable <strong>Exact KB Mode</strong>, set target to 200KB — compressed locally, never uploaded.
+            <strong style={{ color: "#818cf8" }}>Quick answer:</strong> A US passport photo must be 2×2 inches (51×51mm), JPEG format, under 240KB for digital submission, plain white or off-white background. Your face must fill 70–80% of the frame, taken within 6 months. Upload your photo, enable <strong>Target KB Mode</strong>, set target to 200KB — compressed locally, never uploaded.
           </p>
         </div>
         <p className="text-slate-400 text-lg mb-8">
-          Compress your passport photo to under 240KB JPEG for online US passport applications and renewals. Free, no upload, 100% private — your photo never leaves your browser.
+          Compress your passport photo to under 240KB JPEG for online US passport applications and renewals. Free, no upload, private — your photo never leaves your browser.
         </p>
 
-        <ClientPage />
+        <div className="mb-10" style={{maxWidth:'780px',margin:'0 auto'}}>
+          <CompressorTool initialTargetKB={200} />
+        </div>
 
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-white mb-4">US Passport Photo Requirements 2026</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">US Passport Photo Requirements For Online Submission</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {[
-              ['📐', 'Dimensions', '2×2 inches (51×51mm). For online: at least 600×600px.'],
-              ['💾', 'File Size (Online)', 'Under 240KB in JPEG format.'],
+              ['📐', 'Dimensions', '2×2 inches (51×51mm). Online: square, 600×600 to 1200×1200 pixels.'],
+              ['💾', 'File Size (Online)', 'JPEG, 240KB or smaller.'],
               ['🎨', 'Background', 'Plain white or off-white. No patterns, shadows, or objects.'],
               ['📅', 'Recency', 'Taken within the last 6 months.'],
               ['👤', 'Head Position', 'Full face, front view. Head between 1″ and 1-3/8″ chin to crown.'],
@@ -84,6 +68,11 @@ export default function Page() {
               </div>
             ))}
           </div>
+          <p className="text-slate-500 text-xs mt-3">
+            Requirements as published by the U.S. State Department:{' '}
+            <a href="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html" rel="nofollow noopener noreferrer" target="_blank" className="text-indigo-400 underline">travel.state.gov — Photo Requirements</a>
+            {' '}(checked October 2026). This tool changes file size only — it cannot fix a photo taken against the wrong background or with the wrong head size.
+          </p>
         </section>
 
         <section className="mb-10">
@@ -92,7 +81,7 @@ export default function Page() {
             {[
               { n: '1', t: 'Upload your passport photo', d: 'Click upload or drag your photo. Accepts JPEG, PNG, WebP, HEIC. Use the original high-resolution photo for best results.' },
               { n: '2', t: 'Select JPEG format', d: 'The State Department requires JPEG. Select JPEG as output format.' },
-              { n: '3', t: 'Set Exact KB Mode to 200', d: 'Type 200 in the target field — this gives a safe 40KB margin under the 240KB limit while maximizing image quality.' },
+              { n: '3', t: 'Set Target KB Mode to 200', d: 'Type 200 in the target field — this gives a safe 40KB margin under the 240KB limit while maximizing image quality.' },
               { n: '4', t: 'Compress and submit', d: 'Click Compress and download. Upload directly to the US passport application portal. Your photo never leaves your browser.' },
             ].map(s => (
               <div key={s.n} className="flex gap-4 p-4 bg-slate-800/50 rounded-xl border border-slate-700/50">
@@ -106,12 +95,7 @@ export default function Page() {
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
           <div className="space-y-4">
-            {[
-              ['What file size is required for US passport photos online?', 'Under 240KB in JPEG format. Use Exact KB Mode set to 200KB for a safe margin — this gives the maximum quality that fits comfortably under 240KB.'],
-              ['Is it safe to compress passport photos in a browser?', 'Yes — with this tool, all processing runs locally in your browser. Your photo never leaves your device. Tools that upload to servers pose a real privacy risk for identity documents.'],
-              ['Can I use this for the State Department online passport renewal?', 'Yes. The online renewal system (travel.state.gov) requires a JPEG under 240KB. Exact KB Mode set to 200KB with JPEG format meets this requirement with room to spare.'],
-              ['Does compressing affect passport photo print quality?', 'For online submissions, only the digital file matters. At 200-240KB JPEG from a 600x600px source, quality is more than sufficient for digital review by the State Department.'],
-            ].map(([q, a], i) => (
+            {faq.map(([q, a], i) => (
               <details key={i} className="bg-slate-800/50 rounded-xl border border-slate-700/50 p-4">
                 <summary className="font-semibold text-white cursor-pointer">{q}</summary>
                 <p className="text-slate-400 text-sm mt-3 leading-relaxed">{a}</p>

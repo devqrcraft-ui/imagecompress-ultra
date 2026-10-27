@@ -1,17 +1,12 @@
 "use client";
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
+import { faq } from './faq';
 const specs=[
   {label:'Profile photo',size:'400×400 px minimum',format:'JPEG or PNG',limit:'8MB max'},
   {label:'Banner/Cover image',size:'1584×396 px',format:'JPEG or PNG',limit:'8MB max'},
   {label:'Post image',size:'1200×627 px',format:'JPEG or PNG',limit:'5MB max'},
   {label:'Article cover',size:'744×400 px',format:'JPEG or PNG',limit:'5MB max'},
-];
-const faq=[
-  {q:'What size should a LinkedIn profile photo be?',a:'LinkedIn recommends 400×400 pixels for profile photos, JPEG or PNG format, under 8MB. For best quality on retina screens, use 800×800 pixels compressed to under 500KB.'},
-  {q:'What is the LinkedIn banner image size?',a:'LinkedIn banner (cover photo) should be 1584×396 pixels. Compress to under 1MB JPEG for fast loading without quality loss.'},
-  {q:'Does LinkedIn compress my photos automatically?',a:'Yes, LinkedIn recompresses all uploaded images. Upload the highest quality version you have — LinkedIn will compress it. Our tool helps you pre-optimize before upload.'},
-  {q:'Why does my LinkedIn photo look blurry?',a:'LinkedIn aggressively compresses profile photos. Upload at least 800×800 pixels at high quality to minimize LinkedIn\'s recompression artifacts.'},
 ];
 
 const schemaData = {
@@ -42,7 +37,7 @@ export default function ClientPage(){
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
         <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → LinkedIn Image Guide</div>
         <div style={{display:'inline-block',background:'rgba(14,165,233,0.1)',border:'1px solid rgba(14,165,233,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#7dd3fc'}}>💼 LinkedIn · Professional</div>
-        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Image for LinkedIn Profile<br/><span style={{color:'#818cf8'}}>Photo, Banner & Posts 2025</span></h1>
+        <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Image for LinkedIn Profile<br/><span style={{color:'#818cf8'}}>Photo, Banner & Posts 2026</span></h1>
         <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>

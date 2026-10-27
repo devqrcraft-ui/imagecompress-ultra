@@ -2,36 +2,27 @@
 import Link from 'next/link';
 
 const useCases = [
-  { icon:'🛍️', title:'Ecommerce Product Photos', desc:'Shopify recommends WebP images under 500KB. At 200KB, product photos load fast while remaining sharp enough for zoom features.' },
-  { icon:'✍️', title:'Blog & CMS Images', desc:'WordPress, Squarespace, and Ghost automatically serve images to readers. Keeping uploads under 200KB improves PageSpeed scores significantly.' },
-  { icon:'📨', title:'Email Newsletters', desc:'Most email clients and marketing platforms recommend keeping inline images under 200KB. Faster rendering means lower unsubscribe rates.' },
-  { icon:'📋', title:'Government & Visa Portals', desc:'Several visa and immigration portals set a 200KB cap for document photos. Examples include scanned certificates, supporting documents, and ID copies.' },
+  { icon:'🛍️', title:'Ecommerce Product Photos', desc:'Product shots have to stay sharp enough for a zoom view but light enough to load quickly. A 200KB ceiling is a practical middle ground - set it, compress the batch, and check the result with the before/after slider.' },
+  { icon:'✍️', title:'Blog & CMS Images', desc:'Hero images and inline photos are usually the heaviest part of an article. Fitting them under 200KB keeps the page light without hand-tuning a quality slider per image.' },
+  { icon:'📨', title:'Email Newsletters', desc:'Heavy inline images slow rendering and can push a message over a provider\'s size cap. 200KB is a comfortable working number for a newsletter graphic.' },
+  { icon:'📋', title:'Upload fields with a ceiling', desc:'When a form tells you the file must be 200KB or smaller, Target KB Mode is built for that job - type the number it printed. Where a form states a different figure, type that one instead; the ceiling on your screen outranks any number on this page.' },
 ];
 
 const steps = [
-  { n:'1', t:'Upload your image', d:'Click upload or drag your file. Accepts JPEG, PNG, WebP, AVIF, and HEIC (iPhone photos). Up to 50 files at once.' },
-  { n:'2', t:'Switch to Exact KB Mode', d:'Toggle the mode selector from Quality to Exact KB. Type 200 in the target size field.' },
-  { n:'3', t:'Select your output format', d:'Choose WebP for best quality at 200KB, JPEG for maximum compatibility, or AVIF for the smallest possible file.' },
-  { n:'4', t:'Compress and download', d:'Click Compress. Your browser processes the image instantly — no server upload. Download the 200KB file directly to your device.' },
+  { n:'1', t:'Add your image', d:'Click the drop zone or drag files in. Accepts JPEG, PNG, WebP, AVIF, and HEIC (iPhone photos). Up to 50 files at once.' },
+  { n:'2', t:'Switch to Target KB Mode', d:'Toggle the mode selector from Quality to Target KB. Type 200 in the target size field.' },
+  { n:'3', t:'Select your output format', d:'WebP is a good default, AVIF squeezes more when your browser supports it, and JPEG is the safe choice when the receiving site asks for it.' },
+  { n:'4', t:'Compress and download', d:'Click Compress. Your browser does the work locally - no server upload. Download the result, which will be 200KB or under.' },
 ];
 
 const tips = [
-  { title:'Use WebP — it looks visibly better at 200KB', desc:'At 200KB, the quality difference between WebP and JPEG becomes clearly visible. WebP retains edge sharpness and color accuracy that JPEG loses to compression artifacts.' },
-  { title:'Match dimensions to actual display size', desc:'A 5000×4000px image shrunk to 200KB will always look worse than a 1400×1000px image at 200KB. Resize to your target display dimensions before compressing.' },
-  { title:'200KB vs 100KB — when does it matter?', desc:'Choose 200KB over 100KB when your image contains fine text, detailed product features, fabric textures, or any content where sharpness directly affects purchasing decisions.' },
-  { title:'Avoid re-compressing existing JPEGs', desc:'Every time a JPEG is re-saved, quality degrades further. Always compress from the original high-resolution file to get the cleanest possible result at 200KB.' },
+  { title:'Try WebP or AVIF before you lower quality further', desc:'Both usually hold more detail than JPEG at the same file size. Compress the same photo twice, compare the previews, and keep whichever you prefer - that comparison is more useful than any percentage we could quote you.' },
+  { title:'Start from a sensibly sized image', desc:'A 5000x4000 px master squeezed to 200KB will look worse than one already close to your display size. This tool caps the longest side at 4096 px while it works, but it cannot resize to the exact width you wanted.' },
+  { title:'200KB or 100KB - when does it matter?', desc:'Take the larger ceiling your form allows. 200KB leaves more room for fine text, fabric texture and product detail, which is usually where the smaller targets get muddy.' },
+  { title:'Compress from the original, not a previous result', desc:'Every lossy re-save throws away more detail. Work from the original file where you can, and avoid re-running the same image through the tool several times.' },
 ];
 
-const faqItems = [
-  { q:'How do I compress an image to exactly 200KB?', a:'Switch to Exact KB Mode, type 200, choose WebP or JPEG, and click Compress. The tool finds the maximum quality that fits 200KB using binary search — within 1KB accuracy.' },
-  { q:'Does compressing to 200KB reduce visible quality?', a:'200KB retains much more detail than 20KB or 100KB. For most product and blog photos at typical web sizes (800–1200px wide), a 200KB WebP looks nearly identical to the original.' },
-  { q:'Is WebP or JPEG better for 200KB images?', a:'WebP is clearly better at 200KB. It retains more sharpness and color accuracy with fewer visible artifacts. Use JPEG only if you need broad compatibility with very old systems.' },
-  { q:'Can I compress multiple images to 200KB at once?', a:'Yes — upload up to 50 images, set Exact KB Mode to 200, and compress all at once. Download individually or as a ZIP file. All processing stays in your browser.' },
-  { q:'How to compress an image to 200KB on mobile?', a:'Open compressto20kb.com in Safari (iPhone) or Chrome (Android). Tap upload, select your photo, type 200 in Exact KB Mode, tap Compress. Saves directly to your device.' },
-  { q:'What is 200KB good for?', a:'200KB is the sweet spot for ecommerce product photos, blog hero images, and email newsletters. It gives noticeably better quality than 100KB while still loading fast on mobile.' },
-];
-
-export default function ClientPage() {
+export default function ClientPage({ faq }: { faq: [string, string][] }) {
   return (
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
 
@@ -41,21 +32,21 @@ export default function ClientPage() {
         </div>
 
         <h1 style={{fontSize:'clamp(26px,4vw,38px)',fontWeight:900,lineHeight:1.2,marginBottom:'12px'}}>
-          Compress Image to <span style={{color:'#818cf8'}}>200KB</span> Free Online — No Upload, 100% Private
+          Compress Image to <span style={{color:'#818cf8'}}>200KB</span> Free Online — No Upload, Private
         </h1>
         <p style={{fontSize:'15px',lineHeight:1.7,opacity:0.7,marginBottom:'32px'}}>
-          Compress JPG, PNG, WebP, AVIF, HEIC to exactly 200KB directly in your browser — no upload, no tracking, no watermark.
+          Compress JPG, PNG, WebP, AVIF, HEIC to 200KB or under directly in your browser — no upload, no watermark, no account.
         </p>
 
         <div style={{background:'rgba(129,140,248,0.12)',border:'1px solid rgba(129,140,248,0.35)',borderRadius:'14px',padding:'24px',marginBottom:'40px',textAlign:'center' as const}}>
-          <div style={{fontSize:'15px',fontWeight:700,marginBottom:'8px'}}>🎯 Compress to Exactly 200KB — Free</div>
+          <div style={{fontSize:'15px',fontWeight:700,marginBottom:'8px'}}>🎯 Compress to 200KB or under — Free</div>
           <p style={{fontSize:'15px',opacity:0.65,marginBottom:'16px'}}>No upload · Instant · JPEG, PNG, WebP, HEIC · Bulk up to 50 images</p>
           <Link href="/?mode=exactkb&target=200" style={{display:'inline-block',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',padding:'12px 28px',borderRadius:'100px',fontWeight:800,fontSize:'14px',textDecoration:'none'}}>
             ⚡ Open 200KB Compressor
           </Link>
         </div>
 
-        <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'12px'}}>When Do You Need Exactly 200KB?</h2>
+        <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'12px'}}>When Do You Need 200KB or under?</h2>
         <p style={{fontSize:'14px',lineHeight:1.7,opacity:0.7,marginBottom:'16px'}}>200KB sits in the sweet spot for web images: large enough to retain sharp detail, small enough to load quickly on mobile connections. It is the go-to target for ecommerce product photos, blog hero images, and email newsletters where quality matters but speed cannot be sacrificed.</p>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'12px',marginBottom:'40px'}}>
           {useCases.map((u,i)=>(
@@ -121,37 +112,36 @@ export default function ClientPage() {
 
         <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'16px'}}>Frequently Asked Questions</h2>
         <div style={{display:'flex',flexDirection:'column' as const,gap:'12px',marginBottom:'40px'}}>
-          {faqItems.map((item,i)=>(
-            <details key={i} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'16px 20px',cursor:'pointer'}}>
-              <summary style={{fontWeight:700,fontSize:'14px',color:'#a5b4fc',listStyle:'none'}}>❓ {item.q}</summary>
-              <div style={{fontSize:'15px',opacity:0.7,marginTop:'10px',lineHeight:1.6}}>{item.a}</div>
+          {faq.map(([q,a],i)=>(
+            <details key={i} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'16px 20px',border:'1px solid rgba(255,255,255,0.07)'}}>
+              <summary style={{fontWeight:700,fontSize:'14px',color:'#a5b4fc',cursor:'pointer',listStyle:'none'}}>{q}</summary>
+              <p style={{fontSize:'15px',opacity:0.7,marginTop:'10px',lineHeight:1.6}}>{a}</p>
             </details>
           ))}
         </div>
 
 
-        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>CompressTo20KB vs Competitors — 200KB Compression</h2>
+        <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>What This Tool Does — So You Can Compare It Yourself</h2>
+        <p style={{fontSize:'14px',lineHeight:1.7,opacity:0.7,marginBottom:'16px'}}>Some rows of this table used to describe TinyPNG and Squoosh. They are gone: we cannot check what another service allows from here, and their features move without notice. Everything below is a claim about our own code, which we can actually read.</p>
         <div style={{overflowX:'auto' as const,marginBottom:'32px'}}>
           <table style={{width:'100%',borderCollapse:'collapse' as const,fontSize:'15px'}}>
             <thead><tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
-              <th style={{textAlign:'left' as const,padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Feature</th>
-              <th style={{padding:'10px 12px',color:'#818cf8',fontWeight:800}}>This Tool</th>
-              <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>TinyPNG</th>
-              <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>Squoosh</th>
+              <th style={{textAlign:'left' as const,padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Detail</th>
+              <th style={{textAlign:'left' as const,padding:'10px 12px',color:'#818cf8',fontWeight:800}}>This tool</th>
             </tr></thead>
             <tbody>
               {[
-                ['Exact 200KB target','Yes — binary search','No — % only','No — manual'],
-                ['No file upload','Yes — browser only','No — server upload','Yes — browser only'],
-                ['Batch compress 50 images','Yes','No','No'],
-                ['HEIC / iPhone support','Yes','No','Partial'],
-                ['Free, no signup','Yes','Limited free','Yes'],
-              ].map(([feat,a,b,c])=>(
+                ['Where the work happens','On your device — nothing is uploaded'],
+                ['Target size','Type any number from 5 to 5000 KB; the result comes back at or under it'],
+                ['Files per run','Up to 50, with a ZIP download or one at a time'],
+                ['Accepted input','JPG, PNG, WebP, AVIF, HEIC'],
+                ['Output formats','WebP, AVIF, JPEG, PNG'],
+                ['Resize, crop, background removal','Not offered — file size and encoding only'],
+                ['If the file is already under target','Returned unchanged, so no extra generation loss'],
+              ].map(([feat,a])=>(
                 <tr key={feat} style={{borderBottom:'1px solid rgba(255,255,255,0.07)'}}>
                   <td style={{padding:'9px 12px',color:'rgba(255,255,255,0.75)'}}>{feat}</td>
-                  <td style={{padding:'9px 12px',textAlign:'center' as const,color:'#4ade80',fontWeight:700}}>{a}</td>
-                  <td style={{padding:'9px 12px',textAlign:'center' as const,color:'rgba(255,255,255,0.4)'}}>{b}</td>
-                  <td style={{padding:'9px 12px',textAlign:'center' as const,color:'rgba(255,255,255,0.4)'}}>{c}</td>
+                  <td style={{padding:'9px 12px',color:'#4ade80',fontWeight:600}}>{a}</td>
                 </tr>
               ))}
             </tbody>

@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
       </div>
       <div style={{maxWidth:'1200px',margin:'32px auto 0',paddingTop:'20px',borderTop:'1px solid rgba(255,255,255,0.08)',textAlign:'center',color:'rgba(255,255,255,0.6)',fontSize:'13px'}}>
-        © {new Date().getFullYear()} CompressTo20KB.com — 100% Private Free Online Tool
+        © {new Date().getFullYear()} CompressTo20KB.com — Private Free Online Tool
       </div>
     </footer>
   );

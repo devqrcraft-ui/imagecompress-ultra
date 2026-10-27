@@ -10,20 +10,11 @@ export const metadata: Metadata = {
   openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-for-usps' },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What image format does USPS accept?", acceptedAnswer: { "@type": "Answer", text: "USPS accepts JPEG and PNG. JPEG is recommended for photos for best compression." } },
-    { "@type": "Question", name: "What is the maximum file size for USPS image uploads?", acceptedAnswer: { "@type": "Answer", text: "USPS personalized stamps require images under 2MB. Click-N-Ship and portal uploads typically require under 1MB." } },
-    { "@type": "Question", name: "How do I compress an image for USPS for free?", acceptedAnswer: { "@type": "Answer", text: "Use CompressTo20KB — upload your image, select Exact KB Mode, type your target size. Compressed in your browser, no upload." } },
-  ],
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Compress Image for USPS — File Size & Format Requirements 2025",
+  headline: "Compress Image for USPS — File Size & Format Requirements 2026",
   url: "https://www.compressto20kb.com/blog/compress-image-for-usps",
   author: { "@type": "Organization", name: "CompressTo20KB" },
   datePublished: "2026-02-22",
@@ -35,7 +26,6 @@ export default function USPSPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Compress Image for USPS","item":"https://www.compressto20kb.com/blog/compress-image-for-usps"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Compress Image for USPS","description":"USPS image requirements for Click-N-Ship, personalized stamps, and USPS.com. How to compress images to meet USPS size limits free online.","url":"https://www.compressto20kb.com/blog/compress-image-for-usps","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="max-w-3xl mx-auto px-4 py-16">
         <nav className="text-sm text-slate-300 mb-8">
           <Link href="/" className="hover:underline">Home</Link> / <Link href="/blog" className="hover:underline">Blog</Link> / <span>Compress Image for USPS</span>
@@ -85,7 +75,7 @@ export default function USPSPage() {
             {[
               ["1", "Open CompressTo20KB", "Free — no account needed."],
               ["2", "Upload your image", "Drop JPEG or PNG. All processing in your browser."],
-              ["3", "Set your target size", "Exact KB Mode: stamps → 1000KB, business portals → 500KB, Informed Delivery → 200KB."],
+              ["3", "Set your target size", "Target KB Mode: stamps → 1000KB, business portals → 500KB, Informed Delivery → 200KB."],
               ["4", "Download and upload to USPS", "Done in seconds."],
             ].map(([n, t, d]) => (
               <li key={n} className="flex gap-4">
@@ -102,7 +92,7 @@ export default function USPSPage() {
             {[
               { q: "What image format does USPS accept?", a: "JPEG and PNG. JPEG recommended for photos." },
               { q: "What is the maximum file size for USPS image uploads?", a: "Personalized stamps: under 2MB. Click-N-Ship and other portals: under 1MB." },
-              { q: "How do I compress an image for USPS for free?", a: "Use CompressTo20KB — Exact KB Mode, type your target. Compressed in browser, no upload." },
+              { q: "How do I compress an image for USPS for free?", a: "Use CompressTo20KB — Target KB Mode, type your target. Compressed in browser, no upload." },
             ].map((f, i) => (
               <div key={i} className="border border-gray-200 rounded-2xl p-6">
                 <h3 className="font-semibold mb-2">{f.q}</h3>
@@ -114,7 +104,7 @@ export default function USPSPage() {
 
         <div className="bg-blue-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-2xl font-bold mb-3">Compress Your USPS Image Free</h2>
-          <p className="text-blue-100 mb-6">Set any exact KB target. No upload. Works on all devices.</p>
+          <p className="text-blue-100 mb-6">Set any target KB size. No upload. Works on all devices.</p>
           <Link href="/" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">Compress Image Free →</Link>
         </div>
         <div className="mt-8 text-sm text-slate-300">

@@ -25,8 +25,7 @@ export default function Page() {
         url: 'https://www.compressto20kb.com/compress-for-dv-lottery',
         description: 'Free tool to compress photos for DV Lottery Diversity Visa Program. Under 240KB, JPEG, white background.',
         applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '3241', bestRating: '5', worstRating: '1' },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Photo for DV Lottery 2026/2027","item":"https://www.compressto20kb.com/compress-for-dv-lottery"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -86,7 +85,7 @@ export default function Page() {
         <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Common DV Lottery Photo Mistakes</h2>
         {[
           { icon: '📱', problem: 'iPhone HEIC format', fix: 'DS-260/DV Lottery only accepts JPEG. Our tool converts HEIC to JPEG automatically.' },
-          { icon: '📏', problem: 'Photo over 240KB', fix: 'Select Exact KB Mode, enter 240 as target. Compressed instantly.' },
+          { icon: '📏', problem: 'Photo over 240KB', fix: 'Select Target KB Mode, enter 240 as target. Compressed instantly.' },
           { icon: '👓', problem: 'Glasses in photo', fix: 'No glasses allowed since 2016. Remove glasses and retake the photo.' },
           { icon: '🎨', problem: 'Display P3 color (iPhone)', fix: 'We automatically convert iPhone Display P3 to sRGB during compression.' },
           { icon: '⬛', problem: 'Non-white background', fix: 'Must be plain white or off-white. No patterns, shadows, or colored walls.' },

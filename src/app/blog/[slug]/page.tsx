@@ -47,17 +47,13 @@ Our free tool converts HEIC to JPEG and fixes the color space automatically.
 
 1. Click [Open DS-160 Compressor](/compress-for-ds160)
 2. Upload your photo (JPEG, PNG, HEIC, WebP all accepted)
-3. Select **Exact KB Mode** and enter **240** as target
+3. Select **Target KB Mode** and enter **240** as target
 4. Download your compressed JPEG
 5. Upload to DS-160 at ceac.state.gov
 
-## DS-160 vs Passport Photo — What's the Difference?
+## What the US State Department Actually Specifies
 
-| | DS-160 Digital | US Passport |
-|---|---|---|
-| File size | Under 240KB | Under 10MB |
-| Dimensions | 600-1200px square | 600-1200px square |
-| Format | JPEG only | JPEG |
+The published digital image rule is the same one DS-160 uses: a JPEG whose longest side is between 600 and 1200 pixels, square, and **less than or equal to 240 kilobytes** (travel.state.gov, checked October 2026). Other US document uploads ask for different things, so treat 240KB as the figure for the systems that name it rather than a universal American limit — read the instruction next to the upload button and aim at that number.
 
 ## Frequently Asked Questions
 
@@ -76,34 +72,35 @@ Our free tool converts HEIC to JPEG and fixes the color space automatically.
     content: `
 ## Why Visa Photos Get Rejected for File Size
 
-Every country has strict photo requirements for visa applications. The most common rejection reason is file size — modern phone cameras produce photos of 3-10MB, while most visa systems require under 300KB or even 50KB.
+Every country publishes its own photo rules, and they change between notifications. The rejection rate is dominated by file size and format, because a modern phone camera hands you a several-megabyte image while the upload field often wants a few hundred kilobytes.
 
-Common limits by country:
-- **US DS-160:** Under 240KB
-- **UK Visa:** Under 6MB (but 600×750px exact)
-- **India e-Visa:** Under 300KB
-- **China Visa:** Under 120KB
-- **Pakistan e-Visa:** Under 50KB
+Three figures we have checked against the issuing authority itself (all October 2026):
+
+- **US visa / DS-160 (travel.state.gov):** JPEG, square, 600-1200 px on the longest side, **240 KB or less**.
+- **UK visa (gov.uk):** JPG or JPEG, vertically oriented, at least 600 px wide and 750 px tall, **at least 50 KB and no more than 6 MB**.
+- **India e-Visa (indianvisaonline.gov.in):** JPEG, equal height and width, **between 10 KB and 300 KB**.
+
+Notice that a file can be *too small* as well as too large — a heavily compressed 8 KB photo can be rejected on its own. Aim for the window your form states, then look at the preview before uploading.
 
 ## How to Compress Visa Photo in 3 Steps
 
 1. **Open our free compressor** at compressto20kb.com
 2. **Upload your photo** — JPEG, PNG, HEIC, WebP supported
-3. **Select Exact KB Mode** — enter the target KB for your visa type
+3. **Select Target KB Mode** — enter the target KB for your visa type
 
 No signup, no upload to server, works on iPhone, Android, Mac, Windows.
 
 ## Country-Specific Visa Photo Guides
 
-- [UK Visa Photo](/compress-for-uk-visa) — 6MB max, 600×750px
-- [India e-Visa Photo](/compress-for-india-visa) — 300KB max, 350×350px
-- [Schengen Visa Photo](/compress-for-schengen-visa) — 500KB max
-- [Japan Visa Photo](/compress-for-japan-visa) — 240KB max
-- [China Visa Photo](/compress-for-china-visa) — 120KB max
+- [UK Visa Photo](/compress-for-uk-visa) — 50 KB to 6 MB, at least 600×750 px (gov.uk, checked October 2026)
+- [India e-Visa Photo](/compress-for-india-visa) — 10 KB to 300 KB, square JPEG (indianvisaonline.gov.in, checked October 2026)
+- [Schengen Visa Photo](/compress-for-schengen-visa) — biometric format; the accepted file size is set by the country you apply to
+- [Japan Visa Photo](/compress-for-japan-visa) — check the consulate page for your jurisdiction before uploading
+- [China Visa Photo](/compress-for-china-visa) — the visa centre page states the current digital limits
 
 ## iPhone Tips for Visa Photos
 
-iPhone photos are in HEIC format and Display P3 color space — both incompatible with most visa systems. Our tool automatically converts both when you compress your photo.
+iPhone photos are usually HEIC rather than JPEG, which is the format most visa upload fields reject. Compressing through this tool writes the result as a standard JPEG, WebP, AVIF or PNG, so the container problem is solved as part of the run — provided your browser can read HEIC in the first place. Safari can; several other browsers cannot, and the tool then sees an unreadable file rather than silently producing something odd. If that happens, export the photo as JPEG in the Photos app first and compress the copy here.
     `,
   },
   'iphone-photo-ds160': {
@@ -123,14 +120,14 @@ iPhones save photos in HEIC format by default. The DS-160 system **only accepts 
 iPhone cameras capture photos in Display P3 color space. The DS-160 system requires **sRGB color space**. Photos with Display P3 may pass the automated check but get rejected manually.
 
 ### Problem 3: File Size
-iPhone photos are typically 3-8MB. DS-160 requires **under 240KB** — that's 10-30x smaller than a typical iPhone photo.
+A photo straight off a phone is usually several megabytes, while the US digital image rule is **240 KB or less** (travel.state.gov, checked October 2026). That is the gap this tool exists for: type 240 as the target and it searches encoding quality until the file fits.
 
 ## How to Fix iPhone Photos for DS-160
 
 **The fastest fix:**
 1. Go to [compress-to-240kb](/compress-to-240kb)
 2. Upload your iPhone photo (HEIC is accepted)
-3. Our tool converts to JPEG + fixes color space + compresses to under 240KB
+3. Our tool re-encodes it as a standard JPEG and compresses it to under 240KB
 4. Download and upload to DS-160
 
 **Manual fix (Settings method):**
@@ -139,15 +136,15 @@ iPhone photos are typically 3-8MB. DS-160 requires **under 240KB** — that's 10
 3. Retake the photo — it will now save as JPEG
 4. Still compress to under 240KB before uploading
 
-## Does Display P3 Always Cause DS-160 Rejection?
+## Does Display P3 Colour Cause DS-160 Rejection?
 
-Not always — it depends on the consular officer reviewing your application. However, the US State Department specifies sRGB as the required color space. To be safe, always convert to sRGB before submitting.
+Sometimes, sometimes not — it depends on how the upload validator reads the embedded profile, and the State Department page does not describe a colour-space test in the terms most people expect. What we can say honestly is that this tool re-encodes the picture through your browser, which usually drops the wide-gamut profile as a side effect, but it is not a colour-management utility and we have not verified its output against the DS-160 validator. If a rejection points at colour, convert to sRGB in an image editor first and then compress the result here.
 
 ## Step by Step: DS-160 Photo from iPhone
 
 1. Take photo in good lighting, white background, no glasses
 2. Upload to [our free compressor](/compress-for-ds160)
-3. Tool converts HEIC → JPEG, Display P3 → sRGB, compresses to under 240KB
+3. Tool re-encodes HEIC → JPEG and compresses to under 240KB
 4. Download the file
 5. Upload to DS-160 at ceac.state.gov/genniv
     `,
@@ -162,19 +159,20 @@ Not always — it depends on the consular officer reviewing your application. Ho
 
 The Diversity Visa (DV) Lottery run by the US State Department has strict photo requirements identical to DS-160:
 
-- **Format:** JPEG only
-- **File size:** Under 240KB
-- **Dimensions:** 600×600px to 1200×1200px
-- **Background:** White or off-white only
-- **Color:** sRGB (not Display P3)
-- **No glasses** (since 2016)
-- **Taken within:** 6 months of entry submission
+- **Format:** JPEG
+- **File size:** 240KB or smaller
+- **Dimensions:** 600×600 to 1200×1200 pixels
+- **Background:** plain white or off-white
+- **No glasses**
+- **Taken within:** the last 6 months
+
+Those are the figures we checked against official guidance in October 2026. The rest of the rules - head size, expression, lighting, and whether your camera's wide-gamut colour profile survives the upload - are in the State Department's own instructions. Read them before you submit; this list is not a substitute for the source.
 
 ## Why DV Lottery Photos Get Rejected
 
 The most common reasons for DV Lottery photo rejection:
 
-1. **File over 240KB** — most phone photos are 3-8MB
+1. **File over 240KB** — a phone photo is typically several megabytes, an order of magnitude over the limit
 2. **HEIC format** — iPhone default, not accepted
 3. **Non-white background** — colored walls, shadows, patterns
 4. **Glasses** — no longer allowed since 2016
@@ -210,19 +208,22 @@ The DV Lottery entry window is typically open for 30 days in October-November ea
 
 Different Indian exams have different photo size requirements:
 
-| Exam | Max Size | Dimensions |
-|------|----------|------------|
-| SSC CGL/CHSL | 50KB | 100×120px |
-| NEET UG | 200KB | 200×230px |
-| UPSC Civil Services | 300KB | 350×350px |
-| RRB (Railways) | 50KB | 100×120px |
-| IBPS Bank Exams | 50KB | 200×230px |
-| JEE Main | 30KB | 100×130px |
+Sites that quote a single "max size" per exam get it wrong in both directions, because most of these forms publish a **band** - a floor as well as a ceiling - and a file below the floor is rejected just like one above it.
+
+| Form | Published range for the photograph | Source |
+|------|-------------------------------------|--------|
+| NEET-UG (NTA) | 10 KB to 200 KB, scanned passport-size photo | nta.ac.in public notice |
+| NEET-UG (NTA) | 50 KB to 300 KB, postcard size 4"×6" | nta.ac.in public notice |
+| UPSC online application | 20 KB to 300 KB | upsconline.gov.in candidate FAQ |
+
+Anything not in that table we have not verified, so we do not state it. SSC in particular now captures the photograph live through its own app or webcam for many posts, which means there is nothing to upload - and no compressor can help you there.
+
+Two things a compressor cannot do, whatever the exam: it cannot make a file **bigger** to reach a minimum, and it cannot resize to an exact pixel box or crop to a required ratio. Those are camera, editor or scanner settings, decided before the file gets here.
 
 ## Why Exam Photos Get Rejected
 
 The most common reasons for Indian exam photo rejection:
-- File size over limit (phone photos are 3-8MB)
+- File size outside the published band (a phone photo is typically several megabytes)
 - Wrong dimensions
 - Non-white background
 - File not JPEG format
@@ -231,15 +232,15 @@ The most common reasons for Indian exam photo rejection:
 
 1. Open [our free compressor](/)
 2. Upload your photo
-3. Click **Exact KB Mode**
+3. Click **Target KB Mode**
 4. Enter **50** as target size
 5. Download — ready to upload to SSC/RRB portal
 
 Works for any size: 20KB, 30KB, 50KB, 100KB, 200KB, 300KB.
 
-## NEET Photo Requirements 2025
+## NEET Photo Requirements 2026
 
-NEET photo: JPEG format, 200×230px, under 200KB, white background, taken within 6 months, not scanned from printed photo.
+What NTA's own notice states for the photograph file: JPEG, between 10 KB and 200 KB, colour with a plain background, taken recently. The exact pixel/mm box changes between notification cycles, so read the PDF for the year you are applying - a figure copied from a blog post, including this one, is a common way a compliant photo gets rejected.
 
 Use [our NEET compressor](/compress-for-neet-exam) to resize and compress in one step.
 

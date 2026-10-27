@@ -1,0 +1,7 @@
+export const faq: [string, string][] = [
+  ['What image size does WooCommerce recommend?', "WooCommerce suggests uploading product images at least 800×800 pixels so the built-in zoom works, and the theme then generates its own thumbnail sizes from what you upload (woocommerce.com product images guide, checked October 2026). It does not publish a KB file-size rule — keeping files small is our performance recommendation, not a WooCommerce requirement."],
+  ['Does image size affect WooCommerce SEO?', "Yes, indirectly. Page speed is something Google considers, and heavy images slow a page down, which can hurt both user experience and Core Web Vitals. The main lever is total bytes delivered, not a specific number."],
+  ['Should I use WebP or JPEG for WooCommerce?', "WebP is usually the better choice: Google reports lossy WebP is roughly 25–34% smaller than a comparable JPEG (developers.google.com/speed/webp, checked October 2026). Most storefronts serve WebP today; keep JPEG as a fallback where needed."],
+  ['Is it better to compress before or after uploading to WordPress?', "Before. Compress in your browser first so you control the quality and final size, then upload. Re-running an already-compressed file through another tool usually only adds loss."],
+  ['Does this tool resize my images to 800×800 for WooCommerce?', "No. It compresses file size and only caps the longest side at 4096 pixels; it does not crop to a square or force a specific width or height. Resize to 800×800 in your editor or with WooCommerce's own regenerated thumbnails first."],
+];

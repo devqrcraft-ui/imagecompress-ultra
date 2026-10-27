@@ -1,0 +1,7 @@
+export const faq: [string, string][] = [
+  ['What is the DS-160 photo size requirement?', "The DS-160 asks for a square JPEG between 600×600 and 1200×1200 pixels, no larger than 240KB, on a plain white or off-white background, taken within the last six months, without glasses (travel.state.gov digital image requirements, checked October 2026)."],
+  ['Why does DS-160 reject my photo?', "The usual causes are a file above 240KB, a format other than JPEG, dimensions outside the 600–1200 pixel range, a colored or textured background, or glasses. Our tool fixes the file size and the format; it cannot fix composition, background or anything the photo itself got wrong."],
+  ['Can I use the same photo for DS-160 and passport?', "Usually yes — both follow the same State Department standard: square, JPEG, 600×600 to 1200×1200 pixels, 240KB or less, plain background, recent. If you carry prescription glasses, both require the glasses to be off."],
+  ['How do I compress a photo for the DS-160 upload?', "Use Target KB mode: type 200, pick JPEG, and the tool searches the quality until the file comes back at or under that number. A photo already under 200KB is returned unchanged. Everything runs in your browser — the visa photo is never uploaded to a server."],
+  ['Is ceac.state.gov the official DS-160 portal?', "Yes. The official DS-160 application is at ceac.state.gov. Do not use third-party sites that charge fees for a free government form."],
+];

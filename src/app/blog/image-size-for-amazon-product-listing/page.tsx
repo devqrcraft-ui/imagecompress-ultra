@@ -10,21 +10,11 @@ export const metadata: Metadata = {
   openGraph: { url: 'https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing' },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    { "@type": "Question", name: "What is the minimum image size for Amazon product listings?", acceptedAnswer: { "@type": "Answer", text: "Minimum 1000px on longest side to enable zoom. Recommended: 2000x2000px. Absolute minimum accepted: 500x500px." } },
-    { "@type": "Question", name: "What background is required for Amazon main product images?", acceptedAnswer: { "@type": "Answer", text: "Pure white background — RGB 255, 255, 255. Product must fill at least 85% of the frame. Secondary images can have any background." } },
-    { "@type": "Question", name: "What file format does Amazon require?", acceptedAnswer: { "@type": "Answer", text: "Amazon accepts JPEG, PNG, GIF, and TIFF. JPEG is strongly recommended for smallest file size with no visible quality loss." } },
-    { "@type": "Question", name: "How do I compress Amazon product images for free?", acceptedAnswer: { "@type": "Answer", text: "Use CompressTo20KB and select the Amazon preset — outputs JPEG at 2000px under 1MB. All processing in your browser, no upload." } },
-  ],
-};
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Amazon Product Image Size Requirements 2025",
+  headline: "Amazon Product Image Size Requirements 2026",
   url: "https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing",
   author: { "@type": "Organization", name: "CompressTo20KB" },
   datePublished: "2026-02-22",
@@ -36,12 +26,11 @@ export default function AmazonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Amazon Product Image Size Requirements 2026","item":"https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Amazon Product Image Size Requirements 2026","description":"Amazon product image requirements: minimum 1000px, white background, JPEG format, under 10MB. How to compress and optimize Amazon listing images free.","url":"https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <main className="max-w-3xl mx-auto px-4 py-16">
         <nav className="text-sm text-slate-300 mb-8">
           <Link href="/" className="hover:underline">Home</Link> / <Link href="/blog" className="hover:underline">Blog</Link> / <span>Amazon Product Image Size</span>
         </nav>
-        <h1 className="text-4xl font-bold mb-4">Amazon Product Image Size Requirements 2025</h1>
+        <h1 className="text-4xl font-bold mb-4">Amazon Product Image Size Requirements 2026</h1>
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>

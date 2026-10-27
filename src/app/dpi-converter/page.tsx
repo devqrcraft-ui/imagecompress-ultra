@@ -1,6 +1,7 @@
 'use client';
 import { useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
+import { faq } from './faq';
 
 
 
@@ -118,7 +119,7 @@ export default function DPIConverterPage() {
         <div style={{background:'rgba(16,185,129,0.08)',border:'1px solid rgba(16,185,129,0.25)',borderRadius:'12px',padding:'16px',marginBottom:'24px',display:'flex',gap:'12px',alignItems:'flex-start'}}>
           <span style={{fontSize:'24px'}}>🔒</span>
           <div>
-            <div style={{fontWeight:700,fontSize:'14px',color:'#34d399',marginBottom:'4px'}}>100% private — no upload to any server</div>
+            <div style={{fontWeight:700,fontSize:'14px',color:'#34d399',marginBottom:'4px'}}>private — no upload to any server</div>
             <div style={{fontSize:'15px',opacity:0.65}}>Unlike most DPI converters, your image never leaves your device. All processing happens locally in your browser using JavaScript.</div>
           </div>
         </div>
@@ -172,7 +173,7 @@ export default function DPIConverterPage() {
               <div>
                 <div style={{fontSize:'36px',marginBottom:'8px'}}>🖼️</div>
                 <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>Drop image here or click to upload</div>
-                <div style={{fontSize:'12px',opacity:0.45}}>JPEG · PNG · WebP · HEIC — processed locally, never uploaded</div>
+                <div style={{fontSize:'12px',opacity:0.45}}>JPEG · PNG · WebP · HEIC in — saved as JPEG out, processed locally and never uploaded</div>
               </div>
             )}
             <input ref={ref} type="file" accept="image/*,.heic,.heif" style={{display:'none'}}
@@ -264,13 +265,7 @@ export default function DPIConverterPage() {
         {/* FAQ */}
         <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'14px'}}>Frequently Asked Questions</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'10px',marginBottom:'28px'}}>
-          {[
-            ['Does changing DPI affect image quality?','No. Changing DPI metadata does not resize or affect pixel data — it only changes how software interprets the print size. Pixel dimensions stay the same.'],
-            ['What DPI does USCIS require?','USCIS and US State Department recommend 300 DPI for printed photos. For digital uploads (DS-160, DV Lottery online), DPI is less critical — file size (max 240KB) and pixel dimensions (600–1200px) matter more.'],
-            ['Why is my photo 72 DPI?','Most smartphone and digital cameras save photos at 72 DPI by default. This is fine for screens but may need changing to 300 DPI for printing or government document submission.'],
-            ['Does this tool resize my image?','No. This tool only changes the DPI metadata in the JPEG header. Your image pixel dimensions stay exactly the same.'],
-            ['Is my image uploaded to a server?','No. All processing happens in your browser using JavaScript. Your image never leaves your device.'],
-          ].map(([q,a])=>(
+          {faq.map(([q,a])=>(
             <div key={q} style={{background:'rgba(255,255,255,0.03)',borderRadius:'10px',padding:'16px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontWeight:700,fontSize:'14px',marginBottom:'6px',color:'#a5b4fc'}}>{q}</div>
               <div style={{fontSize:'15px',opacity:0.6,lineHeight:'1.6'}}>{a}</div>

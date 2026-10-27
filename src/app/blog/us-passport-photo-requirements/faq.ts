@@ -1,0 +1,8 @@
+export const faq: [string, string][] = [
+  ['What size does a US passport photo need to be?', "Printed, it is 2×2 inches (51×51 mm). For an online file, the State Department wants a square JPEG between 600×600 and 1200×1200 pixels and no larger than 240KB (travel.state.gov, checked October 2026)."],
+  ['Can I take my own passport photo at home?', "Yes. A smartphone photo works if it meets the State Department rules: plain white or off-white background, even lighting, no shadows, head centered, taken within the last six months and without glasses. Our tool handles the file size and format; it cannot fix the composition, so frame it correctly yourself."],
+  ['How do I get my passport photo under 240KB?', "Use Target KB mode: set the target to 200, pick JPEG, and the tool searches the quality until the file comes back at or under 200KB — a comfortable margin under the 240KB ceiling. A photo already small enough is returned unchanged, and nothing leaves your browser."],
+  ['Are glasses allowed in US passport photos?', "No. The State Department stopped allowing glasses in passport photos (from November 2016 onward), including prescription glasses, so take them off before you shoot (travel.state.gov, checked October 2026)."],
+  ['How recent does my passport photo need to be?', "Within the last six months, and it must reflect your current appearance. An older photo can be rejected even if the file size is perfect."],
+  ['Is 20KB a real US passport photo requirement?', "No. Some sites quote a 20KB figure, but the State Department publishes a 240KB maximum for the digital file, not 20KB. Aim comfortably under 240KB rather than chasing an arbitrary tiny number."],
+];

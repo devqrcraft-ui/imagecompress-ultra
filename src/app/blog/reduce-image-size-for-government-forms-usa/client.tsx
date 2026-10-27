@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 import CompressorWidget from '@/components/CompressorWidget';
-const faq=[{"q":"What size do US government forms require for photos?","a":"Most US government portals require JPEG photos under 240KB at 600x600 pixels minimum."},{"q":"How do I compress a document image for IRS or SSA?","a":"For document scans, use quality mode at 85% JPEG. For photos, use Exact KB Mode targeting 200KB."},{"q":"Is 240KB the standard for all US government forms?","a":"Yes for most immigration forms. Always check your specific portal requirements."}];
+const faq=[{"q":"What size do US government forms require for photos?","a":"Most US government portals require JPEG photos under 240KB at 600x600 pixels minimum."},{"q":"How do I compress a document image for IRS or SSA?","a":"For document scans, use quality mode at 85% JPEG. For photos, use Target KB Mode targeting 200KB."},{"q":"Is 240KB the standard for all US government forms?","a":"Yes for most immigration forms. Always check your specific portal requirements."}];
 
 const schemaData = {
   blogPosting: {

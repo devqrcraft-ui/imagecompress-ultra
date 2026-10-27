@@ -1,5 +1,4 @@
 
-const _faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I compress an image without losing quality?","acceptedAnswer":{"@type":"Answer","text":"Use modern formats like WebP or AVIF which offer 25-50% smaller file sizes than JPEG at the same visual quality. Our tool compresses images client-side in your browser with no upload required, preserving maximum quality."}},{"@type":"Question","name":"Is this image compressor free?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is 100% free with no file size limits, no account required, and no watermarks. All compression happens in your browser — your images never leave your device."}},{"@type":"Question","name":"What image formats are supported?","acceptedAnswer":{"@type":"Answer","text":"We support JPEG, PNG, WebP, AVIF, and GIF. You can compress and convert between formats. WebP and AVIF produce the smallest file sizes for web use."}}]};
 import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox'
 export const metadata: Metadata = {
@@ -14,7 +13,6 @@ export default function Page() {
     <>
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f172a,#1e1b4b)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(_faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress Images for Google Forms","item":"https://www.compressto20kb.com/blog/compress-image-for-google-forms"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Google Forms","description":"Google Forms has a 10MB file upload limit. Learn how to compress images for Google Forms quickly — no upload needed, works on any device.","url":"https://www.compressto20kb.com/blog/compress-image-for-google-forms","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
@@ -27,7 +25,7 @@ export default function Page() {
           <span>{'·'}</span>
           <span>{'~7 min read'}</span>
         </div>
-        <p style={{ opacity: 0.5, fontSize:'15px', marginBottom: '32px' }}>February 2025 · 4 min read</p>
+        <p style={{ opacity: 0.5, fontSize:'15px', marginBottom: '32px' }}>Updated October 2026 · 4 min read</p>
 
         <p style={{ fontSize: '16px', lineHeight: 1.8, opacity: 0.8, marginBottom: '24px' }}>Google Forms allows respondents to upload files up to 10MB per file. While that sounds generous, many users hit this limit when submitting photos taken on modern smartphones — which can easily be 5–15MB each. Compressing your images before submission keeps your forms fast and your Google Drive storage clean.</p>
 
@@ -48,7 +46,7 @@ export default function Page() {
         <ol style={{ paddingLeft: '20px', fontSize: '15px', lineHeight: 2.2, opacity: 0.8 }}>
           <li>Go to <a href="https://www.compressto20kb.com" style={{ color: '#818cf8' }}>compressto20kb.com</a></li>
           <li>Drop your image into the upload zone</li>
-          <li>Choose <strong>Exact KB Mode</strong> and type your target (e.g., 200KB)</li>
+          <li>Choose <strong>Target KB Mode</strong> and type your target (e.g., 200KB)</li>
           <li>Select <strong>JPEG</strong> or <strong>WebP</strong> format</li>
           <li>Click Compress and download your file</li>
           <li>Upload the compressed image to your Google Form</li>

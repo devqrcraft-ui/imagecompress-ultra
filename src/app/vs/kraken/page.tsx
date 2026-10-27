@@ -1,12 +1,26 @@
-
-const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the best free image compressor in 2026?","acceptedAnswer":{"@type":"Answer","text":"CompressTo20KB, TinyPNG, Squoosh, and Kraken.io are all strong options. The key difference: CompressTo20KB processes images in your browser (no upload), while others send files to their servers. For privacy-sensitive images, CompressTo20KB is the best choice."}},{"@type":"Question","name":"Does CompressTo20KB compress better than TinyPNG?","acceptedAnswer":{"@type":"Answer","text":"For JPEG and WebP, results are comparable. TinyPNG specializes in PNG compression using lossy techniques. CompressTo20KB offers more format options (AVIF, WebP) and processes everything locally without uploading your files."}},{"@type":"Question","name":"Is there a free alternative to Kraken.io?","acceptedAnswer":{"@type":"Answer","text":"Yes. CompressTo20KB is a completely free alternative to Kraken.io with no file limits, no account required, and no upload — all compression happens in your browser."}}]};
 import type { Metadata } from 'next';
 import ClientPage from './client';
+
 export const metadata: Metadata = {
-  title: 'CompressTo20KB vs Kraken.io — Free Alternative in 2025',
-  description: 'CompressTo20KB vs Kraken.io: no upload, no monthly fee, exact KB mode. See why users switch from Kraken.io to our free browser-based tool.',
+  title: 'CompressTo20KB vs Kraken.io — Local Compression Instead of a Quota',
+  description: 'CompressTo20KB vs Kraken.io: Kraken optimises files on its own servers with a 100 MB free testing quota and paid plans from $5 a month. Our tool runs in your browser with a KB target and no account.',
   keywords: 'kraken.io alternative, kraken.io free alternative, kraken io vs, better than kraken io, image compressor no upload',
   alternates: { canonical: 'https://www.compressto20kb.com/vs/kraken' },
   openGraph: { url: 'https://www.compressto20kb.com/vs/kraken' },
 };
-export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage /></>; }
+
+const faq: [string, string][] = [
+  ['Does Kraken.io compress images in my browser?', 'No. Kraken.io states on its own site that all optimisation and compression is carried out by its servers, so the file is uploaded before anything happens to it. CompressTo20KB works inside your browser tab and never receives the image.'],
+  ['Is Kraken.io free?', 'Kraken.io describes every plan as starting from a free account with a 100 MB testing quota, and lists paid tiers beginning at $5 a month. CompressTo20KB has no quota, no plan ladder and no account: batches of up to 50 files are free, with a target you can set anywhere between 5 and 5000 KB.'],
+  ['Can Kraken.io hit a file size I type in?', 'We did not find a target-size option described on Kraken.io\'s own pages, which focus on optimisation presets, resizing and an API. CompressTo20KB is built around that missing control: type the number of KB your form allows and the tool searches the encoding until the result fits at or under it.'],
+  ['Which formats does each support?', 'Kraken.io lists JPG, PNG, WebP, GIF, SVG, AVIF, HEIC and PDF - wider than ours, and it handles document types we do not touch. CompressTo20KB outputs WebP, AVIF, JPEG or PNG and accepts HEIC input, converting it in the browser.'],
+  ['When does Kraken.io make more sense than this tool?', 'When you want compression wired into an application or a CMS through an API, or you need SVG and PDF handled in one place. When you need one photo under one stated KB ceiling, on a device you trust with your ID scan, a browser-only size target is the shorter path.'],
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+};
+
+export default function Page() { return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /><ClientPage faq={faq} /></>; }

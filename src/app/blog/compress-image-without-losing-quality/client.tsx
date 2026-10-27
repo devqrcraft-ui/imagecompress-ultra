@@ -1,21 +1,15 @@
 "use client";
 import Link from 'next/link';
+import { faq } from './faq';
 
 const tips = [
   { title: 'Use JPEG format', desc: 'JPEG is the most efficient format for reaching exact small sizes like 30KB. For a typical photo, JPEG at 60–70% quality usually lands near 30KB without visible degradation.' },
   { title: 'Resize before compressing', desc: 'Reducing dimensions from 3000px to 800px can cut file size by 80% before any quality compression. Combine resize + compress for best results at 30KB.' },
-  { title: 'Use Exact KB Mode', desc: 'Our tool has a dedicated "Exact KB Mode" — just type 30 and click Compress. The algorithm automatically finds the right quality level to hit exactly 30KB.' },
+  { title: 'Use Target KB Mode', desc: 'Our tool has a dedicated "Target KB Mode" — just type 30 and click Compress. The algorithm automatically finds the right quality level to hit 30KB or under.' },
   { title: 'Avoid PNG for small targets', desc: 'PNG is lossless and rarely compresses below 50KB for photos. Use JPEG or WebP when targeting 30KB or less.' },
   { title: 'Check the preview before saving', desc: 'Use our Before/After comparison slider to verify quality is acceptable before downloading. At 30KB most portrait and document photos look clean.' },
 ];
 
-const faq = [
-  { q: 'Can I compress any image to exactly 30KB?', a: 'Yes — our Exact KB Mode targets 30KB precisely. Very large or high-resolution images may need to be resized first, but the tool handles this automatically.' },
-  { q: 'Will the image look bad at 30KB?', a: 'For most document photos, ID photos, and form uploads, 30KB looks fine. For detailed product or landscape photos, 30KB may show slight compression — use the preview to judge.' },
-  { q: 'What formats can I compress to 30KB?', a: 'You can output as JPEG, WebP, PNG, or AVIF. For 30KB targets, JPEG and WebP give the best quality-to-size ratio.' },
-  { q: 'Why do some portals require exactly 30KB?', a: 'Government and HR portals often set strict file size limits (20KB–50KB) to reduce server load and ensure fast uploads on slow connections. 30KB is a common limit for profile photos and document uploads.' },
-  { q: 'Is my photo uploaded to a server?', a: 'No — our tool runs entirely in your browser. Your image never leaves your device. This makes it safe for ID photos, passport photos, and sensitive documents.' },
-];
 
 
 const schemaData = {
@@ -61,12 +55,12 @@ export default function ClientPage() {
         <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}><p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p></div><div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}><img src="/images/blog/compress.svg" alt="compress image without losing quality — compressto20kb.com" width={800} height={420} style={{width:'100%',height:'auto',borderRadius:'8px',margin:'24px 0'}} loading="lazy" /><p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0}}>Key Takeaways</p><ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}><li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li><li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong></li><li>WebP saves <strong style={{color:'#fff'}}>25-50%</strong> vs JPEG at same quality</li><li>No file size limit, 100% free</li></ul></div>
         <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>
-          Many job portals, HR systems, and government forms require profile photos or document images under 30KB. This guide shows you how to compress any image to exactly 30KB — free, without uploading to any server.
+          Many job portals, HR systems, and government forms require profile photos or document images under 30KB. This guide shows you how to compress any image to 30KB or under — free, without uploading to any server.
         </p>
 
         {/* CTA TOOL */}
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
-          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to Exactly 30KB — Free Tool</div>
+          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to 30KB or under — Free Tool</div>
           <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>No upload. Files stay on your device. JPEG, PNG, WebP, HEIC supported.</p>
           <Link href="/?mode=exactkb&target=30" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
             ⚡ Open 30KB Compressor
@@ -78,7 +72,7 @@ export default function ClientPage() {
         {[
           { step: '1', title: 'Open the tool', desc: 'Click the button above or go to compressto20kb.com. No signup, no install.' },
           { step: '2', title: 'Upload your image', desc: 'Drag and drop or click to select. Supports JPG, PNG, WebP, HEIC — up to 50 files at once.' },
-          { step: '3', title: 'Switch to Exact KB Mode', desc: 'Click the "🎯 Exact KB Mode" tab at the top of the tool.' },
+          { step: '3', title: 'Switch to Target KB Mode', desc: 'Click the "🎯 Target KB Mode" tab at the top of the tool.' },
           { step: '4', title: 'Enter 30 in the target field', desc: 'Type 30 or click the custom field. The tool automatically finds the right compression level.' },
           { step: '5', title: 'Click Compress and Download', desc: 'Your image is compressed to 30KB in seconds — right in your browser. Click Save to download.' },
         ].map(({ step, title, desc }) => (

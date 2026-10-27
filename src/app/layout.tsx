@@ -13,12 +13,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'Compress Image to 20KB — Free Online (No Upload)',
-  description: 'Fastest image compressor to hit exact 20KB, 50KB, 100KB. 100% private browser-based tool.',
+  description: 'Set a file-size ceiling - 20KB, 50KB, 100KB, any number - and the tool finds the best quality that fits under it. Runs entirely in your browser; nothing is uploaded.',
   metadataBase: new URL('https://www.compressto20kb.com' ),
   alternates: { canonical: '/' },
   openGraph: {
-    title: "Compress Image to 20KB — 100% Private Online Tool",
-    description: "Fastest image compressor to hit exact 20KB, 50KB, 100KB.",
+    title: "Compress Image to 20KB — Private Online Tool",
+    description: "Type a kilobyte ceiling and get the best quality that fits under it. Private, browser-based, no upload.",
     url: "https://www.compressto20kb.com",
     siteName: "CompressTo20KB",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Compress Image to 20KB — 100% Private Online Tool",
-    description: "Fastest image compressor to hit exact 20KB, 50KB, 100KB.",
+    title: "Compress Image to 20KB — Private Online Tool",
+    description: "Type a kilobyte ceiling and get the best quality that fits under it. Private, browser-based, no upload.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -47,8 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode } )
     "name": "CompressTo20KB",
     "operatingSystem": "Any",
     "applicationCategory": "UtilitiesApplication",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1250" }
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   };
   
   const breadcrumbSchema = {
