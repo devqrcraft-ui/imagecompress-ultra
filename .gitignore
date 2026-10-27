@@ -20,3 +20,6 @@ out/
 .env*.local
 
 __pycache__/
+
+# build cache
+tsconfig.tsbuildinfo

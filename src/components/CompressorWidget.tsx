@@ -7,6 +7,7 @@ const FMTS: [Format, string, string][] = [['webp','WebP','70% smaller'],['avif',
 function fmtSize(b: number) { if(b<1024)return b+' B'; if(b<1024*1024)return(b/1024).toFixed(1)+' KB'; return(b/(1024*1024)).toFixed(2)+' MB'; }
 type Img = { id:string;name:string;origSize:number;preview:string;file:File;status:'pending'|'processing'|'done'|'error';compSize?:number;saved?:number;outUrl?:string;outName?:string;prog?:number;plabel?:string;t0?:number;err?:string; };
 function getName(img:Img){return img.outName||img.name;}
+const nextPaint=()=>new Promise<void>(resolve=>{if(document.visibilityState!=='visible'){resolve();return;}let settled=false;const finish=()=>{if(!settled){settled=true;resolve();}};requestAnimationFrame(()=>setTimeout(finish,0));setTimeout(finish,120);});
 export default function CompressorWidget({defaultMode='quality',defaultTargetKB=20,defaultFormat='webp',defaultQuality=82}:CompressorWidgetProps){
   const [images,setImages]=useState<Img[]>([]);
   const [format,setFormat]=useState<Format>(defaultFormat);
@@ -31,6 +32,7 @@ export default function CompressorWidget({defaultMode='quality',defaultTargetKB=
     for(const img of todo){
       setIdx(n+1);
       setImages(p=>p.map(i=>i.id===img.id?{...i,status:'processing',prog:0.05,plabel:'Starting…',t0:Date.now()}:i));
+      await nextPaint();
       let last=0;
       const onProgress=(f:number,l:string)=>{const now=performance.now();if(now-last<90&&f<1)return;last=now;setImages(p=>p.map(i=>i.id===img.id?{...i,prog:f,plabel:l}:i));};
       try{

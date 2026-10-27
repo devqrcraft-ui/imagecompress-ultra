@@ -37,6 +37,14 @@ type Img = {
   prog?: number; plabel?: string; t0?: number; err?: string;
 };
 
+const nextPaint = () => new Promise<void>(resolve => {
+  if (document.visibilityState !== 'visible') { resolve(); return; }
+  let settled = false;
+  const finish = () => { if (!settled) { settled = true; resolve(); } };
+  requestAnimationFrame(() => setTimeout(finish, 0));
+  setTimeout(finish, 120);
+});
+
 function fmtSize(b: number) {
   if (b < 1024) return b + ' B';
   if (b < 1024*1024) return (b/1024).toFixed(1) + ' KB';
@@ -130,6 +138,7 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
     for (const img of todo) {
       setIndex(finished + 1);
       setImages(p=>p.map(i=>i.id===img.id ? {...i, status:'processing', prog:0.04, plabel:'Starting…', t0:Date.now()} : i));
+      await nextPaint();
       let lastPaint = 0;
       try {
         const t0 = performance.now();
@@ -383,7 +392,7 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
             <div style={{display:'flex',flexWrap:'wrap',alignItems:'center',gap:'10px 16px',background:'rgba(16,185,129,0.08)',border:'1px solid rgba(16,185,129,0.25)',borderRadius:'10px',padding:'12px 16px',marginBottom:'10px',fontSize:'13px'}}>
               <strong style={{color:'#34d399',fontWeight:800}}>{doneImgs.length} file{doneImgs.length>1?'s':''} processed</strong>
               <span style={{fontVariantNumeric:'tabular-nums'}}>{fmtSize(totalIn)} → <strong>{fmtSize(totalOut)}</strong></span>
-              <span style={{color:'#34d399',fontWeight:700}}>{totalIn>0?Math.round((1-totalOut/totalIn)*100):0}% smaller</span>
+              <span style={{color:'#34d399',fontWeight:700}}>{totalIn>0?Math.min(99,Math.round((1-totalOut/totalIn)*100)):0}% smaller</span>
               <span style={{opacity:0.7,fontVariantNumeric:'tabular-nums'}}>{(totalIn-totalOut).toLocaleString('en-US')} bytes saved</span>
               <button onClick={()=>document.getElementById('compress')?.scrollIntoView({behavior:'smooth',block:'center'})}
                 style={{marginLeft:'auto',padding:'8px 14px',borderRadius:'8px',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.2)',color:'white',fontSize:'13px',fontWeight:700}}>
