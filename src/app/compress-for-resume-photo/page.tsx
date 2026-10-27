@@ -34,11 +34,7 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Resume Photo Size","item":"https://www.compressto20kb.com/compress-for-resume-photo"}]}' }} />
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '15px', opacity: 0.75 }}>← Home</Link>
-      </nav>
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '44px 16px 24px' }}>
+<div style={{ maxWidth: '800px', margin: '0 auto', padding: '44px 16px 24px' }}>
         <h1 style={{ fontSize: 'clamp(25px,4vw,40px)', fontWeight: 900, lineHeight: 1.22, marginBottom: '16px' }}>
           A CV photo is paid for out of the document&#39;s budget
         </h1>

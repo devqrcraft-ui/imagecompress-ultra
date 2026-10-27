@@ -30,18 +30,11 @@ export default function ClientPage(){
       
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
 
-      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
-        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
-        <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>
-          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
-        </div>
-      </nav>
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → Compress Passport Photo to 50KB</div>
+<div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
+        <div style={{fontSize:'15px',opacity:0.68,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → Compress Passport Photo to 50KB</div>
         <div style={{display:'inline-block',background:'rgba(99,102,241,0.1)',border:'1px solid rgba(99,102,241,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#818cf8'}}>🪪 Passport · Global</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Passport Photo to 50KB<br/><span style={{color:'#818cf8'}}>For Visa Portals Worldwide</span></h1>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Size limits checked against official portals in October 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.68)',marginBottom:'16px',marginTop:'4px'}}>Size limits checked against official portals in October 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>
         </div>
@@ -57,7 +50,7 @@ export default function ClientPage(){
         </div>
         <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>Document-upload ceilings run from a few tens of kilobytes to several megabytes, and only the one on your form matters. Set that number in Target KB Mode — 50KB, 20KB, 240KB or anything else — and the tool keeps the best quality that stays under it.</p>
         <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
-          Google's image guidance comes down to two moves: deliver the picture no larger than it is displayed, and compress until the bytes drop without the image visibly changing. That page is written for page speed, not document photos, but the same two moves decide how sharp a 50KB passport crop looks. <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow noopener noreferrer" target="_blank" style={{color:'#818cf8'}}>Google: optimize images</a>
+          Google's image guidance comes down to two moves: deliver the picture no larger than it is displayed, and compress until the bytes drop without the image visibly changing. That page is written for page speed, not document photos, but the same two moves decide how sharp a 50KB passport crop looks. <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow noopener noreferrer" target="_blank" style={{color:'#c7d2fe'}}>Google: optimize images</a>
         </blockquote>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Photo Size Limits by Portal</h2>
         <div style={{overflowX:'auto',marginBottom:'32px'}}>
@@ -74,9 +67,9 @@ export default function ClientPage(){
             ))}</tbody>
           </table>
         </div>
-        <p style={{fontSize:'13px',opacity:0.5,lineHeight:1.6,marginBottom:'20px'}}>Every figure above was read from that portal's own published guidance in October 2026. Requirements change without notice — confirm on the page you upload from before submitting an application.</p>
+        <p style={{fontSize:'13px',opacity:0.68,lineHeight:1.6,marginBottom:'20px'}}>Every figure above was read from that portal's own published guidance in October 2026. Requirements change without notice — confirm on the page you upload from before submitting an application.</p>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'12px'}}>Compress to 50KB or under (Free)</h2>
-        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Switch to Target KB Mode and type your target size. Works for 20KB, 50KB, 100KB, 240KB — any portal requirement.</p>
+        <p style={{fontSize:'14px',opacity:0.72,marginBottom:'20px'}}>Switch to Target KB Mode and type your target size. Works for 20KB, 50KB, 100KB, 240KB — any portal requirement.</p>
         <div style={{marginBottom:'40px'}}><CompressorWidget defaultMode="exactkb" defaultTargetKB={50} defaultFormat="jpeg"/></div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>FAQ</h2>
         {faq.map((f,i)=>(
@@ -88,7 +81,7 @@ export default function ClientPage(){
         <div style={{marginTop:'36px',padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'15px'}}>
             {([['/compress-passport-photo-usa','US Passport Tool'],['/compress-for-uscis','USCIS Tool'],['/compress-to-20kb','Compress to 20KB'],['/blog/dv-lottery-photo-requirements','DV Lottery']] as [string,string][]).map(([href,label])=>(
-              <Link key={href} href={href} style={{color:'#818cf8',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
+              <Link key={href} href={href} style={{color:'#c7d2fe',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>
         </div>

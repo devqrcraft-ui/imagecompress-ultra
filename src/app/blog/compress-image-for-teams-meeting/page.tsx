@@ -30,10 +30,10 @@ export const metadata: Metadata = {
 export default function Page() {
   const s = {
     page: { maxWidth: 780, margin: '0 auto', padding: 'clamp(14px,4vw,28px)', minHeight: '100vh', color: '#c8d0e7', fontFamily: 'system-ui,sans-serif', backgroundColor: '#07111f' } as const,
-    breadcrumb: { fontSize: 13, color: 'rgba(255,255,255,0.5)', marginBottom: 16 } as const,
-    breadcrumbLink: { color: 'rgba(255,255,255,0.5)', textDecoration: 'none' } as const,
+    breadcrumb: { fontSize: 13, color: 'rgba(255,255,255,0.68)', marginBottom: 16 } as const,
+    breadcrumbLink: { color: 'rgba(255,255,255,0.68)', textDecoration: 'none' } as const,
     h1: { fontSize: 'clamp(22px,5vw,24px)', fontWeight: 900, color: '#e8edf8', lineHeight: 1.3, margin: '0 0 12px' } as const,
-    meta: { fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const },
+    meta: { fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const },
     answerFirst: { background: 'rgba(165,180,252,0.07)', border: '1px solid rgba(165,180,252,0.25)', borderRadius: 8, padding: '16px 20px', marginBottom: 24 } as const,
     answerFirstTitle: { fontSize: 13, fontWeight: 700, color: '#a5b4fc', textTransform: 'uppercase' as const, letterSpacing: '0.06em', marginBottom: 8 } as const,
     answerFirstText: { fontSize: 15, color: '#c8d0e7', lineHeight: 1.65, margin: 0 } as const,
@@ -51,7 +51,7 @@ export default function Page() {
     tdRed: { padding: '9px 14px', borderBottom: '1px solid rgba(255,255,255,0.06)', color: '#ef4444', verticalAlign: 'top' as const },
     blockquote: { borderLeft: '3px solid rgba(165,180,252,0.4)', margin: '24px 0', padding: '12px 20px', background: 'rgba(165,180,252,0.05)', borderRadius: '0 6px 6px 0' } as const,
     blockquoteText: { fontSize: 14, color: '#c8d0e7', fontStyle: 'italic' as const, margin: '0 0 8px' } as const,
-    blockquoteSource: { fontSize: 12, color: 'rgba(255,255,255,0.45)', margin: 0 } as const,
+    blockquoteSource: { fontSize: 12, color: 'rgba(255,255,255,0.68)', margin: 0 } as const,
     stepBox: { background: 'rgba(165,180,252,0.06)', border: '1px solid rgba(165,180,252,0.15)', borderRadius: 8, padding: '14px 18px', marginBottom: 12 } as const,
     stepNum: { fontSize: 12, fontWeight: 700, color: '#a5b4fc', marginBottom: 4 } as const,
     stepTitle: { fontSize: 15, fontWeight: 700, color: '#e8edf8', marginBottom: 4 } as const,
@@ -161,7 +161,7 @@ export default function Page() {
             "Images shared inline in Teams chat are automatically optimized for delivery. For full-resolution sharing, use file attachments."
           </p>
           <p style={s.blockquoteSource}>
-            — <a href="https://learn.microsoft.com/en-us/microsoftteams/limits-specifications-teams" rel="nofollow noopener" style={{ color: 'rgba(255,255,255,0.45)' }}>Microsoft Teams limits and specifications — learn.microsoft.com</a>
+            — <a href="https://learn.microsoft.com/en-us/microsoftteams/limits-specifications-teams" rel="nofollow noopener" style={{ color: 'rgba(255,255,255,0.68)' }}>Microsoft Teams limits and specifications — learn.microsoft.com</a>
           </p>
         </blockquote>
 

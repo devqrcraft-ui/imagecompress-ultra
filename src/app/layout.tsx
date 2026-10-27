@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode } )
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema ) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       </head>
-      <body className="antialiased text-slate-900 bg-white">
+      <body className="antialiased text-slate-100 bg-[#0f0c29]">
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

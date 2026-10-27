@@ -23,7 +23,7 @@ export default function Page() {
       <div style={{background:'#0f0c29',color:'#e2e8f0',fontFamily:'system-ui,sans-serif'}}>
 
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'48px 20px 20px'}}>
-          <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><a href="/" style={{color:'#a5b4fc',textDecoration:'none'}}>Home</a> → Compress for Email</div>
+          <div style={{fontSize:'15px',opacity:0.68,marginBottom:'12px'}}><a href="/" style={{color:'#a5b4fc',textDecoration:'none'}}>Home</a> → Compress for Email</div>
           <h1 style={{fontSize:'clamp(22px,4vw,32px)',fontWeight:800,color:'#ffffff',marginBottom:'16px'}}>Compress Images for Email — Free, Private &amp; Instant</h1>
           <p style={{fontSize:'15px',lineHeight:1.7,marginBottom:'10px',opacity:0.9}}>Large images are one of the fastest ways to break email attachments and slow down your messages.</p>
           <p style={{fontSize:'15px',lineHeight:1.7,opacity:0.9}}>This free email image compressor helps you shrink JPG, PNG, WebP, AVIF and HEIC photos to a size that fits Gmail, Outlook, Yahoo and business email — all without uploading anything to a server. Everything runs locally in your browser, so your attachments stay private on your device.</p>

@@ -35,7 +35,7 @@ export default function Page() {
       <div style={{background:'#0f0c29',color:'#e2e8f0',fontFamily:'system-ui,sans-serif'}}>
 
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'48px 20px 20px'}}>
-          <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><a href="/" style={{color:'#a5b4fc',textDecoration:'none'}}>Home</a> → Compress for USCIS</div>
+          <div style={{fontSize:'15px',opacity:0.68,marginBottom:'12px'}}><a href="/" style={{color:'#a5b4fc',textDecoration:'none'}}>Home</a> → Compress for USCIS</div>
           <h1 style={{fontSize:'clamp(22px,4vw,32px)',fontWeight:800,color:'#ffffff',marginBottom:'16px'}}>Compress Photo for U.S. Immigration Forms — Free &amp; Private</h1>
           <p style={{fontSize:'15px',lineHeight:1.7,marginBottom:'10px',opacity:0.9}}>Rejection messages like “image too large” are a file-size problem, not a photo problem — and file size is the part you can control.</p>
           <p style={{fontSize:'15px',lineHeight:1.7,opacity:0.9}}>This page explains which U.S. rule sets the limit you are actually fighting, then gives you a compressor that hits it. Nothing is uploaded: the image is decoded and re-encoded on your own device.</p>
@@ -58,7 +58,7 @@ export default function Page() {
               <p style={{fontSize:'15px',lineHeight:1.7,opacity:0.85,margin:0}}>Paper filings ask for printed 2×2 inch photos on a white or off-white background. When you upload supporting documents through the online filing system, USCIS states files must not be larger than <strong>12MB</strong> and are generally PDF, JPG or JPEG — a much looser ceiling than the consular photo spec.</p>
             </div>
           </div>
-          <p style={{fontSize:'13px',lineHeight:1.7,opacity:0.55,marginTop:'12px'}}>
+          <p style={{fontSize:'13px',lineHeight:1.7,opacity:0.7,marginTop:'12px'}}>
             Sources, checked October 2026:{' '}
             <a href="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos/digital-image-requirements.html" rel="nofollow noopener noreferrer" target="_blank" style={{color:'#a5b4fc'}}>travel.state.gov — Digital Image Requirements</a>
             {' · '}

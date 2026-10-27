@@ -36,11 +36,7 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"SSC Exam Photo and Signature","item":"https://www.compressto20kb.com/compress-for-ssc-exam"}]}' }} />
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '15px', opacity: 0.75 }}>← Home</Link>
-      </nav>
-      <div style={{ maxWidth: '820px', margin: '0 auto', padding: '44px 16px 24px' }}>
+<div style={{ maxWidth: '820px', margin: '0 auto', padding: '44px 16px 24px' }}>
         <h1 style={{ fontSize: 'clamp(25px,4vw,40px)', fontWeight: 900, lineHeight: 1.22, marginBottom: '14px' }}>
           <span style={{ color: '#fbbf24' }}>SSC applications</span>: one image you shoot live, one image you upload
         </h1>
@@ -61,7 +57,7 @@ export default function Page() {
             </div>
           ))}
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.55, marginBottom: '32px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, marginBottom: '32px' }}>
           Official documents: <a href="https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/NoticeOfMTSNT_20240627.pdf" rel="noopener noreferrer" style={{ color: '#fcd34d' }}>MTS &amp; Havaldar 2024 notification</a>, clauses 10.3 to 10.6, and <a href="https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/instructions_photo_signature_15_08_2024.pdf" rel="noopener noreferrer" style={{ color: '#fcd34d' }}>instructions on uploading signatures and photographs</a>.
         </p>
 
@@ -94,7 +90,7 @@ export default function Page() {
           <li>A file already smaller than your number is returned unchanged, so a second run cannot make it smaller still.</li>
           <li>Open it ready at <a href={"/?mode=exactkb&target=20"} style={{ color: '#fcd34d' }}>Target KB Mode, 20 KB</a>. The compressor itself is on the home page, not on this page.</li>
         </ul>
-        <p style={{ fontSize: '13px', opacity: 0.55, marginBottom: '34px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, marginBottom: '34px' }}>
           Neighbouring pages for other Indian forms, which do ask for an uploaded photograph with its own KB window: <Link href="/compress-for-upsc-exam" style={{ color: '#fcd34d' }}>UPSC exam</Link>, <Link href="/compress-for-neet-exam" style={{ color: '#fcd34d' }}>NEET</Link> and <Link href="/compress-for-india-passport" style={{ color: '#fcd34d' }}>Indian passport</Link>.
         </p>
 

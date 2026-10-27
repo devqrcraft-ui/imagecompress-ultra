@@ -23,7 +23,7 @@ export default function EcommerceImageOptimization() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"E-commerce Image Optimization Guide: Boost Sales with Faster Images","item":"https://www.compressto20kb.com/blog/ecommerce-image-optimization"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"E-commerce Image Optimization Guide: Boost Sales with Faster Images","description":"Boost sales with faster product images on Shopify and WooCommerce. Real techniques that increase conversion rates.","url":"https://www.compressto20kb.com/blog/ecommerce-image-optimization","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
       <h1 className="text-4xl font-bold mb-4">E-commerce Image Optimization Guide: Boost Sales with Faster Images</h1>
-        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
           <span>By the CompressTo20KB Team</span>
@@ -133,29 +133,30 @@ fs.readdirSync(inputDir).forEach(file => {
 
       <div className="mt-12 p-6 bg-blue-50 rounded-2xl">
         <h3 className="text-xl font-semibold mb-2">Start optimizing your product images</h3>
-        <p className="text-slate-300 mb-4">ImageCompress Pro supports batch WebP conversion — compress up to 20 product images at once, free.</p>
+        <p className="text-slate-700 mb-4">ImageCompress Pro supports batch WebP conversion — compress up to 20 product images at once, free.</p>
         <a href="/" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition">Compress Product Images →</a>
+
+            </div>
 
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>
         <h2 style={{fontSize:'20px',fontWeight:700,color:'white',marginBottom:'16px'}}>Related Articles</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
-        <a href='/blog/compress-images-for-shopify-store' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/blog/compress-images-for-shopify-store' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Compress Images for Shopify Store
         </a>
-        <a href='/blog/compress-images-for-etsy-listings' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/blog/compress-images-for-etsy-listings' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Compress Images for Etsy Listings
         </a>
-        <a href='/blog/pagespeed-images' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/blog/pagespeed-images' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → PageSpeed Image Optimization
         </a>
         </div>
         <div style={{marginTop:'24px',textAlign:'center'}}>
-          <a href='/' style={{display:'inline-block',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#818cf8',padding:'10px 24px',borderRadius:'8px',textDecoration:'none',fontWeight:600,fontSize:'14px'}}>
+          <a href='/' style={{display:'inline-block',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#c7d2fe',padding:'10px 24px',borderRadius:'8px',textDecoration:'none',fontWeight:600,fontSize:'14px'}}>
             ← Back to Image Compressor
           </a>
         </div>
       </section>
-      </div>
     </main>
       <AuthorBox />
     </>

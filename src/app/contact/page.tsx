@@ -28,11 +28,11 @@ export default function ContactPage() {
         <p style={{color:"#c7d2fe",fontSize:"16px",marginBottom:"16px"}}>Have a question, bug report, or feature request?</p>
         <a
           href="mailto:kalkulator018@gmail.com?subject=CompressTo20KB%20Feedback"
-          style={{display:"inline-block",background:"#818cf8",color:"#fff",padding:"12px 32px",borderRadius:"8px",fontWeight:700,textDecoration:"none",fontSize:"15px"}}
+          style={{display:"inline-block",background:"#4f46e5",color:"#fff",padding:"12px 32px",borderRadius:"8px",fontWeight:700,textDecoration:"none",fontSize:"15px"}}
         >
           Email Us →
         </a>
-        <p style={{color:"rgba(255,255,255,0.4)",fontSize:"12px",marginTop:"12px"}}>kalkulator018@gmail.com</p>
+        <p style={{color:"rgba(255,255,255,0.68)",fontSize:"12px",marginTop:"12px"}}>kalkulator018@gmail.com</p>
       </div>
 
       <div style={{background:"rgba(129,140,248,0.06)",border:"1px solid rgba(129,140,248,0.15)",borderRadius:"12px",padding:"24px",marginTop:"48px",fontSize:"14px",color:"rgba(255,255,255,0.9)"}}>

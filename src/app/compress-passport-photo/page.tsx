@@ -53,13 +53,13 @@ export default function PassportPage() {
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px'}}>
 
         {/* Breadcrumb */}
-        <nav style={{fontSize:'12px',opacity:0.45,marginBottom:'10px'}}>
+        <nav style={{fontSize:'12px',opacity:0.64,marginBottom:'10px'}}>
           <Link href="/" style={{color:'inherit',textDecoration:'none'}}>Home</Link>
           <span style={{margin:'0 6px'}}>/</span>
           <span>Compress Passport Photo</span>
         </nav>
 
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'10px'}}>
+        <div style={{fontSize:'15px',opacity:0.68,marginBottom:'10px'}}>
           🪪 Passport Photo Compressor — Set the Size Your Form Asks For
         </div>
 
@@ -74,7 +74,7 @@ export default function PassportPage() {
         <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.65,marginBottom:'8px'}}>
           Built for anyone filing to a portal that states a file-size ceiling - consular, immigration, passport or ID uploads included: type the ceiling your own form shows into Target KB Mode and the tool returns the highest quality that stays at or under it.
         </p>
-        <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.45,marginBottom:'24px'}}>
+        <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.64,marginBottom:'24px'}}>
           Your passport or ID photo is decoded and re-encoded inside this tab, so nothing is stored on anyone else's server. No account, no registration, no watermark.
         </p>
 
@@ -89,7 +89,7 @@ export default function PassportPage() {
 
         {/* CTA buttons */}
         <div style={{display:'flex',gap:'12px',flexWrap:'wrap',marginBottom:'32px'}}>
-          <Link href="/?preset=20kb" style={{display:'inline-block',padding:'14px 32px',borderRadius:'10px',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',fontWeight:800,fontSize:'15px',textDecoration:'none'}}>
+          <Link href="/?preset=20kb" style={{display:'inline-block',padding:'14px 32px',borderRadius:'10px',background:'linear-gradient(135deg,#4f46e5,#6d28d9)',color:'white',fontWeight:800,fontSize:'15px',textDecoration:'none'}}>
             🪪 Compress Passport Photo to 20KB →
           </Link>
           <Link href="/?preset=50kb" style={{display:'inline-block',padding:'14px 24px',borderRadius:'10px',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#a5b4fc',fontWeight:700,fontSize:'15px',textDecoration:'none'}}>
@@ -119,10 +119,10 @@ export default function PassportPage() {
                   </div>
                 ))}
               </div>
-              <p style={{fontSize:'15px',opacity:0.6,margin:'0 0 12px',lineHeight:'1.6'}}>
+              <p style={{fontSize:'15px',opacity:0.72,margin:'0 0 12px',lineHeight:'1.6'}}>
                 The published US specifications live on the State Department and USCIS sites themselves. This page does not copy those figures out of context: open the page where you are uploading, note the file size and pixel box it prints, and set that as your target here.
               </p>
-              <Link href="/compress-for-uscis" style={{display:'inline-block',padding:'8px 18px',borderRadius:'8px',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',fontWeight:700,fontSize:'15px',textDecoration:'none'}}>
+              <Link href="/compress-for-uscis" style={{display:'inline-block',padding:'8px 18px',borderRadius:'8px',background:'linear-gradient(135deg,#4f46e5,#6d28d9)',color:'white',fontWeight:700,fontSize:'15px',textDecoration:'none'}}>
                 Full USCIS Guide →
               </Link>
             </div>
@@ -131,7 +131,7 @@ export default function PassportPage() {
 
         {/* Requirements by country */}
         <h2 style={{fontSize:'20px',fontWeight:700,marginBottom:'14px'}}>Where to Read Your Own Limit</h2>
-        <p style={{fontSize:'15px',opacity:0.6,marginBottom:'14px',lineHeight:1.7}}>The per-country kilobyte and pixel figures that used to sit in this list have been removed: we cannot cite an official page for each of them from here, they change without notice, and the number that decides whether your upload is accepted is the one your own form prints.</p>
+        <p style={{fontSize:'15px',opacity:0.72,marginBottom:'14px',lineHeight:1.7}}>The per-country kilobyte and pixel figures that used to sit in this list have been removed: we cannot cite an official page for each of them from here, they change without notice, and the number that decides whether your upload is accepted is the one your own form prints.</p>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:'10px',marginBottom:'28px'}}>
           {[
             ['🇺🇸','USA — passport and nonimmigrant visa uploads','The State Department publishes its own digital image requirements; set your target from what that page prints today.'],
@@ -146,7 +146,7 @@ export default function PassportPage() {
             <div key={country} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'14px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontSize:'22px',marginBottom:'6px'}}>{flag}</div>
               <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>{country}</div>
-              <div style={{fontSize:'12px',opacity:0.5}}>{req}</div>
+              <div style={{fontSize:'12px',opacity:0.68}}>{req}</div>
             </div>
           ))}
         </div>

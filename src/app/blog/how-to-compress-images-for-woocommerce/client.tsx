@@ -28,18 +28,11 @@ export default function ClientPage(){
       
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
 
-      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
-        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
-        <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>
-          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
-        </div>
-      </nav>
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → WooCommerce Guide</div>
+<div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
+        <div style={{fontSize:'15px',opacity:0.68,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → WooCommerce Guide</div>
         <div style={{display:'inline-block',background:'rgba(168,85,247,0.1)',border:'1px solid rgba(168,85,247,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#d8b4fe'}}>🛍️ WooCommerce · WordPress</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Compress Images for WooCommerce<br/><span style={{color:'#818cf8'}}>Speed Up Your Store in 2026</span></h1>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.68)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>
         </div>
@@ -58,7 +51,7 @@ export default function ClientPage(){
           <strong style={{color:'#d8b4fe'}}>📋 WooCommerce image guidance vs our recommendations:</strong>
           <span style={{fontSize:'14px',opacity:0.85}}> WooCommerce publishes 800×800px for zoom (woocommerce.com, checked October 2026) but no KB file-size rule. WebP or JPEG · keep each image as light as you can · square aspect ratio · batch compress before upload are our practical performance recommendations.</span>
         </div>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.5)',lineHeight:1.7,margin:'24px 0'}}>The "WebP is 25–34% smaller than a comparable JPEG" figure is Google's own, from developers.google.com/speed/webp (checked October 2026). Any per-image KB target below is our recommendation, not a WooCommerce requirement.</p>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.68)',lineHeight:1.7,margin:'24px 0'}}>The "WebP is 25–34% smaller than a comparable JPEG" figure is Google's own, from developers.google.com/speed/webp (checked October 2026). Any per-image KB target below is our recommendation, not a WooCommerce requirement.</p>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>5 WooCommerce Image Optimization Tips</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'12px',marginBottom:'36px'}}>
           {tips.map((s,i)=>(
@@ -69,7 +62,7 @@ export default function ClientPage(){
           ))}
         </div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'12px'}}>Compress WooCommerce Images (Free)</h2>
-        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Batch compress up to 50 product images at once. Choose WebP for maximum compression.</p>
+        <p style={{fontSize:'14px',opacity:0.72,marginBottom:'20px'}}>Batch compress up to 50 product images at once. Choose WebP for maximum compression.</p>
         <div style={{marginBottom:'40px'}}><CompressorWidget defaultMode="quality" defaultFormat="webp"/></div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Frequently Asked Questions</h2>
         {faq.map(([q, a], i)=>(
@@ -81,7 +74,7 @@ export default function ClientPage(){
         <div style={{marginTop:'36px',padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'15px'}}>
             {([['/compress-for-woocommerce','WooCommerce Tool'],['/bulk-image-compressor','Bulk Compress'],['/blog/compress-image-for-shopify-product-page','Shopify Guide'],['/compress-for-squarespace','Squarespace Tool']] as [string,string][]).map(([href,label])=>(
-              <Link key={href} href={href} style={{color:'#818cf8',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
+              <Link key={href} href={href} style={{color:'#c7d2fe',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>
         </div>

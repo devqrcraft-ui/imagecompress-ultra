@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   keywords: 'greenhouse image size, greenhouse careers page banner, greenhouse candidate upload formats, compress photo greenhouse',
 };
 
-const th = { textAlign: 'left', padding: '10px 12px', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.6px', opacity: 0.6, borderBottom: '1px solid rgba(255,255,255,0.14)' } as const;
+const th = { textAlign: 'left', padding: '10px 12px', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.6px', opacity: 0.72, borderBottom: '1px solid rgba(255,255,255,0.14)' } as const;
 const td = { padding: '12px', fontSize: '15px', lineHeight: 1.6, verticalAlign: 'top' } as const;
 
 export default function CompressForGreenhousePage() {
@@ -34,15 +34,7 @@ export default function CompressForGreenhousePage() {
     <div style={{ minHeight: '100vh', background: 'linear-gradient(150deg,#0d1117,#151d2e,#0d1117)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Greenhouse image sizes","item":"https://www.compressto20kb.com/compress-for-greenhouse"}]}' }} />
-      <nav style={{ padding: '12px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.35)', position: 'sticky', top: 0, zIndex: 50 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '17px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '14px', fontSize: '14px' }}>
-          <Link href="/compress-for-indeed" style={{ color: 'white', textDecoration: 'none', opacity: 0.7 }}>Indeed specs</Link>
-          <Link href="/compress-for-workday" style={{ color: 'white', textDecoration: 'none', opacity: 0.7 }}>Workday</Link>
-        </div>
-      </nav>
-
-      <article style={{ maxWidth: '880px', margin: '0 auto', padding: '40px 18px 40px' }}>
+<article style={{ maxWidth: '880px', margin: '0 auto', padding: '40px 18px 40px' }}>
         <h1 style={{ fontSize: 'clamp(25px,4.4vw,36px)', fontWeight: 900, lineHeight: 1.25, margin: '0 0 16px' }}>
           Greenhouse Image Sizes: a <span style={{ color: '#34d399' }}>100 MB ceiling</span> on one side, a 64&times;64 logo on the other
         </h1>
@@ -60,7 +52,7 @@ export default function CompressForGreenhousePage() {
           <li><strong>Embedded beats hotlinked.</strong> Greenhouse "does not load externally linked images when converting a resume to PDF for preview", so an image pulled in by URL disappears from the preview a recruiter actually reads. Bake the picture into the file.</li>
           <li><strong>Every employer configures their own form.</strong> The photo field may not exist at all on the page in front of you, and any field-specific rule that company adds is not a Greenhouse rule. Take requirements from the application screen.</li>
         </ul>
-        <p style={{ fontSize: '13px', opacity: 0.55, lineHeight: 1.7, marginBottom: '26px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, marginBottom: '26px' }}>
           Source: <a href="https://support.greenhouse.io/hc/en-us/articles/360052218132-Supported-formats-for-resumes-cover-letters-and-other-candidate-uploads" target="_blank" rel="noopener noreferrer" style={{ color: '#6ee7b7' }}>Greenhouse Support — Supported formats for resumes, cover letters and other candidate uploads</a>, checked October 2026.
         </p>
 
@@ -95,7 +87,7 @@ export default function CompressForGreenhousePage() {
             </tbody>
           </table>
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.55, lineHeight: 1.7, marginBottom: '28px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, marginBottom: '28px' }}>
           Source: <a href="https://support.greenhouse.io/hc/en-us/articles/10508839286171-Recommended-image-sizes-to-use-in-Greenhouse-Recruiting" target="_blank" rel="noopener noreferrer" style={{ color: '#6ee7b7' }}>Greenhouse Support — Recommended image sizes to use in Greenhouse Recruiting</a>, checked October 2026.
         </p>
 
@@ -104,7 +96,7 @@ export default function CompressForGreenhousePage() {
           <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.85, margin: 0 }}>
             Onboarding is a separate product with its own image article: a profile photo cap of "3 MB", a company-media width limit of "1016px", a note that "Some file types, such as GIFs, will require a smaller file size", and a circular crop that "will crop from the center-center to the center-top of your photo". If you are sizing a new hire&rsquo;s avatar, use those; if you are building a job board, use the Recruiting list above.
           </p>
-          <p style={{ fontSize: '13px', opacity: 0.55, margin: '10px 0 0' }}>
+          <p style={{ fontSize: '13px', opacity: 0.7, margin: '10px 0 0' }}>
             Source: <a href="https://support.greenhouse.io/hc/en-us/articles/115000313406-Greenhouse-Onboarding-image-size-recommendations" target="_blank" rel="noopener noreferrer" style={{ color: '#6ee7b7' }}>Greenhouse Support — Onboarding image size recommendations</a>, checked October 2026.
           </p>
         </div>
@@ -123,8 +115,8 @@ export default function CompressForGreenhousePage() {
         <div style={{ background: 'rgba(52,211,153,0.1)', border: '1px solid rgba(52,211,153,0.3)', borderRadius: '16px', padding: '22px', marginBottom: '34px', textAlign: 'center' }}>
           <div style={{ fontSize: '16px', fontWeight: 800, marginBottom: '6px' }}>Start from Greenhouse&rsquo;s own ideal band</div>
           <p style={{ fontSize: '14px', opacity: 0.7, margin: '0 0 14px' }}>Target KB Mode, 200 KB — mid-range of the 100–250 KB the article calls ideal. Files stay on your device.</p>
-          <a href="/?mode=exactkb&target=200" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#10b981,#0ea5e9)', color: 'white', padding: '12px 26px', borderRadius: '10px', fontWeight: 800, fontSize: '15px', textDecoration: 'none' }}>Open the compressor at 200 KB</a>
-          <p style={{ fontSize: '13px', opacity: 0.5, margin: '10px 0 0' }}>Up to 50 files per batch · target 5–5000 KB · WebP, AVIF, JPEG, PNG output · ZIP download</p>
+          <a href="/?mode=exactkb&target=200" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#047857,#0e7490)', color: 'white', padding: '12px 26px', borderRadius: '10px', fontWeight: 800, fontSize: '15px', textDecoration: 'none' }}>Open the compressor at 200 KB</a>
+          <p style={{ fontSize: '13px', opacity: 0.68, margin: '10px 0 0' }}>Up to 50 files per batch · target 5–5000 KB · WebP, AVIF, JPEG, PNG output · ZIP download</p>
         </div>
 
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '26px', marginBottom: '30px' }}>
@@ -151,7 +143,7 @@ export default function CompressForGreenhousePage() {
             <Link key={l.href} href={l.href} style={{ background: 'rgba(255,255,255,0.07)', padding: '7px 13px', borderRadius: '8px', color: 'white', textDecoration: 'none' }}>{l.label}</Link>
           ))}
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.5, lineHeight: 1.7 }}>
+        <p style={{ fontSize: '13px', opacity: 0.68, lineHeight: 1.7 }}>
           Independent of Greenhouse: no affiliation, no endorsement, no integration with any ATS account. What happens on this site is local file encoding — the upload itself you still do yourself, through your own careers-page session.
         </p>
       </article>

@@ -3,11 +3,12 @@ import Link from 'next/link';
 import { faq } from './faq';
 
 const tips = [
-  { title: 'Use JPEG format', desc: 'JPEG is the most efficient format for reaching exact small sizes like 30KB. For a typical photo, JPEG at 60–70% quality usually lands near 30KB without visible degradation.' },
-  { title: 'Resize before compressing', desc: 'Reducing dimensions from 3000px to 800px can cut file size by 80% before any quality compression. Combine resize + compress for best results at 30KB.' },
-  { title: 'Use Target KB Mode', desc: 'Our tool has a dedicated "Target KB Mode" — just type 30 and click Compress. The algorithm automatically finds the right quality level to hit 30KB or under.' },
-  { title: 'Avoid PNG for small targets', desc: 'PNG is lossless and rarely compresses below 50KB for photos. Use JPEG or WebP when targeting 30KB or less.' },
-  { title: 'Check the preview before saving', desc: 'Use our Before/After comparison slider to verify quality is acceptable before downloading. At 30KB most portrait and document photos look clean.' },
+  { title: 'Use WebP or AVIF format', desc: 'Modern formats like WebP achieve 30–50% smaller files than JPEG at the same visual quality. For photos where quality matters, WebP at 85% quality looks identical to JPEG at 90% but is significantly smaller.' },
+  { title: 'Stay above 75% quality for photos', desc: 'For most photos, JPEG or WebP at 75–85% quality shows no visible degradation on screens. Below 60% you start seeing compression artifacts, especially in gradients and fine details.' },
+  { title: 'Use lossless for graphics and logos', desc: 'For images with text, sharp edges, or flat colors (logos, screenshots, diagrams) — use PNG lossless or WebP lossless. Lossy JPEG destroys sharp edges and makes text blurry.' },
+  { title: 'Reduce dimensions first', desc: 'Halving image dimensions (e.g. 4000px → 2000px) reduces file size by ~75% with zero quality loss at display size. Always resize to your display dimensions before compressing.' },
+  { title: 'Use the Before/After preview', desc: 'Our tool includes a drag-slider to compare original vs compressed side-by-side. Use this to verify quality is acceptable before downloading. If you see artifacts — increase quality slider.' },
+  { title: 'Avoid re-compressing already-compressed images', desc: 'Every time you save a JPEG, it loses quality. If you already have a compressed JPEG, compressing it again doubles the quality loss. Always work from the original file.' },
 ];
 
 
@@ -19,7 +20,7 @@ const schemaData = {
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressto20kb.com"},
       {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.compressto20kb.com/blog"},
-      {"@type": "ListItem", "position": 3, "name": "compress image without losing quality", "item": "https://www.compressto20kb.com/blog/compress-image-without-losing-quality"}
+      {"@type": "ListItem", "position": 3, "name": "compress image on windows 11", "item": "https://www.compressto20kb.com/blog/compress-image-without-losing-quality"}
     ]
   }
 };
@@ -32,61 +33,66 @@ export default function ClientPage() {
 
 
       {/* NAV */}
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
-          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
-          <Link href="/compress-to-50kb" style={{ color: 'white', textDecoration: 'none' }}>50KB Tool</Link>
-          <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
-        </div>
-      </nav>
-
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
+<div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
 
         {/* BREADCRUMB */}
-        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
-          <Link href="/blog" style={{ color: '#818cf8', textDecoration: 'none' }}>Blog</Link> → Compress Image to 30KB
+        <div style={{ fontSize:'15px', opacity: 0.68, marginBottom: '12px' }}>
+          <Link href="/blog" style={{ color: '#c7d2fe', textDecoration: 'none' }}>Blog</Link> → Compress Without Losing Quality
         </div>
 
         {/* HERO */}
         <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
-          How to Compress an Image to <span style={{ color: '#818cf8' }}>30KB</span> Free Online
+          How to Compress Images <span style={{ color: '#818cf8' }}>Without Losing Quality</span>
         </h1>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
-                <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}><p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p></div><div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}><img src="/images/blog/compress.svg" alt="compress image without losing quality — compressto20kb.com" width={800} height={420} style={{width:'100%',height:'auto',borderRadius:'8px',margin:'24px 0'}} loading="lazy" /><p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0}}>Key Takeaways</p><ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}><li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li><li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong></li><li>WebP saves <strong style={{color:'#fff'}}>25-50%</strong> vs JPEG at same quality</li><li>No file size limit, 100% free</li></ul></div>
-        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>
-          Many job portals, HR systems, and government forms require profile photos or document images under 30KB. This guide shows you how to compress any image to 30KB or under — free, without uploading to any server.
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.68)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
+                <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}><p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p></div><div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}><img src="/images/blog/compress.svg" alt="compress image on windows 11 — compressto20kb.com" width={800} height={420} style={{width:'100%',height:'auto',borderRadius:'8px',margin:'24px 0'}} loading="lazy" /><p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0}}>Key Takeaways</p><ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}><li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li><li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong></li><li>WebP saves <strong style={{color:'#fff'}}>25–50%</strong> vs JPEG at same quality</li><li>No file size limit, 100% free</li></ul></div>
+        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '8px' }}>
+          The goal of smart image compression is to reduce file size as much as possible while keeping visual quality indistinguishable from the original. This guide explains exactly how to do it — with a free tool that includes a before/after preview.
         </p>
+        <div style={{ fontSize:'15px', opacity: 0.64, marginBottom: '32px' }}>Updated February 2026</div>
 
-        {/* CTA TOOL */}
+        {/* CTA */}
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
-          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to 30KB or under — Free Tool</div>
-          <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>No upload. Files stay on your device. JPEG, PNG, WebP, HEIC supported.</p>
-          <Link href="/?mode=exactkb&target=30" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
-            ⚡ Open 30KB Compressor
+          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>👁️ Compress with Before/After Quality Preview</div>
+          <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>Free · No upload · Drag-slider comparison · JPEG, WebP, PNG, AVIF, HEIC</p>
+          <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#6d28d9)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
+            ⚡ Try Free Compressor
           </Link>
         </div>
 
-        {/* STEPS */}
-        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Step-by-Step: Compress to 30KB</h2>
-        {[
-          { step: '1', title: 'Open the tool', desc: 'Click the button above or go to compressto20kb.com. No signup, no install.' },
-          { step: '2', title: 'Upload your image', desc: 'Drag and drop or click to select. Supports JPG, PNG, WebP, HEIC — up to 50 files at once.' },
-          { step: '3', title: 'Switch to Target KB Mode', desc: 'Click the "🎯 Target KB Mode" tab at the top of the tool.' },
-          { step: '4', title: 'Enter 30 in the target field', desc: 'Type 30 or click the custom field. The tool automatically finds the right compression level.' },
-          { step: '5', title: 'Click Compress and Download', desc: 'Your image is compressed to 30KB in seconds — right in your browser. Click Save to download.' },
-        ].map(({ step, title, desc }) => (
-          <div key={step} style={{ display: 'flex', gap: '16px', marginBottom: '16px', alignItems: 'flex-start' }}>
-            <div style={{ background: 'rgba(129,140,248,0.2)', border: '1px solid rgba(129,140,248,0.4)', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '15px', flexShrink: 0 }}>{step}</div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: '15px', marginBottom: '4px' }}>{title}</div>
-              <div style={{ fontSize:'15px', opacity: 0.65 }}>{desc}</div>
-            </div>
-          </div>
-        ))}
+        {/* FORMAT TABLE */}
+        <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
+          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#c7d2fe'}}>Google PageSpeed Insights</a>
+        </blockquote>
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Format Comparison: Quality vs Size</h2>
+        <div style={{ overflowX: 'auto', marginBottom: '40px' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize:'15px' }}>
+            <thead>
+              <tr style={{ background: 'rgba(129,140,248,0.15)' }}>
+                {['Format', 'Type', 'Best for', 'Quality at small size'].map(h => (
+                  <th key={h} style={{ padding: '10px 14px', textAlign: 'left', borderBottom: '1px solid rgba(255,255,255,0.1)', fontWeight: 700 }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['WebP', 'Lossy/Lossless', 'Photos & web', '⭐⭐⭐⭐⭐'],
+                ['AVIF', 'Lossy/Lossless', 'Smallest size', '⭐⭐⭐⭐⭐'],
+                ['JPEG', 'Lossy', 'Universal photos', '⭐⭐⭐⭐'],
+                ['PNG', 'Lossless', 'Graphics & logos', '⭐⭐⭐⭐⭐ (no loss)'],
+              ].map((row, i) => (
+                <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                  {row.map((cell, j) => (
+                    <td key={j} style={{ padding: '10px 14px', opacity: j === 0 ? 1 : 0.75, fontWeight: j === 0 ? 700 : 400 }}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         {/* TIPS */}
-        <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '40px 0 16px' }}>Tips for Best Quality at 30KB</h2>
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>6 Tips to Compress Without Visible Quality Loss</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
           {tips.map((tip, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: '3px solid #818cf8' }}>
@@ -96,20 +102,27 @@ export default function ClientPage() {
           ))}
         </div>
 
-        {/* USE CASES */}
-        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>When Do You Need a 30KB Image?</h2>
-        <p style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.7, marginBottom: '12px' }}>
-          30KB is a common file size limit for profile photos on job portals and HR systems in the USA. Common platforms and forms that require images under 30KB or close to it include Indeed profile photos, government employee portals, university application uploads, and some state DMV systems.
-        </p>
-        <p style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>
-          For US government immigration forms, the limit is typically 20KB — use our <Link href="/" style={{ color: '#818cf8' }}>Gov 20KB preset</Link> for USCIS, DS-160, and passport applications. For forms allowing up to 50KB, see our <Link href="/compress-to-50kb" style={{ color: '#818cf8' }}>compress to 50KB tool</Link>.
-        </p>
+        {/* QUALITY GUIDE */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>JPEG Quality Settings Guide</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '40px' }}>
+          {[
+            { range: '90–100%', label: 'Near-lossless', desc: 'Virtually identical to original. Large files. Use for printing or archiving.' },
+            { range: '75–89%', label: 'Recommended for web', desc: 'Invisible quality loss on most screens. Good balance of quality and size.' },
+            { range: '60–74%', label: 'Visible on close inspection', desc: 'Slight loss in gradients and fine details. Acceptable for thumbnails and previews.' },
+            { range: 'Below 60%', label: 'Noticeable artifacts', desc: 'Block artifacts visible. Use only when file size target is strict (under 30–50KB).' },
+          ].map(({ range, label, desc }, i) => (
+            <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', background: 'rgba(255,255,255,0.04)', borderRadius: '8px', padding: '12px 16px' }}>
+              <div style={{ fontWeight: 800, fontSize:'15px', color: ['#22d3ee', '#818cf8', '#fbbf24', '#f87171'][i], flexShrink: 0, minWidth: '70px' }}>{range}</div>
+              <div>
+                <div style={{ fontWeight: 700, fontSize:'15px', marginBottom: '2px' }}>{label}</div>
+                <div style={{ fontSize: '13px', opacity: 0.72 }}>{desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* FAQ */}
-        <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
-          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#818cf8'}}>Google PageSpeed Insights</a>
-        </blockquote>
-        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — Compress Image to 30KB</h2>
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
           {faq.map((item, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
@@ -120,15 +133,15 @@ export default function ClientPage() {
         </div>
 
         {/* RELATED */}
-        <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Related Tools</h2>
+        <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Related Tools & Guides</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '40px' }}>
           {[
-            { href: '/', label: '🪪 Compress to 20KB' },
-            { href: '/compress-to-50kb', label: '📄 Compress to 50KB' },
-            { href: '/compress-to-100kb', label: '📁 Compress to 100KB' },
-            { href: '/compress-for-uscis', label: '🏛️ USCIS Photo Tool' },
-            { href: '/compress-passport-photo', label: '🛂 Passport Photo' },
-            { href: '/blog/compress-passport-photo-to-50kb', label: '📖 Passport to 50KB Guide' },
+            { href: '/', label: '🎯 Free Image Compressor' },
+            { href: '/compress-without-uploading', label: '🔒 No-Upload Tool' },
+            { href: '/bulk-image-compressor', label: '📦 Bulk Compressor' },
+            { href: '/blog/webp-vs-jpeg-2026', label: '📖 WebP vs JPEG 2026' },
+            { href: '/blog/best-image-formats', label: '📖 Best Image Formats' },
+            { href: '/blog/ecommerce-image-optimization', label: '📖 eCommerce Optimization' },
           ].map(({ href, label }) => (
             <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize:'15px', fontWeight: 600 }}>
               {label}

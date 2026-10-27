@@ -93,7 +93,7 @@ export default function Page() {
             <h3 style={{fontSize:'16px', color:'#c7d2fe'}}>What format does MOM accept for EP photos?</h3>
             <p style={{fontSize:'14px', opacity:0.8}}>JPEG, plain white background, under 2MB for upload in the EP eService.</p>
           </div>
-          <p style={{fontSize:'12px', opacity:0.5, marginTop:'30px'}}>Requirements last checked against official sources: October 2026. Always confirm with the issuing authority before submitting.</p>
+          <p style={{fontSize:'12px', opacity:0.68, marginTop:'30px'}}>Requirements last checked against official sources: October 2026. Always confirm with the issuing authority before submitting.</p>
         </div>
       </div>
     </>

@@ -38,11 +38,7 @@ export default function CompressTo2MBPage() {
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 2MB","item":"https://www.compressto20kb.com/compress-to-2mb"}]}' }} />
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ CompressTo20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Home</Link>
-      </nav>
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
+<div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
         <h1 style={{ fontSize: 'clamp(26px,4vw,42px)', fontWeight: 900, lineHeight: 1.2, marginBottom: '12px' }}>
           📦 Compress Image to <span style={{ color: '#818cf8' }}>2MB</span>
         </h1>
@@ -52,7 +48,7 @@ export default function CompressTo2MBPage() {
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
           <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to 2MB or under</div>
           <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>No upload. Files stay on your device. JPEG, PNG, WebP, HEIC supported.</p>
-          <a href={"/?mode=exactkb&target=2048"} style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
+          <a href={"/?mode=exactkb&target=2048"} style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#6d28d9)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
             ⚡ Open Compressor — Target 2MB
           </a>
         </div>
@@ -98,7 +94,7 @@ export default function CompressTo2MBPage() {
             ["/compress-to-500kb", "Compress to 500KB"],
             ["/compress-to-3mb", "Compress to 3MB"],
             ["/image-size-checker-online", "Check your image size"],
-            ["/compress-image-for-google-forms", "Uploads for forms"],
+            ["/blog/compress-image-for-google-forms", "Uploads for forms"],
             ["/", "Back to the compressor"]
           ].map(([href, label]) => (
             <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize:'15px', fontWeight: 600 }}>{label}</Link>

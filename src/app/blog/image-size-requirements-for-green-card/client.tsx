@@ -28,19 +28,11 @@ export default function ClientPage(){
       
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
 
-      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
-        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
-        <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>
-          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
-          <Link href="/compress-for-uscis" style={{color:'white',textDecoration:'none'}}>USCIS Tool</Link>
-        </div>
-      </nav>
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → Green Card Photo Requirements</div>
+<div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
+        <div style={{fontSize:'15px',opacity:0.68,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → Green Card Photo Requirements</div>
         <div style={{display:'inline-block',background:'rgba(52,211,153,0.1)',border:'1px solid rgba(52,211,153,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#6ee7b7'}}>🟢 Green Card · Permanent Residence</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>Green Card Photo Size Requirements 2026<br/><span style={{color:'#818cf8'}}>I-485 · I-130 · I-90 · I-751</span></h1>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.68)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>
         </div>
@@ -59,7 +51,7 @@ export default function ClientPage(){
           <strong style={{color:'#6ee7b7'}}>📋 What is actually published:</strong>
           <span style={{fontSize:'14px',opacity:0.85}}> USCIS forms request 2×2 inch (51×51 mm) printed photos per their instructions, with no KB cap on uscis.gov. The 240KB JPEG figure you see online comes from the State Department photo pages (travel.state.gov) for passports and visas, not from USCIS.</span>
         </div>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.5)',lineHeight:1.7,margin:'24px 0'}}>Where a digital upload does appear in a US immigration flow, the practical reference is the State Department standard: square JPEG, 600×600 to 1200×1200 pixels, 240KB or less (travel.state.gov, checked October 2026). The 20KB figure is a folklore number, not a published rule.</p>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.68)',lineHeight:1.7,margin:'24px 0'}}>Where a digital upload does appear in a US immigration flow, the practical reference is the State Department standard: square JPEG, 600×600 to 1200×1200 pixels, 240KB or less (travel.state.gov, checked October 2026). The 20KB figure is a folklore number, not a published rule.</p>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Photo Requirements by Form</h2>
         <div style={{overflowX:'auto',marginBottom:'32px'}}>
           <table style={{width:'100%',borderCollapse:'collapse',fontSize:'15px'}}>
@@ -71,13 +63,13 @@ export default function ClientPage(){
                 <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',fontWeight:700,color:'#6ee7b7'}}>{r.form}</td>
                 <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',opacity:0.75}}>{r.name}</td>
                 <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',color:'#34d399',fontWeight:700}}>{r.limit}</td>
-                <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',opacity:0.6,fontSize:'12px'}}>{r.note}</td>
+                <td style={{padding:'10px 12px',border:'1px solid rgba(255,255,255,0.06)',opacity:0.72,fontSize:'12px'}}>{r.note}</td>
               </tr>
             ))}</tbody>
           </table>
         </div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'12px'}}>Compress Your Green Card Photo (Free)</h2>
-        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Pre-set to 200KB JPEG — a comfortable margin under the State Department 240KB reference ceiling, for any online upload box. The result comes back at or under that number, and your files never leave the browser.</p>
+        <p style={{fontSize:'14px',opacity:0.72,marginBottom:'20px'}}>Pre-set to 200KB JPEG — a comfortable margin under the State Department 240KB reference ceiling, for any online upload box. The result comes back at or under that number, and your files never leave the browser.</p>
         <div style={{marginBottom:'40px'}}><CompressorWidget defaultMode="exactkb" defaultTargetKB={200} defaultFormat="jpeg"/></div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Frequently Asked Questions</h2>
         {faq.map(([q, a], i)=>(
@@ -90,7 +82,7 @@ export default function ClientPage(){
           <p style={{fontWeight:700,marginBottom:'12px',fontSize:'14px'}}>Related guides:</p>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'15px'}}>
             {([['/compress-for-uscis','USCIS Photo Tool'],['/blog/how-to-compress-image-for-uscis','USCIS Guide'],['/blog/how-to-compress-photo-for-ds160','DS-160'],['/blog/us-passport-photo-requirements','US Passport']] as [string,string][]).map(([href,label])=>(
-              <Link key={href} href={href} style={{color:'#818cf8',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
+              <Link key={href} href={href} style={{color:'#c7d2fe',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>
         </div>

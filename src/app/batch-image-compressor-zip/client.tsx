@@ -5,7 +5,7 @@ import CompressorWidget from '@/components/CompressorWidget';
 export default function ClientPage() {
   return (
     <article className="max-w-3xl mx-auto px-4 py-8 text-slate-100">
-      <div style={{ fontSize: '15px', opacity: 0.5, marginBottom: '12px' }}>
+      <div style={{ fontSize: '15px', opacity: 0.68, marginBottom: '12px' }}>
         <Link href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</Link> → Batch Image Compressor ZIP
       </div>
       <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">

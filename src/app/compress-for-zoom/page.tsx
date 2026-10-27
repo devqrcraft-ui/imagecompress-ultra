@@ -57,7 +57,7 @@ export default function CompressForZoomPage() {
 
       <div style={{ minHeight: '100vh', background: '#0a1024', color: '#d8e0f5', fontFamily: 'system-ui,sans-serif' }}>
         <div style={{ maxWidth: '840px', margin: '0 auto', padding: '36px 20px 10px' }}>
-          <div style={{ fontSize: '14px', opacity: 0.5, marginBottom: '10px' }}>
+          <div style={{ fontSize: '14px', opacity: 1, marginBottom: '10px' }}>
             <Link href="/" style={{ color: '#7ea2ff', textDecoration: 'none', fontWeight: 600 }}>Home</Link> → Compress for Zoom
           </div>
           <h1 style={{ fontSize: 'clamp(25px,4vw,35px)', fontWeight: 800, lineHeight: 1.22, margin: '0 0 14px', color: '#f3f7ff' }}>
@@ -84,7 +84,7 @@ export default function CompressForZoomPage() {
                 <div style={{ fontSize: '30px', fontWeight: 900, color: '#9fbbff', lineHeight: 1 }}>{c.figure}</div>
                 <div style={{ fontSize: '15px', fontWeight: 700, margin: '8px 0 6px', color: '#eaf1ff' }}>{c.label}</div>
                 <p style={{ margin: 0, fontSize: '14.5px', lineHeight: 1.7, opacity: 0.78 }}>{c.detail}</p>
-                <p style={{ margin: '8px 0 0', fontSize: '13px', opacity: 0.5 }}>Zoom support article: {c.source}</p>
+                <p style={{ margin: '8px 0 0', fontSize: '13px', opacity: 0.68 }}>Zoom support article: {c.source}</p>
               </div>
             ))}
           </div>

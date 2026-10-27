@@ -16,7 +16,7 @@ export default function AuthorBox() {
         fontWeight:800, fontSize:18, color:'#78A0FF'
       }}>C2</div>
       <div>
-        <div style={{fontSize:11, fontWeight:600, color:'rgba(255,255,255,0.6)', textTransform:'uppercase' as const, letterSpacing:'0.08em', marginBottom:4}}>
+        <div style={{fontSize:11, fontWeight:600, color:'rgba(255,255,255,0.68)', textTransform:'uppercase' as const, letterSpacing:'0.08em', marginBottom:4}}>
           Written by
         </div>
         <div style={{fontWeight:700, color:'#fff', fontSize:15, marginBottom:2}}>
@@ -29,7 +29,7 @@ export default function AuthorBox() {
           
           <a
             href="/blog"
-            style={{fontSize:12, color:'rgba(255,255,255,0.5)', textDecoration:'none'}}
+            style={{fontSize:12, color:'rgba(255,255,255,0.68)', textDecoration:'none'}}
           >
             All articles →
           </a>

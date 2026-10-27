@@ -31,7 +31,7 @@ export default function Page() {
 
       <div style={{ background: 'linear-gradient(180deg,#0b1020 0%,#131b2e 100%)', color: '#e2e8f0', fontFamily: 'system-ui,sans-serif' }}>
         <section style={{ maxWidth: '880px', margin: '0 auto', padding: '44px 20px 20px' }}>
-          <div style={{ fontSize: '15px', opacity: 0.5, marginBottom: '12px' }}>
+          <div style={{ fontSize: '15px', opacity: 0.68, marginBottom: '12px' }}>
             <a href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</a> → Compress for Amazon
           </div>
           <h1 style={{ fontSize: 'clamp(24px,4vw,36px)', fontWeight: 800, margin: '0 0 14px' }}>
@@ -63,7 +63,7 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.55, marginTop: '12px' }}>
+          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.7, marginTop: '12px' }}>
             Thresholds as documented in Amazon seller help —{' '}
             <a href="https://sellercentral.amazon.com/help/hub/reference/external/G1881" rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#a5b4fc' }}>Product image guide</a>
             {' '}(checked October 2026). Rules differ by category and get revised, so confirm against the listing page you are editing.

@@ -37,7 +37,7 @@ export default function Page() {
       <div style={{ background: '#0f0c29', color: '#e2e8f0', fontFamily: 'system-ui,sans-serif' }}>
 
         <section style={{ maxWidth: '860px', margin: '0 auto', padding: '48px 20px 20px' }}>
-          <div style={{ fontSize: '15px', opacity: 0.5, marginBottom: '12px' }}>
+          <div style={{ fontSize: '15px', opacity: 0.68, marginBottom: '12px' }}>
             <a href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</a> → Compress for India Passport
           </div>
           <h1 style={{ fontSize: 'clamp(22px,4vw,32px)', fontWeight: 800, color: '#ffffff', marginBottom: '16px' }}>
@@ -68,7 +68,7 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.55, marginTop: '12px' }}>
+          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.7, marginTop: '12px' }}>
             Sources, checked October 2026:{' '}
             <a href="https://passportindia.gov.in/AppOnlineProject/pdf/GUIDELINES%20FOR%20CAPTURING%20PHOTOGRAPHS%20FOR%20MINORS_v2.1.pdf" rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#a5b4fc' }}>Passport Seva — Guidelines for Capturing Photographs for Minors below 4 (PDF on passportindia.gov.in)</a>
             {' · '}

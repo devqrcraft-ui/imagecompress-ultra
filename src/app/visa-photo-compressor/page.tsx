@@ -12,6 +12,8 @@ const faqSchema = {
 };
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 import { VISA_COUNTRIES } from '@/lib/visaCountries';
 
 export const metadata: Metadata = {
@@ -24,9 +26,41 @@ export const metadata: Metadata = {
 
 const POPULAR = ['uk-visa', 'schengen-visa', 'canada-visa', 'australia-visa', 'india-visa', 'japan-visa', 'turkey-visa', 'saudi-arabia-visa'];
 
+// Country slugs in VISA_COUNTRIES that have no page of their own are 308-redirected
+// to this hub, so listing them would send people in a circle.
+const HAS_PAGE = new Set(
+  fs.readdirSync(path.join(process.cwd(), 'src', 'app'))
+    .filter(d => d.startsWith('compress-for-'))
+    .map(d => d.slice('compress-for-'.length))
+);
+
+const PROGRAMMES: [string, string][] = [
+  ['canada-pr', 'Canada PR application'],
+  ['india-passport', 'Indian Passport Seva'],
+  ['real-id', 'REAL ID (USA)'],
+  ['social-security', 'US Social Security'],
+  ['global-entry', 'Global Entry / TSA PreCheck'],
+  ['common-app', 'Common App (US colleges)'],
+  ['sat-registration', 'SAT registration'],
+  ['gmat-registration', 'GMAT registration'],
+  ['gre-registration', 'GRE registration'],
+  ['ssc-exam', 'SSC exam (India)'],
+  ['upsc-exam', 'UPSC exam (India)'],
+  ['france-schengen', 'France Schengen visa'],
+  ['turkey-e-visa', 'Türkiye e-Visa'],
+  ['korea-visa', 'South Korea visa'],
+  ['korea-k-eta', 'Korea K-ETA'],
+  ['japan-coe', 'Japan COE'],
+  ['singapore-ep', 'Singapore Employment Pass'],
+  ['indonesia-voa', 'Indonesia e-VOA'],
+  ['dubai-work-permit', 'Dubai work permit'],
+  ['new-zealand-nzeta', 'New Zealand NZeTA'],
+];
+
 export default function VisaHubPage() {
-  const popular = VISA_COUNTRIES.filter(c => POPULAR.includes(c.slug));
-  const rest = VISA_COUNTRIES.filter(c => !POPULAR.includes(c.slug));
+  const live = VISA_COUNTRIES.filter(c => HAS_PAGE.has(c.slug));
+  const popular = live.filter(c => POPULAR.includes(c.slug));
+  const rest = live.filter(c => !POPULAR.includes(c.slug));
 
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
@@ -44,16 +78,7 @@ export default function VisaHubPage() {
       })}} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Visa Photo Compressor by Country","item":"https://www.compressto20kb.com/visa-photo-compressor"}]}' }} />
 
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
-          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
-          <Link href="/compress-for-uscis" style={{ color: 'white', textDecoration: 'none' }}>USCIS</Link>
-          <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
-        </div>
-      </nav>
-
-      <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '48px 16px' }}>
+<div style={{ maxWidth: '1000px', margin: '0 auto', padding: '48px 16px' }}>
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
           <div style={{ display: 'inline-block', background: 'rgba(74,222,128,0.1)', border: '1px solid rgba(74,222,128,0.3)', borderRadius: '20px', padding: '6px 16px', fontSize:'15px', marginBottom: '16px', color: '#4ade80' }}>
             🔒 Files never leave your browser
@@ -78,7 +103,7 @@ export default function VisaHubPage() {
             }}>
               <div style={{ fontSize: '28px', marginBottom: '8px' }}>{vc.flag}</div>
               <div style={{ fontWeight: 700, fontSize: '15px', marginBottom: '4px' }}>{vc.name}</div>
-              <div style={{ fontSize: '13px', opacity: 0.5 }}>Max: {vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} · {vc.widthPx}×{vc.heightPx}px</div>
+              <div style={{ fontSize: '13px', opacity: 0.68 }}>Max: {vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} · {vc.widthPx}×{vc.heightPx}px</div>
               <div style={{ fontSize: '13px', color: '#4ade80', marginTop: '6px' }}>→ Compress now</div>
             </Link>
           ))}
@@ -94,7 +119,26 @@ export default function VisaHubPage() {
             }}>
               <span style={{ fontSize: '20px' }}>{vc.flag}</span>{' '}
               <span style={{ fontWeight: 600, fontSize: '14px' }}>{vc.name}</span>
-              <div style={{ fontSize: '13px', opacity: 0.4, marginTop: '4px' }}>{vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} max</div>
+              <div style={{ fontSize: '13px', opacity: 0.62, marginTop: '4px' }}>{vc.maxKB >= 1024 ? Math.round(vc.maxKB/1024)+'MB' : vc.maxKB+'KB'} max</div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Programmes, ID cards & exams */}
+        <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '10px' }}>🗂️ Programmes, ID cards &amp; exams</h2>
+        <p style={{ fontSize: '15px', opacity: 0.65, marginBottom: '18px', maxWidth: '700px', lineHeight: 1.6 }}>
+          Applications with their own upload screens. Each page shows the photo spec we recorded for it and a ready-made target — confirm the number on the form in front of you before you submit.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: '10px', marginBottom: '48px' }}>
+          {PROGRAMMES.map(([slug, label]) => (
+            <Link key={slug} href={`/compress-for-${slug}`} style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px',
+              background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: '10px', padding: '14px 16px', color: 'white', textDecoration: 'none',
+              minHeight: '48px', fontSize: '14px', fontWeight: 600,
+            }}>
+              <span>{label}</span>
+              <span style={{ color: '#818cf8' }}>→</span>
             </Link>
           ))}
         </div>
@@ -110,7 +154,7 @@ export default function VisaHubPage() {
             <div key={f.title} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px' }}>
               <div style={{ fontSize: '28px', marginBottom: '10px' }}>{f.icon}</div>
               <div style={{ fontWeight: 700, marginBottom: '8px' }}>{f.title}</div>
-              <div style={{ fontSize:'15px', opacity: 0.6, lineHeight: 1.6 }}>{f.desc}</div>
+              <div style={{ fontSize:'15px', opacity: 0.72, lineHeight: 1.6 }}>{f.desc}</div>
             </div>
           ))}
         </div>

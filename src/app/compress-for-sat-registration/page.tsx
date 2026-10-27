@@ -39,11 +39,7 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"SAT Registration Photo","item":"https://www.compressto20kb.com/compress-for-sat-registration"}]}' }} />
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '15px', opacity: 0.75 }}>← Home</Link>
-      </nav>
-      <div style={{ maxWidth: '820px', margin: '0 auto', padding: '48px 16px 24px' }}>
+<div style={{ maxWidth: '820px', margin: '0 auto', padding: '48px 16px 24px' }}>
         <h1 style={{ fontSize: 'clamp(26px,4vw,42px)', fontWeight: 900, lineHeight: 1.2, marginBottom: '14px' }}>
           SAT Registration Photo: What the College Board Prints, and What It Does Not
         </h1>
@@ -51,7 +47,7 @@ export default function Page() {
           The photo step of SAT registration states which formats it takes and how your face has to sit inside the frame. It does not state a kilobyte ceiling or a pixel box. That ordering matters when an upload bounces: the picture itself is what is being checked, and file size is a separate, much smaller problem.
         </p>
 
-        <p style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.6, marginBottom: '28px', borderLeft: '3px solid #818cf8', paddingLeft: '14px' }}>
+        <p style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.72, marginBottom: '28px', borderLeft: '3px solid #818cf8', paddingLeft: '14px' }}>
           Everything on this page comes from the College Board SAT Suite pages - the photo requirements page and the ID requirements page - checked in October 2026. Where those pages are silent, this page says so instead of filling the gap.
         </p>
 
@@ -59,7 +55,7 @@ export default function Page() {
         <div style={{ overflowX: 'auto', marginBottom: '34px' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
             <thead>
-              <tr style={{ textAlign: 'left', opacity: 0.6, textTransform: 'uppercase', letterSpacing: '0.6px', fontSize: '11px' }}>
+              <tr style={{ textAlign: 'left', opacity: 0.72, textTransform: 'uppercase', letterSpacing: '0.6px', fontSize: '11px' }}>
                 <th style={{ padding: '8px 10px', borderBottom: '1px solid rgba(255,255,255,0.15)' }}>Item</th>
                 <th style={{ padding: '8px 10px', borderBottom: '1px solid rgba(255,255,255,0.15)' }}>What the page says</th>
                 <th style={{ padding: '8px 10px', borderBottom: '1px solid rgba(255,255,255,0.15)' }}>Published</th>
@@ -76,7 +72,7 @@ export default function Page() {
             </tbody>
           </table>
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.55, marginBottom: '34px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, marginBottom: '34px' }}>
           Official sources: <a href="https://satsuite.collegeboard.org/sat/registration/online-registration/photo-requirements" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>SAT photo requirements</a> and <a href="https://satsuite.collegeboard.org/sat/what-to-bring-do/id-requirements" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>SAT ID requirements</a>. For test day the ID has to be an unexpired government- or school-issued photo ID and an original physical document, not a photocopy. The photo you attach at registration is not printed on your admission ticket; proctoring staff carry it on their roster.
         </p>
 
@@ -105,7 +101,7 @@ export default function Page() {
           <li>Set the output format to JPEG, then drop the photo into the box that says &ldquo;Drop images here or click to upload&rdquo;.</li>
           <li>Run it and read the size back. If the portal still rejects the file, lower the number and run once more from the original photo rather than from the already-compressed result, which would discard detail twice.</li>
         </ol>
-        <p style={{ fontSize: '13px', opacity: 0.55, marginBottom: '34px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, marginBottom: '34px' }}>
           Related size pages on this site: <Link href="/compress-to-50kb" style={{ color: '#a5b4fc' }}>compress to 50 KB</Link> and <Link href="/compress-to-20kb" style={{ color: '#a5b4fc' }}>compress to 20 KB</Link>. Neither figure is a College Board rule — they are just the two ceilings portal forms ask for most often.
         </p>
 

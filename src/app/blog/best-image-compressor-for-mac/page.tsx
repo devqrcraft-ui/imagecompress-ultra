@@ -24,16 +24,16 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Best Image Compressor for Mac 2026","item":"https://www.compressto20kb.com/blog/best-image-compressor-for-mac"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Best Image Compressor for Mac 2026","description":"Top free image compressors for Mac in 2026: CompressTo20KB (browser, no install), ImageOptim (desktop), Squash. Compress HEIC, PNG, JPEG instantly in Safari or Chrome.","url":"https://www.compressto20kb.com/blog/best-image-compressor-for-mac","datePublished":"2026-01-01","dateModified":"2026-06-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
-        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>Blog → Mac</div>
+        <div style={{ fontSize: '13px', opacity: 0.68, marginBottom: '12px' }}>Blog → Mac</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>Best Free Image Compressor for Mac in 2026</h1>
-        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
           <span>By the CompressTo20KB Team</span>
           <span>{'·'}</span>
           <span>{'~7 min read'}</span>
         </div>
-        <p style={{ opacity: 0.5, fontSize:'15px', marginBottom: '32px' }}>Updated October 2026 · 5 min read</p>
+        <p style={{ opacity: 0.68, fontSize:'15px', marginBottom: '32px' }}>Updated October 2026 · 5 min read</p>
 
         <p style={{ fontSize: '16px', lineHeight: 1.8, opacity: 0.8, marginBottom: '24px' }}>Mac users often struggle to find a good image compressor. The built-in Preview app can export smaller files, but it offers no control over exact file size, no batch processing, and no WebP support. Here are the best options — including one that requires zero installation.</p>
 
@@ -62,7 +62,7 @@ export default function Page() {
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>How to Compress HEIC Photos from iPhone on Mac</h2>
         <ol style={{ paddingLeft: '20px', fontSize: '15px', lineHeight: 2.2, opacity: 0.8 }}>
           <li>AirDrop your HEIC photo from iPhone to Mac</li>
-          <li>Open <a href="https://www.compressto20kb.com" style={{ color: '#818cf8' }}>compressto20kb.com</a> in Safari</li>
+          <li>Open <a href="https://www.compressto20kb.com" style={{ color: '#c7d2fe' }}>compressto20kb.com</a> in Safari</li>
           <li>Drop the HEIC file into the upload zone</li>
           <li>Select your target size and output format (JPEG recommended for compatibility)</li>
           <li>Download and use the compressed file</li>
@@ -70,7 +70,7 @@ export default function Page() {
 
         <div style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '12px', padding: '20px', margin: '32px 0', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', fontWeight: 700, marginBottom: '12px' }}>Compress images on Mac — works in Safari, no install</p>
-          <a href="https://www.compressto20kb.com" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#22d3ee)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Open CompressTo20KB →</a>
+          <a href="https://www.compressto20kb.com" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#0e7490)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Open CompressTo20KB →</a>
         </div>
 
         <div style={{ marginTop: '40px' }}>
@@ -85,7 +85,7 @@ export default function Page() {
 
         <div style={{ marginTop: '40px', display: 'flex', gap: '10px', flexWrap: 'wrap', fontSize:'15px' }}>
           {[['/', 'Home'], ['/bulk-image-compressor', 'Bulk Compress'], ['/compress-to-200kb', 'Compress to 200KB'], ['/compress-passport-photo', 'Passport Photo']].map(([href, label]) => (
-            <a key={href} href={href} style={{ color: '#818cf8', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>{label}</a>
+            <a key={href} href={href} style={{ color: '#c7d2fe', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>{label}</a>
           ))}
         </div>
       </div>

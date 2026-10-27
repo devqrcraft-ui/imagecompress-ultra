@@ -38,18 +38,9 @@ export default function FAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"FAQ","item":"https://www.compressto20kb.com/faq"}]}' }} />
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
-        <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-          <a href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ CompressTo20KB</a>
-          <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
-            <a href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</a>
-            <a href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</a>
-            <a href="/contact" style={{ color: 'white', textDecoration: 'none' }}>Contact</a>
-          </div>
-        </nav>
-
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 48px' }}>
+<div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 48px' }}>
           <h1 style={{ fontSize: '32px', fontWeight: 800, marginBottom: '8px' }}>Frequently Asked Questions</h1>
-          <p style={{ fontSize: '15px', opacity: 0.6, marginBottom: '40px' }}>Everything you need to know about CompressTo20KB.</p>
+          <p style={{ fontSize: '15px', opacity: 0.72, marginBottom: '40px' }}>Everything you need to know about CompressTo20KB.</p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '48px' }}>
             {faqs.map((faq, i) => (
@@ -63,7 +54,7 @@ export default function FAQPage() {
           <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '14px', padding: '24px', textAlign: 'center' }}>
             <div style={{ fontSize: '16px', fontWeight: 700, marginBottom: '8px' }}>Still have questions?</div>
             <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>We are happy to help. Send us a message and we will respond within 24 hours.</p>
-            <a href="/contact" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '10px 24px', borderRadius: '100px', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}>Contact Us →</a>
+            <a href="/contact" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#6d28d9)', color: 'white', padding: '10px 24px', borderRadius: '100px', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}>Contact Us →</a>
           </div>
         </div>
       </div>

@@ -38,9 +38,9 @@ export default function Page() {
       <div style={{borderTop:'2px solid #2a3a6a',marginTop:40,paddingTop:28}}>
         <h2 style={{fontSize:16,fontWeight:800,marginBottom:16,color:'#fff'}}>Related Tools</h2>
         <div style={{display:'flex',gap:10,flexWrap:'wrap' as const}}>
-          <a href="/compress-without-uploading" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:15,fontWeight:600,color:'#818cf8',textDecoration:'none'}}>Image to Text</a>
-          <a href="/jpg-to-png" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:15,fontWeight:600,color:'#818cf8',textDecoration:'none'}}>JPG to PNG</a>
-          <a href="/" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:15,fontWeight:600,color:'#818cf8',textDecoration:'none'}}>Compress Image</a>
+          <a href="/compress-without-uploading" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:15,fontWeight:600,color:'#c7d2fe',textDecoration:'none'}}>Image to Text</a>
+          <a href="/jpg-to-png" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:15,fontWeight:600,color:'#c7d2fe',textDecoration:'none'}}>JPG to PNG</a>
+          <a href="/" style={{padding:'8px 14px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:6,fontSize:15,fontWeight:600,color:'#c7d2fe',textDecoration:'none'}}>Compress Image</a>
         </div>
       </div>
     </main>

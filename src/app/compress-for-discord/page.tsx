@@ -34,7 +34,7 @@ export default function Page() {
           <div style={{ display: 'inline-block', background: 'rgba(88,101,242,0.14)', border: '1px solid rgba(88,101,242,0.4)', borderRadius: '999px', padding: '5px 14px', fontSize: '13px', color: '#aab3ff', marginBottom: '16px' }}>
             For avatars, server icons, banners &amp; posted media
           </div>
-          <div style={{ fontSize: '14px', opacity: 0.45, marginBottom: '10px' }}>
+          <div style={{ fontSize: '14px', opacity: 1, marginBottom: '10px' }}>
             <a href="/" style={{ color: '#8b93ff', textDecoration: 'none' }}>Home</a> → Compress for Discord
           </div>
           <h1 style={{ fontSize: 'clamp(24px,4vw,34px)', fontWeight: 800, margin: '0 0 12px', color: '#fff', lineHeight: 1.25 }}>
@@ -69,9 +69,9 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.5, marginTop: '14px' }}>
+          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.9, marginTop: '14px' }}>
             Attachment limit from{' '}
-            <a href="https://support.discord.com/hc/en-us/articles/25444343291031-File-Attachments-FAQ" rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#8b93ff' }}>Discord Help — File Attachments FAQ</a>
+            <a href="https://support.discord.com/hc/en-us/articles/25444343291031-File-Attachments-FAQ" rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#b9c0ff' }}>Discord Help — File Attachments FAQ</a>
             {' '}(checked October 2026). Display sizes and the KB numbers are our practical guidance; Discord does not publish a per-slot spec for every surface.
           </p>
         </section>

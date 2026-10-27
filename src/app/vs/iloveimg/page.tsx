@@ -31,7 +31,7 @@ const S = {
   inner: { maxWidth: 800, margin: '0 auto', padding: 'clamp(16px,4vw,32px)' } as React.CSSProperties,
   h1: { fontSize: 'clamp(22px,5vw,36px)', fontWeight: 900, color: '#e8edf8', lineHeight: 1.25, margin: '0 0 14px' } as React.CSSProperties,
   h2: { fontSize: 'clamp(18px,4vw,24px)', fontWeight: 800, color: '#e8edf8', margin: '36px 0 14px' } as React.CSSProperties,
-  meta: { fontSize: 12, color: 'rgba(200,208,231,0.55)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const } as React.CSSProperties,
+  meta: { fontSize: 12, color: 'rgba(200,208,231,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const } as React.CSSProperties,
   answer: { background: 'rgba(165,180,252,0.07)', border: '1px solid rgba(165,180,252,0.2)', borderRadius: 12, padding: '16px 20px', marginBottom: 24, lineHeight: 1.7 } as React.CSSProperties,
   winner: { background: 'rgba(52,211,153,0.08)', border: '1px solid rgba(52,211,153,0.25)', borderRadius: 12, padding: '16px 20px', marginBottom: 28, display: 'flex', gap: 14, alignItems: 'flex-start' } as React.CSSProperties,
   th: { padding: '10px 14px', textAlign: 'left' as const, border: '1px solid rgba(165,180,252,0.12)', fontWeight: 700, color: '#e8edf8', background: 'rgba(165,180,252,0.08)' },
@@ -72,9 +72,9 @@ export default function VsILoveIMG() {
 
       <article itemScope itemType="https://schema.org/BlogPosting" style={S.inner}>
 
-        <nav aria-label="breadcrumb" style={{ fontSize: 13, color: 'rgba(200,208,231,0.5)', marginBottom: 18 }}>
+        <nav aria-label="breadcrumb" style={{ fontSize: 13, color: 'rgba(200,208,231,0.68)', marginBottom: 18 }}>
           <a href="/" style={S.link}>Home</a> {' › '}
-          <span style={{ opacity: 0.6 }}>Comparisons</span> {' › '}
+          <span style={{ opacity: 0.95 }}>Comparisons</span> {' › '}
           <span>vs iLoveIMG</span>
         </nav>
 

@@ -97,13 +97,13 @@ export default function DPIConverterPage() {
       <div style={{maxWidth:'860px',margin:'0 auto',padding:'32px 20px'}}>
 
         {/* Breadcrumb */}
-        <nav style={{fontSize:'12px',opacity:0.45,marginBottom:'10px'}}>
+        <nav style={{fontSize:'12px',opacity:0.64,marginBottom:'10px'}}>
           <Link href="/" style={{color:'inherit',textDecoration:'none'}}>Home</Link>
           <span style={{margin:'0 6px'}}>/</span>
           <span>DPI Converter</span>
         </nav>
 
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'10px'}}>🖨️ Image DPI Converter Online — No Upload Required</div>
+        <div style={{fontSize:'15px',opacity:0.68,marginBottom:'10px'}}>🖨️ Image DPI Converter Online — No Upload Required</div>
 
         <h1 style={{fontSize:'32px',fontWeight:800,marginBottom:'12px'}}>
           Image <span style={{color:'#818cf8'}}>DPI Converter</span> — Change to 300 DPI Free
@@ -111,7 +111,7 @@ export default function DPIConverterPage() {
         <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.65,marginBottom:'8px'}}>
           Change image DPI to <strong style={{color:'white'}}>300 DPI</strong> for printing, <strong style={{color:'white'}}>USCIS</strong>, US passport, government portals, or any other requirement. Works 100% in your browser — your image <strong style={{color:'white'}}>never leaves your device</strong>.
         </p>
-        <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.45,marginBottom:'24px'}}>
+        <p style={{fontSize:'15px',lineHeight:'1.7',opacity:0.64,marginBottom:'24px'}}>
           Supports converting to 72 DPI (web), 96 DPI (screen), 150 DPI (draft print), 300 DPI (standard print), 600 DPI (high quality). Free, no registration, no upload.
         </p>
 
@@ -138,18 +138,18 @@ export default function DPIConverterPage() {
                     background: targetDPI === dpi ? 'rgba(129,140,248,0.25)' : 'rgba(255,255,255,0.04)',
                     color:'white',fontSize:'15px',fontWeight:700,cursor:'pointer'}}>
                   {dpi} DPI
-                  {dpi === 300 && <span style={{fontSize:'10px',color:'#818cf8',marginLeft:'4px'}}>✓ USCIS</span>}
-                  {dpi === 72 && <span style={{fontSize:'10px',opacity:0.5,marginLeft:'4px'}}>web</span>}
+                  {dpi === 300 && <span style={{fontSize:'10px',color:'#c7d2fe',marginLeft:'4px'}}>✓ USCIS</span>}
+                  {dpi === 72 && <span style={{fontSize:'10px',opacity:0.68,marginLeft:'4px'}}>web</span>}
                 </button>
               ))}
             </div>
             <div style={{display:'flex',alignItems:'center',gap:'8px'}}>
-              <span style={{fontSize:'12px',opacity:0.6}}>Custom:</span>
+              <span style={{fontSize:'12px',opacity:0.72}}>Custom:</span>
               <input type="number" value={targetDPI} min={1} max={1200}
                 onChange={e => setTargetDPI(Math.max(1, +e.target.value))}
                 style={{width:'80px',padding:'6px 10px',borderRadius:'8px',border:'1px solid rgba(255,255,255,0.2)',background:'rgba(255,255,255,0.08)',color:'white',fontSize:'14px',fontWeight:700}}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"dpi-converter","item":"https://www.compressto20kb.com/dpi-converter"}]}' }} />
-              <span style={{fontSize:'12px',opacity:0.6}}>DPI</span>
+              <span style={{fontSize:'12px',opacity:0.72}}>DPI</span>
             </div>
           </div>
 
@@ -167,13 +167,13 @@ export default function DPIConverterPage() {
               <div>
                 <img src={image.preview} alt="preview" style={{maxHeight:'120px',maxWidth:'100%',borderRadius:'8px',marginBottom:'8px'}} loading="lazy"/>
                 <div style={{fontSize:'15px',fontWeight:600}}>{image.file.name}</div>
-                <div style={{fontSize:'12px',opacity:0.5,marginTop:'4px'}}>{fmtSize(image.file.size)} · Click to change</div>
+                <div style={{fontSize:'12px',opacity:0.68,marginTop:'4px'}}>{fmtSize(image.file.size)} · Click to change</div>
               </div>
             ) : (
               <div>
                 <div style={{fontSize:'36px',marginBottom:'8px'}}>🖼️</div>
                 <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>Drop image here or click to upload</div>
-                <div style={{fontSize:'12px',opacity:0.45}}>JPEG · PNG · WebP · HEIC in — saved as JPEG out, processed locally and never uploaded</div>
+                <div style={{fontSize:'12px',opacity:0.64}}>JPEG · PNG · WebP · HEIC in — saved as JPEG out, processed locally and never uploaded</div>
               </div>
             )}
             <input ref={ref} type="file" accept="image/*,.heic,.heif" style={{display:'none'}}
@@ -183,7 +183,7 @@ export default function DPIConverterPage() {
           {/* Convert button */}
           <button onClick={convert} disabled={!image || processing}
             style={{width:'100%',padding:'14px',borderRadius:'10px',
-              background: !image ? 'rgba(129,140,248,0.2)' : processing ? 'rgba(129,140,248,0.4)' : 'linear-gradient(135deg,#6366f1,#8b5cf6)',
+              background: !image ? 'rgba(129,140,248,0.2)' : processing ? 'rgba(129,140,248,0.4)' : 'linear-gradient(135deg,#4f46e5,#6d28d9)',
               border:'none',color:'white',fontSize:'15px',fontWeight:800,
               cursor: !image || processing ? 'not-allowed' : 'pointer',
               boxShadow: image && !processing ? '0 0 20px rgba(99,102,241,0.4)' : 'none',
@@ -203,7 +203,7 @@ export default function DPIConverterPage() {
                 ].map(([v, l]) => (
                   <div key={l} style={{background:'rgba(255,255,255,0.06)',borderRadius:'8px',padding:'8px 14px',textAlign:'center'}}>
                     <div style={{fontSize:'16px',fontWeight:800,color:'#a5b4fc'}}>{v}</div>
-                    <div style={{fontSize:'10px',opacity:0.5}}>{l}</div>
+                    <div style={{fontSize:'10px',opacity:0.68}}>{l}</div>
                   </div>
                 ))}
               </div>
@@ -237,7 +237,7 @@ export default function DPIConverterPage() {
             <div key={title} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',padding:'14px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontSize:'22px',marginBottom:'6px'}}>{icon}</div>
               <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>{title}</div>
-              <div style={{fontSize:'12px',opacity:0.5}}>{desc}</div>
+              <div style={{fontSize:'12px',opacity:0.68}}>{desc}</div>
             </div>
           ))}
         </div>
@@ -255,9 +255,9 @@ export default function DPIConverterPage() {
             <div key={dpi} style={{display:'grid',gridTemplateColumns:'100px 1fr 1fr',gap:'12px',padding:'12px 16px',
               borderBottom: i<4 ? '1px solid rgba(255,255,255,0.05)' : 'none',
               background: dpi==='300 DPI' ? 'rgba(129,140,248,0.08)' : 'transparent'}}>
-              <span style={{fontWeight:800,fontSize:'15px',color: dpi==='300 DPI' ? '#818cf8' : 'white'}}>{dpi}</span>
+              <span style={{fontWeight:800,fontSize:'15px',color: dpi==='300 DPI' ? '#c7d2fe' : 'white'}}>{dpi}</span>
               <span style={{fontSize:'12px',fontWeight:600,opacity:0.8}}>{use}</span>
-              <span style={{fontSize:'12px',opacity:0.5}}>{examples}</span>
+              <span style={{fontSize:'12px',opacity:0.68}}>{examples}</span>
             </div>
           ))}
         </div>
@@ -268,7 +268,7 @@ export default function DPIConverterPage() {
           {faq.map(([q,a])=>(
             <div key={q} style={{background:'rgba(255,255,255,0.03)',borderRadius:'10px',padding:'16px',border:'1px solid rgba(255,255,255,0.07)'}}>
               <div style={{fontWeight:700,fontSize:'14px',marginBottom:'6px',color:'#a5b4fc'}}>{q}</div>
-              <div style={{fontSize:'15px',opacity:0.6,lineHeight:'1.6'}}>{a}</div>
+              <div style={{fontSize:'15px',opacity:0.72,lineHeight:'1.6'}}>{a}</div>
             </div>
           ))}
         </div>

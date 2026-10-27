@@ -32,7 +32,7 @@ export default function Page() {
       <div style={{ background: '#f6fbf7', color: '#1f2e26', fontFamily: 'system-ui,sans-serif' }}>
         <div style={{ background: '#075e54', color: '#fff', padding: '34px 20px 30px' }}>
           <div style={{ maxWidth: '840px', margin: '0 auto' }}>
-            <div style={{ fontSize: '14px', opacity: 0.75, marginBottom: '10px' }}>
+            <div style={{ fontSize: '14px', opacity: 0.95, marginBottom: '10px' }}>
               <a href="/" style={{ color: '#c7f0e5', textDecoration: 'none' }}>Home</a> → Compress for WhatsApp
             </div>
             <h1 style={{ fontSize: 'clamp(23px,4vw,33px)', fontWeight: 800, margin: '0 0 12px' }}>

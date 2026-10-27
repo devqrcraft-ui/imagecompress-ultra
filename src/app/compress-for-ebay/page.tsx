@@ -31,7 +31,7 @@ export default function Page() {
 
       <article style={{ background: '#0e1424', color: '#e2e8f0', fontFamily: 'Inter,system-ui,sans-serif' }}>
         <div style={{ maxWidth: '820px', margin: '0 auto', padding: '42px 20px 18px' }}>
-          <nav style={{ fontSize: '14px', opacity: 0.45, marginBottom: '14px' }}>
+          <nav style={{ fontSize: '14px', opacity: 0.64, marginBottom: '14px' }}>
             <a href="/" style={{ color: '#7dd3fc', textDecoration: 'none' }}>Home</a> / Compress for eBay
           </nav>
           <h1 style={{ fontSize: 'clamp(23px,4vw,34px)', fontWeight: 800, margin: '0 0 12px', color: '#fff' }}>
@@ -64,7 +64,7 @@ export default function Page() {
               ))}
             </tbody>
           </table>
-          <p style={{ fontSize: '13px', lineHeight: 1.7, color: 'rgba(226,232,240,0.45)', marginTop: '10px' }}>
+          <p style={{ fontSize: '13px', lineHeight: 1.7, color: 'rgba(226,232,240,0.66)', marginTop: '10px' }}>
             The 500-pixel floor is eBay’s own listing rule —{' '}
             <a href="https://www.ebay.com/help/policies/listing-policies/picture-policy?id=4370" rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#7dd3fc' }}>Picture policy</a>
             {' '}(checked October 2026). The higher numbers are our recommendation for a good result, not platform rules.

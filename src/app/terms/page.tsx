@@ -11,13 +11,9 @@ export default function Terms() {
   return (
     <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Terms of Service","item":"https://www.compressto20kb.com/terms"}]}' }} />
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Home</Link>
-      </nav>
-      <div style={{ maxWidth: '760px', margin: '0 auto', padding: '48px 24px 60px', lineHeight: 1.8 }}>
+<div style={{ maxWidth: '760px', margin: '0 auto', padding: '48px 24px 60px', lineHeight: 1.8 }}>
         <h1 style={{ fontSize: '36px', fontWeight: 900, marginBottom: '8px' }}>Terms of Service</h1>
-        <p style={{ opacity: 0.45, fontSize:'15px', marginBottom: '40px' }}>Last updated: February 2025</p>
+        <p style={{ opacity: 0.64, fontSize:'15px', marginBottom: '40px' }}>Last updated: February 2025</p>
 
         <section style={{ marginBottom: '36px' }}>
           <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#a5b4fc', marginBottom: '12px' }}>1. Acceptance of Terms</h2>

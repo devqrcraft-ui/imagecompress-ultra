@@ -2,11 +2,12 @@
 import Link from 'next/link';
 import { faq } from './faq';
 
-const methods = [
-  { title: 'Use compressto20kb.com in Safari (recommended)', desc: 'Open Safari on your iPhone, go to compressto20kb.com, upload your photo from Camera Roll. The tool compresses it in Safari — nothing is uploaded anywhere. Download the compressed file directly to your iPhone.' },
-  { title: 'Use the Files app to check size first', desc: 'Before compressing, open the Files app, find your photo, press and hold → Get Info to see the current file size. This helps you know what target KB to aim for.' },
-  { title: 'Convert HEIC to JPEG while compressing', desc: 'iPhone saves photos in HEIC format by default. Our tool automatically converts HEIC to JPEG or WebP while compressing — no separate converter needed.' },
-  { title: 'Share directly after compressing', desc: 'After downloading the compressed image, tap the Share button in Safari Downloads to send it directly via email, iMessage, or upload to a portal — without going through Photos.' },
+const tips = [
+  { title: 'Use JPEG format', desc: 'JPEG is the most efficient format for reaching exact small sizes like 30KB. For a typical photo, JPEG at 60–70% quality usually lands near 30KB without visible degradation.' },
+  { title: 'Resize before compressing', desc: 'Reducing dimensions from 3000px to 800px can cut file size by 80% before any quality compression. Combine resize + compress for best results at 30KB.' },
+  { title: 'Use Target KB Mode', desc: 'Our tool has a dedicated "Target KB Mode" — just type 30 and click Compress. The algorithm automatically finds the right quality level to hit 30KB or under.' },
+  { title: 'Avoid PNG for small targets', desc: 'PNG is lossless and rarely compresses below 50KB for photos. Use JPEG or WebP when targeting 30KB or less.' },
+  { title: 'Check the preview before saving', desc: 'Use our Before/After comparison slider to verify quality is acceptable before downloading. At 30KB most portrait and document photos look clean.' },
 ];
 
 
@@ -18,7 +19,7 @@ const schemaData = {
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressto20kb.com"},
       {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.compressto20kb.com/blog"},
-      {"@type": "ListItem", "position": 3, "name": "compress image to 30kb", "item": "https://www.compressto20kb.com/blog/compress-image-to-30kb"}
+      {"@type": "ListItem", "position": 3, "name": "compress image without losing quality", "item": "https://www.compressto20kb.com/blog/compress-image-to-30kb"}
     ]
   }
 };
@@ -31,50 +32,40 @@ export default function ClientPage() {
 
 
       {/* NAV */}
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
-          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
-          <Link href="/bulk-image-compressor" style={{ color: 'white', textDecoration: 'none' }}>Bulk Compress</Link>
-          <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
-        </div>
-      </nav>
-
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
+<div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
 
         {/* BREADCRUMB */}
-        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
-          <Link href="/blog" style={{ color: '#818cf8', textDecoration: 'none' }}>Blog</Link> → Compress Images on iPhone
+        <div style={{ fontSize:'15px', opacity: 0.68, marginBottom: '12px' }}>
+          <Link href="/blog" style={{ color: '#c7d2fe', textDecoration: 'none' }}>Blog</Link> → Compress Image to 30KB
         </div>
 
         {/* HERO */}
         <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
-          How to Compress Images on <span style={{ color: '#818cf8' }}>iPhone</span> — Free, No App Needed
+          How to Compress an Image to <span style={{ color: '#818cf8' }}>30KB</span> Free Online
         </h1>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
-                <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}><p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p></div><div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}><img src="/images/blog/compress.svg" alt="compress image to 30kb — compressto20kb.com" width={800} height={420} style={{width:'100%',height:'auto',borderRadius:'8px',margin:'24px 0'}} loading="lazy" /><p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0}}>Key Takeaways</p><ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}><li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li><li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong></li><li>WebP saves <strong style={{color:'#fff'}}>25–50%</strong> vs JPEG at same quality</li><li>No file size limit, 100% free</li></ul></div>
-        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '8px' }}>
-          iPhone photos are typically 3–8MB each — too large for most forms, portals, and email attachments. Here's how to compress them instantly in Safari without installing any app.
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.68)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
+                <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}><p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p></div><div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}><img src="/images/blog/compress.svg" alt="compress image without losing quality — compressto20kb.com" width={800} height={420} style={{width:'100%',height:'auto',borderRadius:'8px',margin:'24px 0'}} loading="lazy" /><p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0}}>Key Takeaways</p><ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}><li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li><li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong></li><li>WebP saves <strong style={{color:'#fff'}}>25-50%</strong> vs JPEG at same quality</li><li>No file size limit, 100% free</li></ul></div>
+        <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>
+          Many job portals, HR systems, and government forms require profile photos or document images under 30KB. This guide shows you how to compress any image to 30KB or under — free, without uploading to any server.
         </p>
-        <div style={{ fontSize:'15px', opacity: 0.45, marginBottom: '32px' }}>Updated February 2026 · Works on iPhone iOS 15+</div>
 
-        {/* CTA */}
+        {/* CTA TOOL */}
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
-          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>📱 Compress iPhone Photos — Free in Safari</div>
-          <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>Supports HEIC, JPEG, PNG · No upload · No app needed · Works on all iPhones</p>
-          <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
-            ⚡ Open in Safari Now
+          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to 30KB or under — Free Tool</div>
+          <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>No upload. Files stay on your device. JPEG, PNG, WebP, HEIC supported.</p>
+          <Link href="/?mode=exactkb&target=30" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#6d28d9)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
+            ⚡ Open 30KB Compressor
           </Link>
         </div>
 
-        {/* QUICK STEPS */}
-        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Quick Steps (30 seconds)</h2>
+        {/* STEPS */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Step-by-Step: Compress to 30KB</h2>
         {[
-          { step: '1', title: 'Open Safari on your iPhone', desc: 'Go to compressto20kb.com in Safari. Tap the upload zone or the browse button.' },
-          { step: '2', title: 'Select photos from Camera Roll', desc: 'Tap "Photo Library" when the picker appears. Select one or multiple photos.' },
-          { step: '3', title: 'Choose your target size', desc: 'For government forms use 20KB. For email use 100–200KB. For general sharing use Quality Mode at 80%.' },
-          { step: '4', title: 'Tap Compress', desc: 'Processing happens instantly in Safari — no upload, no waiting.' },
-          { step: '5', title: 'Download or Share', desc: 'Tap Save to download to your Files app, or tap Share to send directly via email or iMessage.' },
+          { step: '1', title: 'Open the tool', desc: 'Click the button above or go to compressto20kb.com. No signup, no install.' },
+          { step: '2', title: 'Upload your image', desc: 'Drag and drop or click to select. Supports JPG, PNG, WebP, HEIC — up to 50 files at once.' },
+          { step: '3', title: 'Switch to Target KB Mode', desc: 'Click the "🎯 Target KB Mode" tab at the top of the tool.' },
+          { step: '4', title: 'Enter 30 in the target field', desc: 'Type 30 or click the custom field. The tool automatically finds the right compression level.' },
+          { step: '5', title: 'Click Compress and Download', desc: 'Your image is compressed to 30KB in seconds — right in your browser. Click Save to download.' },
         ].map(({ step, title, desc }) => (
           <div key={step} style={{ display: 'flex', gap: '16px', marginBottom: '16px', alignItems: 'flex-start' }}>
             <div style={{ background: 'rgba(129,140,248,0.2)', border: '1px solid rgba(129,140,248,0.4)', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '15px', flexShrink: 0 }}>{step}</div>
@@ -85,30 +76,31 @@ export default function ClientPage() {
           </div>
         ))}
 
-        {/* METHODS */}
-        <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '40px 0 16px' }}>Tips for Compressing on iPhone</h2>
+        {/* TIPS */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '40px 0 16px' }}>Tips for Best Quality at 30KB</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
-          {methods.map((m, i) => (
+          {tips.map((tip, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: '3px solid #818cf8' }}>
-              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>✓ {m.title}</div>
-              <div style={{ fontSize:'15px', opacity: 0.65 }}>{m.desc}</div>
+              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>✓ {tip.title}</div>
+              <div style={{ fontSize:'15px', opacity: 0.65 }}>{tip.desc}</div>
             </div>
           ))}
         </div>
 
-        {/* HEIC NOTE */}
-        <div style={{ background: 'rgba(34,211,238,0.08)', border: '1px solid rgba(34,211,238,0.25)', borderRadius: '12px', padding: '18px 20px', marginBottom: '40px' }}>
-          <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#22d3ee' }}>📌 About HEIC on iPhone</div>
-          <p style={{ fontSize:'15px', opacity: 0.75, margin: 0 }}>
-            iPhone cameras save photos in HEIC format to save storage space. Many websites, forms, and Windows PCs don't accept HEIC files. Our tool automatically converts HEIC to JPEG while compressing — so your photo becomes universally compatible in one step.
-          </p>
-        </div>
+        {/* USE CASES */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>When Do You Need a 30KB Image?</h2>
+        <p style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.7, marginBottom: '12px' }}>
+          30KB is a common file size limit for profile photos on job portals and HR systems in the USA. Common platforms and forms that require images under 30KB or close to it include Indeed profile photos, government employee portals, university application uploads, and some state DMV systems.
+        </p>
+        <p style={{ fontSize: '14px', lineHeight: 1.7, opacity: 0.7, marginBottom: '32px' }}>
+          For US government immigration forms, the limit is typically 20KB — use our <Link href="/" style={{ color: '#c7d2fe' }}>Gov 20KB preset</Link> for USCIS, DS-160, and passport applications. For forms allowing up to 50KB, see our <Link href="/compress-to-50kb" style={{ color: '#c7d2fe' }}>compress to 50KB tool</Link>.
+        </p>
 
         {/* FAQ */}
         <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
-          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#818cf8'}}>Google PageSpeed Insights</a>
+          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#c7d2fe'}}>Google PageSpeed Insights</a>
         </blockquote>
-        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — iPhone Image Compression</h2>
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — Compress Image to 30KB</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
           {faq.map((item, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
@@ -119,15 +111,15 @@ export default function ClientPage() {
         </div>
 
         {/* RELATED */}
-        <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Related Tools & Guides</h2>
+        <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '12px' }}>Related Tools</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '40px' }}>
           {[
-            { href: '/', label: '🎯 Compress to Target KB' },
+            { href: '/', label: '🪪 Compress to 20KB' },
             { href: '/compress-to-50kb', label: '📄 Compress to 50KB' },
+            { href: '/compress-to-100kb', label: '📁 Compress to 100KB' },
+            { href: '/compress-for-uscis', label: '🏛️ USCIS Photo Tool' },
             { href: '/compress-passport-photo', label: '🛂 Passport Photo' },
-            { href: '/compress-for-email', label: '📧 Compress for Email' },
-            { href: '/bulk-image-compressor', label: '📦 Bulk Compressor' },
-            { href: '/blog/best-image-compressor-for-mac', label: '📖 Best Compressor for Mac' },
+            { href: '/blog/compress-passport-photo-to-50kb', label: '📖 Passport to 50KB Guide' },
           ].map(({ href, label }) => (
             <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize:'15px', fontWeight: 600 }}>
               {label}

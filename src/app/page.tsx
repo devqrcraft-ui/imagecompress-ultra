@@ -39,6 +39,8 @@ export const metadata = {
   alternates: { canonical: 'https://www.compressto20kb.com' },
 };
 
+const HOWTO_SCHEMA = {"@context": "https://schema.org", "@type": "HowTo", "name": "How to compress an image to a target file size in your browser", "description": "Five steps to bring any JPG, PNG, WebP, AVIF or HEIC image under a kilobyte ceiling such as 20KB, without uploading the file to a server.", "totalTime": "PT30S", "tool": ["Any modern desktop or mobile browser"], "step": [{"@type": "HowToStep", "name": "Upload your image", "text": "Drag and drop or click the upload zone. Supports JPG, PNG, WebP, AVIF, HEIC."}, {"@type": "HowToStep", "name": "Switch to Target KB Mode", "text": "Click the \"Target KB Mode\" button in the tool."}, {"@type": "HowToStep", "name": "Set 20KB as your target", "text": "Click the \"20 KB\" preset button or type 20 in the custom field."}, {"@type": "HowToStep", "name": "Click Compress", "text": "The tool binary-searches for maximum quality safely under your target, entirely in your browser."}, {"@type": "HowToStep", "name": "Download your file", "text": "Click \"Save\" next to your compressed image. No upload, no watermark, no signup required."}]};
+
 export default function Page() {
   return (
     <>
@@ -46,7 +48,8 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
       />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"WebSite","name":"CompressTo20KB","url":"https://compressto20kb.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://compressto20kb.com/blog?q={search_term_string}"},"query-input":"required name=search_term_string"}}' }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"WebSite","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}' }} />
       <HomeClient />
       {/* AS-IS DISCLAIMER */}
       <div style={{background:'#0f0c29',borderTop:'1px solid rgba(255,255,255,0.06)',padding:'16px 20px',textAlign:'center' as const}}>
@@ -149,7 +152,7 @@ export default function Page() {
           ].map(([q, a], i) => (
             <details key={i} style={{borderBottom:'1px solid rgba(129,140,248,0.15)',padding:'14px 0'}}>
               <summary style={{fontWeight:600,fontSize:'16px',cursor:'pointer',color:'#c7d2fe',listStyle:'none',display:'flex',justifyContent:'space-between'}}>
-                {q} <span style={{opacity:0.5,marginLeft:'8px'}}>+</span>
+                {q} <span style={{opacity:0.68,marginLeft:'8px'}}>+</span>
               </summary>
               <p style={{marginTop:'10px',fontSize:'15px',lineHeight:1.7,opacity:0.85,paddingLeft:'4px'}}>{a}</p>
             </details>
@@ -160,15 +163,15 @@ export default function Page() {
         {/* POPULAR PRESETS */}
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 32px'}}>
           <h2 style={{fontSize:'20px',fontWeight:700,color:'#a5b4fc',marginBottom:'8px'}}>Popular Size Presets</h2>
-          <p style={{fontSize:'15px',opacity:0.6,marginBottom:'16px'}}>Pick a kilobyte ceiling and the tool searches for the best quality that stays under it</p>
+          <p style={{fontSize:'15px',opacity:0.72,marginBottom:'16px'}}>Pick a kilobyte ceiling and the tool searches for the best quality that stays under it</p>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(130px,1fr))',gap:'10px'}}>
             {[
               ['/compress-to-20kb','20 KB','Visa & ID forms'],
               ['/compress-to-50kb','50 KB','Signatures & icons'],
               ['/compress-to-100kb','100 KB','Email & web'],
-              ['/compress-to-200kb','200 KB','USCIS & gov portals'],
+              ['/compress-to-200kb','200 KB','Headroom under 240 KB'],
               ['/compress-to-500kb','500 KB','High-quality email'],
-              ['/compress-to-30kb','30 KB','DV Lottery & exams'],
+              ['/compress-to-30kb','30 KB','Tight exam-form ceilings'],
             ].map(([href, size, desc]) => (
               <a key={href} href={href} style={{display:'block',padding:'14px 12px',borderRadius:'12px',background:'rgba(129,140,248,0.07)',border:'1px solid rgba(129,140,248,0.18)',color:'#e2e8f0',textDecoration:'none',transition:'background 0.2s'}}>
                 <div style={{fontSize:'18px',fontWeight:800,color:'#818cf8',marginBottom:'4px'}}>{size}</div>
@@ -181,7 +184,7 @@ export default function Page() {
         {/* BY PLATFORM */}
         <section style={{maxWidth:'860px',margin:'0 auto',padding:'0 20px 56px'}}>
           <h2 style={{fontSize:'20px',fontWeight:700,color:'#a5b4fc',marginBottom:'8px'}}>Compress for Specific Platforms</h2>
-          <p style={{fontSize:'15px',opacity:0.6,marginBottom:'16px'}}>Each page has the exact size requirements for that platform</p>
+          <p style={{fontSize:'15px',opacity:0.72,marginBottom:'16px'}}>Each page separates what the platform publishes from what we recommend</p>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(150px,1fr))',gap:'10px'}}>
             {[
               ['/compress-for-email','✉️ Email','Gmail, Outlook, Yahoo'],
@@ -189,7 +192,7 @@ export default function Page() {
               ['/compress-for-instagram','📸 Instagram','Feed, Stories, Reels'],
               ['/compress-for-uscis','🇺🇸 USCIS','N-400, DS-160, I-485'],
               ['/compress-for-linkedin','💼 LinkedIn','Profile & cover photo'],
-              ['/compress-for-whatsapp','💬 WhatsApp','Under 16MB limit'],
+              ['/compress-for-whatsapp','💬 WhatsApp','Photos, docs, profile'],
               ['/compress-for-wordpress','📝 WordPress','Core Web Vitals'],
               ['/compress-for-zoom','📹 Zoom','Profile & backgrounds'],
               ['/compress-for-ebay','📦 eBay','Listing photos'],

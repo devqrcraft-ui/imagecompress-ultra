@@ -93,7 +93,7 @@ export default function Page() {
             <h3 style={{fontSize:'16px', color:'#c7d2fe'}}>My 50KB photo looks blurry — what do I do?</h3>
             <p style={{fontSize:'14px', opacity:0.8}}>Shoot the original in bright, even light at high resolution. A well-lit source photo compresses to 50KB much more cleanly than a dark one.</p>
           </div>
-          <p style={{fontSize:'12px', opacity:0.5, marginTop:'30px'}}>Requirements last checked against official sources: October 2026. Always confirm with the issuing authority before submitting.</p>
+          <p style={{fontSize:'12px', opacity:0.68, marginTop:'30px'}}>Requirements last checked against official sources: October 2026. Always confirm with the issuing authority before submitting.</p>
         </div>
       </div>
     </>

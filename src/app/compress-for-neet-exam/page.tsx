@@ -37,7 +37,7 @@ export default function Page() {
       <div style={{ background: '#0f0c29', color: '#e2e8f0', fontFamily: 'system-ui,sans-serif' }}>
 
         <section style={{ maxWidth: '860px', margin: '0 auto', padding: '48px 20px 20px' }}>
-          <div style={{ fontSize: '15px', opacity: 0.5, marginBottom: '12px' }}>
+          <div style={{ fontSize: '15px', opacity: 0.68, marginBottom: '12px' }}>
             <a href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</a> → Compress for NEET Exam
           </div>
           <h1 style={{ fontSize: 'clamp(22px,4vw,32px)', fontWeight: 800, color: '#ffffff', marginBottom: '16px' }}>
@@ -71,7 +71,7 @@ export default function Page() {
           <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.9, marginBottom: '4px' }}>
             The application also captures a <strong>live photograph</strong> while you fill the form — through your webcam, or by scanning a QR code with a mobile device if you have no camera. The uploaded photo and the live capture are then compared, so a “recent” photo of you specifically matters.
           </p>
-          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.55, marginTop: '12px' }}>
+          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.7, marginTop: '12px' }}>
             Source, checked October 2026:{' '}
             <a href="https://cdnbbsr.s3waas.gov.in/s37bc1ec1d9c3426357e69acd5bf320061/uploads/2026/02/202602231394640855.pdf" rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#a5b4fc' }}>Information Bulletin: NEET (UG)-2026 (official NTA PDF)</a>
             {' · '}listed on{' '}

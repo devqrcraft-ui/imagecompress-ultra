@@ -36,19 +36,11 @@ export default function ClientPage(){
       
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData.breadcrumb)}} />
 
-      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
-        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
-        <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>
-          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
-          <Link href="/compress-for-uscis" style={{color:'white',textDecoration:'none'}}>USCIS Tool</Link>
-        </div>
-      </nav>
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → USCIS Photo Compression Guide</div>
+<div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
+        <div style={{fontSize:'15px',opacity:0.68,marginBottom:'12px'}}><Link href="/blog" style={{color:'inherit',textDecoration:'none'}}>Blog</Link> → USCIS Photo Compression Guide</div>
         <div style={{display:'inline-block',background:'rgba(239,68,68,0.1)',border:'1px solid rgba(239,68,68,0.3)',borderRadius:'10px',padding:'6px 14px',fontSize:'12px',marginBottom:'16px',color:'#fca5a5'}}>🇺🇸 USCIS · Immigration Forms</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>How to Compress Image for USCIS<br/><span style={{color:'#818cf8'}}>N-400 · I-485 · DS-160 · US Passport</span></h1>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.68)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
                 <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}>
           <p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p>
         </div>
@@ -82,7 +74,7 @@ export default function ClientPage(){
             ))}</tbody>
           </table>
         </div>
-        <p style={{fontSize:'13px',opacity:0.55,marginTop:'-20px',marginBottom:'32px'}}>Note: the DS-160 is a State Department form filed at ceac.state.gov, not a USCIS form. When an online portal asks for a digital photo, it states its own limit on the upload screen — trust the screen.</p>
+        <p style={{fontSize:'13px',opacity:0.7,marginTop:'-20px',marginBottom:'32px'}}>Note: the DS-160 is a State Department form filed at ceac.state.gov, not a USCIS form. When an online portal asks for a digital photo, it states its own limit on the upload screen — trust the screen.</p>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Step-by-Step: Compress Photo for USCIS</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'12px',marginBottom:'36px'}}>
           {steps.map((s,i)=>(
@@ -93,7 +85,7 @@ export default function ClientPage(){
           ))}
         </div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'12px'}}>Compress Your USCIS Photo Now (Free)</h2>
-        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'20px'}}>Pre-set to 200KB JPEG, a comfortable margin under the 240KB ceiling the State Department publishes for DS-160 and DV Lottery uploads. USCIS does not publish that same digital-file limit, so treat this as our recommendation rather than a rule. private: the file is processed in your browser and never uploaded.</p>
+        <p style={{fontSize:'14px',opacity:0.72,marginBottom:'20px'}}>Pre-set to 200KB JPEG, a comfortable margin under the 240KB ceiling the State Department publishes for DS-160 and DV Lottery uploads. USCIS does not publish that same digital-file limit, so treat this as our recommendation rather than a rule. private: the file is processed in your browser and never uploaded.</p>
         <div style={{marginBottom:'40px'}}><CompressorWidget defaultMode="exactkb" defaultTargetKB={200} defaultFormat="jpeg"/></div>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Frequently Asked Questions</h2>
         {faq.map(([q, a], i)=>(
@@ -106,7 +98,7 @@ export default function ClientPage(){
           <p style={{fontWeight:700,marginBottom:'12px',fontSize:'14px'}}>Related guides:</p>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'15px'}}>
             {([['/compress-for-uscis','USCIS Photo Tool'],['/blog/how-to-compress-photo-for-ds160','DS-160 Guide'],['/blog/dv-lottery-photo-requirements','DV Lottery'],['/blog/image-size-requirements-for-green-card','Green Card']] as [string,string][]).map(([href,label])=>(
-              <Link key={href} href={href} style={{color:'#818cf8',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
+              <Link key={href} href={href} style={{color:'#c7d2fe',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>
         </div>

@@ -37,7 +37,7 @@ export default function Page() {
       <div style={{ background: '#0f0c29', color: '#e2e8f0', fontFamily: 'system-ui,sans-serif' }}>
 
         <section style={{ maxWidth: '860px', margin: '0 auto', padding: '48px 20px 20px' }}>
-          <div style={{ fontSize: '15px', opacity: 0.5, marginBottom: '12px' }}>
+          <div style={{ fontSize: '15px', opacity: 0.68, marginBottom: '12px' }}>
             <a href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</a> → Compress for UPSC Exam
           </div>
           <h1 style={{ fontSize: 'clamp(22px,4vw,32px)', fontWeight: 800, color: '#ffffff', marginBottom: '16px' }}>
@@ -93,7 +93,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.55, marginTop: '12px' }}>
+          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.7, marginTop: '12px' }}>
             Sources, checked October 2026:{' '}
             <a href="https://www.upsc.gov.in/sites/default/files/Notif-ESEP-2027-Engl-160926.pdf" rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#a5b4fc' }}>UPSC ESE 2027 notification (upsc.gov.in PDF)</a>
             {' · '}

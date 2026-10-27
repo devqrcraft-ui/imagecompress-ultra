@@ -55,12 +55,12 @@ export default function NoUploadPage() {
             <div key={title} style={{background:'rgba(16,185,129,0.06)',border:'1px solid rgba(16,185,129,0.2)',borderRadius:'12px',padding:'16px'}}>
               <div style={{fontSize:'24px',marginBottom:'8px'}}>{icon}</div>
               <div style={{fontWeight:700,fontSize:'14px',color:'#34d399',marginBottom:'6px'}}>{title}</div>
-              <div style={{fontSize:'12px',opacity:0.6,lineHeight:'1.6'}}>{desc}</div>
+              <div style={{fontSize:'12px',opacity:0.72,lineHeight:'1.6'}}>{desc}</div>
             </div>
           ))}
         </div>
         <div style={{textAlign:'center',marginBottom:'28px'}}>
-          <Link href="/" style={{display:'inline-block',padding:'14px 32px',borderRadius:'10px',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',fontWeight:800,fontSize:'15px',textDecoration:'none'}}>
+          <Link href="/" style={{display:'inline-block',padding:'14px 32px',borderRadius:'10px',background:'linear-gradient(135deg,#4f46e5,#6d28d9)',color:'white',fontWeight:800,fontSize:'15px',textDecoration:'none'}}>
             🔒 Open the No-Upload Compressor →
           </Link>
         </div>
@@ -76,7 +76,7 @@ export default function NoUploadPage() {
               <span style={{fontSize:'22px',flexShrink:0}}>{icon}</span>
               <div>
                 <div style={{fontWeight:700,fontSize:'14px',marginBottom:'3px'}}>{title}</div>
-                <div style={{fontSize:'12px',opacity:0.55}}>{desc}</div>
+                <div style={{fontSize:'12px',opacity:0.7}}>{desc}</div>
               </div>
             </div>
           ))}
@@ -85,7 +85,7 @@ export default function NoUploadPage() {
         {faq.map(([q,a])=>(
           <details key={q} style={{background:'rgba(255,255,255,0.04)',borderRadius:'10px',marginBottom:'8px',border:'1px solid rgba(255,255,255,0.07)',padding:'14px 16px'}}>
             <summary style={{fontWeight:600,fontSize:'14px',cursor:'pointer',listStyle:'none'}}>▶ {q}</summary>
-            <p style={{fontSize:'15px',opacity:0.6,marginTop:'10px',lineHeight:'1.7'}}>{a}</p>
+            <p style={{fontSize:'15px',opacity:0.72,marginTop:'10px',lineHeight:'1.7'}}>{a}</p>
           </details>
         ))}
         <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>

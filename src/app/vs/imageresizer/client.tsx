@@ -16,15 +16,8 @@ const faq = [
 export default function ClientPage() {
   return (
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
-      <nav style={{padding:'14px 24px',display:'flex',alignItems:'center',justifyContent:'space-between',borderBottom:'1px solid rgba(255,255,255,0.08)',background:'rgba(0,0,0,0.3)',position:'sticky',top:0,zIndex:100}}>
-        <Link href="/" style={{fontWeight:800,fontSize:'18px',color:'white',textDecoration:'none'}}>🗜️ Compress20KB</Link>
-        <div style={{display:'flex',gap:'16px',fontSize:'15px',opacity:0.75}}>
-          <Link href="/" style={{color:'white',textDecoration:'none'}}>Home</Link>
-          <Link href="/blog" style={{color:'white',textDecoration:'none'}}>Blog</Link>
-        </div>
-      </nav>
-      <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}>Comparison → CompressTo20KB vs ImageResizer</div>
+<div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
+        <div style={{fontSize:'15px',opacity:0.68,marginBottom:'12px'}}>Comparison → CompressTo20KB vs ImageResizer</div>
         <h1 style={{fontSize:'clamp(24px,4vw,40px)',fontWeight:900,margin:'0 0 16px',lineHeight:1.2}}>CompressTo20KB vs ImageResizer<br/><span style={{color:'#818cf8'}}>Better Free Alternative 2026</span></h1>
         <p style={{fontSize:'16px',opacity:0.65,marginBottom:'32px',lineHeight:1.7}}>ImageResizer focuses on dimensions. CompressTo20KB goes further — target KB sizes, bulk compression, AVIF/HEIC support, and 100% browser-based privacy.</p>
         <h2 style={{fontSize:'20px',fontWeight:800,marginBottom:'16px'}}>Feature Comparison</h2>
@@ -52,8 +45,8 @@ export default function ClientPage() {
         ))}
         <div style={{marginTop:'36px',padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'15px'}}>
-            {([['/vs/tinypng','vs TinyPNG'],['/vs/iloveimg','vs iLoveIMG'],['/vs/squoosh','vs Squoosh'],['/bulk-image-compressor','Bulk Compress']] as [string,string][]).map(([href,label])=>(
-              <Link key={href} href={href} style={{color:'#a5b4fc',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
+            {([['/vs/tinypng', 'vs TinyPNG'], ['/vs/squoosh', 'vs Squoosh'], ['/vs/iloveimg', 'vs iLoveIMG'], ['/vs/kraken', 'vs Kraken.io'], ['/vs/compressor-io', 'vs Compressor.io'], ['/vs/picresize', 'vs PicResize'], ['/bulk-image-compressor', 'Bulk Compressor']] as [string, string][]).map(([href,label])=>(
+              <Link key={href} href={href} style={{color:'#a5b4fc',textDecoration:'none',background:'rgba(99,102,241,0.1)',minHeight:'44px',padding:'8px 16px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>
         </div>

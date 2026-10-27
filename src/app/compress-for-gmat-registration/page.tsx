@@ -34,11 +34,7 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"GMAT Registration Photo","item":"https://www.compressto20kb.com/compress-for-gmat-registration"}]}' }} />
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '15px', opacity: 0.75 }}>← Home</Link>
-      </nav>
-      <div style={{ maxWidth: '780px', margin: '0 auto', padding: '44px 16px 24px' }}>
+<div style={{ maxWidth: '780px', margin: '0 auto', padding: '44px 16px 24px' }}>
         <h1 style={{ fontSize: 'clamp(25px,4vw,40px)', fontWeight: 900, lineHeight: 1.22, marginBottom: '16px' }}>
           The GMAT hands an ID to a person; it does not accept a photo file
         </h1>
@@ -65,7 +61,7 @@ export default function Page() {
         <h2 style={{ fontSize: '21px', fontWeight: 800, marginBottom: '12px' }}>Where a real upload limit does sit in a GMAT year</h2>
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', marginBottom: '32px' }}>
           <thead>
-            <tr style={{ textAlign: 'left', opacity: 0.55, textTransform: 'uppercase', letterSpacing: '0.6px', fontSize: '11px' }}>
+            <tr style={{ textAlign: 'left', opacity: 0.7, textTransform: 'uppercase', letterSpacing: '0.6px', fontSize: '11px' }}>
               <th style={{ padding: '8px 10px', borderBottom: '1px solid rgba(255,255,255,0.15)' }}>Upload you actually meet</th>
               <th style={{ padding: '8px 10px', borderBottom: '1px solid rgba(255,255,255,0.15)' }}>Whose number it is</th>
               <th style={{ padding: '8px 10px', borderBottom: '1px solid rgba(255,255,255,0.15)' }}>What to do</th>

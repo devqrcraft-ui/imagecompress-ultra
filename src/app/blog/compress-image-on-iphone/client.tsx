@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { faq } from './faq';
 
 const methods = [
-  { title: 'Browser-based tool (best option)', desc: 'Open Chrome or Edge on Windows 11, go to compressto20kb.com. Upload your image — it compresses locally in your browser. No software install, no upload to server, completely free.' },
-  { title: 'Windows built-in Paint (basic)', desc: 'Open Paint, load the image, go to File → Save As, choose JPEG, and adjust quality. This gives limited control — you cannot target an exact KB size, but it works for basic needs.' },
-  { title: 'Photos app resize (dimensions only)', desc: 'Open an image in the Windows 11 Photos app, click the three-dot menu → Resize. This only reduces dimensions, not compression quality — file size reduction is limited.' },
-  { title: 'Right-click Send To (email resize)', desc: 'Right-click an image in File Explorer → Send To → Mail recipient. Windows offers Small/Medium/Large resize options. This is very basic and does not allow target-KB precision.' },
+  { title: 'Use compressto20kb.com in Safari (recommended)', desc: 'Open Safari on your iPhone, go to compressto20kb.com, upload your photo from Camera Roll. The tool compresses it in Safari — nothing is uploaded anywhere. Download the compressed file directly to your iPhone.' },
+  { title: 'Use the Files app to check size first', desc: 'Before compressing, open the Files app, find your photo, press and hold → Get Info to see the current file size. This helps you know what target KB to aim for.' },
+  { title: 'Convert HEIC to JPEG while compressing', desc: 'iPhone saves photos in HEIC format by default. Our tool automatically converts HEIC to JPEG or WebP while compressing — no separate converter needed.' },
+  { title: 'Share directly after compressing', desc: 'After downloading the compressed image, tap the Share button in Safari Downloads to send it directly via email, iMessage, or upload to a portal — without going through Photos.' },
 ];
 
 
@@ -18,7 +18,7 @@ const schemaData = {
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.compressto20kb.com"},
       {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.compressto20kb.com/blog"},
-      {"@type": "ListItem", "position": 3, "name": "compress image on iphone", "item": "https://www.compressto20kb.com/blog/compress-image-on-iphone"}
+      {"@type": "ListItem", "position": 3, "name": "compress image to 30kb", "item": "https://www.compressto20kb.com/blog/compress-image-on-iphone"}
     ]
   }
 };
@@ -31,78 +31,41 @@ export default function ClientPage() {
 
 
       {/* NAV */}
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <div style={{ display: 'flex', gap: '16px', fontSize:'15px', opacity: 0.75 }}>
-          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>Home</Link>
-          <Link href="/bulk-image-compressor" style={{ color: 'white', textDecoration: 'none' }}>Bulk Compress</Link>
-          <Link href="/blog" style={{ color: 'white', textDecoration: 'none' }}>Blog</Link>
-        </div>
-      </nav>
-
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
+<div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
 
         {/* BREADCRUMB */}
-        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
-          <Link href="/blog" style={{ color: '#818cf8', textDecoration: 'none' }}>Blog</Link> → Compress Images on Windows 11
+        <div style={{ fontSize:'15px', opacity: 0.68, marginBottom: '12px' }}>
+          <Link href="/blog" style={{ color: '#c7d2fe', textDecoration: 'none' }}>Blog</Link> → Compress Images on iPhone
         </div>
 
         {/* HERO */}
         <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
-          How to Compress Images on <span style={{ color: '#818cf8' }}>Windows 11</span> — Free, No Software Install
+          How to Compress Images on <span style={{ color: '#818cf8' }}>iPhone</span> — Free, No App Needed
         </h1>
-        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.55)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
-                <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}><p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p></div><div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}><img src="/images/blog/compress.svg" alt="compress image on iphone — compressto20kb.com" width={800} height={420} style={{width:'100%',height:'auto',borderRadius:'8px',margin:'24px 0'}} loading="lazy" /><p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0}}>Key Takeaways</p><ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}><li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li><li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong></li><li>WebP saves <strong style={{color:'#fff'}}>25–50%</strong> vs JPEG at same quality</li><li>No file size limit, 100% free</li></ul></div>
+        <p style={{fontSize:'13px',color:'rgba(200,208,231,0.68)',marginBottom:'16px',marginTop:'4px'}}>Last updated May 2026 &nbsp;·&nbsp; By the CompressTo20KB Team &nbsp;·&nbsp; 5 min read</p>
+                <div className="answer-first" style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:'10px',padding:'16px 20px',marginBottom:'20px'}}><p style={{margin:0,fontSize:'15px',lineHeight:1.75,color:'#c8d0e7'}}><strong style={{color:'#818cf8'}}>Quick answer:</strong> Use our free compressor above — compress any image to your target size in seconds, directly in your browser. No upload, no account, no watermark. Supports JPEG, PNG, WebP, and AVIF.</p></div><div style={{background:'rgba(15,23,42,0.6)',border:'1px solid rgba(129,140,248,0.18)',borderRadius:'10px',padding:'16px 20px',marginBottom:'24px'}}><img src="/images/blog/compress.svg" alt="compress image to 30kb — compressto20kb.com" width={800} height={420} style={{width:'100%',height:'auto',borderRadius:'8px',margin:'24px 0'}} loading="lazy" /><p style={{fontSize:'13px',fontWeight:800,color:'#818cf8',marginBottom:'10px',marginTop:0}}>Key Takeaways</p><ul style={{margin:0,paddingLeft:'18px',color:'#c8d0e7',fontSize:'14px',lineHeight:1.85}}><li>All compression happens <strong style={{color:'#fff'}}>in your browser</strong> — images never leave your device</li><li>Supports <strong style={{color:'#fff'}}>JPEG, PNG, WebP, AVIF</strong></li><li>WebP saves <strong style={{color:'#fff'}}>25–50%</strong> vs JPEG at same quality</li><li>No file size limit, 100% free</li></ul></div>
         <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.7, marginBottom: '8px' }}>
-          Windows 11 has very limited built-in image compression tools. This guide covers the fastest methods to reduce image file size on any Windows PC — including a browser-based option that works in under 10 seconds without installing anything.
+          iPhone photos are typically 3–8MB each — too large for most forms, portals, and email attachments. Here's how to compress them instantly in Safari without installing any app.
         </p>
-        <div style={{ fontSize:'15px', opacity: 0.45, marginBottom: '32px' }}>Updated February 2026 · Works on Windows 10 and Windows 11</div>
+        <div style={{ fontSize:'15px', opacity: 0.64, marginBottom: '32px' }}>Updated February 2026 · Works on iPhone iOS 15+</div>
 
         {/* CTA */}
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
-          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>💻 Compress Images on Windows — Free in Chrome or Edge</div>
-          <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>No install · Target KB targeting · Bulk up to 50 images · private</p>
-          <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
-            ⚡ Open in Chrome / Edge
+          <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>📱 Compress iPhone Photos — Free in Safari</div>
+          <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>Supports HEIC, JPEG, PNG · No upload · No app needed · Works on all iPhones</p>
+          <Link href="/" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#6d28d9)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
+            ⚡ Open in Safari Now
           </Link>
         </div>
 
-        {/* COMPARISON TABLE */}
-        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Methods Compared</h2>
-        <div style={{ overflowX: 'auto', marginBottom: '40px' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize:'15px' }}>
-            <thead>
-              <tr style={{ background: 'rgba(129,140,248,0.15)' }}>
-                {['Method', 'Target KB?', 'Bulk?', 'Install needed?', 'Best for'].map((h) => (
-                  <th key={h} style={{ padding: '10px 14px', textAlign: 'left', borderBottom: '1px solid rgba(255,255,255,0.1)', fontWeight: 700 }}>{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ['compressto20kb.com', '✅ Yes', '✅ 50 files', '❌ No', 'All use cases'],
-                ['Windows Paint', '❌ No', '❌ No', '❌ Built-in', 'Basic JPEG save'],
-                ['Photos app', '❌ No', '❌ No', '❌ Built-in', 'Resize only'],
-                ['Send To Mail', '❌ No', '❌ No', '❌ Built-in', 'Email only'],
-              ].map((row, i) => (
-                <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)', background: i === 0 ? 'rgba(129,140,248,0.07)' : 'transparent' }}>
-                  {row.map((cell, j) => (
-                    <td key={j} style={{ padding: '10px 14px', opacity: j === 0 ? 1 : 0.75, fontWeight: j === 0 ? 700 : 400 }}>{cell}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        {/* STEPS */}
-        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Step-by-Step: Browser Method (Fastest)</h2>
+        {/* QUICK STEPS */}
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>Quick Steps (30 seconds)</h2>
         {[
-          { step: '1', title: 'Open Chrome or Edge', desc: 'Both browsers work. Go to compressto20kb.com — no login, no setup.' },
-          { step: '2', title: 'Drag images from File Explorer', desc: 'Open File Explorer, find your images, drag them directly into the browser tab. Or click to browse.' },
-          { step: '3', title: 'Select format and mode', desc: 'Choose JPEG or WebP for smallest size. Switch to "Target KB Mode" if you need a specific size like 100KB or 200KB.' },
-          { step: '4', title: 'Click Compress All', desc: 'Processing is instant — images are compressed in your browser, no upload needed.' },
-          { step: '5', title: 'Download as ZIP', desc: 'Click "ZIP All" to download all compressed images in one file. Open the ZIP directly in Windows 11 File Explorer — no WinZip needed.' },
+          { step: '1', title: 'Open Safari on your iPhone', desc: 'Go to compressto20kb.com in Safari. Tap the upload zone or the browse button.' },
+          { step: '2', title: 'Select photos from Camera Roll', desc: 'Tap "Photo Library" when the picker appears. Select one or multiple photos.' },
+          { step: '3', title: 'Choose your target size', desc: 'For government forms use 20KB. For email use 100–200KB. For general sharing use Quality Mode at 80%.' },
+          { step: '4', title: 'Tap Compress', desc: 'Processing happens instantly in Safari — no upload, no waiting.' },
+          { step: '5', title: 'Download or Share', desc: 'Tap Save to download to your Files app, or tap Share to send directly via email or iMessage.' },
         ].map(({ step, title, desc }) => (
           <div key={step} style={{ display: 'flex', gap: '16px', marginBottom: '16px', alignItems: 'flex-start' }}>
             <div style={{ background: 'rgba(129,140,248,0.2)', border: '1px solid rgba(129,140,248,0.4)', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '15px', flexShrink: 0 }}>{step}</div>
@@ -114,21 +77,29 @@ export default function ClientPage() {
         ))}
 
         {/* METHODS */}
-        <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '40px 0 16px' }}>All Windows 11 Compression Methods</h2>
+        <h2 style={{ fontSize: '22px', fontWeight: 700, margin: '40px 0 16px' }}>Tips for Compressing on iPhone</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
           {methods.map((m, i) => (
-            <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: `3px solid ${i === 0 ? '#22d3ee' : '#e2e8f0'}` }}>
-              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>{i === 0 ? '⭐ ' : ''}{m.title}</div>
+            <div key={i} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '10px', padding: '16px 20px', borderLeft: '3px solid #818cf8' }}>
+              <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>✓ {m.title}</div>
               <div style={{ fontSize:'15px', opacity: 0.65 }}>{m.desc}</div>
             </div>
           ))}
         </div>
 
+        {/* HEIC NOTE */}
+        <div style={{ background: 'rgba(34,211,238,0.08)', border: '1px solid rgba(34,211,238,0.25)', borderRadius: '12px', padding: '18px 20px', marginBottom: '40px' }}>
+          <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '6px', color: '#22d3ee' }}>📌 About HEIC on iPhone</div>
+          <p style={{ fontSize:'15px', opacity: 0.75, margin: 0 }}>
+            iPhone cameras save photos in HEIC format to save storage space. Many websites, forms, and Windows PCs don't accept HEIC files. Our tool automatically converts HEIC to JPEG while compressing — so your photo becomes universally compatible in one step.
+          </p>
+        </div>
+
         {/* FAQ */}
         <blockquote style={{borderLeft:'3px solid #818cf8',paddingLeft:'16px',margin:'24px 0',color:'rgba(200,208,231,0.75)',fontSize:'14px',fontStyle:'italic'}}>
-          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#818cf8'}}>Google PageSpeed Insights</a>
+          "Compress images to the smallest possible file size without sacrificing quality." — <a href="https://developers.google.com/speed/docs/insights/OptimizeImages" rel="nofollow" target="_blank" style={{color:'#c7d2fe'}}>Google PageSpeed Insights</a>
         </blockquote>
-        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — Compress Images on Windows 11</h2>
+        <h2 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '16px' }}>FAQ — iPhone Image Compression</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px' }}>
           {faq.map((item, i) => (
             <div key={i} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '16px 20px' }}>
@@ -143,11 +114,11 @@ export default function ClientPage() {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '40px' }}>
           {[
             { href: '/', label: '🎯 Compress to Target KB' },
+            { href: '/compress-to-50kb', label: '📄 Compress to 50KB' },
+            { href: '/compress-passport-photo', label: '🛂 Passport Photo' },
+            { href: '/compress-for-email', label: '📧 Compress for Email' },
             { href: '/bulk-image-compressor', label: '📦 Bulk Compressor' },
-            { href: '/compress-to-100kb', label: '📁 Compress to 100KB' },
-            { href: '/compress-to-200kb', label: '📁 Compress to 200KB' },
             { href: '/blog/best-image-compressor-for-mac', label: '📖 Best Compressor for Mac' },
-            { href: '/blog/webp-vs-jpeg-2026', label: '📖 WebP vs JPEG Guide' },
           ].map(({ href, label }) => (
             <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize:'15px', fontWeight: 600 }}>
               {label}

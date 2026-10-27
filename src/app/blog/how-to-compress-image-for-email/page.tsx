@@ -14,16 +14,16 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress Images for Email","item":"https://www.compressto20kb.com/blog/how-to-compress-image-for-email"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Email","description":"Compress images for email in seconds. Reduce JPG, PNG, WebP to under 1MB or 200KB without losing quality. Free, no upload, works in Gmail, Outlook, Yahoo.","url":"https://www.compressto20kb.com/blog/how-to-compress-image-for-email","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
-        <div style={{ fontSize: '13px', opacity: 0.5, marginBottom: '12px' }}>Blog &rarr; Email</div>
+        <div style={{ fontSize: '13px', opacity: 0.68, marginBottom: '12px' }}>Blog &rarr; Email</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>How to Compress Images for Email (Free, No Upload)</h1>
-        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
           <span>By the CompressTo20KB Team</span>
           <span>{'·'}</span>
           <span>{'~7 min read'}</span>
         </div>
-        <img src="/images/blog/email.svg" alt="compress images for email — compressto20kb.com" width={800} height={420} style={{width:"100%",height:"auto",borderRadius:"8px",margin:"24px 0"}} loading="lazy" /><p style={{ opacity: 0.5, fontSize:'15px', marginBottom: '32px' }}>May 2026 &middot; 5 min read</p>
+        <img src="/images/blog/email.svg" alt="compress images for email — compressto20kb.com" width={800} height={420} style={{width:"100%",height:"auto",borderRadius:"8px",margin:"24px 0"}} loading="lazy" /><p style={{ opacity: 0.68, fontSize:'15px', marginBottom: '32px' }}>May 2026 &middot; 5 min read</p>
         <p style={{ fontSize: '16px', lineHeight: 1.8, opacity: 0.8, marginBottom: '24px' }}>Images from modern phones are 3-8MB - too large for fast email delivery. Gmail caps attachments at 25MB and Outlook at 20MB, but even a 5MB photo causes slow loading on mobile. Compressing images to under 1MB before sending keeps your emails fast and professional.</p>
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>Recommended Image Sizes for Email</h2>
         <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)', borderRadius: '12px', padding: '16px 20px', margin: '16px 0 24px' }}>
@@ -36,7 +36,7 @@ export default function Page() {
         </div>
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>Step-by-Step: Compress Image for Email</h2>
         <ol style={{ paddingLeft: '20px', fontSize: '15px', lineHeight: 2.2, opacity: 0.8 }}>
-          <li>Go to <a href='https://www.compressto20kb.com/compress-for-email' style={{ color: '#818cf8' }}>compressto20kb.com/compress-for-email</a></li>
+          <li>Go to <a href='https://www.compressto20kb.com/compress-for-email' style={{ color: '#c7d2fe' }}>compressto20kb.com/compress-for-email</a></li>
           <li>Drop your JPG, PNG, WebP or HEIC image into the upload zone</li>
           <li>Select <strong>Quality Mode</strong> and set quality to 80%</li>
           <li>Choose <strong>JPEG</strong> as output format for best compatibility</li>
@@ -58,7 +58,7 @@ export default function Page() {
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>Why JPEG is Best for Email</h2>
         <p style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '16px' }}>JPEG compresses photos 60-80% smaller than PNG with barely visible quality loss at 80% quality. Every email client supports JPEG. PNG is better for logos and screenshots with text. For photos, always use JPEG for email.</p>
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>How to Compress Multiple Images for Email</h2>
-        <p style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '12px' }}>Use the <a href='https://www.compressto20kb.com/bulk-image-compressor' style={{ color: '#818cf8' }}>bulk image compressor</a> to compress up to 50 images at once and download as a ZIP. This is the fastest way to prepare multiple photos for a single email without going over the attachment limit.</p>
+        <p style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '12px' }}>Use the <a href='https://www.compressto20kb.com/bulk-image-compressor' style={{ color: '#c7d2fe' }}>bulk image compressor</a> to compress up to 50 images at once and download as a ZIP. This is the fastest way to prepare multiple photos for a single email without going over the attachment limit.</p>
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>FAQ</h2>
         <div style={{ marginBottom: '24px' }}>
           <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '16px', marginBottom: '16px' }}><div style={{ fontWeight: 700, fontSize: '16px', marginBottom: '6px', opacity: 0.95 }}>Q: What is the best image size for email attachments?</div><div style={{ fontSize: '14px', opacity: 0.8, lineHeight: 1.7 }}>Keep email image attachments under 1MB. Most email clients handle images under 1MB without issues. For inline newsletter images, aim for under 200KB per image.</div></div>
@@ -68,14 +68,14 @@ export default function Page() {
         </div>
         <div style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '12px', padding: '20px', margin: '32px 0', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', fontWeight: 700, marginBottom: '12px' }}>Compress your image for email now - free, private, instant</p>
-          <a href='https://www.compressto20kb.com/compress-for-email' style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#22d3ee)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Compress for Email Free</a>
+          <a href='https://www.compressto20kb.com/compress-for-email' style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#0e7490)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 700, textDecoration: 'none', fontSize: '14px' }}>Compress for Email Free</a>
         </div>
         <div style={{ marginTop: '40px', display: 'flex', gap: '10px', flexWrap: 'wrap', fontSize: '15px' }}>
-          <a href='/' style={{ color: '#818cf8', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Home</a>
-          <a href='/compress-for-email' style={{ color: '#818cf8', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Compress for Email</a>
-          <a href='/bulk-image-compressor' style={{ color: '#818cf8', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Bulk Compress</a>
-          <a href='/compress-to-1mb' style={{ color: '#818cf8', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Compress to 1MB</a>
-          <a href='/blog/reduce-image-size-for-email' style={{ color: '#818cf8', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Reduce Image Size for Email</a>
+          <a href='/' style={{ color: '#c7d2fe', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Home</a>
+          <a href='/compress-for-email' style={{ color: '#c7d2fe', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Compress for Email</a>
+          <a href='/bulk-image-compressor' style={{ color: '#c7d2fe', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Bulk Compress</a>
+          <a href='/compress-to-1mb' style={{ color: '#c7d2fe', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Compress to 1MB</a>
+          <a href='/blog/reduce-image-size-for-email' style={{ color: '#c7d2fe', textDecoration: 'none', background: 'rgba(99,102,241,0.1)', padding: '5px 12px', borderRadius: '20px', border: '1px solid rgba(99,102,241,0.2)' }}>Reduce Image Size for Email</a>
         </div>
       </div>
     </div>

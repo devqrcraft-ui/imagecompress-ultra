@@ -35,7 +35,7 @@ export default function CompressForIndeedPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Indeed photo sizes","item":"https://www.compressto20kb.com/compress-for-indeed"}]}' }} />
 
       <article style={{ maxWidth: '880px', margin: '0 auto', padding: '40px 18px 40px' }}>
-        <p style={{ fontSize: '14px', opacity: 0.5, marginBottom: '14px' }}>
+        <p style={{ fontSize: '14px', opacity: 0.68, marginBottom: '14px' }}>
           <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link> → Indeed
         </p>
         <h1 style={{ fontSize: 'clamp(25px,4.4vw,36px)', fontWeight: 900, lineHeight: 1.25, margin: '0 0 16px' }}>
@@ -58,11 +58,11 @@ export default function CompressForIndeedPage() {
           ].map(s => (
             <div key={s.l} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '14px', padding: '16px', textAlign: 'center' }}>
               <div style={{ fontWeight: 900, fontSize: '16px', color: s.c, marginBottom: '6px' }}>{s.v}</div>
-              <div style={{ fontSize: '13px', opacity: 0.6, lineHeight: 1.5 }}>{s.l}</div>
+              <div style={{ fontSize: '13px', opacity: 0.72, lineHeight: 1.5 }}>{s.l}</div>
             </div>
           ))}
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.55, lineHeight: 1.7, marginBottom: '26px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, marginBottom: '26px' }}>
           Sources, all checked October 2026: <a href="https://www.indeed.com/help/job-seekers/articles/27517857907853-uploading-a-profile-photo" target="_blank" rel="noopener noreferrer" style={{ color: '#5eead4' }}>Indeed Help — Uploading a Profile Photo</a> (&ldquo;Make sure the image is in JPG, PNG, or HEIC format&rdquo;, &ldquo;Files must be smaller than 30 MB&rdquo;); <a href="https://www.indeed.com/help/employers/articles/edit-company-page" target="_blank" rel="noopener noreferrer" style={{ color: '#5eead4' }}>Indeed Employer Help — Editing Your Company Page</a> (square logo, &ldquo;File format: JPEG&rdquo;, &ldquo;Recommended size: 256 × 256 pixels&rdquo;); <a href="https://www.indeed.com/help/employers/articles/what-are-employer-branding-ads" target="_blank" rel="noopener noreferrer" style={{ color: '#5eead4' }}>Indeed Employer Help — About Employer Branding Ads</a> (&ldquo;Header image (1400 x 400px)&rdquo;).
         </p>
 
@@ -73,7 +73,7 @@ export default function CompressForIndeedPage() {
         <p style={{ fontSize: '15px', lineHeight: 1.75, opacity: 0.85, marginBottom: '12px' }}>
           Meanwhile the document that actually carries your application has its own list, and it is not an image list. Indeed&rsquo;s instructions for adding a resume state that it supports .doc, .docx, .pdf, .txt and .rtf — so the headshot either lives in the profile photo field or sits embedded in the PDF you upload. And Indeed&rsquo;s own career-advice guidance on photos is that you add one when the application asks for it, which in most US hiring contexts it does not.
         </p>
-        <p style={{ fontSize: '13px', opacity: 0.55, lineHeight: 1.7, marginBottom: '26px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, marginBottom: '26px' }}>
           Sources: <a href="https://www.indeed.com/career-advice/resumes-cover-letters/how-to-upload-resume-to-indeed" target="_blank" rel="noopener noreferrer" style={{ color: '#5eead4' }}>Indeed Career Advice — How To Upload Your Resume to Indeed</a>, <a href="https://www.indeed.com/help/job-seekers/articles/25810344131597-why-was-my-profile-photo-removed" target="_blank" rel="noopener noreferrer" style={{ color: '#5eead4' }}>Indeed Help — Profile Photo Removal</a> and <a href="https://www.indeed.com/career-advice/resumes-cover-letters/should-i-put-my-picture-on-my-resume" target="_blank" rel="noopener noreferrer" style={{ color: '#5eead4' }}>Indeed Career Advice — Should I Put My Picture on My Resume?</a>, checked October 2026.
         </p>
 
@@ -151,7 +151,7 @@ export default function CompressForIndeedPage() {
             <Link key={l.href} href={l.href} style={{ background: 'rgba(255,255,255,0.07)', padding: '7px 13px', borderRadius: '8px', color: 'white', textDecoration: 'none' }}>{l.label}</Link>
           ))}
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.5, lineHeight: 1.7 }}>
+        <p style={{ fontSize: '13px', opacity: 0.68, lineHeight: 1.7 }}>
           This page is independent of Indeed — no affiliation, no endorsement, and no connection to your Indeed account. All encoding happens locally, so the only thing that changes is how heavy the file is when you upload it yourself.
         </p>
       </article>

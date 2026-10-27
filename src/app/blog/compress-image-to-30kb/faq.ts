@@ -1,8 +1,7 @@
 export const faq: { q: string; a: string }[] = [
-  { q: 'Do I need to install an app to compress photos on iPhone?', a: 'No — compressto20kb.com works fully in Safari on iPhone. No app download, no App Store, no signup required. It uses your browser to process images locally.' },
-  { q: 'Can I compress HEIC photos from my iPhone Camera Roll?', a: 'Yes — our tool supports HEIC and HEIF files natively. Your iPhone photos are automatically converted and compressed in one step.' },
-  { q: 'Will compressed photos be saved to my Camera Roll?', a: 'They will be saved to your iPhone Downloads folder via Safari. You can then move them to Photos if needed using the Files app.' },
-  { q: 'How do I compress a photo to send in an email on iPhone?', a: 'Open compressto20kb.com in Safari, upload the photo, set a target size (50KB–100KB works well for email), compress and download. Then attach the file from Downloads when composing your email.' },
-  { q: 'What is the best format for compressed iPhone photos?', a: 'JPEG is the most compatible for sharing and uploading. WebP is smaller but not accepted everywhere. Use JPEG when in doubt, especially for government forms or job portals.' },
-  { q: 'Can I compress multiple photos at once on iPhone?', a: 'Yes — tap and select up to 50 photos when uploading in Safari. Our bulk compressor processes all of them and lets you download as a ZIP file.' },
+  { q: 'Can I compress any image to 30KB or under?', a: 'Yes — our Target KB Mode aims at 30KB and returns a file at or under it. Very large or high-resolution images may need to be resized first, but the tool handles this automatically.' },
+  { q: 'Will the image look bad at 30KB?', a: 'For most document photos, ID photos, and form uploads, 30KB looks fine. For detailed product or landscape photos, 30KB may show slight compression — use the preview to judge.' },
+  { q: 'What formats can I compress to 30KB?', a: 'You can output as JPEG, WebP, PNG, or AVIF. For 30KB targets, JPEG and WebP give the best quality-to-size ratio.' },
+  { q: 'Why do some portals require 30KB or under?', a: 'Government and HR portals often set strict file size limits (20KB–50KB) to reduce server load and ensure fast uploads on slow connections. 30KB is a common limit for profile photos and document uploads.' },
+  { q: 'Is my photo uploaded to a server?', a: 'No — our tool runs entirely in your browser. Your image never leaves your device. This makes it safe for ID photos, passport photos, and sensitive documents.' },
 ];

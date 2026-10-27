@@ -31,7 +31,7 @@ export default function Page() {
 
       <div style={{ minHeight: '100vh', background: '#fffaf5', color: '#3d2c1e', fontFamily: 'ui-rounded,system-ui,sans-serif' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 22px 16px' }}>
-          <div style={{ fontSize: '14px', color: '#b08968', marginBottom: '14px' }}>
+          <div style={{ fontSize: '14px', color: '#7a5136', marginBottom: '14px' }}>
             <a href="/" style={{ color: '#c2410c', textDecoration: 'none', fontWeight: 600 }}>Home</a> → Compress for Etsy
           </div>
           <h1 style={{ fontSize: 'clamp(24px,4vw,36px)', fontWeight: 800, margin: '0 0 14px', color: '#2b1d12' }}>
@@ -67,7 +67,7 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <p style={{ fontSize: '13px', lineHeight: 1.7, color: '#a08b78', marginTop: '14px' }}>
+          <p style={{ fontSize: '13px', lineHeight: 1.7, color: '#6b5a4a', marginTop: '14px' }}>
             Etsy’s recommended minimum resolution is published at{' '}
             <a href="https://help.etsy.com/hc/en-us/articles/115015663347" rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#c2410c' }}>help.etsy.com — Requirements and Best Practices for Images</a>
             {' '}(checked October 2026). The kilobyte figures above are our suggestions for a fast listing page; Etsy does not publish a per-file limit to match.

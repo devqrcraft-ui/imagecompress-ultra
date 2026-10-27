@@ -1,7 +1,7 @@
 export const faq: { q: string; a: string }[] = [
-  { q: 'Can I compress any image to 30KB or under?', a: 'Yes — our Target KB Mode aims at 30KB and returns a file at or under it. Very large or high-resolution images may need to be resized first, but the tool handles this automatically.' },
-  { q: 'Will the image look bad at 30KB?', a: 'For most document photos, ID photos, and form uploads, 30KB looks fine. For detailed product or landscape photos, 30KB may show slight compression — use the preview to judge.' },
-  { q: 'What formats can I compress to 30KB?', a: 'You can output as JPEG, WebP, PNG, or AVIF. For 30KB targets, JPEG and WebP give the best quality-to-size ratio.' },
-  { q: 'Why do some portals require 30KB or under?', a: 'Government and HR portals often set strict file size limits (20KB–50KB) to reduce server load and ensure fast uploads on slow connections. 30KB is a common limit for profile photos and document uploads.' },
-  { q: 'Is my photo uploaded to a server?', a: 'No — our tool runs entirely in your browser. Your image never leaves your device. This makes it safe for ID photos, passport photos, and sensitive documents.' },
+  { q: 'Can I really compress an image without any quality loss?', a: 'True lossless compression exists (PNG, WebP lossless) but saves less space. In practice, "without losing quality" means compressing to the point where quality loss is invisible to the human eye — typically 75–85% JPEG or WebP quality.' },
+  { q: 'What format has the best quality-to-size ratio?', a: 'WebP and AVIF offer the best quality-to-size ratio in 2026. WebP is 25–35% smaller than JPEG at the same quality. AVIF is even smaller but has slightly less browser support.' },
+  { q: 'How much can I compress a JPEG without visible loss?', a: 'Most JPEG photos can be compressed to 60–80% quality without visible loss on standard screens. Below 50% you typically start seeing block artifacts. Use our preview slider to judge.' },
+  { q: 'Is PNG better than JPEG for quality?', a: 'PNG is lossless — it never degrades. But PNG files are much larger than JPEG for photographs. Use PNG for graphics, screenshots, and logos. Use JPEG or WebP for photos.' },
+  { q: 'What causes visible quality loss when compressing?', a: 'JPEG compression creates block artifacts (8x8 pixel squares) and banding in gradients. This becomes visible below ~50% quality. Using WebP instead of JPEG at the same file size typically looks noticeably better.' },
 ];

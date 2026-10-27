@@ -30,7 +30,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress US Passport Photo Free","item":"https://www.compressto20kb.com/compress-passport-photo-usa"}]}' }} />
       <article className="max-w-3xl mx-auto px-4 py-8 text-slate-100">
 
-        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
+        <div style={{ fontSize:'15px', opacity: 0.68, marginBottom: '12px' }}>
           <a href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</a> → US Passport Photo Compressor
         </div>
 
@@ -68,7 +68,7 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <p className="text-slate-500 text-xs mt-3">
+          <p className="text-slate-400 text-xs mt-3">
             Requirements as published by the U.S. State Department:{' '}
             <a href="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html" rel="nofollow noopener noreferrer" target="_blank" className="text-indigo-400 underline">travel.state.gov — Photo Requirements</a>
             {' '}(checked October 2026). This tool changes file size only — it cannot fix a photo taken against the wrong background or with the wrong head size.

@@ -52,13 +52,8 @@ export default function CompressTo240KBPage() {
         mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
       })}} />
 
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Home</Link>
-      </nav>
-
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
-        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
+<div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
+        <div style={{ fontSize:'15px', opacity: 0.68, marginBottom: '12px' }}>
           <Link href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</Link> {'→'} Compress to 240KB
         </div>
 
@@ -91,11 +86,11 @@ export default function CompressTo240KBPage() {
           </p>
           <a
             href="/?mode=exactkb&target=240"
-            style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '14px 32px', borderRadius: '100px', fontWeight: 800, fontSize: '15px', textDecoration: 'none' }}
+            style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#6d28d9)', color: 'white', padding: '14px 32px', borderRadius: '100px', fontWeight: 800, fontSize: '15px', textDecoration: 'none' }}
           >
             ⚡ Compress to 240KB Now — Free
           </a>
-          <div style={{ marginTop: '12px', fontSize: '13px', opacity: 0.5 }}>
+          <div style={{ marginTop: '12px', fontSize: '13px', opacity: 0.68 }}>
             Official DS-160 form: <a href="https://ceac.state.gov/genniv/" target="_blank" rel="noopener noreferrer" style={{ color: '#a5b4fc' }}>ceac.state.gov/genniv</a>
           </div>
         </div>

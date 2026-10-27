@@ -1,12 +1,12 @@
 "use client";
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { compressImage, compressToTargetKB, Format } from '@/utils/compressor';
 type Mode = 'quality' | 'exactkb';
 interface CompressorWidgetProps { defaultMode?: Mode; defaultTargetKB?: number; defaultFormat?: Format; defaultQuality?: number; }
 const FMTS: [Format, string, string][] = [['webp','WebP','70% smaller'],['avif','AVIF','Smallest'],['jpeg','JPEG','Compatible'],['png','PNG','Lossless']];
 function fmtSize(b: number) { if(b<1024)return b+' B'; if(b<1024*1024)return(b/1024).toFixed(1)+' KB'; return(b/(1024*1024)).toFixed(2)+' MB'; }
-type Img = { id:string;name:string;origSize:number;preview:string;file:File;status:'pending'|'processing'|'done'|'error';compSize?:number;saved?:number;outUrl?:string; };
-function getName(img:Img){const dot=img.name.lastIndexOf('.');const base=dot>0?img.name.slice(0,dot):img.name;return base+'-compressed.jpg';}
+type Img = { id:string;name:string;origSize:number;preview:string;file:File;status:'pending'|'processing'|'done'|'error';compSize?:number;saved?:number;outUrl?:string;outName?:string;prog?:number;plabel?:string;t0?:number;err?:string; };
+function getName(img:Img){return img.outName||img.name;}
 export default function CompressorWidget({defaultMode='quality',defaultTargetKB=20,defaultFormat='webp',defaultQuality=82}:CompressorWidgetProps){
   const [images,setImages]=useState<Img[]>([]);
   const [format,setFormat]=useState<Format>(defaultFormat);
@@ -15,20 +15,29 @@ export default function CompressorWidget({defaultMode='quality',defaultTargetKB=
   const [targetKB,setTargetKB]=useState(defaultTargetKB);
   const [drag,setDrag]=useState(false);
   const [proc,setProc]=useState(false);
+  const [clock,setClock]=useState(Date.now());
+  const [idx,setIdx]=useState(0);
+  const [tot,setTot]=useState(0);
   const ref=useRef<HTMLInputElement>(null);
+  useEffect(()=>{if(!proc)return;const id=setInterval(()=>setClock(Date.now()),400);return()=>clearInterval(id);},[proc]);
   const addFiles=useCallback((files:FileList|File[])=>{
     const arr=Array.from(files).filter(f=>f.type.startsWith('image/')||f.name.toLowerCase().endsWith('.heic')||f.name.toLowerCase().endsWith('.heif')).slice(0,50);
     setImages(p=>[...p,...arr.map(f=>({id:crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2),name:f.name,origSize:f.size,preview:URL.createObjectURL(f),file:f,status:'pending' as const}))]);
   },[]);
   const compressAll=async()=>{
     if(!images.length||proc)return; setProc(true);
-    for(const img of images){
-      if(img.status!=='pending')continue;
-      setImages(p=>p.map(i=>i.id===img.id?{...i,status:'processing'}:i));
+    const todo=images.filter(i=>i.status==='pending');
+    setTot(todo.length); let n=0;
+    for(const img of todo){
+      setIdx(n+1);
+      setImages(p=>p.map(i=>i.id===img.id?{...i,status:'processing',prog:0.05,plabel:'Starting…',t0:Date.now()}:i));
+      let last=0;
+      const onProgress=(f:number,l:string)=>{const now=performance.now();if(now-last<90&&f<1)return;last=now;setImages(p=>p.map(i=>i.id===img.id?{...i,prog:f,plabel:l}:i));};
       try{
-        const result=mode==='exactkb'?await compressToTargetKB(img.file,format,targetKB):await compressImage(img.file,format,quality/100);
-        setImages(p=>p.map(i=>i.id===img.id?{...i,status:'done',compSize:result.compressedSize,saved:result.savedPercent,outUrl:URL.createObjectURL(result.file)}:i));
-      }catch{setImages(p=>p.map(i=>i.id===img.id?{...i,status:'error'}:i));}
+        const result=mode==='exactkb'?await compressToTargetKB(img.file,format,targetKB,onProgress):await compressImage(img.file,format,quality/100,onProgress);
+        setImages(p=>p.map(i=>i.id===img.id?{...i,status:'done',prog:1,plabel:undefined,compSize:result.compressedSize,saved:result.savedPercent,outUrl:URL.createObjectURL(result.file),outName:result.file.name}:i));
+      }catch(e){setImages(p=>p.map(i=>i.id===img.id?{...i,status:'error',prog:undefined,plabel:undefined,err:e instanceof Error?e.message:'Failed'}:i));}
+      n++;
     }
     setProc(false);
   };
@@ -43,7 +52,7 @@ export default function CompressorWidget({defaultMode='quality',defaultTargetKB=
     <div style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.1)',borderRadius:'16px',padding:'20px'}}>
       <div style={{display:'flex',gap:'8px',marginBottom:'16px'}}>
         {(['quality','exactkb'] as Mode[]).map(m=>(
-          <button key={m} onClick={()=>setMode(m)} style={{padding:'8px 16px',borderRadius:'8px',border:'none',cursor:'pointer',fontWeight:700,fontSize:'13px',background:mode===m?'linear-gradient(135deg,#6366f1,#8b5cf6)':'rgba(255,255,255,0.06)',color:'white'}}>
+          <button key={m} onClick={()=>setMode(m)} style={{padding:'8px 16px',borderRadius:'8px',border:'none',cursor:'pointer',fontWeight:700,fontSize:'13px',background:mode===m?'linear-gradient(135deg,#4f46e5,#6d28d9)':'rgba(255,255,255,0.06)',color:'white'}}>
             {m==='quality'?'🎚️ Quality Mode':'🎯 Target KB Mode'}
           </button>
         ))}
@@ -80,8 +89,8 @@ export default function CompressorWidget({defaultMode='quality',defaultTargetKB=
             <span style={{fontSize:'13px',opacity:0.8}}>{images.length} image{images.length>1?'s':''}</span>
             <div style={{display:'flex',gap:'8px'}}>
               {done>0&&<button onClick={downloadZip} style={{padding:'7px 16px',borderRadius:'8px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.3)',color:'#34d399',fontSize:'13px',fontWeight:700,cursor:'pointer'}}>📦 ZIP All ({done})</button>}
-              <button onClick={compressAll} disabled={proc} style={{padding:'7px 20px',borderRadius:'8px',background:proc?'rgba(129,140,248,0.3)':'linear-gradient(135deg,#6366f1,#8b5cf6)',border:'none',color:'white',fontSize:'13px',fontWeight:700,cursor:proc?'not-allowed':'pointer'}}>
-                {proc?'⏳ Compressing...':'⚡ Compress All'}
+              <button onClick={compressAll} disabled={proc} style={{padding:'7px 20px',borderRadius:'8px',background:proc?'rgba(129,140,248,0.3)':'linear-gradient(135deg,#4f46e5,#6d28d9)',border:'none',color:'white',fontSize:'13px',fontWeight:700,cursor:proc?'not-allowed':'pointer'}}>
+                {proc?`⏳ Compressing ${idx} of ${tot}…`:'⚡ Compress All'}
               </button>
             </div>
           </div>
@@ -91,11 +100,19 @@ export default function CompressorWidget({defaultMode='quality',defaultTargetKB=
               <div style={{flex:1,minWidth:0}}>
                 <div style={{fontSize:'12px',fontWeight:600,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{img.name}</div>
                 <div style={{fontSize:'11px',opacity:0.7,marginTop:'2px'}}>{fmtSize(img.origSize)}{img.compSize&&<span style={{color:'#34d399'}}> → {fmtSize(img.compSize)} <span style={{fontWeight:700}}>(-{img.saved}%)</span></span>}</div>
+                {img.status==='processing'&&(<div style={{marginTop:'8px'}}>
+                  <div className="cmp-track"><div className="cmp-fill" style={{width:Math.max(4,Math.round((img.prog||0)*100))+'%'}}/><div className="cmp-shine"/></div>
+                  <div style={{display:'flex',alignItems:'center',gap:'8px',marginTop:'6px',fontSize:'11px',color:'#c7d2fe'}}>
+                    <span className="cmp-gear">⚙️</span>
+                    <span style={{fontWeight:700,fontVariantNumeric:'tabular-nums'}}>{Math.round((img.prog||0)*100)}%</span>
+                    <span style={{opacity:0.8,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{img.plabel||'Working…'}</span>
+                    <span style={{marginLeft:'auto',opacity:0.7,fontVariantNumeric:'tabular-nums',flexShrink:0}}>{img.t0?(Math.max(0, clock-img.t0)/1000).toFixed(1)+'s':''}</span>
+                  </div>
+                </div>)}
               </div>
               <div style={{flexShrink:0}}>
                 {img.status==='pending'&&<span style={{opacity:0.65,fontSize:'13px'}}>⏸️ Ready</span>}
-                {img.status==='processing'&&<span style={{color:'#fbbf24',fontSize:'13px'}}>⏳ Processing…</span>}
-                {img.status==='error'&&<span style={{color:'#f87171',fontSize:'13px'}}>❌ Error</span>}
+                {img.status==='error'&&<span style={{color:'#f87171',fontSize:'12px'}}>❌ {img.err||'Error'}</span>}
                 {img.status==='done'&&img.outUrl&&<a href={img.outUrl} download={getName(img)} style={{padding:'5px 12px',borderRadius:'7px',background:'rgba(16,185,129,0.2)',border:'1px solid rgba(16,185,129,0.35)',color:'#34d399',fontSize:'12px',fontWeight:700,textDecoration:'none'}}>⬇️ Save</a>}
               </div>
             </div>

@@ -283,15 +283,15 @@ function renderContent(content: string) {
     } else if (line.startsWith('### ')) {
       elements.push(<h3 key={i} style={{ fontSize: '17px', fontWeight: 700, margin: '24px 0 8px', color: '#c4b5fd' }}>{line.replace('### ', '')}</h3>);
     } else if (line.startsWith('- ')) {
-      elements.push(<li key={i} style={{ fontSize: '14px', opacity: 0.8, marginBottom: '6px', lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: line.replace('- ', '').replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>') }} />);
+      elements.push(<li key={i} style={{ fontSize: '14px', opacity: 0.92, marginBottom: '6px', lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: line.replace('- ', '').replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>') }} />);
     } else if (line.startsWith('|')) {
       // skip table lines for simplicity
     } else if (line.startsWith('1. ') || line.match(/^\d+\. /)) {
-      elements.push(<li key={i} style={{ fontSize: '14px', opacity: 0.8, marginBottom: '6px', lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: line.replace(/^\d+\. /, '').replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#818cf8">$1</a>') }} />);
+      elements.push(<li key={i} style={{ fontSize: '14px', opacity: 0.92, marginBottom: '6px', lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: line.replace(/^\d+\. /, '').replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#818cf8">$1</a>') }} />);
     } else if (line.trim() === '') {
       elements.push(<br key={i} />);
     } else {
-      elements.push(<p key={i} style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '12px' }} dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#818cf8">$1</a>') }} />);
+      elements.push(<p key={i} style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.92, marginBottom: '12px' }} dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, '<strong style="color:white">$1</strong>').replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#818cf8">$1</a>') }} />);
     }
     i++;
   }
@@ -305,18 +305,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f0c29,#302b63,#24243e)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/blog" style={{ color: 'white', textDecoration: 'none', fontSize:'15px', opacity: 0.75 }}>← Blog</Link>
-      </nav>
-      <div style={{ maxWidth: '760px', margin: '0 auto', padding: '48px 16px 24px' }}>
-        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
-          <Link href="/" style={{ color: '#818cf8', textDecoration: 'none' }}>Home</Link> {'→'}{' '}
-          <Link href="/blog" style={{ color: '#818cf8', textDecoration: 'none' }}>Blog</Link> {'→'} {post.tag}
+<div style={{ maxWidth: '760px', margin: '0 auto', padding: '48px 16px 24px' }}>
+        <div style={{ fontSize:'15px', opacity: 1, marginBottom: '12px' }}>
+          <Link href="/" style={{ color: '#c7d2fe', textDecoration: 'none' }}>Home</Link> {'→'}{' '}
+          <Link href="/blog" style={{ color: '#c7d2fe', textDecoration: 'none' }}>Blog</Link> {'→'} {post.tag}
         </div>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '16px' }}>
           <span style={{ background: 'rgba(129,140,248,0.2)', color: '#818cf8', fontSize: '13px', fontWeight: 700, padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
-          <span style={{ fontSize: '13px', opacity: 0.4 }}>{post.date}</span>
+          <span style={{ fontSize: '13px', opacity: 0.62 }}>{post.date}</span>
         </div>
         <h1 style={{ fontSize: 'clamp(24px,3.5vw,38px)', fontWeight: 900, lineHeight: 1.25, marginBottom: '24px' }}>{post.title}</h1>
         <div style={{ marginBottom: '40px' }}>
@@ -324,7 +320,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </div>
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
           <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Try Our Free Photo Compressor</div>
-          <a href="/?mode=exactkb&target=240" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
+          <a href="/?mode=exactkb&target=240" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#6d28d9)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
             ⚡ Compress Photo Now — Free
           </a>
         </div>

@@ -26,12 +26,12 @@ export default function USPSPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Compress Image for USPS","item":"https://www.compressto20kb.com/blog/compress-image-for-usps"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Compress Image for USPS","description":"USPS image requirements for Click-N-Ship, personalized stamps, and USPS.com. How to compress images to meet USPS size limits free online.","url":"https://www.compressto20kb.com/blog/compress-image-for-usps","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
-      <main className="max-w-3xl mx-auto px-4 py-16">
+      <main className="min-h-screen bg-[#0f0c29] text-slate-100 max-w-3xl mx-auto px-4 py-16">
         <nav className="text-sm text-slate-300 mb-8">
           <Link href="/" className="hover:underline">Home</Link> / <Link href="/blog" className="hover:underline">Blog</Link> / <span>Compress Image for USPS</span>
         </nav>
         <h1 className="text-4xl font-bold mb-4">Compress Image for USPS</h1>
-        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
           <span>By the CompressTo20KB Team</span>
@@ -39,7 +39,7 @@ export default function USPSPage() {
           <span>{'~7 min read'}</span>
         </div>
         <p className="text-slate-300 text-sm mb-8">Updated February 2026 · 4 min read</p>
-        <p className="text-lg text-gray-700 mb-8 leading-relaxed">Uploading images to USPS Click-N-Ship, ordering personalized stamps, or submitting through USPS.com — each has specific file size and format requirements. Here is what you need to know.</p>
+        <p className="text-lg text-slate-300 mb-8 leading-relaxed">Uploading images to USPS Click-N-Ship, ordering personalized stamps, or submitting through USPS.com — each has specific file size and format requirements. Here is what you need to know.</p>
 
         <section className="mb-10">
           <h2 className="text-2xl font-bold mb-4">USPS Image Requirements by Use Case</h2>
@@ -104,11 +104,11 @@ export default function USPSPage() {
 
         <div className="bg-blue-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-2xl font-bold mb-3">Compress Your USPS Image Free</h2>
-          <p className="text-blue-100 mb-6">Set any target KB size. No upload. Works on all devices.</p>
+          <p className="text-white mb-6">Set any target KB size. No upload. Works on all devices.</p>
           <Link href="/" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">Compress Image Free →</Link>
         </div>
         <div className="mt-8 text-sm text-slate-300">
-          Related: <Link href="/blog/image-size-for-amazon-product-listing" className="text-blue-600 hover:underline">Amazon Product Image Requirements</Link> · <Link href="/compress-for-shopify" className="text-blue-600 hover:underline">Compress for Shopify</Link>
+          Related: <Link href="/blog/image-size-for-amazon-product-listing" className="text-blue-300 hover:underline">Amazon Product Image Requirements</Link> · <Link href="/compress-for-shopify" className="text-blue-300 hover:underline">Compress for Shopify</Link>
         </div>
       </main>
       <AuthorBox />

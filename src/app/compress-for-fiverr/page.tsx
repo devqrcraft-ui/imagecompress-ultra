@@ -43,7 +43,7 @@ export default function CompressForFiverrPage() {
 
       <div style={{ minHeight: '100vh', background: '#0b1418', color: '#d6e6e2', fontFamily: 'system-ui,sans-serif' }}>
         <div style={{ maxWidth: '860px', margin: '0 auto', padding: '38px 20px 10px' }}>
-          <div style={{ fontSize: '14px', opacity: 0.5, marginBottom: '10px' }}>
+          <div style={{ fontSize: '14px', opacity: 1, marginBottom: '10px' }}>
             <Link href="/" style={{ color: '#3cb896', textDecoration: 'none', fontWeight: 600 }}>Home</Link> → <Link href="/blog" style={{ color: '#3cb896', textDecoration: 'none' }}>Blog</Link> → Fiverr Gig Images
           </div>
           <h1 style={{ fontSize: 'clamp(25px,4vw,36px)', fontWeight: 800, lineHeight: 1.22, margin: '0 0 14px', color: '#f2fbf8' }}>
@@ -81,7 +81,7 @@ export default function CompressForFiverrPage() {
                   <tr key={item} style={{ borderTop: '1px solid rgba(255,255,255,0.07)', verticalAlign: 'top' }}>
                     <td style={{ padding: '12px 14px', fontWeight: 700, color: '#eafaf4', whiteSpace: 'nowrap' }}>{item}</td>
                     <td style={{ padding: '12px 14px', opacity: 0.82, lineHeight: 1.7 }}>{quote}</td>
-                    <td style={{ padding: '12px 14px', opacity: 0.6, lineHeight: 1.6 }}>{source}</td>
+                    <td style={{ padding: '12px 14px', opacity: 0.72, lineHeight: 1.6 }}>{source}</td>
                   </tr>
                 ))}
               </tbody>

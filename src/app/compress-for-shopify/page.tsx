@@ -33,12 +33,12 @@ export default function Page() {
         <header style={{ borderBottom: '1px solid rgba(88,166,111,0.2)', padding: '16px 22px' }}>
           <div style={{ maxWidth: '840px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '14px' }}>
             <a href="/" style={{ color: '#7ee2a8', textDecoration: 'none', fontWeight: 700 }}>CompressTo20KB</a>
-            <span style={{ opacity: 0.5 }}>Shopify image preparation</span>
+            <span style={{ opacity: 0.68 }}>Shopify image preparation</span>
           </div>
         </header>
 
         <div style={{ maxWidth: '840px', margin: '0 auto', padding: '38px 22px 16px' }}>
-          <div style={{ fontSize: '14px', opacity: 0.45, marginBottom: '12px' }}>
+          <div style={{ fontSize: '14px', opacity: 0.64, marginBottom: '12px' }}>
             <a href="/" style={{ color: '#7ee2a8', textDecoration: 'none' }}>Home</a> → Compress for Shopify
           </div>
           <h1 style={{ fontSize: 'clamp(24px,4vw,35px)', fontWeight: 800, margin: '0 0 14px', color: '#fff' }}>
@@ -73,7 +73,7 @@ export default function Page() {
               <div style={{ fontSize: '15px', fontWeight: 700, color: '#7ee2a8' }}>{r.budget}</div>
             </div>
           ))}
-          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.5, marginTop: '12px' }}>
+          <p style={{ fontSize: '13px', lineHeight: 1.7, opacity: 0.68, marginTop: '12px' }}>
             Upload limit from{' '}
             <a href="https://help.shopify.com/en/manual/products/product-media/product-media-types" rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#7ee2a8' }}>help.shopify.com — Product media types</a>
             {' '}(checked October 2026). The resolution and budget rows are our recommendations; your theme’s actual output sizes differ, so check the storefront rather than trusting a table.

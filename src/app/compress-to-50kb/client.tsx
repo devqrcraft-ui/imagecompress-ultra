@@ -28,7 +28,7 @@ export default function ClientPage() {
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
 
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}>
+        <div style={{fontSize:'15px',opacity:0.68,marginBottom:'12px'}}>
           <Link href="/" style={{color:'#a5b4fc',textDecoration:'none'}}>Home</Link> → Compress to 50KB
         </div>
 
@@ -42,7 +42,7 @@ export default function ClientPage() {
         <div style={{background:'rgba(129,140,248,0.12)',border:'1px solid rgba(129,140,248,0.35)',borderRadius:'14px',padding:'24px',marginBottom:'40px',textAlign:'center' as const}}>
           <div style={{fontSize:'15px',fontWeight:700,marginBottom:'8px'}}>🎯 Compress to 50KB or under — Free</div>
           <p style={{fontSize:'15px',opacity:0.65,marginBottom:'16px'}}>No upload · Instant · JPEG, PNG, WebP, HEIC · Bulk up to 50 images</p>
-          <Link href="/?mode=exactkb&target=50" style={{display:'inline-block',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',padding:'12px 28px',borderRadius:'100px',fontWeight:800,fontSize:'14px',textDecoration:'none'}}>
+          <Link href="/?mode=exactkb&target=50" style={{display:'inline-block',background:'linear-gradient(135deg,#4f46e5,#6d28d9)',color:'white',padding:'12px 28px',borderRadius:'100px',fontWeight:800,fontSize:'14px',textDecoration:'none'}}>
             ⚡ Open 50KB Compressor
           </Link>
         </div>
@@ -54,7 +54,7 @@ export default function ClientPage() {
             <div key={i} style={{background:'rgba(255,255,255,0.05)',borderRadius:'12px',padding:'16px'}}>
               <div style={{fontSize:'24px',marginBottom:'8px'}}>{u.icon}</div>
               <div style={{fontWeight:700,fontSize:'15px',marginBottom:'4px'}}>{u.title}</div>
-              <div style={{fontSize:'12px',opacity:0.6,lineHeight:1.5}}>{u.desc}</div>
+              <div style={{fontSize:'12px',opacity:0.72,lineHeight:1.5}}>{u.desc}</div>
             </div>
           ))}
         </div>
@@ -63,7 +63,7 @@ export default function ClientPage() {
         <div style={{display:'flex',flexDirection:'column' as const,gap:'12px',marginBottom:'40px'}}>
           {steps.map(s=>(
             <div key={s.n} style={{display:'flex',gap:'16px',background:'rgba(255,255,255,0.05)',borderRadius:'12px',padding:'16px 20px'}}>
-              <div style={{flexShrink:0,width:'36px',height:'36px',borderRadius:'50%',background:'#6366f1',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:'16px'}}>{s.n}</div>
+              <div style={{flexShrink:0,width:'36px',height:'36px',borderRadius:'50%',background:'#4f46e5',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:'16px'}}>{s.n}</div>
               <div>
                 <div style={{fontWeight:700,fontSize:'14px',marginBottom:'4px'}}>{s.t}</div>
                 <div style={{fontSize:'15px',opacity:0.65,lineHeight:1.6}}>{s.d}</div>

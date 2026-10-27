@@ -32,13 +32,13 @@ export default function ImageSizeCheckerTool() {
     <>
       <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f172a,#1e1b4b)',color:'#c8d0e7',fontFamily:'system-ui,sans-serif',padding:'40px 20px'}}>
         <div style={{maxWidth:780,margin:'0 auto'}}>
-          <nav style={{fontSize:13,color:'rgba(255,255,255,0.4)',marginBottom:24}}>
-            <a href="/" style={{color:'rgba(255,255,255,0.4)',textDecoration:'none'}}>Home</a> › Image Size Checker
+          <nav style={{fontSize:13,color:'rgba(255,255,255,0.68)',marginBottom:24}}>
+            <a href="/" style={{color:'rgba(255,255,255,0.68)',textDecoration:'none'}}>Home</a> › Image Size Checker
           </nav>
           <h1 style={{fontSize:'clamp(24px,4vw,36px)',fontWeight:900,color:'#fff',marginBottom:8}}>
             Image Size Checker Online — Free
           </h1>
-          <div style={{fontSize:12,color:'rgba(255,255,255,0.4)',marginBottom:16}}>
+          <div style={{fontSize:12,color:'rgba(255,255,255,0.68)',marginBottom:16}}>
             Last updated: October 2026 · No upload · 100% browser-based
           </div>
           <div style={{background:'rgba(129,140,248,0.08)',border:'1px solid rgba(129,140,248,0.25)',borderRadius:8,padding:'16px 20px',marginBottom:24}}>
@@ -59,7 +59,7 @@ export default function ImageSizeCheckerTool() {
           >
             <div style={{fontSize:40,marginBottom:12}}>🖼️</div>
             <div style={{fontSize:16,fontWeight:700,color:'#818cf8',marginBottom:8}}>Drop images here or click to upload</div>
-            <div style={{fontSize:13,color:'rgba(255,255,255,0.4)'}}>JPEG, PNG, WebP, GIF, AVIF · as many files as you like</div>
+            <div style={{fontSize:13,color:'rgba(255,255,255,0.68)'}}>JPEG, PNG, WebP, GIF, AVIF · as many files as you like</div>
             <input id="file-input" type="file" multiple accept="image/*" style={{display:'none'}} onChange={e=>e.target.files && processFiles(e.target.files)} />
           </div>
           {results.length > 0 && (
@@ -81,7 +81,7 @@ export default function ImageSizeCheckerTool() {
                       <td style={{padding:'10px 14px',textAlign:'center',color:'#c8d0e7'}}>{r.w}px</td>
                       <td style={{padding:'10px 14px',textAlign:'center',color:'#c8d0e7'}}>{r.h}px</td>
                       <td style={{padding:'10px 14px',textAlign:'center',color:parseFloat(r.size)>200?'#f87171':'#4ade80'}}>{r.size} KB</td>
-                      <td style={{padding:'10px 14px',textAlign:'center',color:'rgba(255,255,255,0.5)',fontSize:12}}>{r.type.split('/')[1].toUpperCase()}</td>
+                      <td style={{padding:'10px 14px',textAlign:'center',color:'rgba(255,255,255,0.68)',fontSize:12}}>{r.type.split('/')[1].toUpperCase()}</td>
                     </tr>
                   ))}
                 </tbody>

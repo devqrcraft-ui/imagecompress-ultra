@@ -29,7 +29,7 @@ export default function EbayImageSizePage() {
     th: { background: '#1e1b4b', color: '#818cf8', padding: '10px 14px', textAlign: 'left' as const, fontWeight: 700, border: '1px solid #312e81' },
     td: { padding: '10px 14px', border: '1px solid #e2e8f0', color: '#c8d0e7', verticalAlign: 'top' as const },
     tdAlt: { padding: '10px 14px', border: '1px solid #e2e8f0', color: '#c8d0e7', verticalAlign: 'top' as const, background: '#0f0f1a' },
-    cta: { display: 'inline-block', background: '#818cf8', color: '#fff', padding: '14px 28px', borderRadius: 8, fontWeight: 800, fontSize: 16, textDecoration: 'none', margin: '8px 0' },
+    cta: { display: 'inline-block', background: '#4f46e5', color: '#fff', padding: '14px 28px', borderRadius: 8, fontWeight: 800, fontSize: 16, textDecoration: 'none', margin: '8px 0' },
     tip: { background: '#1e1b4b', border: '1px solid #818cf844', borderRadius: 10, padding: '16px 20px', margin: '20px 0' },
     tipTitle: { color: '#818cf8', fontWeight: 800, fontSize: 15, marginBottom: 6 },
   };
@@ -42,7 +42,7 @@ export default function EbayImageSizePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"eBay Image Size Requirements 2026: 1600px, 12MB, JPEG","description":"Compress your eBay photos for eBay 2026 specs — 1600px min for zoom, JPEG, under 12MB. Free tool, works in browser, no account needed.","url":"https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings","datePublished":"2026-01-01","dateModified":"2026-06-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
 
       <h1 style={s.h1}>Best Image Size for eBay Listings 2026</h1>
-        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
           <span>By the CompressTo20KB Team</span>
@@ -142,7 +142,7 @@ export default function EbayImageSizePage() {
             ['/compress-to-200kb', 'Compress to 200KB'],
             ['/compress-to-500kb', 'Compress to 500KB'],
           ].map(([href, label]) => (
-            <Link key={href} href={href} style={{ color: '#818cf8', fontSize: 14 }}>{label}</Link>
+            <Link key={href} href={href} style={{ color: '#c7d2fe', fontSize: 14 }}>{label}</Link>
           ))}
         </div>
       </div>

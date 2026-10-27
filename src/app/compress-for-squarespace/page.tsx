@@ -75,7 +75,7 @@ export default function Page() {
           ))}
         </div>
 
-        <p style={{ fontSize: '13px', opacity: 0.55, lineHeight: 1.7, marginBottom: '26px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, marginBottom: '26px' }}>
           Squarespace changes its image handling and storage limits over time, so check the current figures on{' '}
           <a href="https://www.squarespace.com/" target="_blank" rel="nofollow noopener noreferrer" style={{ color: '#a5b4fc' }}>squarespace.com</a>{' '}
           before you rebuild a site-wide image workflow. What this page controls is the file size going in.

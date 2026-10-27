@@ -65,7 +65,7 @@ export default function CompressForTwitterPage() {
 
       <div style={{ minHeight: '100vh', background: '#0b1119', color: '#dbe6f2', fontFamily: 'system-ui,sans-serif' }}>
         <div style={{ maxWidth: '840px', margin: '0 auto', padding: '36px 20px 10px' }}>
-          <div style={{ fontSize: '14px', opacity: 0.5, marginBottom: '10px' }}>
+          <div style={{ fontSize: '14px', opacity: 0.68, marginBottom: '10px' }}>
             <Link href="/" style={{ color: '#78c4f5', textDecoration: 'none', fontWeight: 600 }}>Home</Link> → Compress for Twitter / X
           </div>
           <div style={{ display: 'inline-block', background: 'rgba(29,155,240,0.12)', border: '1px solid rgba(29,155,240,0.4)', borderRadius: '999px', padding: '5px 14px', fontSize: '13px', color: '#78c4f5', marginBottom: '16px' }}>
@@ -107,10 +107,10 @@ export default function CompressForTwitterPage() {
                 </div>
               </dl>
               <p style={{ margin: 0, fontSize: '14.5px', lineHeight: 1.7, opacity: 0.66 }}>{s.note}</p>
-              <p style={{ margin: '7px 0 0', fontSize: '13.5px', opacity: 0.5 }}>{s.source} · checked October 2026</p>
+              <p style={{ margin: '7px 0 0', fontSize: '13.5px', opacity: 0.68 }}>{s.source} · checked October 2026</p>
             </div>
           ))}
-          <p style={{ fontSize: '14px', lineHeight: 1.75, opacity: 0.6, margin: '10px 0 0' }}>
+          <p style={{ fontSize: '14px', lineHeight: 1.75, opacity: 0.72, margin: '10px 0 0' }}>
             Where X publishes no figure, this page says so instead of borrowing a number from a third-party size guide.
           </p>
         </section>

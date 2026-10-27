@@ -35,7 +35,7 @@ export default function VsImageResizer() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <main className="max-w-4xl mx-auto px-4 py-16">
+      <main className="min-h-screen bg-white text-slate-900 max-w-4xl mx-auto px-4 py-16">
         <nav className="text-sm text-gray-500 mb-8">
           <Link href="/" className="hover:underline">Home</Link> / <span>vs ImageResizer</span>
         </nav>

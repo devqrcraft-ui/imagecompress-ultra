@@ -90,7 +90,7 @@ export default function Page() {
             <h3 style={{fontSize:'16px', color:'#c7d2fe'}}>Can I smile in a Portugal visa photo?</h3>
             <p style={{fontSize:'14px', opacity:0.8}}>No — a neutral expression with your mouth closed is required.</p>
           </div>
-          <p style={{fontSize:'12px', opacity:0.5, marginTop:'30px'}}>Requirements last checked against official sources: October 2026. Always confirm with the issuing authority before submitting.</p>
+          <p style={{fontSize:'12px', opacity:0.68, marginTop:'30px'}}>Requirements last checked against official sources: October 2026. Always confirm with the issuing authority before submitting.</p>
         </div>
       </div>
     </>

@@ -30,7 +30,7 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Compress Image to 500KB Free Online","item":"https://www.compressto20kb.com/compress-to-500kb"}]}' }} />
       <article className="max-w-3xl mx-auto px-4 py-8 text-slate-100">
 
-        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
+        <div style={{ fontSize:'15px', opacity: 0.68, marginBottom: '12px' }}>
           <a href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</a> → Compress to 500KB
         </div>
 

@@ -20,7 +20,7 @@ export default function ClientPage() {
   return (
       <div style={{ color: 'white', fontFamily: 'system-ui,sans-serif' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px 24px' }}>
-        <div style={{ fontSize:'15px', opacity: 0.5, marginBottom: '12px' }}>
+        <div style={{ fontSize:'15px', opacity: 0.68, marginBottom: '12px' }}>
           <Link href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</Link> → Compress to 100KB
         </div>
         <h1 style={{ fontSize: '32px', fontWeight: 800, lineHeight: 1.2, marginBottom: '12px' }}>
@@ -32,7 +32,7 @@ export default function ClientPage() {
         <div style={{ background: 'rgba(129,140,248,0.12)', border: '1px solid rgba(129,140,248,0.35)', borderRadius: '14px', padding: '24px', marginBottom: '40px', textAlign: 'center' }}>
           <div style={{ fontSize: '15px', fontWeight: 700, marginBottom: '8px' }}>🎯 Compress to 100KB or under — Free</div>
           <p style={{ fontSize:'15px', opacity: 0.65, marginBottom: '16px' }}>No upload · Instant · JPEG, PNG, WebP, HEIC · Bulk up to 50 images</p>
-          <Link href="/?mode=exactkb&target=100" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#6366f1,#8b5cf6)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
+          <Link href="/?mode=exactkb&target=100" style={{ display: 'inline-block', background: 'linear-gradient(135deg,#4f46e5,#6d28d9)', color: 'white', padding: '12px 28px', borderRadius: '100px', fontWeight: 800, fontSize: '14px', textDecoration: 'none' }}>
             ⚡ Open 100KB Compressor
           </Link>
         </div>
@@ -46,7 +46,7 @@ export default function ClientPage() {
             { icon: 'JO', title: 'Web Forms & Job Apps', desc: 'LinkedIn, Indeed, Workday profile photos work best under 100KB.' },
           ].map(({ icon, title, desc }) => (
             <div key={title} style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '16px', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#6366f1', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', fontSize: '13px', fontWeight: 700, color: '#fff' }}>{icon}</div>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#4f46e5', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '10px', fontSize: '13px', fontWeight: 700, color: '#fff' }}>{icon}</div>
               <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>{title}</div>
               <div style={{ fontSize:'15px', opacity: 0.65 }}>{desc}</div>
             </div>
@@ -68,9 +68,9 @@ export default function ClientPage() {
               <tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
                 <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Feature</th>
                 <th style={{padding:'10px 12px',color:'#818cf8',fontWeight:800}}>CompressTo20KB</th>
-                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>11zon</th>
-                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>Squoosh</th>
-                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.4)',fontWeight:600}}>TinyPNG</th>
+                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.68)',fontWeight:600}}>11zon</th>
+                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.68)',fontWeight:600}}>Squoosh</th>
+                <th style={{padding:'10px 12px',color:'rgba(255,255,255,0.68)',fontWeight:600}}>TinyPNG</th>
               </tr>
             </thead>
             <tbody>

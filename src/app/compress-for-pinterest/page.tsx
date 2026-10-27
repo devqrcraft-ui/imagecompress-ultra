@@ -91,7 +91,7 @@ export default function Page() {
       />
 
       <div style={{ maxWidth: '860px', margin: '0 auto', padding: '48px 20px 16px' }}>
-        <div style={{ fontSize: '15px', opacity: 0.5, marginBottom: '12px' }}>
+        <div style={{ fontSize: '15px', opacity: 1, marginBottom: '12px' }}>
           <a href="/" style={{ color: '#a5b4fc', textDecoration: 'none' }}>Home</a> → Compress for Pinterest
         </div>
 
@@ -155,11 +155,11 @@ export default function Page() {
             </tbody>
           </table>
         </div>
-        <p style={{ ...p, fontSize: '13px', opacity: 0.6, marginTop: '14px' }}>
+        <p style={{ ...p, fontSize: '13px', opacity: 0.72, marginTop: '14px' }}>
           Sources:{' '}
           {sources.map(([label, url], i) => (
             <span key={url}>
-              <a href={url} rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#818cf8', textDecoration: 'underline' }}>{label}</a>
+              <a href={url} rel="nofollow noopener noreferrer" target="_blank" style={{ color: '#c7d2fe', textDecoration: 'underline' }}>{label}</a>
               {i < sources.length - 1 ? ', ' : '. '}
             </span>
           ))}
@@ -233,7 +233,7 @@ export default function Page() {
             { n: '4', t: 'Check, then upload', d: 'Compare the preview against the original, download the file and post it to Pinterest. Nothing was sent to a server along the way.' },
           ].map((s) => (
             <div key={s.n} style={{ display: 'flex', gap: '16px', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '16px 20px' }}>
-              <div style={{ flexShrink: 0, width: '36px', height: '36px', borderRadius: '50%', background: '#e60023', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '16px' }}>{s.n}</div>
+              <div style={{ flexShrink: 0, width: '36px', height: '36px', borderRadius: '50%', background: '#c9102c', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '16px' }}>{s.n}</div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: '15px', marginBottom: '4px' }}>{s.t}</div>
                 <div style={{ fontSize: '15px', opacity: 0.7, lineHeight: 1.6 }}>{s.d}</div>

@@ -94,7 +94,7 @@ export default function Page() {
             ['4', 'Upload and measure the page', 'Put the files in the media library, then load a product page on a phone. If it still feels heavy, the next win is usually fewer gallery images, not smaller ones.'],
           ].map(([n, t, d]) => (
             <div key={n} style={{ display: 'flex', gap: '16px', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '16px 20px' }}>
-              <div style={{ flexShrink: 0, width: '34px', height: '34px', borderRadius: '50%', background: '#6366f1', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800 }}>{n}</div>
+              <div style={{ flexShrink: 0, width: '34px', height: '34px', borderRadius: '50%', background: '#4f46e5', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800 }}>{n}</div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: '14px', marginBottom: '4px' }}>{t}</div>
                 <div style={{ fontSize: '14px', opacity: 0.68, lineHeight: 1.6 }}>{d}</div>
@@ -113,7 +113,7 @@ export default function Page() {
           ))}
         </div>
 
-        <div style={{ fontSize: '13px', opacity: 0.55, lineHeight: 1.7, marginBottom: '30px' }}>
+        <div style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, marginBottom: '30px' }}>
           Platform-specific limits change with each WooCommerce, WordPress and theme release — read the current guidance on{' '}
           <a href="https://woocommerce.com/" target="_blank" rel="nofollow noopener noreferrer" style={{ color: '#a5b4fc' }}>woocommerce.com</a>
           {' '}and{' '}

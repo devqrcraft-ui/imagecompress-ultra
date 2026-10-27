@@ -56,7 +56,7 @@ export default function AboutPage() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Contact</h2>
-      <p className="mb-4">Have questions, feedback, or a feature request? We would love to hear from you. Visit our <a href="/contact" className="text-blue-600 underline">Contact page</a>.</p>
+      <p className="mb-4">Have questions, feedback, or a feature request? We would love to hear from you. Visit our <a href="/contact" className="text-blue-300 underline">Contact page</a>.</p>
     </main>
   );
 }

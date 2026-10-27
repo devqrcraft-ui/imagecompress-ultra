@@ -32,10 +32,10 @@ export default function Page() {
         itemType="https://schema.org/BlogPosting"
         style={{ maxWidth: 780, margin: '0 auto', padding: 'clamp(14px,4vw,28px)', minHeight: '100vh', color: '#c8d0e7', fontFamily: 'system-ui,sans-serif' }}
       >
-        <nav aria-label="breadcrumb" style={{ fontSize: 13, color: 'rgba(255,255,255,0.55)', marginBottom: 16 }}>
-          <a href="/" style={{ color: 'rgba(255,255,255,0.55)', textDecoration: 'none' }}>Home</a>
+        <nav aria-label="breadcrumb" style={{ fontSize: 13, color: 'rgba(255,255,255,0.68)', marginBottom: 16 }}>
+          <a href="/" style={{ color: 'rgba(255,255,255,0.68)', textDecoration: 'none' }}>Home</a>
           {' › '}
-          <a href="/blog" style={{ color: 'rgba(255,255,255,0.55)', textDecoration: 'none' }}>Blog</a>
+          <a href="/blog" style={{ color: 'rgba(255,255,255,0.68)', textDecoration: 'none' }}>Blog</a>
           {' › '}
           <span>Does Microsoft Teams Compress Images?</span>
         </nav>
@@ -44,7 +44,7 @@ export default function Page() {
           Does Microsoft Teams Compress Images? Yes — Here Is the Fix
         </h1>
 
-        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: May 2026</span>
           <span>·</span>
           <span>By the CompressTo20KB Team</span>
@@ -97,7 +97,7 @@ export default function Page() {
                 { label: 'JPEG vs PNG vs WebP: Which Format for Teams?', id: 'formats' },
                 { label: 'Frequently Asked Questions', id: 'faq' },
               ].map(({ label, id }) => (
-                <li key={id}><a href={'#' + id} style={{ color: '#818cf8', textDecoration: 'none' }}>{label}</a></li>
+                <li key={id}><a href={'#' + id} style={{ color: '#c7d2fe', textDecoration: 'none' }}>{label}</a></li>
               ))}
             </ol>
           </div>
@@ -121,7 +121,7 @@ export default function Page() {
           </p>
           <blockquote style={{ borderLeft: '3px solid rgba(129,140,248,0.5)', margin: '24px 0', padding: '12px 20px', background: 'rgba(129,140,248,0.04)', borderRadius: '0 6px 6px 0' }}>
             <p style={{ margin: 0, fontSize: 13, fontStyle: 'italic', color: 'rgba(200,208,231,0.75)', lineHeight: 1.7 }}>
-              {'Microsoft\'s Teams limits documentation lists file uploads up to 250 GB under SharePoint storage (checked October 2026). Inline chat previews, by contrast, are rendered at reduced resolution for performance — attaching the file is the way to preserve originals.'} — <a href="https://learn.microsoft.com/en-us/microsoftteams/limits-specifications-teams" rel="nofollow" target="_blank" style={{ color: '#818cf8' }}>Microsoft Teams limits and specifications</a>
+              {'Microsoft\'s Teams limits documentation lists file uploads up to 250 GB under SharePoint storage (checked October 2026). Inline chat previews, by contrast, are rendered at reduced resolution for performance — attaching the file is the way to preserve originals.'} — <a href="https://learn.microsoft.com/en-us/microsoftteams/limits-specifications-teams" rel="nofollow" target="_blank" style={{ color: '#c7d2fe' }}>Microsoft Teams limits and specifications</a>
             </p>
           </blockquote>
         </section>
@@ -191,7 +191,7 @@ export default function Page() {
             further, compress them yourself first. It runs entirely in your browser — no upload, no waiting on a server:
           </p>
           <ol style={{ paddingLeft: 20, marginBottom: 16, lineHeight: 1.9, fontSize: 14, color: 'rgba(200,208,231,0.9)' }}>
-            <li>Go to <a href="https://www.compressto20kb.com" style={{ color: '#818cf8', textDecoration: 'none' }}>compressto20kb.com</a> — no account or install required</li>
+            <li>Go to <a href="https://www.compressto20kb.com" style={{ color: '#c7d2fe', textDecoration: 'none' }}>compressto20kb.com</a> — no account or install required</li>
             <li>Add your image (JPEG, PNG, WebP, HEIC supported — up to 50 files at once)</li>
             <li>Either set a target size like <strong style={{ color: '#e8edf8' }}>300KB</strong> — the output lands at or under it — or raise the quality slider until the preview looks right</li>
             <li>Select <strong style={{ color: '#e8edf8' }}>JPEG</strong> as output format for smallest file size</li>
@@ -206,7 +206,7 @@ export default function Page() {
             </ul>
           </div>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(200,208,231,0.9)', marginBottom: 16 }}>
-            All compression happens in your browser — your images never leave your device. See also our guide on <a href="/blog/how-to-compress-image-for-email" style={{ color: '#818cf8', textDecoration: 'none' }}>compressing images for email</a>.
+            All compression happens in your browser — your images never leave your device. See also our guide on <a href="/blog/how-to-compress-image-for-email" style={{ color: '#c7d2fe', textDecoration: 'none' }}>compressing images for email</a>.
           </p>
         </section>
 
@@ -243,7 +243,7 @@ export default function Page() {
             <li><strong style={{ color: '#e8edf8' }}>Location on PC:</strong> {'C:\Users\[YourName]\AppData\Roaming\Microsoft\Teams\Backgrounds\Uploads'}</li>
           </ul>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(200,208,231,0.9)', marginBottom: 16 }}>
-            A 1920×1080px JPEG at 75% quality is typically 300–600KB — well under the 1MB limit. Use our <a href="/" style={{ color: '#818cf8', textDecoration: 'none' }}>free compressor</a> to hit that target in one click.
+            A 1920×1080px JPEG at 75% quality is typically 300–600KB — well under the 1MB limit. Use our <a href="/" style={{ color: '#c7d2fe', textDecoration: 'none' }}>free compressor</a> to hit that target in one click.
           </p>
         </section>
 
@@ -302,9 +302,9 @@ export default function Page() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: 12 }}>
             {[
               ['/blog/how-to-compress-image-for-email', 'Compress Images for Email', 'GUIDE'],
-              ['/blog/compress-png-to-20kb', 'Compress PNG to 20KB', 'TOOL'],
+              ['/compress-to-20kb', 'Compress to 20KB', 'TOOL'],
               ['/bulk-image-compressor', 'Bulk Image Compressor', 'TOOL'],
-              ['/blog/webp-vs-jpeg-which-is-better', 'WebP vs JPEG: Which Is Better?', 'GUIDE'],
+              ['/blog/webp-vs-jpeg-2026', 'WebP vs JPEG: Which Is Better?', 'GUIDE'],
             ].map(([href, title, tag]) => (
               <a key={href} href={href} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 6, padding: 16, textDecoration: 'none', display: 'block' }}>
                 <div style={{ fontSize: 10, color: '#818cf8', fontFamily: 'monospace', letterSpacing: '0.04em', marginBottom: 6 }}>{tag}</div>

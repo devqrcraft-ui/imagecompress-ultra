@@ -36,7 +36,7 @@ export default function CompressForWordpressPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"WordPress image sizes","item":"https://www.compressto20kb.com/compress-for-wordpress"}]}' }} />
 
       <article style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 18px 40px' }}>
-        <p style={{ fontSize: '14px', opacity: 0.5, marginBottom: '14px' }}>
+        <p style={{ fontSize: '14px', opacity: 0.68, marginBottom: '14px' }}>
           <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link> → WordPress
         </p>
         <h1 style={{ fontSize: 'clamp(26px,4.5vw,38px)', fontWeight: 900, lineHeight: 1.2, margin: '0 0 18px' }}>
@@ -64,7 +64,7 @@ export default function CompressForWordpressPage() {
           <p style={{ fontSize: '15px', lineHeight: 1.7, opacity: 0.88, margin: '0 0 8px' }}>
             Core&rsquo;s 5.3 development note introduced handling for big images: the default threshold is <strong>2560 px</strong>, filterable through <span style={code}>big_image_size_threshold</span>. An upload wider or taller than that is scaled down, and the scaled copy is what the sub-sizes are built from — while the original file stays on disk.
           </p>
-          <p style={{ fontSize: '13px', opacity: 0.6, margin: 0 }}>
+          <p style={{ fontSize: '13px', opacity: 0.72, margin: 0 }}>
             Source: <a href="https://make.wordpress.org/core/2019-10-09/introducing-handling-of-big-images-in-wordpress-5-3/" target="_blank" rel="noopener noreferrer" style={{ color: '#7dd3fc' }}>make.wordpress.org core dev note</a> and the <a href="https://developer.wordpress.org/reference/hooks/big_image_size_threshold/" target="_blank" rel="noopener noreferrer" style={{ color: '#7dd3fc' }}>hook reference</a>, checked October 2026.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function CompressForWordpressPage() {
         <p style={{ fontSize: '15px', lineHeight: 1.75, opacity: 0.85, marginBottom: '12px' }}>
           The Settings &rarr; Media screen, meanwhile, only lets you enter <em>maximum dimensions in pixels</em> for the sizes it generates, plus the upload-organising checkbox — there is no file-size field on it at all. Multisite adds a per-site network setting, and most managed hosts expose their own cap.
         </p>
-        <p style={{ fontSize: '13px', opacity: 0.58, lineHeight: 1.7, marginBottom: '28px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, marginBottom: '28px' }}>
           Sources: <a href="https://developer.wordpress.org/reference/functions/wp_max_upload_size/" target="_blank" rel="noopener noreferrer" style={{ color: '#7dd3fc' }}>wp_max_upload_size() reference</a> and <a href="https://wordpress.org/documentation/article/settings-media-screen/" target="_blank" rel="noopener noreferrer" style={{ color: '#7dd3fc' }}>the Media settings documentation</a>, checked October 2026. Take your real number from the footer of your own Add New Media screen.
         </p>
 
@@ -93,7 +93,7 @@ export default function CompressForWordpressPage() {
             </div>
           ))}
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.58, lineHeight: 1.7, marginBottom: '28px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, marginBottom: '28px' }}>
           Sources: <a href="https://make.wordpress.org/core/2021-06-07/wordpress-5-8-adds-webp-support/" target="_blank" rel="noopener noreferrer" style={{ color: '#7dd3fc' }}>WordPress 5.8 adds WebP support</a> and <a href="https://make.wordpress.org/core/2024-02-23/wordpress-6-5-adds-avif-support/" target="_blank" rel="noopener noreferrer" style={{ color: '#7dd3fc' }}>WordPress 6.5 adds AVIF support</a>, checked October 2026.
         </p>
 
@@ -185,7 +185,7 @@ export default function CompressForWordpressPage() {
             <Link key={l.href} href={l.href} style={{ background: 'rgba(255,255,255,0.07)', padding: '7px 13px', borderRadius: '8px', color: 'white', textDecoration: 'none' }}>{l.label}</Link>
           ))}
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.5, lineHeight: 1.7 }}>
+        <p style={{ fontSize: '13px', opacity: 0.68, lineHeight: 1.7 }}>
           Independent page by CompressTo20KB. WordPress is a trademark of its own owners; we are not affiliated with or endorsed by them, and this tool has no connection to your site — it prepares files on your device before you upload them yourself.
         </p>
       </article>

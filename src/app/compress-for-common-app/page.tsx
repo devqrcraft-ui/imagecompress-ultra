@@ -34,18 +34,14 @@ export default function Page() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Common App Photo and Portfolio Files","item":"https://www.compressto20kb.com/compress-for-common-app"}]}' }} />
-      <nav style={{ padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', background: 'rgba(0,0,0,0.3)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <Link href="/" style={{ fontWeight: 800, fontSize: '18px', color: 'white', textDecoration: 'none' }}>🗜️ Compress20KB</Link>
-        <Link href="/" style={{ color: 'white', textDecoration: 'none', fontSize: '15px', opacity: 0.75 }}>← Home</Link>
-      </nav>
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '44px 16px 24px' }}>
+<div style={{ maxWidth: '800px', margin: '0 auto', padding: '44px 16px 24px' }}>
         <h1 style={{ fontSize: 'clamp(25px,4vw,40px)', fontWeight: 900, lineHeight: 1.22, marginBottom: '16px' }}>
           There is no applicant photo in the Common App - but there are image files that need shrinking
         </h1>
         <p style={{ fontSize: '16px', lineHeight: 1.75, opacity: 0.8, marginBottom: '24px' }}>
           We searched commonapp.org in October 2026 for a portrait specification, including the first-year application guide and the help centre, and found none: nothing on those pages prints a photo size, a KB ceiling or a format list for a student picture. What an applicant does send as an image is a scanned school document or a SlideRoom portfolio piece, and only the second has a published limit.
         </p>
-        <p style={{ fontSize: '14px', opacity: 0.6, marginBottom: '32px', borderLeft: '3px solid #a78bfa', paddingLeft: '14px' }}>
+        <p style={{ fontSize: '14px', opacity: 0.72, marginBottom: '32px', borderLeft: '3px solid #a78bfa', paddingLeft: '14px' }}>
           Because the Common App itself publishes nothing, this page refuses to repeat the invented &ldquo;Common App photo size&rdquo; figures other sites rank on. Below is what can be sourced, and what to do instead.
         </p>
 
@@ -78,7 +74,7 @@ export default function Page() {
             </div>
           ))}
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.6, marginBottom: '30px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.72, marginBottom: '30px' }}>
           Source: the SlideRoom Applicant Help Centre at help.liaisonedu.com, which is also where the Common App help centre links for materials. Programmes can add their own instructions, and a departmental supplement outranks a general platform page.
         </p>
         <p style={{ fontSize: '15px', lineHeight: 1.75, opacity: 0.8, marginBottom: '32px' }}>

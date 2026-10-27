@@ -93,7 +93,7 @@ export default function Page() {
             <h3 style={{fontSize:'16px', color:'#c7d2fe'}}>What is the difference between PR and visa photos for Canada?</h3>
             <p style={{fontSize:'14px', opacity:0.8}}>Visa photos are 420×540px minimum; PR photos are 50×70mm with a strict head-size range and photographer requirements.</p>
           </div>
-          <p style={{fontSize:'12px', opacity:0.5, marginTop:'30px'}}>Requirements last checked against official sources: October 2026. Always confirm with the issuing authority before submitting.</p>
+          <p style={{fontSize:'12px', opacity:0.68, marginTop:'30px'}}>Requirements last checked against official sources: October 2026. Always confirm with the issuing authority before submitting.</p>
         </div>
       </div>
     </>

@@ -13,7 +13,7 @@ export default function MarqueeBanner() {
   const text = items.join('   •   ');
   return (
     <div style={{
-      background: 'linear-gradient(90deg, #6366f1, #8b5cf6)',
+      background: 'linear-gradient(90deg, #4f46e5, #6d28d9)',
       color: '#fff',
       padding: '8px 0',
       overflow: 'hidden',

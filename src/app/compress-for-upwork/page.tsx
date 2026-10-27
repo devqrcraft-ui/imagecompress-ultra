@@ -59,7 +59,7 @@ export default function CompressForUpworkPage() {
 
       <div style={{ minHeight: '100vh', background: '#0b120e', color: '#dbe8de', fontFamily: 'system-ui,sans-serif' }}>
         <div style={{ maxWidth: '840px', margin: '0 auto', padding: '36px 20px 10px' }}>
-          <div style={{ fontSize: '14px', opacity: 0.5, marginBottom: '10px' }}>
+          <div style={{ fontSize: '14px', opacity: 0.68, marginBottom: '10px' }}>
             <Link href="/" style={{ color: '#6fda44', textDecoration: 'none', fontWeight: 600 }}>Home</Link> → Compress for Upwork
           </div>
           <h1 style={{ fontSize: 'clamp(25px,4vw,35px)', fontWeight: 800, lineHeight: 1.22, margin: '0 0 14px', color: '#f2fbf3' }}>
@@ -87,11 +87,11 @@ export default function CompressForUpworkPage() {
                 <ul style={{ margin: '0 0 10px', paddingLeft: '18px', fontSize: '15px', lineHeight: 1.9, opacity: 0.85 }}>
                   {f.bullets.map((b) => <li key={b}>{b}</li>)}
                 </ul>
-                <p style={{ margin: 0, fontSize: '13px', opacity: 0.55, lineHeight: 1.6 }}>{f.src}</p>
+                <p style={{ margin: 0, fontSize: '13px', opacity: 0.7, lineHeight: 1.6 }}>{f.src}</p>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: '14px', lineHeight: 1.75, opacity: 0.6, margin: '12px 0 0' }}>
+          <p style={{ fontSize: '14px', lineHeight: 1.75, opacity: 0.72, margin: '12px 0 0' }}>
             Upwork publishes no WebP or AVIF requirement anywhere in the two pages cited here, so for a marketplace upload those two containers are a gamble — despite being available as output from this tool.
           </p>
         </section>

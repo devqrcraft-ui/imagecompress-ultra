@@ -1,5 +1,5 @@
 # CompressTo20KB
-> Free online image compressor. Compress JPEG, PNG, WebP, AVIF, HEIC to exact KB sizes — 20KB, 50KB, 100KB. No upload, 100% private. Specialized tools for visa photos, passport photos, and platform-specific compression (Shopify, Etsy, Amazon, LinkedIn, Instagram).
+> Free online image compressor that runs entirely in the browser: nothing is uploaded, no account, no watermark. Set a kilobyte ceiling (20KB, 50KB, 240KB, any number between 5KB and 5000KB) and the tool searches encoding quality until the file lands at or under it, then reports the exact output byte count. Handles JPEG, PNG, WebP, AVIF and HEIC, up to 50 files per batch. Every specification quoted on the site carries its official source and a checked date; where a platform publishes no limit, the page says so instead of inventing one.
 
 ## Core Tools
 - [Free image compressor — compress to any size, no upload required](https://www.compressto20kb.com/)
@@ -34,11 +34,9 @@
 - [Compress photos for green card application](https://www.compressto20kb.com/compress-for-green-card)
 - [Compress photos for Global Entry](https://www.compressto20kb.com/compress-for-global-entry)
 - [Compress photos for REAL ID](https://www.compressto20kb.com/compress-for-real-id)
-- [Compress photos for TSA PreCheck](https://www.compressto20kb.com/compress-for-global-entry)
 - [Compress photos for passport renewal](https://www.compressto20kb.com/compress-for-passport-renewal)
 - [Compress photos for Social Security](https://www.compressto20kb.com/compress-for-social-security)
 - [Compress photos for Form I-485](https://www.compressto20kb.com/compress-for-green-card)
-- [Compress photos for Form N-400](https://www.compressto20kb.com/compress-for-uscis-n400)
 - [Compress photos for F-1 student visa](https://www.compressto20kb.com/compress-for-f1-visa)
 - [Compress photos for DS-160 visa application](https://www.compressto20kb.com/compress-for-ds160)
 - [Compress photos for DV Lottery](https://www.compressto20kb.com/compress-for-dv-lottery)
@@ -65,7 +63,6 @@
 - [Compress images for Squarespace](https://www.compressto20kb.com/compress-for-squarespace)
 - [Compress images for Fiverr profile](https://www.compressto20kb.com/compress-for-fiverr)
 - [Compress images for Upwork profile](https://www.compressto20kb.com/compress-for-upwork)
-- [Compress Upwork profile photo](https://www.compressto20kb.com/compress-for-upwork)
 - [Compress images for Indeed](https://www.compressto20kb.com/compress-for-indeed)
 - [Compress images for Greenhouse ATS](https://www.compressto20kb.com/compress-for-greenhouse)
 - [Compress images for Workday](https://www.compressto20kb.com/compress-for-workday)
@@ -74,8 +71,8 @@
 - [Compress photos for Common App](https://www.compressto20kb.com/compress-for-common-app)
 
 ## Country Visa Photo Tools
-- [Schengen visa photo — 35x45mm under 500KB](https://www.compressto20kb.com/compress-for-schengen-visa)
-- [UK visa photo — 35x45mm under 500KB](https://www.compressto20kb.com/compress-for-uk-visa)
+- [Schengen visa photo — 35x45mm, size limits vary by country](https://www.compressto20kb.com/compress-for-schengen-visa)
+- [UK visa photo — 600x750px minimum, 50KB to 6MB](https://www.compressto20kb.com/compress-for-uk-visa)
 - [Canada visa photo requirements](https://www.compressto20kb.com/compress-for-canada-visa)
 - [Australia visa photo requirements](https://www.compressto20kb.com/compress-for-australia-visa)
 - [India visa photo requirements](https://www.compressto20kb.com/compress-for-india-visa)
@@ -86,11 +83,11 @@
 - [Italy visa photo requirements](https://www.compressto20kb.com/compress-for-italy-visa)
 
 ## Blog Articles
-- [Compress images for Microsoft Teams — under 500KB](https://www.compressto20kb.com/blog/compress-image-for-teams-meeting)
-- [LinkedIn profile photo — under 100KB at 400x400px](https://www.compressto20kb.com/blog/compress-image-for-linkedin-profile)
-- [Shopify product images — under 500KB](https://www.compressto20kb.com/blog/compress-image-for-shopify-product-page)
-- [Amazon product images — under 1MB](https://www.compressto20kb.com/blog/compress-images-for-amazon-seller)
-- [Etsy listing photos — under 1MB](https://www.compressto20kb.com/blog/compress-images-for-etsy-listings)
+- [Compress images for Microsoft Teams — our 500KB budget](https://www.compressto20kb.com/blog/compress-image-for-teams-meeting)
+- [LinkedIn profile photo — square crop, our 100KB budget](https://www.compressto20kb.com/blog/compress-image-for-linkedin-profile)
+- [Shopify product images — our recommended size budgets](https://www.compressto20kb.com/blog/compress-image-for-shopify-product-page)
+- [Amazon product images — resolution rules, our size budgets](https://www.compressto20kb.com/blog/compress-images-for-amazon-seller)
+- [Etsy listing photos — resolution rules, our size budgets](https://www.compressto20kb.com/blog/compress-images-for-etsy-listings)
 - [Shopify store images guide](https://www.compressto20kb.com/blog/compress-images-for-shopify-store)
 - [Google Forms image size limits](https://www.compressto20kb.com/blog/compress-image-for-google-forms)
 - [USPS shipping label image requirements](https://www.compressto20kb.com/blog/compress-image-for-usps)
@@ -103,12 +100,12 @@
 - [DS-160 visa photo requirements 2026](https://www.compressto20kb.com/blog/ds-160-photo-requirements)
 - [DV Lottery photo requirements 2026](https://www.compressto20kb.com/blog/dv-lottery-photo-requirements)
 - [H1B visa photo requirements 2026](https://www.compressto20kb.com/blog/h1b-visa-photo-requirements)
-- [Compress images for email — under 1MB](https://www.compressto20kb.com/blog/how-to-compress-image-for-email)
-- [USCIS photo requirements — under 240KB](https://www.compressto20kb.com/blog/how-to-compress-image-for-uscis)
+- [Compress images for email — attachment budgets that survive providers](https://www.compressto20kb.com/blog/how-to-compress-image-for-email)
+- [USCIS photo requirements — what is and is not published](https://www.compressto20kb.com/blog/how-to-compress-image-for-uscis)
 - [WooCommerce image optimization](https://www.compressto20kb.com/blog/how-to-compress-images-for-woocommerce)
 - [DS-160 photo compression guide](https://www.compressto20kb.com/blog/how-to-compress-photo-for-ds160)
 - [Green card photo size requirements](https://www.compressto20kb.com/blog/image-size-requirements-for-green-card)
-- [US passport photo requirements 2026 — 2x2 inches, under 240KB](https://www.compressto20kb.com/blog/us-passport-photo-requirements)
+- [US passport photo requirements 2026 — 2x2 inches, 240KB ceiling for digital uploads](https://www.compressto20kb.com/blog/us-passport-photo-requirements)
 - [USCIS photo size requirements 2026](https://www.compressto20kb.com/blog/uscis-photo-size-requirements)
 - [Image optimization guide 2026](https://www.compressto20kb.com/blog/image-optimization-2026)
 - [E-commerce image optimization guide](https://www.compressto20kb.com/blog/ecommerce-image-optimization)
@@ -122,3 +119,23 @@
 - [Reduce image size for email attachments](https://www.compressto20kb.com/blog/reduce-image-size-for-email)
 - [Reduce image size for US government forms](https://www.compressto20kb.com/blog/reduce-image-size-for-government-forms-usa)
 - [Amazon product image size guide](https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing)
+
+## Verified image size limits (with primary sources)
+
+Only figures an official publisher states. Checked October 2026. Anything not listed here, we do not claim.
+
+- **US digital visa photo (DS-160 and DV Lottery):** JPEG, 240KB or smaller, between 600x600 and 1200x1200 pixels — US Department of State, travel.state.gov
+- **UK visa or document photo (online):** at least 600px wide and 750px tall, between 50KB and 6MB, JPEG, vertical — gov.uk
+- **India e-Visa:** JPEG, square, minimum 10KB and maximum 300KB — indianvisaonline.gov.in
+- **NEET-UG photograph (India):** JPEG, 10KB to 200KB; postcard-size photograph 50KB to 300KB — nta.ac.in public notice
+- **UPSC online application photograph/signature:** 20KB to 300KB — upsconline.gov.in candidate FAQ
+- **SAT (College Board):** accepted formats are .jpg, .gif and .png; no file-size ceiling and no pixel box is published — satsuite.collegeboard.org
+- **GRE (ETS):** an original, physical, recent recognizable photograph is required for ID; ETS publishes no file-size specification — ets.org
+- **GMAT (GMAC):** identification is a physical original document; there is no applicant photo upload in registration — mba.com / support.mba.com
+- **Common App:** the application has no applicant photo field; the only published image ceiling we found is SlideRoom portfolios under 5MB — commonapp.org / liaison.edu
+
+A minimum matters as much as a maximum: several of these forms reject a file that is too small, and no compressor can make a file larger.
+
+## What this tool will not do
+
+It does not crop to a ratio, resize to a specific pixel box, replace or flatten a background, sharpen a soft image, preserve animation, or hit an exact byte count. It reduces quality until the file fits under your ceiling and reports the resulting byte count. Longest side is capped at 4096px.

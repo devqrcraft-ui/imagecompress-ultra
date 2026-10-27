@@ -66,11 +66,11 @@ export default function ImageSizeCheckerPage() {
               ))}
             </tbody>
           </table>
-          <p style={{ fontSize: 13, lineHeight: 1.7, opacity: 0.6, marginTop: 12 }}>
+          <p style={{ fontSize: 13, lineHeight: 1.7, opacity: 0.72, marginTop: 12 }}>
             Everything in the first three rows is our recommendation, not a published limit. Most platforms change their upload rules without announcing it, so read the instructions on the page you are uploading to and treat that as the authority.
           </p>
-          <p style={{ fontSize: 13, lineHeight: 1.7, opacity: 0.6, marginTop: 8 }}>
-            The last row is the only one taken from an official page: <a href="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos/digital-image-requirements.html" target="_blank" rel="nofollow noopener noreferrer" style={{ color: '#818cf8' }}>travel.state.gov — Digital Image Requirements</a> (square JPEG, 600×600 to 1200×1200 px, 240 KB or less — checked October 2026). The State Department revises it, so re-read it there before you rely on the numbers.
+          <p style={{ fontSize: 13, lineHeight: 1.7, opacity: 0.72, marginTop: 8 }}>
+            The last row is the only one taken from an official page: <a href="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos/digital-image-requirements.html" target="_blank" rel="nofollow noopener noreferrer" style={{ color: '#c7d2fe' }}>travel.state.gov — Digital Image Requirements</a> (square JPEG, 600×600 to 1200×1200 px, 240 KB or less — checked October 2026). The State Department revises it, so re-read it there before you rely on the numbers.
           </p>
 
           <h2 style={{ fontSize: 20, fontWeight: 800, color: '#fff', margin: '36px 0 16px' }}>Frequently Asked Questions</h2>

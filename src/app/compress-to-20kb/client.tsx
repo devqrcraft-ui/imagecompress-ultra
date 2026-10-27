@@ -41,7 +41,7 @@ export default function ClientPage() {
     <div style={{minHeight:'100vh',background:'linear-gradient(135deg,#0f0c29,#302b63,#24243e)',color:'white',fontFamily:'system-ui,sans-serif'}}>
 
       <div style={{maxWidth:'800px',margin:'0 auto',padding:'48px 16px 24px'}}>
-        <div style={{fontSize:'15px',opacity:0.5,marginBottom:'12px'}}>
+        <div style={{fontSize:'15px',opacity:0.68,marginBottom:'12px'}}>
           <Link href="/" style={{color:'#a5b4fc',textDecoration:'none'}}>Home</Link> → Compress to 20KB
         </div>
 
@@ -51,7 +51,7 @@ export default function ClientPage() {
         <p style={{fontSize:'15px',lineHeight:1.7,opacity:0.7,marginBottom:'8px'}}>
           Get any photo under a 20KB upload limit in a few seconds. The tool keeps the highest quality that still fits, so you get the sharpest file the limit allows — and your image never leaves the browser.
         </p>
-        <p style={{fontSize:'15px',opacity:0.5,marginBottom:'32px'}}>
+        <p style={{fontSize:'15px',opacity:0.68,marginBottom:'32px'}}>
           JPEG · PNG · WebP · HEIC (iPhone) · Batch up to 50 images · No signup, no watermark
         </p>
 
@@ -59,7 +59,7 @@ export default function ClientPage() {
         <div style={{background:'rgba(129,140,248,0.12)',border:'1px solid rgba(129,140,248,0.35)',borderRadius:'14px',padding:'24px',marginBottom:'40px',textAlign:'center' as const}}>
           <div style={{fontSize:'15px',fontWeight:700,marginBottom:'8px'}}>🎯 Target 20KB — Free, In Your Browser</div>
           <p style={{fontSize:'15px',opacity:0.65,marginBottom:'16px'}}>No upload · Instant · JPEG, PNG, WebP, HEIC · Up to 50 files at once</p>
-          <Link href="/?mode=exactkb&target=20" style={{display:'inline-block',background:'linear-gradient(135deg,#6366f1,#8b5cf6)',color:'white',padding:'12px 28px',borderRadius:'100px',fontWeight:800,fontSize:'14px',textDecoration:'none'}}>
+          <Link href="/?mode=exactkb&target=20" style={{display:'inline-block',background:'linear-gradient(135deg,#4f46e5,#6d28d9)',color:'white',padding:'12px 28px',borderRadius:'100px',fontWeight:800,fontSize:'14px',textDecoration:'none'}}>
             ⚡ Open the 20KB Compressor
           </Link>
         </div>
@@ -78,7 +78,7 @@ export default function ClientPage() {
 
         {/* LIMITS CHECKED */}
         <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'12px'}}>Photo Size Limits We Checked</h2>
-        <p style={{fontSize:'14px',opacity:0.6,marginBottom:'16px',lineHeight:1.6}}>
+        <p style={{fontSize:'14px',opacity:0.72,marginBottom:'16px',lineHeight:1.6}}>
           People reach for 20KB because it clears every cap in the table below with room to spare. None of these portals asks for 20KB specifically — the requirement is whatever their own spec page says, and specs change. Figures read from official sources in October 2026.
         </p>
         <div style={{overflowX:'auto',marginBottom:'12px'}}>
@@ -103,7 +103,7 @@ export default function ClientPage() {
             </tbody>
           </table>
         </div>
-        <p style={{fontSize:'13px',opacity:0.5,lineHeight:1.6,marginBottom:'40px'}}>
+        <p style={{fontSize:'13px',opacity:0.68,lineHeight:1.6,marginBottom:'40px'}}>
           A 20KB JPEG sits below all six limits, so it uploads even where the form is stricter than its own guidance. If the portal gives you a dimension as well as a size, do the resize first — compressing after a resize preserves far more detail than compressing a full-resolution frame down to 20KB.
         </p>
 
@@ -112,7 +112,7 @@ export default function ClientPage() {
         <div style={{display:'flex',flexDirection:'column' as const,gap:'12px',marginBottom:'40px'}}>
           {steps.map(s=>(
             <div key={s.n} style={{display:'flex',gap:'16px',background:'rgba(255,255,255,0.05)',borderRadius:'12px',padding:'16px 20px'}}>
-              <div style={{flexShrink:0,width:'36px',height:'36px',borderRadius:'50%',background:'#6366f1',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:'16px'}}>{s.n}</div>
+              <div style={{flexShrink:0,width:'36px',height:'36px',borderRadius:'50%',background:'#4f46e5',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:'16px'}}>{s.n}</div>
               <div>
                 <div style={{fontWeight:700,fontSize:'14px',marginBottom:'4px'}}>{s.t}</div>
                 <div style={{fontSize:'15px',opacity:0.65,lineHeight:1.6}}>{s.d}</div>

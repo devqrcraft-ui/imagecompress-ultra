@@ -26,12 +26,12 @@ export default function AmazonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"Amazon Product Image Size Requirements 2026","item":"https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Amazon Product Image Size Requirements 2026","description":"Amazon product image requirements: minimum 1000px, white background, JPEG format, under 10MB. How to compress and optimize Amazon listing images free.","url":"https://www.compressto20kb.com/blog/image-size-for-amazon-product-listing","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
-      <main className="max-w-3xl mx-auto px-4 py-16">
+      <main className="min-h-screen bg-[#0f0c29] text-slate-100 max-w-3xl mx-auto px-4 py-16">
         <nav className="text-sm text-slate-300 mb-8">
           <Link href="/" className="hover:underline">Home</Link> / <Link href="/blog" className="hover:underline">Blog</Link> / <span>Amazon Product Image Size</span>
         </nav>
         <h1 className="text-4xl font-bold mb-4">Amazon Product Image Size Requirements 2026</h1>
-        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
           <span>By the CompressTo20KB Team</span>
@@ -39,7 +39,7 @@ export default function AmazonPage() {
           <span>{'~7 min read'}</span>
         </div>
         <p className="text-slate-300 text-sm mb-8">Updated February 2026 · 6 min read</p>
-        <p className="text-lg text-gray-700 mb-8 leading-relaxed">Wrong image size or background on Amazon gets your listing suppressed. This guide covers every Amazon image spec and shows you how to optimize product photos free.</p>
+        <p className="text-lg text-slate-300 mb-8 leading-relaxed">Wrong image size or background on Amazon gets your listing suppressed. This guide covers every Amazon image spec and shows you how to optimize product photos free.</p>
 
         <section className="mb-10">
           <h2 className="text-2xl font-bold mb-4">Amazon Image Requirements Summary</h2>
@@ -66,9 +66,9 @@ export default function AmazonPage() {
         <section className="mb-10">
           <h2 className="text-2xl font-bold mb-4">Main Image vs Secondary Images</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="border border-gray-200 rounded-2xl p-5">
+            <div className="border border-white/15 rounded-2xl p-5">
               <h3 className="font-bold mb-3">📦 Main Image (MAIN)</h3>
-              <ul className="text-sm text-gray-700 space-y-2">
+              <ul className="text-sm text-slate-300 space-y-2">
                 <li>✅ Pure white background only</li>
                 <li>✅ Product fills ≥ 85% of frame</li>
                 <li>✅ No watermarks or text overlays</li>
@@ -76,9 +76,9 @@ export default function AmazonPage() {
                 <li>✅ JPEG recommended</li>
               </ul>
             </div>
-            <div className="border border-gray-200 rounded-2xl p-5">
+            <div className="border border-white/15 rounded-2xl p-5">
               <h3 className="font-bold mb-3">🖼️ Secondary Images</h3>
-              <ul className="text-sm text-gray-700 space-y-2">
+              <ul className="text-sm text-slate-300 space-y-2">
                 <li>✅ Any background allowed</li>
                 <li>✅ Lifestyle photos allowed</li>
                 <li>✅ Text overlays allowed</li>
@@ -117,7 +117,7 @@ export default function AmazonPage() {
               "Accessories not included in purchase shown in main image",
               "Promotional text like Sale or Free Shipping on main image",
             ].map(m => (
-              <div key={m} className="flex gap-3 text-sm text-gray-700"><span className="text-red-500 font-bold">✗</span><span>{m}</span></div>
+              <div key={m} className="flex gap-3 text-sm text-slate-300"><span className="text-red-500 font-bold">✗</span><span>{m}</span></div>
             ))}
           </div>
         </section>
@@ -140,11 +140,11 @@ export default function AmazonPage() {
 
         <div className="bg-blue-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-2xl font-bold mb-3">Optimize Amazon Product Images Free</h2>
-          <p className="text-blue-100 mb-6">Amazon preset included. Batch 50 images. No upload, no account.</p>
+          <p className="text-white mb-6">Amazon preset included. Batch 50 images. No upload, no account.</p>
           <Link href="/" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">Compress for Amazon Free →</Link>
         </div>
         <div className="mt-8 text-sm text-slate-300">
-          Related: <Link href="/compress-for-shopify" className="text-blue-600 hover:underline">Compress for Shopify</Link> · <Link href="/blog/compress-image-for-usps" className="text-blue-600 hover:underline">Compress Image for USPS</Link>
+          Related: <Link href="/compress-for-shopify" className="text-blue-300 hover:underline">Compress for Shopify</Link> · <Link href="/blog/compress-image-for-usps" className="text-blue-300 hover:underline">Compress Image for USPS</Link>
         </div>
       </main>
       <AuthorBox />

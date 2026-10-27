@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
 };
 
-const src = { fontSize: '13px', opacity: 0.55, marginTop: '8px', lineHeight: 1.6 } as const;
+const src = { fontSize: '13px', opacity: 0.7, marginTop: '8px', lineHeight: 1.6 } as const;
 
 export default function CompressForGoogleClassroomPage() {
   return (
@@ -36,7 +36,7 @@ export default function CompressForGoogleClassroomPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Google Classroom image sizes","item":"https://www.compressto20kb.com/compress-for-google-classroom"}]}' }} />
 
       <article style={{ maxWidth: '860px', margin: '0 auto', padding: '40px 18px 40px' }}>
-        <p style={{ fontSize: '14px', opacity: 0.5, marginBottom: '14px' }}>
+        <p style={{ fontSize: '14px', opacity: 0.68, marginBottom: '14px' }}>
           <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link> → Google Classroom
         </p>
         <h1 style={{ fontSize: 'clamp(26px,4.5vw,38px)', fontWeight: 900, lineHeight: 1.2, margin: '0 0 18px' }}>
@@ -111,7 +111,7 @@ export default function CompressForGoogleClassroomPage() {
             </div>
           ))}
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.55, lineHeight: 1.7, marginBottom: '28px' }}>
+        <p style={{ fontSize: '13px', opacity: 0.7, lineHeight: 1.7, marginBottom: '28px' }}>
           The tool caps the longest side at 4096 px while it works, so a very large master gets downscaled as well as re-encoded — but it will not resize to a dimension you name. Target-KB mode searches encoding quality and stops when the interval narrows, so the result comes back <strong>at or under</strong> the number you typed rather than a promised byte count.
         </p>
 
@@ -163,7 +163,7 @@ export default function CompressForGoogleClassroomPage() {
             <Link key={l.href} href={l.href} style={{ background: 'rgba(255,255,255,0.07)', padding: '7px 13px', borderRadius: '8px', color: 'white', textDecoration: 'none' }}>{l.label}</Link>
           ))}
         </div>
-        <p style={{ fontSize: '13px', opacity: 0.5, lineHeight: 1.7 }}>
+        <p style={{ fontSize: '13px', opacity: 0.68, lineHeight: 1.7 }}>
           This is an independent page by CompressTo20KB. Google Classroom is a Google service; we are not affiliated with, endorsed by or integrated with Google, and this tool works by preparing files on your device before you upload them yourself.
         </p>
       </article>

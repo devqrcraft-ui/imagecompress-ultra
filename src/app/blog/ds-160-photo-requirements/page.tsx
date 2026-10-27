@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function DS160PhotoRequirements() {
   return (
     <>
-      <main className="max-w-3xl mx-auto px-4 py-16">
+      <main className="min-h-screen bg-[#0f0c29] text-slate-100 max-w-3xl mx-auto px-4 py-16">
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds","item":"https://www.compressto20kb.com/blog/ds-160-photo-requirements"}]}' }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds","description":"Meet all DS-160 photo requirements instantly: 600x600px, JPEG, under 240KB. Free compression — works in browser, no upload, no account.","url":"https://www.compressto20kb.com/blog/ds-160-photo-requirements","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
@@ -27,7 +27,7 @@ export default function DS160PhotoRequirements() {
         🇺🇸 US Visa · DS-160 Guide
       </div>
       <h1 className="text-4xl font-bold mb-4">DS-160 Photo Requirements 2026 — Complete Guide</h1>
-        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
+        <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
           <span>Last updated: June 2026</span>
           <span>{'·'}</span>
           <span>By the CompressTo20KB Team</span>
@@ -102,7 +102,7 @@ export default function DS160PhotoRequirements() {
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Background, Lighting and Pose Requirements</h2>
       <p className="mb-4">The US State Department is very specific about photo composition:</p>
-      <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-800">
+      <ul className="list-disc pl-6 mb-6 space-y-2 text-slate-300">
         <li><strong>Background:</strong> Plain white or off-white. No patterns, shadows or other people.</li>
         <li><strong>Lighting:</strong> Even lighting, no harsh shadows on face or background.</li>
         <li><strong>Face:</strong> Full front view, looking directly at camera. Both ears should be visible.</li>
@@ -125,8 +125,8 @@ export default function DS160PhotoRequirements() {
           ['Shadows on face', 'Ensure even lighting from the front.'],
         ].map(([problem, fix]) => (
           <div key={problem} className="flex gap-3 p-3 bg-red-50 border border-red-100 rounded-lg">
-            <span className="text-red-500 font-bold text-sm min-w-[140px]">❌ {problem}</span>
-            <span className="text-slate-300 text-sm">{fix}</span>
+            <span className="text-red-700 font-bold text-sm min-w-[140px]">❌ {problem}</span>
+            <span className="text-slate-700 text-sm">{fix}</span>
           </div>
         ))}
       </div>
@@ -153,7 +153,7 @@ export default function DS160PhotoRequirements() {
       {/* CTA */}
       <div className="mt-12 p-6 bg-indigo-50 rounded-2xl border border-indigo-200">
         <h3 className="text-xl font-semibold mb-2">Compress your DS-160 photo now — free</h3>
-        <p className="text-slate-300 mb-4">
+        <p className="text-slate-700 mb-4">
           Reduce your photo to under 50KB instantly. Files never leave your device — private. No registration, no account needed.
         </p>
         <div className="flex gap-3 flex-wrap">
@@ -176,7 +176,7 @@ export default function DS160PhotoRequirements() {
             ['/compress-passport-photo', 'Passport Photo Compressor'],
             ['/blog/image-optimization-2026', 'Image Optimization 2026'],
           ].map(([href, label]) => (
-            <a key={href} href={href} className="text-sm text-indigo-600 hover:underline border border-indigo-200 px-3 py-1 rounded-lg">
+            <a key={href} href={href} className="text-sm text-indigo-300 hover:underline border border-indigo-400/40 px-3 py-1 rounded-lg">
               {label} →
             </a>
           ))}
@@ -185,18 +185,18 @@ export default function DS160PhotoRequirements() {
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>
         <h2 style={{fontSize:'20px',fontWeight:700,color:'white',marginBottom:'16px'}}>Related Articles</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
-        <a href='/blog/reduce-image-size-for-government-forms-usa' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/blog/reduce-image-size-for-government-forms-usa' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Reduce Image Size for US Government Forms
         </a>
-        <a href='/blog/uscis-photo-size-requirements' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/blog/uscis-photo-size-requirements' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → USCIS Photo Size Requirements
         </a>
-        <a href='/blog/compress-jpeg-under-1mb' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#818cf8',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/blog/compress-jpeg-under-1mb' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Compress JPEG Under 1MB
         </a>
         </div>
         <div style={{marginTop:'24px',textAlign:'center'}}>
-          <a href='/' style={{display:'inline-block',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#818cf8',padding:'10px 24px',borderRadius:'8px',textDecoration:'none',fontWeight:600,fontSize:'14px'}}>
+          <a href='/' style={{display:'inline-block',background:'rgba(99,102,241,0.15)',border:'1px solid rgba(99,102,241,0.4)',color:'#c7d2fe',padding:'10px 24px',borderRadius:'8px',textDecoration:'none',fontWeight:600,fontSize:'14px'}}>
             ← Back to Image Compressor
           </a>
         </div>
