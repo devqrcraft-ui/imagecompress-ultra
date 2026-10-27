@@ -5,7 +5,7 @@ type Mode = 'quality' | 'exactkb';
 interface CompressorWidgetProps { defaultMode?: Mode; defaultTargetKB?: number; defaultFormat?: Format; defaultQuality?: number; }
 const FMTS: [Format, string, string][] = [['webp','WebP','70% smaller'],['avif','AVIF','Smallest'],['jpeg','JPEG','Compatible'],['png','PNG','Lossless']];
 function fmtSize(b: number) { if(b<1024)return b+' B'; if(b<1024*1024)return(b/1024).toFixed(1)+' KB'; return(b/(1024*1024)).toFixed(2)+' MB'; }
-type Img = { id:string;name:string;origSize:number;preview:string;file:File;status:'pending'|'processing'|'done'|'error';compSize?:number;saved?:number;outUrl?:string;outName?:string;prog?:number;plabel?:string;t0?:number;err?:string; };
+type Img = { id:string;name:string;origSize:number;preview:string;file:File;status:'pending'|'processing'|'done'|'error';compSize?:number;saved?:number;outUrl?:string;outName?:string;outBlob?:Blob;prog?:number;plabel?:string;t0?:number;err?:string; };
 function getName(img:Img){return img.outName||img.name;}
 const nextPaint=()=>new Promise<void>(resolve=>{if(document.visibilityState!=='visible'){resolve();return;}let settled=false;const finish=()=>{if(!settled){settled=true;resolve();}};requestAnimationFrame(()=>setTimeout(finish,0));setTimeout(finish,120);});
 export default function CompressorWidget({defaultMode='quality',defaultTargetKB=20,defaultFormat='webp',defaultQuality=82}:CompressorWidgetProps){
@@ -37,7 +37,7 @@ export default function CompressorWidget({defaultMode='quality',defaultTargetKB=
       const onProgress=(f:number,l:string)=>{const now=performance.now();if(now-last<90&&f<1)return;last=now;setImages(p=>p.map(i=>i.id===img.id?{...i,prog:f,plabel:l}:i));};
       try{
         const result=mode==='exactkb'?await compressToTargetKB(img.file,format,targetKB,onProgress):await compressImage(img.file,format,quality/100,onProgress);
-        setImages(p=>p.map(i=>i.id===img.id?{...i,status:'done',prog:1,plabel:undefined,compSize:result.compressedSize,saved:result.savedPercent,outUrl:URL.createObjectURL(result.file),outName:result.file.name}:i));
+        setImages(p=>p.map(i=>i.id===img.id?{...i,status:'done',prog:1,plabel:undefined,compSize:result.compressedSize,saved:result.savedPercent,outUrl:URL.createObjectURL(result.file),outBlob:result.file,outName:result.file.name}:i));
       }catch(e){setImages(p=>p.map(i=>i.id===img.id?{...i,status:'error',prog:undefined,plabel:undefined,err:e instanceof Error?e.message:'Failed'}:i));}
       n++;
     }
@@ -47,7 +47,7 @@ export default function CompressorWidget({defaultMode='quality',defaultTargetKB=
   const downloadZip=async()=>{
     const{default:JSZip}=await import('jszip');
     const zip=new JSZip();
-    for(const img of images.filter(i=>i.status==='done'&&i.outUrl)){const blob=await fetch(img.outUrl!).then(r=>r.blob());zip.file(getName(img),blob);}
+    for(const img of images.filter(i=>i.status==='done'&&i.outBlob)){zip.file(getName(img),img.outBlob!);}
     const blob=await zip.generateAsync({type:'blob'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='compressed-images.zip';a.click();
   };
   return(

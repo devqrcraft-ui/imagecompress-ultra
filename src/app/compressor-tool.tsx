@@ -34,6 +34,7 @@ type Img = {
   preview: string; file: File; status: 'pending'|'processing'|'done'|'error';
   compSize?: number; saved?: number; outUrl?: string;
   outBytes?: number; limitKB?: number; unchanged?: boolean; ms?: number; outFmt?: string;
+  outBlob?: Blob;
   prog?: number; plabel?: string; t0?: number; err?: string;
 };
 
@@ -208,6 +209,7 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
           compSize: result.compressedSize,
           saved: result.savedPercent,
           outUrl: URL.createObjectURL(result.file),
+          outBlob: result.file,
           outBytes: result.file.size,
           limitKB: mode === 'exactkb' ? targetKB : undefined,
           unchanged: !!result.unchanged,
@@ -238,22 +240,19 @@ export default function CompressorTool({ initialTargetKB }: { initialTargetKB?: 
   };
 
   const downloadZip = async () => {
-    const done = images.filter(i=>i.status==='done'&&i.outUrl);
+    const done = images.filter(i=>i.status==='done'&&i.outBlob);
     if (!done.length) return;
     try {
-      const { default: JSZip } = await import('https://cdn.jsdelivr.net/npm/jszip@3.10.1/+esm' as any);
+      const { default: JSZip } = await import('jszip');
       const zip = new JSZip();
-      await Promise.all(done.map(async img => {
-        const res = await fetch(img.outUrl!);
-        const blob = await res.blob();
-        zip.file(getName(img), blob);
-      }));
+      done.forEach(img => { zip.file(getName(img), img.outBlob!); });
       const content = await zip.generateAsync({ type: 'blob' });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(content);
       a.download = 'compressed-images.zip';
       a.click();
-    } catch {
+    } catch (err) {
+      console.warn('ZIP build failed, downloading files individually', err);
       downloadAll();
     }
   };
