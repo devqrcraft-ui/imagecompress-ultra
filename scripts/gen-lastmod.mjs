@@ -1,8 +1,8 @@
 // Regenerates src/lib/lastmod.json with the real date each route last changed.
 // Google only trusts <lastmod> when it is verifiably accurate, and ignores it
 // outright when every URL claims "today" (which is what a build-time new Date()
-// did). Run `npm run lastmod` after editing content; the build also tries it,
-// and silently keeps the committed file when git history is unavailable (Vercel).
+// did). Run `npm run lastmod` after editing content and commit the result; the
+// build runs it too, but a shallow clone (Vercel) keeps the committed file.
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -21,6 +21,15 @@ function git(args) {
 
 if (!fs.existsSync(path.join('.git'))) {
   console.log('lastmod: no git history here, keeping', OUT);
+  process.exit(0);
+}
+
+// Vercel clones with a truncated history, where the oldest commit reachable for
+// a file is the clone boundary rather than the real edit, so a shallow run would
+// rewrite months-old pages to "this week". Keep the file generated with full
+// history and committed alongside the content.
+if (git(['rev-parse', '--is-shallow-repository']) === 'true') {
+  console.log('lastmod: shallow clone, keeping', OUT);
   process.exit(0);
 }
 
