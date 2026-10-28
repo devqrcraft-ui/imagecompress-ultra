@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "lastmod": "node scripts/gen-lastmod.mjs",
+    "prebuild": "npm run lastmod",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "indexnow": "node indexnow-compressto20kb.mjs"
   },
   "dependencies": {
     "@sentry/nextjs": "^10.39.0",

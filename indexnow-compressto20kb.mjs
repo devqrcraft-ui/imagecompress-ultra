@@ -1,46 +1,29 @@
-const KEY = 'a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6';
+// Notifies IndexNow participants (Bing/Copilot, Yandex, Seznam, Naver) about every
+// URL in the live sitemap. Google is not an IndexNow participant — it uses the
+// sitemap and Search Console instead.
+// Run after a deploy: node indexnow-compressto20kb.mjs
+const KEY = '949d8768ebd65a6ae8545c790ab39370';
 const HOST = 'www.compressto20kb.com';
+const SITEMAP = `https://${HOST}/sitemap.xml`;
 
-const urls = [
-  'https://www.compressto20kb.com/',
-  'https://www.compressto20kb.com/compress-for-ebay',
-  'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings',
-  'https://www.compressto20kb.com/blog/best-image-compressor-for-mac',
-  'https://www.compressto20kb.com/blog/compress-image-for-google-forms',
-  'https://www.compressto20kb.com/blog/ds-160-photo-requirements',
-  'https://www.compressto20kb.com/blog/compress-images-for-etsy-listings',
-  'https://www.compressto20kb.com/blog/compress-images-for-shopify-store',
-  'https://www.compressto20kb.com/blog/compress-image-for-shopify-product-page',
-  'https://www.compressto20kb.com/blog/ecommerce-image-optimization',
-  'https://www.compressto20kb.com/blog/webp-vs-jpeg-2026',
-  'https://www.compressto20kb.com/blog/image-optimization-2026',
-  'https://www.compressto20kb.com/blog/compress-image-for-usps',
-  'https://www.compressto20kb.com/blog/compress-passport-photo-to-50kb',
-  'https://www.compressto20kb.com/blog/us-passport-photo-requirements',
-  'https://www.compressto20kb.com/blog/uscis-photo-size-requirements',
-  'https://www.compressto20kb.com/blog/dv-lottery-photo-requirements',
-  'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements',
-  'https://www.compressto20kb.com/blog/image-size-requirements-for-green-card',
-  'https://www.compressto20kb.com/blog/how-to-compress-image-for-uscis',
-];
+const xml = await fetch(SITEMAP).then(r => r.text());
+const urlList = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+const bad = urlList.filter(u => !u.startsWith(`https://${HOST}/`));
+if (!urlList.length) {
+  console.error('Sitemap returned no URLs — aborting, nothing was submitted.');
+  process.exit(1);
+}
+if (bad.length) {
+  console.error('Refusing to submit foreign URLs:', bad);
+  process.exit(1);
+}
 
-const body = JSON.stringify({ host: HOST, key: KEY, urlList: urls });
-
-console.log('Відправляємо', urls.length, 'URL на IndexNow...');
-console.log('host:', HOST);
-
+console.log(`Submitting ${urlList.length} URLs to IndexNow...`);
 const res = await fetch('https://api.indexnow.org/indexnow', {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body,
+  headers: { 'Content-Type': 'application/json; charset=utf-8' },
+  body: JSON.stringify({ host: HOST, key: KEY, urlList }),
 });
-
-console.log('Статус:', res.status, res.statusText);
-if (res.status === 200 || res.status === 202) {
-  console.log('УСПІХ — IndexNow прийняв URLs');
-} else if (res.status === 429) {
-  console.log('Rate limit — почекайте 5 хвилин і запустіть знову');
-} else {
-  const text = await res.text();
-  console.log('Відповідь:', text);
-}
+const text = await res.text();
+console.log('Status:', res.status, res.statusText, text.slice(0, 300));
+if (res.status === 429) console.log('Rate limited — wait 5 minutes and re-run.');

@@ -31,21 +31,29 @@ function getStaticRoutes() {
   return routes;
 }
 
+function readLastmod(): Record<string, string> {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(process.cwd(), 'src', 'lib', 'lastmod.json'), 'utf-8'));
+  } catch {
+    return {};
+  }
+}
+
 export default function sitemap() {
-  const lastModified = new Date();
+  // Google ignores <changefreq> and <priority> and stops trusting <lastmod> the
+  // moment it is a build timestamp instead of the real edit date, so the date
+  // comes from git (scripts/gen-lastmod.mjs) and is left out when unknown.
+  const dates = readLastmod();
+  const stamp = (route: string) => (dates[route] ? new Date(dates[route]) : undefined);
 
   const staticRoutes = getStaticRoutes().map(route => ({
     url: baseUrl + route,
-    lastModified,
-    changeFrequency: 'monthly',
-    priority: route === '/' ? 1.0 : 0.7,
+    lastModified: stamp(route),
   }));
 
   const blogPages = Object.keys(posts).map(slug => ({
     url: baseUrl + '/blog/' + slug,
-    lastModified,
-    changeFrequency: 'monthly',
-    priority: 0.75,
+    lastModified: stamp('/blog/' + slug),
   }));
 
   const seen = new Set<string>();
