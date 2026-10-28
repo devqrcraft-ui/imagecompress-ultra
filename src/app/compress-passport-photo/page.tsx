@@ -16,8 +16,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Compress Passport Photo Free — Fits Any Portal Size Limit, No Upload',
-  description: 'Compress a passport or visa photo to whatever ceiling your form states — JPEG, in your browser, never uploaded. Set 20KB, 50KB, 240KB or any other target and get the best quality that fits.',
+  title: 'Compress Passport Photo Free — Any Portal Size Limit',
+  description: 'Compress a passport or visa photo to whatever ceiling your form states — JPEG, in your browser, never uploaded.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-passport-photo' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-passport-photo' },
   keywords: 'compress passport photo, US passport photo size, State Department photo requirements, USCIS photo compress, DS-11 photo size, compress passport photo free, passport photo 20KB, passport photo 50KB',

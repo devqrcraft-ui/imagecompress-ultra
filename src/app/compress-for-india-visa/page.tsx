@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'India e-Visa Photo Compressor — 350×350px, under 300KB | Free, No Upload',
+  title: 'India e-Visa Photo Compressor — 350×350px, under 300KB',
   description: 'Compress and resize your India e-Visa photo to 350×350px (2×2 inch (51×51mm)), under 300KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-india-visa' },
 };

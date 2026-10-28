@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import ClientPage from './client';
 
 export const metadata: Metadata = {
-  title: 'CompressTo20KB vs Kraken.io — Local Compression Instead of a Quota',
-  description: 'CompressTo20KB vs Kraken.io: Kraken optimises files on its own servers with a 100 MB free testing quota and paid plans from $5 a month. Our tool runs in your browser with a KB target and no account.',
+  title: 'CompressTo20KB vs Kraken.io — Local vs Quota',
+  description: 'CompressTo20KB vs Kraken.io: Kraken optimises files on its own servers with a 100 MB free testing quota and paid plans from $5 a month. No upload.',
   keywords: 'kraken.io alternative, kraken.io free alternative, kraken io vs, better than kraken io, image compressor no upload',
   alternates: { canonical: 'https://www.compressto20kb.com/vs/kraken' },
   openGraph: { url: 'https://www.compressto20kb.com/vs/kraken' },

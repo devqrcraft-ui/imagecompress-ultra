@@ -21,8 +21,8 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: 'Compress Photo for a Workday Job Application — Find the Limit That Applies to You | CompressTo20KB',
-  description: 'Workday publishes platform ceilings (10 MB images, 30 MB attachments) but candidate-photo limits are set by each employer’s tenant. Learn where yours is stated, then compress your JPEG privately.',
+  title: 'Workday Job Application Photo — Find Your Size Limit',
+  description: 'Workday publishes platform ceilings (10 MB images, 30 MB attachments) but candidate-photo limits are set by each employer’s tenant. No upload.',
   keywords: 'workday photo upload size limit, compress photo for job application, workday careers portal photo, resize headshot for application, workday attachment limit',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-workday' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-workday' },

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import ClientPage from './client';
 
 export const metadata: Metadata = {
-  title: 'CompressTo20KB vs PicResize — A KB Ceiling Instead of Pixel Dimensions',
-  description: 'CompressTo20KB vs PicResize: PicResize uploads your pictures and resizes them to pixel dimensions, while our tool works in your browser and compresses to the KB ceiling your form states.',
+  title: 'CompressTo20KB vs PicResize — KB Ceiling vs Pixels',
+  description: 'CompressTo20KB vs PicResize: PicResize uploads your pictures and resizes to pixels; our tool runs in your browser and hits the KB ceiling your form states.',
   keywords: 'picresize alternative, picresize vs, image compressor no upload, compress photo to kb size online free',
   alternates: { canonical: 'https://www.compressto20kb.com/vs/picresize' },
   openGraph: { url: 'https://www.compressto20kb.com/vs/picresize' },

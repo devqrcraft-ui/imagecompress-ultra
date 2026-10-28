@@ -3,12 +3,12 @@ import { Metadata } from "next";
 import AuthorBox from '@/app/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: "DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds",
+  title: "DS-160 Photo Requirements: Compress to 240KB in 10 Seconds",
   description: "Meet all DS-160 photo requirements instantly: 600x600px, JPEG, under 240KB. Free compression — works in browser, no upload, no account.",
   alternates: { canonical: 'https://www.compressto20kb.com/blog/ds-160-photo-requirements' },
   keywords: 'DS-160 photo requirements, DS-160 photo size, compress DS-160 photo, DS-160 JPEG size, nonimmigrant visa photo size 2026',
   openGraph: {
-    title: "DS-160 Photo Requirements 2026: Compress to 240KB Free in 10 Seconds",
+    title: "DS-160 Photo Requirements: Compress to 240KB in 10 Seconds",
     description: "Meet all DS-160 photo requirements instantly: 600x600px, JPEG, under 240KB. Free compression — works in browser, no upload, no account.",
     images: [{ url: "/og/ds-160-photo-requirements.png", width: 1200, height: 630 }],
     type: "article",

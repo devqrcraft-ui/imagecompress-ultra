@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'New Zealand NZeTA Photo Compressor — 900×1200px, under 5MB | Free, No Upload',
+  title: 'New Zealand NZeTA Photo Compressor — 900×1200px, under 5MB',
   description: 'Compress and resize your New Zealand NZeTA photo to 900×1200px (35×45mm), under 5MB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-new-zealand-nzeta' },
 };

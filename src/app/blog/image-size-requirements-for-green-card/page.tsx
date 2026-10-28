@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import ClientPage from './client';
 export const metadata: Metadata = {
   title: 'Green Card Photo Size Requirements 2026 — I-485, I-130, I-90',
-  description: 'Green card photo size requirements for I-485, I-130 and I-90 — what USCIS actually publishes versus the 240KB folklore, and how to compress your photo to fit, free and in your browser. Nothing is uploaded.',
+  description: 'Green card photo size for I-485, I-130 and I-90 — what USCIS actually publishes vs the 240KB folklore, and how to compress your photo to fit in the browser.',
   keywords: 'green card photo requirements, i-485 photo size, i-130 photo requirements, green card photo compression, resize photo for green card',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/image-size-requirements-for-green-card' },
   openGraph: { url: 'https://www.compressto20kb.com/blog/image-size-requirements-for-green-card' },

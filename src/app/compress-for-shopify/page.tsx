@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Shopify — Faster Product Pages | Free, No Upload',
+  title: 'Compress Image for Shopify — Faster Product Pages',
   description: 'Shopify accepts files up to 20MB, which is the problem, not the goal. Prepare product photos and theme images that load fast. Free, in-browser, no upload.',
   keywords: 'compress image for shopify, shopify product image size, shopify image optimization, reduce image size shopify, shopify image file size limit',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-shopify' },

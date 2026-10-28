@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Singapore Employment Pass Photo Compressor — 400×514px, under 2MB | Free, No Upload',
+  title: 'Singapore Employment Pass Photo Compressor — 400×514px, under 2MB',
   description: 'Compress and resize your Singapore Employment Pass photo to 400×514px (35×45mm), under 2MB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-singapore-ep' },
 };

@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Vietnam e-Visa Photo Compressor — 400×514px, under 300KB | Free, No Upload',
+  title: 'Vietnam e-Visa Photo Compressor — 400×514px, under 300KB',
   description: 'Compress and resize your Vietnam e-Visa photo to 400×514px (4×5cm), under 300KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-vietnam-visa' },
 };

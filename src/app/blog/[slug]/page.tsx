@@ -265,7 +265,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = posts[slug];
   if (!post) return { title: 'Blog' };
   return {
-    title: `${post.title} — CompressTo20KB Blog`,
+    // no brand suffix: it pushed every post title past the ~65 characters Google shows
+    title: post.title,
     description: post.desc,
     alternates: { canonical: `https://www.compressto20kb.com/blog/${slug}` },
   };

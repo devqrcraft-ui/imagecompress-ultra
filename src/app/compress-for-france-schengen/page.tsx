@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'France Schengen Visa Photo Compressor — 413×531px, under 6MB | Free, No Upload',
+  title: 'France Schengen Visa Photo Compressor — 413×531px, under 6MB',
   description: 'Compress and resize your France Schengen Visa photo to 413×531px (35×45mm), under 6MB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-france-schengen' },
 };

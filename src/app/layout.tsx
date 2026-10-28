@@ -13,7 +13,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'Compress Image to 20KB — Free Online (No Upload)',
-  description: 'Set a file-size ceiling - 20KB, 50KB, 100KB, any number - and the tool finds the best quality that fits under it. Runs entirely in your browser; nothing is uploaded.',
+  description: 'Set a file-size ceiling — 20KB, 50KB, 100KB or any number — and the tool finds the best quality that fits. Runs entirely in your browser, nothing uploaded.',
   metadataBase: new URL('https://www.compressto20kb.com' ),
   alternates: { canonical: '/' },
   openGraph: {

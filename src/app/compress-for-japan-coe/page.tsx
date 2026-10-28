@@ -1,8 +1,8 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Japan Certificate of Eligibility Photo Compressor — 354×472px, under 240KB | Free, No Upload',
-  description: 'Compress and resize your Japan Certificate of Eligibility photo to 354×472px (3×4cm (portrait)), under 240KB, JPEG. Exact-size online tool — files never leave your browser.',
+  title: 'Japan COE Photo Compressor — 354×472px under 240KB',
+  description: 'Compress and resize your Japan Certificate of Eligibility photo to 354×472px (3×4cm (portrait)), under 240KB, JPEG. No upload.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-japan-coe' },
 };
 

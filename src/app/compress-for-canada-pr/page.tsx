@@ -1,8 +1,8 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Canada PR Photo Photo Compressor — 591×827px, under 500KB (digital copy) | Free, No Upload',
-  description: 'Compress and resize your Canada PR Photo photo to 591×827px (50×70mm), under 500KB (digital copy), JPEG. Exact-size online tool — files never leave your browser.',
+  title: 'Canada PR Photo Compressor — 591×827px under 500KB',
+  description: 'Compress and resize your Canada PR photo to 591×827px (50×70mm), under 500KB (digital copy), JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-canada-pr' },
 };
 

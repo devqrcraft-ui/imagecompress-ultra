@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Ukraine Visa Photo Compressor — 413×531px, under 300KB | Free, No Upload',
+  title: 'Ukraine Visa Photo Compressor — 413×531px, under 300KB',
   description: 'Compress and resize your Ukraine Visa photo to 413×531px (35×45mm), under 300KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-ukraine-visa' },
 };

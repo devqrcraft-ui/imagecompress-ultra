@@ -10,16 +10,16 @@ import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox';
 
 export const metadata: Metadata = {
-  title: 'Compress Images for Teams Meetings (2026) — Fix Blurry Shares Fast',
-  description: 'Microsoft Teams compresses images to under 1MB. Learn exact size limits, 3 ways to send full-quality images in Teams, and compress any image to 500KB in 10 seconds.',
+  title: 'Compress Images for Teams Meetings: Fix Blurry Shares',
+  description: 'Microsoft Teams caps images at 1MB. See the exact limits, 3 ways to send full-quality photos and how to compress any image to 500KB in your browser.',
   keywords: 'compress image for teams meeting, does teams compress images in meetings, teams meeting image quality, teams image size limit 2026, reduce image size for microsoft teams',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-for-teams-meeting' },
   authors: [{ name: 'the CompressTo20KB Team' }],
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   openGraph: {
     url: 'https://www.compressto20kb.com/blog/compress-image-for-teams-meeting',
-    title: 'Compress Images for Teams Meetings (2026) — Fix Blurry Shares Fast',
-    description: 'Microsoft Teams compresses images to under 1MB. Learn exact size limits, 3 ways to send full-quality images in Teams, and compress any image to 500KB in 10 seconds.',
+    title: 'Compress Images for Teams Meetings: Fix Blurry Shares',
+    description: 'Microsoft Teams caps images at 1MB. See the exact limits, 3 ways to send full-quality photos and how to compress any image to 500KB in your browser.',
     siteName: 'CompressTo20KB',
     type: 'article',
     images: [{ url: 'https://www.compressto20kb.com/og-image.png', width: 1200, height: 630, alt: 'Compress Image for Teams Meeting — CompressTo20KB' }],

@@ -3,7 +3,7 @@ import ClientPage from './client';
 
 export const metadata: Metadata = {
   title: 'CompressTo20KB vs Compressor.io — What Each Tool Actually Does',
-  description: 'CompressTo20KB vs Compressor.io: what we can verify about our own browser-based compressor — a KB target you type, 50 files per batch, HEIC input — and what we deliberately do not claim about theirs.',
+  description: 'CompressTo20KB vs Compressor.io: what we can verify about our own browser-based compressor — a KB target you type, 50 files per batch, HEIC input.',
   keywords: 'compressor.io alternative, compressor io vs, image compressor no upload, compress image to target kb',
   alternates: { canonical: 'https://www.compressto20kb.com/vs/compressor-io' },
   openGraph: { url: 'https://www.compressto20kb.com/vs/compressor-io' },

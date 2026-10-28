@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Pakistan Visa Photo Compressor — 413×531px, under 50KB | Free, No Upload',
+  title: 'Pakistan Visa Photo Compressor — 413×531px, under 50KB',
   description: 'Compress and resize your Pakistan Visa photo to 413×531px (35×45mm), under 50KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-pakistan-visa' },
 };

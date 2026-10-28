@@ -5,7 +5,7 @@ import CompressorTool from '@/app/compressor-tool';
 export const metadata: Metadata = {
   title: 'Compress Images for Pinterest — Free, No Upload',
   description:
-    'Shrink a Pinterest pin to a target size in your browser before you upload it. Pinterest publishes a 20MB web ceiling, not a target — we suggest around 400KB so pins load fast. No upload, no signup.',
+    'Shrink a Pinterest pin in your browser before you upload it. Pinterest publishes a 20MB ceiling, not a target — we suggest around 400KB so pins load fast.',
   keywords:
     'compress image for pinterest, pinterest pin size, pinterest image requirements, compress for pinterest free, pinterest pin kb, pinterest 2:3 aspect ratio',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-pinterest' },

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
-  title: 'Compress Image for WhatsApp — Send Sharp, Load Fast | Free, No Upload',
+  title: 'Compress Image for WhatsApp — Send Sharp, Load Fast',
   description: 'WhatsApp re-encodes every photo you send. Prepare the file yourself so it survives the trip. Photos, profile pictures and documents — free and in-browser.',
   keywords: 'compress image for whatsapp, whatsapp photo quality, reduce image size whatsapp, whatsapp hd photo, whatsapp profile picture size',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-whatsapp' },

@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Portugal Visa Photo Compressor — 413×531px, under 500KB | Free, No Upload',
+  title: 'Portugal Visa Photo Compressor — 413×531px, under 500KB',
   description: 'Compress and resize your Portugal Visa photo to 413×531px (35×45mm), under 500KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-portugal-visa' },
 };

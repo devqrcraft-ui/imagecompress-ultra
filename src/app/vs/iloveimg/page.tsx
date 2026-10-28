@@ -9,14 +9,14 @@ import CompressorWidget from '@/components/CompressorWidget';
 import AuthorBox from '@/app/components/AuthorBox';
 
 export const metadata: Metadata = {
-  title: 'CompressTo20KB vs iLoveIMG 2026 — Privacy, Target KB & Gov Presets',
+  title: 'CompressTo20KB vs iLoveIMG — Privacy, Target KB, Gov Presets',
   description: 'iLoveIMG uploads your files to cloud servers and cannot target exact KB. CompressTo20KB: 100% browser, Target KB Mode, USCIS preset, free. Full 2026 comparison.',
   keywords: 'compressto20kb vs iloveimg, iloveimg alternative, iloveimg no upload, compress image exact kb, iloveimg privacy, iloveimg uscis photo',
   authors: [{ name: 'the CompressTo20KB Team' }],
   alternates: { canonical: 'https://www.compressto20kb.com/vs/iloveimg' },
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   openGraph: {
-    title: 'CompressTo20KB vs iLoveIMG 2026 — Privacy, Target KB & Gov Presets',
+    title: 'CompressTo20KB vs iLoveIMG — Privacy, Target KB, Gov Presets',
     description: 'iLoveIMG uploads files to cloud. CompressTo20KB: 100% browser, Target KB Mode, USCIS/DS-160 preset.',
     url: 'https://www.compressto20kb.com/vs/iloveimg',
     siteName: 'CompressTo20KB',

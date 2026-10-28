@@ -3,7 +3,7 @@ import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
   title: 'Compress Image to 500KB Free Online — No Upload, Private',
-  description: 'Compress any image to 500KB or under free online. Browser-based — files never leave your device. Perfect for Shopify product photos, high-quality blog images, and print-on-demand previews. No upload, no signup.',
+  description: 'Compress any image to 500KB or under, free, in your browser — files never leave your device. For Shopify photos, blog images and print-on-demand previews.',
   keywords: 'compress image to 500kb, reduce image size to 500kb, resize photo to 500kb, 500kb image compressor online free, compress jpg to 500kb, compress png to 500kb',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-500kb' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-to-500kb' },

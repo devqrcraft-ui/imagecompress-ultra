@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Korea K-ETA Photo Compressor — 413×531px, under 240KB | Free, No Upload',
+  title: 'Korea K-ETA Photo Compressor — 413×531px, under 240KB',
   description: 'Compress and resize your Korea K-ETA photo to 413×531px (35×45mm), under 240KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-korea-k-eta' },
 };

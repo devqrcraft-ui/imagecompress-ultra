@@ -3,7 +3,7 @@ import ClientPage from './client';
 
 export const metadata: Metadata = {
   title: 'Compress Image to 200KB Free Online — No Upload, Private',
-  description: 'Compress any image to 200KB or under free online. Works in your browser — files never leave your device. No upload, no signup. For blog posts, product photos and any upload field capped near 200KB.',
+  description: 'Compress any image to 200KB or under free online. Works in your browser — files never leave your device. No upload, no signup.',
   keywords: 'compress image to 200kb, reduce image size to 200kb, resize photo to 200kb, 200kb image compressor online free, compress jpg to 200kb, reduce png to 200kb',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-200kb' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-to-200kb' },

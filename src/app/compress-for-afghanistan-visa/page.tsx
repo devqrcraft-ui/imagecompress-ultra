@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Afghanistan Visa Photo Compressor — 400×500px, under 300KB | Free, No Upload',
+  title: 'Afghanistan Visa Photo Compressor — 400×500px, under 300KB',
   description: 'Compress and resize your Afghanistan Visa photo to 400×500px (35×45mm), under 300KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-afghanistan-visa' },
 };

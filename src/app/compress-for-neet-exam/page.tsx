@@ -21,8 +21,8 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: 'Compress Photo & Signature for NEET-UG Upload — Meet the NTA File Limits | CompressTo20KB',
-  description: 'The NTA NEET (UG)-2026 bulletin sets exact upload windows: photo 10-200 KB, signature 10-100 KB, impressions 10-200 KB. See the quoted specs and compress your scans in your browser, with no upload.',
+  title: 'NEET-UG Photo & Signature Upload — NTA File Limits',
+  description: 'The NTA NEET (UG)-2026 bulletin sets exact upload windows: photo 10-200 KB, signature 10-100 KB, impressions 10-200 KB.',
   keywords: 'neet photo size 10 to 200 kb, neet signature size, nta neet ug photo requirements, compress photo for neet application, neet ug document upload specs',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-neet-exam' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-neet-exam' },

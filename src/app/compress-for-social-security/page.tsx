@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Compress Photo for Social Security Administration — Free Online Tool',
+  title: 'Compress Photo for Social Security Administration',
   description: 'Compress photo for Social Security Administration documents. JPEG under 5MB.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-social-security' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-social-security' },

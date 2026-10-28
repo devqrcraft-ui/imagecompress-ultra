@@ -4,8 +4,8 @@ import AuthorBox from '@/app/components/AuthorBox'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.compressto20kb.com/blog/image-optimization-2026' },
-  title: "Image Optimization 2026: WebP vs AVIF, Lazy Load, PageSpeed +40 Points",
-  description: "Complete 2026 image optimization guide: WebP saves 34% vs JPEG, AVIF saves 50%. Fix Core Web Vitals, boost PageSpeed by 20-40 points. Free compression tool included.",
+  title: "Image Optimization 2026: WebP vs AVIF, Lazy Load, PageSpeed",
+  description: "2026 image optimization guide: WebP saves 34% vs JPEG and AVIF about 50%, how to fix Core Web Vitals and lazy loading, plus a free browser compressor.",
   openGraph: {
     title: "Image Optimization in 2026: The Complete Guide",
     description: "WebP, AVIF, lazy loading, CDN, and everything else you need to know about image optimization in 2026.",

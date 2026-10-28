@@ -3,7 +3,7 @@ import ClientPage from './client';
 
 export const metadata: Metadata = {
   title: 'Batch Image Compressor — Download All as ZIP (Free, No Upload)',
-  description: 'Compress up to 50 images at once and download them all as a single ZIP file. Free, instant, no upload to any server. Perfect for bloggers, e-commerce, and documents.',
+  description: 'Compress up to 50 images at once and download them all as a single ZIP file. Free, instant, no upload to any server.',
   keywords: 'batch image compressor, compress multiple images, download as zip, bulk image compressor zip',
   alternates: { canonical: 'https://www.compressto20kb.com/batch-image-compressor-zip' },
   openGraph: {

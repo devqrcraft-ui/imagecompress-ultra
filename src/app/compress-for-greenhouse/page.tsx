@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: 'Greenhouse documents 100 MB for candidate uploads and pixel widths for career-page branding. Both lists, sourced, plus what to crop before you compress.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-greenhouse' },
   openGraph: {
-    title: 'Greenhouse Image Sizes: Candidate Uploads and Career-Page Branding',
+    title: 'Greenhouse Image Sizes: Candidate Uploads and Branding',
     description: 'The 100 MB document ceiling, the 64×64 logo and the 1400 px banner — with the byte reduction done in your browser.',
     url: 'https://www.compressto20kb.com/compress-for-greenhouse',
   },

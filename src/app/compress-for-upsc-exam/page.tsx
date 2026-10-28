@@ -21,8 +21,8 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: 'Compress Photo & Signature for UPSC Application Upload — Size Windows Explained | CompressTo20KB',
-  description: 'What UPSC actually requires for the CAF photograph and signature upload: the 20 KB minimum, the 100-300 KB ceilings published in its 2026-27 notices, and a free browser-based compressor with a no-upload guarantee.',
+  title: 'UPSC Photo & Signature Upload — 2026 Size Windows',
+  description: 'What UPSC actually requires for the CAF photograph and signature upload: the 20 KB minimum, the 100-300 KB ceilings published in its 2026-27 notices.',
   keywords: 'upsc photo size for application, upsc signature upload size, civil services photograph 20 kb, upsc caf photo compress, upsc exam photo signature upload',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-upsc-exam' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-upsc-exam' },

@@ -10,7 +10,7 @@ import AuthorBox from '@/app/components/AuthorBox';
 
 export const metadata: Metadata = {
   title: 'CompressTo20KB vs Squoosh 2026 — Bulk, Target KB & USCIS Presets',
-  description: 'Squoosh (Google) compresses 1 image at a time, no exact KB mode. CompressTo20KB: bulk 50 images, Target KB Mode, USCIS/DS-160 preset, 100% browser. 2026 comparison.',
+  description: 'Squoosh (Google) compresses 1 image at a time, no exact KB mode. CompressTo20KB: bulk 50 images, Target KB Mode, USCIS/DS-160 preset, 100% browser.',
   keywords: 'compressto20kb vs squoosh, squoosh alternative, squoosh bulk compression, squoosh exact kb, squoosh uscis photo, better than squoosh 2026',
   authors: [{ name: 'the CompressTo20KB Team' }],
   alternates: { canonical: 'https://www.compressto20kb.com/vs/squoosh' },

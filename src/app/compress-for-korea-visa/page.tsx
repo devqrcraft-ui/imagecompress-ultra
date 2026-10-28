@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'South Korea Visa Photo Compressor — 354×472px, under 240KB | Free, No Upload',
+  title: 'South Korea Visa Photo Compressor — 354×472px, under 240KB',
   description: 'Compress and resize your South Korea Visa photo to 354×472px (35×45mm), under 240KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-korea-visa' },
 };

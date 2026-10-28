@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Dubai Work Permit Photo Compressor — 600×600px, under 200KB | Free, No Upload',
+  title: 'Dubai Work Permit Photo Compressor — 600×600px, under 200KB',
   description: 'Compress and resize your Dubai Work Permit photo to 600×600px (Passport size), under 200KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-dubai-work-permit' },
 };

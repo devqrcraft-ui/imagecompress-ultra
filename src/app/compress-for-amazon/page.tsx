@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Amazon — Product Photos That Pass | Free, No Upload',
+  title: 'Compress Image for Amazon — Product Photos That Pass',
   description: 'Prepare Amazon listing photos at the resolution zoom needs and the file size you control. JPEG output, bulk up to 50 images, nothing uploaded to a server.',
   keywords: 'compress image for amazon, amazon product image size, amazon listing photo requirements, resize image for amazon seller central, compress amazon product photo',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-amazon' },

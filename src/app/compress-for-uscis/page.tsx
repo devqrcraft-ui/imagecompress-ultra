@@ -18,8 +18,8 @@ const faqSchema = {
 const howtoSchema = {"@context":"https://schema.org","@type":"HowTo","name":"How to Compress a Photo for U.S. Government Forms (Free, No Upload)","description":"Step-by-step guide to reduce a passport or ID photo to the file size a U.S. portal allows, without uploading it to a server.","totalTime":"PT30S","step":[{"@type":"HowToStep","position":1,"name":"Read the limit on your portal","text":"Check the maximum file size the submission page states. The State Department's digital photo spec allows 240KB or less; USCIS online document uploads allow files up to 12MB."},{"@type":"HowToStep","position":2,"name":"Upload your photo","text":"Drop your JPG or PNG photo into the upload area on compressto20kb.com."},{"@type":"HowToStep","position":3,"name":"Set a target KB","text":"Switch to Target KB Mode and enter a value slightly below the limit — for example 200 when the ceiling is 240KB."},{"@type":"HowToStep","position":4,"name":"Compress and download","text":"Click Compress, check the preview against the original, then download and upload the photo to the form."}]};
 
 export const metadata: Metadata = {
-  title: 'Compress Photo for USCIS & U.S. Immigration Forms — Free, No Upload',
-  description: 'Reduce a JPG or PNG photo to the file size a U.S. government portal allows for N-400, I-485 or DS-160 submissions. No upload — compression happens in your browser.',
+  title: 'Compress Photo for USCIS & U.S. Immigration Forms',
+  description: 'Reduce a JPG or PNG photo to the file size a U.S. government portal allows for N-400, I-485 or DS-160 submissions. No upload.',
   keywords: 'compress photo for uscis, uscis photo size requirements, compress image for ds-160, compress photo for n-400, resize photo for uscis online, uscis passport photo compressor',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-uscis' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-uscis' },

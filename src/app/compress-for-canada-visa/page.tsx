@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Canada Visa Photo Compressor — 420×540px, under 4MB | Free, No Upload',
+  title: 'Canada Visa Photo Compressor — 420×540px, under 4MB',
   description: 'Compress and resize your Canada Visa photo to 420×540px (35×45mm), under 4MB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-canada-visa' },
 };

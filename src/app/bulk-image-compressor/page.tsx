@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import ClientPage from './client';
 
 export const metadata: Metadata = {
-  title: 'Bulk Image Compressor – Compress Up to 50 Images at Once (No Upload)',
-  description: 'Free bulk image compressor for JPG, PNG, WebP, AVIF and HEIC. Up to 50 files per batch, compressed in your browser and downloaded as one ZIP. No signup, no upload.',
+  title: 'Bulk Image Compressor — Up to 50 Images, No Upload',
+  description: 'Free bulk image compressor for JPG, PNG, WebP, AVIF and HEIC. Up to 50 files per batch, compressed in your browser and downloaded as one ZIP.',
   keywords: 'bulk image compressor, batch image compressor online free, compress multiple images at once, bulk resize photos online, batch compress jpg png, compress 50 images free',
   alternates: { canonical: 'https://www.compressto20kb.com/bulk-image-compressor' },
   openGraph: { url: 'https://www.compressto20kb.com/bulk-image-compressor' },

@@ -9,7 +9,7 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: 'Compress Photo for Visa Application — US, Schengen, UK — Free Online',
+  title: 'Compress Photo for a Visa Application — US, Schengen, UK',
   description: 'Compress a visa application photo down to the KB limit printed on your own form. Free, no upload, instant: everything runs in your browser.',
   keywords: 'compress photo for visa application, visa photo size requirements, compress image for us visa, compress photo for schengen visa, resize visa photo online free',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-image-for-visa' },

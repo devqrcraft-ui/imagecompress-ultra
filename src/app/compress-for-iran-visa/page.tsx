@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Iran Visa Photo Compressor — 413×531px, under 100KB | Free, No Upload',
+  title: 'Iran Visa Photo Compressor — 413×531px, under 100KB',
   description: 'Compress and resize your Iran Visa photo to 413×531px (35×45mm), under 100KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-iran-visa' },
 };

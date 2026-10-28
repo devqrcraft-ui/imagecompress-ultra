@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Etsy — Listing Photos Under 1MB | Free, No Upload',
+  title: 'Compress Image for Etsy — Listing Photos Under 1MB',
   description: 'Prepare Etsy listing photos at the resolution Etsy recommends, without the file bloat. JPEG, batch up to 50 images, all compression done in your browser.',
   keywords: 'compress image for etsy, etsy listing photo size, etsy image requirements 2000 pixels, resize etsy listing photos, compress etsy photo free',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-etsy' },

@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Ghana Visa Photo Compressor — 413×531px, under 200KB | Free, No Upload',
+  title: 'Ghana Visa Photo Compressor — 413×531px, under 200KB',
   description: 'Compress and resize your Ghana Visa photo to 413×531px (35×45mm), under 200KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-ghana-visa' },
 };

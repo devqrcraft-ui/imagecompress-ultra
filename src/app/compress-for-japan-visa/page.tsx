@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Japan Visa Photo Compressor — 600×600px, under 240KB | Free, No Upload',
+  title: 'Japan Visa Photo Compressor — 600×600px, under 240KB',
   description: 'Compress and resize your Japan Visa photo to 600×600px (45×45mm), under 240KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-japan-visa' },
 };

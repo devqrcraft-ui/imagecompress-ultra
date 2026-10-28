@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Photo Compression Guides — Visa, Shop & File-Size Rules',
-  description: 'Plain-language guides to image size limits: visa and government forms, marketplaces, email, exact KB targets, formats and phone or desktop workflows. Every guide works with the free browser compressor.',
+  description: 'Plain-language guides to image size limits: visa and government forms, marketplaces, email, exact KB targets, formats and phone or desktop workflows.',
   alternates: { canonical: 'https://www.compressto20kb.com/blog' },
   openGraph: { url: 'https://www.compressto20kb.com/blog' },
 };

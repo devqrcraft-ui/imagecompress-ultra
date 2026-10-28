@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Schengen Visa Photo Compressor — 600×800px, under 500KB | Free, No Upload',
+  title: 'Schengen Visa Photo Compressor — 600×800px, under 500KB',
   description: 'Compress and resize your Schengen Visa photo to 600×800px (35×45mm), under 500KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-schengen-visa' },
 };

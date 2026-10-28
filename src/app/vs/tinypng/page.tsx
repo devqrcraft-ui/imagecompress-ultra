@@ -3,7 +3,7 @@ import ClientPage from './client';
 
 export const metadata: Metadata = {
   title: 'CompressTo20KB vs TinyPNG — Local Processing and a KB Target',
-  description: 'CompressTo20KB vs TinyPNG: TinyPNG uploads your files to its servers and keeps them up to 48 hours, while our compressor runs entirely in your browser and lets you type the KB size you need.',
+  description: 'CompressTo20KB vs TinyPNG: TinyPNG uploads your files and keeps them up to 48 hours; our compressor runs in your browser and takes a KB target you type.',
   keywords: 'tinypng alternative, tinypng vs, better than tinypng, tinypng free alternative, compress image without tinypng',
   alternates: { canonical: 'https://www.compressto20kb.com/vs/tinypng' },
   openGraph: { url: 'https://www.compressto20kb.com/vs/tinypng' },

@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Australia Visa Photo Compressor — 600×600px, under 5MB | Free, No Upload',
+  title: 'Australia Visa Photo Compressor — 600×600px, under 5MB',
   description: 'Compress and resize your Australia Visa photo to 600×600px (35×45mm), under 5MB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-australia-visa' },
 };

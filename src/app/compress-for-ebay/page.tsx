@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
-  title: 'Compress Image for eBay — Listing Photos That Zoom | Free, No Upload',
+  title: 'Compress Image for eBay — Listing Photos That Zoom',
   description: 'Reduce eBay listing photos to a sensible file size without losing the pixels that make zoom work. JPEG, batch up to 50 images, processed on your device.',
   keywords: 'compress image for ebay, ebay photo size requirements, ebay listing image size, resize photo for ebay, ebay picture zoom 1600 pixels',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-ebay' },

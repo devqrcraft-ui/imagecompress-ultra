@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
-  title: 'Compress Images for Squarespace — Lighter Pages, No Plugin, No Upload',
-  description: 'Shrink the photos you hand to a Squarespace site right in your browser. Choose a KB ceiling, keep WebP or JPEG, preview the result and download. Nothing is uploaded, no subscription.',
+  title: 'Compress Images for Squarespace — No Plugin, No Upload',
+  description: 'Shrink the photos you hand to a Squarespace site right in your browser. Choose a KB ceiling, keep WebP or JPEG, preview the result and download.',
   keywords: 'compress images for squarespace, squarespace image size, reduce photo size squarespace, squarespace image optimization, squarespace webp images',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-squarespace' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-squarespace' },

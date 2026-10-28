@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'Thailand Visa Photo Compressor — 400×514px, under 200KB | Free, No Upload',
+  title: 'Thailand Visa Photo Compressor — 400×514px, under 200KB',
   description: 'Compress and resize your Thailand Visa photo to 400×514px (4×5cm), under 200KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-thailand-visa' },
 };

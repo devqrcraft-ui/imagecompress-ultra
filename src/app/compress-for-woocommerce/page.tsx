@@ -3,7 +3,7 @@ import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
   title: 'Compress WooCommerce Product Images — Smaller Files, No Upload',
-  description: 'Shrink WooCommerce product photos in your browser before uploading them to the media library. Pick a KB ceiling, keep JPEG or WebP, and nothing is sent to a server. Free, no plugin, no signup.',
+  description: 'Shrink WooCommerce product photos in your browser before they hit the media library. Pick a KB ceiling, keep JPEG or WebP. No upload, no plugin, no signup.',
   keywords: 'compress woocommerce images, woocommerce product image size, reduce image size woocommerce, woocommerce image optimization without plugin, webp for woocommerce',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-woocommerce' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-woocommerce' },

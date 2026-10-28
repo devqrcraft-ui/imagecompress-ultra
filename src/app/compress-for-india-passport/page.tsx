@@ -21,8 +21,8 @@ const faqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: 'Compress Photo for Indian Passport Application — Passport Seva Upload Specs | CompressTo20KB',
-  description: 'The verified official photo specs for an Indian passport application — 35x45 mm print, 630x810 px ICAO upload — where the file-size limit actually lives, and a private in-browser JPEG compressor.',
+  title: 'Indian Passport Photo Upload — Passport Seva Specs',
+  description: 'The verified official photo specs for an Indian passport application — 35x45 mm print, 630x810 px ICAO upload — where the file-size limit actually lives.',
   keywords: 'indian passport photo upload size, passport seva photograph specifications, 630x810 passport photo india, compress photo for passport application india, scan of photograph passport',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-india-passport' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-india-passport' },

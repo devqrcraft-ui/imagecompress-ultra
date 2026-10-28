@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Discord — Avatars, Banners, Uploads | Free, No Upload',
-  description: 'Shrink Discord images so they upload fast and still look sharp at the size the app displays them. Avatars, banners, server icons, posted media. Browser-only, no upload.',
+  title: 'Compress Image for Discord — Avatars, Banners, Uploads',
+  description: 'Shrink Discord images so they upload fast and still look sharp at the size the app displays them. Avatars, banners, server icons, posted media.',
   keywords: 'compress image for discord, discord avatar size, discord banner size, discord image upload limit, reduce discord image file size',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-discord' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-discord' },

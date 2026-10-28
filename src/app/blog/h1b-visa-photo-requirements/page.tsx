@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "H1B Visa Photo Requirements 2026 — Size, Format & How to Compress",
-  description: "H1B and USCIS photo rules: square JPEG, 600×600 to 1200×1200 px, under 240KB, white background — plus how to compress the file in your browser without uploading it.",
+  description: "H1B and USCIS photo rules: square JPEG, 600×600 to 1200×1200 px, under 240KB, white background — plus how to compress the file in your browser.",
   keywords: "h1b visa photo requirements, h1b photo size, uscis photo requirements, compress photo for h1b",
   alternates: { canonical: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },
   openGraph: { url: 'https://www.compressto20kb.com/blog/h1b-visa-photo-requirements' },

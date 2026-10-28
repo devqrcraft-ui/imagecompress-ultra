@@ -3,7 +3,7 @@ import ClientPage from './client';
 
 export const metadata: Metadata = {
   title: 'Compress Image to 20KB Online Free — 20KB or Smaller, No Upload',
-  description: 'Turn any JPG, PNG, WebP or HEIC photo into a file that fits inside 20KB. Your browser picks the highest quality that stays under the limit — nothing is uploaded, no signup.',
+  description: 'Turn any JPG, PNG, WebP or HEIC photo into a file under 20KB. The tool keeps the highest quality that still fits — in your browser, nothing is uploaded.',
   keywords: 'compress image to 20kb, reduce image size to 20kb, resize photo to 20kb, 20kb image compressor online free, compress jpg to 20kb, compress png to 20kb',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-to-20kb' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-to-20kb' },

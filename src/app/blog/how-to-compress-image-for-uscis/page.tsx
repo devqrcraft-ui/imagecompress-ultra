@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import ClientPage from './client';
 export const metadata: Metadata = {
   title: 'How to Compress Image for USCIS — N-400, I-485, DS-160 Guide 2026',
-  description: 'What photo size US immigration and visa forms really require — the published figures vs the folklore — and how to compress your photo to fit any upload limit with a free in-browser tool. No upload, private.',
+  description: 'What photo size US immigration forms really require — published figures vs folklore — and how to compress your photo to fit any limit in your browser.',
   keywords: 'how to compress image for uscis, uscis photo compression, reduce photo size for uscis, uscis 240kb photo requirement',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/how-to-compress-image-for-uscis' },
   openGraph: { url: 'https://www.compressto20kb.com/blog/how-to-compress-image-for-uscis' },

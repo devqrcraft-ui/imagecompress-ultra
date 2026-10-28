@@ -1,7 +1,7 @@
 import CompressorTool from '@/app/compressor-tool';
 
 export const metadata = {
-  title: 'China Visa Photo Compressor — 354×472px, under 120KB | Free, No Upload',
+  title: 'China Visa Photo Compressor — 354×472px, under 120KB',
   description: 'Compress and resize your China Visa photo to 354×472px (33×48mm), under 120KB, JPEG. Exact-size online tool — files never leave your browser.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-china-visa' },
 };

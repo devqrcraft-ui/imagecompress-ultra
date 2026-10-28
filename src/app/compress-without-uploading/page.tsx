@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Compress Images Without Uploading — Private, Browser Only',
-  description: 'Compress images without uploading them to a server. The file is decoded and re-encoded in your browser, so it stays on your device. Useful for passport photos, ID scans and other private images.',
+  description: 'Compress images without uploading them to a server. The file is decoded and re-encoded in your browser, so it stays on your device.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-without-uploading' },
   openGraph: { url: 'https://www.compressto20kb.com/compress-without-uploading' },
 };
