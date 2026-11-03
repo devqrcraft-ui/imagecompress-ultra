@@ -8,29 +8,20 @@ const steps = [
   { n:'4', t:'Download, then read the size back', d:'Save the file and check its properties in your file manager. If the portal also sets a pixel size, resize to that first and compress again.' },
 ];
 
-const limits = [
-  { name:'US DS-160 visa application', url:'https://travel.state.gov', limit:'240KB', note:'JPEG, square, 600×600 to 1200×1200 px' },
-  { name:'Pakistan e-Visa / NADRA', url:'https://visa.nadra.gov.pk', limit:'50KB', note:'JPEG, white background' },
-  { name:'Japan visa (online)', url:'https://www.moj.go.jp', limit:'240KB', note:'45×45 mm, white background' },
-  { name:'South Korea visa', url:'https://www.visa.go.kr', limit:'240KB', note:'35×45 mm, JPEG' },
-  { name:'India e-Visa', url:'https://indianvisaonline.gov.in', limit:'300KB', note:'350×350 px, JPEG only' },
-  { name:'China visa', url:'https://www.visaforchina.cn', limit:'120KB', note:'354×472 px, white background' },
-];
-
 const tips = [
   { title:'Resize before you compress', desc:'A 4000 px photo squeezed to 20KB turns into mush; the same face at 600×600 px stays sharp. Set the pixel size the portal asks for first, then let the KB target handle the rest.' },
   { title:'Start from the sharpest original', desc:'Compression can only throw information away. A fresh phone photo at full resolution gives the encoder more useful detail to keep than an image that was already compressed once.' },
   { title:'Watch out for faces and text', desc:'At 20KB, skin tones and edges are the first things to break. Zoom in to 100% before downloading — if the face looks blocky, crop tighter to the head and compress again.' },
   { title:'Batch the whole form set', desc:'Application packets often want a photo plus signatures and certificates. Add up to 50 files, keep the target at 20 and compress the set in one pass.' },
-  { title:'Re-check the portal spec on the day you apply', desc:'Upload limits and pixel requirements change without notice. The numbers below were read from official sources in October 2026 — confirm them on the portal before you submit.' },
+  { title:'Check the official portal instructions', desc:'Confirm the current maximum and minimum file size, accepted format, pixel dimensions, and crop before compressing. A smaller file is not automatically a compliant file.' },
 ];
 
 const faqItems = [
   { q:'How do I compress an image to 20KB?', a:'Add your image, switch the tool to Target KB mode, type 20 and press Compress. The compressor tests JPEG quality levels in your browser and keeps the best one whose output still fits inside 20KB.' },
-  { q:'Is the result 20KB or under?', a:'It is 20KB or a little smaller, never larger. Encoders cannot hit a byte count exactly, so the tool takes the highest quality setting that stays under your target. A file a few kilobytes below 20KB is still a pass on every portal that caps uploads at 20KB.' },
+  { q:'Is the result 20KB or under?', a:'The compressor aims to return a file at or below the selected 20KB target. Meeting a file-size cap alone does not guarantee acceptance: the destination may also require a particular format, pixel size, or minimum image quality.' },
   { q:'Does my image get uploaded to a server?', a:'No. Encoding runs locally in your browser. You can prove it: open DevTools, go to the Network tab, compress a photo and watch that no request leaves your machine with your image in it.' },
-  { q:'Which portals actually limit photos to 20KB?', a:'A minority of exam and application portals cap uploads that low, and the limit is usually stated next to a pixel size. Large government portals set looser caps — the US DS-160 allows 240KB, Pakistan e-Visa 50KB, India e-Visa 300KB. A 20KB file fits under all of them, which is why it works as a safe fallback when the spec page is unclear.' },
-  { q:'What format should I use for a 20KB photo?', a:'JPEG. Portals with very small caps almost always ask for JPEG, and it degrades more predictably than PNG at that size. WebP can hold slightly better quality per byte but is rejected by some older application systems.' },
+  { q:'Is 20KB a safe fallback for application portals?', a:'No. A 20KB file only addresses a possible maximum file-size limit. The application may have a lower minimum size, require specific dimensions or a particular format, or reject an image with insufficient quality. Check the official instructions first.' },
+  { q:'What format should I use for a 20KB photo?', a:'Use a file format explicitly accepted by the destination. A small file can still be rejected if its format, pixel dimensions, crop, or image quality does not meet the application requirements.' },
   { q:'Can I compress several images to 20KB at once?', a:'Yes — add up to 50 files, keep the target at 20 and compress them in one pass. Download each file on its own or take the whole batch as a ZIP.' },
   { q:'Does it work with iPhone HEIC photos?', a:'Yes. HEIC and HEIF files from the Camera Roll are converted in the browser before compression, so you never have to export a JPEG copy first.' },
   { q:'How do I do this on a phone?', a:'Open compressto20kb.com in Safari or Chrome, tap upload, pick the photo, press the Gov 20KB preset, tap Compress. The finished file saves to your device — no app and no account.' },
@@ -49,7 +40,7 @@ export default function ClientPage() {
           Compress Image to <span style={{color:'#818cf8'}}>20KB</span> Free — No Upload, 100% On Your Device
         </h1>
         <p style={{fontSize:'15px',lineHeight:1.7,opacity:0.7,marginBottom:'8px'}}>
-          Get any photo under a 20KB upload limit in a few seconds. The tool keeps the highest quality that still fits, so you get the sharpest file the limit allows — and your image never leaves the browser.
+          Compress a photo to 20KB or less in a few seconds. Check the destination&apos;s format, pixel dimensions, and any minimum size or quality rules too; a file-size cap alone does not guarantee acceptance.
         </p>
         <p style={{fontSize:'15px',opacity:0.68,marginBottom:'32px'}}>
           JPEG · PNG · WebP · HEIC (iPhone) · Batch up to 50 images · No signup, no watermark
@@ -76,35 +67,9 @@ export default function ClientPage() {
           The honest trade-off: at 20KB a full-frame selfie will not look like the original. Cropping to the head and shoulders first, at the pixel size the form asks for, is the single biggest quality win available at that file size.
         </p>
 
-        {/* LIMITS CHECKED */}
-        <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'12px'}}>Photo Size Limits We Checked</h2>
-        <p style={{fontSize:'14px',opacity:0.72,marginBottom:'16px',lineHeight:1.6}}>
-          People reach for 20KB because it clears every cap in the table below with room to spare. None of these portals asks for 20KB specifically — the requirement is whatever their own spec page says, and specs change. Figures read from official sources in October 2026.
-        </p>
-        <div style={{overflowX:'auto',marginBottom:'12px'}}>
-          <table style={{width:'100%',borderCollapse:'collapse',fontSize:'15px'}}>
-            <thead>
-              <tr style={{borderBottom:'1px solid rgba(255,255,255,0.12)'}}>
-                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Portal</th>
-                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Upload limit</th>
-                <th style={{textAlign:'left',padding:'10px 12px',color:'rgba(255,255,255,0.9)',fontWeight:600}}>Also specified</th>
-              </tr>
-            </thead>
-            <tbody>
-              {limits.map(l=>(
-                <tr key={l.name} style={{borderBottom:'1px solid rgba(255,255,255,0.06)'}}>
-                  <td style={{padding:'10px 12px'}}>
-                    <a href={l.url} target="_blank" rel="nofollow noopener noreferrer" style={{color:'#a5b4fc',textDecoration:'none'}}>{l.name}</a>
-                  </td>
-                  <td style={{padding:'10px 12px',color:'#4ade80',fontWeight:700}}>{l.limit}</td>
-                  <td style={{padding:'10px 12px',fontSize:'12px',opacity:0.65}}>{l.note}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p style={{fontSize:'13px',opacity:0.68,lineHeight:1.6,marginBottom:'40px'}}>
-          A 20KB JPEG sits below all six limits, so it uploads even where the form is stricter than its own guidance. If the portal gives you a dimension as well as a size, do the resize first — compressing after a resize preserves far more detail than compressing a full-resolution frame down to 20KB.
+        <h2 style={{fontSize:'22px',fontWeight:700,marginBottom:'12px'}}>A 20KB file is not a universal application setting</h2>
+        <p style={{fontSize:'14px',opacity:0.72,marginBottom:'40px',lineHeight:1.6}}>
+          Treat 20KB as a compression target only when the destination&apos;s current instructions call for it. Application portals can set minimum sizes, pixel dimensions, accepted formats, crops, and image-quality requirements. Check those details first; this tool does not verify compliance.
         </p>
 
         {/* HOW TO */}
@@ -164,7 +129,7 @@ export default function ClientPage() {
             {href:'/compress-to-100kb',label:'📁 Compress to 100KB'},
             {href:'/compress-to-200kb',label:'📦 Compress to 200KB'},
             {href:'/compress-passport-photo',label:'🪪 Passport Photo'},
-            {href:'/compress-for-ds160',label:'📋 DS-160 Photo (240KB)'},
+            {href:'/compress-for-ds160',label:'📋 DS-160 Photo Tool'},
             {href:'/visa-photo-compressor',label:'🌍 Visa Photo Requirements Hub'},
           ].map(({href,label})=>(
             <Link key={href} href={href} style={{background:'rgba(255,255,255,0.07)',border:'1px solid rgba(255,255,255,0.12)',borderRadius:'8px',padding:'8px 14px',color:'white',textDecoration:'none',fontSize:'15px',fontWeight:600}}>{label}</Link>

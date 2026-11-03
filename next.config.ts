@@ -1,5 +1,7 @@
 import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
@@ -15,6 +17,9 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000,
   },
   productionBrowserSourceMaps: false,
+  turbopack: {
+    root: path.dirname(fileURLToPath(import.meta.url)),
+  },
   experimental: {
     optimizePackageImports: ["react", "react-dom", "lucide-react", "@radix-ui/react-icons"],
     optimizeCss: false,

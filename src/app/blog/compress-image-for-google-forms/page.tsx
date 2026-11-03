@@ -2,8 +2,8 @@
 import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox'
 export const metadata: Metadata = {
-  title: 'How to Compress Images for Google Forms — Free Guide 2026',
-  description: 'Google Forms has a 10MB file upload limit. Learn how to compress images for Google Forms quickly — no upload needed, works on any device.',
+  title: 'Compress Images for Google Forms: Check the Upload Limit',
+  description: 'Google Forms upload size and allowed file types are set by the form creator. Find the limit shown on the form, then compress an image locally if needed.',
   keywords: 'compress image for google forms, google forms image size limit, reduce image size for google forms, google forms photo upload',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/compress-image-for-google-forms' },
   openGraph: { url: 'https://www.compressto20kb.com/blog/compress-image-for-google-forms' },
@@ -14,31 +14,31 @@ export default function Page() {
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg,#0f172a,#1e1b4b)', color: 'white', fontFamily: 'system-ui,sans-serif' }}>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.compressto20kb.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.compressto20kb.com/blog"},{"@type":"ListItem","position":3,"name":"How to Compress Images for Google Forms","item":"https://www.compressto20kb.com/blog/compress-image-for-google-forms"}]}' }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Compress Images for Google Forms","description":"Google Forms has a 10MB file upload limit. Learn how to compress images for Google Forms quickly — no upload needed, works on any device.","url":"https://www.compressto20kb.com/blog/compress-image-for-google-forms","datePublished":"2026-01-01","dateModified":"2026-05-12","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"},"reviewedBy":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"}}' }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"BlogPosting","headline":"Compress Images for Google Forms: Check the Upload Limit","description":"Google Forms upload size and allowed file types are set by the form creator. Find the limit shown on the form, then compress an image locally if needed.","url":"https://www.compressto20kb.com/blog/compress-image-for-google-forms","datePublished":"2026-01-01","dateModified":"2026-11-02","author":{"@type":"Organization","name":"the CompressTo20KB Team","url":"https://www.compressto20kb.com"},"publisher":{"@type":"Organization","name":"CompressTo20KB","url":"https://www.compressto20kb.com"}}' }} />
       <div style={{ maxWidth: '780px', margin: '0 auto', padding: '48px 20px' }}>
         <div style={{ fontSize: '13px', opacity: 0.68, marginBottom: '12px' }}>Blog → Google Forms</div>
         <h1 style={{ fontSize: 'clamp(24px,4vw,38px)', fontWeight: 900, marginBottom: '12px', lineHeight: 1.2 }}>How to Compress Images for Google Forms</h1>
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.68)', marginBottom: 20, display: 'flex', gap: 12, flexWrap: 'wrap' as const }}>
-          <span>Last updated: June 2026</span>
+          <span>Last checked: November 2026</span>
           <span>{'·'}</span>
           <span>By the CompressTo20KB Team</span>
           <span>{'·'}</span>
           <span>{'~7 min read'}</span>
         </div>
-        <p style={{ opacity: 0.68, fontSize:'15px', marginBottom: '32px' }}>Updated October 2026 · 4 min read</p>
+        <p style={{ opacity: 0.68, fontSize:'15px', marginBottom: '32px' }}>4 min read</p>
 
-        <p style={{ fontSize: '16px', lineHeight: 1.8, opacity: 0.8, marginBottom: '24px' }}>Google Forms allows respondents to upload files up to 10MB per file. While that sounds generous, many users hit this limit when submitting photos taken on modern smartphones — which can easily be 5–15MB each. Compressing your images before submission keeps your forms fast and your Google Drive storage clean.</p>
+        <p style={{ fontSize: '16px', lineHeight: 1.8, opacity: 0.8, marginBottom: '24px' }}>Google Forms does not have one upload-size limit that applies to every form. The form creator chooses the maximum file size, allowed file types, and number of files. Check the instructions beside the upload field; those settings are the requirements for your submission.</p>
 
-        <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>What Size Should Images Be for Google Forms?</h2>
-        <p style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '16px' }}>Google Forms has a 10MB limit per uploaded file and a 1GB total response limit per form. For most use cases — submitting ID photos, documents, or profile pictures — keeping images under 500KB is ideal. This ensures fast uploads on mobile connections and keeps your Drive organized.</p>
+        <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>How to Find the File Upload Limit</h2>
+        <p style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '16px' }}>The upload question displays the file-size and file-type rules configured by the form owner. Limits can differ between forms, so do not assume a size such as 10MB or a particular image format will be accepted everywhere.</p>
 
         <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)', borderRadius: '12px', padding: '16px 20px', margin: '24px 0' }}>
-          <strong style={{ color: '#818cf8' }}>Google Forms File Size Limits:</strong>
+          <strong style={{ color: '#818cf8' }}>Before uploading:</strong>
           <ul style={{ margin: '8px 0 0', paddingLeft: '20px', fontSize: '14px', opacity: 0.8, lineHeight: 2 }}>
-            <li>Max file size per upload: 10MB</li>
-            <li>Total storage per form: 1GB (Google Drive)</li>
-            <li>Recommended image size: under 500KB for fast upload</li>
-            <li>For ID/passport photos: under 20–50KB</li>
+            <li>Read the maximum size shown beside the upload question.</li>
+            <li>Use one of the file types the form owner allows.</li>
+            <li>Compress only as much as needed; keep the image legible.</li>
+            <li>If the form requires sign-in, use an account permitted by the form owner.</li>
           </ul>
         </div>
 
@@ -46,8 +46,8 @@ export default function Page() {
         <ol style={{ paddingLeft: '20px', fontSize: '15px', lineHeight: 2.2, opacity: 0.8 }}>
           <li>Go to <a href="https://www.compressto20kb.com" style={{ color: '#c7d2fe' }}>compressto20kb.com</a></li>
           <li>Drop your image into the upload zone</li>
-          <li>Choose <strong>Target KB Mode</strong> and type your target (e.g., 200KB)</li>
-          <li>Select <strong>JPEG</strong> or <strong>WebP</strong> format</li>
+          <li>Check the form&apos;s displayed size limit and accepted file types</li>
+          <li>Choose a target below that limit and a format accepted by the form</li>
           <li>Click Compress and download your file</li>
           <li>Upload the compressed image to your Google Form</li>
         </ol>
@@ -64,7 +64,7 @@ export default function Page() {
         </ul>
 
         <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '32px 0 12px' }}>Why Compress Before Uploading to Google Forms?</h2>
-        <p style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '16px' }}>Even though Google Forms allows up to 10MB, there are good reasons to compress your images first. Smaller files upload faster — especially on mobile data. They also take less space in the form owner's Google Drive, and some forms have administrator-set limits lower than 10MB.</p>
+        <p style={{ fontSize: '15px', lineHeight: 1.8, opacity: 0.8, marginBottom: '16px' }}>Compressing an image can make it quicker to transfer and help it fit the limit configured for a particular form. Compression does not change the file types the form accepts. For the current settings explanation, see <a href="https://support.google.com/docs/answer/7322334?hl=en" target="_blank" rel="noopener noreferrer" style={{ color: '#c7d2fe' }}>Google Forms file upload settings</a>.</p>
 
         <div style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '12px', padding: '20px', margin: '32px 0', textAlign: 'center' }}>
           <p style={{ fontSize: '16px', fontWeight: 700, marginBottom: '12px' }}>Compress your image now — free, no upload</p>
