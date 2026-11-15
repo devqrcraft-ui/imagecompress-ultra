@@ -10,7 +10,7 @@ import Link from 'next/link';
 import EbayInlineCalc from './EbayInlineCalc';
 
 export const metadata: Metadata = {
-  title: 'Best Image Size for eBay Listings: 500px Minimum, 1600px Recommended',
+  title: 'eBay Image Size 2026: 1600px for Zoom, 500px Minimum',
   description: 'eBay requires at least 500px on the longest side and recommends about 1600px. Learn current file, format, and photo-count guidance.',
   keywords: 'best image size for ebay, ebay listing photo size, compress image for ebay, ebay photo requirements, ebay product image size',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-size-for-ebay-listings' },

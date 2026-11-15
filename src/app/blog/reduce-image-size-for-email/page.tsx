@@ -10,10 +10,10 @@ import { Metadata } from "next";
 import AuthorBox from '@/app/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: "How to Reduce Image Size for Email Free (Gmail, Outlook, Yahoo)",
+  title: "Reduce Photo Size for Email — Gmail, Outlook, Yahoo",
   description: "Reduce photo size for email attachments in seconds. Free browser-based tool, no upload needed. Works for Gmail, Outlook, and Yahoo Mail.",
   openGraph: {
-    title: "How to Reduce Image Size for Email Free (Gmail, Outlook, Yahoo)",
+    title: "Reduce Photo Size for Email — Gmail, Outlook, Yahoo",
     description: "Reduce photo size for email attachments in seconds. Free, no upload needed.",
     type: "article",
   },

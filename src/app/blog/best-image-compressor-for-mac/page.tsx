@@ -9,7 +9,7 @@ const faq: [string, string][] = [
 import type { Metadata } from 'next';
 import AuthorBox from '@/app/components/AuthorBox'
 export const metadata: Metadata = {
-  title: 'Free Image Compressor for Mac 2026 — No Download, Works in Safari',
+  title: 'Image Compressor for Mac — No Install, Works in Safari',
   description: 'Best free image compressor for Mac 2026. No download, no install — works in Safari and Chrome. Compress HEIC, PNG, JPEG instantly. No upload needed.',
   keywords: 'best image compressor for mac, compress images mac free, mac image compressor no download, compress heic mac, reduce image size mac',
   alternates: { canonical: 'https://www.compressto20kb.com/blog/best-image-compressor-for-mac' },
