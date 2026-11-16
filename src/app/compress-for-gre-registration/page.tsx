@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: 'GRE Photo and ID Rules: What ETS Actually Requires',
   description: 'ETS publishes no GRE registration photo size. Verified ID and at-home check-in rules, the one case where compressing a file does help, tool limits.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-gre-registration' },
+  robots: { index: false, follow: true },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-gre-registration' },
   keywords: 'GRE photo requirements, GRE ID requirements ETS, GRE at home check-in photo',
 };

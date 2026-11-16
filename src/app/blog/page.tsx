@@ -20,8 +20,6 @@ const GROUPS: [string, Post[]][] = [
     ['dv-lottery-photo-guide', 'DV Lottery photo guide, step by step', 'Green card'],
     ['compress-photo-for-visa', 'Compress a visa photo for any country', 'Visa'],
     ['h1b-visa-photo-requirements', 'H-1B visa photo requirements', 'US visa'],
-    ['uscis-photo-size-requirements', 'USCIS photo size requirements', 'USCIS'],
-    ['how-to-compress-image-for-uscis', 'How to compress an image for USCIS (N-400, I-485)', 'USCIS'],
     ['image-size-requirements-for-green-card', 'Green card photo size (I-485, I-130, I-90)', 'USCIS'],
     ['us-passport-photo-requirements', 'US passport photo requirements', 'Passport'],
     ['compress-passport-photo-to-50kb', 'Compress a passport photo to 50KB', 'Passport'],

@@ -5,6 +5,17 @@ import { posts } from './blog/[slug]/page';
 
 const baseUrl = 'https://www.compressto20kb.com';
 
+// Pages that ship `robots: { index: false }`. Listing a noindex URL in the
+// sitemap sends Google two contradictory instructions, so they are left out.
+const NOINDEX_ROUTES = new Set([
+  '/compress-for-gmat-registration',
+  '/compress-for-gre-registration',
+  '/compress-for-neet-exam',
+  '/compress-for-sat-registration',
+  '/compress-for-ssc-exam',
+  '/compress-for-upsc-exam',
+]);
+
 function getStaticRoutes() {
   const appDir = path.join(process.cwd(), 'src', 'app');
   const routes: string[] = [];
@@ -46,7 +57,9 @@ export default function sitemap() {
   const dates = readLastmod();
   const stamp = (route: string) => (dates[route] ? new Date(dates[route]) : undefined);
 
-  const staticRoutes = getStaticRoutes().map(route => ({
+  const staticRoutes = getStaticRoutes()
+    .filter(route => !NOINDEX_ROUTES.has(route))
+    .map(route => ({
     url: baseUrl + route,
     lastModified: stamp(route),
   }));

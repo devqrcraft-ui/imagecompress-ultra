@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   description: 'What UPSC actually requires for the CAF photograph and signature upload: the 20 KB minimum, the 100-300 KB ceilings published in its 2026-27 notices.',
   keywords: 'upsc photo size for application, upsc signature upload size, civil services photograph 20 kb, upsc caf photo compress, upsc exam photo signature upload',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-upsc-exam' },
+  robots: { index: false, follow: true },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-upsc-exam' },
 };
 

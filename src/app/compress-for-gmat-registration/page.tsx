@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: 'GMAT Registration: Photo ID Rules, No Photo Upload',
   description: 'GMAC requires an original physical photo ID and rejects copies; it publishes no registration photo size. What that means for compressing files.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-gmat-registration' },
+  // No exam-registration photo spec exists to rank for; kept live for visitors,
+  // kept out of the index so it stops diluting the site's topical signals.
+  robots: { index: false, follow: true },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-gmat-registration' },
   keywords: 'GMAT ID requirements, GMAT registration photo, GMAT test centre identification',
 };

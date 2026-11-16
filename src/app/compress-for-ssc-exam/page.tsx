@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: 'SSC Exam Photo and Signature: 10-20 KB JPEG Rules',
   description: 'SSC notification specs for the scanned signature (JPEG, 10-20 KB, about 6.0 x 2.0 cm) and the live-captured photograph, plus how to hit the range.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-ssc-exam' },
+  robots: { index: false, follow: true },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-ssc-exam' },
   keywords: 'SSC photo signature requirements, SSC signature 10 to 20 KB, SSC photograph live capture',
 };

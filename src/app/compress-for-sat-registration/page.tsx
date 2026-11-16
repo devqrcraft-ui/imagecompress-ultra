@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: 'SAT Registration Photo Rules and File Size Fix',
   description: 'What the College Board actually prints for the SAT photo: jpg, gif or png, head-on framing, rejection causes - and no published KB limit.',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-sat-registration' },
+  robots: { index: false, follow: true },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-sat-registration' },
   keywords: 'SAT registration photo requirements, SAT photo file size, SAT photo rejected',
 };

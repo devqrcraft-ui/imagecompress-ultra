@@ -154,11 +154,14 @@ const nextConfig: NextConfig = {
       { source: '/compress-for-linkedin-profile', destination: '/compress-for-linkedin', permanent: true },
       { source: '/compress-for-us-visa-ds160', destination: '/compress-for-ds160', permanent: true },
       { source: '/compress-for-upwork-profile', destination: '/compress-for-upwork', permanent: true },
-      { source: '/compress-for-n400', destination: '/compress-for-uscis-n400', permanent: true },
+      { source: '/compress-for-n400', destination: '/compress-for-uscis', statusCode: 301 },
       { source: '/compress-for-i485', destination: '/compress-for-green-card', permanent: true },
       { source: '/compress-for-tsa-precheck', destination: '/compress-for-global-entry', permanent: true },
       // Duplicate-intent consolidation: one strong URL per intent, the competing
       // page is retired with a permanent redirect (see the consolidation map).
+      { source: '/compress-for-uscis-n400', destination: '/compress-for-uscis', statusCode: 301 },
+      { source: '/blog/how-to-compress-image-for-uscis', destination: '/compress-for-uscis', statusCode: 301 },
+      { source: '/blog/uscis-photo-size-requirements', destination: '/compress-for-uscis', statusCode: 301 },
       { source: '/blog/compress-image-for-teams-meeting', destination: '/blog/compress-image-for-microsoft-teams', statusCode: 301 },
       { source: '/blog/compress-image-to-30kb', destination: '/compress-to-30kb', statusCode: 301 },
       { source: '/blog/compress-jpeg-under-1mb', destination: '/compress-to-1mb', statusCode: 301 },

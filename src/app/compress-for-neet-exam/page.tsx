@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   description: 'The NTA NEET (UG)-2026 bulletin sets exact upload windows: photo 10-200 KB, signature 10-100 KB, impressions 10-200 KB.',
   keywords: 'neet photo size 10 to 200 kb, neet signature size, nta neet ug photo requirements, compress photo for neet application, neet ug document upload specs',
   alternates: { canonical: 'https://www.compressto20kb.com/compress-for-neet-exam' },
+  robots: { index: false, follow: true },
   openGraph: { url: 'https://www.compressto20kb.com/compress-for-neet-exam' },
 };
 
