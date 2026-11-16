@@ -141,7 +141,7 @@ export default function USCISPhotoRequirements() {
         <p className="text-sm font-semibold text-slate-300 mb-3">Related guides:</p>
         <div className="flex gap-3 flex-wrap">
           {[
-            ['/blog/ds-160-photo-requirements', 'DS-160 Photo Guide'],
+            ['/compress-for-ds160', 'DS-160 Photo Guide'],
             ['/compress-for-uscis', 'USCIS Photo Compressor'],
             ['/compress-for-dv-lottery', 'DV Lottery Photo'],
             ['/compress-passport-photo', 'Passport Photo'],
@@ -155,13 +155,13 @@ export default function USCISPhotoRequirements() {
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>
         <h2 style={{fontSize:'20px',fontWeight:700,color:'white',marginBottom:'16px'}}>Related Articles</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
-        <Link href='/blog/ds-160-photo-requirements' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <Link href='/compress-for-ds160' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → DS-160 Photo Requirements
         </Link>
         <Link href='/blog/reduce-image-size-for-government-forms-usa' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Reduce Image Size for US Government Forms
         </Link>
-        <Link href='/blog/compress-jpeg-under-1mb' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <Link href='/compress-to-1mb' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Compress JPEG Under 1MB
         </Link>
         </div>

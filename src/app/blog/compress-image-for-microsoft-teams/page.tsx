@@ -206,7 +206,7 @@ export default function Page() {
             </ul>
           </div>
           <p style={{ fontSize: 15, lineHeight: 1.8, color: 'rgba(200,208,231,0.9)', marginBottom: 16 }}>
-            All compression happens in your browser — your images never leave your device. See also our guide on <a href="/blog/how-to-compress-image-for-email" style={{ color: '#c7d2fe', textDecoration: 'none' }}>compressing images for email</a>.
+            All compression happens in your browser — your images never leave your device. See also our guide on <a href="/compress-for-email" style={{ color: '#c7d2fe', textDecoration: 'none' }}>compressing images for email</a>.
           </p>
         </section>
 
@@ -301,7 +301,7 @@ export default function Page() {
           <h2 style={{ fontSize: 'clamp(18px,4vw,20px)', fontWeight: 800, color: '#e8edf8', margin: '0 0 16px', lineHeight: 1.35 }}>Related Guides</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: 12 }}>
             {[
-              ['/blog/how-to-compress-image-for-email', 'Compress Images for Email', 'GUIDE'],
+              ['/compress-for-email', 'Compress Images for Email', 'GUIDE'],
               ['/compress-to-20kb', 'Compress to 20KB', 'TOOL'],
               ['/bulk-image-compressor', 'Bulk Image Compressor', 'TOOL'],
               ['/blog/webp-vs-jpeg-2026', 'WebP vs JPEG: Which Is Better?', 'GUIDE'],

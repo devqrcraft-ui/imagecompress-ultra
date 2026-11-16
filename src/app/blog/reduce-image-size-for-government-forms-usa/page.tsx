@@ -52,13 +52,13 @@ export default function Page() {
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>
         <h2 style={{fontSize:'20px',fontWeight:700,color:'white',marginBottom:'16px'}}>Related Articles</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
-        <a href='/blog/ds-160-photo-requirements' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/compress-for-ds160' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → DS-160 Photo Requirements
         </a>
         <a href='/blog/uscis-photo-size-requirements' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → USCIS Photo Size Requirements
         </a>
-        <a href='/blog/compress-jpeg-under-1mb' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/compress-to-1mb' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Compress JPEG Under 1MB
         </a>
         </div>

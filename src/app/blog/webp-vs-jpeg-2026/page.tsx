@@ -123,7 +123,7 @@ export default function WebpVsJpeg2026() {
         <a href='/blog/ecommerce-image-optimization' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Ecommerce Image Optimization
         </a>
-        <a href='/blog/compress-images-for-shopify-store' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/compress-for-shopify' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Compress Images for Shopify Store
         </a>
         </div>

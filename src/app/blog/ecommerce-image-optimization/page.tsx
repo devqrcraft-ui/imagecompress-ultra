@@ -141,10 +141,10 @@ fs.readdirSync(inputDir).forEach(file => {
       <section style={{maxWidth:'800px',margin:'0 auto',padding:'0 20px 40px'}}>
         <h2 style={{fontSize:'20px',fontWeight:700,color:'white',marginBottom:'16px'}}>Related Articles</h2>
         <div style={{display:'flex',flexDirection:'column',gap:'8px'}}>
-        <a href='/blog/compress-images-for-shopify-store' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/compress-for-shopify' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Compress Images for Shopify Store
         </a>
-        <a href='/blog/compress-images-for-etsy-listings' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
+        <a href='/compress-for-etsy' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>
           → Compress Images for Etsy Listings
         </a>
         <a href='/blog/pagespeed-images' style={{display:'block',padding:'12px 16px',background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.08)',borderRadius:'10px',color:'#c7d2fe',textDecoration:'none',fontSize:'14px',fontWeight:500,transition:'border-color 0.2s'}}>

@@ -97,7 +97,7 @@ export default function ClientPage(){
         <div style={{marginTop:'36px',padding:'20px',background:'rgba(99,102,241,0.08)',border:'1px solid rgba(99,102,241,0.2)',borderRadius:'12px'}}>
           <p style={{fontWeight:700,marginBottom:'12px',fontSize:'14px'}}>Related guides:</p>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap',fontSize:'15px'}}>
-            {([['/compress-for-uscis','USCIS Photo Tool'],['/blog/how-to-compress-photo-for-ds160','DS-160 Guide'],['/blog/dv-lottery-photo-requirements','DV Lottery'],['/blog/image-size-requirements-for-green-card','Green Card']] as [string,string][]).map(([href,label])=>(
+            {([['/compress-for-uscis','USCIS Photo Tool'],['/compress-for-ds160','DS-160 Guide'],['/compress-for-dv-lottery','DV Lottery'],['/compress-for-green-card','Green Card']] as [string,string][]).map(([href,label])=>(
               <Link key={href} href={href} style={{color:'#c7d2fe',textDecoration:'none',background:'rgba(99,102,241,0.1)',padding:'5px 12px',borderRadius:'20px',border:'1px solid rgba(99,102,241,0.2)'}}>{label}</Link>
             ))}
           </div>

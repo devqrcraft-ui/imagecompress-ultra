@@ -115,7 +115,7 @@ export default function H1BPage() {
           <Link href="/" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">Compress Photo Now →</Link>
         </div>
         <div className="mt-8 text-sm text-slate-300">
-          Related: <Link href="/compress-passport-photo" className="text-blue-300 hover:underline">Compress Passport Photo</Link> · <Link href="/blog/dv-lottery-photo-requirements" className="text-blue-300 hover:underline">DV Lottery Photo Requirements</Link>
+          Related: <Link href="/compress-passport-photo" className="text-blue-300 hover:underline">Compress Passport Photo</Link> · <Link href="/compress-for-dv-lottery" className="text-blue-300 hover:underline">DV Lottery Photo Requirements</Link>
         </div>
       </main>
       <AuthorBox />

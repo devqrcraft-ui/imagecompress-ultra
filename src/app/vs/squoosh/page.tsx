@@ -178,7 +178,7 @@ export default function VsSquoosh() {
           <a href="/vs/iloveimg" style={S.link}>vs iLoveIMG</a> ·{' '}
           <a href="/vs/tinypng" style={S.link}>vs TinyPNG</a> ·{' '}
           <a href="/bulk-image-compressor" style={S.link}>Bulk Compressor</a> ·{' '}
-          <a href="/blog/compress-image-for-teams-meeting" style={S.link}>Teams Meeting</a>
+          <a href="/blog/compress-image-for-microsoft-teams" style={S.link}>Teams Meeting</a>
         </div>
 
       </article>

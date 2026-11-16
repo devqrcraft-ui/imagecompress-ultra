@@ -108,7 +108,7 @@ export default function USPSPage() {
           <Link href="/" className="inline-block bg-white text-blue-700 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">Compress Image Free →</Link>
         </div>
         <div className="mt-8 text-sm text-slate-300">
-          Related: <Link href="/blog/image-size-for-amazon-product-listing" className="text-blue-300 hover:underline">Amazon Product Image Requirements</Link> · <Link href="/compress-for-shopify" className="text-blue-300 hover:underline">Compress for Shopify</Link>
+          Related: <Link href="/compress-for-amazon" className="text-blue-300 hover:underline">Amazon Product Image Requirements</Link> · <Link href="/compress-for-shopify" className="text-blue-300 hover:underline">Compress for Shopify</Link>
         </div>
       </main>
       <AuthorBox />

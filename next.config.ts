@@ -157,6 +157,27 @@ const nextConfig: NextConfig = {
       { source: '/compress-for-n400', destination: '/compress-for-uscis-n400', permanent: true },
       { source: '/compress-for-i485', destination: '/compress-for-green-card', permanent: true },
       { source: '/compress-for-tsa-precheck', destination: '/compress-for-global-entry', permanent: true },
+      // Duplicate-intent consolidation: one strong URL per intent, the competing
+      // page is retired with a permanent redirect (see the consolidation map).
+      { source: '/blog/compress-image-for-teams-meeting', destination: '/blog/compress-image-for-microsoft-teams', statusCode: 301 },
+      { source: '/blog/compress-image-to-30kb', destination: '/compress-to-30kb', statusCode: 301 },
+      { source: '/blog/compress-jpeg-under-1mb', destination: '/compress-to-1mb', statusCode: 301 },
+      { source: '/blog/compress-passport-photo-to-50kb', destination: '/compress-to-50kb', statusCode: 301 },
+      { source: '/blog/best-image-size-for-ebay-listings', destination: '/compress-for-ebay', statusCode: 301 },
+      { source: '/blog/compress-images-for-amazon-seller', destination: '/compress-for-amazon', statusCode: 301 },
+      { source: '/blog/image-size-for-amazon-product-listing', destination: '/compress-for-amazon', statusCode: 301 },
+      { source: '/blog/compress-images-for-etsy-listings', destination: '/compress-for-etsy', statusCode: 301 },
+      { source: '/blog/compress-images-for-shopify-store', destination: '/compress-for-shopify', statusCode: 301 },
+      { source: '/blog/compress-image-for-shopify-product-page', destination: '/compress-for-shopify', statusCode: 301 },
+      { source: '/blog/ds-160-photo-requirements', destination: '/compress-for-ds160', statusCode: 301 },
+      { source: '/blog/how-to-compress-photo-for-ds160', destination: '/compress-for-ds160', statusCode: 301 },
+      { source: '/blog/image-size-requirements-for-green-card', destination: '/compress-for-green-card', statusCode: 301 },
+      { source: '/blog/how-to-compress-image-for-email', destination: '/compress-for-email', statusCode: 301 },
+      { source: '/blog/reduce-image-size-for-email', destination: '/compress-for-email', statusCode: 301 },
+      { source: '/blog/compress-image-for-linkedin-profile', destination: '/compress-for-linkedin', statusCode: 301 },
+      { source: '/blog/how-to-compress-images-for-woocommerce', destination: '/compress-for-woocommerce', statusCode: 301 },
+      { source: '/blog/us-passport-photo-requirements', destination: '/compress-passport-photo-usa', statusCode: 301 },
+      { source: '/blog/dv-lottery-photo-requirements', destination: '/compress-for-dv-lottery', statusCode: 301 },
     ];
   },
   headers: async () => [

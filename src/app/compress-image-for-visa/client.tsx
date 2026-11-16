@@ -97,7 +97,7 @@ export default function ClientPage() {
             { href: '/compress-to-100kb', label: '📁 Compress to 100KB' },
             { href: '/compress-for-uscis', label: '🏛️ USCIS Photo Tool' },
             { href: '/compress-passport-photo', label: '🛂 Passport Photo' },
-            { href: '/blog/compress-passport-photo-to-50kb', label: '📖 Passport to 50KB Guide' },
+            { href: '/compress-to-50kb', label: '📖 Passport to 50KB Guide' },
           ].map(({ href, label }) => (
             <Link key={href} href={href} style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: '8px', padding: '8px 14px', color: 'white', textDecoration: 'none', fontSize:'15px', fontWeight: 600 }}>
               {label}
